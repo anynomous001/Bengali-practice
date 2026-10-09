@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import type { Card } from "@/data/decks";
-import { rateCard } from "../../actions";
+import { rateCard } from "../actions";
 
 type Rating = "again" | "good" | "easy";
 
@@ -15,13 +15,30 @@ function speak(text: string) {
   speechSynthesis.speak(u);
 }
 
-export default function Session({ cards }: { cards: Card[] }) {
+export default function Session({
+  cards,
+  hint,
+  autoSpeak,
+  backHref,
+}: {
+  cards: Card[];
+  hint?: string;
+  autoSpeak?: boolean;
+  backHref: string;
+}) {
   const [queue, setQueue] = useState(cards);
   const [flipped, setFlipped] = useState(false);
   const [done, setDone] = useState(0);
   const [missed, setMissed] = useState(0);
   const total = cards.length;
   const card = queue[0];
+
+  const flip = useCallback(() => {
+    setFlipped((f) => {
+      if (!f && autoSpeak && card) speak(card.speak);
+      return !f;
+    });
+  }, [autoSpeak, card]);
 
   const rate = useCallback(
     (r: Rating) => {
@@ -44,14 +61,14 @@ export default function Session({ cards }: { cards: Card[] }) {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === " " || e.key === "Enter") {
         e.preventDefault();
-        setFlipped((f) => !f);
+        flip();
       } else if (flipped && e.key === "1") rate("again");
       else if (flipped && e.key === "2") rate("good");
       else if (flipped && e.key === "3") rate("easy");
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [flipped, rate]);
+  }, [flipped, rate, flip]);
 
   if (!total) return <p className="card-static">Nothing to review right now. Come back later!</p>;
 
@@ -60,7 +77,7 @@ export default function Session({ cards }: { cards: Card[] }) {
       <div className="card-static">
         <h2>Session complete 🎉</h2>
         <p>You reviewed {total} card{total === 1 ? "" : "s"}{missed ? ` (${missed} needed another try)` : ""}.</p>
-        <a className="btn" href="/learn/flashcards">Back to decks</a>
+        <a className="btn" href={backHref}>Back to decks</a>
       </div>
     );
   }
@@ -69,8 +86,10 @@ export default function Session({ cards }: { cards: Card[] }) {
     <>
       <p className="muted">{done} of {total} done · {queue.length} left</p>
       <div className="bar"><div style={{ width: `${(100 * done) / total}%` }} /></div>
-      <button className="flash" onClick={() => setFlipped((f) => !f)} aria-label={flipped ? "Hide answer" : "Show answer"}>
+      {hint && <p className="hint">{hint}</p>}
+      <button className="flash" onClick={flip} aria-label={flipped ? "Hide answer" : "Show answer"}>
         <span className={card.front.length > 3 ? "flash-front small" : "flash-front"}>{card.front}</span>
+        {card.frontSub && <span className="muted">{card.frontSub}</span>}
         {flipped ? (
           <span className="flash-back">
             <b>{card.back}</b>

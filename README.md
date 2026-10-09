@@ -7,8 +7,12 @@ Private practice web app for my Bengali students. Next.js (App Router) + Postgre
 - **Email sign-in (no passwords).** Students get a one-time link. Only emails on the student list (or in `ADMIN_EMAILS`) can sign in, and the sign-in form gives the same reply either way.
 - **12-month access.** Each student has an expiry date. When it passes they can still sign in but see an "access ended" page. Revoking or removing a student takes effect immediately.
 - **Admin page** at `/admin` (admins only): add students, grant/extend 12 months, revoke, remove.
-- **Alphabet module**: learn, three quiz types, per-student progress saved in the database.
-- Other modules (pronunciation, conversations, numbers, directions, role-play) are placeholders.
+- **Three segments**, each with its own activities and progress:
+  - **Reading**: alphabet (learn + letter→word and word→letter quizzes), recognition flashcards.
+  - **Speaking**: letter sounds with a listening quiz, "say it aloud" flashcards (audio plays on flip).
+  - **Writing**: trace letters on a canvas, build words from pieces, "write it down" flashcards.
+- **Flashcards** use Leitner spaced repetition (1, 3, 7, 14, 30 days). New decks are added in `src/data/decks.ts`; new activities are listed per segment in `src/data/segments.ts`.
+- Conversations, directions, role-play, numbers and sentence writing are listed as "Coming soon" under the segment they belong to.
 
 ## Setup
 

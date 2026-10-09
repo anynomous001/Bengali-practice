@@ -33,6 +33,12 @@ async function ensureSchema() {
       wrong_count int NOT NULL DEFAULT 0,
       PRIMARY KEY (email, letter)
     );
+    CREATE TABLE IF NOT EXISTS writing_practice (
+      email text NOT NULL,
+      item text NOT NULL,
+      count int NOT NULL DEFAULT 0,
+      PRIMARY KEY (email, item)
+    );
     CREATE TABLE IF NOT EXISTS flashcards (
       email text NOT NULL,
       card_id text NOT NULL,

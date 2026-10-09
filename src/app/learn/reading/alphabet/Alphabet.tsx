@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { GROUPS, LETTERS, type Letter } from "@/data/letters";
-import { recordAnswer } from "../../actions";
+import { recordAnswer } from "../../../actions";
 
 type Progress = Record<string, { right: number; wrong: number }>;
 type Mode = "letter2word" | "word2letter" | "listen";
@@ -29,7 +29,19 @@ function speak(text: string) {
   speechSynthesis.speak(u);
 }
 
-export default function Alphabet({ initialProgress }: { initialProgress: Progress }) {
+export default function Alphabet({
+  initialProgress,
+  segment,
+}: {
+  initialProgress: Progress;
+  segment: "reading" | "speaking";
+}) {
+  const speaking = segment === "speaking";
+  const tabs: Tab[] = speaking ? ["learn", "quiz"] : ["learn", "quiz", "progress"];
+  const labels: Record<Tab, string> = speaking
+    ? { learn: "Sounds", quiz: "Listening quiz", progress: "Progress" }
+    : { learn: "Learn", quiz: "Quiz", progress: "Progress" };
+  const modes: Mode[] = speaking ? ["listen"] : ["letter2word", "word2letter"];
   const [tab, setTab] = useState<Tab>("learn");
   const [progress, setProgress] = useState<Progress>(initialProgress);
 
@@ -44,14 +56,14 @@ export default function Alphabet({ initialProgress }: { initialProgress: Progres
   return (
     <>
       <nav className="tabs">
-        {(["learn", "quiz", "progress"] as Tab[]).map((t) => (
+        {tabs.map((t) => (
           <button key={t} className={tab === t ? "active" : ""} onClick={() => setTab(t)}>
-            {t[0].toUpperCase() + t.slice(1)}
+            {labels[t]}
           </button>
         ))}
       </nav>
       {tab === "learn" && <Learn progress={progress} />}
-      {tab === "quiz" && <Quiz progress={progress} onAnswer={answered} />}
+      {tab === "quiz" && <Quiz progress={progress} onAnswer={answered} modes={modes} />}
       {tab === "progress" && <ProgressView progress={progress} />}
     </>
   );
@@ -91,7 +103,7 @@ function Learn({ progress }: { progress: Progress }) {
 
 type Run = { mode: Mode; queue: Letter[]; i: number; score: number };
 
-function Quiz({ progress, onAnswer }: { progress: Progress; onAnswer: (ch: string, ok: boolean) => void }) {
+function Quiz({ progress, onAnswer, modes }: { progress: Progress; onAnswer: (ch: string, ok: boolean) => void; modes: Mode[] }) {
   const [scope, setScope] = useState("all");
   const [run, setRun] = useState<Run | null>(null);
 
@@ -108,9 +120,9 @@ function Quiz({ progress, onAnswer }: { progress: Progress; onAnswer: (ch: strin
       <>
         <h2>Choose a quiz</h2>
         <div className="menu">
-          <button className="card" onClick={() => start("letter2word")}><b>Letter → word</b><span>See a letter, pick the word it starts</span></button>
-          <button className="card" onClick={() => start("word2letter")}><b>Word → letter</b><span>See a word, pick its first letter</span></button>
-          <button className="card" onClick={() => start("listen")}><b>Listen</b><span>Hear a letter, pick the right one</span></button>
+          {modes.includes("letter2word") && <button className="card" onClick={() => start("letter2word")}><b>Letter → word</b><span>See a letter, pick the word it starts</span></button>}
+          {modes.includes("word2letter") && <button className="card" onClick={() => start("word2letter")}><b>Word → letter</b><span>See a word, pick its first letter</span></button>}
+          {modes.includes("listen") && <button className="card" onClick={() => start("listen")}><b>Listen</b><span>Hear a letter, pick the right one</span></button>}
         </div>
         <p className="muted">Scope:</p>
         <select value={scope} onChange={(e) => setScope(e.target.value)}>
