@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { getUser } from "@/lib/auth";
+import { requireAccess } from "@/lib/access";
 import { SEGMENTS, type Segment } from "@/data/segments";
 
 export default async function Dashboard() {
-  const user = await getUser();
+  const user = await requireAccess();
   return (
     <main>
       <h1>Welcome</h1>

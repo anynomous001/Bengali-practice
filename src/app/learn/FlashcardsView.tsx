@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getUser } from "@/lib/auth";
+import { requireAccess } from "@/lib/access";
 import { query } from "@/lib/db";
 import { DECKS } from "@/data/decks";
 import { SEGMENTS, type Segment } from "@/data/segments";
@@ -9,7 +9,7 @@ const NEW_PER_SESSION = 10;
 const MAX_PER_SESSION = 25;
 
 export default async function FlashcardsView({ segment, deckId }: { segment: Segment; deckId?: string }) {
-  const user = await getUser();
+  const user = await requireAccess();
   const base = `/learn/${segment}/flashcards`;
   const decks = DECKS.filter((d) => d.segment === segment);
   const rows = user

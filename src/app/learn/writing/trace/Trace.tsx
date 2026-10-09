@@ -1,12 +1,20 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { GROUPS, LETTERS } from "@/data/letters";
+import type { Letter } from "@/data/letters";
 import { recordWriting } from "../../../actions";
 
 const SIZE = 320;
 
-export default function Trace({ initialCounts }: { initialCounts: Record<string, number> }) {
+export default function Trace({
+  initialCounts,
+  letters: LETTERS,
+  groups: GROUPS,
+}: {
+  initialCounts: Record<string, number>;
+  letters: Letter[];
+  groups: { id: string; title: string }[];
+}) {
   const [counts, setCounts] = useState(initialCounts);
   const [sel, setSel] = useState(LETTERS[0].ch);
   const [guide, setGuide] = useState(true);

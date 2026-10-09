@@ -3,7 +3,8 @@ import { SignJWT, jwtVerify } from "jose";
 import { createHash, randomBytes } from "node:crypto";
 import { query } from "./db";
 
-const COOKIE = "bp_session";
+// __Host- makes browsers refuse the cookie unless it is Secure, path=/ and has no Domain.
+const COOKIE = process.env.NODE_ENV === "production" ? "__Host-bp_session" : "bp_session";
 const SESSION_DAYS = 30;
 const TOKEN_MINUTES = 15;
 
@@ -22,7 +23,7 @@ export function isAdminEmail(email: string) {
 
 function secret() {
   const s = process.env.AUTH_SECRET;
-  if (!s || s.length < 16) throw new Error("AUTH_SECRET must be set (16+ chars)");
+  if (!s || s.length < 32) throw new Error("AUTH_SECRET must be set (32+ chars): openssl rand -base64 32");
   return new TextEncoder().encode(s);
 }
 

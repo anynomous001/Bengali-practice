@@ -1,14 +1,15 @@
 "use client";
 
-import { useState } from "react";
-import { GROUPS, LETTERS, type Letter } from "@/data/letters";
+import { createContext, useContext, useState } from "react";
+import type { Letter } from "@/data/letters";
 import { recordAnswer } from "../../../actions";
 
 type Progress = Record<string, { right: number; wrong: number }>;
 type Mode = "letter2word" | "word2letter" | "listen";
 type Tab = "learn" | "quiz" | "progress";
 
-const QUIZ_LETTERS = LETTERS.filter((l) => l.word);
+type Data = { LETTERS: Letter[]; GROUPS: { id: string; title: string }[]; QUIZ_LETTERS: Letter[] };
+const D = createContext<Data>(null as unknown as Data);
 const mastered = (p: Progress, ch: string) => !!p[ch] && p[ch].right >= 3 && p[ch].right > p[ch].wrong;
 
 function shuffle<T>(a: T[]): T[] {
@@ -32,9 +33,13 @@ function speak(text: string) {
 export default function Alphabet({
   initialProgress,
   segment,
+  letters,
+  groups,
 }: {
   initialProgress: Progress;
   segment: "reading" | "speaking";
+  letters: Letter[];
+  groups: { id: string; title: string }[];
 }) {
   const speaking = segment === "speaking";
   const tabs: Tab[] = speaking ? ["learn", "quiz"] : ["learn", "quiz", "progress"];
@@ -54,7 +59,7 @@ export default function Alphabet({
   }
 
   return (
-    <>
+    <D.Provider value={{ LETTERS: letters, GROUPS: groups, QUIZ_LETTERS: letters.filter((l) => l.word) }}>
       <nav className="tabs">
         {tabs.map((t) => (
           <button key={t} className={tab === t ? "active" : ""} onClick={() => setTab(t)}>
@@ -65,11 +70,12 @@ export default function Alphabet({
       {tab === "learn" && <Learn progress={progress} />}
       {tab === "quiz" && <Quiz progress={progress} onAnswer={answered} modes={modes} />}
       {tab === "progress" && <ProgressView progress={progress} />}
-    </>
+    </D.Provider>
   );
 }
 
 function Learn({ progress }: { progress: Progress }) {
+  const { LETTERS, GROUPS } = useContext(D);
   const [sel, setSel] = useState<Letter | null>(null);
   return (
     <>
@@ -104,6 +110,7 @@ function Learn({ progress }: { progress: Progress }) {
 type Run = { mode: Mode; queue: Letter[]; i: number; score: number };
 
 function Quiz({ progress, onAnswer, modes }: { progress: Progress; onAnswer: (ch: string, ok: boolean) => void; modes: Mode[] }) {
+  const { QUIZ_LETTERS, GROUPS } = useContext(D);
   const [scope, setScope] = useState("all");
   const [run, setRun] = useState<Run | null>(null);
 
@@ -154,6 +161,7 @@ function Quiz({ progress, onAnswer, modes }: { progress: Progress; onAnswer: (ch
 }
 
 function Question({ run, onAnswer, onNext }: { run: Run; onAnswer: (ok: boolean) => void; onNext: () => void }) {
+  const { QUIZ_LETTERS } = useContext(D);
   const q = run.queue[run.i];
   const [options] = useState(() =>
     shuffle([q, ...shuffle(QUIZ_LETTERS.filter((l) => l.ch !== q.ch && l.word !== q.word)).slice(0, 3)]),
@@ -191,6 +199,7 @@ function Question({ run, onAnswer, onNext }: { run: Run; onAnswer: (ok: boolean)
 }
 
 function ProgressView({ progress }: { progress: Progress }) {
+  const { LETTERS } = useContext(D);
   const done = LETTERS.filter((l) => mastered(progress, l.ch)).length;
   const pct = Math.round((100 * done) / LETTERS.length);
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { NUMBERS, type Num } from "@/data/numbers";
+import type { Num } from "@/data/numbers";
 
 type Mode = "n2w" | "w2n" | "listen";
 type Kind = "numbers" | "prices";
@@ -30,11 +30,11 @@ function speak(text: string) {
 const numeralText = (n: Num, k: Kind) => (k === "prices" ? `${n.numeral} ${TAKA}` : n.numeral);
 const wordText = (n: Num, k: Kind) => (k === "prices" ? `${n.word} ${TAKA}` : n.word);
 
-export default function NumberQuiz({ listening }: { listening?: boolean }) {
+export default function NumberQuiz({ numbers, listening }: { numbers: Num[]; listening?: boolean }) {
   const [kind, setKind] = useState<Kind>("numbers");
   const [run, setRun] = useState<Run | null>(null);
 
-  const start = (mode: Mode) => setRun({ mode, kind, queue: shuffle(NUMBERS).slice(0, 10), i: 0, score: 0 });
+  const start = (mode: Mode) => setRun({ mode, kind, queue: shuffle(numbers).slice(0, 10), i: 0, score: 0 });
 
   if (!run) {
     return (
@@ -67,12 +67,12 @@ export default function NumberQuiz({ listening }: { listening?: boolean }) {
     );
   }
 
-  return <Question key={run.i} run={run} setRun={setRun} />;
+  return <Question key={run.i} run={run} setRun={setRun} numbers={numbers} />;
 }
 
-function Question({ run, setRun }: { run: Run; setRun: React.Dispatch<React.SetStateAction<Run | null>> }) {
+function Question({ run, setRun, numbers }: { run: Run; setRun: React.Dispatch<React.SetStateAction<Run | null>>; numbers: Num[] }) {
   const q = run.queue[run.i];
-  const [options] = useState(() => shuffle([q, ...shuffle(NUMBERS.filter((n) => n.value !== q.value)).slice(0, 3)]));
+  const [options] = useState(() => shuffle([q, ...shuffle(numbers.filter((n) => n.value !== q.value)).slice(0, 3)]));
   const [picked, setPicked] = useState<number | null>(null);
   const { mode, kind } = run;
   const label = (n: Num) => (mode === "n2w" ? wordText(n, kind) : numeralText(n, kind));

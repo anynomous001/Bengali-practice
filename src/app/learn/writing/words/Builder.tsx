@@ -1,10 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { LETTERS, type Letter } from "@/data/letters";
+import type { Letter } from "@/data/letters";
 import { recordWriting } from "../../../actions";
-
-const WORDS = LETTERS.filter((l) => l.word);
 
 function pieces(word: string): string[] {
   if (typeof Intl !== "undefined" && "Segmenter" in Intl) {
@@ -24,8 +22,8 @@ function shuffled<T>(a: T[]): T[] {
 
 type Q = { letter: Letter; target: string[]; tiles: { id: number; text: string }[] };
 
-function makeQuestion(prev?: string): Q {
-  const options = WORDS.filter((l) => l.ch !== prev && pieces(l.word!).length >= 2);
+function makeQuestion(words: Letter[], prev?: string): Q {
+  const options = words.filter((l) => l.ch !== prev && pieces(l.word!).length >= 2);
   const letter = options[Math.floor(Math.random() * options.length)];
   const target = pieces(letter.word!);
   const tiles = target.map((text, id) => ({ id, text }));
@@ -35,19 +33,22 @@ function makeQuestion(prev?: string): Q {
   return { letter, target, tiles: mix };
 }
 
-export default function Builder({ initialCounts }: { initialCounts: Record<string, number> }) {
+export default function Builder({ initialCounts, letters }: { initialCounts: Record<string, number>; letters: Letter[] }) {
+  const words = letters.filter((l) => l.word);
   const [q, setQ] = useState<Q | null>(null);
   const [picked, setPicked] = useState<number[]>([]);
   const [result, setResult] = useState<"right" | "wrong" | null>(null);
   const [total, setTotal] = useState(() => Object.keys(initialCounts).filter((k) => k.startsWith("w:")).length);
 
   // Pick the first word after mount so server and client markup match.
-  useEffect(() => setQ(makeQuestion()), []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => setQ(makeQuestion(words)), []);
 
   const next = useCallback(() => {
-    setQ((cur) => makeQuestion(cur?.letter.ch));
+    setQ((cur) => makeQuestion(words, cur?.letter.ch));
     setPicked([]);
     setResult(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!q) return null;

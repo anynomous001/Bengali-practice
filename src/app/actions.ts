@@ -1,6 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
+import { after } from "next/server";
 import { ALL_CARD_IDS } from "@/data/decks";
 import { LETTERS } from "@/data/letters";
 import { SENTENCES } from "@/data/sentences";
@@ -28,7 +29,8 @@ export async function requestLogin(_prev: FormState, formData: FormData): Promis
       const token = await createLoginToken(email);
       if (token) {
         const base = (process.env.APP_URL ?? "http://localhost:3000").replace(/\/$/, "");
-        await sendLoginEmail(email, `${base}/login/verify?token=${encodeURIComponent(token)}`);
+        // After the response, so enrolled and unknown emails take about the same time to answer.
+        after(() => sendLoginEmail(email, `${base}/login/verify?token=${encodeURIComponent(token)}`).catch((e) => console.error("login email failed", e)));
       }
     }
   } catch (e) {

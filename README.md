@@ -33,10 +33,21 @@ Students can buy 12 months of access at `/buy` ($40 by default, set `PRICE_USD`)
 Setup:
 1. In the Razorpay dashboard, request **International Payments** so USD cards work, and use **Test mode** keys first.
 2. Set `RAZORPAY_KEY_ID`, `RAZORPAY_KEY_SECRET` and `PRICE_USD` in Vercel.
-3. Add a webhook: Settings → Webhooks → URL `https://<your-site>/api/razorpay/webhook`, event **payment.captured**, and a secret of your choice. Put the same secret in `RAZORPAY_WEBHOOK_SECRET`. This is the backup that grants access if a student closes the tab right after paying.
+3. Add a webhook: Settings → Webhooks → URL `https://<your-site>/api/razorpay/webhook`, events **payment.captured** and **refund.processed**, and a secret of your choice. Put the same secret in `RAZORPAY_WEBHOOK_SECRET`. This is the backup that grants access if a student closes the tab right after paying.
 4. Pay once yourself in test mode, then check the payment shows under "Recent online payments" in `/admin`, before switching to live keys.
 
 Razorpay settles to your bank in rupees. Fees and conversion are shown in your dashboard.
+
+## How access is protected
+
+- Only enrolled emails (added by you or created by a verified payment) can sign in; sign-in links are single-use and expire in 15 minutes.
+- **Every lesson page checks access itself** (`requireAccess()` in `src/lib/access.ts`), not just the layout, because layouts are skipped on client-side navigation. Access is read from the database on each request, so expiring, revoking or removing a student takes effect on their next click.
+- **Lesson content is never in the public JavaScript.** Pages pass it to the interactive components as props after the access check. When you add new content (dialogues, vocabulary, audio), keep it in server code and send it the same way. Do not import content files from `"use client"` components, and serve audio from a route that calls `requireAccess()`, not from `/public`.
+- Server actions (saving progress, flashcards) re-check access. `/admin` and its actions are admin-only.
+- A full refund (`refund.processed`) takes the 12 months back. Partial refunds and disputes are not handled automatically; use `/admin` to revoke.
+- Session cookie is `__Host-` prefixed, HttpOnly, Secure, SameSite=Lax. Security headers are set in `next.config.ts`.
+
+Known limits: a paying student can still share their login or copy what is on their screen, and sign-in is not limited to one device.
 
 ## Local development
 

@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { requireAccess } from "@/lib/access";
 import { SEGMENTS, type Segment } from "@/data/segments";
 
-export default function SegmentHub({ segment }: { segment: Segment }) {
+export default async function SegmentHub({ segment }: { segment: Segment }) {
+  await requireAccess();
   const s = SEGMENTS[segment];
   return (
     <main>

@@ -49,6 +49,8 @@ export async function createOrder(email: string) {
     [email],
   );
   if (Number(recent[0].n) >= 10) throw new Error("Too many attempts. Please try again later.");
+  const burst = await query<{ n: string }>("SELECT count(*) AS n FROM orders WHERE created_at > now() - interval '1 minute'");
+  if (Number(burst[0].n) >= 30) throw new Error("Busy right now. Please try again in a minute.");
   const order = await rz<{ id: string }>("/orders", {
     method: "POST",
     body: { amount, currency: "USD", receipt: `bp_${Date.now()}`, notes: { email } },
@@ -98,4 +100,18 @@ export async function fulfillOrder(orderId: string, paymentId: string): Promise<
     );
   }
   return order.email;
+}
+
+/**
+ * A full refund takes the 12 months back (a partial one does not). Granted once per payment.
+ * Access then ends unless the student has other paid time on top.
+ */
+export async function handleRefund(paymentId: string, refundedAmount: number) {
+  const rows = await query<{ email: string }>(
+    "UPDATE orders SET status = 'refunded' WHERE payment_id = $1 AND status = 'paid' AND amount <= $2 RETURNING email",
+    [paymentId, refundedAmount],
+  );
+  if (rows.length) {
+    await query("UPDATE students SET access_expires_at = access_expires_at - interval '12 months' WHERE email = $1", [rows[0].email]);
+  }
 }
