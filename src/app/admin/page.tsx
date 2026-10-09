@@ -19,9 +19,9 @@ export default async function AdminPage() {
   return (
     <div className="page">
       <header className="top">
-        <Link href="/learn" className="brand">← Back</Link>
+        <Link href="/learn" className="navbtn">← Back</Link>
         <span className="spacer" />
-        <b>Students ({students.length})</b>
+        <span className="chip">{students.length} students</span>
       </header>
 
       <form action={addStudent} className="stack card-static">
@@ -39,8 +39,10 @@ export default async function AdminPage() {
             <div key={s.email} className="row">
               <div>
                 <b>{s.email}</b> {s.note && <span className="muted">· {s.note}</span>}
-                <div className={active ? "good" : "bad"}>
-                  {active ? `Active until ${fmt(s.access_expires_at!)}` : s.access_expires_at ? `Expired ${fmt(s.access_expires_at)}` : "No access"}
+                <div className="chips">
+                  <span className={"chip " + (active ? "ok" : "bad")}>
+                    {active ? `Active until ${fmt(s.access_expires_at!)}` : s.access_expires_at ? `Expired ${fmt(s.access_expires_at)}` : "No access"}
+                  </span>
                 </div>
               </div>
               <div className="actions">

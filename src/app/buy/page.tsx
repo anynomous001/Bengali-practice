@@ -6,13 +6,19 @@ export default function BuyPage() {
   const price = priceUsd();
   return (
     <main className="page narrow">
+      <Link href="/" className="back">← Home</Link>
       <h1>Get access</h1>
-      <p>
-        <b>${price}</b> one-time payment for <b>12 months</b> of full access: reading, speaking and writing practice,
-        flashcards, and everything I add during the year. Renewing before your access ends adds 12 more months.
-      </p>
-      <BuyForm price={price} />
-      <p className="muted">Pay by card in US dollars (processed by Razorpay). Already have access? <Link href="/login">Sign in</Link>.</p>
+      <div className="card-static">
+        <div className="price">${price} <small>one-time · 12 months</small></div>
+        <ul className="ticks">
+          <li>Reading, speaking and writing practice</li>
+          <li>Flashcards that remember what you know</li>
+          <li>New activities added during your year</li>
+          <li>Renew early and 12 months are added on</li>
+        </ul>
+        <BuyForm price={price} />
+      </div>
+      <p className="muted">Pay by card in US dollars, processed securely by Razorpay. Already have access? <Link href="/login">Sign in</Link>.</p>
     </main>
   );
 }

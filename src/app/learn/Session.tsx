@@ -103,7 +103,7 @@ export default function Session({
       {flipped && (
         <div className="rate">
           <button className="btn bad-btn" onClick={() => rate("again")}>Again <small>1</small></button>
-          <button className="btn" onClick={() => rate("good")}>Good <small>2</small></button>
+          <button className="btn mid-btn" onClick={() => rate("good")}>Good <small>2</small></button>
           <button className="btn good-btn" onClick={() => rate("easy")}>Easy <small>3</small></button>
         </div>
       )}

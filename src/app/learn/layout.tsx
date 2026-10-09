@@ -13,7 +13,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
       <header className="top">
         <Link href="/learn" className="brand">বাংলা Practice</Link>
         <span className="spacer" />
-        {user.isAdmin && <Link href="/admin">Admin</Link>}
+        {user.isAdmin && <Link href="/admin" className="navbtn">Admin</Link>}
         <form action={logout}><button className="link">Sign out</button></form>
       </header>
       {children}
