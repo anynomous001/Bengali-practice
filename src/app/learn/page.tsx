@@ -3,6 +3,7 @@ import { getUser } from "@/lib/auth";
 
 const MODULES = [
   { href: "/learn/alphabet", title: "Alphabet", blurb: "Vowels, consonants and special signs, with quizzes.", ready: true },
+  { href: "/learn/flashcards", title: "Flashcards", blurb: "Spaced-repetition review of letters and words.", ready: true },
   { title: "Pronunciation", blurb: "Listen and repeat.", ready: false },
   { title: "Basic conversations", blurb: "Greetings, introductions, shopping.", ready: false },
   { title: "Numbers & money", blurb: "Counting and rupee denominations.", ready: false },

@@ -33,6 +33,14 @@ async function ensureSchema() {
       wrong_count int NOT NULL DEFAULT 0,
       PRIMARY KEY (email, letter)
     );
+    CREATE TABLE IF NOT EXISTS flashcards (
+      email text NOT NULL,
+      card_id text NOT NULL,
+      box int NOT NULL DEFAULT 0,
+      due_at timestamptz NOT NULL DEFAULT now(),
+      reviews int NOT NULL DEFAULT 0,
+      PRIMARY KEY (email, card_id)
+    );
   `);
 }
 

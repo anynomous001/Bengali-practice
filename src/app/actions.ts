@@ -1,6 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
+import { ALL_CARD_IDS } from "@/data/decks";
 import { LETTERS } from "@/data/letters";
 import {
   canSignIn,
@@ -57,5 +58,26 @@ export async function recordAnswer(letter: string, correct: boolean) {
      ON CONFLICT (email, letter) DO UPDATE SET
        right_count = progress.right_count + $3, wrong_count = progress.wrong_count + $4`,
     [user.email, letter, correct ? 1 : 0, correct ? 0 : 1],
+  );
+}
+
+// Leitner boxes: days until a card is due again, by box.
+const INTERVAL_DAYS = [0, 1, 3, 7, 14, 30];
+
+export async function rateCard(cardId: string, rating: "again" | "good" | "easy") {
+  const user = await getUser();
+  if (!user?.hasAccess || !ALL_CARD_IDS.has(cardId)) return;
+  if (rating !== "again" && rating !== "good" && rating !== "easy") return;
+  const jump = rating === "again" ? 0 : rating === "good" ? 1 : 2;
+  const max = INTERVAL_DAYS.length - 1;
+  // "again" sends the card back to box 0; otherwise move up by 1 or 2 boxes.
+  await query(
+    `INSERT INTO flashcards (email, card_id, box, due_at, reviews)
+     VALUES ($1, $2, LEAST($3::int, $4), now() + ($5::int[])[LEAST($3::int, $4) + 1] * interval '1 day', 1)
+     ON CONFLICT (email, card_id) DO UPDATE SET
+       box = CASE WHEN $6 THEN 0 ELSE LEAST(flashcards.box + $3::int, $4) END,
+       due_at = now() + ($5::int[])[(CASE WHEN $6 THEN 0 ELSE LEAST(flashcards.box + $3::int, $4) END) + 1] * interval '1 day',
+       reviews = flashcards.reviews + 1`,
+    [user.email, cardId, jump, max, INTERVAL_DAYS, rating === "again"],
   );
 }
