@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { ALL_CARD_IDS } from "@/data/decks";
 import { LETTERS } from "@/data/letters";
+import { SENTENCES } from "@/data/sentences";
 import {
   canSignIn,
   consumeLoginToken,
@@ -84,8 +85,10 @@ export async function rateCard(cardId: string, rating: "again" | "good" | "easy"
 
 export async function recordWriting(item: string) {
   const user = await getUser();
-  // Items are a letter ("ক") or a word-builder entry ("w:ক").
-  const valid = LETTERS.some((l) => l.ch === item || (l.word && `w:${l.ch}` === item));
+  // Items are a letter ("ক"), a word-builder entry ("w:ক") or a sentence ("s:1").
+  const valid =
+    LETTERS.some((l) => l.ch === item || (l.word && `w:${l.ch}` === item)) ||
+    SENTENCES.some((s) => `s:${s.id}` === item);
   if (!user?.hasAccess || !valid) return;
   await query(
     `INSERT INTO writing_practice (email, item, count) VALUES ($1, $2, 1)

@@ -1,4 +1,5 @@
 import { LETTERS } from "./letters";
+import { NUMBERS } from "./numbers";
 
 export type Card = {
   id: string;
@@ -48,6 +49,22 @@ export const DECKS: Deck[] = [
       backSub: l.wmean!,
       speak: l.word!,
     })),
+  },
+  {
+    id: "numbers",
+    segment: "reading",
+    title: "Numbers",
+    blurb: "See the numeral, recall the Bengali word.",
+    cards: NUMBERS.map((n) => ({ id: `n:${n.value}`, front: n.numeral, back: n.word, backSub: n.wrom, speak: n.word })),
+  },
+  {
+    id: "say-numbers",
+    segment: "speaking",
+    title: "Say the number",
+    blurb: "See the numeral, say it in Bengali, then check.",
+    hint: "Say it aloud before you flip the card.",
+    autoSpeak: true,
+    cards: NUMBERS.map((n) => ({ id: `ns:${n.value}`, front: n.numeral, back: n.word, backSub: n.wrom, speak: n.word })),
   },
   {
     id: "say-words",

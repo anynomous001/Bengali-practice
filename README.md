@@ -12,7 +12,8 @@ Private practice web app for my Bengali students. Next.js (App Router) + Postgre
   - **Speaking**: letter sounds with a listening quiz, "say it aloud" flashcards (audio plays on flip).
   - **Writing**: trace letters on a canvas, build words from pieces, "write it down" flashcards.
 - **Flashcards** use Leitner spaced repetition (1, 3, 7, 14, 30 days). New decks are added in `src/data/decks.ts`; new activities are listed per segment in `src/data/segments.ts`.
-- Conversations, directions, role-play, numbers and sentence writing are listed as "Coming soon" under the segment they belong to.
+- **Numbers & money** (reading quiz, listening quiz, flashcards) and **Build the sentence** use the lists in `src/data/numbers.ts` and `src/data/sentences.ts`. Sentences are placeholders; swap in your own.
+- Conversations, directions, role-play and reading passages are not built yet.
 
 ## Setup
 
