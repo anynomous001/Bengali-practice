@@ -11,7 +11,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
   return (
     <div className="page">
       <header className="top">
-        <Link href="/learn" className="brand">বাংলা Practice</Link>
+        <Link href="/learn" className="brand"><span className="brand-text">বাংলা Practice</span></Link>
         <span className="spacer" />
         {user.isAdmin && <Link href="/admin" className="navbtn">Admin</Link>}
         <form action={logout}><button className="link">Sign out</button></form>

@@ -41,6 +41,7 @@ p { margin:0 0 12px; }
 .top { position:sticky; top:0; z-index:5; display:flex; align-items:center; gap:8px; margin:0 -16px 14px; padding:10px 16px;
   background:color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
 .brand { font-weight:800; font-size:1.15rem; text-decoration:none; color:var(--ink); letter-spacing:-.01em; }
+.brand, .navbtn, .link { white-space:nowrap; }
 .brand::before { content:"বাং"; display:inline-grid; place-items:center; width:34px; height:34px; margin-right:9px; border-radius:10px;
   background:var(--primary); color:var(--primary-ink); font:700 .95rem var(--font-bn); vertical-align:middle; }
 .spacer { flex:1; }
@@ -163,3 +164,19 @@ a.card:hover, button.card:hover { transform:translateY(-2px); border-color:var(-
 .list { display:flex; flex-direction:column; gap:10px; }
 .row { display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; align-items:center; padding:14px; background:var(--surface); border:1px solid var(--line); border-radius:14px; }
 .row b { word-break:break-all; } .actions { display:flex; gap:6px; flex-wrap:wrap; }
+
+/* ---------- small and large screens ---------- */
+@media (max-width:400px) {
+  .brand-text { display:none; }
+  .brand::before { margin-right:0; }
+  .navbtn, .link { padding:6px 12px; }
+  .big { font-size:4.4rem; min-width:90px; }
+  .detail { gap:12px; padding:14px; }
+  .flash { padding:20px; min-height:260px; } .flash-front { font-size:5rem; }
+}
+@media (min-width:900px) {
+  .page { max-width:880px; }
+  .narrow { max-width:460px; }
+  .grid { grid-template-columns:repeat(auto-fill, minmax(88px, 1fr)); }
+  .rate { max-width:520px; }
+}
