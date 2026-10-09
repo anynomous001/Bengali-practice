@@ -33,6 +33,16 @@ async function ensureSchema() {
       wrong_count int NOT NULL DEFAULT 0,
       PRIMARY KEY (email, letter)
     );
+    CREATE TABLE IF NOT EXISTS orders (
+      order_id text PRIMARY KEY,
+      email text NOT NULL,
+      amount int NOT NULL,
+      currency text NOT NULL,
+      status text NOT NULL DEFAULT 'created',
+      payment_id text,
+      created_at timestamptz NOT NULL DEFAULT now(),
+      paid_at timestamptz
+    );
     CREATE TABLE IF NOT EXISTS writing_practice (
       email text NOT NULL,
       item text NOT NULL,

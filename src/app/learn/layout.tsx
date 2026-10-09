@@ -24,8 +24,9 @@ export default async function LearnLayout({ children }: { children: React.ReactN
             {user.expiresAt
               ? `Your 12 months of access ended on ${user.expiresAt.toLocaleDateString("en-GB", { dateStyle: "long" })}.`
               : "Your account doesn't have active access yet."}{" "}
-            Please contact your teacher to renew.
+            Renew below, or contact your teacher.
           </p>
+          <Link className="btn" href="/buy">Renew for 12 months</Link>
         </div>
       )}
     </div>

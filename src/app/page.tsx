@@ -9,6 +9,7 @@ export default async function Home() {
       <h1>বাংলা Practice</h1>
       <p>A private practice space for my Bengali students: alphabet, pronunciation, conversations, numbers and more.</p>
       <Link className="btn" href="/login">Student sign in</Link>
+      <Link className="btn ghost" href="/buy">Get access</Link>
     </main>
   );
 }

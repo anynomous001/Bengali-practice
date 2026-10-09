@@ -12,6 +12,10 @@ export default async function AdminPage() {
   if (!user?.isAdmin) notFound();
   const students = await query<Row>("SELECT email, note, access_expires_at, created_at FROM students ORDER BY created_at DESC");
 
+  const orders = await query<{ email: string; amount: number; currency: string; payment_id: string; paid_at: Date }>(
+    "SELECT email, amount, currency, payment_id, paid_at FROM orders WHERE status = 'paid' ORDER BY paid_at DESC LIMIT 20",
+  );
+
   return (
     <div className="page">
       <header className="top">
@@ -48,6 +52,17 @@ export default async function AdminPage() {
           );
         })}
         {!students.length && <p className="muted">No students yet.</p>}
+      </div>
+
+      <h2>Recent online payments</h2>
+      <div className="list">
+        {orders.map((o) => (
+          <div key={o.payment_id} className="row">
+            <span><b>{o.email}</b> · {(o.amount / 100).toFixed(2)} {o.currency}</span>
+            <span className="muted">{fmt(o.paid_at)} · {o.payment_id}</span>
+          </div>
+        ))}
+        {!orders.length && <p className="muted">No online payments yet.</p>}
       </div>
     </div>
   );

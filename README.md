@@ -26,6 +26,18 @@ Private practice web app for my Bengali students. Next.js (App Router) + Postgre
 
 Without `RESEND_API_KEY`, sign-in links are printed to the server log instead of emailed, which is handy locally.
 
+## Online payment (Razorpay)
+
+Students can buy 12 months of access at `/buy` ($40 by default, set `PRICE_USD`). The server creates a USD order, the student pays in Razorpay Checkout, and the server then confirms the payment with Razorpay before granting access (and emails a sign-in link). Buying again before expiry adds another 12 months. Each order grants access once, even if Checkout and the webhook both report it.
+
+Setup:
+1. In the Razorpay dashboard, request **International Payments** so USD cards work, and use **Test mode** keys first.
+2. Set `RAZORPAY_KEY_ID`, `RAZORPAY_KEY_SECRET` and `PRICE_USD` in Vercel.
+3. Add a webhook: Settings → Webhooks → URL `https://<your-site>/api/razorpay/webhook`, event **payment.captured**, and a secret of your choice. Put the same secret in `RAZORPAY_WEBHOOK_SECRET`. This is the backup that grants access if a student closes the tab right after paying.
+4. Pay once yourself in test mode, then check the payment shows under "Recent online payments" in `/admin`, before switching to live keys.
+
+Razorpay settles to your bank in rupees. Fees and conversion are shown in your dashboard.
+
 ## Local development
 
 ```
@@ -36,4 +48,4 @@ npm run dev
 
 ## Planned
 
-Razorpay checkout ($40 / 12 months, USD) that grants access automatically, audio recordings, and the remaining modules.
+Audio recordings and the remaining modules.
