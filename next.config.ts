@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const config: NextConfig = {
   poweredByHeader: false,
+  // Stops Next.js writing an AGENTS.md file into the repo during `next dev`.
+  agentRules: false,
+  serverExternalPackages: ["@electric-sql/pglite"],
   async headers() {
     return [
       {

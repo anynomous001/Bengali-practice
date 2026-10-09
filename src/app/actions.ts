@@ -16,6 +16,7 @@ import {
   validEmail,
 } from "@/lib/auth";
 import { query } from "@/lib/db";
+import { appBase } from "@/lib/base-url";
 import { sendLoginEmail } from "@/lib/email";
 
 export type FormState = { message: string; ok?: boolean } | undefined;
@@ -28,7 +29,7 @@ export async function requestLogin(_prev: FormState, formData: FormData): Promis
     if (await canSignIn(email)) {
       const token = await createLoginToken(email);
       if (token) {
-        const base = (process.env.APP_URL ?? "http://localhost:3000").replace(/\/$/, "");
+        const base = await appBase();
         // After the response, so enrolled and unknown emails take about the same time to answer.
         after(() => sendLoginEmail(email, `${base}/login/verify?token=${encodeURIComponent(token)}`).catch((e) => console.error("login email failed", e)));
       }

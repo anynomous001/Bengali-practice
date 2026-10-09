@@ -49,13 +49,21 @@ Razorpay settles to your bank in rupees. Fees and conversion are shown in your d
 
 Known limits: a paying student can still share their login or copy what is on their screen, and sign-in is not limited to one device.
 
-## Local development
+## Run it on your computer (no setup)
+
+You need Node 20+ and Git. No database, email service or accounts.
 
 ```
+git clone https://github.com/anynomous001/Bengali-practice.git
+cd Bengali-practice
 npm install
-cp .env.example .env.local   # fill in
 npm run dev
 ```
+
+Open http://localhost:3000, click **Student sign in**, and enter **admin@local.test**. The sign-in link is printed in the terminal (not emailed): open it and click Continue. You are the admin, so there is an **Admin** link for adding test students.
+
+- Data is stored in a `.local-db` folder (delete it to start fresh). This only happens when `DATABASE_URL` is not set and you are not in production.
+- To use a real database, an admin email of your choice, or Razorpay test keys locally, copy `.env.example` to `.env.local` and fill it in.
 
 ## Planned
 

@@ -13,8 +13,12 @@ export const normalizeEmail = (s: string) => s.trim().toLowerCase();
 const isEmail = (s: string) => s.length <= 254 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
 export const validEmail = isEmail;
 
+// In local development only, a built-in admin lets you sign in with no .env file.
+const DEV = process.env.NODE_ENV !== "production";
+export const DEV_ADMIN = "admin@local.test";
+
 export function isAdminEmail(email: string) {
-  return (process.env.ADMIN_EMAILS ?? "")
+  return (process.env.ADMIN_EMAILS ?? (DEV ? DEV_ADMIN : ""))
     .split(",")
     .map(normalizeEmail)
     .filter(Boolean)
@@ -22,7 +26,7 @@ export function isAdminEmail(email: string) {
 }
 
 function secret() {
-  const s = process.env.AUTH_SECRET;
+  const s = process.env.AUTH_SECRET ?? (DEV ? "local-development-secret-do-not-use-in-production" : undefined);
   if (!s || s.length < 32) throw new Error("AUTH_SECRET must be set (32+ chars): openssl rand -base64 32");
   return new TextEncoder().encode(s);
 }

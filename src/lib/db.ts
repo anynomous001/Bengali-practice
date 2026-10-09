@@ -1,6 +1,11 @@
 import { Pool } from "pg";
 
-const globalForPool = globalThis as unknown as { pool?: Pool; schema?: Promise<void> };
+// Zero-config local mode: with no DATABASE_URL, `npm run dev` stores data in ./.local-db (embedded Postgres).
+// Never used in production builds.
+const LOCAL = !process.env.DATABASE_URL && process.env.NODE_ENV !== "production";
+
+type Local = { query: (t: string, p?: unknown[]) => Promise<{ rows: unknown[] }>; exec: (t: string) => Promise<unknown> };
+const globalForPool = globalThis as unknown as { pool?: Pool; local?: Promise<Local>; schema?: Promise<void> };
 
 function pool(): Pool {
   if (!process.env.DATABASE_URL) throw new Error("DATABASE_URL is not set");
@@ -11,8 +16,16 @@ function pool(): Pool {
   }));
 }
 
-async function ensureSchema() {
-  await pool().query(`
+function local(): Promise<Local> {
+  return (globalForPool.local ??= import("@electric-sql/pglite").then(async ({ PGlite }) => {
+    console.log("[local mode] no DATABASE_URL set: using embedded database in ./.local-db");
+    const db = new PGlite("./.local-db");
+    await db.waitReady;
+    return db as unknown as Local;
+  }));
+}
+
+const SCHEMA = `
     CREATE TABLE IF NOT EXISTS students (
       email text PRIMARY KEY,
       access_expires_at timestamptz,
@@ -57,19 +70,23 @@ async function ensureSchema() {
       reviews int NOT NULL DEFAULT 0,
       PRIMARY KEY (email, card_id)
     );
-  `);
+  `;
+
+async function ensureSchema() {
+  if (LOCAL) await (await local()).exec(SCHEMA);
+  else await pool().query(SCHEMA);
 }
 
 export async function query<T extends object = Record<string, unknown>>(
   text: string,
   params: unknown[] = [],
 ): Promise<T[]> {
-  const p = pool();
   // Retry the schema setup on the next call if it failed (e.g. DB briefly unreachable).
   globalForPool.schema ??= ensureSchema().catch((e) => {
     globalForPool.schema = undefined;
     throw e;
   });
   await globalForPool.schema;
-  return (await p.query(text, params)).rows as T[];
+  if (LOCAL) return (await (await local()).query(text, params)).rows as T[];
+  return (await pool().query(text, params)).rows as T[];
 }

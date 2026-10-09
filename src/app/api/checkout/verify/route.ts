@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createLoginToken } from "@/lib/auth";
+import { appBase } from "@/lib/base-url";
 import { sendLoginEmail } from "@/lib/email";
 import { checkoutSignatureOk, fulfillOrder } from "@/lib/razorpay";
 
@@ -18,7 +19,7 @@ export async function POST(req: Request) {
     try {
       const token = await createLoginToken(email);
       if (token) {
-        const base = (process.env.APP_URL ?? "http://localhost:3000").replace(/\/$/, "");
+        const base = await appBase();
         await sendLoginEmail(email, `${base}/login/verify?token=${encodeURIComponent(token)}`);
       }
     } catch (e) {
