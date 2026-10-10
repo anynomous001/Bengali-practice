@@ -10,6 +10,7 @@ export const SEGMENTS: Record<
     blurb: "Recognise Bengali letters and words on the page.",
     activities: [
       { href: "/learn/reading/alphabet", title: "Alphabet", blurb: "Learn every letter, then quiz yourself: letter → word, word → letter." },
+      { href: "/learn/reading/stories", title: "Stories", blurb: "Short Bengali fables: words first, then Bengali only, line by line with meanings, English, and a quiz." },
       { href: "/learn/reading/numbers", title: "Numbers & money", blurb: "Read numerals and prices in টাকা: numeral → word and word → numeral." },
       { href: "/learn/reading/flashcards", title: "Flashcards", blurb: "Spaced-repetition review of letters, words and numbers." },
     ],

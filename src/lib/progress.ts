@@ -19,3 +19,16 @@ export async function loadWriting(): Promise<Record<string, number>> {
     : [];
   return Object.fromEntries(rows.map((r) => [r.item, r.count]));
 }
+
+export type StoryResult = { score: number; total: number; attempts: number };
+
+export async function loadStoryProgress(): Promise<Record<string, StoryResult>> {
+  const user = await getUser();
+  const rows = user
+    ? await query<{ story_id: string; best_score: number; total: number; attempts: number }>(
+        "SELECT story_id, best_score, total, attempts FROM story_progress WHERE email = $1",
+        [user.email],
+      )
+    : [];
+  return Object.fromEntries(rows.map((r) => [r.story_id, { score: r.best_score, total: r.total, attempts: r.attempts }]));
+}

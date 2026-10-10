@@ -5,6 +5,7 @@ import { after } from "next/server";
 import { ALL_CARD_IDS } from "@/data/decks";
 import { LETTERS } from "@/data/letters";
 import { SENTENCES } from "@/data/sentences";
+import { STORIES } from "@/data/stories";
 import {
   canSignIn,
   consumeLoginToken,
@@ -97,5 +98,20 @@ export async function recordWriting(item: string) {
     `INSERT INTO writing_practice (email, item, count) VALUES ($1, $2, 1)
      ON CONFLICT (email, item) DO UPDATE SET count = writing_practice.count + 1`,
     [user.email, item],
+  );
+}
+
+export async function recordStoryQuiz(storyId: string, score: number) {
+  const user = await getUser();
+  const story = STORIES.find((s) => s.id === storyId);
+  if (!user?.hasAccess || !story || !Number.isFinite(score)) return;
+  const total = story.quiz.length;
+  const s = Math.max(0, Math.min(total, Math.floor(score)));
+  await query(
+    `INSERT INTO story_progress (email, story_id, best_score, total, attempts) VALUES ($1, $2, $3, $4, 1)
+     ON CONFLICT (email, story_id) DO UPDATE SET
+       best_score = GREATEST(story_progress.best_score, $3), total = $4,
+       attempts = story_progress.attempts + 1, updated_at = now()`,
+    [user.email, storyId, s, total],
   );
 }

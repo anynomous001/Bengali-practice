@@ -46,6 +46,15 @@ const SCHEMA = `
       wrong_count int NOT NULL DEFAULT 0,
       PRIMARY KEY (email, letter)
     );
+    CREATE TABLE IF NOT EXISTS story_progress (
+      email text NOT NULL,
+      story_id text NOT NULL,
+      best_score int NOT NULL DEFAULT 0,
+      total int NOT NULL DEFAULT 0,
+      attempts int NOT NULL DEFAULT 0,
+      updated_at timestamptz NOT NULL DEFAULT now(),
+      PRIMARY KEY (email, story_id)
+    );
     CREATE TABLE IF NOT EXISTS orders (
       order_id text PRIMARY KEY,
       email text NOT NULL,

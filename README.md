@@ -12,6 +12,7 @@ Private practice web app for my Bengali students. Next.js (App Router) + Postgre
   - **Speaking**: letter sounds with a listening quiz, "say it aloud" flashcards (audio plays on flip).
   - **Writing**: trace letters on a canvas, build words from pieces, "write it down" flashcards.
 - **Romanized English on/off.** A switch at the top of every lesson hides or shows the romanized spelling (like "ko", "kolom") everywhere: letters, example words, quizzes, flashcards, numbers and the writing activities. Each student's choice is remembered in a cookie. Flashcards adapt: with it off, the back shows the Bengali word and its English meaning instead.
+- **Stories (Reading).** Seven short fables, each with vocabulary, then the story in layers (Bengali only, line by line with romanization and English, English only) and a quiz. Story text lives in `src/data/stories.ts` (review copy in `content-drafts/`), is only sent to students who have access, follows the Romanized English switch, and quiz scores are saved per student. To add a story, add an entry to that file.
 - **Flashcards** use Leitner spaced repetition (1, 3, 7, 14, 30 days). New decks are added in `src/data/decks.ts`; new activities are listed per segment in `src/data/segments.ts`.
 - **Numbers & money** (reading quiz, listening quiz, flashcards) and **Build the sentence** use the lists in `src/data/numbers.ts` and `src/data/sentences.ts`. Sentences are placeholders; swap in your own.
 - Conversations, directions, role-play and reading passages are not built yet.
