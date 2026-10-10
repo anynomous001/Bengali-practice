@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import type { Letter } from "@/data/letters";
 import { recordWriting } from "../../../actions";
+import { useRoman } from "../../Roman";
 
 function pieces(word: string): string[] {
   if (typeof Intl !== "undefined" && "Segmenter" in Intl) {
@@ -34,6 +35,7 @@ function makeQuestion(words: Letter[], prev?: string): Q {
 }
 
 export default function Builder({ initialCounts, letters }: { initialCounts: Record<string, number>; letters: Letter[] }) {
+  const { roman } = useRoman();
   const words = letters.filter((l) => l.word);
   const [q, setQ] = useState<Q | null>(null);
   const [picked, setPicked] = useState<number[]>([]);
@@ -73,7 +75,7 @@ export default function Builder({ initialCounts, letters }: { initialCounts: Rec
       <p className="muted">{total} word{total === 1 ? "" : "s"} built so far</p>
       <div className="prompt">
         <span className="word-en">{q.letter.wmean}</span>
-        <small>sounds like “{q.letter.wrom}”</small>
+        {roman && <small>sounds like “{q.letter.wrom}”</small>}
       </div>
       <div className={"built" + (result ? " " + result : "")} aria-live="polite">
         {built.length ? built.join("") : <span className="muted">Tap the pieces in order</span>}

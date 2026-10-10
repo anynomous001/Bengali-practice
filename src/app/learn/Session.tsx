@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import type { Card } from "@/data/decks";
 import { rateCard } from "../actions";
+import { useRoman } from "./Roman";
 
 type Rating = "again" | "good" | "easy";
 
@@ -30,6 +31,7 @@ export default function Session({
   const [flipped, setFlipped] = useState(false);
   const [done, setDone] = useState(0);
   const [missed, setMissed] = useState(0);
+  const { roman } = useRoman();
   const total = cards.length;
   const card = queue[0];
 
@@ -89,11 +91,13 @@ export default function Session({
       {hint && <p className="hint">{hint}</p>}
       <button className="flash" onClick={flip} aria-label={flipped ? "Hide answer" : "Show answer"}>
         <span className={card.front.length > 3 ? "flash-front small" : "flash-front"}>{card.front}</span>
-        {card.frontSub && <span className="muted">{card.frontSub}</span>}
+        {roman && card.frontRoman && <span className="muted">{card.frontRoman}</span>}
         {flipped ? (
           <span className="flash-back">
-            <b>{card.back}</b>
-            {card.backSub && <span>{card.backSub}</span>}
+            {card.back && <b>{card.back}</b>}
+            {roman && card.roman && <span className={card.back ? "" : "roman-main"}>{card.roman}</span>}
+            {card.note && <span>{card.note}</span>}
+            {!card.back && !(roman && card.roman) && !card.note && <span className="muted">Tap 🔊 Listen and repeat it.</span>}
           </span>
         ) : (
           <span className="muted">Tap to reveal</span>

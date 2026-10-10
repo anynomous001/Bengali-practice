@@ -4,9 +4,14 @@ import { NUMBERS } from "./numbers";
 export type Card = {
   id: string;
   front: string;
-  frontSub?: string;
-  back: string;
-  backSub?: string;
+  /** Shown under the front only when romanization is on. */
+  frontRoman?: string;
+  /** Main answer line (Bengali or English). Optional: some cards are answered by listening. */
+  back?: string;
+  /** Romanized English, shown only when romanization is on. */
+  roman?: string;
+  /** English meaning, always shown on the back. */
+  note?: string;
   /** Bengali text to read aloud. */
   speak: string;
 };
@@ -32,8 +37,9 @@ export const DECKS: Deck[] = [
     cards: LETTERS.map((l) => ({
       id: `l:${l.ch}`,
       front: l.ch,
-      back: l.rom,
-      backSub: l.word ? `${l.word} (${l.wrom}) – ${l.wmean}` : undefined,
+      back: l.word ?? undefined,
+      roman: l.word ? `${l.rom} · ${l.wrom}` : l.rom,
+      note: l.wmean ?? undefined,
       speak: l.ch,
     })),
   },
@@ -45,8 +51,8 @@ export const DECKS: Deck[] = [
     cards: LETTERS.filter((l) => l.word).map((l) => ({
       id: `w:${l.ch}`,
       front: l.word!,
-      back: l.wrom!,
-      backSub: l.wmean!,
+      roman: l.wrom!,
+      note: l.wmean!,
       speak: l.word!,
     })),
   },
@@ -55,7 +61,7 @@ export const DECKS: Deck[] = [
     segment: "reading",
     title: "Numbers",
     blurb: "See the numeral, recall the Bengali word.",
-    cards: NUMBERS.map((n) => ({ id: `n:${n.value}`, front: n.numeral, back: n.word, backSub: n.wrom, speak: n.word })),
+    cards: NUMBERS.map((n) => ({ id: `n:${n.value}`, front: n.numeral, back: n.word, roman: n.wrom, speak: n.word })),
   },
   {
     id: "say-numbers",
@@ -64,7 +70,7 @@ export const DECKS: Deck[] = [
     blurb: "See the numeral, say it in Bengali, then check.",
     hint: "Say it aloud before you flip the card.",
     autoSpeak: true,
-    cards: NUMBERS.map((n) => ({ id: `ns:${n.value}`, front: n.numeral, back: n.word, backSub: n.wrom, speak: n.word })),
+    cards: NUMBERS.map((n) => ({ id: `ns:${n.value}`, front: n.numeral, back: n.word, roman: n.wrom, speak: n.word })),
   },
   {
     id: "say-words",
@@ -77,7 +83,7 @@ export const DECKS: Deck[] = [
       id: `s:${l.ch}`,
       front: l.wmean!,
       back: l.word!,
-      backSub: l.wrom!,
+      roman: l.wrom!,
       speak: l.word!,
     })),
   },
@@ -90,7 +96,7 @@ export const DECKS: Deck[] = [
     cards: LETTERS.filter((l) => l.word).map((l) => ({
       id: `r:${l.ch}`,
       front: l.wmean!,
-      frontSub: `sounds like “${l.wrom}”`,
+      frontRoman: `sounds like “${l.wrom}”`,
       back: l.word!,
       speak: l.word!,
     })),

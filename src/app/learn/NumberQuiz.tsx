@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { Num } from "@/data/numbers";
+import { useRoman } from "./Roman";
 
 type Mode = "n2w" | "w2n" | "listen";
 type Kind = "numbers" | "prices";
@@ -74,6 +75,7 @@ function Question({ run, setRun, numbers }: { run: Run; setRun: React.Dispatch<R
   const q = run.queue[run.i];
   const [options] = useState(() => shuffle([q, ...shuffle(numbers.filter((n) => n.value !== q.value)).slice(0, 3)]));
   const [picked, setPicked] = useState<number | null>(null);
+  const { roman } = useRoman();
   const { mode, kind } = run;
   const label = (n: Num) => (mode === "n2w" ? wordText(n, kind) : numeralText(n, kind));
 
@@ -86,7 +88,7 @@ function Question({ run, setRun, numbers }: { run: Run; setRun: React.Dispatch<R
     <>
       <p className="muted">Question {run.i + 1} of {run.queue.length} · Score {run.score}</p>
       {mode === "n2w" && <div className="big">{numeralText(q, kind)}</div>}
-      {mode === "w2n" && <div className="prompt"><span className="word">{wordText(q, kind)}</span><small>{q.wrom}{kind === "prices" ? " taka" : ""}</small></div>}
+      {mode === "w2n" && <div className="prompt"><span className="word">{wordText(q, kind)}</span>{roman && <small>{q.wrom}{kind === "prices" ? " taka" : ""}</small>}</div>}
       {mode === "listen" && <button className="btn big-btn" onClick={() => speak(wordText(q, kind))}>🔊 Play</button>}
       <div className={"options" + (mode === "n2w" ? "" : " letters")}>
         {options.map((o) => {
@@ -97,7 +99,7 @@ function Question({ run, setRun, numbers }: { run: Run; setRun: React.Dispatch<R
       {picked !== null && (
         <>
           <p className="feedback">
-            {picked === q.value ? "Correct!" : "Not quite."} {numeralText(q, kind)} = {wordText(q, kind)} ({q.wrom})
+            {picked === q.value ? "Correct!" : "Not quite."} {numeralText(q, kind)} = {wordText(q, kind)}{roman && ` (${q.wrom})`}
           </p>
           <button className="btn ghost" onClick={() => speak(wordText(q, kind))}>🔊 Hear it</button>
           <button className="btn" onClick={() => setRun((r) => r && { ...r, i: r.i + 1 })}>Next →</button>

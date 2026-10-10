@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { Letter } from "@/data/letters";
 import { recordWriting } from "../../../actions";
+import { useRoman } from "../../Roman";
 
 const SIZE = 320;
 
@@ -15,6 +16,7 @@ export default function Trace({
   letters: Letter[];
   groups: { id: string; title: string }[];
 }) {
+  const { roman } = useRoman();
   const [counts, setCounts] = useState(initialCounts);
   const [sel, setSel] = useState(LETTERS[0].ch);
   const [guide, setGuide] = useState(true);
@@ -95,7 +97,7 @@ export default function Trace({
         <canvas ref={guideRef} className="trace-canvas" />
         <canvas ref={drawRef} className="trace-canvas draw" onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up} />
       </div>
-      <p>Letter <b>{sel}</b> ({letter.rom}){counts[sel] ? ` · written ${counts[sel]}×` : ""}</p>
+      <p>Letter <b>{sel}</b>{roman && ` (${letter.rom})`}{counts[sel] ? ` · written ${counts[sel]}×` : ""}</p>
       <button className="btn" onClick={done}>I wrote it ✓</button>
       <button className="btn ghost" onClick={clear}>Clear</button>
       <button className="btn ghost" onClick={() => setGuide((g) => !g)}>{guide ? "Hide guide" : "Show guide"}</button>
@@ -106,7 +108,7 @@ export default function Trace({
             {LETTERS.filter((l) => l.group === g.id).map((l) => (
               <button key={l.ch} className={"tile" + (counts[l.ch] ? " done" : "") + (l.ch === sel ? " current" : "")} onClick={() => setSel(l.ch)}>
                 <span className="ch">{l.ch}</span>
-                <span className="rom">{counts[l.ch] ? `✓ ${counts[l.ch]}×` : l.rom}</span>
+                <span className="rom">{counts[l.ch] ? `✓ ${counts[l.ch]}×` : roman ? l.rom : ""}</span>
               </button>
             ))}
           </div>

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import type { Sentence } from "@/data/sentences";
 import { recordWriting } from "../../../actions";
+import { useRoman } from "../../Roman";
 
 function shuffled<T>(a: T[]): T[] {
   const b = a.slice();
@@ -25,6 +26,7 @@ function makeQuestion(sentences: Sentence[], prev?: string): Q {
 }
 
 export default function SentenceBuilder({ initialCounts, sentences }: { initialCounts: Record<string, number>; sentences: Sentence[] }) {
+  const { roman } = useRoman();
   const [q, setQ] = useState<Q | null>(null);
   const [picked, setPicked] = useState<number[]>([]);
   const [result, setResult] = useState<"right" | "wrong" | null>(null);
@@ -54,7 +56,7 @@ export default function SentenceBuilder({ initialCounts, sentences }: { initialC
   return (
     <>
       <p className="muted">{total} of {sentences.length} sentences built</p>
-      <div className="prompt"><span className="word-en">{q.s.en}</span><small>{q.s.rom}</small></div>
+      <div className="prompt"><span className="word-en">{q.s.en}</span>{roman && <small>{q.s.rom}</small>}</div>
       <div className={"built" + (result ? " " + result : "")} aria-live="polite">
         {picked.length ? picked.map(text).join(" ") : <span className="muted">Tap the words in order</span>}
       </div>

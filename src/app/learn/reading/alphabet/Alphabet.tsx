@@ -3,6 +3,7 @@
 import { createContext, useContext, useState } from "react";
 import type { Letter } from "@/data/letters";
 import { recordAnswer } from "../../../actions";
+import { useRoman } from "../../Roman";
 
 type Progress = Record<string, { right: number; wrong: number }>;
 type Mode = "letter2word" | "word2letter" | "listen";
@@ -76,6 +77,7 @@ export default function Alphabet({
 
 function Learn({ progress }: { progress: Progress }) {
   const { LETTERS, GROUPS } = useContext(D);
+  const { roman } = useRoman();
   const [sel, setSel] = useState<Letter | null>(null);
   return (
     <>
@@ -83,8 +85,8 @@ function Learn({ progress }: { progress: Progress }) {
         <section className="detail">
           <div className="big">{sel.ch}</div>
           <div>
-            <p className="sound">Sounds like: <b>{sel.rom}</b></p>
-            {sel.word && <p><span className="word">{sel.word}</span> ({sel.wrom}) – {sel.wmean}</p>}
+            {roman && <p className="sound">Sounds like: <b>{sel.rom}</b></p>}
+            {sel.word && <p><span className="word">{sel.word}</span>{roman && ` (${sel.wrom})`} – {sel.wmean}</p>}
             <button className="btn" onClick={() => speak(sel.ch)}>🔊 Letter</button>
             {sel.word && <button className="btn" onClick={() => speak(sel.word!)}>🔊 Word</button>}
           </div>
@@ -97,7 +99,7 @@ function Learn({ progress }: { progress: Progress }) {
             {LETTERS.filter((l) => l.group === g.id).map((l) => (
               <button key={l.ch} className={"tile" + (mastered(progress, l.ch) ? " done" : "")} onClick={() => setSel(l)}>
                 <span className="ch">{l.ch}</span>
-                <span className="rom">{l.rom}</span>
+                {roman && <span className="rom">{l.rom}</span>}
               </button>
             ))}
           </div>
@@ -162,6 +164,7 @@ function Quiz({ progress, onAnswer, modes }: { progress: Progress; onAnswer: (ch
 
 function Question({ run, onAnswer, onNext }: { run: Run; onAnswer: (ok: boolean) => void; onNext: () => void }) {
   const { QUIZ_LETTERS } = useContext(D);
+  const { roman } = useRoman();
   const q = run.queue[run.i];
   const [options] = useState(() =>
     shuffle([q, ...shuffle(QUIZ_LETTERS.filter((l) => l.ch !== q.ch && l.word !== q.word)).slice(0, 3)]),
@@ -174,7 +177,7 @@ function Question({ run, onAnswer, onNext }: { run: Run; onAnswer: (ok: boolean)
       <p className="muted">Question {run.i + 1} of {run.queue.length} · Score {run.score}</p>
       {m === "letter2word" && <div className="big">{q.ch}</div>}
       {m === "word2letter" && (
-        <div className="prompt"><span className="word">{q.word}</span><small>{q.wrom} – {q.wmean}</small></div>
+        <div className="prompt"><span className="word">{q.word}</span><small>{roman ? `${q.wrom} – ${q.wmean}` : q.wmean}</small></div>
       )}
       {m === "listen" && <button className="btn big-btn" onClick={() => speak(q.ch)}>🔊 Play sound</button>}
       <div className={"options" + (m === "letter2word" ? "" : " letters")}>
@@ -183,14 +186,14 @@ function Question({ run, onAnswer, onNext }: { run: Run; onAnswer: (ok: boolean)
           return (
             <button key={o.ch} className={"opt" + cls} disabled={!!picked}
               onClick={() => { setPicked(o.ch); onAnswer(o.ch === q.ch); }}>
-              {m === "letter2word" ? `${o.word} (${o.wrom})` : o.ch}
+              {m === "letter2word" ? (roman ? `${o.word} (${o.wrom})` : o.word) : o.ch}
             </button>
           );
         })}
       </div>
       {picked && (
         <>
-          <p className="feedback">{picked === q.ch ? "Correct!" : `Not quite – it's ${q.ch} (${q.rom}).`}</p>
+          <p className="feedback">{picked === q.ch ? "Correct!" : `Not quite – it's ${q.ch}${roman ? ` (${q.rom})` : ""}.`}</p>
           <button className="btn" onClick={onNext}>Next →</button>
         </>
       )}
