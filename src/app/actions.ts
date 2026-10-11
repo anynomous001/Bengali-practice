@@ -6,6 +6,7 @@ import { ALL_CARD_IDS } from "@/data/decks";
 import { LETTERS } from "@/data/letters";
 import { SENTENCES } from "@/data/sentences";
 import { GRAMMAR } from "@/data/grammar";
+import { READING_LESSONS } from "@/data/reading-lessons";
 import { STORIES } from "@/data/stories";
 import {
   canSignIn,
@@ -119,7 +120,7 @@ export async function recordStoryQuiz(storyId: string, score: number) {
 
 export async function recordGrammarQuiz(topicId: string, score: number) {
   const user = await getUser();
-  const topic = GRAMMAR.find((t) => t.id === topicId);
+  const topic = [...GRAMMAR, ...READING_LESSONS].find((t) => t.id === topicId);
   if (!user?.hasAccess || !topic || !Number.isFinite(score)) return;
   const total = topic.exercises.length;
   const s = Math.max(0, Math.min(total, Math.floor(score)));

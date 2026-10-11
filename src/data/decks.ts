@@ -1,6 +1,16 @@
 import { LETTERS } from "./letters";
 import { NUMBERS } from "./numbers";
 
+const SIGN_CARDS: [sign: string, roman: string, name: string, vowel: string][] = [
+  ["া", "kaa", "আ-কার", "আ"], ["ি", "ki", "ই-কার", "ই"], ["ী", "kii", "ঈ-কার", "ঈ"], ["ু", "ku", "উ-কার", "উ"], ["ূ", "kuu", "ঊ-কার", "ঊ"],
+  ["ৃ", "kri", "ঋ-কার", "ঋ"], ["ে", "ke", "এ-কার", "এ"], ["ৈ", "koi", "ঐ-কার", "ঐ"], ["ো", "ko", "ও-কার", "ও"], ["ৌ", "kou", "ঔ-কার", "ঔ"],
+];
+const SIGN_WORDS: [word: string, roman: string, name: string, meaning: string][] = [
+  ["কাক", "kaak", "আ-কার (◌া)", "crow"], ["দিন", "din", "ই-কার (◌ি)", "day"], ["নদী", "nodi", "ঈ-কার (◌ী)", "river"], ["ফুল", "phul", "উ-কার (◌ু)", "flower"],
+  ["ভূত", "bhut", "ঊ-কার (◌ূ)", "ghost"], ["কৃষ্ণ", "krishno", "ঋ-কার (◌ৃ)", "Krishna"], ["দেশ", "desh", "এ-কার (◌ে)", "country"], ["বৈষ্ণব", "boishnob", "ঐ-কার (◌ৈ)", "Vaishnava"],
+  ["গোবিন্দ", "gobindo", "ও-কার (◌ো)", "Govinda"], ["নৌকা", "nouka", "ঔ-কার (◌ৌ)", "boat"],
+];
+
 export type Card = {
   id: string;
   front: string;
@@ -54,6 +64,34 @@ export const DECKS: Deck[] = [
       roman: l.wrom!,
       note: l.wmean!,
       speak: l.word!,
+    })),
+  },
+  {
+    id: "matras",
+    segment: "reading",
+    title: "Vowel signs",
+    blurb: "See a letter with a vowel sign, recall the sound and the sign's name.",
+    cards: SIGN_CARDS.map(([sign, roman, name, vowel]) => ({
+      id: `m:${sign}`,
+      front: `ক${sign}`,
+      back: name,
+      roman,
+      note: `The sign for ${vowel}`,
+      speak: `ক${sign}`,
+    })),
+  },
+  {
+    id: "matra-words",
+    segment: "reading",
+    title: "Words with vowel signs",
+    blurb: "See a word, recall how to read it, what it means, and which sign it uses.",
+    cards: SIGN_WORDS.map(([word, roman, name, meaning]) => ({
+      id: `mw:${word}`,
+      front: word,
+      back: name,
+      roman,
+      note: meaning,
+      speak: word,
     })),
   },
   {

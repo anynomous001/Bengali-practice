@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import type { Block, Cell, Exercise, GrammarTopic } from "@/data/grammar";
-import { recordGrammarQuiz } from "../../../actions";
-import { useRoman } from "../../Roman";
+import { recordGrammarQuiz } from "../actions";
+import { useRoman } from "./Roman";
 
 function shuffle<T>(a: T[]): T[] {
   a = a.slice();
@@ -66,7 +66,7 @@ function BlockView({ block, roman }: { block: Block; roman: boolean }) {
 
 type Tab = string; // a section id, or "practice"
 
-export default function GrammarReader({ topic, best }: { topic: GrammarTopic; best: { score: number; total: number; attempts: number } | null }) {
+export default function LessonReader({ topic, best }: { topic: GrammarTopic; best: { score: number; total: number; attempts: number } | null }) {
   const { roman } = useRoman();
   const [tab, setTab] = useState<Tab>(topic.sections[0].id);
   const idx = tab === "practice" ? topic.sections.length : topic.sections.findIndex((s) => s.id === tab);

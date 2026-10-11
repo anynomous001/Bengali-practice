@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { requireAccess } from "@/lib/access";
 import { loadGrammarProgress } from "@/lib/progress";
 import { GRAMMAR } from "@/data/grammar";
-import GrammarReader from "./GrammarReader";
+import LessonReader from "../../LessonReader";
 
 export default async function TopicPage({ params }: { params: Promise<{ id: string }> }) {
   await requireAccess();
@@ -14,7 +14,7 @@ export default async function TopicPage({ params }: { params: Promise<{ id: stri
   return (
     <main data-seg="grammar">
       <Link href="/learn/grammar" className="back">← Grammar</Link>
-      <GrammarReader topic={topic} best={best} />
+      <LessonReader topic={topic} best={best} />
     </main>
   );
 }
