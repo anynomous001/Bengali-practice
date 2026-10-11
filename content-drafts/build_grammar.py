@@ -300,6 +300,17 @@ tense_sections = [
    tense_table("asha", [t[0] for t in TENSES], "আসা (asha), to come"),
    NOTE("যাওয়া changes its root: যা- in the present and future, গি- / গে- for completed and simple past, যে- in the habitual past."),
   ]),
+  dict(id="link", title="'Has been doing' and linking words", blocks=[
+   P("English has tenses like 'I have been living here for two years' and 'I had been waiting for an hour'. Bengali has no separate form for these. It uses the ordinary present or past continuous and adds a time word: ধরে (for), থেকে (since), আগে (before), যখন … তখন (when … then)."),
+   TABLE(["English idea", "Bengali pattern", "Example"], [
+     ["has / have been doing (for a time)", "present (or present continuous) + ধরে", c("আমি দু বছর ধরে এখানে থাকি।","ami du bochhor dhore ekhane thaki.")],
+     ["has / have been doing (since a time)", "present continuous + থেকে", c("সে সকাল থেকে কাজ করছে।","she shokal theke kaj korchhe.")],
+     ["had been doing (for a time)", "past continuous + ধরে", c("আমি এক ঘণ্টা ধরে অপেক্ষা করছিলাম।","ami ek ghonta dhore opekkha korchhilam.")],
+     ["before / after", "verbal noun (-া) + র + আগে / পরে", c("খাওয়ার আগে হাত ধোও।","khaoyar age hat dhoo.")],
+     ["when … then …", "যখন … তখন …", c("আমি যখন এলাম, তখন সে ঘুমাচ্ছিল।","ami jokhon elam, tokhon she ghumachchhilo.")],
+   ]),
+   NOTE("'Not yet' is এখনও … নি: আমি এখনও খাইনি (I have not eaten yet). 'Already' is ইতিমধ্যে or আগেই: সে ইতিমধ্যে চলে গিয়েছে."),
+  ]),
   dict(id="use", title="Choosing the tense", blocks=[
    P("Time words help you choose. রোজ (every day) and সাধারণত (usually) go with the simple present. এখন (now) goes with the continuous. ইতিমধ্যে (already) goes with the perfect. গতকাল (yesterday) goes with the simple past. আগামীকাল (tomorrow) goes with the future."),
    NOTE("কাল (kal) means both 'yesterday' and 'tomorrow'. The verb tells you which: কাল আমি গেলাম (yesterday) and কাল আমি যাব (tomorrow). To be clear, say গতকাল (yesterday) or আগামীকাল (tomorrow)."),

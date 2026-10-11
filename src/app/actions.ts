@@ -7,6 +7,7 @@ import { LETTERS } from "@/data/letters";
 import { SENTENCES } from "@/data/sentences";
 import { GRAMMAR } from "@/data/grammar";
 import { READING_LESSONS } from "@/data/reading-lessons";
+import { WORKOUT } from "@/data/tense-workout";
 import { STORIES } from "@/data/stories";
 import {
   canSignIn,
@@ -121,8 +122,9 @@ export async function recordStoryQuiz(storyId: string, score: number) {
 export async function recordGrammarQuiz(topicId: string, score: number) {
   const user = await getUser();
   const topic = [...GRAMMAR, ...READING_LESSONS].find((t) => t.id === topicId);
-  if (!user?.hasAccess || !topic || !Number.isFinite(score)) return;
-  const total = topic.exercises.length;
+  const round = topicId.startsWith("w-") ? WORKOUT.find((r) => `w-${r.id}` === topicId) : undefined;
+  if (!user?.hasAccess || (!topic && !round) || !Number.isFinite(score)) return;
+  const total = topic ? topic.exercises.length : round!.items.length;
   const s = Math.max(0, Math.min(total, Math.floor(score)));
   await query(
     `INSERT INTO grammar_progress (email, topic_id, best_score, total, attempts) VALUES ($1, $2, $3, $4, 1)

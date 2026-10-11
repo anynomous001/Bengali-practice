@@ -51,6 +51,7 @@ export const SEGMENTS: Record<
     title: "Grammar", bn: "ব্যাকরণ", icon: "📐",
     blurb: "How Bengali works: persons, verbs, tenses, karak and bibhakti, with practice.",
     activities: [
+      { href: "/learn/grammar/workout", title: "Tense workout", blurb: "Ten rounds of tense drills: cues, negatives, spot the mistake, translate, rewrite and combine." },
       { href: "/learn/grammar/purush", title: "Persons & pronouns", blurb: "Who is speaking, and the three levels of 'you'." },
       { href: "/learn/grammar/kriya", title: "Verbs", blurb: "Roots, verb forms, 'to be' and 'to have', and commands." },
       { href: "/learn/grammar/kal", title: "Tenses", blurb: "Present, past and future, with full tables for every person." },

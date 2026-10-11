@@ -5,7 +5,7 @@ import type { Block, Cell, Exercise, GrammarTopic } from "@/data/grammar";
 import { recordGrammarQuiz } from "../actions";
 import { useRoman } from "./Roman";
 
-function shuffle<T>(a: T[]): T[] {
+export function shuffle<T>(a: T[]): T[] {
   a = a.slice();
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -14,7 +14,7 @@ function shuffle<T>(a: T[]): T[] {
   return a;
 }
 
-function CellView({ cell, roman }: { cell: Cell; roman: boolean }) {
+export function CellView({ cell, roman }: { cell: Cell; roman: boolean }) {
   if (typeof cell === "string") return <>{cell}</>;
   return (
     <>

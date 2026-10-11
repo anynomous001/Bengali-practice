@@ -3911,6 +3911,71 @@ export const GRAMMAR: GrammarTopic[] = [
     ]
    },
    {
+    "id": "link",
+    "title": "'Has been doing' and linking words",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "English has tenses like 'I have been living here for two years' and 'I had been waiting for an hour'. Bengali has no separate form for these. It uses the ordinary present or past continuous and adds a time word: ধরে (for), থেকে (since), আগে (before), যখন … তখন (when … then)."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "English idea",
+       "Bengali pattern",
+       "Example"
+      ],
+      "rows": [
+       [
+        "has / have been doing (for a time)",
+        "present (or present continuous) + ধরে",
+        {
+         "bn": "আমি দু বছর ধরে এখানে থাকি।",
+         "ro": "ami du bochhor dhore ekhane thaki."
+        }
+       ],
+       [
+        "has / have been doing (since a time)",
+        "present continuous + থেকে",
+        {
+         "bn": "সে সকাল থেকে কাজ করছে।",
+         "ro": "she shokal theke kaj korchhe."
+        }
+       ],
+       [
+        "had been doing (for a time)",
+        "past continuous + ধরে",
+        {
+         "bn": "আমি এক ঘণ্টা ধরে অপেক্ষা করছিলাম।",
+         "ro": "ami ek ghonta dhore opekkha korchhilam."
+        }
+       ],
+       [
+        "before / after",
+        "verbal noun (-া) + র + আগে / পরে",
+        {
+         "bn": "খাওয়ার আগে হাত ধোও।",
+         "ro": "khaoyar age hat dhoo."
+        }
+       ],
+       [
+        "when … then …",
+        "যখন … তখন …",
+        {
+         "bn": "আমি যখন এলাম, তখন সে ঘুমাচ্ছিল।",
+         "ro": "ami jokhon elam, tokhon she ghumachchhilo."
+        }
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "'Not yet' is এখনও … নি: আমি এখনও খাইনি (I have not eaten yet). 'Already' is ইতিমধ্যে or আগেই: সে ইতিমধ্যে চলে গিয়েছে."
+     }
+    ]
+   },
+   {
     "id": "use",
     "title": "Choosing the tense",
     "blocks": [

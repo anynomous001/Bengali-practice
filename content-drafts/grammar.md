@@ -500,6 +500,20 @@ Most verbs follow the same endings. A few change the root: খাওয়া, �
 
 > **Note:** যাওয়া changes its root: যা- in the present and future, গি- / গে- for completed and simple past, যে- in the habitual past.
 
+## 'Has been doing' and linking words
+
+English has tenses like 'I have been living here for two years' and 'I had been waiting for an hour'. Bengali has no separate form for these. It uses the ordinary present or past continuous and adds a time word: ধরে (for), থেকে (since), আগে (before), যখন … তখন (when … then).
+
+| English idea | Bengali pattern | Example |
+|---|---|---|
+| has / have been doing (for a time) | present (or present continuous) + ধরে | আমি দু বছর ধরে এখানে থাকি। _(ami du bochhor dhore ekhane thaki.)_ |
+| has / have been doing (since a time) | present continuous + থেকে | সে সকাল থেকে কাজ করছে। _(she shokal theke kaj korchhe.)_ |
+| had been doing (for a time) | past continuous + ধরে | আমি এক ঘণ্টা ধরে অপেক্ষা করছিলাম। _(ami ek ghonta dhore opekkha korchhilam.)_ |
+| before / after | verbal noun (-া) + র + আগে / পরে | খাওয়ার আগে হাত ধোও। _(khaoyar age hat dhoo.)_ |
+| when … then … | যখন … তখন … | আমি যখন এলাম, তখন সে ঘুমাচ্ছিল। _(ami jokhon elam, tokhon she ghumachchhilo.)_ |
+
+> **Note:** 'Not yet' is এখনও … নি: আমি এখনও খাইনি (I have not eaten yet). 'Already' is ইতিমধ্যে or আগেই: সে ইতিমধ্যে চলে গিয়েছে.
+
 ## Choosing the tense
 
 Time words help you choose. রোজ (every day) and সাধারণত (usually) go with the simple present. এখন (now) goes with the continuous. ইতিমধ্যে (already) goes with the perfect. গতকাল (yesterday) goes with the simple past. আগামীকাল (tomorrow) goes with the future.

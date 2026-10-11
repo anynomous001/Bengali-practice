@@ -1,0 +1,1858 @@
+[
+ {
+  "id": "cues",
+  "title": "Tense cues",
+  "mode": "check",
+  "intro": "Each sentence has a base form (the present). Change it for the person and tense in the cue. Pick the right sentence.",
+  "items": [
+   {
+    "kind": "choose",
+    "q": "Change the sentence (I go to the market) for “সে”, simple past.",
+    "sentence": {
+     "bn": "আমি বাজারে যাই।",
+     "ro": "ami bajare jai."
+    },
+    "options": [
+     {
+      "bn": "সে বাজারে গেল।",
+      "ro": "she bajare gelo."
+     },
+     {
+      "bn": "সে বাজারে যায়।",
+      "ro": "she bajare jay."
+     },
+     {
+      "bn": "সে বাজারে যাচ্ছে।",
+      "ro": "she bajare jachchhe."
+     },
+     {
+      "bn": "সে বাজারে গিয়েছে।",
+      "ro": "she bajare giyechhe."
+     }
+    ],
+    "answer": 0,
+    "why": "Simple past with সে: গেল."
+   },
+   {
+    "kind": "choose",
+    "q": "Change the sentence (I go to the market) for “তুমি”, simple future.",
+    "sentence": {
+     "bn": "আমি বাজারে যাই।",
+     "ro": "ami bajare jai."
+    },
+    "options": [
+     {
+      "bn": "তুমি বাজারে যাবে।",
+      "ro": "tumi bajare jabe."
+     },
+     {
+      "bn": "তুমি বাজারে যাও।",
+      "ro": "tumi bajare jao."
+     },
+     {
+      "bn": "তুমি বাজারে যাচ্ছ।",
+      "ro": "tumi bajare jachchho."
+     },
+     {
+      "bn": "তুমি বাজারে গিয়েছ।",
+      "ro": "tumi bajare giyechho."
+     }
+    ],
+    "answer": 0,
+    "why": "Simple future with তুমি: যাবে."
+   },
+   {
+    "kind": "choose",
+    "q": "Change the sentence (I go to the market) for “আমরা”, present continuous.",
+    "sentence": {
+     "bn": "আমি বাজারে যাই।",
+     "ro": "ami bajare jai."
+    },
+    "options": [
+     {
+      "bn": "আমরা বাজারে যাচ্ছি।",
+      "ro": "amra bajare jachchhi."
+     },
+     {
+      "bn": "আমরা বাজারে যাই।",
+      "ro": "amra bajare jai."
+     },
+     {
+      "bn": "আমরা বাজারে গিয়েছি।",
+      "ro": "amra bajare giyechhi."
+     },
+     {
+      "bn": "আমরা বাজারে গেলাম।",
+      "ro": "amra bajare gelam."
+     }
+    ],
+    "answer": 0,
+    "why": "Present continuous with আমরা: যাচ্ছি."
+   },
+   {
+    "kind": "choose",
+    "q": "Change the sentence (I go to the market) for “আপনি”, simple past.",
+    "sentence": {
+     "bn": "আমি বাজারে যাই।",
+     "ro": "ami bajare jai."
+    },
+    "options": [
+     {
+      "bn": "আপনি বাজারে গেলেন।",
+      "ro": "apni bajare gelen."
+     },
+     {
+      "bn": "আপনি বাজারে যান।",
+      "ro": "apni bajare jan."
+     },
+     {
+      "bn": "আপনি বাজারে যাচ্ছেন।",
+      "ro": "apni bajare jachchhen."
+     },
+     {
+      "bn": "আপনি বাজারে গিয়েছেন।",
+      "ro": "apni bajare giyechhen."
+     }
+    ],
+    "answer": 0,
+    "why": "Simple past with আপনি: গেলেন."
+   },
+   {
+    "kind": "choose",
+    "q": "Change the sentence (I go to the market) for “তারা”, present perfect.",
+    "sentence": {
+     "bn": "আমি বাজারে যাই।",
+     "ro": "ami bajare jai."
+    },
+    "options": [
+     {
+      "bn": "তারা বাজারে গিয়েছে।",
+      "ro": "tara bajare giyechhe."
+     },
+     {
+      "bn": "তারা বাজারে যায়।",
+      "ro": "tara bajare jay."
+     },
+     {
+      "bn": "তারা বাজারে যাচ্ছে।",
+      "ro": "tara bajare jachchhe."
+     },
+     {
+      "bn": "তারা বাজারে গেল।",
+      "ro": "tara bajare gelo."
+     }
+    ],
+    "answer": 0,
+    "why": "Present perfect with তারা: গিয়েছে."
+   },
+   {
+    "kind": "choose",
+    "q": "Change the sentence (I go to the market) for “তোমরা”, past continuous.",
+    "sentence": {
+     "bn": "আমি বাজারে যাই।",
+     "ro": "ami bajare jai."
+    },
+    "options": [
+     {
+      "bn": "তোমরা বাজারে যাচ্ছিলে।",
+      "ro": "tomra bajare jachchhile."
+     },
+     {
+      "bn": "তোমরা বাজারে যাও।",
+      "ro": "tomra bajare jao."
+     },
+     {
+      "bn": "তোমরা বাজারে যাচ্ছ।",
+      "ro": "tomra bajare jachchho."
+     },
+     {
+      "bn": "তোমরা বাজারে গিয়েছ।",
+      "ro": "tomra bajare giyechho."
+     }
+    ],
+    "answer": 0,
+    "why": "Past continuous with তোমরা: যাচ্ছিলে."
+   },
+   {
+    "kind": "choose",
+    "q": "Change the sentence (I eat rice) for “সে”, present continuous.",
+    "sentence": {
+     "bn": "আমি ভাত খাই।",
+     "ro": "ami bhat khai."
+    },
+    "options": [
+     {
+      "bn": "সে ভাত খাচ্ছে।",
+      "ro": "she bhat khachchhe."
+     },
+     {
+      "bn": "সে ভাত খায়।",
+      "ro": "she bhat khay."
+     },
+     {
+      "bn": "সে ভাত খেয়েছে।",
+      "ro": "she bhat kheyechhe."
+     },
+     {
+      "bn": "সে ভাত খেল।",
+      "ro": "she bhat khelo."
+     }
+    ],
+    "answer": 0,
+    "why": "Present continuous with সে: খাচ্ছে."
+   },
+   {
+    "kind": "choose",
+    "q": "Change the sentence (I eat rice) for “তুমি”, simple past.",
+    "sentence": {
+     "bn": "আমি ভাত খাই।",
+     "ro": "ami bhat khai."
+    },
+    "options": [
+     {
+      "bn": "তুমি ভাত খেলে।",
+      "ro": "tumi bhat khele."
+     },
+     {
+      "bn": "তুমি ভাত খাও।",
+      "ro": "tumi bhat khao."
+     },
+     {
+      "bn": "তুমি ভাত খাচ্ছ।",
+      "ro": "tumi bhat khachchho."
+     },
+     {
+      "bn": "তুমি ভাত খেয়েছ।",
+      "ro": "tumi bhat kheyechho."
+     }
+    ],
+    "answer": 0,
+    "why": "Simple past with তুমি: খেলে."
+   },
+   {
+    "kind": "choose",
+    "q": "Change the sentence (I eat rice) for “আমরা”, simple future.",
+    "sentence": {
+     "bn": "আমি ভাত খাই।",
+     "ro": "ami bhat khai."
+    },
+    "options": [
+     {
+      "bn": "আমরা ভাত খাব।",
+      "ro": "amra bhat khabo."
+     },
+     {
+      "bn": "আমরা ভাত খাই।",
+      "ro": "amra bhat khai."
+     },
+     {
+      "bn": "আমরা ভাত খাচ্ছি।",
+      "ro": "amra bhat khachchhi."
+     },
+     {
+      "bn": "আমরা ভাত খেয়েছি।",
+      "ro": "amra bhat kheyechhi."
+     }
+    ],
+    "answer": 0,
+    "why": "Simple future with আমরা: খাব."
+   },
+   {
+    "kind": "choose",
+    "q": "Change the sentence (I eat rice) for “আপনি”, present perfect.",
+    "sentence": {
+     "bn": "আমি ভাত খাই।",
+     "ro": "ami bhat khai."
+    },
+    "options": [
+     {
+      "bn": "আপনি ভাত খেয়েছেন।",
+      "ro": "apni bhat kheyechhen."
+     },
+     {
+      "bn": "আপনি ভাত খান।",
+      "ro": "apni bhat khan."
+     },
+     {
+      "bn": "আপনি ভাত খাচ্ছেন।",
+      "ro": "apni bhat khachchhen."
+     },
+     {
+      "bn": "আপনি ভাত খেলেন।",
+      "ro": "apni bhat khelen."
+     }
+    ],
+    "answer": 0,
+    "why": "Present perfect with আপনি: খেয়েছেন."
+   },
+   {
+    "kind": "choose",
+    "q": "Change the sentence (I eat rice) for “তারা”, past continuous.",
+    "sentence": {
+     "bn": "আমি ভাত খাই।",
+     "ro": "ami bhat khai."
+    },
+    "options": [
+     {
+      "bn": "তারা ভাত খাচ্ছিল।",
+      "ro": "tara bhat khachchhilo."
+     },
+     {
+      "bn": "তারা ভাত খায়।",
+      "ro": "tara bhat khay."
+     },
+     {
+      "bn": "তারা ভাত খাচ্ছে।",
+      "ro": "tara bhat khachchhe."
+     },
+     {
+      "bn": "তারা ভাত খেয়েছে।",
+      "ro": "tara bhat kheyechhe."
+     }
+    ],
+    "answer": 0,
+    "why": "Past continuous with তারা: খাচ্ছিল."
+   },
+   {
+    "kind": "choose",
+    "q": "Change the sentence (I eat rice) for “উনি”, simple present.",
+    "sentence": {
+     "bn": "আমি ভাত খাই।",
+     "ro": "ami bhat khai."
+    },
+    "options": [
+     {
+      "bn": "উনি ভাত খান।",
+      "ro": "uni bhat khan."
+     },
+     {
+      "bn": "উনি ভাত খাচ্ছেন।",
+      "ro": "uni bhat khachchhen."
+     },
+     {
+      "bn": "উনি ভাত খেয়েছেন।",
+      "ro": "uni bhat kheyechhen."
+     },
+     {
+      "bn": "উনি ভাত খেলেন।",
+      "ro": "uni bhat khelen."
+     }
+    ],
+    "answer": 0,
+    "why": "Simple present with উনি: খান."
+   }
+  ]
+ },
+ {
+  "id": "time-words",
+  "title": "Time-word cues",
+  "mode": "check",
+  "intro": "Time words like এখন, গতকাল, আগামীকাল and রোজ decide the tense. Change the base sentence for the cue.",
+  "items": [
+   {
+    "kind": "choose",
+    "q": "Time cue: “সে, ekhon (now)”. Change the sentence (I work at the office).",
+    "sentence": {
+     "bn": "আমি অফিসে কাজ করি।",
+     "ro": "ami office-e kaj kori."
+    },
+    "options": [
+     {
+      "bn": "সে এখন অফিসে কাজ করছে।",
+      "ro": "she ekhon office-e kaj korchhe."
+     },
+     {
+      "bn": "সে এখন অফিসে কাজ করে।",
+      "ro": "she ekhon office-e kaj kore."
+     },
+     {
+      "bn": "সে এখন অফিসে কাজ করল।",
+      "ro": "she ekhon office-e kaj korlo."
+     },
+     {
+      "bn": "সে এখন অফিসে কাজ করবে।",
+      "ro": "she ekhon office-e kaj korbe."
+     }
+    ],
+    "answer": 0,
+    "why": "এখন (now) needs the present continuous: করছে."
+   },
+   {
+    "kind": "choose",
+    "q": "Time cue: “তুমি, gotokal (yesterday)”. Change the sentence (I work at the office).",
+    "sentence": {
+     "bn": "আমি অফিসে কাজ করি।",
+     "ro": "ami office-e kaj kori."
+    },
+    "options": [
+     {
+      "bn": "তুমি গতকাল অফিসে কাজ করলে।",
+      "ro": "tumi gotokal office-e kaj korle."
+     },
+     {
+      "bn": "তুমি গতকাল অফিসে কাজ করো।",
+      "ro": "tumi gotokal office-e kaj koro."
+     },
+     {
+      "bn": "তুমি গতকাল অফিসে কাজ করছ।",
+      "ro": "tumi gotokal office-e kaj korchho."
+     },
+     {
+      "bn": "তুমি গতকাল অফিসে কাজ করবে।",
+      "ro": "tumi gotokal office-e kaj korbe."
+     }
+    ],
+    "answer": 0,
+    "why": "গতকাল (yesterday) needs the simple past: করলে. (করেছিলে is also possible when you stress it was long ago.)"
+   },
+   {
+    "kind": "choose",
+    "q": "Time cue: “আমরা, agamikal (tomorrow)”. Change the sentence (I work at the office).",
+    "sentence": {
+     "bn": "আমি অফিসে কাজ করি।",
+     "ro": "ami office-e kaj kori."
+    },
+    "options": [
+     {
+      "bn": "আমরা আগামীকাল অফিসে কাজ করব।",
+      "ro": "amra agamikal office-e kaj korbo."
+     },
+     {
+      "bn": "আমরা আগামীকাল অফিসে কাজ করি।",
+      "ro": "amra agamikal office-e kaj kori."
+     },
+     {
+      "bn": "আমরা আগামীকাল অফিসে কাজ করছি।",
+      "ro": "amra agamikal office-e kaj korchhi."
+     },
+     {
+      "bn": "আমরা আগামীকাল অফিসে কাজ করলাম।",
+      "ro": "amra agamikal office-e kaj korlam."
+     }
+    ],
+    "answer": 0,
+    "why": "আগামীকাল (tomorrow) needs the future: করব."
+   },
+   {
+    "kind": "choose",
+    "q": "Time cue: “আপনি, roj (every day)”. Change the sentence (I work at the office).",
+    "sentence": {
+     "bn": "আমি অফিসে কাজ করি।",
+     "ro": "ami office-e kaj kori."
+    },
+    "options": [
+     {
+      "bn": "আপনি রোজ অফিসে কাজ করেন।",
+      "ro": "apni roj office-e kaj koren."
+     },
+     {
+      "bn": "আপনি রোজ অফিসে কাজ করছেন।",
+      "ro": "apni roj office-e kaj korchhen."
+     },
+     {
+      "bn": "আপনি রোজ অফিসে কাজ করলেন।",
+      "ro": "apni roj office-e kaj korlen."
+     },
+     {
+      "bn": "আপনি রোজ অফিসে কাজ করবেন।",
+      "ro": "apni roj office-e kaj korben."
+     }
+    ],
+    "answer": 0,
+    "why": "রোজ (every day) is a habit: the simple present করেন."
+   },
+   {
+    "kind": "choose",
+    "q": "Time cue: “তারা, aj shokal theke (since this morning)”. Change the sentence (I work at the office).",
+    "sentence": {
+     "bn": "আমি অফিসে কাজ করি।",
+     "ro": "ami office-e kaj kori."
+    },
+    "options": [
+     {
+      "bn": "তারা আজ সকাল থেকে অফিসে কাজ করছে।",
+      "ro": "tara aj shokal theke office-e kaj korchhe."
+     },
+     {
+      "bn": "তারা আজ সকাল থেকে অফিসে কাজ করে।",
+      "ro": "tara aj shokal theke office-e kaj kore."
+     },
+     {
+      "bn": "তারা আজ সকাল থেকে অফিসে কাজ করল।",
+      "ro": "tara aj shokal theke office-e kaj korlo."
+     },
+     {
+      "bn": "তারা আজ সকাল থেকে অফিসে কাজ করবে।",
+      "ro": "tara aj shokal theke office-e kaj korbe."
+     }
+    ],
+    "answer": 0,
+    "why": "'Since this morning' is an action still going on: present continuous + থেকে."
+   },
+   {
+    "kind": "choose",
+    "q": "Time cue: “উনি, goto bochhor (last year)”. Change the sentence (I work at the office).",
+    "sentence": {
+     "bn": "আমি অফিসে কাজ করি।",
+     "ro": "ami office-e kaj kori."
+    },
+    "options": [
+     {
+      "bn": "উনি গত বছর অফিসে কাজ করেছিলেন।",
+      "ro": "uni goto bochhor office-e kaj korechhilen."
+     },
+     {
+      "bn": "উনি গত বছর অফিসে কাজ করেন।",
+      "ro": "uni goto bochhor office-e kaj koren."
+     },
+     {
+      "bn": "উনি গত বছর অফিসে কাজ করছেন।",
+      "ro": "uni goto bochhor office-e kaj korchhen."
+     },
+     {
+      "bn": "উনি গত বছর অফিসে কাজ করবেন।",
+      "ro": "uni goto bochhor office-e kaj korben."
+     }
+    ],
+    "answer": 0,
+    "why": "'Last year' is a finished time long ago: করেছিলেন. (For a regular habit then, use করতেন.)"
+   }
+  ]
+ },
+ {
+  "id": "negatives",
+  "title": "Negatives",
+  "mode": "check",
+  "intro": "Make the sentence negative. Remember: না after the verb for the present and future, -নি for the past.",
+  "items": [
+   {
+    "kind": "choose",
+    "q": "Make it negative: “আমি, roj (every day)”.",
+    "sentence": {
+     "bn": "আমি অফিসে কাজ করি।",
+     "ro": "ami office-e kaj kori."
+    },
+    "options": [
+     {
+      "bn": "আমি রোজ অফিসে কাজ করি না।",
+      "ro": "ami roj office-e kaj kori na."
+     },
+     {
+      "bn": "আমি রোজ অফিসে কাজ করিনি।",
+      "ro": "ami roj office-e kaj korini."
+     },
+     {
+      "bn": "আমি রোজ অফিসে কাজ করব না।",
+      "ro": "ami roj office-e kaj korbo na."
+     },
+     {
+      "bn": "আমি রোজ অফিসে কাজ করছি না।",
+      "ro": "ami roj office-e kaj korchhi na."
+     }
+    ],
+    "answer": 0,
+    "why": "Present and habit: put না after the verb: করি না."
+   },
+   {
+    "kind": "choose",
+    "q": "Make it negative: “সে, gotokal (yesterday)”.",
+    "sentence": {
+     "bn": "আমি অফিসে কাজ করি।",
+     "ro": "ami office-e kaj kori."
+    },
+    "options": [
+     {
+      "bn": "সে গতকাল অফিসে কাজ করেনি।",
+      "ro": "she gotokal office-e kaj koreni."
+     },
+     {
+      "bn": "সে গতকাল অফিসে কাজ করে না।",
+      "ro": "she gotokal office-e kaj kore na."
+     },
+     {
+      "bn": "সে গতকাল অফিসে কাজ করবে না।",
+      "ro": "she gotokal office-e kaj korbe na."
+     },
+     {
+      "bn": "সে গতকাল অফিসে কাজ করছে না।",
+      "ro": "she gotokal office-e kaj korchhe na."
+     }
+    ],
+    "answer": 0,
+    "why": "Past: add -নি to the present form: করেনি."
+   },
+   {
+    "kind": "choose",
+    "q": "Make it negative: “আমরা, agamikal (tomorrow)”.",
+    "sentence": {
+     "bn": "আমি অফিসে কাজ করি।",
+     "ro": "ami office-e kaj kori."
+    },
+    "options": [
+     {
+      "bn": "আমরা আগামীকাল অফিসে কাজ করব না।",
+      "ro": "amra agamikal office-e kaj korbo na."
+     },
+     {
+      "bn": "আমরা আগামীকাল অফিসে কাজ করি না।",
+      "ro": "amra agamikal office-e kaj kori na."
+     },
+     {
+      "bn": "আমরা আগামীকাল অফিসে কাজ করিনি।",
+      "ro": "amra agamikal office-e kaj korini."
+     },
+     {
+      "bn": "আমরা আগামীকাল অফিসে কাজ করছি না।",
+      "ro": "amra agamikal office-e kaj korchhi na."
+     }
+    ],
+    "answer": 0,
+    "why": "Future: না after the verb: করব না."
+   },
+   {
+    "kind": "choose",
+    "q": "Make it negative: “তুমি, ekhon (now)”.",
+    "sentence": {
+     "bn": "আমি অফিসে কাজ করি।",
+     "ro": "ami office-e kaj kori."
+    },
+    "options": [
+     {
+      "bn": "তুমি এখন অফিসে কাজ করছ না।",
+      "ro": "tumi ekhon office-e kaj korchho na."
+     },
+     {
+      "bn": "তুমি এখন অফিসে কাজ করো না।",
+      "ro": "tumi ekhon office-e kaj koro na."
+     },
+     {
+      "bn": "তুমি এখন অফিসে কাজ করোনি।",
+      "ro": "tumi ekhon office-e kaj koroni."
+     },
+     {
+      "bn": "তুমি এখন অফিসে কাজ করবে না।",
+      "ro": "tumi ekhon office-e kaj korbe na."
+     }
+    ],
+    "answer": 0,
+    "why": "Present continuous: না after the verb: করছ না."
+   },
+   {
+    "kind": "choose",
+    "q": "Make it negative: “আপনি, ekhono (not yet)”.",
+    "sentence": {
+     "bn": "আমি অফিসে কাজ করি।",
+     "ro": "ami office-e kaj kori."
+    },
+    "options": [
+     {
+      "bn": "আপনি এখনও অফিসে কাজ করেননি।",
+      "ro": "apni ekhono office-e kaj korenni."
+     },
+     {
+      "bn": "আপনি এখনও অফিসে কাজ করেন না।",
+      "ro": "apni ekhono office-e kaj koren na."
+     },
+     {
+      "bn": "আপনি এখনও অফিসে কাজ করবেন না।",
+      "ro": "apni ekhono office-e kaj korben na."
+     },
+     {
+      "bn": "আপনি এখনও অফিসে কাজ করছেন না।",
+      "ro": "apni ekhono office-e kaj korchhen na."
+     }
+    ],
+    "answer": 0,
+    "why": "'Not yet' uses the -নি form: করেননি."
+   },
+   {
+    "kind": "choose",
+    "q": "Make it negative: “তারা, roj (every day)”.",
+    "sentence": {
+     "bn": "আমি অফিসে কাজ করি।",
+     "ro": "ami office-e kaj kori."
+    },
+    "options": [
+     {
+      "bn": "তারা রোজ অফিসে কাজ করে না।",
+      "ro": "tara roj office-e kaj kore na."
+     },
+     {
+      "bn": "তারা রোজ অফিসে কাজ করেনি।",
+      "ro": "tara roj office-e kaj koreni."
+     },
+     {
+      "bn": "তারা রোজ অফিসে কাজ করবে না।",
+      "ro": "tara roj office-e kaj korbe na."
+     },
+     {
+      "bn": "তারা রোজ অফিসে কাজ করছে না।",
+      "ro": "tara roj office-e kaj korchhe na."
+     }
+    ],
+    "answer": 0,
+    "why": "Habit: করে না."
+   },
+   {
+    "kind": "choose",
+    "q": "Make it negative: “আমি, gotokal (yesterday)”.",
+    "sentence": {
+     "bn": "আমি অফিসে কাজ করি।",
+     "ro": "ami office-e kaj kori."
+    },
+    "options": [
+     {
+      "bn": "আমি গতকাল অফিসে কাজ করিনি।",
+      "ro": "ami gotokal office-e kaj korini."
+     },
+     {
+      "bn": "আমি গতকাল অফিসে কাজ করি না।",
+      "ro": "ami gotokal office-e kaj kori na."
+     },
+     {
+      "bn": "আমি গতকাল অফিসে কাজ করব না।",
+      "ro": "ami gotokal office-e kaj korbo na."
+     },
+     {
+      "bn": "আমি গতকাল অফিসে কাজ করছি না।",
+      "ro": "ami gotokal office-e kaj korchhi na."
+     }
+    ],
+    "answer": 0,
+    "why": "Past: করিনি."
+   },
+   {
+    "kind": "choose",
+    "q": "Make it negative: “তোমরা, agamikal (tomorrow)”.",
+    "sentence": {
+     "bn": "আমি অফিসে কাজ করি।",
+     "ro": "ami office-e kaj kori."
+    },
+    "options": [
+     {
+      "bn": "তোমরা আগামীকাল অফিসে কাজ করবে না।",
+      "ro": "tomra agamikal office-e kaj korbe na."
+     },
+     {
+      "bn": "তোমরা আগামীকাল অফিসে কাজ করো না।",
+      "ro": "tomra agamikal office-e kaj koro na."
+     },
+     {
+      "bn": "তোমরা আগামীকাল অফিসে কাজ করোনি।",
+      "ro": "tomra agamikal office-e kaj koroni."
+     },
+     {
+      "bn": "তোমরা আগামীকাল অফিসে কাজ করছ না।",
+      "ro": "tomra agamikal office-e kaj korchho na."
+     }
+    ],
+    "answer": 0,
+    "why": "Future: করবে না."
+   }
+  ]
+ },
+ {
+  "id": "spot",
+  "title": "Spot the mistake",
+  "mode": "check",
+  "intro": "Read each sentence. If it is right, choose “Thik!”. If not, choose the fixed sentence. Some are correct.",
+  "items": [
+   {
+    "kind": "choose",
+    "q": "Is the sentence correct? If not, pick the fixed sentence.",
+    "sentence": {
+     "bn": "আমরা কাল সিনেমা দেখবে।",
+     "ro": "amra kal cinema dekhbe."
+    },
+    "options": [
+     {
+      "bn": "আমরা কাল সিনেমা দেখব।",
+      "ro": "amra kal cinema dekhbo."
+     },
+     {
+      "bn": "আমরা কাল সিনেমা দেখলাম।",
+      "ro": "amra kal cinema dekhlam."
+     },
+     {
+      "bn": "আমরা কাল সিনেমা দেখছে।",
+      "ro": "amra kal cinema dekhchhe."
+     },
+     {
+      "bn": "Thik! No mistake.",
+      "ro": "Thik!"
+     }
+    ],
+    "answer": 0,
+    "why": "আমরা takes the আমি ending: দেখব."
+   },
+   {
+    "kind": "choose",
+    "q": "Is the sentence correct? If not, pick the fixed sentence.",
+    "sentence": {
+     "bn": "সে গতকাল স্কুলে যাবে।",
+     "ro": "she gotokal skule jabe."
+    },
+    "options": [
+     {
+      "bn": "সে গতকাল স্কুলে গেল।",
+      "ro": "she gotokal skule gelo."
+     },
+     {
+      "bn": "সে গতকাল স্কুলে যায়।",
+      "ro": "she gotokal skule jay."
+     },
+     {
+      "bn": "সে গতকাল স্কুলে যাচ্ছে।",
+      "ro": "she gotokal skule jachchhe."
+     },
+     {
+      "bn": "Thik! No mistake.",
+      "ro": "Thik!"
+     }
+    ],
+    "answer": 0,
+    "why": "গতকাল (yesterday) needs a past verb: গেল (or গিয়েছিল)."
+   },
+   {
+    "kind": "choose",
+    "q": "Is the sentence correct? If not, pick the fixed sentence.",
+    "sentence": {
+     "bn": "আপনি কোথায় থাকো।",
+     "ro": "apni kothay thako."
+    },
+    "options": [
+     {
+      "bn": "আপনি কোথায় থাকেন।",
+      "ro": "apni kothay thaken."
+     },
+     {
+      "bn": "আপনি কোথায় থাকি।",
+      "ro": "apni kothay thaki."
+     },
+     {
+      "bn": "আপনি কোথায় থাকিস।",
+      "ro": "apni kothay thakis."
+     },
+     {
+      "bn": "Thik! No mistake.",
+      "ro": "Thik!"
+     }
+    ],
+    "answer": 0,
+    "why": "আপনি takes -েন: থাকেন."
+   },
+   {
+    "kind": "choose",
+    "q": "Is the sentence correct? If not, pick the fixed sentence.",
+    "sentence": {
+     "bn": "তারা এখন মাঠে খেলছে।",
+     "ro": "tara ekhon mathe khelchhe."
+    },
+    "options": [
+     {
+      "bn": "Thik! No mistake.",
+      "ro": "Thik!"
+     },
+     {
+      "bn": "তারা এখন মাঠে খেলল।",
+      "ro": "tara ekhon mathe khello."
+     },
+     {
+      "bn": "তারা এখন মাঠে খেলবে।",
+      "ro": "tara ekhon mathe khelbe."
+     },
+     {
+      "bn": "তারা এখন মাঠে খেলেছে।",
+      "ro": "tara ekhon mathe khelechhe."
+     }
+    ],
+    "answer": 0,
+    "why": "এখন (now) with the present continuous খেলছে is right."
+   },
+   {
+    "kind": "choose",
+    "q": "Is the sentence correct? If not, pick the fixed sentence.",
+    "sentence": {
+     "bn": "আমি আগামীকাল দিল্লি গেলাম।",
+     "ro": "ami agamikal dilli gelam."
+    },
+    "options": [
+     {
+      "bn": "আমি আগামীকাল দিল্লি যাব।",
+      "ro": "ami agamikal dilli jabo."
+     },
+     {
+      "bn": "আমি আগামীকাল দিল্লি যাচ্ছিলাম।",
+      "ro": "ami agamikal dilli jachchhilam."
+     },
+     {
+      "bn": "আমি আগামীকাল দিল্লি গিয়েছি।",
+      "ro": "ami agamikal dilli giyechhi."
+     },
+     {
+      "bn": "Thik! No mistake.",
+      "ro": "Thik!"
+     }
+    ],
+    "answer": 0,
+    "why": "আগামীকাল (tomorrow) needs the future: যাব."
+   },
+   {
+    "kind": "choose",
+    "q": "Is the sentence correct? If not, pick the fixed sentence.",
+    "sentence": {
+     "bn": "তুমি কী খাচ্ছেন।",
+     "ro": "tumi ki khachchhen."
+    },
+    "options": [
+     {
+      "bn": "তুমি কী খাচ্ছ।",
+      "ro": "tumi ki khachchho."
+     },
+     {
+      "bn": "তুমি কী খাচ্ছি।",
+      "ro": "tumi ki khachchhi."
+     },
+     {
+      "bn": "তুমি কী খাচ্ছিস।",
+      "ro": "tumi ki khachchhis."
+     },
+     {
+      "bn": "Thik! No mistake.",
+      "ro": "Thik!"
+     }
+    ],
+    "answer": 0,
+    "why": "তুমি takes -ছ in the present continuous: খাচ্ছ. (খাচ্ছেন is for আপনি.)"
+   },
+   {
+    "kind": "choose",
+    "q": "Is the sentence correct? If not, pick the fixed sentence.",
+    "sentence": {
+     "bn": "উনি রোজ সকালে হাঁটে।",
+     "ro": "uni roj shokale hante."
+    },
+    "options": [
+     {
+      "bn": "উনি রোজ সকালে হাঁটেন।",
+      "ro": "uni roj shokale hanten."
+     },
+     {
+      "bn": "উনি রোজ সকালে হাঁটি।",
+      "ro": "uni roj shokale hanti."
+     },
+     {
+      "bn": "উনি রোজ সকালে হাঁটো।",
+      "ro": "uni roj shokale hanto."
+     },
+     {
+      "bn": "Thik! No mistake.",
+      "ro": "Thik!"
+     }
+    ],
+    "answer": 0,
+    "why": "উনি is respectful, so the verb ends in -েন: হাঁটেন."
+   },
+   {
+    "kind": "choose",
+    "q": "Is the sentence correct? If not, pick the fixed sentence.",
+    "sentence": {
+     "bn": "আমি গতকাল ভাত খাই না।",
+     "ro": "ami gotokal bhat khai na."
+    },
+    "options": [
+     {
+      "bn": "আমি গতকাল ভাত খাইনি।",
+      "ro": "ami gotokal bhat khaini."
+     },
+     {
+      "bn": "আমি গতকাল ভাত খাব না।",
+      "ro": "ami gotokal bhat khabo na."
+     },
+     {
+      "bn": "আমি গতকাল ভাত খাচ্ছি না।",
+      "ro": "ami gotokal bhat khachchhi na."
+     },
+     {
+      "bn": "Thik! No mistake.",
+      "ro": "Thik!"
+     }
+    ],
+    "answer": 0,
+    "why": "A past negative uses -নি: খাইনি."
+   },
+   {
+    "kind": "choose",
+    "q": "Is the sentence correct? If not, pick the fixed sentence.",
+    "sentence": {
+     "bn": "আমরা এখনও খাইনি।",
+     "ro": "amra ekhono khaini."
+    },
+    "options": [
+     {
+      "bn": "Thik! No mistake.",
+      "ro": "Thik!"
+     },
+     {
+      "bn": "আমরা এখনও খাই না।",
+      "ro": "amra ekhono khai na."
+     },
+     {
+      "bn": "আমরা এখনও খাব না।",
+      "ro": "amra ekhono khabo na."
+     },
+     {
+      "bn": "আমরা এখনও খাচ্ছি না।",
+      "ro": "amra ekhono khachchhi na."
+     }
+    ],
+    "answer": 0,
+    "why": "'Not yet' is এখনও … -নি: খাইনি is right."
+   },
+   {
+    "kind": "choose",
+    "q": "Is the sentence correct? If not, pick the fixed sentence.",
+    "sentence": {
+     "bn": "তোমরা কাল রাতে কী করছিলাম।",
+     "ro": "tomra kal rate ki korchhilam."
+    },
+    "options": [
+     {
+      "bn": "তোমরা কাল রাতে কী করছিলে।",
+      "ro": "tomra kal rate ki korchhile."
+     },
+     {
+      "bn": "তোমরা কাল রাতে কী করছিলেন।",
+      "ro": "tomra kal rate ki korchhilen."
+     },
+     {
+      "bn": "তোমরা কাল রাতে কী করছিস।",
+      "ro": "tomra kal rate ki korchhis."
+     },
+     {
+      "bn": "Thik! No mistake.",
+      "ro": "Thik!"
+     }
+    ],
+    "answer": 0,
+    "why": "তোমরা takes the তুমি ending: করছিলে."
+   }
+  ]
+ },
+ {
+  "id": "fill",
+  "title": "Fill the blank: tenant and landlord",
+  "mode": "check",
+  "intro": "Choose the correct form of the verb for the tense in brackets.",
+  "items": [
+   {
+    "kind": "choose",
+    "q": "Fill the blank (simple present).",
+    "sentence": {
+     "bn": "আমি প্রতিদিন ভাড়া ___ (দেওয়া)।",
+     "ro": "ami protidin bhara ___ (deoya)."
+    },
+    "options": [
+     {
+      "bn": "দিই",
+      "ro": "dii"
+     },
+     {
+      "bn": "দিচ্ছি",
+      "ro": "dichchhi"
+     },
+     {
+      "bn": "দিয়েছি",
+      "ro": "diyechhi"
+     },
+     {
+      "bn": "দেব",
+      "ro": "debo"
+     }
+    ],
+    "answer": 0,
+    "why": "প্রতিদিন (every day) is a habit: simple present দিই."
+   },
+   {
+    "kind": "choose",
+    "q": "Fill the blank (present continuous).",
+    "sentence": {
+     "bn": "বাড়িওয়ালা এখন ভাড়া ___ (নেওয়া)।",
+     "ro": "bariwala ekhon bhara ___ (neoya)."
+    },
+    "options": [
+     {
+      "bn": "নিচ্ছে",
+      "ro": "nichchhe"
+     },
+     {
+      "bn": "নেয়",
+      "ro": "ney"
+     },
+     {
+      "bn": "নিয়েছে",
+      "ro": "niyechhe"
+     },
+     {
+      "bn": "নেবে",
+      "ro": "nebe"
+     }
+    ],
+    "answer": 0,
+    "why": "এখন (now) needs the present continuous: নিচ্ছে."
+   },
+   {
+    "kind": "choose",
+    "q": "Fill the blank (present perfect).",
+    "sentence": {
+     "bn": "তুমি কি নতুন বাড়ি ___ (দেখা)?",
+     "ro": "tumi ki notun bari ___ (dekha)?"
+    },
+    "options": [
+     {
+      "bn": "দেখেছ",
+      "ro": "dekhechho"
+     },
+     {
+      "bn": "দেখছ",
+      "ro": "dekhchho"
+     },
+     {
+      "bn": "দেখলে",
+      "ro": "dekhle"
+     },
+     {
+      "bn": "দেখবে",
+      "ro": "dekhbe"
+     }
+    ],
+    "answer": 0,
+    "why": "'Have you seen' is the present perfect: দেখেছ."
+   },
+   {
+    "kind": "choose",
+    "q": "Fill the blank (simple past).",
+    "sentence": {
+     "bn": "আমি গতকাল প্রতিবেশীর সঙ্গে কথা ___ (বলা)।",
+     "ro": "ami gotokal protibeshir songe kotha ___ (bola)."
+    },
+    "options": [
+     {
+      "bn": "বললাম",
+      "ro": "bollam"
+     },
+     {
+      "bn": "বলছিলাম",
+      "ro": "bolchhilam"
+     },
+     {
+      "bn": "বলি",
+      "ro": "boli"
+     },
+     {
+      "bn": "বলব",
+      "ro": "bolbo"
+     }
+    ],
+    "answer": 0,
+    "why": "গতকাল with one finished action: simple past বললাম."
+   },
+   {
+    "kind": "choose",
+    "q": "Fill the blank (has been doing).",
+    "sentence": {
+     "bn": "আমি তিন বছর ধরে এই এলাকায় ___ (থাকা)।",
+     "ro": "ami tin bochhor dhore ei elakay ___ (thaka)."
+    },
+    "options": [
+     {
+      "bn": "থাকি",
+      "ro": "thaki"
+     },
+     {
+      "bn": "থাকব",
+      "ro": "thakbo"
+     },
+     {
+      "bn": "থাকলাম",
+      "ro": "thaklam"
+     },
+     {
+      "bn": "থাকতাম",
+      "ro": "thaktam"
+     }
+    ],
+    "answer": 0,
+    "why": "'For three years, still true' uses the present + ধরে: থাকি. (থাকছি also works.)"
+   },
+   {
+    "kind": "choose",
+    "q": "Fill the blank (past continuous).",
+    "sentence": {
+     "bn": "তুমি কাল বিকেলে কী ___ (করা)?",
+     "ro": "tumi kal bikele ki ___ (kora)?"
+    },
+    "options": [
+     {
+      "bn": "করছিলে",
+      "ro": "korchhile"
+     },
+     {
+      "bn": "করছ",
+      "ro": "korchho"
+     },
+     {
+      "bn": "করবে",
+      "ro": "korbe"
+     },
+     {
+      "bn": "করো",
+      "ro": "koro"
+     }
+    ],
+    "answer": 0,
+    "why": "'What were you doing' is the past continuous: করছিলে."
+   },
+   {
+    "kind": "choose",
+    "q": "Fill the blank (past perfect).",
+    "sentence": {
+     "bn": "আমি আসার আগে বাড়িওয়ালা ঘর পরিষ্কার ___ (করা)।",
+     "ro": "ami asar age bariwala ghor porishkar ___ (kora)."
+    },
+    "options": [
+     {
+      "bn": "করেছিলেন",
+      "ro": "korechhilen"
+     },
+     {
+      "bn": "করছিলেন",
+      "ro": "korchhilen"
+     },
+     {
+      "bn": "করবেন",
+      "ro": "korben"
+     },
+     {
+      "bn": "করেন",
+      "ro": "koren"
+     }
+    ],
+    "answer": 0,
+    "why": "Done before another past event: past perfect করেছিলেন (respectful for the landlord)."
+   }
+  ]
+ },
+ {
+  "id": "check",
+  "title": "Check the sentence",
+  "mode": "check",
+  "intro": "Each sentence comes with its meaning. Decide if the tense and the verb ending are right. Most are, but not all.",
+  "items": [
+   {
+    "kind": "choose",
+    "q": "Is this sentence right for the meaning in brackets?",
+    "sentence": {
+     "bn": "তুমি প্রতিদিন বাংলা শেখো।",
+     "ro": "tumi protidin bangla shekho."
+    },
+    "options": [
+     {
+      "bn": "Correct as written.",
+      "ro": "Thik achhe."
+     },
+     {
+      "bn": "তুমি প্রতিদিন বাংলা শিখলে।",
+      "ro": "tumi protidin bangla shikhle."
+     },
+     {
+      "bn": "তুমি প্রতিদিন বাংলা শিখছিলে।",
+      "ro": "tumi protidin bangla shikhchhile."
+     }
+    ],
+    "answer": 0,
+    "why": "This is correct: simple present, a habit."
+   },
+   {
+    "kind": "choose",
+    "q": "Is this sentence right for the meaning in brackets?",
+    "sentence": {
+     "bn": "আমি এখন বই পড়ছি।",
+     "ro": "ami ekhon boi porchhi."
+    },
+    "options": [
+     {
+      "bn": "Correct as written.",
+      "ro": "Thik achhe."
+     },
+     {
+      "bn": "আমি এখন বই পড়লাম।",
+      "ro": "ami ekhon boi porlam."
+     },
+     {
+      "bn": "আমি এখন বই পড়ব।",
+      "ro": "ami ekhon boi porbo."
+     }
+    ],
+    "answer": 0,
+    "why": "This is correct: present continuous."
+   },
+   {
+    "kind": "choose",
+    "q": "Is this sentence right for the meaning in brackets?",
+    "sentence": {
+     "bn": "তিনি কি নাস্তা করছেন।",
+     "ro": "tini ki nasta korchhen."
+    },
+    "options": [
+     {
+      "bn": "Correct as written.",
+      "ro": "Thik achhe."
+     },
+     {
+      "bn": "তিনি কি নাস্তা করছে।",
+      "ro": "tini ki nasta korchhe."
+     },
+     {
+      "bn": "তিনি কি নাস্তা করেন।",
+      "ro": "tini ki nasta koren."
+     }
+    ],
+    "answer": 0,
+    "why": "This is correct: present continuous, respectful."
+   },
+   {
+    "kind": "choose",
+    "q": "Is this sentence right for the meaning in brackets?",
+    "sentence": {
+     "bn": "সে গতকাল আমাকে ফোন করেছিল।",
+     "ro": "she gotokal amake phone korechhilo."
+    },
+    "options": [
+     {
+      "bn": "সে গতকাল আমাকে ফোন করল।",
+      "ro": "she gotokal amake phone korlo."
+     },
+     {
+      "bn": "সে গতকাল আমাকে ফোন করছে।",
+      "ro": "she gotokal amake phone korchhe."
+     },
+     {
+      "bn": "সে গতকাল আমাকে ফোন করবে।",
+      "ro": "she gotokal amake phone korbe."
+     },
+     {
+      "bn": "Correct as written.",
+      "ro": "Thik achhe."
+     }
+    ],
+    "answer": 0,
+    "why": "Fix: সে গতকাল আমাকে ফোন করল (simple past: she called me yesterday)."
+   },
+   {
+    "kind": "choose",
+    "q": "Is this sentence right for the meaning in brackets?",
+    "sentence": {
+     "bn": "আপনি তিন ঘণ্টা ধরে গাড়ি চালাচ্ছেন।",
+     "ro": "apni tin ghonta dhore gari chalachchhen."
+    },
+    "options": [
+     {
+      "bn": "Correct as written.",
+      "ro": "Thik achhe."
+     },
+     {
+      "bn": "আপনি তিন ঘণ্টা ধরে গাড়ি চালালেন।",
+      "ro": "apni tin ghonta dhore gari chalalen."
+     },
+     {
+      "bn": "আপনি তিন ঘণ্টা ধরে গাড়ি চালাবেন।",
+      "ro": "apni tin ghonta dhore gari chalaben."
+     }
+    ],
+    "answer": 0,
+    "why": "This is correct: has been driving, with ধরে."
+   },
+   {
+    "kind": "choose",
+    "q": "Is this sentence right for the meaning in brackets?",
+    "sentence": {
+     "bn": "তুমি গতকাল রাতে কী খাচ্ছিলে।",
+     "ro": "tumi gotokal rate ki khachchhile."
+    },
+    "options": [
+     {
+      "bn": "Correct as written.",
+      "ro": "Thik achhe."
+     },
+     {
+      "bn": "তুমি গতকাল রাতে কী খাচ্ছ।",
+      "ro": "tumi gotokal rate ki khachchho."
+     },
+     {
+      "bn": "তুমি গতকাল রাতে কী খাবে।",
+      "ro": "tumi gotokal rate ki khabe."
+     }
+    ],
+    "answer": 0,
+    "why": "This is correct: past continuous: what were you eating."
+   },
+   {
+    "kind": "choose",
+    "q": "Is this sentence right for the meaning in brackets?",
+    "sentence": {
+     "bn": "তিনি বাড়ি পৌঁছানোর আগে রান্না করেছিলেন।",
+     "ro": "tini bari pouchhanor age ranna korechhilen."
+    },
+    "options": [
+     {
+      "bn": "Correct as written.",
+      "ro": "Thik achhe."
+     },
+     {
+      "bn": "তিনি বাড়ি পৌঁছানোর আগে রান্না করছেন।",
+      "ro": "tini bari pouchhanor age ranna korchhen."
+     },
+     {
+      "bn": "তিনি বাড়ি পৌঁছানোর আগে রান্না করবেন।",
+      "ro": "tini bari pouchhanor age ranna korben."
+     }
+    ],
+    "answer": 0,
+    "why": "This is correct: past perfect, before another past event."
+   },
+   {
+    "kind": "choose",
+    "q": "Is this sentence right for the meaning in brackets?",
+    "sentence": {
+     "bn": "আমি দুই বছর ধরে গান শিখছিলাম।",
+     "ro": "ami dui bochhor dhore gan shikhchhilam."
+    },
+    "options": [
+     {
+      "bn": "Correct as written.",
+      "ro": "Thik achhe."
+     },
+     {
+      "bn": "আমি দুই বছর ধরে গান শিখছি।",
+      "ro": "ami dui bochhor dhore gan shikhchhi."
+     },
+     {
+      "bn": "আমি দুই বছর ধরে গান শিখব।",
+      "ro": "ami dui bochhor dhore gan shikhbo."
+     }
+    ],
+    "answer": 0,
+    "why": "This is correct: had been learning, before another past event."
+   }
+  ]
+ },
+ {
+  "id": "translate",
+  "title": "Translate: tenant and landlord",
+  "mode": "write",
+  "intro": "Translate into Bengali using the tense that fits the time clue. Write your answer on paper, then show the model answer and check yourself.",
+  "items": [
+   {
+    "kind": "write",
+    "q": "I am looking for a new house near the station. (present continuous)",
+    "sentence": null,
+    "answer": {
+     "bn": "আমি স্টেশনের কাছে একটা নতুন বাড়ি খুঁজছি।",
+     "ro": "ami stesoner kachhe ekta notun bari khujchhi."
+    },
+    "also": "স্টেশনের পাশে (beside the station)",
+    "why": "Present continuous: খুঁজছি."
+   },
+   {
+    "kind": "write",
+    "q": "The landlord has already fixed the water problem. (present perfect)",
+    "sentence": null,
+    "answer": {
+     "bn": "বাড়িওয়ালা ইতিমধ্যে জলের সমস্যা ঠিক করে দিয়েছেন।",
+     "ro": "bariwala itimodhye joler somossha thik kore diyechhen."
+    },
+    "also": "ঠিক করেছেন (also correct)",
+    "why": "Present perfect: ঠিক করে দিয়েছেন. 'Already' is ইতিমধ্যে."
+   },
+   {
+    "kind": "write",
+    "q": "Every month I pay the rent on the 5th. (simple present)",
+    "sentence": null,
+    "answer": {
+     "bn": "প্রতি মাসে আমি পাঁচ তারিখে ভাড়া দিই।",
+     "ro": "proti mashe ami panch tarikhe bhara dii."
+    },
+    "also": "প্রতি মাসের পাঁচ তারিখে আমি ভাড়া দিই।",
+    "why": "A regular habit: simple present দিই."
+   },
+   {
+    "kind": "write",
+    "q": "I have been living in this area for two years. (has been doing)",
+    "sentence": null,
+    "answer": {
+     "bn": "আমি দু বছর ধরে এই এলাকায় থাকি।",
+     "ro": "ami du bochhor dhore ei elakay thaki."
+    },
+    "also": "আমি দু বছর ধরে এই এলাকায় আছি।",
+    "why": "Bengali uses the present + ধরে for 'has been doing'."
+   },
+   {
+    "kind": "write",
+    "q": "Yesterday I met my new neighbour for the first time. (simple past)",
+    "sentence": null,
+    "answer": {
+     "bn": "গতকাল আমি আমার নতুন প্রতিবেশীর সঙ্গে প্রথমবার দেখা করলাম।",
+     "ro": "gotokal ami amar notun protibeshir songe prothombar dekha korlam."
+    },
+    "also": null,
+    "why": "Simple past: দেখা করলাম."
+   },
+   {
+    "kind": "write",
+    "q": "I was talking to the landlord when the electricity went out. (past continuous)",
+    "sentence": null,
+    "answer": {
+     "bn": "আমি যখন বাড়িওয়ালার সঙ্গে কথা বলছিলাম, তখন বিদ্যুৎ চলে গেল।",
+     "ro": "ami jokhon bariwalar songe kotha bolchhilam, tokhon biddyut chole gelo."
+    },
+    "also": "…তখন বিদ্যুৎ চলে গিয়েছিল।",
+    "why": "যখন … তখন …: past continuous for the long action, simple past for the sudden one."
+   },
+   {
+    "kind": "write",
+    "q": "By the time I moved in, the previous tenant had already left. (past perfect)",
+    "sentence": null,
+    "answer": {
+     "bn": "আমি যখন ঢুকলাম, তখন আগের ভাড়াটে ইতিমধ্যেই চলে গিয়েছিল।",
+     "ro": "ami jokhon dhuklam, tokhon ager bharate itimodhyei chole giyechhilo."
+    },
+    "also": "আমি ঢোকার আগেই আগের ভাড়াটে চলে গিয়েছিল।",
+    "why": "Past perfect চলে গিয়েছিল for the earlier event."
+   },
+   {
+    "kind": "write",
+    "q": "I had been searching for a house for a month before I found this one. (had been doing)",
+    "sentence": null,
+    "answer": {
+     "bn": "এই বাড়িটা পাওয়ার আগে আমি এক মাস ধরে একটা বাড়ি খুঁজছিলাম।",
+     "ro": "ei barita paoyar age ami ek mash dhore ekta bari khujchhilam."
+    },
+    "also": null,
+    "why": "Past continuous + ধরে for 'had been doing'. 'Find' is খুঁজে পাওয়া; 'found' is খুঁজে পেয়েছিলাম."
+   }
+  ]
+ },
+ {
+  "id": "translate-hard",
+  "title": "Translate: complex situations",
+  "mode": "write",
+  "intro": "These sentences pack in several time clues. Read carefully before choosing the tense. Write first, then check.",
+  "items": [
+   {
+    "kind": "write",
+    "q": "By the time I called her, she had already left for the market.",
+    "sentence": null,
+    "answer": {
+     "bn": "আমি যখন তাকে ফোন করলাম, তখন সে ইতিমধ্যেই বাজারে চলে গিয়েছিল।",
+     "ro": "ami jokhon take phone korlam, tokhon she itimodhyei bajare chole giyechhilo."
+    },
+    "also": null,
+    "why": "Past perfect for the earlier event: চলে গিয়েছিল."
+   },
+   {
+    "kind": "write",
+    "q": "I've been working on this project for three months, and I still haven't finished it.",
+    "sentence": null,
+    "answer": {
+     "bn": "আমি তিন মাস ধরে এই প্রজেক্টে কাজ করছি, আর এখনও শেষ করতে পারিনি।",
+     "ro": "ami tin mash dhore ei projekte kaj korchhi, ar ekhono shesh korte parini."
+    },
+    "also": "…এখনও শেষ করিনি।",
+    "why": "Present continuous + ধরে, and এখনও … -নি for 'still not'."
+   },
+   {
+    "kind": "write",
+    "q": "He was cooking dinner when the electricity went out last night.",
+    "sentence": null,
+    "answer": {
+     "bn": "গতকাল রাতে যখন বিদ্যুৎ চলে গেল, তখন সে রাতের খাবার রান্না করছিল।",
+     "ro": "gotokal rate jokhon biddyut chole gelo, tokhon she rater khabar ranna korchhilo."
+    },
+    "also": null,
+    "why": "Past continuous রান্না করছিল for the long action."
+   },
+   {
+    "kind": "write",
+    "q": "Every morning before going to work, she drinks a cup of tea.",
+    "sentence": null,
+    "answer": {
+     "bn": "প্রতিদিন সকালে কাজে যাওয়ার আগে সে এক কাপ চা খায়।",
+     "ro": "protidin shokale kaje jaoyar age she ek kap cha khay."
+    },
+    "also": "…সে এক কাপ চা পান করে। (more formal)",
+    "why": "Habit: simple present. 'Before going' is যাওয়ার আগে."
+   },
+   {
+    "kind": "write",
+    "q": "We had been waiting for an hour before the train finally arrived.",
+    "sentence": null,
+    "answer": {
+     "bn": "ট্রেনটা শেষ পর্যন্ত আসার আগে আমরা এক ঘণ্টা ধরে অপেক্ষা করছিলাম।",
+     "ro": "trenta shesh porjonto asar age amra ek ghonta dhore opekkha korchhilam."
+    },
+    "also": null,
+    "why": "Past continuous + ধরে."
+   },
+   {
+    "kind": "write",
+    "q": "I don't know if he has eaten yet. He was still asleep when I left.",
+    "sentence": null,
+    "answer": {
+     "bn": "আমি জানি না ও এখনও খেয়েছে কিনা। আমি যখন বেরিয়ে এলাম, তখনও ও ঘুমিয়ে ছিল।",
+     "ro": "ami jani na o ekhono kheyeche kina. ami jokhon beriye elam, tokhono o ghumiye chhilo."
+    },
+    "also": null,
+    "why": "'If' as a question is কিনা. 'Was asleep' is ঘুমিয়ে ছিল."
+   },
+   {
+    "kind": "write",
+    "q": "She has been learning English for two years now, and she is getting better every day.",
+    "sentence": null,
+    "answer": {
+     "bn": "সে দু বছর ধরে ইংরেজি শিখছে, আর প্রতিদিন আরও ভালো হচ্ছে।",
+     "ro": "she du bochhor dhore ingreji shikhchhe, ar protidin aro bhalo hochchhe."
+    },
+    "also": null,
+    "why": "Present continuous + ধরে. 'Getting better' is ভালো হচ্ছে."
+   },
+   {
+    "kind": "write",
+    "q": "By next month I will have been living in this city for five years.",
+    "sentence": null,
+    "answer": {
+     "bn": "আগামী মাসে এই শহরে আমার পাঁচ বছর হয়ে যাবে।",
+     "ro": "agami mashe ei shohore amar panch bochhor hoye jabe."
+    },
+    "also": "আগামী মাসে আমি এই শহরে পাঁচ বছর পূর্ণ করব।",
+    "why": "Bengali has no 'will have been'. It says 'five years will be complete'."
+   }
+  ]
+ },
+ {
+  "id": "transform",
+  "title": "Tense transformation",
+  "mode": "write",
+  "intro": "Rewrite each sentence in the tense named. Keep the meaning as close as you can.",
+  "items": [
+   {
+    "kind": "write",
+    "q": "Rewrite in the present continuous.",
+    "sentence": {
+     "bn": "আমি ভাত খাই।",
+     "ro": "ami bhat khai."
+    },
+    "answer": {
+     "bn": "আমি ভাত খাচ্ছি।",
+     "ro": "ami bhat khachchhi."
+    },
+    "also": null,
+    "why": "Root + -ছি."
+   },
+   {
+    "kind": "write",
+    "q": "Rewrite in the past continuous.",
+    "sentence": {
+     "bn": "তুমি অফিসে গিয়েছিলে।",
+     "ro": "tumi office-e giyechhile."
+    },
+    "answer": {
+     "bn": "তুমি অফিসে যাচ্ছিলে।",
+     "ro": "tumi office-e jachchhile."
+    },
+    "also": null,
+    "why": "Root + -ছিলে."
+   },
+   {
+    "kind": "write",
+    "q": "Rewrite in the present perfect.",
+    "sentence": {
+     "bn": "সে গান শিখছে।",
+     "ro": "she gan shikhchhe."
+    },
+    "answer": {
+     "bn": "সে গান শিখেছে।",
+     "ro": "she gan shikhechhe."
+    },
+    "also": null,
+    "why": "Root + -েছে."
+   },
+   {
+    "kind": "write",
+    "q": "Rewrite in the past perfect, and add an “আগে” clause.",
+    "sentence": {
+     "bn": "তিনি কাজ করছিলেন।",
+     "ro": "tini kaj korchhilen."
+    },
+    "answer": {
+     "bn": "তিনি বাড়ি ফেরার আগে কাজ করেছিলেন।",
+     "ro": "tini bari pherar age kaj korechhilen."
+    },
+    "also": "তিনি আসার আগে কাজ করে ফেলেছিলেন।",
+    "why": "Past perfect -েছিলেন, with the earlier event marked by আগে."
+   },
+   {
+    "kind": "write",
+    "q": "Rewrite in the present perfect continuous, and add “কতক্ষণ ধরে”.",
+    "sentence": {
+     "bn": "আমি রান্না করছি।",
+     "ro": "ami ranna korchhi."
+    },
+    "answer": {
+     "bn": "আমি এক ঘণ্টা ধরে রান্না করছি।",
+     "ro": "ami ek ghonta dhore ranna korchhi."
+    },
+    "also": null,
+    "why": "Bengali keeps the present continuous and adds ধরে."
+   },
+   {
+    "kind": "write",
+    "q": "Rewrite in the simple past.",
+    "sentence": {
+     "bn": "তুমি বই পড়েছ।",
+     "ro": "tumi boi porechho."
+    },
+    "answer": {
+     "bn": "তুমি বই পড়লে।",
+     "ro": "tumi boi porle."
+    },
+    "also": null,
+    "why": "Root + -লে."
+   },
+   {
+    "kind": "write",
+    "q": "Rewrite in the present continuous.",
+    "sentence": {
+     "bn": "তিনি অফিস যাচ্ছিলেন।",
+     "ro": "tini office jachchhilen."
+    },
+    "answer": {
+     "bn": "তিনি অফিস যাচ্ছেন।",
+     "ro": "tini office jachchhen."
+    },
+    "also": null,
+    "why": "Root + -ছেন."
+   },
+   {
+    "kind": "write",
+    "q": "Rewrite in the present perfect continuous.",
+    "sentence": {
+     "bn": "আমি দুই ঘণ্টা ধরে অপেক্ষা করছিলাম।",
+     "ro": "ami dui ghonta dhore opekkha korchhilam."
+    },
+    "answer": {
+     "bn": "আমি দুই ঘণ্টা ধরে অপেক্ষা করছি।",
+     "ro": "ami dui ghonta dhore opekkha korchhi."
+    },
+    "also": null,
+    "why": "Present continuous + ধরে."
+   }
+  ]
+ },
+ {
+  "id": "combine",
+  "title": "Sentence combination",
+  "mode": "write",
+  "intro": "Join the two actions into one sentence with the right connector (আগে, ধরে, যখন … তখন …) and tense.",
+  "items": [
+   {
+    "kind": "write",
+    "q": "Join: [She reached home] + [I had already cooked dinner]. Use the past perfect.",
+    "sentence": null,
+    "answer": {
+     "bn": "সে বাড়ি পৌঁছানোর আগেই আমি রাতের খাবার রান্না করে ফেলেছিলাম।",
+     "ro": "she bari pouchhanor agei ami rater khabar ranna kore phelechhilam."
+    },
+    "also": "…আমি রান্না করে রেখেছিলাম।",
+    "why": "আগেই (already before) + past perfect."
+   },
+   {
+    "kind": "write",
+    "q": "Join: [He is studying] + [it has been two hours].",
+    "sentence": null,
+    "answer": {
+     "bn": "সে দুই ঘণ্টা ধরে পড়ছে।",
+     "ro": "she dui ghonta dhore porchhe."
+    },
+    "also": null,
+    "why": "Present continuous + ধরে."
+   },
+   {
+    "kind": "write",
+    "q": "Join: [The phone rang] + [I was taking a bath].",
+    "sentence": null,
+    "answer": {
+     "bn": "আমি যখন স্নান করছিলাম, তখন ফোন বাজল।",
+     "ro": "ami jokhon snan korchhilam, tokhon phone bajlo."
+    },
+    "also": null,
+    "why": "Past continuous for the long action, simple past for the sudden one."
+   },
+   {
+    "kind": "write",
+    "q": "Join: [I finish my work] + [I will rest]. (কাজ শেষ হলে …)",
+    "sentence": null,
+    "answer": {
+     "bn": "কাজ শেষ হলে আমি বিশ্রাম নেব।",
+     "ro": "kaj shesh hole ami bishram nebo."
+    },
+    "also": null,
+    "why": "-লে means 'when / if': শেষ হলে."
+   },
+   {
+    "kind": "write",
+    "q": "Join: [She has been in Kolkata] + [five years].",
+    "sentence": null,
+    "answer": {
+     "bn": "সে পাঁচ বছর ধরে কলকাতায় আছে।",
+     "ro": "she panch bochhor dhore kolkatay achhe."
+    },
+    "also": null,
+    "why": "Present + ধরে."
+   },
+   {
+    "kind": "write",
+    "q": "Join: [We reached the station] + [the train had already left].",
+    "sentence": null,
+    "answer": {
+     "bn": "আমরা স্টেশনে পৌঁছানোর আগেই ট্রেন ছেড়ে চলে গিয়েছিল।",
+     "ro": "amra stesone pouchhanor agei tren chhere chole giyechhilo."
+    },
+    "also": null,
+    "why": "Past perfect for the earlier event."
+   },
+   {
+    "kind": "write",
+    "q": "Join: [He was sleeping] + [the guests arrived].",
+    "sentence": null,
+    "answer": {
+     "bn": "সে যখন ঘুমাচ্ছিল, তখন অতিথিরা এল।",
+     "ro": "she jokhon ghumachchhilo, tokhon atithira elo."
+    },
+    "also": null,
+    "why": "যখন … তখন …: past continuous, then simple past."
+   },
+   {
+    "kind": "write",
+    "q": "Join: [I am learning Bengali] + [I moved here two years ago].",
+    "sentence": null,
+    "answer": {
+     "bn": "আমি দুই বছর আগে এখানে এসেছি, তখন থেকে বাংলা শিখছি।",
+     "ro": "ami dui bochhor age ekhane eshechhi, tokhon theke bangla shikhchhi."
+    },
+    "also": "আমি দুই বছর ধরে বাংলা শিখছি।",
+    "why": "তখন থেকে (since then) + present continuous."
+   }
+  ]
+ }
+]
