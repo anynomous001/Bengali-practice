@@ -32,3 +32,14 @@ export async function loadStoryProgress(): Promise<Record<string, StoryResult>> 
     : [];
   return Object.fromEntries(rows.map((r) => [r.story_id, { score: r.best_score, total: r.total, attempts: r.attempts }]));
 }
+
+export async function loadGrammarProgress(): Promise<Record<string, StoryResult>> {
+  const user = await getUser();
+  const rows = user
+    ? await query<{ topic_id: string; best_score: number; total: number; attempts: number }>(
+        "SELECT topic_id, best_score, total, attempts FROM grammar_progress WHERE email = $1",
+        [user.email],
+      )
+    : [];
+  return Object.fromEntries(rows.map((r) => [r.topic_id, { score: r.best_score, total: r.total, attempts: r.attempts }]));
+}

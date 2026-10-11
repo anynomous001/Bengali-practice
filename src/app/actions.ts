@@ -5,6 +5,7 @@ import { after } from "next/server";
 import { ALL_CARD_IDS } from "@/data/decks";
 import { LETTERS } from "@/data/letters";
 import { SENTENCES } from "@/data/sentences";
+import { GRAMMAR } from "@/data/grammar";
 import { STORIES } from "@/data/stories";
 import {
   canSignIn,
@@ -113,5 +114,20 @@ export async function recordStoryQuiz(storyId: string, score: number) {
        best_score = GREATEST(story_progress.best_score, $3), total = $4,
        attempts = story_progress.attempts + 1, updated_at = now()`,
     [user.email, storyId, s, total],
+  );
+}
+
+export async function recordGrammarQuiz(topicId: string, score: number) {
+  const user = await getUser();
+  const topic = GRAMMAR.find((t) => t.id === topicId);
+  if (!user?.hasAccess || !topic || !Number.isFinite(score)) return;
+  const total = topic.exercises.length;
+  const s = Math.max(0, Math.min(total, Math.floor(score)));
+  await query(
+    `INSERT INTO grammar_progress (email, topic_id, best_score, total, attempts) VALUES ($1, $2, $3, $4, 1)
+     ON CONFLICT (email, topic_id) DO UPDATE SET
+       best_score = GREATEST(grammar_progress.best_score, $3), total = $4,
+       attempts = grammar_progress.attempts + 1, updated_at = now()`,
+    [user.email, topicId, s, total],
   );
 }

@@ -1,4 +1,4 @@
-export type Segment = "reading" | "speaking" | "writing";
+export type Segment = "reading" | "speaking" | "writing" | "grammar";
 
 type Item = { title: string; blurb: string };
 export const SEGMENTS: Record<
@@ -45,5 +45,19 @@ export const SEGMENTS: Record<
     soon: [
       { title: "Write numerals", blurb: "০ to ৯ and bigger numbers." },
     ],
+  },
+  grammar: {
+    title: "Grammar", bn: "ব্যাকরণ", icon: "📐",
+    blurb: "How Bengali works: persons, verbs, tenses, karak and bibhakti, with practice.",
+    activities: [
+      { href: "/learn/grammar/purush", title: "Persons & pronouns", blurb: "Who is speaking, and the three levels of 'you'." },
+      { href: "/learn/grammar/kriya", title: "Verbs", blurb: "Roots, verb forms, 'to be' and 'to have', and commands." },
+      { href: "/learn/grammar/kal", title: "Tenses", blurb: "Present, past and future, with full tables for every person." },
+      { href: "/learn/grammar/karak", title: "Karak", blurb: "The job each noun does for the verb." },
+      { href: "/learn/grammar/bibhakti", title: "Bibhakti", blurb: "Case endings and the little words after nouns." },
+      { href: "/learn/grammar/bachan", title: "Number & counting words", blurb: "Plurals, and counting people and things." },
+      { href: "/learn/grammar/nishedh", title: "Saying no, and asking", blurb: "Negatives and question words." },
+    ],
+    soon: [],
   },
 };

@@ -55,6 +55,15 @@ const SCHEMA = `
       updated_at timestamptz NOT NULL DEFAULT now(),
       PRIMARY KEY (email, story_id)
     );
+    CREATE TABLE IF NOT EXISTS grammar_progress (
+      email text NOT NULL,
+      topic_id text NOT NULL,
+      best_score int NOT NULL DEFAULT 0,
+      total int NOT NULL DEFAULT 0,
+      attempts int NOT NULL DEFAULT 0,
+      updated_at timestamptz NOT NULL DEFAULT now(),
+      PRIMARY KEY (email, topic_id)
+    );
     CREATE TABLE IF NOT EXISTS orders (
       order_id text PRIMARY KEY,
       email text NOT NULL,

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { requireAccess } from "@/lib/access";
 import { SEGMENTS, type Segment } from "@/data/segments";
 
-const ICON: Record<Segment, string> = { reading: "পড়", speaking: "বল", writing: "লিখ" };
+const ICON: Record<Segment, string> = { reading: "পড়", speaking: "বল", writing: "লিখ", grammar: "ব্যা" };
 
 export default async function Dashboard() {
   const user = await requireAccess();
