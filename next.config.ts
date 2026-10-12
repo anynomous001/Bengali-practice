@@ -5,6 +5,9 @@ const config: NextConfig = {
   // Stops Next.js writing an AGENTS.md file into the repo during `next dev`.
   agentRules: false,
   serverExternalPackages: ["@electric-sql/pglite"],
+  // Pronunciation clips are read from disk by /api/audio, so make sure they ship with the deployment.
+  // Production only: in `next dev` this setting makes the page reload in a loop.
+  ...(process.env.NODE_ENV === "production" ? { outputFileTracingIncludes: { "/api/audio": ["./content-audio/**/*"] } } : {}),
   async headers() {
     return [
       {

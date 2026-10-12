@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import type { Num } from "@/data/numbers";
+import { speak } from "@/lib/speak";
+import Icon from "./Icon";
 import { useRoman } from "./Roman";
 
 type Mode = "n2w" | "w2n" | "listen";
@@ -19,14 +21,6 @@ function shuffle<T>(a: T[]): T[] {
   return a;
 }
 
-function speak(text: string) {
-  if (!("speechSynthesis" in window)) return;
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = "bn-BD";
-  u.rate = 0.8;
-  speechSynthesis.cancel();
-  speechSynthesis.speak(u);
-}
 
 const numeralText = (n: Num, k: Kind) => (k === "prices" ? `${n.numeral} ${TAKA}` : n.numeral);
 const wordText = (n: Num, k: Kind) => (k === "prices" ? `${n.word} ${TAKA}` : n.word);
@@ -89,7 +83,8 @@ function Question({ run, setRun, numbers }: { run: Run; setRun: React.Dispatch<R
       <p className="muted">Question {run.i + 1} of {run.queue.length} · Score {run.score}</p>
       {mode === "n2w" && <div className="big">{numeralText(q, kind)}</div>}
       {mode === "w2n" && <div className="prompt"><span className="word">{wordText(q, kind)}</span>{roman && <small>{q.wrom}{kind === "prices" ? " taka" : ""}</small>}</div>}
-      {mode === "listen" && <button className="btn big-btn" onClick={() => speak(wordText(q, kind))}>🔊 Play</button>}
+      {mode === "listen" && <button className="btn big-btn" onClick={() => speak(wordText(q, kind))}><Icon name="sound" size={18} /> Play</button>}
+      {mode === "listen" && <button className="btn ghost" onClick={() => speak(wordText(q, kind), { slow: true })}>Play slowly</button>}
       <div className={"options" + (mode === "n2w" ? "" : " letters")}>
         {options.map((o) => {
           const cls = picked !== null ? (o.value === q.value ? " right" : o.value === picked ? " wrong" : "") : "";
@@ -101,7 +96,8 @@ function Question({ run, setRun, numbers }: { run: Run; setRun: React.Dispatch<R
           <p className="feedback">
             {picked === q.value ? "Correct!" : "Not quite."} {numeralText(q, kind)} = {wordText(q, kind)}{roman && ` (${q.wrom})`}
           </p>
-          <button className="btn ghost" onClick={() => speak(wordText(q, kind))}>🔊 Hear it</button>
+          <button className="btn ghost" onClick={() => speak(wordText(q, kind))}><Icon name="sound" size={18} /> Hear it</button>
+          <button className="btn ghost" onClick={() => speak(wordText(q, kind), { slow: true })}>Slowly</button>
           <button className="btn" onClick={() => setRun((r) => r && { ...r, i: r.i + 1 })}>Next →</button>
         </>
       )}

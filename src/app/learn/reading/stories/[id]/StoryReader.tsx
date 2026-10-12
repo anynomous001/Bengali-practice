@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { Story } from "@/data/stories";
 import { speak } from "@/lib/speak";
+import Icon from "../../../Icon";
 import { recordStoryQuiz } from "../../../../actions";
 import { useRoman } from "../../../Roman";
 
@@ -49,7 +50,7 @@ export default function StoryReader({ story, best }: { story: Story; best: { sco
             <li key={bn + en}>
               <span lang="bn" className="vocab-bn">{bn}</span>
               <span className="vocab-meaning">{roman && <i>{ro}</i>}<span>{en}</span></span>
-              <button className="icon-btn" onClick={() => speak(bn)} aria-label={`Hear ${en}`}>🔊</button>
+              <button className="icon-btn" onClick={() => speak(bn)} aria-label={`Hear ${en}`}><Icon name="sound" size={18} /></button>
             </li>
           ))}
         </ul>
@@ -57,7 +58,7 @@ export default function StoryReader({ story, best }: { story: Story; best: { sco
 
       {step === "bengali" && (
         <article className="story-text">
-          <button className="btn ghost small" onClick={() => speak(story.lines.map((l) => l[0]).join(" "))}>🔊 Listen to the story</button>
+          <button className="btn ghost small" onClick={() => speak(story.lines.map((l) => l[0]).join(" "))}><Icon name="sound" size={16} /> Listen to the story</button>
           <p lang="bn" className="story-bn">{story.lines.map((l) => l[0]).join(" ")}</p>
           <p lang="bn" className="story-bn lesson"><b>শিক্ষা:</b> {story.moral[0]}</p>
         </article>
@@ -69,7 +70,7 @@ export default function StoryReader({ story, best }: { story: Story; best: { sco
             <li key={i} className={i === story.lines.length ? "lesson" : ""}>
               <div className="line-top">
                 <span lang="bn" className="line-bn">{i === story.lines.length && <b>শিক্ষা: </b>}{bn}</span>
-                <button className="icon-btn" onClick={() => speak(bn)} aria-label="Hear this line">🔊</button>
+                <button className="icon-btn" onClick={() => speak(bn)} aria-label="Hear this line"><Icon name="sound" size={18} /></button>
               </div>
               {roman && <span className="line-roman">{ro}</span>}
               <span className="line-en">{en}</span>

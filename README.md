@@ -82,6 +82,20 @@ Each course is a list of modules, and each module is a list of lessons. All of i
 
 To add a lesson: add it to a module in `curriculum.ts` (id like `reading/my-lesson`), build its page, and wrap the page content in `LessonFrame` with that id.
 
+## Pronunciation audio
+
+Every Speak/Listen button plays a clip from `content-audio/` when there is one, and otherwise the browser's Bengali voice (the best West-Bengal `bn-IN` voice it has). A **Slow** button is next to the main one.
+
+To get consistent, better audio on every device:
+
+1. **Generated voice** (a few minutes, a few cents): get a Google Cloud Text-to-Speech key (or Azure Speech key), then run
+   `TTS_API_KEY=... npm run audio`. Pick the voice with `TTS_VOICE` (`npm run audio -- --voices` lists Google's Bengali voices; Azure: `TTS_PROVIDER=azure TTS_REGION=centralindia`).
+2. **Your teacher's recordings** (best for a Kolkata accent): `npm run audio -- --list` prints every text with its id; record each and save it as `content-audio/<id>.mp3`.
+   Existing clips are never overwritten, so recordings and generated clips can be mixed.
+3. Listen to the result, then commit `content-audio/` so it deploys.
+
+Clips are private: they are served by `/api/audio` only to signed-in students with access.
+
 ## Light and dark theme
 
 The sidebar (or the top bar on phones) has System / Light / Dark. The choice is saved in a cookie (`bp_theme`) so the right theme is rendered on the server with no flash.

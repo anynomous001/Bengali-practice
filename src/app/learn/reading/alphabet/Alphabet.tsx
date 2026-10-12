@@ -3,6 +3,8 @@
 import { createContext, useContext, useState } from "react";
 import type { Letter } from "@/data/letters";
 import { recordAnswer } from "../../../actions";
+import { speak } from "@/lib/speak";
+import Icon from "../../Icon";
 import { useRoman } from "../../Roman";
 
 type Progress = Record<string, { right: number; wrong: number }>;
@@ -22,14 +24,6 @@ function shuffle<T>(a: T[]): T[] {
   return a;
 }
 
-function speak(text: string) {
-  if (!("speechSynthesis" in window)) return;
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = "bn-BD";
-  u.rate = 0.8;
-  speechSynthesis.cancel();
-  speechSynthesis.speak(u);
-}
 
 export default function Alphabet({
   initialProgress,
@@ -87,8 +81,10 @@ function Learn({ progress }: { progress: Progress }) {
           <div>
             {roman && <p className="sound">Sounds like: <b>{sel.rom}</b></p>}
             {sel.word && <p><span className="word">{sel.word}</span>{roman && ` (${sel.wrom})`} – {sel.wmean}</p>}
-            <button className="btn" onClick={() => speak(sel.ch)}>🔊 Letter</button>
-            {sel.word && <button className="btn" onClick={() => speak(sel.word!)}>🔊 Word</button>}
+            <button className="btn" onClick={() => speak(sel.ch)}><Icon name="sound" size={18} /> Letter</button>
+            <button className="btn ghost" onClick={() => speak(sel.ch, { slow: true })}>Slow</button>
+            {sel.word && <button className="btn" onClick={() => speak(sel.word!)}><Icon name="sound" size={18} /> Word</button>}
+            {sel.word && <button className="btn ghost" onClick={() => speak(sel.word!, { slow: true })}>Slow</button>}
           </div>
         </section>
       )}
@@ -179,7 +175,8 @@ function Question({ run, onAnswer, onNext }: { run: Run; onAnswer: (ok: boolean)
       {m === "word2letter" && (
         <div className="prompt"><span className="word">{q.word}</span><small>{roman ? `${q.wrom} – ${q.wmean}` : q.wmean}</small></div>
       )}
-      {m === "listen" && <button className="btn big-btn" onClick={() => speak(q.ch)}>🔊 Play sound</button>}
+      {m === "listen" && <button className="btn big-btn" onClick={() => speak(q.ch)}><Icon name="sound" size={18} /> Play sound</button>}
+      {m === "listen" && <button className="btn ghost" onClick={() => speak(q.ch, { slow: true })}>Play slowly</button>}
       <div className={"options" + (m === "letter2word" ? "" : " letters")}>
         {options.map((o) => {
           const cls = picked ? (o.ch === q.ch ? " right" : o.ch === picked ? " wrong" : "") : "";
