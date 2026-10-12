@@ -1,0 +1,27 @@
+import Link from "next/link";
+
+/** Split-screen frame for sign-in, purchase and other account pages. */
+export default function AuthFrame({ children, back = true, wide = false }: { children: React.ReactNode; back?: boolean; wide?: boolean }) {
+  return (
+    <div className="auth">
+      <aside className="auth-aside">
+        <Link href="/" className="side-brand">
+          <span className="mark" lang="bn">বাং</span>
+          <span><b lang="bn">বাংলা</b><small>Practice</small></span>
+        </Link>
+        <div className="auth-quote">
+          <p className="glyph" lang="bn" aria-hidden>অ আ ক খ</p>
+          <p className="auth-line">Read it. Say it. Write it.</p>
+          <p className="auth-sub">A private Bengali practice space, built around one teacher&apos;s lessons.</p>
+        </div>
+        <p className="auth-foot">Kolkata · Bengali for English speakers</p>
+      </aside>
+      <main className={"auth-main" + (wide ? " wide" : "")}>
+        <div className="auth-card">
+          {back && <Link href="/" className="back">← Home</Link>}
+          {children}
+        </div>
+      </main>
+    </div>
+  );
+}

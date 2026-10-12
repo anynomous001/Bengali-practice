@@ -8,7 +8,7 @@ export default async function TracePage() {
   await requireAccess();
   return (
     <main>
-      <p><Link href="/learn/writing">← Writing</Link></p>
+      <Link href="/learn/writing" className="back">← Writing</Link>
       <h1>Trace letters</h1>
       <Trace initialCounts={await loadWriting()} letters={LETTERS} groups={GROUPS} />
     </main>

@@ -75,7 +75,7 @@ export default function BuyForm({ price }: { price: number }) {
   if (paidEmail) {
     return (
       <div className="card-static">
-        <h2>Payment received 🎉</h2>
+        <h2>Payment received</h2>
         <p>Your access is active. We emailed a sign-in link to <b>{paidEmail}</b> (valid for 15 minutes). You can also <a href="/login">request a new link</a> any time.</p>
       </div>
     );

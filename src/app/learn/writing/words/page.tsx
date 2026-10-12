@@ -8,7 +8,7 @@ export default async function WordsPage() {
   await requireAccess();
   return (
     <main>
-      <p><Link href="/learn/writing">← Writing</Link></p>
+      <Link href="/learn/writing" className="back">← Writing</Link>
       <h1>Build the word</h1>
       <Builder initialCounts={await loadWriting()} letters={LETTERS} />
     </main>

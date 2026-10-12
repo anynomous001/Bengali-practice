@@ -32,7 +32,7 @@ export default async function FlashcardsView({ segment, deckId }: { segment: Seg
     const queue = [...chosen.due, ...chosen.fresh.slice(0, NEW_PER_SESSION)].slice(0, MAX_PER_SESSION);
     return (
       <main>
-        <p><Link href={base}>← Decks</Link></p>
+        <Link href={base} className="back">← Decks</Link>
         <h1>{chosen.deck.title}</h1>
         <Session cards={queue} hint={chosen.deck.hint} autoSpeak={chosen.deck.autoSpeak} backHref={base} />
       </main>
@@ -40,8 +40,8 @@ export default async function FlashcardsView({ segment, deckId }: { segment: Seg
   }
 
   return (
-    <main>
-      <p><Link href={`/learn/${segment}`}>← {SEGMENTS[segment].title}</Link></p>
+    <main className="wide">
+      <Link href={`/learn/${segment}`} className="back">← {SEGMENTS[segment].title}</Link>
       <h1>Flashcards</h1>
       <p className="muted">Cards you miss come back sooner; cards you know come back after longer gaps (1, 3, 7, 14, then 30 days).</p>
       <div className="menu">

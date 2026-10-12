@@ -16,16 +16,16 @@ export function RomanProvider({ initial, children }: { initial: boolean; childre
 
 export const useRoman = () => useContext(Ctx);
 
-export function RomanToggle() {
+export function RomanToggle({ label = "Romanized English" }: { label?: string }) {
   const { roman, setRoman } = useRoman();
   return (
     <div className="toolbar">
-      <span id="roman-label" className="toolbar-label">Romanized English</span>
+      <span className="toolbar-label">{label}</span>
       <button
         type="button"
         role="switch"
         aria-checked={roman}
-        aria-labelledby="roman-label"
+        aria-label="Romanized English"
         className="switch"
         onClick={() => setRoman(!roman)}
       >

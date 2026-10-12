@@ -7,7 +7,7 @@ export default async function Page() {
   await requireAccess();
   return (
     <main>
-      <p><Link href="/learn/speaking">← Speaking</Link></p>
+      <Link href="/learn/speaking" className="back">← Speaking</Link>
       <h1>Numbers &amp; money listening</h1>
       <NumberQuiz numbers={NUMBERS} listening />
     </main>

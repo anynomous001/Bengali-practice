@@ -9,9 +9,9 @@ export default async function GrammarPage() {
   await requireAccess();
   const progress = await loadGrammarProgress();
   return (
-    <main data-seg="grammar">
-      <Link href="/learn" className="back">← All segments</Link>
-      <h1>📐 Grammar <span className="bn">ব্যাকরণ</span></h1>
+    <main data-seg="grammar" className="wide">
+      <Link href="/learn" className="back">← Home</Link>
+      <h1>Grammar <span className="bn" lang="bn">ব্যাকরণ</span></h1>
       <p className="muted">Each topic has short lessons with tables and examples, then a practice quiz. Take them in order, or jump to what you need.</p>
       <div className="menu">
         <Link href="/learn/grammar/workout" className="card activity">
