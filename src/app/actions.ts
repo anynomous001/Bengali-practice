@@ -154,7 +154,7 @@ export async function recordGrammarQuiz(topicId: string, score: number) {
   );
   if (vocab) {
     // A vocabulary lesson counts as done once a practice round scores 70% or more.
-    if (s >= Math.ceil(total * 0.7)) await completeLesson(user.email, `speaking/vocab-${vocab.id}`);
+    if (s >= Math.ceil(total * 0.7)) await completeLesson(user.email, `vocabulary/${vocab.id}`);
     return;
   }
   const inReading = READING_LESSONS.some((t) => t.id === topicId);

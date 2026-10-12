@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { requireAccess } from "@/lib/access";
 import { loadGrammarProgress } from "@/lib/progress";
 import { VOCAB, VOCAB_QUIZ_LEN } from "@/data/vocabulary";
-import LessonFrame from "../../../LessonFrame";
+import LessonFrame from "../../LessonFrame";
 import VocabTopic from "./VocabTopic";
 
 export default async function TopicPage({ params }: { params: Promise<{ id: string }> }) {
@@ -12,8 +12,8 @@ export default async function TopicPage({ params }: { params: Promise<{ id: stri
   if (!topic) notFound();
   const best = (await loadGrammarProgress())[`v-${topic.id}`] ?? null;
   return (
-    <LessonFrame lessonId={`speaking/vocab-${topic.id}`}>
-      <VocabTopic topic={topic} best={best} quizLen={VOCAB_QUIZ_LEN} flashHref={`/learn/speaking/flashcards?deck=vocab-${topic.id}`} />
+    <LessonFrame lessonId={`vocabulary/${topic.id}`}>
+      <VocabTopic topic={topic} best={best} quizLen={VOCAB_QUIZ_LEN} flashHref={`/learn/vocabulary/flashcards?deck=vocab-${topic.id}`} />
     </LessonFrame>
   );
 }

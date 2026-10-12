@@ -70,6 +70,7 @@ const SCHEMA = `
       completed_at timestamptz NOT NULL DEFAULT now(),
       PRIMARY KEY (email, lesson_id)
     );
+    UPDATE lesson_progress SET lesson_id = 'vocabulary/' || substr(lesson_id, 16) WHERE lesson_id LIKE 'speaking/vocab-%';
     CREATE TABLE IF NOT EXISTS orders (
       order_id text PRIMARY KEY,
       email text NOT NULL,

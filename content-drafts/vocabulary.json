@@ -298,6 +298,46 @@
      "তোমার বাড়িতে কে কে আছে?",
      "tomar barite ke ke achhe?",
      "Who is there in your home?"
+    ],
+    [
+     "আমার বাবা অফিসে কাজ করেন।",
+     "amar baba ofise kaj koren.",
+     "My father works at an office."
+    ],
+    [
+     "আমার মা খুব ভালো রান্না করেন।",
+     "amar ma khub bhalo ranna koren.",
+     "My mother cooks very well."
+    ],
+    [
+     "ঠাকুমা আমাকে গল্প শোনান।",
+     "thakuma amake golpo shonan.",
+     "Grandmother tells me stories."
+    ],
+    [
+     "আমার দিদি কলেজে পড়ে।",
+     "amar didi koleje pore.",
+     "My elder sister studies at college."
+    ],
+    [
+     "মামা কাল আমাদের বাড়িতে আসবেন।",
+     "mama kal amader barite ashben.",
+     "My uncle (mother's brother) will come to our house tomorrow."
+    ],
+    [
+     "তোমার কয়টা ভাইবোন?",
+     "tomar koyta bhaibon?",
+     "How many brothers and sisters do you have?"
+    ],
+    [
+     "আমার বন্ধু আমার প্রতিবেশী।",
+     "amar bondhu amar protibeshi.",
+     "My friend is my neighbour."
+    ],
+    [
+     "আমার পরিবারে পাঁচজন লোক।",
+     "amar poribare panchjon lok.",
+     "There are five people in my family."
     ]
    ]
   },
@@ -487,6 +527,46 @@
      "উনি ডাক্তার।",
      "uni daktar.",
      "He/She is a doctor."
+    ],
+    [
+     "আমার বাবা একজন শিক্ষক।",
+     "amar baba ekjon shikkhok.",
+     "My father is a teacher."
+    ],
+    [
+     "ডাক্তার ওষুধ দিলেন।",
+     "daktar oshudh dilen.",
+     "The doctor gave medicine."
+    ],
+    [
+     "চাষি মাঠে কাজ করছে।",
+     "chashi mathe kaj korchhe.",
+     "The farmer is working in the field."
+    ],
+    [
+     "জেলে নদীতে মাছ ধরছে।",
+     "jele nodite mach dhorchhe.",
+     "The fisherman is catching fish in the river."
+    ],
+    [
+     "ড্রাইভার গাড়ি চালাচ্ছে।",
+     "draibhar gari chalachchhe.",
+     "The driver is driving the car."
+    ],
+    [
+     "আমার ছেলে ইঞ্জিনিয়ার হতে চায়।",
+     "amar chhele enjiniyar hote chay.",
+     "My son wants to become an engineer."
+    ],
+    [
+     "অতিথিরা এসে গেছেন।",
+     "atithira eshe gechhen.",
+     "The guests have arrived."
+    ],
+    [
+     "শিল্পী ছবি আঁকছেন।",
+     "shilpi chhobi akchhen.",
+     "The artist is drawing a picture."
     ]
    ]
   },
@@ -731,6 +811,46 @@
      "আমার পেটে ব্যথা।",
      "amar pete byatha.",
      "I have a pain in my stomach."
+    ],
+    [
+     "আমার কান ব্যথা করছে।",
+     "amar kan byatha korchhe.",
+     "My ear hurts."
+    ],
+    [
+     "তোমার হাত ধুয়ে নাও।",
+     "tomar hat dhuye nao.",
+     "Wash your hands."
+    ],
+    [
+     "তুমি কি দাঁত মেজেছ?",
+     "tumi ki dant mejechho?",
+     "Have you brushed your teeth?"
+    ],
+    [
+     "ডাক্তার বললেন, ওষুধ খেতে হবে।",
+     "daktar bollen, oshudh khete hobe.",
+     "The doctor said, you must take medicine."
+    ],
+    [
+     "আমার পা কেটে গেছে, রক্ত পড়ছে।",
+     "amar pa kete gechhe, rokto porchhe.",
+     "I have cut my foot and it is bleeding."
+    ],
+    [
+     "তার চোখ দুটো খুব সুন্দর।",
+     "tar chokh duto khub shundor.",
+     "Her/His eyes are very beautiful."
+    ],
+    [
+     "আমার গলা ব্যথা করছে।",
+     "amar gola byatha korchhe.",
+     "I have a sore throat."
+    ],
+    [
+     "আমার সর্দি-কাশি হয়েছে।",
+     "amar shordi-kashi hoyechhe.",
+     "I have a cold and a cough."
     ]
    ]
   },
@@ -860,6 +980,46 @@
      "আমি খুব খুশি।",
      "ami khub khushi.",
      "I am very happy."
+    ],
+    [
+     "সে খুব রেগে গেছে।",
+     "she khub rege gechhe.",
+     "He/She has become very angry."
+    ],
+    [
+     "আমার ভয় করছে।",
+     "amar bhoy korchhe.",
+     "I am afraid."
+    ],
+    [
+     "আমি খুব ক্লান্ত, আমি ঘুমাব।",
+     "ami khub klanto, ami ghumabo.",
+     "I am very tired, I will sleep."
+    ],
+    [
+     "আমার তেষ্টা পেয়েছে, জল দাও।",
+     "amar teshta peyechhe, jol dao.",
+     "I am thirsty, give me water."
+    ],
+    [
+     "তুমি কি অসুস্থ?",
+     "tumi ki oshustho?",
+     "Are you unwell?"
+    ],
+    [
+     "আমি তোমাকে নিয়ে চিন্তা করছি।",
+     "ami tomake niye chinta korchhi.",
+     "I am worried about you."
+    ],
+    [
+     "সে একা থাকতে ভালোবাসে।",
+     "she eka thakte bhalobashe.",
+     "He/She likes to be alone."
+    ],
+    [
+     "খবরটা শুনে আমি অবাক হলাম।",
+     "khoborta shune ami abak holam.",
+     "I was surprised to hear the news."
     ]
    ]
   },
@@ -1114,6 +1274,46 @@
      "ঝালটা একটু কম দেবেন।",
      "jhalta ekto kom deben.",
      "Please make it a little less spicy."
+    ],
+    [
+     "আমি রোজ সকালে চা খাই।",
+     "ami roj shokale cha khai.",
+     "I drink tea every morning."
+    ],
+    [
+     "মা ডাল আর ভাত রান্না করেছেন।",
+     "ma dal ar bhat ranna korechhen.",
+     "Mother has cooked dal and rice."
+    ],
+    [
+     "আমি ঝোল ভাত খেতে ভালোবাসি।",
+     "ami jhol bhat khete bhalobashi.",
+     "I like to eat rice with curry."
+    ],
+    [
+     "রুটির সঙ্গে তরকারি দাও।",
+     "rutir shonge torkari dao.",
+     "Give curry with the roti."
+    ],
+    [
+     "দুধে একটু চিনি দিন।",
+     "dudhe ekto chini din.",
+     "Put a little sugar in the milk."
+    ],
+    [
+     "খাবারটা খুব সুস্বাদু হয়েছে।",
+     "khabarta khub shushwadu hoyechhe.",
+     "The food is very tasty."
+    ],
+    [
+     "এই তরকারিতে নুন কম।",
+     "ei torkarite nun kom.",
+     "There is too little salt in this curry."
+    ],
+    [
+     "আমি আজ খিচুড়ি খাব।",
+     "ami aj khichuri khabo.",
+     "I will eat khichuri today."
     ]
    ]
   },
@@ -1273,6 +1473,46 @@
      "এটা কি ভেটকি?",
      "eta ki bhetki?",
      "Is this bhetki?"
+    ],
+    [
+     "আজ বাজারে ভালো ইলিশ পাওয়া যাচ্ছে।",
+     "aj bajare bhalo ilish paoya jachchhe.",
+     "Good hilsa is available in the market today."
+    ],
+    [
+     "আমি মাছ খাই কিন্তু মাংস খাই না।",
+     "ami mach khai kintu mangsho khai na.",
+     "I eat fish but I do not eat meat."
+    ],
+    [
+     "মা রুই মাছের ঝোল রেঁধেছেন।",
+     "ma rui macher jhol rendhechhen.",
+     "Mother has cooked rohu fish curry."
+    ],
+    [
+     "চিংড়ি মাছের দাম অনেক বেশি।",
+     "chingri macher dam onek beshi.",
+     "Prawns are very expensive."
+    ],
+    [
+     "মুরগির মাংস কি তাজা?",
+     "murgir mangsho ki taja?",
+     "Is the chicken fresh?"
+    ],
+    [
+     "মাছের কাঁটা বেছে খেতে হয়।",
+     "macher kanta beche khete hoy.",
+     "You have to pick out the bones when eating fish."
+    ],
+    [
+     "জেলে জাল ফেলছে।",
+     "jele jal phelchhe.",
+     "The fisherman is casting the net."
+    ],
+    [
+     "আজ রাতে ডিম আর ভাত খাব।",
+     "aj rate dim ar bhat khabo.",
+     "Tonight I will eat egg and rice."
     ]
    ]
   },
@@ -1442,6 +1682,46 @@
      "আমাকে আধ কিলো আঙুর দিন।",
      "amake adh kilo angur din.",
      "Give me half a kilo of grapes."
+    ],
+    [
+     "আমি রোজ একটা কলা খাই।",
+     "ami roj ekta kola khai.",
+     "I eat a banana every day."
+    ],
+    [
+     "গরমে তরমুজ খেতে ভালো লাগে।",
+     "gorome tormuj khete bhalo lage.",
+     "Watermelon is nice to eat in the heat."
+    ],
+    [
+     "কাঁঠাল আমার খুব প্রিয়।",
+     "kanthal amar khub priyo.",
+     "Jackfruit is very dear to me."
+    ],
+    [
+     "এই আপেলটা কত করে?",
+     "ei apelta koto kore?",
+     "How much is this apple each?"
+    ],
+    [
+     "একটা লেবু দিন।",
+     "ekta lebu din.",
+     "Please give me a lemon."
+    ],
+    [
+     "নারকেলের জল খুব ঠান্ডা।",
+     "narkeler jol khub thanda.",
+     "Coconut water is very cool."
+    ],
+    [
+     "পেয়ারা গাছে অনেক পেয়ারা হয়েছে।",
+     "peyara gachhe onek peyara hoyechhe.",
+     "The guava tree has many guavas."
+    ],
+    [
+     "আমরা ফল কিনতে বাজারে যাব।",
+     "amra phol kinte bajare jabo.",
+     "We will go to the market to buy fruit."
     ]
    ]
   },
@@ -1701,6 +1981,46 @@
      "একটু নুন আর হলুদ দিন।",
      "ekto nun ar holud din.",
      "Add a little salt and turmeric."
+    ],
+    [
+     "আজ আমি পটল ভাজা খাব।",
+     "aj ami potol bhaja khabo.",
+     "Today I will eat fried pointed gourd."
+    ],
+    [
+     "শাকটা ভালো করে ধুয়ে নাও।",
+     "shakta bhalo kore dhuye nao.",
+     "Wash the greens well."
+    ],
+    [
+     "এক কিলো টমেটো কত?",
+     "ek kilo tometo koto?",
+     "How much is a kilo of tomatoes?"
+    ],
+    [
+     "তরকারিতে হলুদ আর জিরে দিয়েছি।",
+     "torkarite holud ar jire diyechhi.",
+     "I have put turmeric and cumin in the curry."
+    ],
+    [
+     "আমি ঝাল খাই না, কাঁচা লঙ্কা দেবেন না।",
+     "ami jhal khai na, kancha lonka deben na.",
+     "I do not eat spicy food, please do not add green chilli."
+    ],
+    [
+     "বেগুন ভাজা আমার প্রিয়।",
+     "begun bhaja amar priyo.",
+     "Fried aubergine is my favourite."
+    ],
+    [
+     "ফুলকপির তরকারি রান্না হচ্ছে।",
+     "phulkopir torkari ranna hochchhe.",
+     "Cauliflower curry is being cooked."
+    ],
+    [
+     "রসুন আর আদা বেটে নাও।",
+     "roshun ar ada bete nao.",
+     "Grind the garlic and ginger."
     ]
    ]
   },
@@ -1855,6 +2175,46 @@
      "একটা ঝালমুড়ি দিন, ঝাল কম।",
      "ekta jhalmuri din, jhal kom.",
      "One jhalmuri, please, less spicy."
+    ],
+    [
+     "বিকেলে আমরা ঝালমুড়ি খাব।",
+     "bikele amra jhalmuri khabo.",
+     "We will eat jhalmuri in the afternoon."
+    ],
+    [
+     "পুজোয় আমরা অনেক মিষ্টি খাই।",
+     "pujoy amra onek mishti khai.",
+     "During the Pujas we eat lots of sweets."
+    ],
+    [
+     "সন্দেশ বানাতে দুধ লাগে।",
+     "shondesh banate dudh lage.",
+     "You need milk to make shondesh."
+    ],
+    [
+     "শীতে গরম তেলেভাজা দারুণ লাগে।",
+     "shite gorom telebhaja darun lage.",
+     "Hot fritters taste great in winter."
+    ],
+    [
+     "তুমি কি মিষ্টি দই খেয়েছ?",
+     "tumi ki mishti doi kheyechho?",
+     "Have you eaten mishti doi?"
+    ],
+    [
+     "আমাকে আরেকটা সিঙ্গারা দিন।",
+     "amake arekta singara din.",
+     "Give me one more singara."
+    ],
+    [
+     "এখানে চা আর বিস্কুট পাওয়া যায়।",
+     "ekhane cha ar biskut paoya jay.",
+     "Tea and biscuits are available here."
+    ],
+    [
+     "নলেন গুড়ের সন্দেশ শীতকালে পাওয়া যায়।",
+     "nolen gurer shondesh shitkale paoya jay.",
+     "Nolen gur shondesh is available in winter."
     ]
    ]
   },
@@ -2024,6 +2384,46 @@
      "জানালাটা খুলে দিন।",
      "janalata khule din.",
      "Please open the window."
+    ],
+    [
+     "আমাদের বাড়িতে তিনটে ঘর আছে।",
+     "amader barite tinte ghor achhe.",
+     "Our house has three rooms."
+    ],
+    [
+     "রান্নাঘরে মা রান্না করছেন।",
+     "rannaghore ma ranna korchhen.",
+     "Mother is cooking in the kitchen."
+    ],
+    [
+     "ছাদে অনেক হাওয়া।",
+     "chhade onek haoya.",
+     "There is a lot of breeze on the roof."
+    ],
+    [
+     "তুমি কি দরজায় তালা দিয়েছ?",
+     "tumi ki dorjay tala diyechho?",
+     "Have you locked the door?"
+    ],
+    [
+     "চাবিটা কোথায় রেখেছ?",
+     "chabita kothay rekhechho?",
+     "Where have you kept the key?"
+    ],
+    [
+     "বারান্দা থেকে নদী দেখা যায়।",
+     "baranda theke nodi dekha jay.",
+     "You can see the river from the balcony."
+    ],
+    [
+     "আলোটা জ্বেলে দাও।",
+     "alota jele dao.",
+     "Switch on the light."
+    ],
+    [
+     "সিঁড়ি দিয়ে উপরে যাও।",
+     "siri diye upore jao.",
+     "Go up the stairs."
     ]
    ]
   },
@@ -2248,6 +2648,46 @@
      "এই থালাটা পরিষ্কার করো।",
      "ei thalata poriskar koro.",
      "Clean this plate."
+    ],
+    [
+     "বইগুলো আলমারিতে রাখো।",
+     "boigulo almarite rakho.",
+     "Keep the books in the cupboard."
+    ],
+    [
+     "আমার ব্যাগটা কোথায়?",
+     "amar byagta kothay?",
+     "Where is my bag?"
+    ],
+    [
+     "বালতিতে জল ভরো।",
+     "baltite jol bharo.",
+     "Fill the bucket with water."
+    ],
+    [
+     "রাতে বিছানায় শুতে যাও।",
+     "rate bichhanay shute jao.",
+     "Go to bed at night."
+    ],
+    [
+     "ঘড়িতে এখন কটা বাজে?",
+     "ghorite ekhon kota baje?",
+     "What time is it on the clock?"
+    ],
+    [
+     "টর্চটা জ্বালাও, অন্ধকার।",
+     "torchta jalao, ondhokar.",
+     "Switch on the torch, it is dark."
+    ],
+    [
+     "চামচ দিয়ে খাও।",
+     "chamoch diye khao.",
+     "Eat with a spoon."
+    ],
+    [
+     "ছুরিটা সাবধানে ধরো।",
+     "chhurita shabdhane dhoro.",
+     "Hold the knife carefully."
     ]
    ]
   },
@@ -2422,6 +2862,46 @@
      "আমার জুতো ছোট হয়ে গেছে।",
      "amar juto chhoto hoye gechhe.",
      "My shoes have become small."
+    ],
+    [
+     "আমি পুজোয় নতুন জামা পরব।",
+     "ami pujoy notun jama porbo.",
+     "I will wear new clothes for Puja."
+    ],
+    [
+     "শীতে আমি সোয়েটার পরি।",
+     "shite ami soyetar pori.",
+     "I wear a sweater in winter."
+    ],
+    [
+     "তার শাড়িটা খুব সুন্দর।",
+     "tar sharita khub shundor.",
+     "Her sari is very beautiful."
+    ],
+    [
+     "বাবা ধুতি আর পাঞ্জাবি পরেছেন।",
+     "baba dhuti ar panjabi porechhen.",
+     "Father is wearing a dhoti and panjabi."
+    ],
+    [
+     "আমার একজোড়া নতুন জুতো চাই।",
+     "amar ekjora notun juto chai.",
+     "I need a new pair of shoes."
+    ],
+    [
+     "গামছাটা দাও, স্নান করব।",
+     "gamchhata dao, snan korbo.",
+     "Give me the gamchha, I will bathe."
+    ],
+    [
+     "আমি সোনার হার আর চুড়ি কিনেছি।",
+     "ami shonar har ar churi kinechhi.",
+     "I have bought a gold necklace and bangles."
+    ],
+    [
+     "এই জামাটা ধুতে হবে।",
+     "ei jamata dhute hobe.",
+     "This shirt needs washing."
     ]
    ]
   },
@@ -2606,6 +3086,46 @@
      "বিড়ালটা দুধ খাচ্ছে।",
      "biralta dudh khachchhe.",
      "The cat is drinking milk."
+    ],
+    [
+     "রাস্তায় একটা কুকুর ঘুরছে।",
+     "rastay ekta kukur ghurchhe.",
+     "A dog is wandering in the road."
+    ],
+    [
+     "গরু ঘাস খাচ্ছে।",
+     "goru ghas khachchhe.",
+     "The cow is eating grass."
+    ],
+    [
+     "আমরা হাতি দেখতে চিড়িয়াখানায় যাব।",
+     "amra hati dekhte chiriyakhanay jabo.",
+     "We will go to the zoo to see elephants."
+    ],
+    [
+     "বাঘ বনে থাকে।",
+     "bagh bone thake.",
+     "Tigers live in the forest."
+    ],
+    [
+     "ইঁদুরটা বিড়ালকে দেখে পালাল।",
+     "indurta biralke dekhe palal.",
+     "The mouse ran away on seeing the cat."
+    ],
+    [
+     "সাপ দেখলে আমি ভয় পাই।",
+     "shap dekhle ami bhoy pai.",
+     "I get scared when I see a snake."
+    ],
+    [
+     "ঘোড়া খুব জোরে দৌড়ায়।",
+     "ghora khub jore douray.",
+     "The horse runs very fast."
+    ],
+    [
+     "বাঁদরটা গাছে উঠেছে।",
+     "bandorta gachhe uthechhe.",
+     "The monkey has climbed the tree."
     ]
    ]
   },
@@ -2800,6 +3320,46 @@
      "রাতে খুব মশা কামড়ায়।",
      "rate khub mosha kamray.",
      "Mosquitoes bite a lot at night."
+    ],
+    [
+     "ভোরে পাখি ডাকে।",
+     "bhore pakhi dake.",
+     "Birds call at dawn."
+    ],
+    [
+     "কাকটা জানালায় বসে আছে।",
+     "kakta janalay boshe achhe.",
+     "The crow is sitting on the window."
+    ],
+    [
+     "ময়ূর পেখম মেলেছে।",
+     "moyur pekhom melechhe.",
+     "The peacock has spread its feathers."
+    ],
+    [
+     "রাতে ঘরে অনেক মশা।",
+     "rate ghore onek mosha.",
+     "There are lots of mosquitoes in the room at night."
+    ],
+    [
+     "ফুলে একটা প্রজাপতি বসেছে।",
+     "phule ekta projapoti boshechhe.",
+     "A butterfly has settled on the flower."
+    ],
+    [
+     "পিঁপড়েরা চিনির কাছে এসেছে।",
+     "pipreera chinir kachhe eshechhe.",
+     "Ants have come near the sugar."
+    ],
+    [
+     "হাঁস পুকুরে সাঁতার কাটছে।",
+     "hans pukure shatar katchhe.",
+     "The ducks are swimming in the pond."
+    ],
+    [
+     "পেঁচা রাতে জেগে থাকে।",
+     "pencha rate jege thake.",
+     "Owls stay awake at night."
     ]
    ]
   },
@@ -3084,6 +3644,46 @@
      "শরতে কাশফুল ফোটে।",
      "shorote kashphul phote.",
      "Kash flowers bloom in autumn."
+    ],
+    [
+     "আজ আকাশে অনেক তারা।",
+     "aj akashe onek tara.",
+     "There are many stars in the sky today."
+    ],
+    [
+     "সূর্য পূর্ব দিকে ওঠে।",
+     "shurjo purbo dike othe.",
+     "The sun rises in the east."
+    ],
+    [
+     "নদীর জল খুব পরিষ্কার।",
+     "nodir jol khub poriskar.",
+     "The river water is very clean."
+    ],
+    [
+     "বনে অনেক গাছ আছে।",
+     "bone onek gachh achhe.",
+     "There are many trees in the forest."
+    ],
+    [
+     "ঝড়ে গাছ ভেঙে পড়েছে।",
+     "jhore gachh bhenge porechhe.",
+     "The tree has fallen in the storm."
+    ],
+    [
+     "পাহাড়ের উপর মেঘ জমেছে।",
+     "paharer upor megh jomechhe.",
+     "Clouds have gathered over the hill."
+    ],
+    [
+     "সমুদ্রের ঢেউ খুব বড়।",
+     "shomudrer dheu khub boro.",
+     "The sea waves are very big."
+    ],
+    [
+     "বাগানে গোলাপ ফুটেছে।",
+     "bagane golap phutechhe.",
+     "Roses have bloomed in the garden."
     ]
    ]
   },
@@ -3203,6 +3803,46 @@
      "কলকাতায় শীত খুব কম।",
      "kolkatay shit khub kom.",
      "Winter in Kolkata is very mild."
+    ],
+    [
+     "বর্ষায় কলকাতায় অনেক বৃষ্টি হয়।",
+     "borshay kolkatay onek brishti hoy.",
+     "It rains a lot in Kolkata in the monsoon."
+    ],
+    [
+     "শীতকালে সকালে কুয়াশা থাকে।",
+     "shitkale shokale kuasha thake.",
+     "There is fog in the morning in winter."
+    ],
+    [
+     "আজ আকাশ মেঘলা।",
+     "aj akash meghla.",
+     "The sky is cloudy today."
+    ],
+    [
+     "বাইরে যাওয়ার সময় ছাতা নিয়ে যাও।",
+     "baire jaoar shomoy chhata niye jao.",
+     "Take an umbrella when you go out."
+    ],
+    [
+     "গ্রীষ্মকালে খুব গরম পড়ে।",
+     "grishmokale khub gorom pore.",
+     "It gets very hot in summer."
+    ],
+    [
+     "বসন্তে সবকিছু সুন্দর লাগে।",
+     "boshonte shobkichhu shundor lage.",
+     "Everything looks beautiful in spring."
+    ],
+    [
+     "কাল কি বৃষ্টি হবে?",
+     "kal ki brishti hobe?",
+     "Will it rain tomorrow?"
+    ],
+    [
+     "আজকের আবহাওয়া ভালো।",
+     "ajker abhaoya bhalo.",
+     "Today's weather is good."
     ]
    ]
   },
@@ -3437,6 +4077,46 @@
      "এখন কটা বাজে?",
      "ekhon kota baje?",
      "What time is it now?"
+    ],
+    [
+     "আজ সোমবার।",
+     "aj shombar.",
+     "Today is Monday."
+    ],
+    [
+     "কাল রবিবার, আমার ছুটি।",
+     "kal robibar, amar chhuti.",
+     "Tomorrow is Sunday, I have a holiday."
+    ],
+    [
+     "আমি সকালে ছটায় উঠি।",
+     "ami shokale chhotay uthi.",
+     "I get up at six in the morning."
+    ],
+    [
+     "বিকেলে আমরা পার্কে যাব।",
+     "bikele amra parke jabo.",
+     "We will go to the park in the afternoon."
+    ],
+    [
+     "আমি রাত দশটায় ঘুমাই।",
+     "ami rat doshtay ghumai.",
+     "I sleep at ten at night."
+    ],
+    [
+     "গতকাল আমি বাজারে গিয়েছিলাম।",
+     "gotokal ami bajare giyechhilam.",
+     "Yesterday I went to the market."
+    ],
+    [
+     "এক সপ্তাহে সাত দিন।",
+     "ek shoptahe shat din.",
+     "There are seven days in a week."
+    ],
+    [
+     "একটু পরে আসছি।",
+     "ekto pore aschhi.",
+     "I am coming in a little while."
     ]
    ]
   },
@@ -3626,6 +4306,46 @@
      "আমার জন্মদিন মার্চ মাসে।",
      "amar jonmodin march mashe.",
      "My birthday is in March."
+    ],
+    [
+     "বাংলা বছর বৈশাখ মাসে শুরু হয়।",
+     "bangla bochhor boishakh mashe shuru hoy.",
+     "The Bengali year begins in the month of Boishakh."
+    ],
+    [
+     "শ্রাবণ মাসে খুব বৃষ্টি হয়।",
+     "shrabon mashe khub brishti hoy.",
+     "It rains a lot in the month of Shrabon."
+    ],
+    [
+     "আশ্বিন মাসে দুর্গাপূজা হয়।",
+     "ashwin mashe durgapuja hoy.",
+     "Durga Puja takes place in Ashwin."
+    ],
+    [
+     "ফেব্রুয়ারি মাসে বইমেলা হয়।",
+     "phebruari mashe boimela hoy.",
+     "The book fair takes place in February."
+    ],
+    [
+     "আমি জানুয়ারি মাসে কলকাতায় এসেছি।",
+     "ami januari mashe kolkatay eshechhi.",
+     "I came to Kolkata in January."
+    ],
+    [
+     "এটা কোন মাস?",
+     "eta kon mash?",
+     "Which month is this?"
+    ],
+    [
+     "পৌষ মাসে পিঠে খাওয়া হয়।",
+     "poush mashe pithe khaoya hoy.",
+     "Pithe is eaten in the month of Poush."
+    ],
+    [
+     "বছরে বারো মাস।",
+     "bochhore baro mash.",
+     "There are twelve months in a year."
     ]
    ]
   },
@@ -3760,6 +4480,46 @@
      "আকাশটা আজ খুব নীল।",
      "akashta aj khub nil.",
      "The sky is very blue today."
+    ],
+    [
+     "আমি লাল রং ভালোবাসি।",
+     "ami lal rong bhalobashi.",
+     "I love the colour red."
+    ],
+    [
+     "আকাশ নীল আর ঘাস সবুজ।",
+     "akash nil ar ghas shobuj.",
+     "The sky is blue and the grass is green."
+    ],
+    [
+     "তার চুল কালো।",
+     "tar chul kalo.",
+     "Her/His hair is black."
+    ],
+    [
+     "ফুলটা হলুদ রঙের।",
+     "phulta holud ronger.",
+     "The flower is yellow."
+    ],
+    [
+     "আমাকে একটা সাদা জামা দিন।",
+     "amake ekta shada jama din.",
+     "Give me a white shirt."
+    ],
+    [
+     "তোমার প্রিয় রং কী?",
+     "tomar priyo rong ki?",
+     "What is your favourite colour?"
+    ],
+    [
+     "দুর্গাপূজায় সাদা-লাল শাড়ি পরা হয়।",
+     "durgapujay shada-lal shari pora hoy.",
+     "White and red saris are worn at Durga Puja."
+    ],
+    [
+     "এটা গাঢ় নীল না ফিকে নীল?",
+     "eta gadho nil na phike nil?",
+     "Is this dark blue or light blue?"
     ]
    ]
   },
@@ -3969,6 +4729,46 @@
      "হাসপাতালটা কোথায়?",
      "haspatalta kothay?",
      "Where is the hospital?"
+    ],
+    [
+     "বাজার কোন দিকে?",
+     "bajar kon dike?",
+     "Which way is the market?"
+    ],
+    [
+     "আমি স্কুলে পড়ি।",
+     "ami skule pori.",
+     "I study at school."
+    ],
+    [
+     "মন্দিরে অনেক ভিড়।",
+     "mondire onek bhir.",
+     "There is a big crowd at the temple."
+    ],
+    [
+     "পার্কে ছেলেমেয়েরা খেলছে।",
+     "parke chhelemeyera khelchhe.",
+     "Children are playing in the park."
+    ],
+    [
+     "ব্যাংকটা কখন খোলে?",
+     "byankta kokhon khole?",
+     "When does the bank open?"
+    ],
+    [
+     "আমরা কাল জাদুঘরে যাব।",
+     "amra kal jadughore jabo.",
+     "We will go to the museum tomorrow."
+    ],
+    [
+     "ডাকঘরে একটা চিঠি ফেলতে হবে।",
+     "dakghore ekta chithi phelte hobe.",
+     "I have to post a letter at the post office."
+    ],
+    [
+     "আমার অফিস হাওড়ায়।",
+     "amar ofis haoray.",
+     "My office is in Howrah."
     ]
    ]
   },
@@ -4158,6 +4958,46 @@
      "এটা কি সঠিক রাস্তা?",
      "eta ki shothik rasta?",
      "Is this the right road?"
+    ],
+    [
+     "ডান দিকে ঘুরুন।",
+     "dan dike ghurun.",
+     "Turn to the right."
+    ],
+    [
+     "বাঁ দিকে একটা দোকান আছে।",
+     "ban dike ekta dokan achhe.",
+     "There is a shop on the left."
+    ],
+    [
+     "হাসপাতাল এখান থেকে কাছে।",
+     "haspatal ekhan theke kachhe.",
+     "The hospital is near here."
+    ],
+    [
+     "স্টেশন একটু দূরে।",
+     "steshon ekto dure.",
+     "The station is a little far."
+    ],
+    [
+     "মোড়ের মাথায় দাঁড়ান।",
+     "morer mathay darun.",
+     "Stand at the corner of the road."
+    ],
+    [
+     "রাস্তাটা সোজা গেছে।",
+     "rastata shoja gechhe.",
+     "The road goes straight."
+    ],
+    [
+     "ঠিকানাটা লিখে দিন।",
+     "thikanata likhe din.",
+     "Please write down the address."
+    ],
+    [
+     "কলেজ স্ট্রিট কোথায়?",
+     "kolej strit kothay?",
+     "Where is College Street?"
     ]
    ]
   },
@@ -4307,6 +5147,46 @@
      "আমাকে হাওড়া স্টেশনে নিয়ে যান।",
      "amake haora steshone niye jan.",
      "Take me to Howrah station."
+    ],
+    [
+     "আমি ট্রামে করে অফিস যাই।",
+     "ami trame kore ofis jai.",
+     "I go to the office by tram."
+    ],
+    [
+     "মেট্রোতে ভিড় কম।",
+     "metrote bhir kom.",
+     "There is less crowd on the metro."
+    ],
+    [
+     "একটা রিকশা ডাকো।",
+     "ekta riksha dako.",
+     "Call a rickshaw."
+    ],
+    [
+     "ট্রেন কটায় ছাড়বে?",
+     "tren kotay chharbe?",
+     "What time will the train leave?"
+    ],
+    [
+     "আমাকে একটা টিকিট দিন।",
+     "amake ekta tikit din.",
+     "Give me a ticket."
+    ],
+    [
+     "আমরা নৌকায় নদী পার হব।",
+     "amra noukay nodi par hobo.",
+     "We will cross the river by boat."
+    ],
+    [
+     "এখান থেকে বিমানবন্দর কত দূর?",
+     "ekhan theke bimanbondor koto dur?",
+     "How far is the airport from here?"
+    ],
+    [
+     "ট্যাক্সিওয়ালা ভাড়া বেশি চাইছে।",
+     "taksiwala bhara beshi chaichhe.",
+     "The taxi driver is asking for a high fare."
     ]
    ]
   },
@@ -4486,6 +5366,46 @@
      "আমি এক কিলো আলু চাই।",
      "ami ek kilo alu chai.",
      "I want one kilo of potatoes."
+    ],
+    [
+     "এক ডজন কলার দাম কত?",
+     "ek dojon kolar dam koto?",
+     "What is the price of a dozen bananas?"
+    ],
+    [
+     "আপনার কাছে খুচরো আছে?",
+     "apnar kachhe khuchro achhe?",
+     "Do you have change?"
+    ],
+    [
+     "দামটা একটু বেশি।",
+     "damta ekto beshi.",
+     "The price is a bit high."
+    ],
+    [
+     "আমি কার্ডে দাম দেব।",
+     "ami karde dam debo.",
+     "I will pay by card."
+    ],
+    [
+     "আধ কিলো ডাল দিন।",
+     "adh kilo dal din.",
+     "Give me half a kilo of dal."
+    ],
+    [
+     "রসিদটা দেবেন?",
+     "roshidta deben?",
+     "Will you give the receipt?"
+    ],
+    [
+     "আজ কিছু ছাড় পাব?",
+     "aj kichhu chhar pabo?",
+     "Will I get some discount today?"
+    ],
+    [
+     "বাজার থেকে সবজি কিনে আনো।",
+     "bajar theke shobji kine ano.",
+     "Buy vegetables from the market and bring them."
     ]
    ]
   },
@@ -4705,6 +5625,46 @@
      "আরেকবার বলবেন?",
      "arekbar bolben?",
      "Will you say it once more?"
+    ],
+    [
+     "আমি রোজ স্কুলে যাই।",
+     "ami roj skule jai.",
+     "I go to school every day."
+    ],
+    [
+     "খাতায় লেখো।",
+     "khatay lekho.",
+     "Write in the notebook."
+    ],
+    [
+     "আজ আমাদের বাংলা ক্লাস আছে।",
+     "aj amader bangla klas achhe.",
+     "We have Bengali class today."
+    ],
+    [
+     "আমার পরীক্ষা সামনে।",
+     "amar porikkha samne.",
+     "My exam is coming up."
+    ],
+    [
+     "প্রশ্নের উত্তর দাও।",
+     "proshner uttor dao.",
+     "Answer the question."
+    ],
+    [
+     "এই বাক্যটা পড়ো।",
+     "ei bakyota poro.",
+     "Read this sentence."
+    ],
+    [
+     "আমি অঙ্ক ভালোবাসি।",
+     "ami onko bhalobashi.",
+     "I like mathematics."
+    ],
+    [
+     "শিক্ষক আমাদের নতুন পাঠ শেখালেন।",
+     "shikkhok amader notun path shekhalen.",
+     "The teacher taught us a new lesson."
     ]
    ]
   },
@@ -4869,6 +5829,46 @@
      "আমাকে একটা মেসেজ পাঠাও।",
      "amake ekta meshej pathao.",
      "Send me a message."
+    ],
+    [
+     "আমি রোজ খবরের কাগজ পড়ি।",
+     "ami roj khoborer kagoj pori.",
+     "I read the newspaper every day."
+    ],
+    [
+     "আমাকে ফোন করো।",
+     "amake phon koro.",
+     "Call me."
+    ],
+    [
+     "আমি একটা চিঠি লিখছি।",
+     "ami ekta chithi likhchhi.",
+     "I am writing a letter."
+    ],
+    [
+     "ইন্টারনেট ধীর চলছে।",
+     "intarnet dhir cholchhe.",
+     "The internet is running slowly."
+    ],
+    [
+     "আমি তোমাকে একটা ছবি পাঠালাম।",
+     "ami tomake ekta chhobi pathalam.",
+     "I sent you a picture."
+    ],
+    [
+     "কাল অফিসে মিটিং আছে।",
+     "kal ofise miting achhe.",
+     "There is a meeting at the office tomorrow."
+    ],
+    [
+     "আজ টিভিতে ভালো সিনেমা আছে।",
+     "aj tibhite bhalo sinema achhe.",
+     "There is a good film on TV today."
+    ],
+    [
+     "এই গল্পটা খুব মজার।",
+     "ei golpota khub mojar.",
+     "This story is very funny."
     ]
    ]
   },
@@ -5063,6 +6063,46 @@
      "শুভ বিজয়া!",
      "shubho bijoya!",
      "Happy Bijoya (greeting after Durga Puja)!"
+    ],
+    [
+     "দুর্গাপূজায় ঢাক বাজে।",
+     "durgapujay dhak baje.",
+     "The dhak is played at Durga Puja."
+    ],
+    [
+     "আমরা মণ্ডপে প্রতিমা দেখতে যাব।",
+     "amra mondope protima dekhte jabo.",
+     "We will go to the pavilion to see the idol."
+    ],
+    [
+     "পয়লা বৈশাখে আমরা নতুন জামা পরি।",
+     "poila boishakhe amra notun jama pori.",
+     "On Poila Boishakh we wear new clothes."
+    ],
+    [
+     "মা ঠাকুরের জন্য প্রসাদ বানিয়েছেন।",
+     "ma thakurer jonyo proshad baniyechhen.",
+     "Mother has made prasad for the deity."
+    ],
+    [
+     "বইমেলায় অনেক বই পাওয়া যায়।",
+     "boimelay onek boi paoya jay.",
+     "You find many books at the book fair."
+    ],
+    [
+     "রবীন্দ্রসংগীত আমার খুব ভালো লাগে।",
+     "robindroshongit amar khub bhalo lage.",
+     "I like Tagore songs a lot."
+    ],
+    [
+     "দীপাবলিতে বাড়িতে আলো জ্বলে।",
+     "dipabalite barite alo jole.",
+     "On Diwali the lights are lit at home."
+    ],
+    [
+     "আমি বন্ধুদের সঙ্গে আড্ডা দেব।",
+     "ami bondhuder shonge adda debo.",
+     "I will chat with friends."
     ]
    ]
   },
@@ -5372,6 +6412,46 @@
      "আমি তোমাকে ভুলব না।",
      "ami tomake bhulbo na.",
      "I will not forget you."
+    ],
+    [
+     "আমি রোজ বাংলা পড়ি।",
+     "ami roj bangla pori.",
+     "I read Bengali every day."
+    ],
+    [
+     "সে বাজারে যাচ্ছে।",
+     "she bajare jachchhe.",
+     "He/She is going to the market."
+    ],
+    [
+     "তুমি কী খাবে?",
+     "tumi ki khabe?",
+     "What will you eat?"
+    ],
+    [
+     "আমি গান শুনছি।",
+     "ami gan shunchhi.",
+     "I am listening to a song."
+    ],
+    [
+     "আমি তোমাকে ডাকছি।",
+     "ami tomake dakchhi.",
+     "I am calling you."
+    ],
+    [
+     "দরজাটা খুলে দাও।",
+     "dorjata khule dao.",
+     "Open the door."
+    ],
+    [
+     "সে ভালো গান গায়।",
+     "she bhalo gan gay.",
+     "He/She sings well."
+    ],
+    [
+     "আমি কিছু বুঝতে পারছি না।",
+     "ami kichhu bujhte parchhi na.",
+     "I cannot understand anything."
     ]
    ]
   },
@@ -5626,6 +6706,46 @@
      "আস্তে আস্তে বলুন।",
      "aste aste bolun.",
      "Please speak slowly."
+    ],
+    [
+     "এটা খুব সুন্দর ফুল।",
+     "eta khub shundor phul.",
+     "This is a very beautiful flower."
+    ],
+    [
+     "আজকের পরীক্ষা সহজ ছিল।",
+     "ajker porikkha shohoj chhilo.",
+     "Today's exam was easy."
+    ],
+    [
+     "ব্যাগটা খুব ভারী।",
+     "byagta khub bhari.",
+     "The bag is very heavy."
+    ],
+    [
+     "তার বাড়ি অনেক বড়।",
+     "tar bari onek boro.",
+     "His/Her house is very big."
+    ],
+    [
+     "আমি ব্যস্ত, পরে ফোন করব।",
+     "ami bysto, pore phon korbo.",
+     "I am busy, I will call later."
+    ],
+    [
+     "গ্লাসটা খালি।",
+     "glasta khali.",
+     "The glass is empty."
+    ],
+    [
+     "এই রাস্তাটা পরিষ্কার।",
+     "ei rastata poriskar.",
+     "This road is clean."
+    ],
+    [
+     "তুমি কি সুখী?",
+     "tumi ki shukhi?",
+     "Are you happy?"
     ]
    ]
   },
@@ -5725,6 +6845,46 @@
      "এটা কত টাকা?",
      "eta koto taka?",
      "How much is this?"
+    ],
+    [
+     "এটা কী?",
+     "eta ki?",
+     "What is this?"
+    ],
+    [
+     "তুমি কেন কাঁদছ?",
+     "tumi keno kandchho?",
+     "Why are you crying?"
+    ],
+    [
+     "আপনি কখন আসবেন?",
+     "apni kokhon ashben?",
+     "When will you come?"
+    ],
+    [
+     "এটা কার বই?",
+     "eta kar boi?",
+     "Whose book is this?"
+    ],
+    [
+     "আপনি কোন স্কুলে পড়েন?",
+     "apni kon skule poren?",
+     "Which school do you study at?"
+    ],
+    [
+     "আমি কীভাবে যাব?",
+     "ami kibhabe jabo?",
+     "How shall I go?"
+    ],
+    [
+     "এখন কটা বাজে?",
+     "ekhon kota baje?",
+     "What time is it now?"
+    ],
+    [
+     "তোমার বাড়িতে কে আছে?",
+     "tomar barite ke achhe?",
+     "Who is at your home?"
     ]
    ]
   },
@@ -5874,6 +7034,46 @@
      "দয়া করে একটু সাহায্য করুন।",
      "doya kore ekto shahajyo korun.",
      "Please help me a little."
+    ],
+    [
+     "শুভ সকাল! আজ কেমন আছেন?",
+     "shubho shokal! aj kemon achhen?",
+     "Good morning! How are you today?"
+    ],
+    [
+     "আপনাকে ধন্যবাদ।",
+     "apnake dhonyobad.",
+     "Thank you."
+    ],
+    [
+     "মাফ করবেন, আমি দেরি করে ফেলেছি।",
+     "maph korben, ami deri kore phelechhi.",
+     "Excuse me, I am late."
+    ],
+    [
+     "আবার দেখা হবে।",
+     "abar dekha hobe.",
+     "See you again."
+    ],
+    [
+     "আমার নাম রাহুল।",
+     "amar nam rahul.",
+     "My name is Rahul."
+    ],
+    [
+     "আপনি কি ইংরেজি বলতে পারেন?",
+     "apni ki ingreji bolte paren?",
+     "Can you speak English?"
+    ],
+    [
+     "আস্তে বলবেন?",
+     "aste bolben?",
+     "Will you speak slowly?"
+    ],
+    [
+     "স্বাগতম, ভেতরে আসুন।",
+     "shagotom, bhetore ashun.",
+     "Welcome, please come in."
     ]
    ]
   }

@@ -8,6 +8,13 @@ const config: NextConfig = {
   // Pronunciation clips are read from disk by /api/audio, so make sure they ship with the deployment.
   // Production only: in `next dev` this setting makes the page reload in a loop.
   ...(process.env.NODE_ENV === "production" ? { outputFileTracingIncludes: { "/api/audio": ["./content-audio/**/*"] } } : {}),
+  async redirects() {
+    // Vocabulary used to live under Speaking.
+    return [
+      { source: "/learn/speaking/vocabulary", destination: "/learn/vocabulary", permanent: false },
+      { source: "/learn/speaking/vocabulary/:id", destination: "/learn/vocabulary/:id", permanent: false },
+    ];
+  },
   async headers() {
     return [
       {

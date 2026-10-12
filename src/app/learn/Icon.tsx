@@ -4,6 +4,7 @@ const PATHS: Record<string, string> = {
   speaking: "M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z M19 11a7 7 0 0 1-14 0 M12 18v4 M8 22h8",
   writing: "M12 20h9 M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z",
   grammar: "m12 2 9 5-9 5-9-5z M3 12l9 5 9-5 M3 17l9 5 9-5",
+  vocabulary: "M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z M9 8h6 M9 12h6",
   arrow: "M5 12h14 M13 5l7 7-7 7",
   back: "M19 12H5 M11 5l-7 7 7 7",
   logout: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4 M16 17l5-5-5-5 M21 12H9",

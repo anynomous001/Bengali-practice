@@ -7,6 +7,7 @@ import Icon from "./learn/Icon";
 const FEATURES = [
   { seg: "reading", icon: "reading", title: "Reading", bn: "পড়া", body: "Start from the alphabet and vowel signs, then read short fables in three layers: Bengali only, line by line with meanings, and English." },
   { seg: "speaking", icon: "speaking", title: "Speaking", bn: "বলা", body: "Tap any letter, number or price to hear it, then test your ear. Say the word aloud before you check it." },
+  { seg: "vocabulary", icon: "vocabulary", title: "Vocabulary", bn: "শব্দভান্ডার", body: "About 900 words in 30 topics, from family and food to Kolkata's streets, each with example phrases and practice." },
   { seg: "grammar", icon: "grammar", title: "Grammar", bn: "ব্যাকরণ", body: "Persons, verbs, tenses, karak and bibhakti in clear tables with examples, plus a ten-round tense workout." },
 ] as const;
 
@@ -36,7 +37,7 @@ export default async function Home() {
         <div className="land-hero-copy">
           <p className="eyebrow">Bengali for English speakers</p>
           <h1>Learn Bengali one lesson at a time.</h1>
-          <p className="lead">Reading, speaking and grammar courses built around one teacher&apos;s lessons in Kolkata. Every lesson is tracked, so you always know where to pick up.</p>
+          <p className="lead">Reading, speaking, vocabulary and grammar courses built around one teacher&apos;s lessons in Kolkata. Every lesson is tracked, so you always know where to pick up.</p>
           <div className="cta">
             <Link className="btn" href="/buy">Get 12 months · ${price}</Link>
             <Link className="btn ghost" href="/login">Student sign in</Link>
@@ -63,7 +64,7 @@ export default async function Home() {
 
       <section className="land-section" id="learn">
         <p className="eyebrow">What you will practise</p>
-        <h2>Three courses, taken in order.</h2>
+        <h2>Four courses, taken in order.</h2>
         <div className="feature-grid">
           {FEATURES.map((f) => (
             <article key={f.title} className="feature" data-seg={f.seg}>
@@ -97,7 +98,7 @@ export default async function Home() {
           <div className="offer-card">
             <div className="price">${price} <small>one-time</small></div>
             <ul className="ticks">
-              <li>All three courses</li>
+              <li>All four courses</li>
               <li>Flashcards and progress saved</li>
               <li>Card payment in US dollars via Razorpay</li>
             </ul>

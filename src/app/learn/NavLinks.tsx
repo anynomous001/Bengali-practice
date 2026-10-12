@@ -8,6 +8,7 @@ const ITEMS: { href: string; label: string; bn?: string; icon: IconName; seg?: s
   { href: "/learn", label: "Home", icon: "home" },
   { href: "/learn/reading", label: "Reading", bn: "পড়া", icon: "reading", seg: "reading" },
   { href: "/learn/speaking", label: "Speaking", bn: "বলা", icon: "speaking", seg: "speaking" },
+  { href: "/learn/vocabulary", label: "Vocabulary", bn: "শব্দ", icon: "vocabulary", seg: "vocabulary" },
   { href: "/learn/grammar", label: "Grammar", bn: "ব্যাকরণ", icon: "grammar", seg: "grammar" },
 ];
 

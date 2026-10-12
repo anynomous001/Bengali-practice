@@ -6,7 +6,7 @@ import { GRAMMAR } from "./grammar";
 import { WORKOUT } from "./tense-workout";
 import { VOCAB, VOCAB_GROUPS, wordCount } from "./vocabulary";
 
-export type CourseId = "reading" | "speaking" | "grammar";
+export type CourseId = "reading" | "speaking" | "vocabulary" | "grammar";
 export type Kind = "Lesson" | "Practice" | "Quiz" | "Review";
 export type Lesson = { id: string; title: string; blurb: string; href: string; kind: Kind };
 export type Module = { id: string; title: string; blurb: string; lessons: Lesson[] };
@@ -50,14 +50,13 @@ export const COURSES: Course[] = [
   },
   {
     id: "speaking", title: "Speaking", bn: "বলা",
-    blurb: "Hear Bengali, build a large vocabulary topic by topic, and say it out loud.",
+    blurb: "Hear Bengali, then say it out loud: sounds, numbers and everyday words.",
     outcomes: [
       "Tell similar Bengali sounds apart by ear",
-      `Learn about ${Math.round(VOCAB.reduce((n, t) => n + wordCount(t), 0) / 50) * 50} everyday words in ${VOCAB.length} topics, each with useful phrases`,
       "Understand numbers and prices when you hear them",
       "Say words aloud, slowly or at normal speed, and check yourself",
     ],
-    tools: [{ label: "Word finder", href: "/learn/speaking/vocabulary", blurb: "Search every word by Bengali, romanized or English." }],
+    tools: [{ label: "Vocabulary course", href: "/learn/vocabulary", blurb: "Build your word bank, topic by topic, with phrases to say aloud." }],
     modules: [
       { id: "sounds", title: "Sounds", blurb: "Tap a letter to hear it, then test your ear.", lessons: [
         { id: "speaking/sounds", title: "Letter sounds", blurb: "Listen to every letter, then take the listening quiz.", href: "/learn/speaking/sounds", kind: "Lesson" },
@@ -65,14 +64,6 @@ export const COURSES: Course[] = [
       { id: "numbers", title: "Numbers and money", blurb: "Understand what you hear at the market.", lessons: [
         { id: "speaking/numbers", title: "Numbers and money listening", blurb: "Hear a number or price and pick the numeral.", href: "/learn/speaking/numbers", kind: "Practice" },
       ] },
-      ...VOCAB_GROUPS.map((g): Module => ({
-        id: `vocab-${g.id}`, title: `Vocabulary: ${g.title}`, blurb: g.blurb,
-        lessons: VOCAB.filter((t) => t.group === g.id).map((t): Lesson => ({
-          id: `speaking/vocab-${t.id}`, title: t.title[2],
-          blurb: `${wordCount(t)} words, ${t.phrases.length} phrases · ${t.title[0]}`,
-          href: `/learn/speaking/vocabulary/${t.id}`, kind: "Lesson",
-        })),
-      })),
       { id: "say", title: "Say it aloud", blurb: "See the meaning, say the word, then check.", lessons: [
         { id: "speaking/flashcards", title: "Say-it-aloud flashcards", blurb: "English first: say the Bengali word before you reveal it.", href: "/learn/speaking/flashcards", kind: "Review" },
       ] },
@@ -83,6 +74,31 @@ export const COURSES: Course[] = [
       { title: "Directions", blurb: "Asking for and giving directions." },
       { title: "Role-play", blurb: "Practise real situations." },
     ],
+  },
+  {
+    id: "vocabulary", title: "Vocabulary", bn: "শব্দভান্ডার",
+    blurb: "A large word bank, topic by topic, with phrases that show every topic's words in use.",
+    outcomes: [
+      `Learn about ${Math.round(VOCAB.reduce((n, t) => n + wordCount(t), 0) / 50) * 50} everyday words in ${VOCAB.length} topics`,
+      `Hear each word and see it in the Bengali script, romanized and in English`,
+      `Use the words in about ${Math.round(VOCAB.reduce((n, t) => n + t.phrases.length, 0) / 10) * 10} example phrases`,
+      "Test yourself with practice rounds and spaced-repetition flashcards",
+    ],
+    tools: [{ label: "Word finder", href: "/learn/vocabulary/search", blurb: "Search every word by Bengali, romanized or English." }],
+    modules: [
+      ...VOCAB_GROUPS.map((g): Module => ({
+        id: g.id, title: g.title, blurb: g.blurb,
+        lessons: VOCAB.filter((t) => t.group === g.id).map((t): Lesson => ({
+          id: `vocabulary/${t.id}`, title: t.title[2],
+          blurb: `${wordCount(t)} words, ${t.phrases.length} phrases · ${t.title[0]}`,
+          href: `/learn/vocabulary/${t.id}`, kind: "Lesson",
+        })),
+      })),
+      { id: "review", title: "Review", blurb: "Spaced repetition keeps the words in your memory.", lessons: [
+        { id: "vocabulary/flashcards", title: "Vocabulary flashcards", blurb: "One deck per topic: see the meaning, say the word, then check.", href: "/learn/vocabulary/flashcards", kind: "Review" },
+      ] },
+    ],
+    upcoming: [],
   },
   {
     id: "grammar", title: "Grammar", bn: "ব্যাকরণ",

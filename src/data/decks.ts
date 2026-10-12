@@ -28,15 +28,13 @@ export type Card = {
 };
 export type Deck = {
   id: string;
-  segment: "reading" | "speaking" | "writing";
+  segment: "reading" | "speaking" | "writing" | "vocabulary";
   title: string;
   blurb: string;
   /** Instruction shown above the card. */
   hint?: string;
   /** Play the audio when the card is flipped. */
   autoSpeak?: boolean;
-  /** Not listed in the deck chooser; reached from its own lesson page. */
-  hidden?: boolean;
   cards: Card[];
 };
 
@@ -142,11 +140,10 @@ export const DECKS: Deck[] = [
       speak: l.word!,
     })),
   },
-  // One hidden deck per vocabulary topic: see the meaning, say the Bengali word, then check.
+  // One deck per vocabulary topic: see the meaning, say the Bengali word, then check.
   ...VOCAB.map((t): Deck => ({
     id: `vocab-${t.id}`,
-    segment: "speaking",
-    hidden: true,
+    segment: "vocabulary",
     title: t.title[2],
     blurb: t.blurb,
     hint: "Say it aloud before you flip the card.",

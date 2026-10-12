@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { recordGrammarQuiz } from "../../../../actions";
+import { recordGrammarQuiz } from "../../../actions";
 import { speak } from "@/lib/speak";
 import type { VocabTopic as Topic, Word } from "@/data/vocabulary";
-import Icon from "../../../Icon";
-import { useRoman } from "../../../Roman";
-import WordRow from "../../../WordRow";
+import Icon from "../../Icon";
+import { useRoman } from "../../Roman";
+import WordRow from "../../WordRow";
 
 type Tab = "words" | "phrases" | "practice";
 type Kind = "bn2en" | "en2bn" | "listen";

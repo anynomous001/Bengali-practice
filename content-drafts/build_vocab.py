@@ -7,7 +7,7 @@ import json, re, sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent / "vocab"))
-import a_people, b_food, c_home, d_nature, e_time, f_city, g_language  # noqa: E402
+import a_people, b_food, c_home, d_nature, e_time, f_city, g_language, h_phrases  # noqa: E402
 
 GROUPS = [
     ("people", "People and body", "Family, jobs, the body and feelings."),
@@ -21,6 +21,10 @@ GROUPS = [
 ]
 MODULES = [a_people, b_food, c_home, d_nature, e_time, f_city, g_language]
 TOPICS = [t for m in MODULES for t in m.TOPICS]
+for t in TOPICS:  # example phrases live in vocab/h_phrases.py
+    t["phrases"] = list(t["phrases"]) + list(h_phrases.EXTRA.get(t["id"], []))
+unknown = set(h_phrases.EXTRA) - {t["id"] for t in TOPICS}
+if unknown: raise SystemExit(f"h_phrases has unknown topics: {unknown}")
 
 BN = re.compile(r"[ঀ-৿]")
 RO = re.compile(r"^[a-z][a-z .?!',-]*$")
@@ -44,7 +48,10 @@ for t in TOPICS:
             if bn in seen: errors.append(f"{t['id']}: duplicate word {bn}")
             seen.add(bn)
     if n < 10: errors.append(f"{t['id']}: only {n} words (the quiz needs 10)")
+    seenp = set()
     for p in t["phrases"]:
+        if p[0] in seenp: errors.append(f"{t['id']}: duplicate phrase {p[0]}")
+        seenp.add(p[0])
         if len(p) != 3 or not BN.search(p[0]) or not RO.match(p[1]): errors.append(f"{t['id']}: bad phrase {p}")
         total_phr += 1
     total_words += n

@@ -72,7 +72,7 @@ Open http://localhost:3000, click **Student sign in**, and enter **admin@local.t
 
 ## Courses, lessons and progress
 
-The app is organised as three courses: **Reading**, **Speaking** and **Grammar** (Writing is paused and hidden from the menus; its pages still exist).
+The app is organised as four courses: **Reading**, **Speaking**, **Vocabulary** and **Grammar** (Writing is paused and hidden from the menus; its pages still exist).
 Each course is a list of modules, and each module is a list of lessons. All of it is defined in one file, `src/data/curriculum.ts`.
 
 - **Course page** (`/learn/reading`, `/learn/speaking`, `/learn/grammar`): progress bar, Resume, what you will learn, and the syllabus with a tick beside each completed lesson.
@@ -84,16 +84,16 @@ To add a lesson: add it to a module in `curriculum.ts` (id like `reading/my-less
 
 ## Vocabulary by topic
 
-Speaking has a **Vocabulary** part: about 900 words and 90 phrases in 30 topics (family, body, food, fruits, vegetables and spices, sweets and snacks, house, clothes, animals, nature, seasons, days and months, colours, places, directions, transport, market, school, festivals, verbs, describing words, question words, greetings and more), grouped into eight modules. Each topic is a lesson with:
+**Vocabulary** is one of the four main sections: about 900 words and 330 phrases in 30 topics (family, body, food, fruits, vegetables and spices, sweets and snacks, house, clothes, animals, nature, seasons, days and months, colours, places, directions, transport, market, school, festivals, verbs, describing words, question words, greetings and more), grouped into eight modules, with a Review module of flashcards. Each topic is a lesson with:
 
 - **Words** in clear sections, each with a listen button, romanization (follows the Romanized English switch) and the English meaning, plus *Cover the English* for self-testing,
-- **Phrases** with slow playback,
+- **Phrases**: about 11 sentences per topic that use the topic's words, with normal and slow playback,
 - **Practice**: ten questions (Bengali to English, English to Bengali, listening). Scoring 7/10 completes the lesson, and the best score is saved,
-- **Flashcards** for the topic (a hidden deck, spaced repetition like the other decks).
+- **Flashcards** for the topic (one deck per topic under Vocabulary → Review, spaced repetition like the other decks).
 
-The **Word finder** (`/learn/speaking/vocabulary`) searches every word by Bengali, romanized or English.
+The **Word finder** (`/learn/vocabulary/search`) searches every word by Bengali, romanized or English.
 
-To change the words, edit `content-drafts/vocab/*.py` and run `python3 content-drafts/build_vocab.py`. It checks every entry and rewrites `src/data/vocabulary.ts` and the review copy `content-drafts/vocabulary.md`. After adding words, run `npm run audio` to make their pronunciation clips.
+To change the words, edit `content-drafts/vocab/*.py` (the example phrases are in `h_phrases.py`) and run `python3 content-drafts/build_vocab.py`. It checks every entry and rewrites `src/data/vocabulary.ts` and the review copy `content-drafts/vocabulary.md`. After adding words, run `npm run audio` to make their pronunciation clips.
 
 ## Pronunciation audio
 
