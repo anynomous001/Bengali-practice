@@ -5,7 +5,7 @@ import { Pool } from "pg";
 const LOCAL = !process.env.DATABASE_URL && process.env.NODE_ENV !== "production";
 
 type Local = { query: (t: string, p?: unknown[]) => Promise<{ rows: unknown[] }>; exec: (t: string) => Promise<unknown> };
-const globalForPool = globalThis as unknown as { pool?: Pool; local?: Promise<Local>; schema?: Promise<void> };
+const globalForPool = globalThis as unknown as { pool?: Pool; local?: Promise<Local>; schema?: Promise<void>; schemaSql?: string };
 
 function pool(): Pool {
   if (!process.env.DATABASE_URL) throw new Error("DATABASE_URL is not set");
@@ -107,6 +107,11 @@ export async function query<T extends object = Record<string, unknown>>(
   params: unknown[] = [],
 ): Promise<T[]> {
   // Retry the schema setup on the next call if it failed (e.g. DB briefly unreachable).
+  // Re-run when the schema text changes (a hot-reloaded dev server would otherwise keep a stale, older run).
+  if (globalForPool.schemaSql !== SCHEMA) {
+    globalForPool.schemaSql = SCHEMA;
+    globalForPool.schema = undefined;
+  }
   globalForPool.schema ??= ensureSchema().catch((e) => {
     globalForPool.schema = undefined;
     throw e;
