@@ -70,6 +70,23 @@ Open http://localhost:3000, click **Student sign in**, and enter **admin@local.t
 - Data is stored in a `.local-db` folder (delete it to start fresh). This only happens when `DATABASE_URL` is not set and you are not in production.
 - To use a real database, an admin email of your choice, or Razorpay test keys locally, copy `.env.example` to `.env.local` and fill it in.
 
+## Courses, lessons and progress
+
+The app is organised as three courses: **Reading**, **Speaking** and **Grammar** (Writing is paused and hidden from the menus; its pages still exist).
+Each course is a list of modules, and each module is a list of lessons. All of it is defined in one file, `src/data/curriculum.ts`.
+
+- **Course page** (`/learn/reading`, `/learn/speaking`, `/learn/grammar`): progress bar, Resume, what you will learn, and the syllabus with a tick beside each completed lesson.
+- **Lesson page**: every lesson page is wrapped in `<LessonFrame lessonId="...">`, which adds the breadcrumb, course progress bar, the course outline (wide screens), and *Complete and continue* / *Next lesson* / *Mark incomplete*.
+- **Progress** is stored per lesson in the `lesson_progress` table. A lesson is completed by the button, and also automatically when a story quiz, grammar quiz or tense-workout round is finished.
+- **Dashboard** shows overall progress, a course card for each course, and a Resume button that returns to the course you last worked on.
+
+To add a lesson: add it to a module in `curriculum.ts` (id like `reading/my-lesson`), build its page, and wrap the page content in `LessonFrame` with that id.
+
+## Light and dark theme
+
+The sidebar (or the top bar on phones) has System / Light / Dark. The choice is saved in a cookie (`bp_theme`) so the right theme is rendered on the server with no flash.
+All colours are tokens at the top of `src/app/globals.css`, defined once with `light-dark()`.
+
 ## Planned
 
 Audio recordings and the remaining modules.

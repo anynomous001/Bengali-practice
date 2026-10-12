@@ -6,13 +6,17 @@ import { logout } from "../actions";
 import Icon from "./Icon";
 import NavLinks from "./NavLinks";
 import { RomanProvider, RomanToggle } from "./Roman";
+import ThemeToggle from "./ThemeToggle";
 
 export default async function LearnLayout({ children }: { children: React.ReactNode }) {
   const user = await getUser();
   if (!user) redirect("/login");
   if (!user.hasAccess) redirect("/access-ended");
 
-  const roman = (await cookies()).get("bp_roman")?.value !== "0"; // on unless the student turned it off
+  const jar = await cookies();
+  const roman = jar.get("bp_roman")?.value !== "0"; // on unless the student turned it off
+  const t = jar.get("bp_theme")?.value;
+  const theme = t === "light" || t === "dark" ? t : "system";
   return (
     <RomanProvider initial={roman}>
       <div className="app">
@@ -24,6 +28,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
           <nav className="side-nav" aria-label="Main"><NavLinks variant="side" /></nav>
           <div className="side-foot">
             <RomanToggle />
+            <ThemeToggle initial={theme} />
             <div className="who" title={user.email}>{user.email}</div>
             <div className="side-actions">
               {user.isAdmin && <Link href="/admin" className="side-link"><Icon name="shield" size={16} />Admin</Link>}
@@ -39,6 +44,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
           </Link>
           <span className="spacer" />
           <RomanToggle label="Roman" />
+          <ThemeToggle initial={theme} compact />
           {user.isAdmin && <Link href="/admin" className="icon-link" aria-label="Admin"><Icon name="shield" size={18} /></Link>}
           <form action={logout}><button className="icon-link" aria-label="Sign out"><Icon name="logout" size={18} /></button></form>
         </header>

@@ -9,6 +9,7 @@ import { GRAMMAR } from "@/data/grammar";
 import { READING_LESSONS } from "@/data/reading-lessons";
 import { WORKOUT } from "@/data/tense-workout";
 import { STORIES } from "@/data/stories";
+import { isLessonId } from "@/data/curriculum";
 import {
   canSignIn,
   consumeLoginToken,
@@ -104,6 +105,21 @@ export async function recordWriting(item: string) {
   );
 }
 
+async function completeLesson(email: string, lessonId: string) {
+  await query(
+    "INSERT INTO lesson_progress (email, lesson_id) VALUES ($1, $2) ON CONFLICT (email, lesson_id) DO NOTHING",
+    [email, lessonId],
+  );
+}
+
+/** Mark a lesson complete, or undo it. Only known lesson ids are accepted. */
+export async function setLessonDone(lessonId: string, done: boolean) {
+  const user = await getUser();
+  if (!user?.hasAccess || !isLessonId(lessonId)) return;
+  if (done) await completeLesson(user.email, lessonId);
+  else await query("DELETE FROM lesson_progress WHERE email = $1 AND lesson_id = $2", [user.email, lessonId]);
+}
+
 export async function recordStoryQuiz(storyId: string, score: number) {
   const user = await getUser();
   const story = STORIES.find((s) => s.id === storyId);
@@ -117,6 +133,7 @@ export async function recordStoryQuiz(storyId: string, score: number) {
        attempts = story_progress.attempts + 1, updated_at = now()`,
     [user.email, storyId, s, total],
   );
+  await completeLesson(user.email, `reading/story-${storyId}`);
 }
 
 export async function recordGrammarQuiz(topicId: string, score: number) {
@@ -133,4 +150,6 @@ export async function recordGrammarQuiz(topicId: string, score: number) {
        attempts = grammar_progress.attempts + 1, updated_at = now()`,
     [user.email, topicId, s, total],
   );
+  const inReading = READING_LESSONS.some((t) => t.id === topicId);
+  await completeLesson(user.email, `${inReading ? "reading" : "grammar"}/${topicId}`);
 }

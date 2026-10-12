@@ -64,6 +64,12 @@ const SCHEMA = `
       updated_at timestamptz NOT NULL DEFAULT now(),
       PRIMARY KEY (email, topic_id)
     );
+    CREATE TABLE IF NOT EXISTS lesson_progress (
+      email text NOT NULL,
+      lesson_id text NOT NULL,
+      completed_at timestamptz NOT NULL DEFAULT now(),
+      PRIMARY KEY (email, lesson_id)
+    );
     CREATE TABLE IF NOT EXISTS orders (
       order_id text PRIMARY KEY,
       email text NOT NULL,

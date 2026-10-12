@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { requireAccess } from "@/lib/access";
 import { loadGrammarProgress } from "@/lib/progress";
 import { GRAMMAR } from "@/data/grammar";
 import LessonReader from "../../LessonReader";
+import LessonFrame from "../../LessonFrame";
 
 export default async function TopicPage({ params }: { params: Promise<{ id: string }> }) {
   await requireAccess();
@@ -12,9 +12,8 @@ export default async function TopicPage({ params }: { params: Promise<{ id: stri
   if (!topic) notFound();
   const best = (await loadGrammarProgress())[topic.id] ?? null;
   return (
-    <main data-seg="grammar">
-      <Link href="/learn/grammar" className="back">← Grammar</Link>
+    <LessonFrame lessonId={`grammar/${topic.id}`}>
       <LessonReader topic={topic} best={best} />
-    </main>
+    </LessonFrame>
   );
 }

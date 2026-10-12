@@ -12,6 +12,14 @@ const PATHS: Record<string, string> = {
   cards: "M3 7h13v13H3z M8 3h13v13",
   sound: "M11 5 6 9H2v6h4l5 4z M15.5 8.5a5 5 0 0 1 0 7 M19 5a10 10 0 0 1 0 14",
   clock: "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z M12 7v5l3 2",
+  sun: "M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z M12 2v2 M12 20v2 M4.9 4.9l1.4 1.4 M17.7 17.7l1.4 1.4 M2 12h2 M20 12h2 M4.9 19.1l1.4-1.4 M17.7 6.3l1.4-1.4",
+  moon: "M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z",
+  system: "M3 4h18v12H3z M8 20h8 M12 16v4",
+  done: "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z M8 12.5l3 3 5-6",
+  circle: "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z",
+  list: "M8 6h13 M8 12h13 M8 18h13 M3 6h.01 M3 12h.01 M3 18h.01",
+  chevron: "M6 9l6 6 6-6",
+  play: "M7 4l13 8-13 8z",
   lock: "M6 11h12v10H6z M8 11V7a4 4 0 0 1 8 0v4",
 };
 

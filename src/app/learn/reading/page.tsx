@@ -1,5 +1,5 @@
-import SegmentHub from "../SegmentHub";
+import CourseOverview from "../CourseOverview";
 
 export default function Page() {
-  return <SegmentHub segment="reading" />;
+  return <CourseOverview courseId="reading" />;
 }

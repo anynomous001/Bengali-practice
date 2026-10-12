@@ -2,8 +2,9 @@ import Link from "next/link";
 import { requireAccess } from "@/lib/access";
 import { query } from "@/lib/db";
 import { DECKS } from "@/data/decks";
-import { SEGMENTS, type Segment } from "@/data/segments";
+import type { Segment } from "@/data/segments";
 import Session from "./Session";
+import LessonFrame from "./LessonFrame";
 
 const NEW_PER_SESSION = 10;
 const MAX_PER_SESSION = 25;
@@ -31,17 +32,16 @@ export default async function FlashcardsView({ segment, deckId }: { segment: Seg
   if (chosen) {
     const queue = [...chosen.due, ...chosen.fresh.slice(0, NEW_PER_SESSION)].slice(0, MAX_PER_SESSION);
     return (
-      <main>
+      <LessonFrame lessonId={`${segment}/flashcards`}>
         <Link href={base} className="back">← Decks</Link>
         <h1>{chosen.deck.title}</h1>
         <Session cards={queue} hint={chosen.deck.hint} autoSpeak={chosen.deck.autoSpeak} backHref={base} />
-      </main>
+      </LessonFrame>
     );
   }
 
   return (
-    <main className="wide">
-      <Link href={`/learn/${segment}`} className="back">← {SEGMENTS[segment].title}</Link>
+    <LessonFrame lessonId={`${segment}/flashcards`}>
       <h1>Flashcards</h1>
       <p className="muted">Cards you miss come back sooner; cards you know come back after longer gaps (1, 3, 7, 14, then 30 days).</p>
       <div className="menu">
@@ -59,6 +59,6 @@ export default async function FlashcardsView({ segment, deckId }: { segment: Seg
           );
         })}
       </div>
-    </main>
+    </LessonFrame>
   );
 }
