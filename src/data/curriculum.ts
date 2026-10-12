@@ -4,6 +4,7 @@
 import { STORIES } from "./stories";
 import { GRAMMAR } from "./grammar";
 import { WORKOUT } from "./tense-workout";
+import { VOCAB, VOCAB_GROUPS, wordCount } from "./vocabulary";
 
 export type CourseId = "reading" | "speaking" | "grammar";
 export type Kind = "Lesson" | "Practice" | "Quiz" | "Review";
@@ -12,6 +13,8 @@ export type Module = { id: string; title: string; blurb: string; lessons: Lesson
 export type Course = {
   id: CourseId; title: string; bn: string; blurb: string; outcomes: string[];
   modules: Module[]; upcoming: { title: string; blurb: string }[];
+  /** Extra tools linked from the course page (not lessons). */
+  tools?: { label: string; href: string; blurb: string }[];
 };
 
 const topic = (id: string): Lesson => {
@@ -47,12 +50,14 @@ export const COURSES: Course[] = [
   },
   {
     id: "speaking", title: "Speaking", bn: "বলা",
-    blurb: "Hear Bengali, then say it out loud: sounds, numbers and everyday words.",
+    blurb: "Hear Bengali, build a large vocabulary topic by topic, and say it out loud.",
     outcomes: [
       "Tell similar Bengali sounds apart by ear",
+      `Learn about ${Math.round(VOCAB.reduce((n, t) => n + wordCount(t), 0) / 50) * 50} everyday words in ${VOCAB.length} topics, each with useful phrases`,
       "Understand numbers and prices when you hear them",
-      "Say common words aloud and check yourself",
+      "Say words aloud, slowly or at normal speed, and check yourself",
     ],
+    tools: [{ label: "Word finder", href: "/learn/speaking/vocabulary", blurb: "Search every word by Bengali, romanized or English." }],
     modules: [
       { id: "sounds", title: "Sounds", blurb: "Tap a letter to hear it, then test your ear.", lessons: [
         { id: "speaking/sounds", title: "Letter sounds", blurb: "Listen to every letter, then take the listening quiz.", href: "/learn/speaking/sounds", kind: "Lesson" },
@@ -60,6 +65,14 @@ export const COURSES: Course[] = [
       { id: "numbers", title: "Numbers and money", blurb: "Understand what you hear at the market.", lessons: [
         { id: "speaking/numbers", title: "Numbers and money listening", blurb: "Hear a number or price and pick the numeral.", href: "/learn/speaking/numbers", kind: "Practice" },
       ] },
+      ...VOCAB_GROUPS.map((g): Module => ({
+        id: `vocab-${g.id}`, title: `Vocabulary: ${g.title}`, blurb: g.blurb,
+        lessons: VOCAB.filter((t) => t.group === g.id).map((t): Lesson => ({
+          id: `speaking/vocab-${t.id}`, title: t.title[2],
+          blurb: `${wordCount(t)} words, ${t.phrases.length} phrases · ${t.title[0]}`,
+          href: `/learn/speaking/vocabulary/${t.id}`, kind: "Lesson",
+        })),
+      })),
       { id: "say", title: "Say it aloud", blurb: "See the meaning, say the word, then check.", lessons: [
         { id: "speaking/flashcards", title: "Say-it-aloud flashcards", blurb: "English first: say the Bengali word before you reveal it.", href: "/learn/speaking/flashcards", kind: "Review" },
       ] },

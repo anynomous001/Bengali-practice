@@ -1,5 +1,6 @@
 import { LETTERS } from "./letters";
 import { NUMBERS } from "./numbers";
+import { VOCAB } from "./vocabulary";
 
 const SIGN_CARDS: [sign: string, roman: string, name: string, vowel: string][] = [
   ["া", "kaa", "আ-কার", "আ"], ["ি", "ki", "ই-কার", "ই"], ["ী", "kii", "ঈ-কার", "ঈ"], ["ু", "ku", "উ-কার", "উ"], ["ূ", "kuu", "ঊ-কার", "ঊ"],
@@ -34,6 +35,8 @@ export type Deck = {
   hint?: string;
   /** Play the audio when the card is flipped. */
   autoSpeak?: boolean;
+  /** Not listed in the deck chooser; reached from its own lesson page. */
+  hidden?: boolean;
   cards: Card[];
 };
 
@@ -139,6 +142,17 @@ export const DECKS: Deck[] = [
       speak: l.word!,
     })),
   },
+  // One hidden deck per vocabulary topic: see the meaning, say the Bengali word, then check.
+  ...VOCAB.map((t): Deck => ({
+    id: `vocab-${t.id}`,
+    segment: "speaking",
+    hidden: true,
+    title: t.title[2],
+    blurb: t.blurb,
+    hint: "Say it aloud before you flip the card.",
+    autoSpeak: true,
+    cards: t.sections.flatMap((sec) => sec.words).map(([bn, roman, en]) => ({ id: `vc:${t.id}:${bn}`, front: en, back: bn, roman, speak: bn })),
+  })),
 ];
 
 export const ALL_CARD_IDS = new Set(DECKS.flatMap((d) => d.cards.map((c) => c.id)));

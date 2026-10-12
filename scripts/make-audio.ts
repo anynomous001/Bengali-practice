@@ -19,6 +19,7 @@ import { NUMBERS } from "../src/data/numbers";
 import { SENTENCES } from "../src/data/sentences";
 import { DECKS } from "../src/data/decks";
 import { STORIES } from "../src/data/stories";
+import { VOCAB } from "../src/data/vocabulary";
 
 const DIR = path.join(process.cwd(), "content-audio");
 const args = new Set(process.argv.slice(2));
@@ -44,6 +45,10 @@ function collect(): Map<string, string> {
     for (const l of s.lines) add(l[0], `story ${s.id}`);
     for (const v of s.vocab) add(v[0], `story ${s.id} vocab`);
     add(s.lines.map((l) => l[0]).join(" "), `story ${s.id} whole`);
+  }
+  for (const t of VOCAB) {
+    for (const sec of t.sections) for (const w of sec.words) add(w[0], `vocab ${t.id}`);
+    for (const p of t.phrases) add(p[0], `vocab ${t.id} phrase`);
   }
   return out;
 }

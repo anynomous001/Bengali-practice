@@ -45,7 +45,7 @@ export default async function FlashcardsView({ segment, deckId }: { segment: Seg
       <h1>Flashcards</h1>
       <p className="muted">Cards you miss come back sooner; cards you know come back after longer gaps (1, 3, 7, 14, then 30 days).</p>
       <div className="menu">
-        {stats.map(({ deck, fresh, due, learned }) => {
+        {stats.filter((x) => !x.deck.hidden).map(({ deck, fresh, due, learned }) => {
           const fresher = Math.min(fresh.length, NEW_PER_SESSION);
           return (
             <Link key={deck.id} href={`${base}?deck=${deck.id}`} className="card">

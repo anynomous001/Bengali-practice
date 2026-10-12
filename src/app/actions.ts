@@ -10,6 +10,7 @@ import { READING_LESSONS } from "@/data/reading-lessons";
 import { WORKOUT } from "@/data/tense-workout";
 import { STORIES } from "@/data/stories";
 import { isLessonId } from "@/data/curriculum";
+import { VOCAB, VOCAB_QUIZ_LEN } from "@/data/vocabulary";
 import {
   canSignIn,
   consumeLoginToken,
@@ -140,8 +141,9 @@ export async function recordGrammarQuiz(topicId: string, score: number) {
   const user = await getUser();
   const topic = [...GRAMMAR, ...READING_LESSONS].find((t) => t.id === topicId);
   const round = topicId.startsWith("w-") ? WORKOUT.find((r) => `w-${r.id}` === topicId) : undefined;
-  if (!user?.hasAccess || (!topic && !round) || !Number.isFinite(score)) return;
-  const total = topic ? topic.exercises.length : round!.items.length;
+  const vocab = topicId.startsWith("v-") ? VOCAB.find((t) => `v-${t.id}` === topicId) : undefined;
+  if (!user?.hasAccess || (!topic && !round && !vocab) || !Number.isFinite(score)) return;
+  const total = topic ? topic.exercises.length : round ? round.items.length : VOCAB_QUIZ_LEN;
   const s = Math.max(0, Math.min(total, Math.floor(score)));
   await query(
     `INSERT INTO grammar_progress (email, topic_id, best_score, total, attempts) VALUES ($1, $2, $3, $4, 1)
@@ -150,6 +152,11 @@ export async function recordGrammarQuiz(topicId: string, score: number) {
        attempts = grammar_progress.attempts + 1, updated_at = now()`,
     [user.email, topicId, s, total],
   );
+  if (vocab) {
+    // A vocabulary lesson counts as done once a practice round scores 70% or more.
+    if (s >= Math.ceil(total * 0.7)) await completeLesson(user.email, `speaking/vocab-${vocab.id}`);
+    return;
+  }
   const inReading = READING_LESSONS.some((t) => t.id === topicId);
   await completeLesson(user.email, `${inReading ? "reading" : "grammar"}/${topicId}`);
 }

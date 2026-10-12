@@ -26,6 +26,17 @@ export default async function CourseOverview({ courseId }: { courseId: string })
           <p className="eyebrow" lang="bn">{course.bn}</p>
           <h1>{course.title}</h1>
           <p className="lede">{course.blurb}</p>
+          {course.tools && course.tools.length > 0 && (
+            <div className="tools">
+              {course.tools.map((t) => (
+                <Link key={t.href} href={t.href} className="tool">
+                  <Icon name="list" size={18} />
+                  <span><b>{t.label}</b><small>{t.blurb}</small></span>
+                  <Icon name="arrow" size={16} />
+                </Link>
+              ))}
+            </div>
+          )}
           <h2 className="learn-h">What you will learn</h2>
           <ul className="outcomes">
             {course.outcomes.map((o) => (<li key={o}><Icon name="check" size={16} />{o}</li>))}

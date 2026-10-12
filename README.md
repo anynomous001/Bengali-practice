@@ -82,6 +82,19 @@ Each course is a list of modules, and each module is a list of lessons. All of i
 
 To add a lesson: add it to a module in `curriculum.ts` (id like `reading/my-lesson`), build its page, and wrap the page content in `LessonFrame` with that id.
 
+## Vocabulary by topic
+
+Speaking has a **Vocabulary** part: about 900 words and 90 phrases in 30 topics (family, body, food, fruits, vegetables and spices, sweets and snacks, house, clothes, animals, nature, seasons, days and months, colours, places, directions, transport, market, school, festivals, verbs, describing words, question words, greetings and more), grouped into eight modules. Each topic is a lesson with:
+
+- **Words** in clear sections, each with a listen button, romanization (follows the Romanized English switch) and the English meaning, plus *Cover the English* for self-testing,
+- **Phrases** with slow playback,
+- **Practice**: ten questions (Bengali to English, English to Bengali, listening). Scoring 7/10 completes the lesson, and the best score is saved,
+- **Flashcards** for the topic (a hidden deck, spaced repetition like the other decks).
+
+The **Word finder** (`/learn/speaking/vocabulary`) searches every word by Bengali, romanized or English.
+
+To change the words, edit `content-drafts/vocab/*.py` and run `python3 content-drafts/build_vocab.py`. It checks every entry and rewrites `src/data/vocabulary.ts` and the review copy `content-drafts/vocabulary.md`. After adding words, run `npm run audio` to make their pronunciation clips.
+
 ## Pronunciation audio
 
 Every Speak/Listen button plays a clip from `content-audio/` when there is one, and otherwise the browser's Bengali voice (the best West-Bengal `bn-IN` voice it has). A **Slow** button is next to the main one.
