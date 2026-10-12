@@ -5,9 +5,10 @@ import { STORIES } from "./stories";
 import { GRAMMAR } from "./grammar";
 import { WORKOUT } from "./tense-workout";
 import { VOCAB, VOCAB_GROUPS, wordCount } from "./vocabulary";
+import { getExam } from "./exams";
 
 export type CourseId = "reading" | "speaking" | "vocabulary" | "grammar";
-export type Kind = "Lesson" | "Practice" | "Quiz" | "Review";
+export type Kind = "Lesson" | "Practice" | "Quiz" | "Review" | "Exam";
 export type Lesson = { id: string; title: string; blurb: string; href: string; kind: Kind };
 export type Module = { id: string; title: string; blurb: string; lessons: Lesson[] };
 export type Course = {
@@ -17,6 +18,10 @@ export type Course = {
   tools?: { label: string; href: string; blurb: string }[];
 };
 
+const exam = (id: string): Lesson => {
+  const e = getExam(id)!;
+  return { id: e.lessonId, title: e.title, blurb: `${e.count} questions in ${e.minutes} minutes. Pass with ${e.pass}%.`, href: e.href, kind: "Exam" };
+};
 const topic = (id: string): Lesson => {
   const t = GRAMMAR.find((g) => g.id === id)!;
   return { id: `grammar/${id}`, title: t.title[2], blurb: t.blurb, href: `/learn/grammar/${id}`, kind: "Lesson" };
@@ -67,6 +72,7 @@ export const COURSES: Course[] = [
       { id: "say", title: "Say it aloud", blurb: "See the meaning, say the word, then check.", lessons: [
         { id: "speaking/flashcards", title: "Say-it-aloud flashcards", blurb: "English first: say the Bengali word before you reveal it.", href: "/learn/speaking/flashcards", kind: "Review" },
       ] },
+      { id: "exam", title: "Exam", blurb: "A timed listening test.", lessons: [exam("listening")] },
     ],
     upcoming: [
       { title: "Pronunciation drills", blurb: "Listen and repeat tricky sounds." },
@@ -97,25 +103,32 @@ export const COURSES: Course[] = [
       { id: "review", title: "Review", blurb: "Spaced repetition keeps the words in your memory.", lessons: [
         { id: "vocabulary/flashcards", title: "Vocabulary flashcards", blurb: "One deck per topic: see the meaning, say the word, then check.", href: "/learn/vocabulary/flashcards", kind: "Review" },
       ] },
+      { id: "exam", title: "Exam", blurb: "A timed test of words from every topic.", lessons: [exam("vocabulary")] },
     ],
     upcoming: [],
   },
   {
     id: "grammar", title: "Grammar", bn: "ব্যাকরণ",
-    blurb: "How Bengali works: persons, verbs, tenses, karak and bibhakti, with practice at every step.",
+    blurb: "How Bengali works: persons, verbs, tenses, karak and bibhakti, number, negatives and sentence building, with practice, translation and an exam.",
     outcomes: [
-      "Use the right pronoun for who is speaking and how polite to be",
-      "Build verb forms in the present, past and future for every person",
-      "Understand karak and bibhakti: the job each noun does and its endings",
-      "Make plurals, count things, say no and ask questions",
+      "Use the right pronoun and verb ending for who is speaking and how polite to be",
+      "Build every tense (present, past and future) and choose the right one",
+      "Read karak and bibhakti: the job of each noun and the endings and little words that show it",
+      "Say one and many, count things, say no, ask questions and build whole sentences",
+      "Translate both ways and test yourself in a timed exam",
     ],
     modules: [
-      { id: "foundations", title: "Foundations", blurb: "Who is speaking, and the verb at the heart of the sentence.", lessons: [topic("purush"), topic("kriya")] },
-      { id: "tenses", title: "Tenses", blurb: "Present, past and future with full tables for every person.", lessons: [topic("kal")] },
-      { id: "workout", title: "Tense workout", blurb: "Ten rounds of drills: cues, negatives, spot the mistake, translate, rewrite and combine.", lessons:
-        WORKOUT.map((r, i) => ({ id: `grammar/w-${r.id}`, title: `Round ${i + 1}: ${r.title}`, blurb: r.mode === "check" ? `${r.items.length} items, checked for you` : `${r.items.length} items, write then check`, href: `/learn/grammar/workout/${r.id}`, kind: "Practice" as Kind })) },
-      { id: "cases", title: "Karak and bibhakti", blurb: "The job each noun does for the verb, and the endings that show it.", lessons: [topic("karak"), topic("bibhakti")] },
-      { id: "sentences", title: "Building sentences", blurb: "Plurals, counting, saying no, and asking.", lessons: [topic("bachan"), topic("nishedh")] },
+      { id: "foundations", title: "Foundations", blurb: "Who is speaking and who is spoken to, and the verb at the heart of the sentence.", lessons: [topic("purush"), topic("kriya")] },
+      { id: "tenses", title: "Tenses", blurb: "The nine tenses in depth: the big picture, present, past and future, verb tables, and ten practice rounds.", lessons: [
+        topic("kal"), topic("tense-present"), topic("tense-past"), topic("tense-future"), topic("tense-tables"),
+        ...WORKOUT.map((r, i): Lesson => ({ id: `grammar/w-${r.id}`, title: `Practice round ${i + 1}: ${r.title}`, blurb: r.mode === "check" ? `${r.items.length} items, checked for you` : `${r.items.length} items, write then check`, href: `/learn/grammar/workout/${r.id}`, kind: "Practice" })),
+      ] },
+      { id: "cases", title: "Karak and bibhakti", blurb: "The job each noun does for the verb, and the endings and little words that show it.", lessons: [topic("karak"), topic("bibhakti")] },
+      { id: "sentences", title: "Building sentences", blurb: "Singular and plural, counting, saying no and asking, word order and joining ideas.", lessons: [topic("bachan"), topic("nishedh"), topic("vakya")] },
+      { id: "translate", title: "Translation", blurb: "Turn English into Bengali and Bengali into English, quickly and often.", lessons: [
+        { id: "grammar/translate", title: "Quick translation", blurb: "Ten sentences a round, in either direction. Pick the answer, or think it and check.", href: "/learn/grammar/translate", kind: "Practice" },
+      ] },
+      { id: "exam", title: "Exam", blurb: "A timed test across the whole course.", lessons: [exam("grammar")] },
     ],
     upcoming: [],
   },

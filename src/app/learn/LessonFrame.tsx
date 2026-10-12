@@ -5,10 +5,12 @@ import { loadLessonProgress } from "@/lib/progress";
 import CompleteButton from "./CompleteButton";
 import Icon from "./Icon";
 import LessonStatus from "./LessonStatus";
+import OnThisPage from "./OnThisPage";
 import ProgressBar from "./ProgressBar";
+import type { TocItem } from "@/lib/toc";
 
 /** Wraps a lesson page: breadcrumb, course progress, syllabus outline, and complete / previous / next. */
-export default async function LessonFrame({ lessonId, children }: { lessonId: string; children: React.ReactNode }) {
+export default async function LessonFrame({ lessonId, toc, children }: { lessonId: string; toc?: TocItem[]; children: React.ReactNode }) {
   const at = findLesson(lessonId);
   if (!at) notFound();
   const { course, module, lesson, prev, next } = at;
@@ -30,6 +32,7 @@ export default async function LessonFrame({ lessonId, children }: { lessonId: st
 
       <div className="lp-grid">
         <div className="lp-content">
+          {toc && <OnThisPage items={toc} variant="bar" />}
           {children}
           <footer className="lp-foot">
             <div className="lp-nav">
@@ -40,6 +43,7 @@ export default async function LessonFrame({ lessonId, children }: { lessonId: st
         </div>
 
         <aside className="lp-outline" aria-label="Course outline">
+          {toc && <OnThisPage items={toc} variant="side" />}
           <Link href={courseHref} className="lp-outline-title">{course.title} <span lang="bn">{course.bn}</span></Link>
           {course.modules.map((m, mi) => {
             const mDone = m.lessons.filter((l) => done.has(l.id)).length;

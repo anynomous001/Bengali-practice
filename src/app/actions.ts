@@ -2,6 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { after } from "next/server";
+import { randomUUID } from "node:crypto";
 import { ALL_CARD_IDS } from "@/data/decks";
 import { LETTERS } from "@/data/letters";
 import { SENTENCES } from "@/data/sentences";
@@ -11,6 +12,9 @@ import { WORKOUT } from "@/data/tense-workout";
 import { STORIES } from "@/data/stories";
 import { isLessonId } from "@/data/curriculum";
 import { VOCAB, VOCAB_QUIZ_LEN } from "@/data/vocabulary";
+import { getExam } from "@/data/exams";
+import { generateExam, toPublic, type ExamQ, type PublicExamQ } from "@/lib/examgen";
+import { makeRound, TRANSLATE_LEN, type Direction, type Source, type TQuestion } from "@/lib/translation";
 import {
   canSignIn,
   consumeLoginToken,
@@ -142,8 +146,9 @@ export async function recordGrammarQuiz(topicId: string, score: number) {
   const topic = [...GRAMMAR, ...READING_LESSONS].find((t) => t.id === topicId);
   const round = topicId.startsWith("w-") ? WORKOUT.find((r) => `w-${r.id}` === topicId) : undefined;
   const vocab = topicId.startsWith("v-") ? VOCAB.find((t) => `v-${t.id}` === topicId) : undefined;
-  if (!user?.hasAccess || (!topic && !round && !vocab) || !Number.isFinite(score)) return;
-  const total = topic ? topic.exercises.length : round ? round.items.length : VOCAB_QUIZ_LEN;
+  const translate = topicId === "translate";
+  if (!user?.hasAccess || (!topic && !round && !vocab && !translate) || !Number.isFinite(score)) return;
+  const total = topic ? topic.exercises.length : round ? round.items.length : translate ? TRANSLATE_LEN : VOCAB_QUIZ_LEN;
   const s = Math.max(0, Math.min(total, Math.floor(score)));
   await query(
     `INSERT INTO grammar_progress (email, topic_id, best_score, total, attempts) VALUES ($1, $2, $3, $4, 1)
@@ -152,6 +157,10 @@ export async function recordGrammarQuiz(topicId: string, score: number) {
        attempts = grammar_progress.attempts + 1, updated_at = now()`,
     [user.email, topicId, s, total],
   );
+  if (translate) {
+    if (s >= Math.ceil(total * 0.7)) await completeLesson(user.email, "grammar/translate");
+    return;
+  }
   if (vocab) {
     // A vocabulary lesson counts as done once a practice round scores 70% or more.
     if (s >= Math.ceil(total * 0.7)) await completeLesson(user.email, `vocabulary/${vocab.id}`);
@@ -159,4 +168,66 @@ export async function recordGrammarQuiz(topicId: string, score: number) {
   }
   const inReading = READING_LESSONS.some((t) => t.id === topicId);
   await completeLesson(user.email, `${inReading ? "reading" : "grammar"}/${topicId}`);
+}
+
+
+/** A fresh round of quick-translation questions. */
+export async function translationRound(direction: Direction, source: Source): Promise<TQuestion[]> {
+  const user = await getUser();
+  if (!user?.hasAccess) return [];
+  if (!["en2bn", "bn2en"].includes(direction) || !["all", "phrases", "grammar"].includes(source)) return [];
+  return makeRound(direction, source);
+}
+
+// ---------------- timed exams ----------------
+export type StartedExam = { attemptId: string; deadline: string; serverNow: string; minutes: number; resumed: boolean; questions: PublicExamQ[] };
+export type ExamReview = { topic: string; inst: string; q: string; sentence: { bn: string; ro: string } | null; audio?: string; options: ExamQ["options"]; chosen: number | null; answer: number; why?: string };
+export type ExamResult = { score: number; total: number; pct: number; passed: boolean; late: boolean; seconds: number; pass: number; review: ExamReview[] };
+
+/** Start an exam, or resume the one already in progress. Questions are made here and the answers stay on the server. */
+export async function startExam(examId: string): Promise<StartedExam | { error: string }> {
+  const user = await getUser();
+  const def = getExam(examId);
+  if (!user?.hasAccess || !def) return { error: "Not available." };
+  const open = await query<{ id: string; deadline: Date; questions: string }>(
+    "SELECT id, deadline, questions FROM exam_attempts WHERE email = $1 AND exam_id = $2 AND finished_at IS NULL AND deadline > now() ORDER BY started_at DESC LIMIT 1",
+    [user.email, def.id],
+  );
+  if (open[0]) {
+    return { attemptId: open[0].id, deadline: new Date(open[0].deadline).toISOString(), serverNow: new Date().toISOString(), minutes: def.minutes, resumed: true, questions: toPublic(JSON.parse(open[0].questions) as ExamQ[]) };
+  }
+  const questions = generateExam(def.id, def.count);
+  const id = randomUUID();
+  const deadline = new Date(Date.now() + def.minutes * 60_000);
+  await query("INSERT INTO exam_attempts (id, email, exam_id, deadline, questions) VALUES ($1, $2, $3, $4::timestamptz, $5)", [id, user.email, def.id, deadline.toISOString(), JSON.stringify(questions)]);
+  return { attemptId: id, deadline: deadline.toISOString(), serverNow: new Date().toISOString(), minutes: def.minutes, resumed: false, questions: toPublic(questions) };
+}
+
+/** Grade an attempt on the server. Answers sent long after the deadline are not counted. */
+export async function submitExam(attemptId: string, answers: (number | null)[]): Promise<ExamResult | { error: string }> {
+  const user = await getUser();
+  if (!user?.hasAccess || typeof attemptId !== "string" || !Array.isArray(answers)) return { error: "Not available." };
+  const rows = await query<{ exam_id: string; questions: string; deadline: Date; started_at: Date; finished_at: Date | null }>(
+    "SELECT exam_id, questions, deadline, started_at, finished_at FROM exam_attempts WHERE id = $1 AND email = $2",
+    [attemptId, user.email],
+  );
+  const row = rows[0];
+  const def = row && getExam(row.exam_id);
+  if (!row || !def) return { error: "Exam not found." };
+  if (row.finished_at) return { error: "This exam was already submitted." };
+  const qs = JSON.parse(row.questions) as ExamQ[];
+  const now = Date.now();
+  const late = now > new Date(row.deadline).getTime() + 5 * 60_000; // five minutes of grace for slow connections
+  const chosen = qs.map((q, i) => { const a = answers[i]; return typeof a === "number" && Number.isInteger(a) && a >= 0 && a < q.options.length ? a : null; });
+  const score = late ? 0 : chosen.reduce<number>((n, a, i) => n + (a === qs[i].answer ? 1 : 0), 0);
+  const total = qs.length;
+  const pct = Math.round((score / total) * 100);
+  const passed = !late && pct >= def.pass;
+  await query("UPDATE exam_attempts SET finished_at = now(), answers = $2, score = $3, total = $4 WHERE id = $1", [attemptId, JSON.stringify(chosen), score, total]);
+  if (passed) await completeLesson(user.email, def.lessonId);
+  return {
+    score, total, pct, passed, late, pass: def.pass,
+    seconds: Math.round((Math.min(now, new Date(row.deadline).getTime()) - new Date(row.started_at).getTime()) / 1000),
+    review: qs.map((q, i) => ({ topic: q.topic, inst: q.inst, q: q.q, sentence: q.sentence, audio: q.audio, options: q.options, chosen: chosen[i], answer: q.answer, why: q.why })),
+  };
 }

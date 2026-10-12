@@ -13,6 +13,8 @@ const config: NextConfig = {
     return [
       { source: "/learn/speaking/vocabulary", destination: "/learn/vocabulary", permanent: false },
       { source: "/learn/speaking/vocabulary/:id", destination: "/learn/vocabulary/:id", permanent: false },
+      // The tense workout is part of Tenses now.
+      { source: "/learn/grammar/workout", destination: "/learn/grammar", permanent: false },
     ];
   },
   async headers() {

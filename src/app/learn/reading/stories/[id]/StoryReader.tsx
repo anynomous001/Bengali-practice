@@ -6,6 +6,7 @@ import { speak } from "@/lib/speak";
 import Icon from "../../../Icon";
 import { recordStoryQuiz } from "../../../../actions";
 import { useRoman } from "../../../Roman";
+import Stepper from "../../../Stepper";
 
 type Step = "words" | "bengali" | "lines" | "english" | "quiz";
 const STEPS: { id: Step; label: string; blurb: string }[] = [
@@ -35,13 +36,7 @@ export default function StoryReader({ story, best }: { story: Story; best: { sco
       <h1 lang="bn" className="story-h1">{story.title[0]}</h1>
       <p className="muted">{roman ? `${story.title[1]} · ` : ""}{story.title[2]} · Level {story.level}</p>
 
-      <nav className="tabs steps" aria-label="Reading layers">
-        {STEPS.map((s, i) => (
-          <button key={s.id} className={step === s.id ? "active" : ""} onClick={() => setStep(s.id)} aria-current={step === s.id ? "step" : undefined}>
-            <small>{i + 1}</small> {s.label}
-          </button>
-        ))}
-      </nav>
+      <Stepper steps={STEPS} current={step} onSelect={setStep as (id: string) => void} label="Reading layers" />
       <p className="muted step-blurb">{STEPS[idx].blurb}</p>
 
       {step === "words" && (

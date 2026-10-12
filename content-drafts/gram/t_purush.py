@@ -1,0 +1,201 @@
+from lib import *
+
+S = SENT
+TOPICS = [finish(dict(id="purush", title=("পুরুষ", "Purush", "Person & pronouns"),
+ blurb="Who is speaking, who is spoken to, who is spoken about: the three persons, the three levels of 'you', and every pronoun form.",
+ sections=[
+  dict(id="persons", title="The three persons", blocks=[
+   P("পুরুষ (purush) means 'person' in the grammatical sense. Every sentence has a doer, and the doer is always one of three kinds: the person who is speaking, the person who is being spoken to, or somebody or something else who is being spoken about. Bengali verbs change their ending to match this person, so the very first thing to learn is which person you are talking about."),
+   TABLE(["Person", "Who it is", "Singular", "Plural"], [
+     [c("উত্তম পুরুষ","uttom purush"), "1st person: the speaker", c("আমি","ami"), c("আমরা","amra")],
+     [c("মধ্যম পুরুষ","moddhom purush"), "2nd person: the one spoken to", c("তুই / তুমি / আপনি","tui / tumi / apni"), c("তোরা / তোমরা / আপনারা","tora / tomra / apnara")],
+     [c("নাম পুরুষ","nam purush"), "3rd person: the one spoken about", c("সে / তিনি","she / tini"), c("তারা / তাঁরা","tara / tanra")],
+   ]),
+   NOTE("Some books call the third person প্রথম পুরুষ (first person, counting in the Sanskrit order). Ask your teacher which labels your class uses."),
+   H("The same sentence in all three persons"),
+   P("Look at one action, 'goes to school', with each person. Only the pronoun and the verb ending change: the rest of the sentence stays the same."),
+   EXS([S("ami",[SKULE],"jaoya","pres","I go to school."), S("tumi",[SKULE],"jaoya","pres","You go to school."), S("se",[SKULE],"jaoya","pres","He / she goes to school."),
+        S("ami",[BHAT],"khaoya","pres","I eat rice."), S("tumi",[BHAT],"khaoya","pres","You eat rice."), S("se",[BHAT],"khaoya","pres","He / she eats rice."),
+        S("ami",[BOI],"pora","pres","I read a book."), S("tumi",[BOI],"pora","pres","You read a book."), S("se",[BOI],"pora","pres","He / she reads a book.")], "One action, three persons"),
+   H("The verb does not change for number"),
+   P("English changes the verb for number sometimes ('he goes', 'they go'). Bengali does not. The pronoun already carries the number (আমি or আমরা, সে or তারা); the verb stays exactly the same as in the singular. So সে যায় (he goes) and তারা যায় (they go) use the same verb form, and so do আমি যাই and আমরা যাই."),
+   EXS([S("ami",[SKULE],"jaoya","pres","I go to school."), S("amra",[SKULE],"jaoya","pres","We go to school."),
+        S("tumi",[BAJARE],"jaoya","pres","You go to the market."), S("tomra",[BAJARE],"jaoya","pres","You (all) go to the market."),
+        S("apni",[OFISE],"jaoya","pres","You (respectful) go to the office."), S("apnara",[OFISE],"jaoya","pres","You all (respectful) go to the office."),
+        S("se",[PARKE],"jaoya","pres","He / she goes to the park."), S("tara",[PARKE],"jaoya","pres","They go to the park.")], "Singular and plural take the same verb"),
+   RULE("No gender in Bengali pronouns or verbs", "সে means both 'he' and 'she'; তিনি means both 'he' and 'she' (respectful). Nothing in the verb tells you whether the doer is male or female. In English you are forced to choose, so when you translate সে যায় you must pick 'he' or 'she' from the situation.",
+        [S("se",[SKULE],"jaoya","pres","He goes to school. / She goes to school."), S("tini",[OFISE],"jaoya","pres","He goes to the office. / She goes to the office.")]),
+   H("Verb forms in the present tense, side by side"),
+   TABLE(["Verb", "আমি", "তুই", "তুমি", "আপনি / তিনি", "সে"], [
+     [c(VERBS[k]["bn"] + " (" + VERBS[k]["en"] + ")", VERBS[k]["ro"])] + VERBS[k]["f"]["pres"] for k in ("kora","khaoya","jaoya","asha","pora","lekha")
+   ], "Six verbs, present tense, by person"),
+  ]),
+
+  dict(id="levels", title="Three levels of 'you'", blocks=[
+   P("English has one word, 'you'. Bengali has three: তুই, তুমি and আপনি. They are not different words for different numbers, they are different levels of respect, and each one needs its own verb ending. Choosing the right level is the most important social skill in Bengali, because the wrong choice can sound rude or can sound cold."),
+   TABLE(["Pronoun", "Level", "Used with", "Verb ending (present)"], [
+     [c("তুই","tui"), "Very familiar", "Very close friends, small children, younger siblings; also used in anger or contempt", c("-িস: তুই যাস","-is: tui jas")],
+     [c("তুমি","tumi"), "Familiar", "Friends, people of your own age, younger relatives, students (said by teachers), often parents too", c("-ো / -ও: তুমি যাও","-o / -o: tumi jao")],
+     [c("আপনি","apni"), "Respectful", "Elders, teachers, strangers, officials, customers, anyone you wish to honour", c("-েন: আপনি যান","-en: apni jan")],
+   ]),
+   H("The same question at each level"),
+   EXS([
+     ("তুই কোথায় যাচ্ছিস?","tui kothay jachchhis?","Where are you going? (very familiar)"),
+     ("তুমি কোথায় যাচ্ছ?","tumi kothay jachchho?","Where are you going? (familiar)"),
+     ("আপনি কোথায় যাচ্ছেন?","apni kothay jachchhen?","Where are you going? (respectful)"),
+     ("তোর নাম কী?","tor nam ki?","What is your name? (very familiar)"),
+     ("তোমার নাম কী?","tomar nam ki?","What is your name? (familiar)"),
+     ("আপনার নাম কী?","apnar nam ki?","What is your name? (respectful)"),
+     ("তুই ভাত খেয়েছিস?","tui bhat kheyechhis?","Have you eaten? (very familiar)"),
+     ("তুমি ভাত খেয়েছ?","tumi bhat kheyechho?","Have you eaten? (familiar)"),
+     ("আপনি ভাত খেয়েছেন?","apni bhat kheyechhen?","Have you eaten? (respectful)"),
+   ], "Where, what, have you eaten"),
+   H("Commands change too"),
+   EXS([
+     ("তুই এখানে আয়।","tui ekhane ay.","Come here. (very familiar)"), ("তুমি এখানে এসো।","tumi ekhane esho.","Come here. (familiar)"), ("আপনি এখানে আসুন।","apni ekhane ashun.","Please come here. (respectful)"),
+     ("তুই চুপ কর।","tui chup kor.","Be quiet. (very familiar)"), ("তুমি চুপ করো।","tumi chup koro.","Be quiet. (familiar)"), ("আপনি চুপ করুন।","apni chup korun.","Please be quiet. (respectful)"),
+   ], "Come here, be quiet"),
+   LIST([
+     "Use আপনি with anyone you do not know, anyone older than you, and anyone in a formal setting: a shop, an office, a hospital, a classroom with a new teacher.",
+     "Use তুমি with friends, classmates, people of your own age who have been friendly, and children you are not close to.",
+     "Use তুই only with people who are very close to you, and only when you are sure. In some families and friendships it is normal, in others it is rude.",
+     "Teachers often say তুমি to students and students say আপনি to teachers. Customs differ between families, so listen to how people address each other and follow them.",
+     "If you are not sure, use আপনি. It is never rude. The other person will usually tell you to use তুমি.",
+   ], title="Which one should I use?"),
+   MISTAKES([
+     (("আপনি কোথায় যাচ্ছ?","apni kothay jachchho?"), ("আপনি কোথায় যাচ্ছেন?","apni kothay jachchhen?"), "আপনি always takes the -েন ending. যাচ্ছ belongs to তুমি."),
+     (("তুমি কোথায় যাচ্ছেন?","tumi kothay jachchhen?"), ("তুমি কোথায় যাচ্ছ?","tumi kothay jachchho?"), "তুমি takes -ছ. The -ছেন ending is for আপনি and তিনি."),
+     (("তুই কোথায় যাচ্ছ?","tui kothay jachchho?"), ("তুই কোথায় যাচ্ছিস?","tui kothay jachchhis?"), "তুই takes -ছিস."),
+   ], title="Do not mix the levels"),
+  ]),
+
+  dict(id="third", title="He, she, it, they: the third person", blocks=[
+   P("The third person is everyone and everything that is not the speaker and not the listener. Like 'you', the third person has an ordinary form and a respectful form. The respectful form takes the same verb ending as আপনি."),
+   TABLE(["", "Ordinary", "Respectful", "Plural (ordinary)", "Plural (respectful)"], [
+     ["He / she / it, spoken about", c("সে","she"), c("তিনি","tini"), c("তারা","tara"), c("তাঁরা","tanra")],
+     ["This one, here (near)", c("এ","e"), c("ইনি","ini"), c("এরা","era"), c("এঁরা","enra")],
+     ["That one, there (far)", c("ও","o"), c("উনি","uni"), c("ওরা","ora"), c("ওঁরা","onra")],
+   ]),
+   H("Ordinary and respectful in sentences"),
+   EXS([
+     S("se",[SKULE],"jaoya","pres","He / she goes to school. (ordinary)"), S("tini",[SKULE],"jaoya","pres","He / she goes to school. (respectful)"),
+     S("e",[BHAT],"khaoya","pres","This one eats rice."), S("ini",[BHAT],"khaoya","pres","This person (respected) eats rice."),
+     S("o",[GAN],"shona","pres","That one listens to a song."), S("uni",[GAN],"shona","pres","That person (respected) listens to a song."),
+     S("tara",[BAJARE],"jaoya","pres","They go to the market."), S("tanra",[BAJARE],"jaoya","pres","They (respected) go to the market."),
+     S("era",[],"khela","pres","These ones play."), S("ora",[BOI],"pora","pres","Those ones read a book."),
+   ], "Pairs: ordinary and respectful"),
+   H("Names and nouns behave the same way"),
+   P("When the doer is a noun instead of a pronoun, the same rule applies. Respected people (parents, teachers, doctors, elders) take the respectful verb ending, as if you had said তিনি. Friends, children, animals and objects take the ordinary ending, as if you had said সে."),
+   EXS([
+     S(MA,[BHAT],"khaoya","pres","Mother eats rice."), S(BABA,[OFISE],"jaoya","pres","Father goes to the office."), S(SHIKKHOK,[BANGLA],"bola","pres","The teacher speaks Bengali."),
+     S(DAKTAR,[HASPATALE],"thaka","pres","The doctor stays at the hospital."), S(THAKUMA,[GOLPO],"bola","pres","Grandmother tells a story."),
+     S(BONDHU,[SKULE],"jaoya","pres","The friend goes to school."), S(KUKUR,[BARITE],"thaka","pres","The dog stays at home."), S(BIRAL,[DUDH],"khaoya","pres","The cat drinks milk."),
+     S(RAHUL,[],"khela","pres","Rahul plays."), S(ANITA,[BOI],"pora","pres","Anita reads a book."),
+   ], "Respected people and others"),
+   NOTE("It is a matter of respect, not of age alone. Calling a younger doctor or a teacher by the respectful form is correct. In a close family, some people use the ordinary form for an older brother or sister. Follow what your own family does."),
+   MISTAKES([
+     (("সে বাড়িতে যান।","she barite jan."), ("সে বাড়িতে যায়।","she barite jay."), "সে is the ordinary pronoun, so the verb is যায়. Use তিনি যান for the respectful form."),
+     (("তিনি বাড়িতে যায়।","tini barite jay."), ("তিনি বাড়িতে যান।","tini barite jan."), "তিনি is respectful, so the verb ends in -েন."),
+     (("মা ভাত খায়।","ma bhat khay."), ("মা ভাত খান।","ma bhat khan."), "A mother takes the respectful verb. খায় sounds as if you called her সে."),
+   ], title="Match the verb to the level"),
+  ]),
+
+  dict(id="forms", title="Pronoun forms: subject, object, possessive", blocks=[
+   P("A pronoun changes its shape depending on the job it does in the sentence. As the doer (subject) it is আমি, তুমি, সে. As the receiver of the action (object) it takes -কে: আমাকে, তোমাকে, তাকে. To show ownership (possessive) it takes -র: আমার, তোমার, তার. In the plural, one form ending in -দের does both the object and the possessive job."),
+   TABLE(["Pronoun", "Subject", "Object (-কে)", "Possessive (-র)"], [
+     ["I", c("আমি","ami"), c("আমাকে","amake"), c("আমার","amar")],
+     ["you (very familiar)", c("তুই","tui"), c("তোকে","toke"), c("তোর","tor")],
+     ["you (familiar)", c("তুমি","tumi"), c("তোমাকে","tomake"), c("তোমার","tomar")],
+     ["you (respectful)", c("আপনি","apni"), c("আপনাকে","apnake"), c("আপনার","apnar")],
+     ["he / she", c("সে","she"), c("তাকে","take"), c("তার","tar")],
+     ["he / she (respectful)", c("তিনি","tini"), c("তাঁকে","tanke"), c("তাঁর","tanr")],
+     ["this one", c("এ","e"), c("একে","eke"), c("এর","er")],
+     ["that one", c("ও","o"), c("ওকে","oke"), c("ওর","or")],
+     ["we", c("আমরা","amra"), c("আমাদের","amader"), c("আমাদের","amader")],
+     ["you all (familiar)", c("তোমরা","tomra"), c("তোমাদের","tomader"), c("তোমাদের","tomader")],
+     ["you all (respectful)", c("আপনারা","apnara"), c("আপনাদের","apnader"), c("আপনাদের","apnader")],
+     ["they", c("তারা","tara"), c("তাদের","tader"), c("তাদের","tader")],
+     ["they (respectful)", c("তাঁরা","tanra"), c("তাঁদের","tander"), c("তাঁদের","tander")],
+   ]),
+   H("Object: who receives the action"),
+   EXS([
+     ("সে আমাকে দেখল।","she amake dekhlo.","He / she saw me."), ("আমি তোমাকে ডাকলাম।","ami tomake daklam.","I called you."), ("মা আমাকে ভাত দিলেন।","ma amake bhat dilen.","Mother gave me rice."),
+     ("আমি তাকে চিনি।","ami take chini.","I know him / her."), ("শিক্ষক আমাদের গল্প বললেন।","shikkhok amader golpo bollen.","The teacher told us a story."), ("তারা আমাকে চিঠি লিখল।","tara amake chithi likhlo.","They wrote me a letter."),
+     ("আমি আপনাকে সাহায্য করব।","ami apnake shahajyo korbo.","I will help you."), ("বাবা তোমাকে ডাকছেন।","baba tomake dakchhen.","Father is calling you."),
+   ], "Object forms in use"),
+   H("Possessive: whose is it?"),
+   EXS([
+     ("এটা আমার বই।","eta amar boi.","This is my book."), ("এটা তোমার ঘর।","eta tomar ghor.","This is your room."), ("ওটা আপনার গাড়ি।","ota apnar gari.","That is your car."),
+     ("এটা তার চিঠি।","eta tar chithi.","This is his / her letter."), ("এটা আমাদের বাড়ি।","eta amader bari.","This is our house."), ("ওটা ওদের স্কুল।","ota oder skul.","That is their school."),
+     ("তোমার নাম কী?","tomar nam ki?","What is your name?"), ("আপনার মা কেমন আছেন?","apnar ma kemon achhen?","How is your mother?"),
+   ], "Possessive forms in use"),
+   MISTAKES([
+     (("আমি বই আমার পড়ি।","ami boi amar pori."), ("আমি আমার বই পড়ি।","ami amar boi pori."), "The possessive comes before the thing owned: আমার বই, 'my book'."),
+     (("সে আমি দেখল।","she ami dekhlo."), ("সে আমাকে দেখল।","she amake dekhlo."), "The receiver of the action needs the object form আমাকে, not the subject form আমি."),
+     (("এটা তাকে বই।","eta take boi."), ("এটা তার বই।","eta tar boi."), "For 'his / her' use the possessive তার, not the object form তাকে."),
+   ], title="Subject, object and possessive"),
+  ]),
+
+  dict(id="pointing", title="This, that, which and who", blocks=[
+   P("Pointing words go in front of a noun. Bengali has two for 'that': one for something you can see or point at (ওই), and one for something already mentioned (সেই). The question word 'which' is কোন, and the relative word 'who / which' is যে."),
+   TABLE(["Word", "Meaning", "Example"], [
+     [c("এই","ei"), "this (near me)", c("এই বইটা","ei boita")],
+     [c("ওই","oi"), "that (over there, visible)", c("ওই বাড়িটা","oi barita")],
+     [c("সেই","shei"), "that (already mentioned, known)", c("সেই লোকটা","shei lokta")],
+     [c("কোন","kon"), "which", c("কোন বইটা?","kon boita?")],
+     [c("যে","je"), "who / which / that (joins two parts)", c("যে আসবে সে খাবে","je ashbe she khabe")],
+   ]),
+   EXS([
+     ("এই বইটা আমার।","ei boita amar.","This book is mine."), ("ওই বাড়িটা অনেক বড়।","oi barita onek boro.","That house is very big."), ("সেই লোকটা কোথায় গেল?","shei lokta kothay gelo?","Where did that man go?"),
+     ("কোন বইটা তোমার?","kon boita tomar?","Which book is yours?"), ("এই ফুলটা সুন্দর।","ei phulta shundor.","This flower is beautiful."), ("ওই পাখিটা কী?","oi pakhita ki?","What is that bird?"),
+     ("যে আসবে সে খাবে।","je ashbe she khabe.","Whoever comes will eat."), ("যে পড়ে সে শেখে।","je pore she shekhe.","The one who studies learns."),
+   ], "Pointing words in use"),
+   NOTE("The little endings -টা and -টি after the noun (বইটা, বাড়িটা) mean 'the'. They are explained in the lesson on number and counting."),
+  ]),
+
+  dict(id="reflexive", title="Myself, yourself: নিজে and নিজের", blocks=[
+   P("নিজে means 'by oneself, in person'. It stresses that the doer did it alone. নিজের means 'one's own'. Both can be added to any person."),
+   EXS([
+     ("আমি নিজে করব।","ami nije korbo.","I will do it myself."), ("তুমি নিজে দেখো।","tumi nije dekho.","See for yourself."), ("সে নিজে এসেছে।","she nije eshechhe.","He / she came in person."),
+     ("আমি নিজের কাজ নিজে করি।","ami nijer kaj nije kori.","I do my own work myself."), ("এটা আমার নিজের বই।","eta amar nijer boi.","This is my own book."), ("তিনি নিজে রান্না করেন।","tini nije ranna koren.","He / she cooks by himself / herself."),
+     ("আমরা নিজেরাই যাব।","amra nijerai jabo.","We will go ourselves."), ("তুমি নিজের ঘর পরিষ্কার করো।","tumi nijer ghor poriskar koro.","Clean your own room."),
+   ], "Doing it yourself"),
+  ]),
+
+  dict(id="drop", title="Leaving the pronoun out", blocks=[
+   P("Because the verb ending already shows the person, Bengali very often leaves the pronoun out when it is clear who is meant. You will hear this constantly in speech. Keep the pronoun when you want to stress who is doing it, or when it would otherwise be unclear."),
+   EXS([
+     ("কোথায় যাচ্ছ?","kothay jachchho?","(Where are you going?)  The verb -ছ shows 'you' (তুমি)."),
+     ("ভাত খাচ্ছি।","bhat khachchhi.","(I am eating rice.)  The verb -ছি shows 'I'."),
+     ("বাজারে যাব।","bajare jabo.","(I will go to the market.)  The ending -ব shows 'I'."),
+     ("কী করছেন?","ki korchhen?","(What are you doing?)  The ending -ছেন shows আপনি."),
+     ("কাল আসব।","kal ashbo.","(I will come tomorrow.)"), ("চা খাবে?","cha khabe?","(Will you have tea?)  The ending -বে with a question shows তুমি."),
+   ], "No pronoun needed"),
+   NOTE("The ending -বে is the same for তুমি and সে (খাবে). When no pronoun is given, context tells you which one is meant."),
+  ]),
+ ],
+ exercises=[
+  PICK("Which person is 'the one spoken to'?", ["1st person (উত্তম পুরুষ)", "2nd person (মধ্যম পুরুষ)", "3rd person (নাম পুরুষ)"], 1, "The person spoken to is the 2nd person: you.", inst="Choose the grammatical person that matches the description."),
+  PICK("Which pronoun is the respectful 'you'?", O(("তুই","tui"),("তুমি","tumi"),("আপনি","apni")), 2, "আপনি is the respectful 'you'.", inst="Choose the pronoun that matches the description."),
+  PICK("Which pronoun is the very familiar 'you'?", O(("তুই","tui"),("তুমি","tumi"),("আপনি","apni")), 0, "তুই is used with very close people.", inst="Choose the pronoun that matches the description."),
+  FILL("তুমি কোথায় ___?","tumi kothay ___?", O(("যাচ্ছ","jachchho"),("যাচ্ছেন","jachchhen"),("যাচ্ছিস","jachchhis")), 0, "তুমি takes -ছ: যাচ্ছ.", inst="Choose the verb that goes with the pronoun."),
+  FILL("আপনি কোথায় ___?","apni kothay ___?", O(("যাচ্ছেন","jachchhen"),("যাচ্ছ","jachchho"),("যাচ্ছিস","jachchhis")), 0, "আপনি takes -েন: যাচ্ছেন.", inst="Choose the verb that goes with the pronoun."),
+  FILL("তুই কোথায় ___?","tui kothay ___?", O(("যাচ্ছিস","jachchhis"),("যাচ্ছ","jachchho"),("যাচ্ছেন","jachchhen")), 0, "তুই takes -িস: যাচ্ছিস.", inst="Choose the verb that goes with the pronoun."),
+  FILL("তিনি স্কুলে ___।","tini skule ___.", O(("যান","jan"),("যায়","jay"),("যাই","jai")), 0, "তিনি is respectful, so the verb ends in -েন: যান.", inst="Choose the verb that goes with the pronoun."),
+  FILL("সে স্কুলে ___।","she skule ___.", O(("যায়","jay"),("যান","jan"),("যাও","jao")), 0, "সে is ordinary, so the verb is যায়.", inst="Choose the verb that goes with the pronoun."),
+  FILL("মা ভাত ___।","ma bhat ___.", O(("খান","khan"),("খায়","khay"),("খাই","khai")), 0, "A mother takes the respectful verb: খান.", inst="Choose the verb that goes with the doer."),
+  FILL("বন্ধু স্কুলে ___।","bondhu skule ___.", O(("যায়","jay"),("যান","jan"),("যাই","jai")), 0, "A friend takes the ordinary verb: যায়.", inst="Choose the verb that goes with the doer."),
+  FILL("এটা ___ বই।","eta ___ boi.", O(("আমার","amar"),("আমাকে","amake"),("আমি","ami")), 0, "'My book' needs the possessive: আমার.", inst="Choose the pronoun form that fits the blank."),
+  FILL("সে ___ দেখল।","she ___ dekhlo.", O(("আমাকে","amake"),("আমার","amar"),("আমি","ami")), 0, "'Saw me' needs the object form: আমাকে.", inst="Choose the pronoun form that fits the blank."),
+  FILL("আমি ___ ডাকলাম।","ami ___ daklam.", O(("তোমাকে","tomake"),("তোমার","tomar"),("তুমি","tumi")), 0, "'I called you' needs the object form: তোমাকে.", inst="Choose the pronoun form that fits the blank."),
+  FILL("এটা ___ বাড়ি।","eta ___ bari.", O(("আমাদের","amader"),("আমরা","amra"),("আমাকে","amake")), 0, "'Our house' needs আমাদের (the plural possessive).", inst="Choose the pronoun form that fits the blank."),
+  PICK("Which means 'they (ordinary)'?", O(("তারা","tara"),("তাঁরা","tanra"),("আমরা","amra")), 0, "তারা is the ordinary plural; তাঁরা is respectful.", inst="Choose the pronoun that matches the English."),
+  PICK("What is the plural of তুমি?", O(("তোমরা","tomra"),("আমরা","amra"),("তারা","tara")), 0, "তুমি becomes তোমরা.", inst="Choose the plural form."),
+  PICK("The pronoun সে can mean:", ["only 'he'", "only 'she'", "'he' or 'she'"], 2, "Bengali pronouns do not show gender.", inst="Choose the true statement."),
+  PICK("Does the Bengali verb change between 'he goes' and 'they go'?", ["Yes, it adds -রা", "No, it stays the same: যায়", "Yes, it becomes যান"], 1, "Verbs do not change for number: সে যায়, তারা যায়.", inst="Choose the true statement."),
+  PICK("Which word do you use for 'that', already mentioned?", O(("সেই","shei"),("ওই","oi"),("এই","ei")), 0, "সেই points back to something already mentioned.", inst="Choose the pointing word that fits."),
+  PICK("Which means 'which book'?", O(("কোন বই","kon boi"),("এই বই","ei boi"),("যে বই","je boi")), 0, "কোন is the question word 'which'.", inst="Choose the Bengali that matches the English."),
+  MEAN("I will do it myself.", O(("আমি নিজে করব।","ami nije korbo."),("আমি নিজের করব।","ami nijer korbo."),("আমি নিজে করি।","ami nije kori.")), 0, "নিজে = by oneself; করব = I will do.", inst="Choose the Bengali sentence that means the same as the English sentence."),
+  SPOT(O(("আপনি কোথায় যাচ্ছেন?","apni kothay jachchhen?"),("আপনি কোথায় যাচ্ছ?","apni kothay jachchho?"),("আপনি কোথায় যাচ্ছিস?","apni kothay jachchhis?")), 0, "আপনি goes with -েন.", inst="Only one sentence uses the right verb ending for the pronoun. Choose it."),
+  SPOT(O(("সে আমাকে দেখল।","she amake dekhlo."),("সে আমি দেখল।","she ami dekhlo."),("সে আমার দেখল।","she amar dekhlo.")), 0, "The receiver of the action takes the object form আমাকে.", inst="Only one sentence uses the right pronoun form. Choose it."),
+ ]))]

@@ -26,14 +26,14 @@ export default function WorkoutReader({ round, best }: { round: WorkRound; best:
   return (
     <>
       <h1>{round.title}</h1>
-      <p className="muted">{round.intro}</p>
-      {best && i === 0 && <p className="muted">Your best: {best.score} / {best.total}</p>}
+      <p className="lede">{round.intro}</p>
+      <p className="muted"><span className="q-kind">{round.mode === "check" ? "Checked for you" : "Write, then check"}</span> {total} items{best && i === 0 ? ` · your best: ${best.score} / ${best.total}` : ""}</p>
       {i >= total ? (
         <div className="card-static">
           <h2>You scored {score} / {total}</h2>
-          <p>{score === total ? "Perfect! 🎉" : score >= total * 0.8 ? "Very good!" : "Look at the tense tables again, then try once more."}</p>
+          <p>{score === total ? "Perfect score." : score >= total * 0.8 ? "Very good." : "Look at the tense lessons and tables again, then try once more."}</p>
           <button className="btn" onClick={() => { setRun((r) => r + 1); setI(0); setScore(0); }}>Try again</button>
-          <Link className="btn ghost" href="/learn/grammar/workout">All rounds</Link>
+          <Link className="btn ghost" href="/learn/grammar">Back to the course</Link>
         </div>
       ) : (
         <Item key={`${run}-${i}`} item={round.items[i]} n={i + 1} total={total} score={score} onDone={done} />
@@ -55,9 +55,14 @@ function Item({ item, n, total, score, onDone }: { item: WorkItem; n: number; to
   const [draft, setDraft] = useState("");
 
   return (
-    <>
-      <p className="muted">Item {n} of {total} · Score {score}</p>
-      <h2 className="quiz-q">{item.q}</h2>
+    <div className="q-card">
+      <div className="q-top">
+        <span className="q-kind">{item.kind === "choose" ? "Choose the answer" : "Write the answer"}</span>
+        <span className="q-count">{n} of {total} · score {score}</span>
+      </div>
+      <div className="bar" aria-hidden><div style={{ width: `${((n - 1) / total) * 100}%` }} /></div>
+      <p className="q-inst"><b>What to do:</b> {item.kind === "choose" ? "Read the instruction below and choose the correct Bengali sentence. You will see straight away whether you were right." : "Write the Bengali sentence the instruction asks for, in the box or on paper. Then press Show model answer, compare, and say honestly whether you got it."}</p>
+      <h3 className="quiz-q">{item.q}</h3>
       {item.sentence && (
         <p className="g-sentence">
           <span lang="bn" className="g-ex-bn">{item.sentence.bn}</span>
@@ -108,6 +113,6 @@ function Item({ item, n, total, score, onDone }: { item: WorkItem; n: number; to
           )}
         </>
       )}
-    </>
+    </div>
   );
 }

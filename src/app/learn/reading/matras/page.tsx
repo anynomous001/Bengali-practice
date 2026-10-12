@@ -3,6 +3,7 @@ import { requireAccess } from "@/lib/access";
 import { loadGrammarProgress } from "@/lib/progress";
 import { READING_LESSONS } from "@/data/reading-lessons";
 import LessonReader from "../../LessonReader";
+import { topicToc } from "@/lib/toc";
 import LessonFrame from "../../LessonFrame";
 
 export default async function MatrasPage() {
@@ -11,7 +12,7 @@ export default async function MatrasPage() {
   if (!topic) notFound();
   const best = (await loadGrammarProgress())[topic.id] ?? null;
   return (
-    <LessonFrame lessonId="reading/matras">
+    <LessonFrame lessonId="reading/matras" toc={topicToc(topic)}>
       <LessonReader topic={topic} best={best} />
     </LessonFrame>
   );

@@ -5,6 +5,7 @@ import type { Letter } from "@/data/letters";
 import { recordAnswer } from "../../../actions";
 import { speak } from "@/lib/speak";
 import Icon from "../../Icon";
+import UnderlineTabs from "../../UnderlineTabs";
 import { useRoman } from "../../Roman";
 
 type Progress = Record<string, { right: number; wrong: number }>;
@@ -55,13 +56,7 @@ export default function Alphabet({
 
   return (
     <D.Provider value={{ LETTERS: letters, GROUPS: groups, QUIZ_LETTERS: letters.filter((l) => l.word) }}>
-      <nav className="tabs">
-        {tabs.map((t) => (
-          <button key={t} className={tab === t ? "active" : ""} onClick={() => setTab(t)}>
-            {labels[t]}
-          </button>
-        ))}
-      </nav>
+      <UnderlineTabs tabs={tabs.map((t) => ({ id: t, label: labels[t] }))} value={tab} onChange={setTab} label="Alphabet modes" />
       {tab === "learn" && <Learn progress={progress} />}
       {tab === "quiz" && <Quiz progress={progress} onAnswer={answered} modes={modes} />}
       {tab === "progress" && <ProgressView progress={progress} />}

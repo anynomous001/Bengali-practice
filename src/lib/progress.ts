@@ -52,3 +52,17 @@ export async function loadLessonProgress(): Promise<{ done: Set<string>; recent:
     : [];
   return { done: new Set(rows.map((r) => r.lesson_id)), recent: rows[0]?.lesson_id ?? null };
 }
+
+export type ExamAttempt = { finishedAt: Date; score: number; total: number };
+/** The student's finished attempts at an exam, newest first, and their best percentage. */
+export async function loadExamHistory(examId: string): Promise<{ attempts: ExamAttempt[]; best: number | null }> {
+  const user = await getUser();
+  if (!user) return { attempts: [], best: null };
+  const rows = await query<{ finished_at: Date; score: number; total: number }>(
+    "SELECT finished_at, score, total FROM exam_attempts WHERE email = $1 AND exam_id = $2 AND finished_at IS NOT NULL ORDER BY finished_at DESC LIMIT 20",
+    [user.email, examId],
+  );
+  const attempts = rows.map((r) => ({ finishedAt: new Date(r.finished_at), score: r.score, total: r.total }));
+  const best = attempts.length ? Math.max(...attempts.map((a) => Math.round((a.score / a.total) * 100))) : null;
+  return { attempts: attempts.slice(0, 5), best };
+}

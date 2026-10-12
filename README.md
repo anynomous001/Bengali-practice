@@ -117,3 +117,10 @@ All colours are tokens at the top of `src/app/globals.css`, defined once with `l
 ## Planned
 
 Audio recordings and the remaining modules.
+
+## Grammar, translation and exams
+
+- **Grammar** is one scrolling lesson per topic (12 topics) with an "On this page" list, many examples, and a practice set at the end. The 10 tense workout rounds sit inside the Tenses module.
+- Content is generated: `python3 content-drafts/build_grammar.py` (topic files in `content-drafts/gram/`) writes `src/data/grammar.ts`; `build_workout.py` writes the workout rounds. All Bengali was authored by the assistant and **needs the teacher's review**.
+- **Quick translation** (`/learn/grammar/translate`): 10 sentences per round, English to Bengali or back, pick-the-answer or think-then-check. A score of 7+ completes the lesson.
+- **Exams** (`src/data/exams.ts`): timed grammar (25 min), vocabulary (12 min) and listening (10 min) exams, pass mark 60%. Questions are generated per attempt on the server and stored in `exam_attempts`; answers are never sent to the browser and grading happens in `submitExam`. A reload resumes the running attempt; the timer follows the server deadline.

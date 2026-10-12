@@ -9,6 +9,7 @@ const PATHS: Record<string, string> = {
   back: "M19 12H5 M11 5l-7 7 7 7",
   logout: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4 M16 17l5-5-5-5 M21 12H9",
   shield: "M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z M9 12l2 2 4-4",
+  close: "M6 6l12 12 M18 6L6 18",
   check: "M4 12l5 5L20 6",
   cards: "M3 7h13v13H3z M8 3h13v13",
   sound: "M11 5 6 9H2v6h4l5 4z M15.5 8.5a5 5 0 0 1 0 7 M19 5a10 10 0 0 1 0 14",

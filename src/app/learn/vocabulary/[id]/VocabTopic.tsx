@@ -8,7 +8,6 @@ import Icon from "../../Icon";
 import { useRoman } from "../../Roman";
 import WordRow from "../../WordRow";
 
-type Tab = "words" | "phrases" | "practice";
 type Kind = "bn2en" | "en2bn" | "listen";
 type Q = { kind: Kind; word: Word; options: Word[]; correct: number };
 type Best = { score: number; total: number; attempts: number } | null;
@@ -29,7 +28,6 @@ function makeQuiz(words: Word[], n: number): Q[] {
 }
 
 export default function VocabTopic({ topic, best, quizLen, flashHref }: { topic: Topic; best: Best; quizLen: number; flashHref: string }) {
-  const [tab, setTab] = useState<Tab>("words");
   const [cover, setCover] = useState(false);
   const { roman } = useRoman();
   const all = topic.sections.flatMap((s) => s.words);
@@ -64,20 +62,15 @@ export default function VocabTopic({ topic, best, quizLen, flashHref }: { topic:
         <p className="topic-meta">{all.length} words · {topic.phrases.length} phrases{best ? ` · best practice score ${best.score}/${best.total}` : ""}</p>
       </header>
 
-      <div className="tabs" role="tablist">
-        {([["words", "Words"], ["phrases", "Phrases"], ["practice", "Practice"]] as [Tab, string][]).map(([t, label]) => (
-          <button key={t} role="tab" aria-selected={tab === t} className={tab === t ? "active" : ""} onClick={() => setTab(t)}>{label}</button>
-        ))}
-      </div>
-
-      {tab === "words" && (
+      <section id="sec-words" className="g-sec vwords">
+        <h2>Words</h2>
         <div className="vsections">
           <div className="vtools">
             <label className="check"><input type="checkbox" checked={cover} onChange={(e) => setCover(e.target.checked)} /> Cover the English (test yourself)</label>
             <a className="btn ghost small" href={flashHref}>Practise as flashcards</a>
           </div>
-          {topic.sections.map((s) => (
-            <section key={s.title} className="vsection">
+          {topic.sections.map((s, si) => (
+            <section key={s.title} id={`sec-w${si}`} className="vsection">
               <h2>{s.title} <span>{s.words.length}</span></h2>
               <ul className="wlist">
                 {s.words.map((w) => <li key={w[0]}><WordRow bn={w[0]} roman={w[1]} en={w[2]} hideMeaning={cover} /></li>)}
@@ -85,9 +78,10 @@ export default function VocabTopic({ topic, best, quizLen, flashHref }: { topic:
             </section>
           ))}
         </div>
-      )}
+      </section>
 
-      {tab === "phrases" && (
+      <section id="sec-phrases" className="g-sec">
+        <h2>Phrases that use these words</h2>
         <ul className="plist">
           {topic.phrases.map((p) => (
             <li key={p[0]}>
@@ -103,9 +97,10 @@ export default function VocabTopic({ topic, best, quizLen, flashHref }: { topic:
             </li>
           ))}
         </ul>
-      )}
+      </section>
 
-      {tab === "practice" && (
+      <section id="sec-practice" className="g-sec">
+        <h2>Practice</h2>
         <div className="vpractice">
           {!qs && (
             <div className="vstart">
@@ -148,11 +143,11 @@ export default function VocabTopic({ topic, best, quizLen, flashHref }: { topic:
               <h2>{score} / {qs.length}</h2>
               <p>{score >= Math.ceil(qs.length * 0.7) ? "Lesson complete. Well done." : "Not there yet: go through the words again and have another go."}</p>
               <button className="btn" onClick={start}>Practise again</button>
-              <button className="btn ghost" onClick={() => setTab("words")}>Review the words</button>
+              <a className="btn ghost" href="#sec-words">Review the words</a>
             </div>
           )}
         </div>
-      )}
+      </section>
     </div>
   );
 }

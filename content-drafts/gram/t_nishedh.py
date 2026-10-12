@@ -1,0 +1,141 @@
+from lib import *
+
+S = SENT
+QW = {"ke": ("কে","ke"), "ki": ("কী","ki"), "kothay": ("কোথায়","kothay"), "kokhon": ("কখন","kokhon"), "keno": ("কেন","keno"), "kibhabe": ("কীভাবে","kibhabe"), "koto": ("কত","koto")}
+TOPICS = [finish(dict(id="nishedh", title=("নিষেধ ও প্রশ্ন", "Nishedh o proshno", "Saying no, and asking"),
+ blurb="Negatives (না, নি, নয়, নেই), yes/no questions, every question word, and how to answer.",
+ sections=[
+  dict(id="na", title="Saying no: না and নি", blocks=[
+   P("To make a verb negative, Bengali adds a small word after it. In most tenses the word is না. In the simple past and the present perfect it is the ending -নি, joined to the verb. The verb itself keeps its person ending, so you can still tell who is acting."),
+   TABLE(["Tense", "Positive", "Negative", "Meaning"], [
+     [c("simple present","pres"), c("আমি খাই।","ami khai."), c("আমি খাই না।","ami khai na."), "I do not eat."], [c("present continuous","cont"), c("আমি খাচ্ছি।","ami khachchhi."), c("আমি খাচ্ছি না।","ami khachchhi na."), "I am not eating."],
+     [c("present perfect","perf"), c("আমি খেয়েছি।","ami kheyechhi."), c("আমি খাইনি।","ami khaini."), "I have not eaten."], [c("simple past","past"), c("আমি খেলাম।","ami khelam."), c("আমি খাইনি।","ami khaini."), "I did not eat."],
+     [c("past continuous","pastcont"), c("আমি খাচ্ছিলাম।","ami khachchhilam."), c("আমি খাচ্ছিলাম না।","ami khachchhilam na."), "I was not eating."], [c("past habitual","habit"), c("আমি খেতাম।","ami khetam."), c("আমি খেতাম না।","ami khetam na."), "I did not use to eat."],
+     [c("simple future","fut"), c("আমি খাব।","ami khabo."), c("আমি খাব না।","ami khabo na."), "I will not eat."],
+   ], "Negative in every tense"),
+   H("Negative of the present, past and future: all persons"),
+   TABLE(["Person", "Present", "Past (and perfect)", "Future"], [
+     [c("আমি","ami"), c("যাই না","jai na"), c("যাইনি","jaini"), c("যাব না","jabo na")], [c("তুই","tui"), c("যাস না","jas na"), c("যাসনি","jasni"), c("যাবি না","jabi na")], [c("তুমি","tumi"), c("যাও না","jao na"), c("যাওনি","jaoni"), c("যাবে না","jabe na")],
+     [c("আপনি / তিনি","apni / tini"), c("যান না","jan na"), c("যাননি","janni"), c("যাবেন না","jaben na")], [c("সে","she"), c("যায় না","jay na"), c("যায়নি","jayni"), c("যাবে না","jabe na")],
+   ], "যাওয়া (to go), negative"),
+   H("Negative sentences"),
+   EXS([S("ami",[BHAT],"khaoya","pres","I do not eat rice.",neg=True), S("se",[MACH],"khaoya","pres","He / she does not eat fish.",neg=True), S("tumi",[ROJ,SKULE],"jaoya","pres","You do not go to school every day.",neg=True),
+        S("ami",[EKHON,BHAT],"khaoya","cont","I am not eating rice now.",neg=True), S("se",[BOI],"pora","cont","He / she is not reading a book.",neg=True), S("ami",[BHAT],"khaoya","perf","I have not eaten rice.",neg=True),
+        S("amra",[GOTOKAL,SKULE],"jaoya","past","We did not go to school yesterday.",neg=True), S("tumi",[AMAKE if False else ("আমাকে","amake")],"bola","past","You did not tell me.",neg=True), S("ami",[TOKHON,BHAT],"khaoya","pastcont","I was not eating rice then.",neg=True),
+        S("se",[PROTIDIN,CHA],"khaoya","habit","He / she did not use to drink tea every day.",neg=True), S("ami",[KAL],"asha","fut","I will not come tomorrow.",neg=True), S("tara",[AGAMIKAL],"jaoya","fut","They will not go tomorrow.",neg=True),
+        S("tui",[BHAT],"khaoya","pres","You do not eat rice. (very familiar)",neg=True), S("apni",[BANGLA],"bola","pres","You do not speak Bengali. (respectful)",neg=True)], "না and নি"),
+   H("Negative commands"),
+   EXS([("এটা করো না।","eta koro na.","Do not do this."), ("ওখানে যেয়ো না।","okhane jeyo na.","Do not go there."), ("দেরি করবেন না।","deri korben na.","Please do not be late."), ("ভয় পেয়ো না।","bhoy peyo na.","Do not be afraid."), ("চিন্তা করিস না।","chinta koris na.","Do not worry. (very familiar)")], "Do not …"),
+   MISTAKES([
+     (("আমি না ভাত খাই।","ami na bhat khai."), ("আমি ভাত খাই না।","ami bhat khai na."), "না comes after the verb, not before the noun."),
+     (("আমি গতকাল যাই না।","ami gotokal jai na."), ("আমি গতকাল যাইনি।","ami gotokal jaini."), "The past negative uses -নি, not না with the present form."),
+   ], title="Where does না go?"),
+  ]),
+
+  dict(id="four", title="Four ways to say 'not': না, নি, নয়, নেই", blocks=[
+   P("Bengali has four everyday words for 'not', and each does a different job. Choosing the right one is mostly a matter of what kind of sentence you have."),
+   TABLE(["Word", "Used for", "Example", "Meaning"], [
+     [c("না","na"), "verbs in most tenses", c("আমি যাই না।","ami jai na."), "I do not go."], [c("-নি","-ni"), "verbs in the simple past and perfect", c("আমি যাইনি।","ami jaini."), "I did not go / have not gone."],
+     [c("নয় / নই / নও / নন","noy / noi / nou / non"), "'is not': identity or quality, no verb", c("সে ডাক্তার নয়।","she daktar noy."), "He / she is not a doctor."], [c("নেই","nei"), "'there is not', 'does not have'", c("আমার সময় নেই।","amar shomoy nei."), "I have no time."],
+   ]),
+   H("নয় and its forms: is not"),
+   TABLE(["Person", "Is not", "Example"], [[c("আমি","ami"), c("নই","noi"), c("আমি ছাত্র নই।","ami chhatro noi.")], [c("তুমি","tumi"), c("নও","nou"), c("তুমি ছাত্র নও।","tumi chhatro nou.")], [c("আপনি / তিনি","apni / tini"), c("নন","non"), c("আপনি ছাত্র নন।","apni chhatro non.")], [c("সে / এটা","she / eta"), c("নয়","noy"), c("এটা ভালো নয়।","eta bhalo noy.")]]),
+   EXS([("আমি ডাক্তার নই।","ami daktar noi.","I am not a doctor."), ("তুমি ছাত্র নও।","tumi chhatro nou.","You are not a student."), ("তিনি শিক্ষক নন।","tini shikkhok non.","He / she is not a teacher."), ("এটা আমার বই নয়।","eta amar boi noy.","This is not my book."), ("আকাশটা নীল নয়।","akashta nil noy.","The sky is not blue."), ("সে আমার ভাই নয়।","she amar bhai noy.","He is not my brother.")], "Not: identity and quality"),
+   H("নেই: there is none"),
+   EXS([("বাড়িতে কেউ নেই।","barite keu nei.","There is nobody at home."), ("আমার সময় নেই।","amar shomoy nei.","I have no time."), ("আমার কাছে টাকা নেই।","amar kachhe taka nei.","I have no money."), ("ঘরে জল নেই।","ghore jol nei.","There is no water in the house."),
+        ("আমার ভাই নেই।","amar bhai nei.","I have no brother."), ("এখানে কোনো সমস্যা নেই।","ekhane kono shomoshsha nei.","There is no problem here."), ("কোনো উপায় নেই।","kono upay nei.","There is no way."), ("কাল আমার কাজ থাকবে না।","kal amar kaj thakbe na.","I will have no work tomorrow.")], "There is none"),
+   NOTE("নেই covers the present only. In the past and the future, the negative of আছে is ছিল না and থাকবে না."),
+  ]),
+
+  dict(id="negwords", title="Nobody, nothing, nowhere, never", blocks=[
+   P("Bengali builds words like 'nobody', 'nothing', 'nowhere' and 'never' from a question word plus a small word, and then makes the verb negative as well. Two negatives do not cancel each other. They agree."),
+   TABLE(["Question word", "Meaning", "Negative partner", "Meaning"], [
+     [c("কে","ke"), "who", c("কেউ","keu"), "nobody"], [c("কী","ki"), "what", c("কিছু","kichhu"), "nothing"], [c("কোথায়","kothay"), "where", c("কোথাও","kothao"), "nowhere"], [c("কখন","kokhon"), "when", c("কখনো","kokhono"), "never"], [c("কোন","kon"), "which", c("কোনো","kono"), "no, any"],
+   ]),
+   EXS([("কেউ আসেনি।","keu asheni.","Nobody came."), ("আমি কিছু খাইনি।","ami kichhu khaini.","I have not eaten anything."), ("আমি কোথাও যাব না।","ami kothao jabo na.","I will not go anywhere."), ("সে কখনো দেরি করে না।","she kokhono deri kore na.","He / she is never late."),
+        ("আমি কখনো সাপ দেখিনি।","ami kokhono shap dekhini.","I have never seen a snake."), ("আমার কোনো সমস্যা নেই।","amar kono shomoshsha nei.","I have no problem."), ("আমি কাউকে চিনি না।","ami kauke chini na.","I do not know anyone."), ("কেউ কিছু বলল না।","keu kichhu bollo na.","Nobody said anything.")], "Double negatives agree"),
+  ]),
+
+  dict(id="yesno", title="Yes/no questions", blocks=[
+   P("To ask a question that can be answered 'yes' or 'no', add কি (or কী) to the sentence, usually after the first word or just before the verb. In speech you can also keep the same sentence and raise your voice at the end. The word order does not change."),
+   RULE("Making a yes/no question", "Put কি into the statement, or raise your voice at the end. The rest of the sentence stays the same.", [("তুমি যাবে।","tumi jabe.","You will go. (statement)"), ("তুমি কি যাবে?","tumi ki jabe?","Will you go? (question)")]),
+   EXS([S("tumi",[KIQ,BHAT],"khaoya","pres","Do you eat rice?",q=True), S("apni",[KIQ,BANGLA],"bola","pres","Do you speak Bengali?",q=True), S("se",[KIQ,BARITE],"thaka","pres","Does he / she stay at home?",q=True),
+        S("tumi",[KIQ,KAL],"asha","fut","Will you come tomorrow?",q=True), S("tumi",[KIQ,BHAT],"khaoya","perf","Have you eaten rice?",q=True), S("apni",[KIQ,GOTOKAL,OFISE],"jaoya","past","Did you go to the office yesterday?",q=True),
+        S("tumi",[KIQ,EKHON,BOI],"pora","cont","Are you reading a book now?",q=True), S("amra",[KIQ,AGAMIKAL],"jaoya","fut","Shall we go tomorrow?",q=True)], "কি questions"),
+   H("Questions with just a rising voice"),
+   EXS([("তুমি আসবে?","tumi ashbe?","Will you come?"), ("চা খাবে?","cha khabe?","Will you have tea?"), ("ভালো আছ?","bhalo achho?","Are you well?"), ("খেয়েছ?","kheyechho?","Have you eaten?")], "Short questions"),
+   H("Either … or …"),
+   P("To ask a choice, put বা or না between the two parts. 'Or' is বা, অথবা or কিংবা in writing; in speech you often hear না."),
+   EXS([("তুমি চা খাবে, না কফি?","tumi cha khabe, na kophi?","Will you have tea or coffee?"), ("তুমি আজ যাবে, না কাল?","tumi aj jabe, na kal?","Will you go today or tomorrow?"), ("এটা কি বই, না খাতা?","eta ki boi, na khata?","Is this a book or a notebook?"), ("আপনি বাসে যাবেন বা ট্রেনে?","apni base jaben ba trene?","Will you go by bus or by train?")], "Choices"),
+   H("Checking: …, তাই না?"),
+   EXS([("তুমি কাল আসবে, তাই না?","tumi kal ashbe, tai na?","You will come tomorrow, won't you?"), ("আজ খুব গরম, তাই না?","aj khub gorom, tai na?","It is very hot today, isn't it?"), ("তুমি বাংলা জানো, না?","tumi bangla jano, na?","You know Bengali, don't you?")], "Tag questions"),
+  ]),
+
+  dict(id="qwords", title="Question words", blocks=[
+   P("Question words usually sit just before the verb, where the answer would sit. They are called প্রশ্নবাচক শব্দ. Learn them as a set, because you will use them in every conversation."),
+   TABLE(["Word", "Meaning", "Question", "Answer"], [
+     [c("কে","ke"), "who", c("ও কে?","o ke?"), c("ও আমার ভাই।","o amar bhai.")], [c("কী","ki"), "what", c("তুমি কী খাচ্ছ?","tumi ki khachchho?"), c("আমি ভাত খাচ্ছি।","ami bhat khachchhi.")],
+     [c("কোথায়","kothay"), "where", c("তুমি কোথায় যাচ্ছ?","tumi kothay jachchho?"), c("আমি বাজারে যাচ্ছি।","ami bajare jachchhi.")], [c("কখন","kokhon"), "when (what time)", c("তুমি কখন আসবে?","tumi kokhon ashbe?"), c("আমি সন্ধ্যায় আসব।","ami shondhyay ashbo.")],
+     [c("কবে","kobe"), "when (which day)", c("তোমার জন্মদিন কবে?","tomar jonmodin kobe?"), c("আগামী সোমবার।","agami shombar.")], [c("কেন","keno"), "why", c("তুমি কেন কাঁদছ?","tumi keno kandchho?"), c("আমার কষ্ট হচ্ছে।","amar koshto hochchhe.")],
+     [c("কীভাবে","kibhabe"), "how", c("এটা কীভাবে করব?","eta kibhabe korbo?"), c("এভাবে করো।","ebhabe koro.")], [c("কেমন","kemon"), "how, what like", c("আপনি কেমন আছেন?","apni kemon achhen?"), c("আমি ভালো আছি।","ami bhalo achhi.")],
+     [c("কত","koto"), "how much", c("এটা কত টাকা?","eta koto taka?"), c("এটা পঞ্চাশ টাকা।","eta ponchash taka.")], [c("কয়টা / কটা","koyta / kota"), "how many", c("তোমার কয়টা বই আছে?","tomar koyta boi achhe?"), c("আমার তিনটে বই আছে।","amar tinte boi achhe.")],
+     [c("কতজন","kotojon"), "how many people", c("ক্লাসে কতজন আছে?","klase kotojon achhe?"), c("ক্লাসে দশজন আছে।","klase doshjon achhe.")], [c("কোন","kon"), "which", c("কোন বইটা তোমার?","kon boita tomar?"), c("এই বইটা।","ei boita.")],
+     [c("কার","kar"), "whose", c("এটা কার বই?","eta kar boi?"), c("এটা আমার বই।","eta amar boi.")], [c("কাকে","kake"), "whom", c("তুমি কাকে ডাকছ?","tumi kake dakchho?"), c("আমি রামকে ডাকছি।","ami ramke dakchhi.")],
+   ], "The question words"),
+   H("Who, what, where"),
+   EXS([("তোমার নাম কী?","tomar nam ki?","What is your name?"), ("আপনি কোথায় থাকেন?","apni kothay thaken?","Where do you live?"), ("ওই লোকটা কে?","oi lokta ke?","Who is that man?"), ("তুমি কী করছ?","tumi ki korchho?","What are you doing?"),
+        ("বইটা কোথায়?","boita kothay?","Where is the book?"), ("কে এসেছে?","ke eshechhe?","Who has come?"), ("এটা কী?","eta ki?","What is this?"), ("তুমি কাকে খুঁজছ?","tumi kake khujchho?","Whom are you looking for?")], "কে, কী, কোথায়"),
+   H("When, why, how"),
+   EXS([("তুমি কখন আসবে?","tumi kokhon ashbe?","When will you come?"), ("তুমি কেন দেরি করলে?","tumi keno deri korle?","Why were you late?"), ("এটা কীভাবে খোলে?","eta kibhabe khole?","How does this open?"), ("স্কুল কবে খুলবে?","skul kobe khulbe?","When will school open?"),
+        ("আপনি কেমন আছেন?","apni kemon achhen?","How are you?"), ("তুমি কীভাবে এলে?","tumi kibhabe ele?","How did you come?"), ("ট্রেন কখন ছাড়বে?","tren kokhon chharbe?","When does the train leave?"), ("আজ আবহাওয়া কেমন?","aj abhaoya kemon?","How is the weather today?")], "কখন, কেন, কীভাবে, কেমন"),
+   H("How much, how many, which, whose"),
+   EXS([("এটা কত টাকা?","eta koto taka?","How much is this?"), ("তোমার কয়টা ভাই আছে?","tomar koyta bhai achhe?","How many brothers do you have?"), ("কতজন এসেছে?","kotojon eshechhe?","How many people have come?"), ("কোন বাসটা যাবে?","kon basta jabe?","Which bus will go?"),
+        ("এটা কার ব্যাগ?","eta kar byag?","Whose bag is this?"), ("কোন রংটা তোমার পছন্দ?","kon rongta tomar pochhondo?","Which colour do you like?"), ("কত দূর?","koto dur?","How far is it?"), ("কতক্ষণ লাগবে?","kotokkhon lagbe?","How long will it take?")], "কত, কয়টা, কোন, কার"),
+  ]),
+
+  dict(id="answer", title="Answering questions", blocks=[
+   P("The usual answer to a yes/no question is the verb, said again, or হ্যাঁ (yes) or না (no). Bengali does not need a pronoun in the answer. For a question word, answer with just the missing piece."),
+   TABLE(["Question", "Short answer", "Full answer"], [
+     [c("তুমি কি খাবে?","tumi ki khabe?"), c("হ্যাঁ, খাব।","hyan, khabo."), c("হ্যাঁ, আমি খাব।","hyan, ami khabo.")], [c("তুমি কি যাবে?","tumi ki jabe?"), c("না, যাব না।","na, jabo na."), c("না, আমি যাব না।","na, ami jabo na.")],
+     [c("আপনি কি বাংলা জানেন?","apni ki bangla janen?"), c("একটু একটু জানি।","ektu ektu jani."), c("হ্যাঁ, আমি একটু একটু বাংলা জানি।","hyan, ami ektu ektu bangla jani.")],
+   ]),
+   H("Short exchanges"),
+   EXS([("আপনার নাম কী?","apnar nam ki?","What is your name?"), ("আমার নাম রাহুল।","amar nam rahul.","My name is Rahul."), ("আপনি কোথায় থাকেন?","apni kothay thaken?","Where do you live?"), ("আমি কলকাতায় থাকি।","ami kolkatay thaki.","I live in Kolkata."),
+        ("এটা কত টাকা?","eta koto taka?","How much is this?"), ("এটা পঞ্চাশ টাকা।","eta ponchash taka.","It is fifty rupees."), ("আপনি কি বাংলা বলতে পারেন?","apni ki bangla bolte paren?","Can you speak Bengali?"), ("হ্যাঁ, একটু একটু পারি।","hyan, ektu ektu pari.","Yes, I can a little.")], "Questions and answers"),
+  ]),
+
+  dict(id="whether", title="Questions inside sentences", blocks=[
+   P("A question can sit inside a longer sentence. The question word stays, and the main verb comes last. 'Whether' is কি না."),
+   EXS([("সে কোথায় থাকে আমি জানি না।","she kothay thake ami jani na.","I do not know where he / she lives."), ("তুমি কী খাচ্ছ আমাকে বলো।","tumi ki khachchho amake bolo.","Tell me what you are eating."), ("সে আসবে কি না জানি না।","she ashbe ki na jani na.","I do not know whether he / she will come."),
+        ("কখন যাব বুঝতে পারছি না।","kokhon jabo bujhte parchhi na.","I cannot understand when to go."), ("তুমি কেন কাঁদছ আমি বুঝতে পারছি না।","tumi keno kandchho ami bujhte parchhi na.","I cannot understand why you are crying."), ("এটা কত টাকা জানেন?","eta koto taka janen?","Do you know how much this is?"),
+        ("কে এসেছে দেখো তো।","ke eshechhe dekho to.","See who has come."), ("সে কী বলল আমি শুনিনি।","she ki bollo ami shunini.","I did not hear what he / she said.")], "Questions inside sentences"),
+  ]),
+ ],
+ exercises=[
+  PICK("Where does না go in a negative sentence?", ["before the noun", "after the verb", "at the start"], 1, "না comes after the verb: খাই না.", inst="Choose the correct place."),
+  PICK("How do you say 'I do not eat rice'?", O(("আমি ভাত খাই না।","ami bhat khai na."),("আমি না ভাত খাই।","ami na bhat khai."),("আমি ভাত না খাই।","ami bhat na khai.")), 0, "না after the verb.", inst="Choose the correct Bengali sentence."),
+  PICK("How do you say 'I did not go'?", O(("আমি যাইনি।","ami jaini."),("আমি যাই না।","ami jai na."),("আমি যাব না।","ami jabo na.")), 0, "The past negative: present form + -নি.", inst="Choose the correct Bengali sentence."),
+  PICK("How do you say 'I will not go'?", O(("আমি যাব না।","ami jabo na."),("আমি যাইনি।","ami jaini."),("আমি যাই না।","ami jai na.")), 0, "Future negative: যাব না.", inst="Choose the correct Bengali sentence."),
+  PICK("How do you say 'I am not eating'?", O(("আমি খাচ্ছি না।","ami khachchhi na."),("আমি খাইনি।","ami khaini."),("আমি খাব না।","ami khabo na.")), 0, "Continuous negative: খাচ্ছি না.", inst="Choose the correct Bengali sentence."),
+  FILL("আমি ডাক্তার ___।","ami daktar ___.", O(("নই","noi"),("নও","nou"),("নয়","noy")), 0, "'I am not' = নই.", inst="Choose the correct 'is not' word."),
+  FILL("তুমি ছাত্র ___।","tumi chhatro ___.", O(("নও","nou"),("নই","noi"),("নন","non")), 0, "'You are not' = নও.", inst="Choose the correct 'is not' word."),
+  FILL("আপনি শিক্ষক ___।","apni shikkhok ___.", O(("নন","non"),("নও","nou"),("নয়","noy")), 0, "'You (respectful) are not' = নন.", inst="Choose the correct 'is not' word."),
+  FILL("এটা আমার বই ___।","eta amar boi ___.", O(("নয়","noy"),("নই","noi"),("নও","nou")), 0, "'This is not' = নয়.", inst="Choose the correct 'is not' word."),
+  FILL("আমার সময় ___।","amar shomoy ___.", O(("নেই","nei"),("নয়","noy"),("না","na")), 0, "'There is none' = নেই.", inst="Choose the right word for 'not'."),
+  FILL("ঘরে জল ___।","ghore jol ___.", O(("নেই","nei"),("নয়","noy"),("নই","noi")), 0, "'There is no water' = নেই.", inst="Choose the right word for 'not'."),
+  FILL("___ আসেনি।","___ asheni.", O(("কেউ","keu"),("কে","ke"),("কিছু","kichhu")), 0, "'Nobody came' = কেউ আসেনি.", inst="Choose the word that means 'nobody'."),
+  FILL("আমি ___ খাইনি।","ami ___ khaini.", O(("কিছু","kichhu"),("কেউ","keu"),("কোথাও","kothao")), 0, "'I ate nothing' = কিছু খাইনি.", inst="Choose the word that means 'anything / nothing'."),
+  FILL("তুমি ___ যাবে?","tumi ___ jabe?", O(("কি","ki"),("কে","ke"),("কত","koto")), 0, "কি makes a yes/no question.", inst="Choose the word that makes a yes/no question."),
+  FILL("তুমি ___ যাচ্ছ?","tumi ___ jachchho?", O(("কোথায়","kothay"),("কখন","kokhon"),("কেন","keno")), 0, "'Where are you going?' = কোথায়.", inst="Choose the question word that fits the meaning."),
+  FILL("এটা ___ টাকা?","eta ___ taka?", O(("কত","koto"),("কোন","kon"),("কার","kar")), 0, "'How much money?' = কত টাকা.", inst="Choose the question word that fits the meaning."),
+  FILL("এটা ___ বই?","eta ___ boi?", O(("কার","kar"),("কত","koto"),("কখন","kokhon")), 0, "'Whose book?' = কার বই.", inst="Choose the question word that fits the meaning."),
+  FILL("তুমি ___ কাঁদছ?","tumi ___ kandchho?", O(("কেন","keno"),("কোথায়","kothay"),("কখন","kokhon")), 0, "'Why are you crying?' = কেন.", inst="Choose the question word that fits the meaning."),
+  FILL("তোমার নাম ___?","tomar nam ___?", O(("কী","ki"),("কে","ke"),("কোথায়","kothay")), 0, "'What is your name?' = কী.", inst="Choose the question word that fits the meaning."),
+  PICK("Which question word means 'when (what time)'?", O(("কখন","kokhon"),("কেন","keno"),("কীভাবে","kibhabe")), 0, "কখন = when.", inst="Choose the question word."),
+  PICK("Which question word means 'how'?", O(("কীভাবে","kibhabe"),("কখন","kokhon"),("কত","koto")), 0, "কীভাবে = how.", inst="Choose the question word."),
+  PICK("Which question word means 'which'?", O(("কোন","kon"),("কার","kar"),("কে","ke")), 0, "কোন = which.", inst="Choose the question word."),
+  PICK("What does কোথাও mean in 'আমি কোথাও যাব না'?", ["somewhere", "anywhere / nowhere", "everywhere"], 1, "With a negative verb, কোথাও means 'nowhere / not anywhere'.", inst="Choose the meaning."),
+  SPOT(O(("কেউ আসেনি।","keu asheni."),("কেউ এসেছে না।","keu eshechhe na."),("কেউ আসবে নি।","keu ashbe ni.")), 0, "Past negative: present form + -নি → আসেনি.", inst="Only one sentence is correct. Choose it."),
+  SPOT(O(("আমি কখনো সাপ দেখিনি।","ami kokhono shap dekhini."),("আমি কখনো সাপ দেখেছি।","ami kokhono shap dekhechhi."),("আমি কখনো সাপ দেখব।","ami kokhono shap dekhbo.")), 0, "'Never seen': কখনো + -নি.", inst="Only one sentence means 'I have never seen a snake'. Choose it."),
+  SPOT(O(("তুমি কি যাবে?","tumi ki jabe?"),("তুমি যাবে কি?","tumi jabe ki?"),("কি তুমি যাবে না?","ki tumi jabe na?")), 0, "কি usually follows the first word.", inst="Only one sentence has কি in the usual place. Choose it."),
+ ]))]

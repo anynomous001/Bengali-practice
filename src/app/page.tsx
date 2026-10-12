@@ -8,7 +8,7 @@ const FEATURES = [
   { seg: "reading", icon: "reading", title: "Reading", bn: "পড়া", body: "Start from the alphabet and vowel signs, then read short fables in three layers: Bengali only, line by line with meanings, and English." },
   { seg: "speaking", icon: "speaking", title: "Speaking", bn: "বলা", body: "Tap any letter, number or price to hear it, then test your ear. Say the word aloud before you check it." },
   { seg: "vocabulary", icon: "vocabulary", title: "Vocabulary", bn: "শব্দভান্ডার", body: "About 900 words in 30 topics, from family and food to Kolkata's streets, each with example phrases and practice." },
-  { seg: "grammar", icon: "grammar", title: "Grammar", bn: "ব্যাকরণ", body: "Persons, verbs, tenses, karak and bibhakti in clear tables with examples, plus a ten-round tense workout." },
+  { seg: "grammar", icon: "grammar", title: "Grammar", bn: "ব্যাকরণ", body: "Persons, verbs, tenses, karak and bibhakti with many examples, tense practice rounds, quick translation and a timed exam." },
 ] as const;
 
 const POINTS = [

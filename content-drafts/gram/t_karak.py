@@ -1,0 +1,162 @@
+from lib import *
+
+S = SENT
+KARAK_EN = {"kartha": "কর্তা", "karma": "কর্ম", "koron": "করণ", "sampradan": "সম্প্রদান", "apadan": "অপাদান", "adhikoron": "অধিকরণ"}
+
+TOPICS = [finish(dict(id="karak", title=("কারক", "Karak", "Karak: the job of each noun"),
+ blurb="Every noun in a sentence does a job for the verb. Learn the six jobs (doer, receiver, tool, beneficiary, source, place) and how to find each one by asking the verb a question.",
+ sections=[
+  dict(id="what", title="What is a karak?", blocks=[
+   P("কারক (karak) is the relationship between a noun or pronoun and the verb of the sentence. The verb is the centre of the sentence, and every noun connected to it does one of six jobs. Learning to see these jobs makes a long sentence easy to read and helps you choose the right ending for each noun."),
+   P("The easiest way to find a noun's karak is to ask the verb a question. Ask 'Who does it?', 'What is it done to?', 'With what?', 'For whom?', 'From where?', 'Where or when?'. The noun that answers the question is that karak."),
+   TABLE(["Karak", "Job", "Question you ask the verb", "Example (the karak is underlined in the meaning)"], [
+     [c("কর্তা","kortha"), "the doer", "কে? (who does it?)", c("মা রান্না করেন।","ma ranna koren.")],
+     [c("কর্ম","korma"), "what or whom the action is done to", "কী? কাকে? (what? whom?)", c("আমি বই পড়ি।","ami boi pori.")],
+     [c("করণ","koron"), "the tool or means", "কী দিয়ে? কীসে? (with what?)", c("আমি কলম দিয়ে লিখি।","ami kolom diye likhi.")],
+     [c("সম্প্রদান","sampradan"), "the one given to or for", "কাকে? কার জন্য? (to whom? for whom?)", c("মা শিশুকে দুধ দেন।","ma shishuke dudh den.")],
+     [c("অপাদান","apadan"), "the starting point, the source", "কোথা থেকে? কার কাছ থেকে? (from where?)", c("গাছ থেকে পাতা পড়ে।","gachh theke pata pore.")],
+     [c("অধিকরণ","adhikoron"), "the place or time", "কোথায়? কখন? (where? when?)", c("আমি বাজারে যাই।","ami bajare jai.")],
+   ]),
+   NOTE("Two more relationships appear in sentences but are not counted among the six karaks in most school grammars: সম্বন্ধ (belonging, like 'of') and সম্বোধন (calling someone by name). They are explained in the last section."),
+   H("Reading a sentence with karaks"),
+   P("Take one sentence with several jobs: রাহুল কলম দিয়ে বন্ধুকে চিঠি লিখল (Rahul wrote a letter to his friend with a pen). Ask the verb লিখল each question in turn."),
+   TABLE(["Question to the verb 'লিখল' (wrote)", "Answer", "Karak"], [
+     ["কে লিখল? (who wrote?)", c("রাহুল","rahul"), c("কর্তা","kortha")], ["কী লিখল? (what did he write?)", c("চিঠি","chithi"), c("কর্ম","korma")],
+     ["কী দিয়ে লিখল? (with what?)", c("কলম দিয়ে","kolom diye"), c("করণ","koron")], ["কাকে লিখল? (to whom?)", c("বন্ধুকে","bondhuke"), c("সম্প্রদান","sampradan")],
+   ]),
+   LIST(["Find the verb: it is usually the last word.", "Ask কে? The answer is the কর্তা.", "Ask কী? or কাকে? The answer is the কর্ম.", "Ask কী দিয়ে? The answer is the করণ.", "Ask কার জন্য? or কাকে? (for a gift). The answer is the সম্প্রদান.", "Ask কোথা থেকে? The answer is the অপাদান.", "Ask কোথায়? or কখন? The answer is the অধিকরণ."], ordered=True, title="How to find the karaks in any sentence"),
+  ]),
+
+  dict(id="kortha", title="কর্তা: the doer", blocks=[
+   P("The কর্তা (kortha) is the doer, the person or thing that does the action. Ask the verb কে? (who?). In most sentences the কর্তা comes first. It takes no ending in the usual sentence: রাম যায় (Ram goes)."),
+   RULE("Finding the doer", "Ask 'Who does the verb?'. The answer is the কর্তা, whatever the tense and whatever the other words are.", [("সে বই পড়ে।","she boi pore.","Who reads? সে is the doer.")]),
+   EXS([S(MA,[("রান্না","ranna")],"kora","pres","Mother cooks. (কর্তা: মা)"), S(BABA,[OFISE],"jaoya","pres","Father goes to the office. (কর্তা: বাবা)"), S(SHIKKHOK,[BANGLA],"bola","pres","The teacher speaks Bengali. (কর্তা: শিক্ষক)"),
+        S(KUKUR,[("ঘেউ ঘেউ","gheu gheu")],"kora","pres","The dog barks. (কর্তা: কুকুর)"), S("ami",[BOI],"pora","past","I read a book. (কর্তা: আমি)"), S("tara",[MATHE],"khela","pres","They play in the field. (কর্তা: তারা)"),
+        S(DAKTAR,[("ওষুধ","oshudh")],"deoya","past","The doctor gave medicine. (কর্তা: ডাক্তার)"), S(BHAI,[("চিঠি","chithi")],"lekha","fut","Brother will write a letter. (কর্তা: ভাই)"), ("বৃষ্টি পড়ছে।","brishti porchhe.","It is raining. (কর্তা: বৃষ্টি)"), ("পাখি গান গায়।","pakhi gan gay.","The bird sings. (কর্তা: পাখি)")], "The doer in a sentence"),
+   H("The doer can have an ending"),
+   P("Three common shapes of the doer: plain (রাম), with -রা for a group of people (ছেলেরা), and with -ই for emphasis (সে-ই করেছে, 'it was he who did it')."),
+   EXS([("ছেলেরা মাঠে খেলছে।","chhelera mathe khelchhe.","The boys are playing in the field."), ("সে-ই আমাকে ডেকেছিল।","she-i amake dekechhilo.","It was he who called me."), ("শিশুটি হাসছে।","shishuti haschhe.","The baby is laughing.")], "Plain, plural, emphatic"),
+   H("The doer of a feeling: in the possessive"),
+   P("With verbs of feeling, the one who feels takes the possessive: আমার খিদে পেয়েছে, 'hunger has come to me'. The person is still the doer in meaning, even though the form is আমার."),
+   EXS([("আমার ভয় করছে।","amar bhoy korchhe.","I am afraid."), ("তোমার কী হয়েছে?","tomar ki hoyechhe?","What has happened to you?"), ("তার জ্বর হয়েছে।","tar jor hoyechhe.","He / she has a fever.")], "Feelings"),
+   MISTAKES([
+     (("রামকে যায়।","ramke jay."), ("রাম যায়।","ram jay."), "The doer takes no -কে. -কে marks the receiver of an action."),
+   ], title="The doer takes no -কে"),
+  ]),
+
+  dict(id="korma", title="কর্ম: what the action is done to", blocks=[
+   P("The কর্ম (korma) is the object: what or whom the action is done to. Ask the verb কী? (what?) or কাকে? (whom?). A person or an animal that is a কর্ম usually takes -কে; a thing usually takes no ending."),
+   RULE("Two kinds of কর্ম", "মুখ্য কর্ম (the main object) is usually a thing; গৌণ কর্ম (the secondary object) is the person who receives it. In 'I gave the boy a book', the book is the main object (বই) and the boy is the secondary object (ছেলেটিকে).", [("আমি ছেলেটিকে বই দিলাম।","ami chheletike boi dilam.","I gave the boy a book.  বই: main; ছেলেটিকে: secondary.")]),
+   H("Things: no ending"),
+   EXS([S("ami",[BOI],"pora","pres","I read a book."), S("se",[CHITHI],"lekha","past","He / she wrote a letter."), S("tumi",[BHAT],"khaoya","pres","You eat rice."), S("amra",[GAN],"shona","pres","We listen to a song."),
+        S(MA,[MACH],"rakha","pres","Mother keeps the fish.") if False else S(MA,[("মাছ","mach")],"dhora","pres","Mother holds the fish."), S("ami",[("দরজা","dorja")],"dekha","past","I saw the door."), S("tara",[("ছবি","chhobi")],"dekha","pres","They see a picture.")], "Things as the object"),
+   H("People and animals: -কে"),
+   EXS([("আমি রামকে দেখলাম।","ami ramke dekhlam.","I saw Ram."), ("মা শিশুকে ডাকলেন।","ma shishuke daklen.","Mother called the baby."), ("শিক্ষক ছাত্রদের পড়ান।","shikkhok chhatroder poran.","The teacher teaches the students."), ("আমি কুকুরটাকে দেখলাম।","ami kukurtake dekhlam.","I saw the dog."),
+        ("সে আমাকে ডাকল।","she amake daklo.","He / she called me."), ("আমরা তোমাকে চিনি।","amra tomake chini.","We know you.")], "-কে for people"),
+   H("Two objects in one sentence"),
+   EXS([("বাবা আমাকে একটা বই দিলেন।","baba amake ekta boi dilen.","Father gave me a book.  আমাকে: person; বই: thing."), ("শিক্ষক ছাত্রদের গল্প বললেন।","shikkhok chhatroder golpo bollen.","The teacher told the students a story."), ("মা আমাকে ভাত দিলেন।","ma amake bhat dilen.","Mother gave me rice."),
+        ("সে আমাকে চিঠি লিখল।","she amake chithi likhlo.","He / she wrote me a letter.")], "Person and thing"),
+   NOTE("A thing can take -কে too, when it is definite and being singled out: আমি বইটাকে ভালোবাসি, 'I love that book'. But the plain thing without -কে is the usual form."),
+   MISTAKES([
+     (("আমি বইকে পড়ি।","ami boike pori."), ("আমি বই পড়ি।","ami boi pori."), "A thing as an ordinary object takes no ending."),
+     (("আমি রাম দেখলাম।","ami ram dekhlam."), ("আমি রামকে দেখলাম।","ami ramke dekhlam."), "A person as the object takes -কে."),
+   ], title="-কে for people, not for things"),
+  ]),
+
+  dict(id="koron", title="করণ: the tool or means", blocks=[
+   P("The করণ (koron) is the tool, instrument or means by which the action is done. Ask the verb কী দিয়ে? (with what?) or কীসে? The words দিয়ে and দ্বারা show it, and sometimes the ending -এ / -য়."),
+   RULE("Ways to mark the tool", "দিয়ে comes after the noun in speech: কলম দিয়ে (with a pen). দ্বারা is the formal word. -এ or -য় can be joined to the noun: হাতে (with the hand), চোখে (with the eye), ট্রেনে (by train).", [("আমি কলম দিয়ে লিখি।","ami kolom diye likhi.","I write with a pen.")]),
+   EXS([("আমি কলম দিয়ে লিখি।","ami kolom diye likhi.","I write with a pen."), ("সে ছুরি দিয়ে ফল কাটে।","she chhuri diye phol kate.","He / she cuts fruit with a knife."), ("আমরা চামচ দিয়ে ভাত খাই।","amra chamoch diye bhat khai.","We eat rice with a spoon."),
+        ("আমি হাতে খাই।","ami hate khai.","I eat with my hand."), ("আমরা চোখে দেখি।","amra chokhe dekhi.","We see with our eyes."), ("আমরা কান দিয়ে শুনি।","amra kan diye shuni.","We hear with our ears."),
+        ("সে চাবি দিয়ে তালা খুলল।","she chabi diye tala khulolo.","He / she opened the lock with a key."), ("মা জল দিয়ে হাত ধুলেন।","ma jol diye hat dhulen.","Mother washed her hands with water."), ("সে আগুন দিয়ে রান্না করে।","she agun diye ranna kore.","He / she cooks with fire.")], "With what?"),
+   H("The vehicle or means of travel"),
+   EXS([("আমি ট্রেনে যাই।","ami trene jai.","I go by train."), ("সে বাসে করে স্কুলে যায়।","she base kore skule jay.","He / she goes to school by bus."), ("আমরা নৌকায় নদী পার হলাম।","amra noukay nodi par holam.","We crossed the river by boat."), ("আমি হেঁটে যাই।","ami hete jai.","I go on foot.")], "By what?"),
+   NOTE("দিয়ে is also used with people to mean 'through, by means of': আমি তাকে দিয়ে কাজ করালাম, 'I had the work done by him'. It is more advanced; for now learn the tool sense."),
+  ]),
+
+  dict(id="sampradan", title="সম্প্রদান: to whom, for whom", blocks=[
+   P("The সম্প্রদান (sampradan) is the one to whom something is given freely, or for whom something is done. Ask the verb কাকে? (to whom?) or কার জন্য? (for whom?). The marker is -কে, or জন্য placed after the possessive form."),
+   RULE("Marking the receiver", "Use -কে for a person who is given something: ভিখারিকে ভিক্ষা দিলাম. Use জন্য for the person or thing something is done for: মায়ের জন্য ফুল আনলাম.", [("আমি গরিবকে খাবার দিলাম।","ami goribke khabar dilam.","I gave food to the poor man.")]),
+   EXS([("আমি গরিবকে খাবার দিলাম।","ami goribke khabar dilam."  ,"I gave food to the poor man."), ("মা শিশুকে দুধ দিলেন।","ma shishuke dudh dilen.","Mother gave milk to the baby."), ("আমি বন্ধুকে একটা উপহার দিলাম।","ami bondhuke ekta upohar dilam.","I gave my friend a gift."),
+        ("বাবা আমার জন্য একটা বই আনলেন।","baba amar jonyo ekta boi anlen.","Father brought a book for me."), ("আমি মায়ের জন্য ফুল কিনলাম।","ami mayer jonyo phul kinlam.","I bought flowers for mother."), ("এটা তোমার জন্য।","eta tomar jonyo.","This is for you."),
+        ("সে গরিবদের দান করে।","she goribder dan kore.","He / she gives to the poor."), ("আমরা স্কুলের জন্য টাকা দিলাম।","amra skuler jonyo taka dilam.","We gave money for the school.")], "Given to, done for"),
+   NOTE("The same word can be কর্ম or সম্প্রদান: in 'আমি রামকে দেখলাম' (I saw Ram), রামকে is the object of seeing (কর্ম). In 'আমি রামকে বই দিলাম' (I gave Ram a book), রামকে is the receiver (সম্প্রদান). Ask the verb: dekha gets 'whom?', dena gets 'to whom?'."),
+  ]),
+
+  dict(id="apadan", title="অপাদান: the starting point", blocks=[
+   P("The অপাদান (apadan) is the place or person something comes from, moves away from, or is separated from. Ask the verb কোথা থেকে? (from where?) or কার কাছ থেকে? (from whom?). The marker is থেকে after the noun."),
+   RULE("Marking the source", "Put থেকে after the noun: বাড়ি থেকে (from the house). For a person, use -র কাছ থেকে: বন্ধুর কাছ থেকে (from a friend).", [("আমি বাড়ি থেকে আসছি।","ami bari theke aschhi.","I am coming from home.")]),
+   EXS([("আমি বাড়ি থেকে আসছি।","ami bari theke aschhi.","I am coming from home."), ("গাছ থেকে পাতা পড়ে।","gachh theke pata pore.","Leaves fall from the tree."), ("নদী পাহাড় থেকে নেমেছে।","nodi pahar theke nemechhe.","The river comes down from the hills."),
+        ("ট্রেন হাওড়া থেকে ছাড়ে।","tren haora theke chhare.","The train leaves from Howrah."), ("আমি বন্ধুর কাছ থেকে বই নিলাম।","ami bondhur kachh theke boi nilam.","I took a book from a friend."), ("সে মায়ের কাছ থেকে টাকা পেল।","she mayer kachh theke taka pelo.","He / she got money from his / her mother."),
+        ("আমরা কলকাতা থেকে এসেছি।","amra kolkata theke eshechhi.","We have come from Kolkata."), ("সে ঘর থেকে বেরোল।","she ghor theke berolo.","He / she came out of the room."), ("আকাশ থেকে বৃষ্টি পড়ে।","akash theke brishti pore.","Rain falls from the sky.")], "From where? From whom?"),
+   H("Cause and comparison"),
+   P("You also say who you learn from with -র কাছ থেকে, and fear is said with -কে: আমি সাপকে ভয় পাই. Comparison with চেয়ে is covered in the lesson on bibhakti."),
+   EXS([("আমি সাপকে ভয় পাই।","ami shapke bhoy pai.","I am afraid of snakes."), ("আমি শিক্ষকের কাছ থেকে বাংলা শিখি।","ami shikkhoker kachh theke bangla shikhi.","I learn Bengali from the teacher.")], "Other uses"),
+  ]),
+
+  dict(id="adhikoron", title="অধিকরণ: the place and the time", blocks=[
+   P("The অধিকরণ (adhikoron) tells where or when the action happens. Ask the verb কোথায়? (where?) or কখন? (when?). The usual marker is -এ after a consonant, -তে after a vowel, and -য় after -া."),
+   TABLE(["Noun ends in", "Add", "Example", "Meaning"], [
+     ["a consonant", "-ে", c("ঘর → ঘরে","ghor → ghore"), "in the room"], ["a vowel sign -ি, -ী, -ু", "-তে", c("বাড়ি → বাড়িতে","bari → barite"), "at home"],
+     ["the vowel -া", "-য়", c("রাস্তা → রাস্তায়","rasta → rastay"), "on the road"], ["a place name in -া", "-য়", c("কলকাতা → কলকাতায়","kolkata → kolkatay"), "in Kolkata"],
+   ]),
+   H("Where"),
+   EXS([S("ami",[BAJARE],"jaoya","pres","I go to the market."), S("se",[BARITE],"thaka","pres","He / she stays at home."), S("amra",[PARKE],"hata","pres","We walk in the park."), S("tumi",[("রাস্তায়","rastay")],"hata","pres","You walk on the road."),
+        S("ora",[MATHE],"khela","pres","They play in the field."), S(MA,[("রান্নাঘরে","rannaghore")],"thaka","pres","Mother is in the kitchen."), S("ami",[KOLKATAY],"thaka","pres","I live in Kolkata."), ("বই টেবিলে আছে।","boi tebile achhe.","The book is on the table.")], "Place"),
+   H("When"),
+   EXS([S("ami",[SHOKALE],"otha" if False else "asha","pres","I come in the morning."), S("amra",[RATE],"ghumano","pres","We sleep at night."), S("se",[BIKELE,PARKE],"jaoya","pres","He / she goes to the park in the afternoon."), ("সকালে আমি চা খাই।","shokale ami cha khai.","I drink tea in the morning."),
+        ("সোমবারে স্কুল খোলে।","shombare skul khole.","School opens on Monday."), ("ভোরে পাখি ডাকে।","bhore pakhi dake.","Birds call at dawn."), ("শীতে কলকাতায় ঠান্ডা কম।","shite kolkatay thanda kom.","It is not very cold in Kolkata in winter.")], "Time"),
+   H("In a state or condition"),
+   EXS([("সে বিপদে পড়েছে।","she bipode poreche.","He / she is in trouble."), ("আমি আনন্দে আছি।","ami anonde achhi.","I am in joy (I am happy)."), ("সে রাগে কাঁপছে।","she rage kapchhe.","He / she is shaking with anger.")], "Condition"),
+  ]),
+
+  dict(id="parse", title="Putting it together: reading whole sentences", blocks=[
+   P("Now find every karak in a full sentence. Work through the questions one at a time. Each noun gets exactly one job."),
+   TABLE(["Sentence", "Word", "Karak", "Why"], [
+     [c("মা রান্নাঘরে ছুরি দিয়ে সবজি কাটলেন।","ma rannaghore chhuri diye shobji katlen."), c("মা","ma"), c("কর্তা","kortha"), "কে কাটলেন? (who cut?)"],
+     ["", c("সবজি","shobji"), c("কর্ম","korma"), "কী কাটলেন? (what?)"],
+     ["", c("ছুরি দিয়ে","chhuri diye"), c("করণ","koron"), "কী দিয়ে? (with what?)"],
+     ["", c("রান্নাঘরে","rannaghore"), c("অধিকরণ","adhikoron"), "কোথায়? (where?)"],
+     [c("আমি বন্ধুকে বাড়ি থেকে চিঠি লিখলাম।","ami bondhuke bari theke chithi likhlam."), c("আমি","ami"), c("কর্তা","kortha"), "কে লিখল?"],
+     ["", c("চিঠি","chithi"), c("কর্ম","korma"), "কী লিখল?"],
+     ["", c("বন্ধুকে","bondhuke"), c("সম্প্রদান","sampradan"), "কাকে? (to whom?)"],
+     ["", c("বাড়ি থেকে","bari theke"), c("অপাদান","apadan"), "কোথা থেকে? (from where?)"],
+   ], "Two sentences analysed"),
+   EXS([("শিক্ষক ছাত্রদের বাংলা পড়ান।","shikkhok chhatroder bangla poran.","Teacher: কর্তা. Students: গৌণ কর্ম. Bengali: মুখ্য কর্ম."), ("আমি মায়ের জন্য বাজার থেকে ফল আনলাম।","ami mayer jonyo bajar theke phol anlam.","I: কর্তা. Fruit: কর্ম. For mother: সম্প্রদান. From the market: অপাদান."),
+        ("সে সকালে হাত দিয়ে ভাত খায়।","she shokale hat diye bhat khay.","He / she: কর্তা. Rice: কর্ম. With the hand: করণ. In the morning: অধিকরণ."), ("বাবা অফিস থেকে ট্রেনে বাড়ি ফিরলেন।","baba ofis theke trene bari phirlen.","Father: কর্তা. From the office: অপাদান. By train: করণ. Home: অধিকরণ.")], "More sentences, with the answers"),
+  ]),
+
+  dict(id="others", title="Not karaks: relation and address", blocks=[
+   P("Two more relationships appear in sentences. School grammars usually do not count them among the six, because they do not connect to the verb directly."),
+   RULE("সম্বন্ধ (sombondho): belonging", "The relation between two nouns: whose is it? The first noun takes -র / -এর: রামের বই (Ram's book), আমার বাড়ি (my house). It answers কার? (whose?).", [("এটা রামের বই।","eta ramer boi.","This is Ram's book."), ("আমার বন্ধুর বাড়ি কলকাতায়।","amar bondhur bari kolkatay.","My friend's house is in Kolkata."), ("গাছের পাতা সবুজ।","gachher pata shobuj.","The tree's leaves are green.")]),
+   RULE("সম্বোধন (sombodhon): calling someone", "The name or word you use to call someone. It is not part of the verb's work. It often comes first and takes no ending: রাম, এসো! (Ram, come!).", [("রাম, এদিকে এসো।","ram, edike esho.","Ram, come this way."), ("মা, আমার খিদে পেয়েছে।","ma, amar khide peyechhe.","Mother, I am hungry."), ("আপনারা সবাই বসুন।","apnara shobai boshun.","Please all sit down.")]),
+  ]),
+ ],
+ exercises=[
+  PICK("What question finds the কর্তা?", O(("কে?","ke?"),("কী?","ki?"),("কোথায়?","kothay?")), 0, "কে? (who?) finds the doer.", inst="Choose the question that finds the karak."),
+  PICK("What question finds the কর্ম?", O(("কী? কাকে?","ki? kake?"),("কে?","ke?"),("কখন?","kokhon?")), 0, "কী? কাকে? (what? whom?) finds the object.", inst="Choose the question that finds the karak."),
+  PICK("What question finds the করণ?", O(("কী দিয়ে?","ki diye?"),("কোথা থেকে?","kotha theke?"),("কে?","ke?")), 0, "কী দিয়ে? (with what?) finds the tool.", inst="Choose the question that finds the karak."),
+  PICK("What question finds the অপাদান?", O(("কোথা থেকে?","kotha theke?"),("কোথায়?","kothay?"),("কে?","ke?")), 0, "কোথা থেকে? (from where?) finds the source.", inst="Choose the question that finds the karak."),
+  PICK("What question finds the অধিকরণ?", O(("কোথায়? কখন?","kothay? kokhon?"),("কে?","ke?"),("কী দিয়ে?","ki diye?")), 0, "কোথায়? কখন? (where? when?) finds the place or time.", inst="Choose the question that finds the karak."),
+  PICK("What question finds the সম্প্রদান?", O(("কাকে? কার জন্য?","kake? kar jonyo?"),("কোথায়?","kothay?"),("কী দিয়ে?","ki diye?")), 0, "কাকে? কার জন্য? (to whom? for whom?) finds the receiver.", inst="Choose the question that finds the karak."),
+  PICK("In 'মা রান্না করেন', which karak is মা?", O(("কর্তা","kortha"),("কর্ম","korma"),("করণ","koron")), 0, "মা is the doer.", inst="Name the karak of the underlined word (the first noun)."),
+  PICK("In 'আমি বই পড়ি', which karak is বই?", O(("কর্ম","korma"),("কর্তা","kortha"),("অধিকরণ","adhikoron")), 0, "বই is what is read: the object.", inst="Name the karak of the word বই."),
+  PICK("In 'আমি কলম দিয়ে লিখি', which karak is কলম দিয়ে?", O(("করণ","koron"),("কর্ম","korma"),("অপাদান","apadan")), 0, "'With what?' = কলম দিয়ে: the tool.", inst="Name the karak of the words কলম দিয়ে."),
+  PICK("In 'আমি বাজারে যাই', which karak is বাজারে?", O(("অধিকরণ","adhikoron"),("কর্তা","kortha"),("কর্ম","korma")), 0, "'Where?' = বাজারে: the place.", inst="Name the karak of the word বাজারে."),
+  PICK("In 'আমি বাড়ি থেকে আসছি', which karak is বাড়ি থেকে?", O(("অপাদান","apadan"),("অধিকরণ","adhikoron"),("করণ","koron")), 0, "'From where?' = বাড়ি থেকে: the source.", inst="Name the karak of the words বাড়ি থেকে."),
+  PICK("In 'মা শিশুকে দুধ দিলেন', which karak is শিশুকে?", O(("সম্প্রদান","sampradan"),("কর্ম","korma"),("কর্তা","kortha")), 0, "The one given to: the receiver. (দুধ is the object.)", inst="Name the karak of the word শিশুকে."),
+  PICK("In 'বাবা আমার জন্য বই আনলেন', which karak is আমার জন্য?", O(("সম্প্রদান","sampradan"),("করণ","koron"),("অপাদান","apadan")), 0, "'For whom?' = আমার জন্য.", inst="Name the karak of the words আমার জন্য."),
+  PICK("In 'সকালে আমি চা খাই', which karak is সকালে?", O(("অধিকরণ","adhikoron"),("কর্তা","kortha"),("করণ","koron")), 0, "'When?' = সকালে: the time.", inst="Name the karak of the word সকালে."),
+  PICK("In 'আমি চা খাই', which karak is চা?", O(("কর্ম","korma"),("কর্তা","kortha"),("করণ","koron")), 0, "চা is what is drunk: the object.", inst="Name the karak of the word চা."),
+  PICK("In 'আমরা ট্রেনে যাই', ট্রেনে is:", O(("করণ (by what means)","koron"),("কর্তা","kortha"),("কর্ম","korma")), 0, "'By what means?' = ট্রেনে: করণ.", inst="Name the karak of the word ট্রেনে."),
+  PICK("In 'গাছ থেকে পাতা পড়ে', which karak is পাতা?", O(("কর্তা","kortha"),("কর্ম","korma"),("অপাদান","apadan")), 0, "Who or what falls? The leaf: the doer.", inst="Name the karak of the word পাতা."),
+  PICK("Which word marks the করণ?", O(("দিয়ে","diye"),("থেকে","theke"),("জন্য","jonyo")), 0, "দিয়ে marks the tool.", inst="Choose the marker that goes with the karak."),
+  PICK("Which word marks the অপাদান?", O(("থেকে","theke"),("দিয়ে","diye"),("জন্য","jonyo")), 0, "থেকে marks the source.", inst="Choose the marker that goes with the karak."),
+  PICK("Which word marks the সম্প্রদান ('for')?", O(("জন্য","jonyo"),("থেকে","theke"),("দিয়ে","diye")), 0, "জন্য means 'for'.", inst="Choose the marker that goes with the karak."),
+  FILL("আমি রামকে ___ দেখলাম।","ami ramke ___ dekhlam.", O(("বাজারে","bajare"),("বাজার","bajar"),("বাজারকে","bajarke")), 0, "'At the market' is the place: বাজারে.", inst="Choose the word that adds the place."),
+  FILL("সে ___ দিয়ে লিখল।","she ___ diye likhlo.", O(("কলম","kolom"),("কলমে","kolome"),("কলমের","kolomer")), 0, "দিয়ে comes straight after the noun: কলম দিয়ে.", inst="Choose the word that goes before দিয়ে."),
+  FILL("ট্রেন হাওড়া ___ ছাড়ে।","tren haora ___ chhare.", O(("থেকে","theke"),("দিয়ে","diye"),("জন্য","jonyo")), 0, "The source needs থেকে.", inst="Choose the word that marks the source."),
+  FILL("এটা মায়ের ___।","eta mayer ___.", O(("জন্য","jonyo"),("থেকে","theke"),("দিয়ে","diye")), 0, "'For mother' needs জন্য.", inst="Choose the word that marks 'for'."),
+  SPOT(O(("আমি রামকে দেখলাম।","ami ramke dekhlam."),("আমি রাম দেখলাম।","ami ram dekhlam."),("আমি রামের দেখলাম।","ami ramer dekhlam.")), 0, "A person as the object takes -কে.", inst="Only one sentence has the object in the right form. Choose it."),
+  SPOT(O(("আমি বই পড়ি।","ami boi pori."),("আমি বইকে পড়ি।","ami boike pori."),("আমি বইয়ে পড়ি।","ami boiye pori.")), 0, "An ordinary thing as the object takes no ending.", inst="Only one sentence has the object in the right form. Choose it."),
+ ]))]
