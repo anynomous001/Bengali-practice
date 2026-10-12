@@ -1,0 +1,25 @@
+import Link from "next/link";
+import { priceUsd } from "@/lib/razorpay";
+import AuthFrame from "../AuthFrame";
+import BuyForm from "./BuyForm";
+
+export default function BuyPage() {
+  const price = priceUsd();
+  return (
+    <AuthFrame>
+      <p className="eyebrow">Get access</p>
+      <h1>12 months of Bengali practice</h1>
+      <div className="price-card">
+        <div className="price">${price} <small>one-time · 12 months</small></div>
+        <ul className="ticks">
+          <li>Reading, speaking, writing and grammar practice</li>
+          <li>Flashcards that remember what you know</li>
+          <li>New activities added during your year</li>
+          <li>Renew early and 12 months are added on</li>
+        </ul>
+        <BuyForm price={price} />
+      </div>
+      <p className="muted small">Pay by card in US dollars, processed securely by Razorpay. Already have access? <Link href="/login">Sign in</Link>.</p>
+    </AuthFrame>
+  );
+}

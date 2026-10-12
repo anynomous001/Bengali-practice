@@ -1,0 +1,241 @@
+import json
+
+S = []
+
+def story(**k): S.append(k)
+
+story(id="thirsty-crow", level=1, title=("তৃষ্ণার্ত কাক", "Trishnarto Kak", "The Thirsty Crow"),
+ source="Aesop's fable (6th century BCE), traditional; told in the Bengali children's tradition.",
+ lines=[
+ ("গরমের দিন ছিল।", "Gormer din chhilo.", "It was a hot day."),
+ ("একটা কাকের খুব তেষ্টা পেল।", "Ekta kaker khub teshta pelo.", "A crow became very thirsty."),
+ ("সে জল খুঁজতে খুঁজতে অনেক ঘুরল।", "Se jol khujte khujte onek ghurlo.", "He wandered a lot, looking for water."),
+ ("একটা বাড়ির উঠোনে সে একটা কলসি দেখতে পেল।", "Ekta barir uthone se ekta kolshi dekhte pelo.", "In the yard of a house he saw a clay pot."),
+ ("কলসিতে একটু জল ছিল, কিন্তু জল অনেক নিচে ছিল।", "Kolshite ektu jol chhilo, kintu jol onek niche chhilo.", "There was a little water in the pot, but the water was far down."),
+ ("কাকের ঠোঁট জল ছুঁতে পারল না।", "Kaker thont jol chhunte parlo na.", "The crow's beak could not touch the water."),
+ ("কাক একটু ভাবল।", "Kak ektu bhablo.", "The crow thought for a moment."),
+ ("কাছেই অনেক ছোট ছোট পাথর ছিল।", "Kachhei onek chhoto chhoto pathor chhilo.", "There were many small stones nearby."),
+ ("কাক একটা একটা করে পাথর কলসিতে ফেলল।", "Kak ekta ekta kore pathor kolshite phelolo.", "The crow dropped the stones into the pot, one by one."),
+ ("ধীরে ধীরে জল ওপরে উঠে এল।", "Dhire dhire jol opore uthe elo.", "Slowly, the water rose to the top."),
+ ("কাক জল খেয়ে খুশি হল।", "Kak jol kheye khushi holo.", "The crow drank the water and was happy."),
+ ],
+ moral=("ইচ্ছা থাকলে উপায় হয়।", "Ichchha thakle upay hoy.", "Where there is a will, there is a way."),
+ vocab=[("গরম","gorom","hot"),("দিন","din","day"),("কাক","kak","crow"),("তেষ্টা","teshta","thirst"),("জল","jol","water"),("খোঁজা","khoja","to look for"),("ঘোরা","ghora","to wander"),("কলসি","kolshi","clay pot"),("উঠোন","uthon","yard"),("ঠোঁট","thont","beak / lips"),("পাথর","pathor","stone"),("ছোট","chhoto","small"),("ভাবা","bhaba","to think"),("ফেলা","phela","to drop / throw"),("ধীরে ধীরে","dhire dhire","slowly"),("খুশি","khushi","happy"),("ইচ্ছা","ichchha","will / wish"),("উপায়","upay","way / means")],
+ quiz=[
+ ("What was the weather like?", ["Cold","Hot","Rainy"], 1),
+ ("What did the crow find in the yard?", ["A river","A clay pot","A tree"], 1),
+ ("Why could the crow not drink at first?", ["The water was too far down","The pot was empty","The pot was closed"], 0),
+ ("What did the crow put into the pot?", ["Sand","Leaves","Small stones"], 2),
+ ("What is the lesson of the story?", ["Be strong","Where there is a will, there is a way","Never fly in summer"], 1),
+ ])
+
+story(id="fox-grapes", level=1, title=("শেয়াল আর আঙুর", "Sheyal ar Angur", "The Fox and the Grapes"),
+ source="Aesop's fable (6th century BCE), traditional.",
+ lines=[
+ ("একটা শেয়ালের খুব খিদে পেয়েছিল।", "Ekta sheyaler khub khide peyechhilo.", "A fox was very hungry."),
+ ("সে খাবার খুঁজতে খুঁজতে একটা বাগানে গেল।", "Se khabar khujte khujte ekta bagane gelo.", "Looking for food, he went into a garden."),
+ ("সেখানে একটা গাছে অনেক আঙুর ঝুলছিল।", "Shekhane ekta gachhe onek angur jhulchhilo.", "Many grapes were hanging from a vine there."),
+ ("আঙুরগুলো পাকা আর রসালো ছিল।", "Angurgulo paka ar roshalo chhilo.", "The grapes were ripe and juicy."),
+ ("শেয়াল লাফ দিল, কিন্তু আঙুর ধরতে পারল না।", "Sheyal laph dilo, kintu angur dhorte parlo na.", "The fox jumped, but could not reach the grapes."),
+ ("সে আবার লাফ দিল। আবারও পারল না।", "Se abar laph dilo. Abar-o parlo na.", "He jumped again. Again he could not."),
+ ("অনেকবার চেষ্টা করে শেয়াল ক্লান্ত হয়ে গেল।", "Onekbar cheshta kore sheyal klanto hoye gelo.", "After trying many times, the fox became tired."),
+ ("তখন সে বলল, \"এই আঙুরগুলো নিশ্চয়ই টক!\"", "Tokhon se bolol, \"Ei angurgulo nishchoyi tok!\"", "Then he said, \"These grapes must be sour!\""),
+ ("\"আমি টক আঙুর খাব না।\"", "\"Ami tok angur khabo na.\"", "\"I will not eat sour grapes.\""),
+ ("এই বলে শেয়াল চলে গেল।", "Ei bole sheyal chole gelo.", "Saying this, the fox went away."),
+ ],
+ moral=("যা পাওয়া যায় না, তার দোষ খুঁজো না।", "Ja paoya jay na, tar dosh khujo na.", "Do not blame what you cannot get."),
+ vocab=[("শেয়াল","sheyal","fox / jackal"),("খিদে","khide","hunger"),("খাবার","khabar","food"),("বাগান","bagan","garden"),("আঙুর","angur","grapes"),("ঝোলা","jhola","to hang"),("পাকা","paka","ripe"),("রসালো","roshalo","juicy"),("লাফ","laph","jump"),("ধরা","dhora","to catch / reach"),("চেষ্টা","cheshta","effort / try"),("ক্লান্ত","klanto","tired"),("টক","tok","sour"),("নিশ্চয়ই","nishchoyi","surely"),("দোষ","dosh","fault / blame")],
+ quiz=[
+ ("How did the fox feel at the start?", ["Sleepy","Hungry","Angry"], 1),
+ ("What was hanging in the garden?", ["Mangoes","Grapes","Bananas"], 1),
+ ("What did the fox do to reach the grapes?", ["He climbed a ladder","He jumped","He asked a friend"], 1),
+ ("What did the fox say at the end?", ["The grapes must be sour","The grapes are too sweet","I will come back tomorrow"], 0),
+ ("What is the lesson of the story?", ["Grapes are sour","Do not blame what you cannot get","Foxes are clever"], 1),
+ ])
+
+story(id="hare-tortoise", level=2, title=("খরগোশ আর কচ্ছপ", "Khorgosh ar Kochchhop", "The Hare and the Tortoise"),
+ source="Aesop's fable (6th century BCE), traditional.",
+ lines=[
+ ("এক বনে একটা খরগোশ আর একটা কচ্ছপ থাকত।", "Ek bone ekta khorgosh ar ekta kochchhop thakto.", "In a forest there lived a hare and a tortoise."),
+ ("খরগোশ খুব জোরে দৌড়াত।", "Khorgosh khub jore dourato.", "The hare ran very fast."),
+ ("সে কচ্ছপকে দেখে হাসত।", "Se kochchhopke dekhe hashto.", "He used to laugh at the tortoise."),
+ ("একদিন কচ্ছপ বলল, \"চলো, আমরা দৌড় দিই।\"", "Ekdin kochchhop bolol, \"Cholo, amra dour dii.\"", "One day the tortoise said, \"Come, let's have a race.\""),
+ ("খরগোশ হেসে বলল, \"ঠিক আছে!\"", "Khorgosh hese bolol, \"Thik achhe!\"", "The hare laughed and said, \"Okay!\""),
+ ("দৌড় শুরু হল।", "Dour shuru holo.", "The race began."),
+ ("খরগোশ একদৌড়ে অনেক দূর চলে গেল।", "Khorgosh ek-doure onek dur chole gelo.", "In one run the hare went very far ahead."),
+ ("কচ্ছপ ধীরে ধীরে এগোতে লাগল।", "Kochchhop dhire dhire egote lagolo.", "The tortoise kept moving forward, slowly."),
+ ("খরগোশ ভাবল, \"আমি তো অনেক এগিয়ে আছি। একটু ঘুমিয়ে নিই।\"", "Khorgosh bhablo, \"Ami to onek egiye achhi. Ektu ghumiye nii.\"", "The hare thought, \"I am far ahead. Let me sleep a little.\""),
+ ("সে একটা গাছের নিচে ঘুমিয়ে পড়ল।", "Se ekta gacher niche ghumiye porlo.", "He fell asleep under a tree."),
+ ("কচ্ছপ থামল না। সে চলতেই থাকল।", "Kochchhop thamlo na. Se cholte-i thaklo.", "The tortoise did not stop. He just kept going."),
+ ("খরগোশের যখন ঘুম ভাঙল, তখন কচ্ছপ জিতে গেছে!", "Khorgosher jokhon ghum bhanglo, tokhon kochchhop jite geche!", "When the hare woke up, the tortoise had already won!"),
+ ],
+ moral=("ধীরে চলো, কিন্তু থেমো না।", "Dhire cholo, kintu themo na.", "Go slowly, but do not stop."),
+ vocab=[("বন","bon","forest"),("খরগোশ","khorgosh","hare / rabbit"),("কচ্ছপ","kochchhop","tortoise"),("দৌড়","dour","run / race"),("জোরে","jore","fast / loudly"),("হাসা","hasha","to laugh"),("ঠিক আছে","thik achhe","okay"),("শুরু","shuru","start"),("দূর","dur","far"),("এগোনো","egono","to move forward"),("এগিয়ে","egiye","ahead"),("ঘুমানো","ghumano","to sleep"),("গাছ","gachh","tree"),("থামা","thama","to stop"),("জেতা","jeta","to win"),("ঘুম ভাঙা","ghum bhanga","to wake up")],
+ quiz=[
+ ("Who lived in the forest?", ["A hare and a tortoise","A lion and a mouse","A crow and a fox"], 0),
+ ("What did the tortoise suggest?", ["A race","A song","A swim"], 0),
+ ("Why did the hare stop running?", ["He was lost","He thought he was far ahead and wanted to sleep","He was hungry"], 1),
+ ("Where did the hare fall asleep?", ["Under a tree","In the river","In a cave"], 0),
+ ("Who won the race?", ["The hare","The tortoise","Nobody"], 1),
+ ("What is the lesson of the story?", ["Go slowly, but do not stop","Hares are lazy","Races are bad"], 0),
+ ])
+
+story(id="ant-grasshopper", level=2, title=("পিঁপড়ে আর ঘাসফড়িং", "Pipre ar Ghasforing", "The Ant and the Grasshopper"),
+ source="Aesop's fable (6th century BCE), traditional.",
+ lines=[
+ ("গরমকালে একটা ঘাসফড়িং মাঠে গান গাইত আর নাচত।", "Gormokale ekta ghasforing mathe gan gaito ar nachto.", "In summer, a grasshopper used to sing and dance in the field."),
+ ("পাশে কয়েকটা পিঁপড়ে কাজ করত।", "Pashe koyekta pipre kaj korto.", "Nearby, some ants were working."),
+ ("তারা খাবার জোগাড় করে ঘরে জমা করত।", "Tara khabar jogar kore ghore joma korto.", "They collected food and stored it at home."),
+ ("ঘাসফড়িং হেসে বলল, \"এত কাজ কেন? এসো, গান গাই!\"", "Ghasforing hese bolol, \"Eto kaj keno? Esho, gan gai!\"", "The grasshopper laughed and said, \"Why so much work? Come, let's sing!\""),
+ ("পিঁপড়েরা বলল, \"শীতকাল আসছে। তখন খাবার পাওয়া যায় না।\"", "Piprera bolol, \"Shitkal aschhe. Tokhon khabar paoya jay na.\"", "The ants said, \"Winter is coming. Then there is no food to find.\""),
+ ("ঘাসফড়িং কথা শুনল না।", "Ghasforing kotha shunlo na.", "The grasshopper did not listen."),
+ ("শীতকাল এল। মাঠে আর খাবার ছিল না।", "Shitkal elo. Mathe ar khabar chhilo na.", "Winter came. There was no more food in the field."),
+ ("ঘাসফড়িংয়ের খুব খিদে পেল, আর খুব শীতও করল।", "Ghasforinger khub khide pelo, ar khub shit-o korlo.", "The grasshopper was very hungry, and very cold too."),
+ ("সে পিঁপড়েদের কাছে গিয়ে বলল, \"আমাকে একটু খাবার দাও।\"", "Se pipreder kachhe giye bolol, \"Amake ektu khabar dao.\"", "He went to the ants and said, \"Please give me a little food.\""),
+ ("পিঁপড়েরা বলল, \"গরমে আমরা কাজ করেছি। তুমি তখন গান গেয়েছ।\"", "Piprera bolol, \"Gorome amra kaj korechhi. Tumi tokhon gan geyechho.\"", "The ants said, \"In summer we worked. You were singing then.\""),
+ ("তবুও তারা দয়া করে তাকে একটু খাবার দিল।", "Tobu-o tara doya kore take ektu khabar dilo.", "Even so, they kindly gave him a little food."),
+ ],
+ moral=("কাজের সময় কাজ করাই ভালো।", "Kajer shomoy kaj korai bhalo.", "It is best to work when it is time to work."),
+ vocab=[("গরমকাল","gormokal","summer"),("ঘাসফড়িং","ghasforing","grasshopper"),("মাঠ","math","field"),("গান","gan","song"),("নাচা","nacha","to dance"),("পিঁপড়ে","pipre","ant"),("কাজ","kaj","work"),("জোগাড় করা","jogar kora","to gather"),("জমা করা","joma kora","to store up"),("শীতকাল","shitkal","winter"),("খিদে","khide","hunger"),("শীত","shit","cold"),("দয়া","doya","kindness"),("সময়","shomoy","time")],
+ quiz=[
+ ("What did the grasshopper do in summer?", ["Worked hard","Sang and danced","Slept all day"], 1),
+ ("What did the ants do in summer?", ["Collected and stored food","Played in the field","Went on a trip"], 0),
+ ("What did the ants say was coming?", ["Rain","Winter","A festival"], 1),
+ ("Why was the grasshopper hungry in winter?", ["He had no food stored","He was sick","The ants took his food"], 0),
+ ("How did the story end for the grasshopper?", ["The ants kindly gave him a little food","He found his own food","He went away angry"], 0),
+ ])
+
+story(id="lion-mouse", level=2, title=("সিংহ আর ইঁদুর", "Singho ar Indur", "The Lion and the Mouse"),
+ source="Aesop's fable (6th century BCE), traditional; a similar tale is in the Panchatantra tradition.",
+ lines=[
+ ("এক বনে এক সিংহ থাকত।", "Ek bone ek singho thakto.", "In a forest there lived a lion."),
+ ("একদিন সিংহ গাছের নিচে ঘুমাচ্ছিল।", "Ekdin singho gacher niche ghumachchhilo.", "One day the lion was sleeping under a tree."),
+ ("একটা ছোট্ট ইঁদুর তার গায়ের ওপর দিয়ে দৌড়ে গেল।", "Ekta chhotto indur tar gayer opor diye doure gelo.", "A tiny mouse ran over his body."),
+ ("সিংহ জেগে গেল। সে খুব রেগে গেল।", "Singho jege gelo. Se khub rege gelo.", "The lion woke up. He got very angry."),
+ ("সে ইঁদুরকে ধরে ফেলল।", "Se indurke dhore phelolo.", "He caught the mouse."),
+ ("ইঁদুর কাঁদতে কাঁদতে বলল, \"দয়া করো, আমাকে ছেড়ে দাও!\"", "Indur kadte kadte bolol, \"Doya koro, amake chhere dao!\"", "Crying, the mouse said, \"Have mercy, let me go!\""),
+ ("\"একদিন আমিও তোমাকে সাহায্য করব।\"", "\"Ekdin ami-o tomake sahajyo korbo.\"", "\"One day I will help you too.\""),
+ ("সিংহ হেসে ফেলল। \"তুমি এত ছোট! তুমি আমাকে কী সাহায্য করবে?\"", "Singho hese phelolo. \"Tumi eto chhoto! Tumi amake ki sahajyo korbe?\"", "The lion burst out laughing. \"You are so small! How will you help me?\""),
+ ("তবুও সিংহ ইঁদুরকে ছেড়ে দিল।", "Tobu-o singho indurke chhere dilo.", "Even so, the lion let the mouse go."),
+ ("কিছুদিন পরে সিংহ এক শিকারির জালে আটকে গেল।", "Kichhudin pore singho ek shikarir jale atke gelo.", "A few days later, the lion got caught in a hunter's net."),
+ ("সে জোরে গর্জন করল।", "Se jore gorjon korlo.", "He roared loudly."),
+ ("ইঁদুর সেই শব্দ শুনে ছুটে এল।", "Indur shei shobdo shune chhute elo.", "The mouse heard that sound and came running."),
+ ("সে দাঁত দিয়ে জাল কেটে দিল।", "Se dat diye jal kete dilo.", "He cut the net with his teeth."),
+ ("সিংহ মুক্ত হল। সে বলল, \"ধন্যবাদ, বন্ধু!\"", "Singho mukto holo. Se bolol, \"Dhonnobad, bondhu!\"", "The lion was free. He said, \"Thank you, friend!\""),
+ ],
+ moral=("ছোটরাও বড় কাজ করতে পারে।", "Chhotora-o boro kaj korte pare.", "Even the small can do big things."),
+ vocab=[("সিংহ","singho","lion"),("ইঁদুর","indur","mouse"),("গা","ga","body"),("রাগা","raga","to get angry"),("ধরা","dhora","to catch"),("কাঁদা","kada","to cry"),("দয়া","doya","mercy / kindness"),("ছেড়ে দেওয়া","chhere deoya","to let go"),("সাহায্য","sahajyo","help"),("শিকারি","shikari","hunter"),("জাল","jal","net"),("আটকানো","atkano","to get stuck"),("গর্জন","gorjon","roar"),("শব্দ","shobdo","sound"),("দাঁত","dat","tooth / teeth"),("কাটা","kata","to cut"),("মুক্ত","mukto","free"),("ধন্যবাদ","dhonnobad","thank you")],
+ quiz=[
+ ("What woke the lion up?", ["A hunter","A mouse running over him","A loud noise"], 1),
+ ("What did the mouse promise?", ["To bring food","To help the lion one day","To leave the forest"], 1),
+ ("What happened to the lion later?", ["He got caught in a net","He fell into the river","He lost his way"], 0),
+ ("How did the mouse help?", ["He called the hunter","He cut the net with his teeth","He gave the lion food"], 1),
+ ("What is the lesson of the story?", ["Lions are weak","Even the small can do big things","Never sleep outside"], 1),
+ ])
+
+story(id="monkey-crocodile", level=3, title=("বাঁদর আর কুমির", "Bandor ar Kumir", "The Monkey and the Crocodile"),
+ source="Panchatantra (c. 3rd century BCE onward) and the Jataka tales; very widely told in Bengal, often with a jamun tree. Mild peril.",
+ lines=[
+ ("নদীর ধারে একটা জাম গাছ ছিল।", "Nodir dhare ekta jam gachh chhilo.", "There was a jamun tree by the river."),
+ ("গাছে একটা বাঁদর থাকত।", "Gachhe ekta bandor thakto.", "A monkey lived in the tree."),
+ ("সে রোজ মিষ্টি জাম খেত।", "Se roj mishti jam kheto.", "He ate sweet jamuns every day."),
+ ("নদীতে একটা কুমির থাকত।", "Nodite ekta kumir thakto.", "A crocodile lived in the river."),
+ ("একদিন কুমির বাঁদরের কাছে এল।", "Ekdin kumir bandorer kachhe elo.", "One day the crocodile came to the monkey."),
+ ("বাঁদর তাকে অনেক জাম দিল।", "Bandor take onek jam dilo.", "The monkey gave him many jamuns."),
+ ("তারা দুজন বন্ধু হয়ে গেল।", "Tara dujon bondhu hoye gelo.", "The two of them became friends."),
+ ("কুমির কিছু জাম তার বউয়ের জন্য নিয়ে গেল।", "Kumir kichhu jam tar bouer jonyo niye gelo.", "The crocodile took some jamuns home for his wife."),
+ ("বউ জাম খেয়ে বলল, \"আমি তোমার বন্ধুর কলিজা খেতে চাই।\"", "Bou jam kheye bolol, \"Ami tomar bondhur kolija khete chai.\"", "His wife ate the jamuns and said, \"I want to eat your friend's heart.\""),
+ ("কুমির খুব দুঃখ পেল, কিন্তু সে বউয়ের কথা শুনল।", "Kumir khub dukkho pelo, kintu se bouer kotha shunlo.", "The crocodile was very sad, but he listened to his wife."),
+ ("সে বাঁদরকে বলল, \"বন্ধু, আমার বাড়িতে চলো। আমি তোমাকে পিঠে করে নিয়ে যাব।\"", "Se bandorke bolol, \"Bondhu, amar barite cholo. Ami tomake pithe kore niye jabo.\"", "He said to the monkey, \"Friend, come to my house. I will carry you on my back.\""),
+ ("নদীর মাঝখানে গিয়ে কুমির সব সত্যি কথা বলে দিল।", "Nodir majhkhane giye kumir sob shotti kotha bole dilo.", "In the middle of the river, the crocodile told him the whole truth."),
+ ("বাঁদর ভয় পেল, কিন্তু সে বুদ্ধি করে বলল, \"আরে বন্ধু, আগে বলোনি কেন? আমার কলিজা তো গাছেই রেখে এসেছি!\"", "Bandor bhoy pelo, kintu se buddhi kore bolol, \"Are bondhu, age bolo ni keno? Amar kolija to gachhei rekhe eshechhi!\"", "The monkey was scared, but he used his wits and said, \"Oh friend, why didn't you say so earlier? I left my heart on the tree!\""),
+ ("\"চলো, ফিরে যাই। আমি কলিজাটা নিয়ে আসি।\"", "\"Cholo, phire jai. Ami kolijata niye ashi.\"", "\"Come, let's go back. I will fetch my heart.\""),
+ ("বোকা কুমির ফিরে গেল।", "Boka kumir phire gelo.", "The foolish crocodile turned back."),
+ ("তীরে পৌঁছেই বাঁদর এক লাফে গাছে উঠে গেল।", "Tire pouchhei bandor ek laphe gachhe uthe gelo.", "The moment they reached the bank, the monkey leapt up into the tree."),
+ ("সে হেসে বলল, \"বোকা কুমির! কলিজা ছাড়া কেউ বাঁচে না!\"", "Se hese bolol, \"Boka kumir! Kolija chhara keu banche na!\"", "He laughed and said, \"Silly crocodile! Nobody can live without a heart!\""),
+ ],
+ moral=("বুদ্ধি থাকলে বিপদ থেকে বাঁচা যায়।", "Buddhi thakle bipod theke bancha jay.", "With wit, you can escape danger."),
+ vocab=[("নদী","nodi","river"),("ধার","dhar","bank / edge"),("জাম","jam","jamun (black plum)"),("বাঁদর","bandor","monkey"),("কুমির","kumir","crocodile"),("মিষ্টি","mishti","sweet"),("বন্ধু","bondhu","friend"),("বউ","bou","wife"),("কলিজা","kolija","heart (liver)"),("দুঃখ","dukkho","sadness"),("পিঠ","pith","back"),("মাঝখান","majhkhan","middle"),("সত্যি","shotti","true"),("ভয়","bhoy","fear"),("বুদ্ধি","buddhi","wit / intelligence"),("বোকা","boka","foolish"),("তীর","tir","river bank / shore"),("লাফ","laph","leap"),("বিপদ","bipod","danger")],
+ quiz=[
+ ("What fruit did the monkey give the crocodile?", ["Mangoes","Jamuns","Bananas"], 1),
+ ("Why did the crocodile take the monkey across the river?", ["To show him a new home","His wife wanted the monkey's heart","To race him"], 1),
+ ("Where did the crocodile tell the monkey the truth?", ["On the bank","In the middle of the river","At his house"], 1),
+ ("What did the monkey say about his heart?", ["He had lost it","He had left it on the tree","He had given it to a friend"], 1),
+ ("What did the monkey do when they reached the bank?", ["Thanked the crocodile","Jumped into the tree","Swam away"], 1),
+ ("What is the lesson of the story?", ["Crocodiles are friends","With wit, you can escape danger","Never eat jamuns"], 1),
+ ])
+
+story(id="blue-jackal", level=3, title=("নীল শেয়াল", "Nil Sheyal", "The Blue Jackal"),
+ source="Panchatantra (c. 3rd century BCE onward), traditional.",
+ lines=[
+ ("একটা শেয়াল খাবার খুঁজতে শহরে গিয়েছিল।", "Ekta sheyal khabar khujte shohore giyechhilo.", "A jackal had gone into a town looking for food."),
+ ("কুকুরেরা তাকে দেখে তাড়া করল।", "Kukurera take dekhe tara korlo.", "The dogs saw him and chased him."),
+ ("ভয়ে দৌড়াতে দৌড়াতে সে একটা বড় নীল রঙের গামলায় পড়ে গেল।", "Bhoye dourate dourate se ekta boro nil ranger gamlay pore gelo.", "Running in fear, he fell into a big tub of blue dye."),
+ ("সে উঠে এল। তার সারা গা নীল হয়ে গেছে!", "Se uthe elo. Tar shara ga nil hoye geche!", "He climbed out. His whole body had turned blue!"),
+ ("শেয়াল বনে ফিরে গেল।", "Sheyal bone phire gelo.", "The jackal went back to the forest."),
+ ("বনের পশুরা তাকে দেখে অবাক হল।", "Boner poshura take dekhe obak holo.", "The animals of the forest were amazed to see him."),
+ ("তারা বলল, \"এ কেমন প্রাণী? এমন নীল প্রাণী আগে দেখিনি!\"", "Tara bolol, \"E kemon prani? Emon nil prani age dekhini!\"", "They said, \"What kind of creature is this? We have never seen a blue creature before!\""),
+ ("শেয়াল বলল, \"আমি ঈশ্বরের পাঠানো রাজা। তোমরা আমার কথা শুনবে।\"", "Sheyal bolol, \"Ami ishshorer pathano raja. Tomra amar kotha shunbe.\"", "The jackal said, \"I am a king sent by God. You will obey me.\""),
+ ("সবাই ভয় পেয়ে তাকে রাজা মেনে নিল।", "Sobai bhoy peye take raja mene nilo.", "Everyone was scared and accepted him as king."),
+ ("নীল শেয়াল রাজার মতো থাকত। অন্য শেয়ালদের সে দূরে রাখত।", "Nil sheyal rajar moto thakto. Onyo sheyalder se dure rakhto.", "The blue jackal lived like a king. He kept other jackals far away."),
+ ("একদিন রাতে দূর থেকে শেয়ালদের ডাক শোনা গেল।", "Ekdin rate dur theke sheyalder dak shona gelo.", "One night, the calls of jackals were heard from far away."),
+ ("নীল শেয়াল নিজেকে সামলাতে পারল না। সেও ডেকে উঠল।", "Nil sheyal nijeke samlate parlo na. Se-o deke uthlo.", "The blue jackal could not hold himself back. He howled too."),
+ ("পশুরা বুঝে গেল, সে তো আসলে একটা শেয়াল!", "Poshura bujhe gelo, se to ashole ekta sheyal!", "The animals understood: he was only a jackal after all!"),
+ ("তারা তাকে বন থেকে তাড়িয়ে দিল।", "Tara take bon theke tariye dilo.", "They drove him out of the forest."),
+ ],
+ moral=("মিথ্যা বেশিদিন টেকে না।", "Michchha beshidin teke na.", "Lies do not last long."),
+ vocab=[("শহর","shohor","town / city"),("কুকুর","kukur","dog"),("তাড়া করা","tara kora","to chase"),("ভয়","bhoy","fear"),("গামলা","gamla","big basin / tub"),("নীল","nil","blue"),("সারা","shara","whole / all over"),("পশু","poshu","animal"),("অবাক","obak","amazed"),("প্রাণী","prani","creature"),("ঈশ্বর","ishshor","God"),("রাজা","raja","king"),("মেনে নেওয়া","mene neoya","to accept"),("ডাক","dak","call / cry"),("সামলানো","samlano","to control oneself"),("আসলে","ashole","in truth"),("তাড়িয়ে দেওয়া","tariye deoya","to drive away"),("মিথ্যা","michchha","lie")],
+ quiz=[
+ ("Why did the jackal go to the town?", ["To find food","To meet the king","To find a friend"], 0),
+ ("How did the jackal turn blue?", ["He painted himself","He fell into a tub of blue dye","It was the rain"], 1),
+ ("What did the jackal tell the animals?", ["That he was a king sent by God","That he was lost","That he was a dog"], 0),
+ ("What gave the jackal away?", ["His howl","His tail","His colour faded"], 0),
+ ("What did the animals do when they learned the truth?", ["Made him a minister","Drove him out of the forest","Gave him food"], 1),
+ ("What is the lesson of the story?", ["Blue is a royal colour","Lies do not last long","Never go to a town"], 1),
+ ])
+
+json.dump(S, open("stories.json","w"), ensure_ascii=False, indent=1)
+
+def md():
+    o=[]
+    o.append("# Bengali Reading Stories: first collection (draft for your review)\n")
+    o.append("Seven short traditional fables, retold in simple everyday Bengali for beginner readers. **Nothing here is in the app yet.** Please read the Bengali and romanization with a teacher's eye, because I wrote them and they need your correction.\n")
+    o.append("## At a glance\n")
+    o.append("| # | Story | Level | Lines | Vocab | Quiz Qs | Origin |")
+    o.append("|---|---|---|---|---|---|---|")
+    for i,s in enumerate(S,1):
+        o.append(f"| {i} | {s['title'][0]} · {s['title'][2]} | {s['level']} | {len(s['lines'])+1} | {len(s['vocab'])} | {len(s['quiz'])} | {s['source'].split(';')[0].split(',')[0]} |")
+    o.append("\nLines include the closing lesson. Level 1 = about 11 to 12 lines, Level 2 = 12 to 15 lines, Level 3 = 15 to 18 lines with more words.\n")
+    o.append("## The reading layers each story has\n")
+    o.append("1. **Vocabulary first**: Bengali, romanized, English.\n2. **Layer 1, Bengali only**: the whole story as plain Bengali text.\n3. **Layer 2, line by line**: each line in Bengali, then romanized, then English meaning.\n4. **Layer 3, English only**: the whole story in English.\n5. **Quiz**: comprehension questions with answers.\n")
+    o.append("Layers 1 and 3 are built from the same line table as Layer 2, so they can never disagree.\n")
+    for i,s in enumerate(S,1):
+        bn,ro,en=s['title']
+        o.append(f"\n---\n\n## {i}. {bn} · {ro} · {en}\n")
+        o.append(f"**Level:** {s['level']}  \n**Origin:** {s['source']}\n")
+        o.append("### Vocabulary\n")
+        o.append("| Bengali | Romanized | English |\n|---|---|---|")
+        for b,r,e in s['vocab']: o.append(f"| {b} | {r} | {e} |")
+        L=s['lines']+[s['moral']]
+        o.append("\n### Layer 1: Bengali only\n")
+        o.append(" ".join(l[0] for l in s['lines'])+f"\n\n**শিক্ষা:** {s['moral'][0]}\n")
+        o.append("### Layer 2: line by line\n")
+        for n,l in enumerate(s['lines'],1):
+            o.append(f"{n}. **{l[0]}**  \n   _{l[1]}_  \n   {l[2]}\n")
+        m=s['moral']
+        o.append(f"**শিক্ষা (Lesson):** **{m[0]}**  \n_{m[1]}_  \n{m[2]}\n")
+        o.append("### Layer 3: English only\n")
+        o.append(" ".join(l[2] for l in s['lines'])+f"\n\n**Lesson:** {m[2]}\n")
+        o.append("### Quiz\n")
+        for n,(q,opts,a) in enumerate(s['quiz'],1):
+            o.append(f"{n}. {q}  ")
+            for k,opt in enumerate(opts): o.append(f"   - {'ABC'[k]}) {opt}")
+            o.append(f"   - **Answer: {'ABC'[a]}**\n")
+    o.append("\n---\n\n## Real Bengali texts for later, once students are ready\n")
+    o.append("These are authentic, and I believe public domain in India and Bangladesh (life plus 60 years; please verify the edition you use). They are **too hard for beginners now**, but good for a later \"authentic reading\" tier:\n")
+    o.append("- **Sahaj Path** (Rabindranath Tagore's beginner primer, 1930): written for first-time readers; the best fit.\n- **Tuntunir Boi** (Upendrakishore Ray Chowdhury, 1910): short animal tales with simple repeated phrases.\n- **Thakurmar Jhuli** (Dakshinaranjan Mitra Majumder, 1907): classic folk tales; richer language.\n- **Sukumar Ray**'s nonsense verse (Abol Tabol): fun, but poetry, so later.\n- Tagore's short stories (e.g. Kabuliwala): advanced.\n")
+    o.append("\n## Things to check before we build\n")
+    o.append("1. **Bengali and romanization**: please correct anything unnatural. Romanization follows the app's scheme (ko, kho, dui...).\n2. **Story choice**: all are Aesop/Panchatantra fables. Do you want more Bengal-specific ones (Gopal Bhar, Tuntuni, Thakurmar Jhuli) as a second batch? Those need authentic texts sourced and simplified.\n3. **Content**: the monkey and crocodile story has mild peril (the crocodile's wife wants the monkey's heart). Fine for your students?\n4. **Quiz language**: questions are English only for now. Should some be in simple Bengali for a harder mode?\n")
+    return "\n".join(o)
+open("stories.md","w").write(md())
+print(sum(len(s['lines'])+1 for s in S), "lines;", sum(len(s['vocab']) for s in S), "vocab;", sum(len(s['quiz']) for s in S), "questions")

@@ -1,0 +1,1531 @@
+[
+ {
+  "id": "matras",
+  "title": [
+   "কার",
+   "Kar",
+   "Vowel signs (matras)"
+  ],
+  "blurb": "The signs that change a consonant's vowel: what each looks like, where it is written, and how to read it.",
+  "sections": [
+   {
+    "id": "what",
+    "title": "What a vowel sign is",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Every Bengali consonant already carries a short vowel sound, the inherent অ (like the 'o' in 'cot'). So ক is not just 'k': it is 'ko'. When a word needs a different vowel, we attach a vowel sign to the consonant. Bengali calls these signs কার (kar), so আ-কার means 'the sign for আ'. For example, ক + ◌া = কা (kaa)."
+     },
+     {
+      "t": "note",
+      "text": "People often say 'matra' for vowel signs, the way Hindi does. In Bengali the vowel signs are called কার (or স্বরচিহ্ন), and মাত্রা usually means the horizontal line on top of letters. Ask your teacher which word your class uses."
+     },
+     {
+      "t": "ex",
+      "title": "Letter + sign = a new sound",
+      "items": [
+       [
+        "ক + া = কা",
+        "k + aa = kaa",
+        "ক with the আ-কার"
+       ],
+       [
+        "ক + ি = কি",
+        "k + i = ki",
+        "ক with the ই-কার"
+       ],
+       [
+        "ক + ো = কো",
+        "k + o = ko",
+        "ক with the ও-কার"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "table",
+    "title": "The 11 vowels and their signs",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "There are 11 vowel letters. অ has no sign because it is already part of every consonant. The other ten each have a sign. The long ঈ and ঊ look different from ই and উ, but in modern Bengali they sound the same as the short ones."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Vowel",
+       "Sign",
+       "Called",
+       "Example word",
+       "Meaning"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "অ",
+         "ro": "o"
+        },
+        "none (it is already there)",
+        "—",
+        {
+         "bn": "কলম",
+         "ro": "kolom"
+        },
+        "pen"
+       ],
+       [
+        {
+         "bn": "আ",
+         "ro": "aa"
+        },
+        {
+         "bn": "◌া",
+         "ro": ""
+        },
+        {
+         "bn": "আ-কার",
+         "ro": "aa-kar"
+        },
+        {
+         "bn": "কাক",
+         "ro": "kaak"
+        },
+        "crow"
+       ],
+       [
+        {
+         "bn": "ই",
+         "ro": "i"
+        },
+        {
+         "bn": "◌ি",
+         "ro": ""
+        },
+        {
+         "bn": "ই-কার",
+         "ro": "i-kar"
+        },
+        {
+         "bn": "দিন",
+         "ro": "din"
+        },
+        "day"
+       ],
+       [
+        {
+         "bn": "ঈ",
+         "ro": "ii"
+        },
+        {
+         "bn": "◌ী",
+         "ro": ""
+        },
+        {
+         "bn": "ঈ-কার",
+         "ro": "ii-kar"
+        },
+        {
+         "bn": "নদী",
+         "ro": "nodi"
+        },
+        "river"
+       ],
+       [
+        {
+         "bn": "উ",
+         "ro": "u"
+        },
+        {
+         "bn": "◌ু",
+         "ro": ""
+        },
+        {
+         "bn": "উ-কার",
+         "ro": "u-kar"
+        },
+        {
+         "bn": "ফুল",
+         "ro": "phul"
+        },
+        "flower"
+       ],
+       [
+        {
+         "bn": "ঊ",
+         "ro": "uu"
+        },
+        {
+         "bn": "◌ূ",
+         "ro": ""
+        },
+        {
+         "bn": "ঊ-কার",
+         "ro": "uu-kar"
+        },
+        {
+         "bn": "ভূত",
+         "ro": "bhut"
+        },
+        "ghost"
+       ],
+       [
+        {
+         "bn": "ঋ",
+         "ro": "ri"
+        },
+        {
+         "bn": "◌ৃ",
+         "ro": ""
+        },
+        {
+         "bn": "ঋ-কার",
+         "ro": "ri-kar"
+        },
+        {
+         "bn": "কৃষ্ণ",
+         "ro": "krishno"
+        },
+        "Krishna"
+       ],
+       [
+        {
+         "bn": "এ",
+         "ro": "e"
+        },
+        {
+         "bn": "◌ে",
+         "ro": ""
+        },
+        {
+         "bn": "এ-কার",
+         "ro": "e-kar"
+        },
+        {
+         "bn": "দেশ",
+         "ro": "desh"
+        },
+        "country"
+       ],
+       [
+        {
+         "bn": "ঐ",
+         "ro": "oi"
+        },
+        {
+         "bn": "◌ৈ",
+         "ro": ""
+        },
+        {
+         "bn": "ঐ-কার",
+         "ro": "oi-kar"
+        },
+        {
+         "bn": "বৈষ্ণব",
+         "ro": "boishnob"
+        },
+        "Vaishnava"
+       ],
+       [
+        {
+         "bn": "ও",
+         "ro": "o"
+        },
+        {
+         "bn": "◌ো",
+         "ro": ""
+        },
+        {
+         "bn": "ও-কার",
+         "ro": "o-kar"
+        },
+        {
+         "bn": "গোবিন্দ",
+         "ro": "gobindo"
+        },
+        "Govinda"
+       ],
+       [
+        {
+         "bn": "ঔ",
+         "ro": "ou"
+        },
+        {
+         "bn": "◌ৌ",
+         "ro": ""
+        },
+        {
+         "bn": "ঔ-কার",
+         "ro": "ou-kar"
+        },
+        {
+         "bn": "নৌকা",
+         "ro": "nouka"
+        },
+        "boat"
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "The sign for ঋ (◌ৃ) is only used in words from Sanskrit, like কৃষ্ণ, কৃষক and মৃত. In modern Bengali its sound is 'ri'."
+     }
+    ]
+   },
+   {
+    "id": "onka",
+    "title": "Every sign on ক",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Here is the same consonant, ক, with each vowel. Read the consonant first, then add the vowel sound."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Vowel",
+       "ক with the sign",
+       "Sign called"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "অ",
+         "ro": "o"
+        },
+        {
+         "bn": "ক",
+         "ro": "ko"
+        },
+        "inherent: no sign"
+       ],
+       [
+        {
+         "bn": "আ",
+         "ro": "aa"
+        },
+        {
+         "bn": "কা",
+         "ro": "kaa"
+        },
+        {
+         "bn": "আ-কার",
+         "ro": "aa-kar"
+        }
+       ],
+       [
+        {
+         "bn": "ই",
+         "ro": "i"
+        },
+        {
+         "bn": "কি",
+         "ro": "ki"
+        },
+        {
+         "bn": "ই-কার",
+         "ro": "i-kar"
+        }
+       ],
+       [
+        {
+         "bn": "ঈ",
+         "ro": "ii"
+        },
+        {
+         "bn": "কী",
+         "ro": "kii"
+        },
+        {
+         "bn": "ঈ-কার",
+         "ro": "ii-kar"
+        }
+       ],
+       [
+        {
+         "bn": "উ",
+         "ro": "u"
+        },
+        {
+         "bn": "কু",
+         "ro": "ku"
+        },
+        {
+         "bn": "উ-কার",
+         "ro": "u-kar"
+        }
+       ],
+       [
+        {
+         "bn": "ঊ",
+         "ro": "uu"
+        },
+        {
+         "bn": "কূ",
+         "ro": "kuu"
+        },
+        {
+         "bn": "ঊ-কার",
+         "ro": "uu-kar"
+        }
+       ],
+       [
+        {
+         "bn": "ঋ",
+         "ro": "ri"
+        },
+        {
+         "bn": "কৃ",
+         "ro": "kri"
+        },
+        {
+         "bn": "ঋ-কার",
+         "ro": "ri-kar"
+        }
+       ],
+       [
+        {
+         "bn": "এ",
+         "ro": "e"
+        },
+        {
+         "bn": "কে",
+         "ro": "ke"
+        },
+        {
+         "bn": "এ-কার",
+         "ro": "e-kar"
+        }
+       ],
+       [
+        {
+         "bn": "ঐ",
+         "ro": "oi"
+        },
+        {
+         "bn": "কৈ",
+         "ro": "koi"
+        },
+        {
+         "bn": "ঐ-কার",
+         "ro": "oi-kar"
+        }
+       ],
+       [
+        {
+         "bn": "ও",
+         "ro": "o"
+        },
+        {
+         "bn": "কো",
+         "ro": "ko"
+        },
+        {
+         "bn": "ও-কার",
+         "ro": "o-kar"
+        }
+       ],
+       [
+        {
+         "bn": "ঔ",
+         "ro": "ou"
+        },
+        {
+         "bn": "কৌ",
+         "ro": "kou"
+        },
+        {
+         "bn": "ঔ-কার",
+         "ro": "ou-kar"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "ও (the sign ◌ো) is a closed 'o', like 'go'. The inherent অ is a rounder, shorter sound. Both are written 'o' in this app, but you will hear the difference in কলম (kolom) and গোরু (goru)."
+     }
+    ]
+   },
+   {
+    "id": "where",
+    "title": "Where the sign is written",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "A vowel sign can sit before, after, below or around the consonant. Three signs are written to the left of the consonant, even though you say the consonant first: দিন is read d-i-n, not i-d-n."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Position",
+       "Signs",
+       "Example",
+       "Read as"
+      ],
+      "rows": [
+       [
+        "After (to the right)",
+        {
+         "bn": "◌া  ◌ী",
+         "ro": "aa-kar, ii-kar"
+        },
+        {
+         "bn": "কাক, নদী",
+         "ro": "kaak, nodi"
+        },
+        "consonant, then the vowel"
+       ],
+       [
+        "Below",
+        {
+         "bn": "◌ু  ◌ূ  ◌ৃ",
+         "ro": "u-kar, uu-kar, ri-kar"
+        },
+        {
+         "bn": "ফুল, ভূত, কৃষক",
+         "ro": "phul, bhut, krishok"
+        },
+        "consonant, then the vowel"
+       ],
+       [
+        "Before (to the left)",
+        {
+         "bn": "◌ি  ◌ে  ◌ৈ",
+         "ro": "i-kar, e-kar, oi-kar"
+        },
+        {
+         "bn": "দিন, দেশ, তৈরি",
+         "ro": "din, desh, toiri"
+        },
+        "the sign is written first, but read after the consonant"
+       ],
+       [
+        "Both sides",
+        {
+         "bn": "◌ো  ◌ৌ",
+         "ro": "o-kar, ou-kar"
+        },
+        {
+         "bn": "গোরু, নৌকা",
+         "ro": "goru, nouka"
+        },
+        "one part before and one part after the consonant"
+       ]
+      ]
+     },
+     {
+      "t": "ex",
+      "title": null,
+      "items": [
+       [
+        "দিন",
+        "din",
+        "day: ি is written before দ but read after it"
+       ],
+       [
+        "গোরু",
+        "goru",
+        "cow: ো wraps around গ"
+       ],
+       [
+        "নৌকা",
+        "nouka",
+        "boat: ৌ wraps around ন, and া follows কা"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "chart",
+    "title": "The sign chart",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "This chart shows eight consonants with the inherent vowel and nine signs. Read across a row to hear one consonant with every vowel. Scroll sideways on a small screen."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Letter",
+       "অ (none)",
+       "◌া",
+       "◌ি",
+       "◌ী",
+       "◌ু",
+       "◌ূ",
+       "◌ে",
+       "◌ৈ",
+       "◌ো",
+       "◌ৌ"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "ক",
+         "ro": "k"
+        },
+        {
+         "bn": "ক",
+         "ro": "ko"
+        },
+        {
+         "bn": "কা",
+         "ro": "kaa"
+        },
+        {
+         "bn": "কি",
+         "ro": "ki"
+        },
+        {
+         "bn": "কী",
+         "ro": "kii"
+        },
+        {
+         "bn": "কু",
+         "ro": "ku"
+        },
+        {
+         "bn": "কূ",
+         "ro": "kuu"
+        },
+        {
+         "bn": "কে",
+         "ro": "ke"
+        },
+        {
+         "bn": "কৈ",
+         "ro": "koi"
+        },
+        {
+         "bn": "কো",
+         "ro": "ko"
+        },
+        {
+         "bn": "কৌ",
+         "ro": "kou"
+        }
+       ],
+       [
+        {
+         "bn": "খ",
+         "ro": "kh"
+        },
+        {
+         "bn": "খ",
+         "ro": "kho"
+        },
+        {
+         "bn": "খা",
+         "ro": "khaa"
+        },
+        {
+         "bn": "খি",
+         "ro": "khi"
+        },
+        {
+         "bn": "খী",
+         "ro": "khii"
+        },
+        {
+         "bn": "খু",
+         "ro": "khu"
+        },
+        {
+         "bn": "খূ",
+         "ro": "khuu"
+        },
+        {
+         "bn": "খে",
+         "ro": "khe"
+        },
+        {
+         "bn": "খৈ",
+         "ro": "khoi"
+        },
+        {
+         "bn": "খো",
+         "ro": "kho"
+        },
+        {
+         "bn": "খৌ",
+         "ro": "khou"
+        }
+       ],
+       [
+        {
+         "bn": "গ",
+         "ro": "g"
+        },
+        {
+         "bn": "গ",
+         "ro": "go"
+        },
+        {
+         "bn": "গা",
+         "ro": "gaa"
+        },
+        {
+         "bn": "গি",
+         "ro": "gi"
+        },
+        {
+         "bn": "গী",
+         "ro": "gii"
+        },
+        {
+         "bn": "গু",
+         "ro": "gu"
+        },
+        {
+         "bn": "গূ",
+         "ro": "guu"
+        },
+        {
+         "bn": "গে",
+         "ro": "ge"
+        },
+        {
+         "bn": "গৈ",
+         "ro": "goi"
+        },
+        {
+         "bn": "গো",
+         "ro": "go"
+        },
+        {
+         "bn": "গৌ",
+         "ro": "gou"
+        }
+       ],
+       [
+        {
+         "bn": "চ",
+         "ro": "ch"
+        },
+        {
+         "bn": "চ",
+         "ro": "cho"
+        },
+        {
+         "bn": "চা",
+         "ro": "chaa"
+        },
+        {
+         "bn": "চি",
+         "ro": "chi"
+        },
+        {
+         "bn": "চী",
+         "ro": "chii"
+        },
+        {
+         "bn": "চু",
+         "ro": "chu"
+        },
+        {
+         "bn": "চূ",
+         "ro": "chuu"
+        },
+        {
+         "bn": "চে",
+         "ro": "che"
+        },
+        {
+         "bn": "চৈ",
+         "ro": "choi"
+        },
+        {
+         "bn": "চো",
+         "ro": "cho"
+        },
+        {
+         "bn": "চৌ",
+         "ro": "chou"
+        }
+       ],
+       [
+        {
+         "bn": "ত",
+         "ro": "t"
+        },
+        {
+         "bn": "ত",
+         "ro": "to"
+        },
+        {
+         "bn": "তা",
+         "ro": "taa"
+        },
+        {
+         "bn": "তি",
+         "ro": "ti"
+        },
+        {
+         "bn": "তী",
+         "ro": "tii"
+        },
+        {
+         "bn": "তু",
+         "ro": "tu"
+        },
+        {
+         "bn": "তূ",
+         "ro": "tuu"
+        },
+        {
+         "bn": "তে",
+         "ro": "te"
+        },
+        {
+         "bn": "তৈ",
+         "ro": "toi"
+        },
+        {
+         "bn": "তো",
+         "ro": "to"
+        },
+        {
+         "bn": "তৌ",
+         "ro": "tou"
+        }
+       ],
+       [
+        {
+         "bn": "ন",
+         "ro": "n"
+        },
+        {
+         "bn": "ন",
+         "ro": "no"
+        },
+        {
+         "bn": "না",
+         "ro": "naa"
+        },
+        {
+         "bn": "নি",
+         "ro": "ni"
+        },
+        {
+         "bn": "নী",
+         "ro": "nii"
+        },
+        {
+         "bn": "নু",
+         "ro": "nu"
+        },
+        {
+         "bn": "নূ",
+         "ro": "nuu"
+        },
+        {
+         "bn": "নে",
+         "ro": "ne"
+        },
+        {
+         "bn": "নৈ",
+         "ro": "noi"
+        },
+        {
+         "bn": "নো",
+         "ro": "no"
+        },
+        {
+         "bn": "নৌ",
+         "ro": "nou"
+        }
+       ],
+       [
+        {
+         "bn": "প",
+         "ro": "p"
+        },
+        {
+         "bn": "প",
+         "ro": "po"
+        },
+        {
+         "bn": "পা",
+         "ro": "paa"
+        },
+        {
+         "bn": "পি",
+         "ro": "pi"
+        },
+        {
+         "bn": "পী",
+         "ro": "pii"
+        },
+        {
+         "bn": "পু",
+         "ro": "pu"
+        },
+        {
+         "bn": "পূ",
+         "ro": "puu"
+        },
+        {
+         "bn": "পে",
+         "ro": "pe"
+        },
+        {
+         "bn": "পৈ",
+         "ro": "poi"
+        },
+        {
+         "bn": "পো",
+         "ro": "po"
+        },
+        {
+         "bn": "পৌ",
+         "ro": "pou"
+        }
+       ],
+       [
+        {
+         "bn": "ম",
+         "ro": "m"
+        },
+        {
+         "bn": "ম",
+         "ro": "mo"
+        },
+        {
+         "bn": "মা",
+         "ro": "maa"
+        },
+        {
+         "bn": "মি",
+         "ro": "mi"
+        },
+        {
+         "bn": "মী",
+         "ro": "mii"
+        },
+        {
+         "bn": "মু",
+         "ro": "mu"
+        },
+        {
+         "bn": "মূ",
+         "ro": "muu"
+        },
+        {
+         "bn": "মে",
+         "ro": "me"
+        },
+        {
+         "bn": "মৈ",
+         "ro": "moi"
+        },
+        {
+         "bn": "মো",
+         "ro": "mo"
+        },
+        {
+         "bn": "মৌ",
+         "ro": "mou"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "ঋ-কার is left out because it only appears in a few Sanskrit words."
+     }
+    ]
+   },
+   {
+    "id": "full",
+    "title": "Letter or sign?",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "A vowel letter (আ, ই, উ…) is written in full at the start of a word, or after another vowel. After a consonant, the same vowel is written as a sign."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "",
+       "Vowel letter (full)",
+       "Vowel sign (after a consonant)"
+      ],
+      "rows": [
+       [
+        "আ",
+        {
+         "bn": "আম (mango)",
+         "ro": "aam"
+        },
+        {
+         "bn": "কাক (crow)",
+         "ro": "kaak"
+        }
+       ],
+       [
+        "ই",
+        {
+         "bn": "ইলিশ (hilsa fish)",
+         "ro": "ilish"
+        },
+        {
+         "bn": "দিন (day)",
+         "ro": "din"
+        }
+       ],
+       [
+        "উ",
+        {
+         "bn": "উট (camel)",
+         "ro": "ut"
+        },
+        {
+         "bn": "ফুল (flower)",
+         "ro": "phul"
+        }
+       ],
+       [
+        "এ",
+        {
+         "bn": "এক (one)",
+         "ro": "ek"
+        },
+        {
+         "bn": "দেশ (country)",
+         "ro": "desh"
+        }
+       ],
+       [
+        "ও",
+        {
+         "bn": "ওল (yam)",
+         "ro": "ol"
+        },
+        {
+         "bn": "গোরু (cow)",
+         "ro": "goru"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "words",
+    "title": "Words to read",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Read each word one letter at a time: the consonant, then its sign. The meaning is under the word."
+     },
+     {
+      "t": "ex",
+      "title": "Signs after and before the consonant",
+      "items": [
+       [
+        "মা",
+        "ma",
+        "mother (া)"
+       ],
+       [
+        "ভাত",
+        "bhat",
+        "rice (া)"
+       ],
+       [
+        "চিনি",
+        "chini",
+        "sugar (ি)"
+       ],
+       [
+        "দিদি",
+        "didi",
+        "elder sister (ি)"
+       ]
+      ]
+     },
+     {
+      "t": "ex",
+      "title": "Long signs and signs below",
+      "items": [
+       [
+        "দীপ",
+        "dip",
+        "lamp (ী)"
+       ],
+       [
+        "চুল",
+        "chul",
+        "hair (ু)"
+       ],
+       [
+        "দুধ",
+        "dudh",
+        "milk (ু)"
+       ],
+       [
+        "দূর",
+        "dur",
+        "far (ূ)"
+       ]
+      ]
+     },
+     {
+      "t": "ex",
+      "title": "Signs before the consonant",
+      "items": [
+       [
+        "তেল",
+        "tel",
+        "oil (ে)"
+       ],
+       [
+        "ভেড়া",
+        "bhera",
+        "sheep (ে)"
+       ],
+       [
+        "খৈ",
+        "khoi",
+        "puffed rice (ৈ)"
+       ],
+       [
+        "বৈশাখ",
+        "boishakh",
+        "a Bengali month (ৈ)"
+       ]
+      ]
+     },
+     {
+      "t": "ex",
+      "title": "Signs around and below",
+      "items": [
+       [
+        "ঘোড়া",
+        "ghora",
+        "horse (ো)"
+       ],
+       [
+        "ঢোল",
+        "dhol",
+        "drum (ো)"
+       ],
+       [
+        "মৌমাছি",
+        "moumachhi",
+        "bee (ৌ)"
+       ],
+       [
+        "কৃষক",
+        "krishok",
+        "farmer (ৃ)"
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "exercises": [
+   {
+    "q": "What vowel sound does every consonant carry by default?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "অ",
+      "ro": "o"
+     },
+     {
+      "bn": "আ",
+      "ro": "aa"
+     },
+     {
+      "bn": "ই",
+      "ro": "i"
+     }
+    ],
+    "answer": 0,
+    "why": "The inherent vowel is অ, so ক is 'ko'."
+   },
+   {
+    "q": "Which sign is the ই-কার?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "◌ি",
+      "ro": "i"
+     },
+     {
+      "bn": "◌ী",
+      "ro": "ii"
+     },
+     {
+      "bn": "◌ু",
+      "ro": "u"
+     }
+    ],
+    "answer": 0,
+    "why": "◌ি is the sign for ই."
+   },
+   {
+    "q": "Which sign is the আ-কার?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "◌া",
+      "ro": "aa"
+     },
+     {
+      "bn": "◌ে",
+      "ro": "e"
+     },
+     {
+      "bn": "◌ো",
+      "ro": "o"
+     }
+    ],
+    "answer": 0,
+    "why": "◌া is the sign for আ."
+   },
+   {
+    "q": "Put the letter and the sign together.",
+    "sentence": {
+     "bn": "ক + ◌া = ?",
+     "ro": "k + aa = ?"
+    },
+    "options": [
+     {
+      "bn": "কা",
+      "ro": "kaa"
+     },
+     {
+      "bn": "কি",
+      "ro": "ki"
+     },
+     {
+      "bn": "কু",
+      "ro": "ku"
+     }
+    ],
+    "answer": 0,
+    "why": "ক + ◌া = কা."
+   },
+   {
+    "q": "Put the letter and the sign together.",
+    "sentence": {
+     "bn": "ক + ◌ি = ?",
+     "ro": "k + i = ?"
+    },
+    "options": [
+     {
+      "bn": "কি",
+      "ro": "ki"
+     },
+     {
+      "bn": "কে",
+      "ro": "ke"
+     },
+     {
+      "bn": "কো",
+      "ro": "ko"
+     }
+    ],
+    "answer": 0,
+    "why": "ক + ◌ি = কি."
+   },
+   {
+    "q": "Put the letter and the sign together.",
+    "sentence": {
+     "bn": "ক + ◌ে = ?",
+     "ro": "k + e = ?"
+    },
+    "options": [
+     {
+      "bn": "কে",
+      "ro": "ke"
+     },
+     {
+      "bn": "কৈ",
+      "ro": "koi"
+     },
+     {
+      "bn": "কা",
+      "ro": "kaa"
+     }
+    ],
+    "answer": 0,
+    "why": "ক + ◌ে = কে."
+   },
+   {
+    "q": "Which sign is in ফুল?",
+    "sentence": {
+     "bn": "ফুল",
+     "ro": "phul"
+    },
+    "options": [
+     {
+      "bn": "◌ু",
+      "ro": "u"
+     },
+     {
+      "bn": "◌ূ",
+      "ro": "uu"
+     },
+     {
+      "bn": "◌ো",
+      "ro": "o"
+     }
+    ],
+    "answer": 0,
+    "why": "ফুল has the short উ-কার ◌ু below ফ."
+   },
+   {
+    "q": "Which sign is in নদী?",
+    "sentence": {
+     "bn": "নদী",
+     "ro": "nodi"
+    },
+    "options": [
+     {
+      "bn": "◌ী",
+      "ro": "ii"
+     },
+     {
+      "bn": "◌ি",
+      "ro": "i"
+     },
+     {
+      "bn": "◌া",
+      "ro": "aa"
+     }
+    ],
+    "answer": 0,
+    "why": "নদী ends with the long ঈ-কার ◌ী."
+   },
+   {
+    "q": "Which sign is in দেশ?",
+    "sentence": {
+     "bn": "দেশ",
+     "ro": "desh"
+    },
+    "options": [
+     {
+      "bn": "◌ে",
+      "ro": "e"
+     },
+     {
+      "bn": "◌ৈ",
+      "ro": "oi"
+     },
+     {
+      "bn": "◌ো",
+      "ro": "o"
+     }
+    ],
+    "answer": 0,
+    "why": "দেশ has the এ-কার ◌ে."
+   },
+   {
+    "q": "Which two signs are in নৌকা?",
+    "sentence": {
+     "bn": "নৌকা",
+     "ro": "nouka"
+    },
+    "options": [
+     {
+      "bn": "◌ৌ and ◌া",
+      "ro": "ou-kar and aa-kar"
+     },
+     {
+      "bn": "◌ো and ◌া",
+      "ro": "o-kar and aa-kar"
+     },
+     {
+      "bn": "◌ৈ and ◌ি",
+      "ro": "oi-kar and i-kar"
+     }
+    ],
+    "answer": 0,
+    "why": "◌ৌ wraps around ন and ◌া follows কা."
+   },
+   {
+    "q": "Which sign is written to the left of the consonant?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "◌ি",
+      "ro": "i"
+     },
+     {
+      "bn": "◌া",
+      "ro": "aa"
+     },
+     {
+      "bn": "◌ু",
+      "ro": "u"
+     }
+    ],
+    "answer": 0,
+    "why": "◌ি, ◌ে and ◌ৈ are written before the consonant."
+   },
+   {
+    "q": "Which sign is written on both sides of the consonant?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "◌ো",
+      "ro": "o"
+     },
+     {
+      "bn": "◌ে",
+      "ro": "e"
+     },
+     {
+      "bn": "◌ী",
+      "ro": "ii"
+     }
+    ],
+    "answer": 0,
+    "why": "◌ো (and ◌ৌ) have one part before and one part after."
+   },
+   {
+    "q": "How do you read the word?",
+    "sentence": {
+     "bn": "দিন",
+     "ro": "din"
+    },
+    "options": [
+     {
+      "bn": "din",
+      "ro": "din"
+     },
+     {
+      "bn": "idn",
+      "ro": "idn"
+     },
+     {
+      "bn": "dni",
+      "ro": "dni"
+     }
+    ],
+    "answer": 0,
+    "why": "◌ি is written first but read after দ: d-i-n."
+   },
+   {
+    "q": "How do you read the word?",
+    "sentence": {
+     "bn": "কাক",
+     "ro": "kaak"
+    },
+    "options": [
+     {
+      "bn": "kaak",
+      "ro": "kaak"
+     },
+     {
+      "bn": "kuk",
+      "ro": "kuk"
+     },
+     {
+      "bn": "kik",
+      "ro": "kik"
+     }
+    ],
+    "answer": 0,
+    "why": "কা + ক = kaak (crow)."
+   },
+   {
+    "q": "Which word means 'country'?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "দেশ",
+      "ro": "desh"
+     },
+     {
+      "bn": "দিন",
+      "ro": "din"
+     },
+     {
+      "bn": "দুধ",
+      "ro": "dudh"
+     }
+    ],
+    "answer": 0,
+    "why": "দেশ (desh) means country."
+   },
+   {
+    "q": "Which is written as a full letter, not a sign?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "আম",
+      "ro": "aam"
+     },
+     {
+      "bn": "কাক",
+      "ro": "kaak"
+     },
+     {
+      "bn": "মা",
+      "ro": "ma"
+     }
+    ],
+    "answer": 0,
+    "why": "At the start of a word the vowel is a full letter: আম."
+   },
+   {
+    "q": "How do you read ভূত?",
+    "sentence": {
+     "bn": "ভূত",
+     "ro": "bhut"
+    },
+    "options": [
+     {
+      "bn": "bhut",
+      "ro": "bhut"
+     },
+     {
+      "bn": "bhat",
+      "ro": "bhat"
+     },
+     {
+      "bn": "bhit",
+      "ro": "bhit"
+     }
+    ],
+    "answer": 0,
+    "why": "ভূ has the long ঊ-কার, read 'bhu': bhut (ghost)."
+   },
+   {
+    "q": "Which sign is in গোরু at the start?",
+    "sentence": {
+     "bn": "গোরু",
+     "ro": "goru"
+    },
+    "options": [
+     {
+      "bn": "◌ো",
+      "ro": "o"
+     },
+     {
+      "bn": "◌ে",
+      "ro": "e"
+     },
+     {
+      "bn": "◌ৌ",
+      "ro": "ou"
+     }
+    ],
+    "answer": 0,
+    "why": "গো has the ও-কার ◌ো wrapping around গ."
+   }
+  ]
+ }
+]

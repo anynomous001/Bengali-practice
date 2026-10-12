@@ -1,6 +1,9 @@
+type Entry = [string, string, string | null, string?, string?];
+type Raw = { id: string; title: string; letters: Entry[] };
+
 // [letter, romanization, example word, word romanization, word meaning]
 // Letters without a clean example word use null and are skipped by the quizzes.
-const GROUPS = [
+const GROUPS_RAW: Raw[] = [
   { id: "vowels", title: "Vowels (স্বরবর্ণ)", letters: [
     ["অ", "o", "অজগর", "ojogor", "python"],
     ["আ", "a", "আম", "aam", "mango"],
@@ -59,5 +62,25 @@ const GROUPS = [
   ]}
 ];
 
-const LETTERS = GROUPS.flatMap(g => g.letters.map(([ch, rom, word, wrom, wmean]) =>
-  ({ ch, rom, word, wrom, wmean, group: g.id })));
+
+export type Letter = {
+  ch: string;
+  rom: string;
+  word: string | null;
+  wrom: string | null;
+  wmean: string | null;
+  group: string;
+};
+
+export const GROUPS = GROUPS_RAW.map(({ id, title }) => ({ id, title }));
+
+export const LETTERS: Letter[] = GROUPS_RAW.flatMap((g) =>
+  g.letters.map(([ch, rom, word, wrom, wmean]) => ({
+    ch,
+    rom,
+    word: word ?? null,
+    wrom: wrom ?? null,
+    wmean: wmean ?? null,
+    group: g.id,
+  })),
+);

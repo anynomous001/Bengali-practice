@@ -1,0 +1,6656 @@
+// Grammar lessons and exercises. Generated from content-drafts/build_grammar.py.
+// Only import this from server code (pages/actions) so the text is never in the public JS bundle.
+export type Cell = string | { bn: string; ro: string };
+export type Block =
+  | { t: "p"; text: string }
+  | { t: "note"; text: string }
+  | { t: "table"; title: string | null; head: string[]; rows: Cell[][] }
+  | { t: "ex"; title: string | null; items: [string, string, string][] };
+export type Exercise = { q: string; sentence: { bn: string; ro: string } | null; options: Cell[]; answer: number; why: string };
+export type GrammarSection = { id: string; title: string; blocks: Block[] };
+export type GrammarTopic = {
+  id: string;
+  title: [bn: string, roman: string, en: string];
+  blurb: string;
+  sections: GrammarSection[];
+  exercises: Exercise[];
+};
+
+export const GRAMMAR: GrammarTopic[] = [
+ {
+  "id": "purush",
+  "title": [
+   "পুরুষ",
+   "Purush",
+   "Person & pronouns"
+  ],
+  "blurb": "Who is speaking, who is spoken to, who is spoken about, and the three levels of 'you'.",
+  "sections": [
+   {
+    "id": "persons",
+    "title": "The three persons",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "পুরুষ (purush) tells us who a sentence is about: the speaker, the person spoken to, or someone else. Bengali pronouns and verbs both change with the person."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Person",
+       "Meaning",
+       "Singular",
+       "Plural"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "উত্তম পুরুষ",
+         "ro": "uttom purush"
+        },
+        "1st person: the speaker",
+        {
+         "bn": "আমি",
+         "ro": "ami"
+        },
+        {
+         "bn": "আমরা",
+         "ro": "amra"
+        }
+       ],
+       [
+        {
+         "bn": "মধ্যম পুরুষ",
+         "ro": "moddhom purush"
+        },
+        "2nd person: the person spoken to",
+        {
+         "bn": "তুই / তুমি / আপনি",
+         "ro": "tui / tumi / apni"
+        },
+        {
+         "bn": "তোরা / তোমরা / আপনারা",
+         "ro": "tora / tomra / apnara"
+        }
+       ],
+       [
+        {
+         "bn": "নাম পুরুষ",
+         "ro": "nam purush"
+        },
+        "3rd person: the person spoken about",
+        {
+         "bn": "সে / তিনি",
+         "ro": "she / tini"
+        },
+        {
+         "bn": "তারা / তাঁরা",
+         "ro": "tara / tanra"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "Some books call the third person প্রথম পুরুষ (the first, in the Sanskrit order). Ask your teacher which labels your class uses. Bengali has no grammatical gender: সে means both 'he' and 'she'."
+     },
+     {
+      "t": "ex",
+      "title": "The verb changes with the person",
+      "items": [
+       [
+        "আমি স্কুলে যাই।",
+        "ami skule jai.",
+        "I go to school."
+       ],
+       [
+        "তুমি স্কুলে যাও।",
+        "tumi skule jao.",
+        "You go to school."
+       ],
+       [
+        "সে স্কুলে যায়।",
+        "she skule jay.",
+        "He / she goes to school."
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "levels",
+    "title": "Three levels of 'you'",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Bengali has three words for 'you', and the verb ending changes with each. Choosing the right level shows respect."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Pronoun",
+       "Level",
+       "Used for",
+       "Example"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "তুই",
+         "ro": "tui"
+        },
+        "Very familiar",
+        "Close friends, small children, people younger than you. Rude if used wrongly.",
+        {
+         "bn": "তুই কোথায় যাচ্ছিস?",
+         "ro": "tui kothay jachchhis?"
+        }
+       ],
+       [
+        {
+         "bn": "তুমি",
+         "ro": "tumi"
+        },
+        "Familiar",
+        "Friends, peers, younger relatives, people you know well.",
+        {
+         "bn": "তুমি কোথায় যাচ্ছ?",
+         "ro": "tumi kothay jachchho?"
+        }
+       ],
+       [
+        {
+         "bn": "আপনি",
+         "ro": "apni"
+        },
+        "Respectful",
+        "Elders, teachers, strangers, officials, polite situations.",
+        {
+         "bn": "আপনি কোথায় যাচ্ছেন?",
+         "ro": "apni kothay jachchhen?"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "When unsure, use আপনি. It is never wrong. Move to তুমি when the other person invites you to."
+     }
+    ]
+   },
+   {
+    "id": "third",
+    "title": "He, she, they",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "The third person also has an ordinary and a respectful form. The respectful form takes the same verb ending as আপনি. Words for 'this person' and 'that person' show near and far."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "",
+       "Ordinary",
+       "Respectful",
+       "Example"
+      ],
+      "rows": [
+       [
+        "He / she (the person spoken about)",
+        {
+         "bn": "সে",
+         "ro": "she"
+        },
+        {
+         "bn": "তিনি",
+         "ro": "tini"
+        },
+        {
+         "bn": "তিনি স্কুলে যান।",
+         "ro": "tini skule jan."
+        }
+       ],
+       [
+        "This person (near)",
+        {
+         "bn": "এ",
+         "ro": "e"
+        },
+        {
+         "bn": "ইনি",
+         "ro": "ini"
+        },
+        {
+         "bn": "ইনি আমার শিক্ষক।",
+         "ro": "ini amar shikkhok."
+        }
+       ],
+       [
+        "That person (far)",
+        {
+         "bn": "ও",
+         "ro": "o"
+        },
+        {
+         "bn": "উনি",
+         "ro": "uni"
+        },
+        {
+         "bn": "উনি আমার মা।",
+         "ro": "uni amar ma."
+        }
+       ]
+      ]
+     },
+     {
+      "t": "ex",
+      "title": null,
+      "items": [
+       [
+        "সে স্কুলে যায়।",
+        "she skule jay.",
+        "He / she goes to school. (ordinary)"
+       ],
+       [
+        "তিনি স্কুলে যান।",
+        "tini skule jan.",
+        "He / she goes to school. (respectful)"
+       ],
+       [
+        "ওরা স্কুলে যায়।",
+        "ora skule jay.",
+        "They go to school."
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "forms",
+    "title": "Pronoun forms",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Pronouns change form for the object (who receives the action) and for possession. The possessive ends in -র; the object ends in -কে. In the plural, one form (-দের) does both jobs."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Pronoun",
+       "Subject",
+       "Object (-কে)",
+       "Possessive (-র)"
+      ],
+      "rows": [
+       [
+        "I",
+        {
+         "bn": "আমি",
+         "ro": "ami"
+        },
+        {
+         "bn": "আমাকে",
+         "ro": "amake"
+        },
+        {
+         "bn": "আমার",
+         "ro": "amar"
+        }
+       ],
+       [
+        "you (very familiar)",
+        {
+         "bn": "তুই",
+         "ro": "tui"
+        },
+        {
+         "bn": "তোকে",
+         "ro": "toke"
+        },
+        {
+         "bn": "তোর",
+         "ro": "tor"
+        }
+       ],
+       [
+        "you (familiar)",
+        {
+         "bn": "তুমি",
+         "ro": "tumi"
+        },
+        {
+         "bn": "তোমাকে",
+         "ro": "tomake"
+        },
+        {
+         "bn": "তোমার",
+         "ro": "tomar"
+        }
+       ],
+       [
+        "you (respectful)",
+        {
+         "bn": "আপনি",
+         "ro": "apni"
+        },
+        {
+         "bn": "আপনাকে",
+         "ro": "apnake"
+        },
+        {
+         "bn": "আপনার",
+         "ro": "apnar"
+        }
+       ],
+       [
+        "he / she",
+        {
+         "bn": "সে",
+         "ro": "she"
+        },
+        {
+         "bn": "তাকে",
+         "ro": "take"
+        },
+        {
+         "bn": "তার",
+         "ro": "tar"
+        }
+       ],
+       [
+        "he / she (respectful)",
+        {
+         "bn": "তিনি",
+         "ro": "tini"
+        },
+        {
+         "bn": "তাঁকে",
+         "ro": "tanke"
+        },
+        {
+         "bn": "তাঁর",
+         "ro": "tanr"
+        }
+       ],
+       [
+        "we",
+        {
+         "bn": "আমরা",
+         "ro": "amra"
+        },
+        {
+         "bn": "আমাদের",
+         "ro": "amader"
+        },
+        {
+         "bn": "আমাদের",
+         "ro": "amader"
+        }
+       ],
+       [
+        "you all (familiar)",
+        {
+         "bn": "তোমরা",
+         "ro": "tomra"
+        },
+        {
+         "bn": "তোমাদের",
+         "ro": "tomader"
+        },
+        {
+         "bn": "তোমাদের",
+         "ro": "tomader"
+        }
+       ],
+       [
+        "you all (respectful)",
+        {
+         "bn": "আপনারা",
+         "ro": "apnara"
+        },
+        {
+         "bn": "আপনাদের",
+         "ro": "apnader"
+        },
+        {
+         "bn": "আপনাদের",
+         "ro": "apnader"
+        }
+       ],
+       [
+        "they",
+        {
+         "bn": "তারা",
+         "ro": "tara"
+        },
+        {
+         "bn": "তাদের",
+         "ro": "tader"
+        },
+        {
+         "bn": "তাদের",
+         "ro": "tader"
+        }
+       ],
+       [
+        "they (respectful)",
+        {
+         "bn": "তাঁরা",
+         "ro": "tanra"
+        },
+        {
+         "bn": "তাঁদের",
+         "ro": "tander"
+        },
+        {
+         "bn": "তাঁদের",
+         "ro": "tander"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "ex",
+      "title": null,
+      "items": [
+       [
+        "সে আমাকে দেখল।",
+        "she amake dekhlo.",
+        "He / she saw me."
+       ],
+       [
+        "এটা আমার বই।",
+        "eta amar boi.",
+        "This is my book."
+       ],
+       [
+        "আমি তোমাকে ডাকলাম।",
+        "ami tomake daklam.",
+        "I called you."
+       ],
+       [
+        "এটা তোমাদের ঘর।",
+        "eta tomader ghor.",
+        "This is your (pl.) room."
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "exercises": [
+   {
+    "q": "Which word do you use to address your teacher respectfully?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "তুই",
+      "ro": "tui"
+     },
+     {
+      "bn": "তুমি",
+      "ro": "tumi"
+     },
+     {
+      "bn": "আপনি",
+      "ro": "apni"
+     }
+    ],
+    "answer": 2,
+    "why": "আপনি is the respectful 'you'."
+   },
+   {
+    "q": "Choose the pronoun that fits the verb.",
+    "sentence": {
+     "bn": "___ কোথায় যাচ্ছ?",
+     "ro": "___ kothay jachchho?"
+    },
+    "options": [
+     {
+      "bn": "তুই",
+      "ro": "tui"
+     },
+     {
+      "bn": "তুমি",
+      "ro": "tumi"
+     },
+     {
+      "bn": "আপনি",
+      "ro": "apni"
+     }
+    ],
+    "answer": 1,
+    "why": "যাচ্ছ is the তুমি form of the verb."
+   },
+   {
+    "q": "Choose the right verb.",
+    "sentence": {
+     "bn": "আপনি কোথায় ___?",
+     "ro": "apni kothay ___?"
+    },
+    "options": [
+     {
+      "bn": "যাচ্ছ",
+      "ro": "jachchho"
+     },
+     {
+      "bn": "যাচ্ছেন",
+      "ro": "jachchhen"
+     },
+     {
+      "bn": "যাচ্ছিস",
+      "ro": "jachchhis"
+     }
+    ],
+    "answer": 1,
+    "why": "আপনি takes the -েন ending: যাচ্ছেন."
+   },
+   {
+    "q": "Which word means 'my'?",
+    "sentence": {
+     "bn": "এটা ___ বই।",
+     "ro": "eta ___ boi."
+    },
+    "options": [
+     {
+      "bn": "আমার",
+      "ro": "amar"
+     },
+     {
+      "bn": "আমাকে",
+      "ro": "amake"
+     },
+     {
+      "bn": "আমরা",
+      "ro": "amra"
+     }
+    ],
+    "answer": 0,
+    "why": "-র marks possession: আমার = my."
+   },
+   {
+    "q": "Choose the form for 'saw him / her'.",
+    "sentence": {
+     "bn": "আমি ___ দেখলাম।",
+     "ro": "ami ___ dekhlam."
+    },
+    "options": [
+     {
+      "bn": "সে",
+      "ro": "she"
+     },
+     {
+      "bn": "তাকে",
+      "ro": "take"
+     },
+     {
+      "bn": "তার",
+      "ro": "tar"
+     }
+    ],
+    "answer": 1,
+    "why": "The object form of সে is তাকে."
+   },
+   {
+    "q": "Which means 'your' (familiar)?",
+    "sentence": {
+     "bn": "এটা ___ বই।",
+     "ro": "eta ___ boi."
+    },
+    "options": [
+     {
+      "bn": "তোমার",
+      "ro": "tomar"
+     },
+     {
+      "bn": "তোমাকে",
+      "ro": "tomake"
+     },
+     {
+      "bn": "তুমি",
+      "ro": "tumi"
+     }
+    ],
+    "answer": 0,
+    "why": "তোমার is the possessive of তুমি."
+   },
+   {
+    "q": "Which is the respectful 'he / she'?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "সে",
+      "ro": "she"
+     },
+     {
+      "bn": "তিনি",
+      "ro": "tini"
+     },
+     {
+      "bn": "তারা",
+      "ro": "tara"
+     }
+    ],
+    "answer": 1,
+    "why": "তিনি is the respectful third person."
+   },
+   {
+    "q": "What is the plural of তুমি?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "তোমরা",
+      "ro": "tomra"
+     },
+     {
+      "bn": "আমরা",
+      "ro": "amra"
+     },
+     {
+      "bn": "তারা",
+      "ro": "tara"
+     }
+    ],
+    "answer": 0,
+    "why": "তুমি becomes তোমরা."
+   },
+   {
+    "q": "The pronoun সে can mean:",
+    "sentence": null,
+    "options": [
+     "only 'he'",
+     "only 'she'",
+     "'he' or 'she'"
+    ],
+    "answer": 2,
+    "why": "Bengali pronouns do not show gender."
+   },
+   {
+    "q": "Choose the right verb.",
+    "sentence": {
+     "bn": "তিনি স্কুলে ___।",
+     "ro": "tini skule ___."
+    },
+    "options": [
+     {
+      "bn": "যায়",
+      "ro": "jay"
+     },
+     {
+      "bn": "যান",
+      "ro": "jan"
+     },
+     {
+      "bn": "যাই",
+      "ro": "jai"
+     }
+    ],
+    "answer": 1,
+    "why": "তিনি (respectful) takes the -েন ending: যান."
+   }
+  ]
+ },
+ {
+  "id": "kriya",
+  "title": [
+   "ক্রিয়া",
+   "Kriya",
+   "Verbs"
+  ],
+  "blurb": "Roots, the three forms of a verb, 'to be' and 'to have', commands, and verbs made with করা.",
+  "sections": [
+   {
+    "id": "roots",
+    "title": "Roots",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "The action word of a sentence is the ক্রিয়া (kriya). Every verb is built from a root (ধাতু, dhatu). We add endings to the root to show the person and time. The dictionary form of a verb is the verbal noun, which ends in -া, like করা."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Verb (dictionary form)",
+       "Root",
+       "Meaning"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "করা",
+         "ro": "kora"
+        },
+        {
+         "bn": "কর",
+         "ro": "kor"
+        },
+        "to do"
+       ],
+       [
+        {
+         "bn": "খাওয়া",
+         "ro": "khaoya"
+        },
+        {
+         "bn": "খা",
+         "ro": "kha"
+        },
+        "to eat"
+       ],
+       [
+        {
+         "bn": "যাওয়া",
+         "ro": "jaoya"
+        },
+        {
+         "bn": "যা",
+         "ro": "ja"
+        },
+        "to go"
+       ],
+       [
+        {
+         "bn": "আসা",
+         "ro": "asha"
+        },
+        {
+         "bn": "আস",
+         "ro": "as"
+        },
+        "to come"
+       ],
+       [
+        {
+         "bn": "দেওয়া",
+         "ro": "deoya"
+        },
+        {
+         "bn": "দে",
+         "ro": "de"
+        },
+        "to give"
+       ],
+       [
+        {
+         "bn": "নেওয়া",
+         "ro": "neoya"
+        },
+        {
+         "bn": "নে",
+         "ro": "ne"
+        },
+        "to take"
+       ],
+       [
+        {
+         "bn": "বলা",
+         "ro": "bola"
+        },
+        {
+         "bn": "বল",
+         "ro": "bol"
+        },
+        "to say"
+       ],
+       [
+        {
+         "bn": "দেখা",
+         "ro": "dekha"
+        },
+        {
+         "bn": "দেখ",
+         "ro": "dekh"
+        },
+        "to see"
+       ],
+       [
+        {
+         "bn": "শোনা",
+         "ro": "shona"
+        },
+        {
+         "bn": "শোন",
+         "ro": "shon"
+        },
+        "to hear / listen"
+       ],
+       [
+        {
+         "bn": "পড়া",
+         "ro": "pora"
+        },
+        {
+         "bn": "পড়",
+         "ro": "por"
+        },
+        "to read / study"
+       ],
+       [
+        {
+         "bn": "লেখা",
+         "ro": "lekha"
+        },
+        {
+         "bn": "লিখ",
+         "ro": "likh"
+        },
+        "to write"
+       ],
+       [
+        {
+         "bn": "থাকা",
+         "ro": "thaka"
+        },
+        {
+         "bn": "থাক",
+         "ro": "thak"
+        },
+        "to stay"
+       ],
+       [
+        {
+         "bn": "বসা",
+         "ro": "bosha"
+        },
+        {
+         "bn": "বস",
+         "ro": "bosh"
+        },
+        "to sit"
+       ],
+       [
+        {
+         "bn": "পাওয়া",
+         "ro": "paoya"
+        },
+        {
+         "bn": "পা",
+         "ro": "pa"
+        },
+        "to get"
+       ],
+       [
+        {
+         "bn": "হওয়া",
+         "ro": "hooya"
+        },
+        {
+         "bn": "হ",
+         "ro": "ho"
+        },
+        "to be / become"
+       ],
+       [
+        {
+         "bn": "ওঠা",
+         "ro": "otha"
+        },
+        {
+         "bn": "ওঠ",
+         "ro": "oth"
+        },
+        "to rise / get up"
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "Two roots change: লেখা has the root লিখ- (likh-) in লিখি, and আসা gives এসে, এলাম. Irregular verbs are marked in the tables later."
+     }
+    ]
+   },
+   {
+    "id": "finite",
+    "title": "Finite and non-finite",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "A finite verb (সমাপিকা ক্রিয়া) ends a sentence and carries the person and time: আমি ভাত খাই। A non-finite verb (অসমাপিকা ক্রিয়া) cannot end a sentence by itself. It does not show the person or time, and it joins the main verb."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Verb",
+       "Root (ধাতু)",
+       "-ে / -য়ে (and then)",
+       "-তে (to do)",
+       "-লে (if)",
+       "-া (verbal noun)"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "করা (to do)",
+         "ro": "kora"
+        },
+        {
+         "bn": "কর",
+         "ro": "kor"
+        },
+        {
+         "bn": "করে",
+         "ro": "kore"
+        },
+        {
+         "bn": "করতে",
+         "ro": "korte"
+        },
+        {
+         "bn": "করলে",
+         "ro": "korle"
+        },
+        {
+         "bn": "করা",
+         "ro": "kora"
+        }
+       ],
+       [
+        {
+         "bn": "বলা (to say / tell)",
+         "ro": "bola"
+        },
+        {
+         "bn": "বল",
+         "ro": "bol"
+        },
+        {
+         "bn": "বলে",
+         "ro": "bole"
+        },
+        {
+         "bn": "বলতে",
+         "ro": "bolte"
+        },
+        {
+         "bn": "বললে",
+         "ro": "bolle"
+        },
+        {
+         "bn": "বলা",
+         "ro": "bola"
+        }
+       ],
+       [
+        {
+         "bn": "দেখা (to see / look)",
+         "ro": "dekha"
+        },
+        {
+         "bn": "দেখ",
+         "ro": "dekh"
+        },
+        {
+         "bn": "দেখে",
+         "ro": "dekhe"
+        },
+        {
+         "bn": "দেখতে",
+         "ro": "dekhte"
+        },
+        {
+         "bn": "দেখলে",
+         "ro": "dekhle"
+        },
+        {
+         "bn": "দেখা",
+         "ro": "dekha"
+        }
+       ],
+       [
+        {
+         "bn": "খাওয়া (to eat)",
+         "ro": "khaoya"
+        },
+        {
+         "bn": "খা",
+         "ro": "kha"
+        },
+        {
+         "bn": "খেয়ে",
+         "ro": "kheye"
+        },
+        {
+         "bn": "খেতে",
+         "ro": "khete"
+        },
+        {
+         "bn": "খেলে",
+         "ro": "khele"
+        },
+        {
+         "bn": "খাওয়া",
+         "ro": "khaoya"
+        }
+       ],
+       [
+        {
+         "bn": "যাওয়া (to go)",
+         "ro": "jaoya"
+        },
+        {
+         "bn": "যা",
+         "ro": "ja"
+        },
+        {
+         "bn": "গিয়ে",
+         "ro": "giye"
+        },
+        {
+         "bn": "যেতে",
+         "ro": "jete"
+        },
+        {
+         "bn": "গেলে",
+         "ro": "gele"
+        },
+        {
+         "bn": "যাওয়া",
+         "ro": "jaoya"
+        }
+       ],
+       [
+        {
+         "bn": "দেওয়া (to give)",
+         "ro": "deoya"
+        },
+        {
+         "bn": "দে",
+         "ro": "de"
+        },
+        {
+         "bn": "দিয়ে",
+         "ro": "diye"
+        },
+        {
+         "bn": "দিতে",
+         "ro": "dite"
+        },
+        {
+         "bn": "দিলে",
+         "ro": "dile"
+        },
+        {
+         "bn": "দেওয়া",
+         "ro": "deoya"
+        }
+       ],
+       [
+        {
+         "bn": "আসা (to come)",
+         "ro": "asha"
+        },
+        {
+         "bn": "আস",
+         "ro": "as"
+        },
+        {
+         "bn": "এসে",
+         "ro": "eshe"
+        },
+        {
+         "bn": "আসতে",
+         "ro": "aste"
+        },
+        {
+         "bn": "এলে",
+         "ro": "ele"
+        },
+        {
+         "bn": "আসা",
+         "ro": "asha"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "ex",
+      "title": "How they are used",
+      "items": [
+       [
+        "ভাত খেয়ে সে স্কুলে গেল।",
+        "bhat kheye she skule gelo.",
+        "Having eaten rice, he / she went to school. (-ে: and then)"
+       ],
+       [
+        "আমি স্কুলে যেতে চাই।",
+        "ami skule jete chai.",
+        "I want to go to school. (-তে: to do)"
+       ],
+       [
+        "তুমি গেলে আমি যাব।",
+        "tumi gele ami jabo.",
+        "If you go, I will go. (-লে: if)"
+       ],
+       [
+        "পড়া ভালো।",
+        "pora bhalo.",
+        "Reading is good. (-া: verbal noun)"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "tobe",
+    "title": "'To be' and 'to have'",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "In the present tense, Bengali leaves out 'is / am / are' between a noun and what it describes: আমি ছাত্র। (I am a student.) Use আছি… when you mean exist, be present or stay. To say 'have', Bengali says 'of-me there is': আমার একটা বই আছে।"
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "",
+       "আমি",
+       "তুই",
+       "তুমি",
+       "আপনি / তিনি",
+       "সে"
+      ],
+      "rows": [
+       [
+        "Present (to be there)",
+        {
+         "bn": "আছি",
+         "ro": "achhi"
+        },
+        {
+         "bn": "আছিস",
+         "ro": "achhis"
+        },
+        {
+         "bn": "আছ",
+         "ro": "achho"
+        },
+        {
+         "bn": "আছেন",
+         "ro": "achhen"
+        },
+        {
+         "bn": "আছে",
+         "ro": "achhe"
+        }
+       ],
+       [
+        "Past (was there)",
+        {
+         "bn": "ছিলাম",
+         "ro": "chhilam"
+        },
+        {
+         "bn": "ছিলি",
+         "ro": "chhili"
+        },
+        {
+         "bn": "ছিলে",
+         "ro": "chhile"
+        },
+        {
+         "bn": "ছিলেন",
+         "ro": "chhilen"
+        },
+        {
+         "bn": "ছিল",
+         "ro": "chhilo"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "ex",
+      "title": null,
+      "items": [
+       [
+        "আমি ছাত্র।",
+        "ami chhatro.",
+        "I am a student."
+       ],
+       [
+        "সে ভালো।",
+        "she bhalo.",
+        "He / she is good."
+       ],
+       [
+        "আমি বাড়িতে আছি।",
+        "ami barite achhi.",
+        "I am at home."
+       ],
+       [
+        "আমার একটা বই আছে।",
+        "amar ekta boi achhe.",
+        "I have a book."
+       ],
+       [
+        "আমি তখন বাড়িতে ছিলাম।",
+        "ami tokhon barite chhilam.",
+        "I was at home then."
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "commands",
+    "title": "Commands",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "A command (আদেশ) also changes with the level of 'you'. The তুই form is just the root. তুমি adds -ও / -ো. আপনি adds -ুন."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Verb",
+       "তুই",
+       "তুমি",
+       "আপনি"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "করা (do)",
+         "ro": "kora"
+        },
+        {
+         "bn": "কর",
+         "ro": "kor"
+        },
+        {
+         "bn": "করো",
+         "ro": "koro"
+        },
+        {
+         "bn": "করুন",
+         "ro": "korun"
+        }
+       ],
+       [
+        {
+         "bn": "বলা (say)",
+         "ro": "bola"
+        },
+        {
+         "bn": "বল",
+         "ro": "bol"
+        },
+        {
+         "bn": "বলো",
+         "ro": "bolo"
+        },
+        {
+         "bn": "বলুন",
+         "ro": "bolun"
+        }
+       ],
+       [
+        {
+         "bn": "দেখা (see)",
+         "ro": "dekha"
+        },
+        {
+         "bn": "দেখ",
+         "ro": "dekh"
+        },
+        {
+         "bn": "দেখো",
+         "ro": "dekho"
+        },
+        {
+         "bn": "দেখুন",
+         "ro": "dekhun"
+        }
+       ],
+       [
+        {
+         "bn": "খাওয়া (eat)",
+         "ro": "khaoya"
+        },
+        {
+         "bn": "খা",
+         "ro": "kha"
+        },
+        {
+         "bn": "খাও",
+         "ro": "khao"
+        },
+        {
+         "bn": "খান",
+         "ro": "khan"
+        }
+       ],
+       [
+        {
+         "bn": "যাওয়া (go)",
+         "ro": "jaoya"
+        },
+        {
+         "bn": "যা",
+         "ro": "ja"
+        },
+        {
+         "bn": "যাও",
+         "ro": "jao"
+        },
+        {
+         "bn": "যান",
+         "ro": "jan"
+        }
+       ],
+       [
+        {
+         "bn": "দেওয়া (give)",
+         "ro": "deoya"
+        },
+        {
+         "bn": "দে",
+         "ro": "de"
+        },
+        {
+         "bn": "দাও",
+         "ro": "dao"
+        },
+        {
+         "bn": "দিন",
+         "ro": "din"
+        }
+       ],
+       [
+        {
+         "bn": "আসা (come)",
+         "ro": "asha"
+        },
+        {
+         "bn": "আয়",
+         "ro": "ay"
+        },
+        {
+         "bn": "এসো",
+         "ro": "esho"
+        },
+        {
+         "bn": "আসুন",
+         "ro": "ashun"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "ex",
+      "title": null,
+      "items": [
+       [
+        "এখানে এসো।",
+        "ekhane esho.",
+        "Come here. (to a friend)"
+       ],
+       [
+        "দরজা বন্ধ করুন।",
+        "dorja bondho korun.",
+        "Please close the door. (respectful)"
+       ],
+       [
+        "আমাকে জল দাও।",
+        "amake jol dao.",
+        "Give me water. (to a friend)"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "compound",
+    "title": "Noun + করা / হওয়া",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Many everyday verbs are made from a noun plus করা (do), হওয়া (become) or পাওয়া (get). The first word gives the meaning. Only the second word changes with the person and time."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Verb",
+       "Meaning",
+       "Example"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "রান্না করা",
+         "ro": "ranna kora"
+        },
+        "to cook",
+        {
+         "bn": "আমি রান্না করি।",
+         "ro": "ami ranna kori."
+        }
+       ],
+       [
+        {
+         "bn": "কাজ করা",
+         "ro": "kaj kora"
+        },
+        "to work",
+        {
+         "bn": "সে কাজ করে।",
+         "ro": "she kaj kore."
+        }
+       ],
+       [
+        {
+         "bn": "শুরু করা",
+         "ro": "shuru kora"
+        },
+        "to start",
+        {
+         "bn": "আমরা কাজ শুরু করলাম।",
+         "ro": "amra kaj shuru korlam."
+        }
+       ],
+       [
+        {
+         "bn": "বন্ধ করা",
+         "ro": "bondho kora"
+        },
+        "to close, to stop",
+        {
+         "bn": "দরজা বন্ধ করো।",
+         "ro": "dorja bondho koro."
+        }
+       ],
+       [
+        {
+         "bn": "খুশি হওয়া",
+         "ro": "khushi hooya"
+        },
+        "to be happy",
+        {
+         "bn": "আমি খুশি হলাম।",
+         "ro": "ami khushi holam."
+        }
+       ],
+       [
+        {
+         "bn": "ভয় পাওয়া",
+         "ro": "bhoy paoya"
+        },
+        "to be afraid",
+        {
+         "bn": "সে ভয় পেল।",
+         "ro": "she bhoy pelo."
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "exercises": [
+   {
+    "q": "What is the root of খাওয়া?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "খা",
+      "ro": "kha"
+     },
+     {
+      "bn": "খাও",
+      "ro": "khao"
+     },
+     {
+      "bn": "খেয়ে",
+      "ro": "kheye"
+     }
+    ],
+    "answer": 0,
+    "why": "Remove the endings: the root of খাওয়া is খা."
+   },
+   {
+    "q": "In this sentence, which word is the non-finite verb?",
+    "sentence": {
+     "bn": "ভাত খেয়ে সে স্কুলে গেল।",
+     "ro": "bhat kheye she skule gelo."
+    },
+    "options": [
+     {
+      "bn": "খেয়ে",
+      "ro": "kheye"
+     },
+     {
+      "bn": "সে",
+      "ro": "she"
+     },
+     {
+      "bn": "গেল",
+      "ro": "gelo"
+     }
+    ],
+    "answer": 0,
+    "why": "খেয়ে (-ে form) joins the main verb; গেল is the finite verb."
+   },
+   {
+    "q": "Choose the 'and then' form (-ে) of যাওয়া.",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "গিয়ে",
+      "ro": "giye"
+     },
+     {
+      "bn": "যেতে",
+      "ro": "jete"
+     },
+     {
+      "bn": "গেলে",
+      "ro": "gele"
+     }
+    ],
+    "answer": 0,
+    "why": "গিয়ে means having gone."
+   },
+   {
+    "q": "Choose the right form.",
+    "sentence": {
+     "bn": "আমি স্কুলে ___ চাই।",
+     "ro": "ami skule ___ chai."
+    },
+    "options": [
+     {
+      "bn": "যেতে",
+      "ro": "jete"
+     },
+     {
+      "bn": "গিয়ে",
+      "ro": "giye"
+     },
+     {
+      "bn": "গেলে",
+      "ro": "gele"
+     }
+    ],
+    "answer": 0,
+    "why": "'Want to go' uses the -তে form: যেতে চাই."
+   },
+   {
+    "q": "Choose the right form ('if you go').",
+    "sentence": {
+     "bn": "তুমি ___ আমি যাব।",
+     "ro": "tumi ___ ami jabo."
+    },
+    "options": [
+     {
+      "bn": "গেলে",
+      "ro": "gele"
+     },
+     {
+      "bn": "গিয়ে",
+      "ro": "giye"
+     },
+     {
+      "bn": "যেতে",
+      "ro": "jete"
+     }
+    ],
+    "answer": 0,
+    "why": "The -লে form means 'if': গেলে."
+   },
+   {
+    "q": "Command to a friend (তুমি): 'Tell me!'",
+    "sentence": {
+     "bn": "আমাকে ___!",
+     "ro": "amake ___!"
+    },
+    "options": [
+     {
+      "bn": "বলো",
+      "ro": "bolo"
+     },
+     {
+      "bn": "বলুন",
+      "ro": "bolun"
+     },
+     {
+      "bn": "বল",
+      "ro": "bol"
+     }
+    ],
+    "answer": 0,
+    "why": "তুমি commands end in -ও / -ো."
+   },
+   {
+    "q": "Respectful command: give.",
+    "sentence": {
+     "bn": "আমাকে জল ___।",
+     "ro": "amake jol ___."
+    },
+    "options": [
+     {
+      "bn": "দাও",
+      "ro": "dao"
+     },
+     {
+      "bn": "দিন",
+      "ro": "din"
+     },
+     {
+      "bn": "দে",
+      "ro": "de"
+     }
+    ],
+    "answer": 1,
+    "why": "The আপনি command is দিন."
+   },
+   {
+    "q": "What is the dictionary form of খায়?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "খাওয়া",
+      "ro": "khaoya"
+     },
+     {
+      "bn": "খাই",
+      "ro": "khai"
+     },
+     {
+      "bn": "খান",
+      "ro": "khan"
+     }
+    ],
+    "answer": 0,
+    "why": "The dictionary form is the -া form: খাওয়া."
+   },
+   {
+    "q": "How do you say 'I have a book'?",
+    "sentence": {
+     "bn": "আমার একটা বই ___।",
+     "ro": "amar ekta boi ___."
+    },
+    "options": [
+     {
+      "bn": "আছে",
+      "ro": "achhe"
+     },
+     {
+      "bn": "আছি",
+      "ro": "achhi"
+     },
+     {
+      "bn": "আছেন",
+      "ro": "achhen"
+     }
+    ],
+    "answer": 0,
+    "why": "'Have' is expressed as 'there is' with আছে."
+   },
+   {
+    "q": "How do you say 'I am a student'?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "আমি ছাত্র।",
+      "ro": "ami chhatro."
+     },
+     {
+      "bn": "আমি ছাত্র আছি।",
+      "ro": "ami chhatro achhi."
+     },
+     {
+      "bn": "আমি ছাত্র হয়।",
+      "ro": "ami chhatro hoy."
+     }
+    ],
+    "answer": 0,
+    "why": "No verb is used for 'am' between a noun and a noun."
+   }
+  ]
+ },
+ {
+  "id": "kal",
+  "title": [
+   "কাল",
+   "Kal",
+   "Tenses"
+  ],
+  "blurb": "Present, past and future, and how to build every tense with the right ending for each person.",
+  "sections": [
+   {
+    "id": "overview",
+    "title": "The tenses",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "কাল (kal) means tense. There are three times: বর্তমান (present), অতীত (past) and ভবিষ্যৎ (future). Each time has kinds: সাধারণ (simple), ঘটমান (continuing), পুরাঘটিত (completed), and for the past also নিত্যবৃত্ত (habitual)."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Tense",
+       "English",
+       "Example",
+       "Meaning"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "সাধারণ বর্তমান",
+         "ro": "sadharon bortoman"
+        },
+        "Simple present",
+        {
+         "bn": "আমি ভাত খাই।",
+         "ro": "ami bhat khai."
+        },
+        "I eat rice."
+       ],
+       [
+        {
+         "bn": "ঘটমান বর্তমান",
+         "ro": "ghotoman bortoman"
+        },
+        "Present continuous",
+        {
+         "bn": "আমি ভাত খাচ্ছি।",
+         "ro": "ami bhat khachchhi."
+        },
+        "I am eating rice."
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত বর্তমান",
+         "ro": "puraghotito bortoman"
+        },
+        "Present perfect",
+        {
+         "bn": "আমি ভাত খেয়েছি।",
+         "ro": "ami bhat kheyechhi."
+        },
+        "I have eaten rice."
+       ],
+       [
+        {
+         "bn": "সাধারণ অতীত",
+         "ro": "sadharon otit"
+        },
+        "Simple past",
+        {
+         "bn": "আমি ভাত খেলাম।",
+         "ro": "ami bhat khelam."
+        },
+        "I ate rice."
+       ],
+       [
+        {
+         "bn": "ঘটমান অতীত",
+         "ro": "ghotoman otit"
+        },
+        "Past continuous",
+        {
+         "bn": "আমি ভাত খাচ্ছিলাম।",
+         "ro": "ami bhat khachchhilam."
+        },
+        "I was eating rice."
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত অতীত",
+         "ro": "puraghotito otit"
+        },
+        "Past perfect",
+        {
+         "bn": "আমি ভাত খেয়েছিলাম।",
+         "ro": "ami bhat kheyechhilam."
+        },
+        "I had eaten rice."
+       ],
+       [
+        {
+         "bn": "নিত্যবৃত্ত অতীত",
+         "ro": "nityobritto otit"
+        },
+        "Past habitual",
+        {
+         "bn": "আমি রোজ ভাত খেতাম।",
+         "ro": "ami roj bhat khetam."
+        },
+        "I used to eat rice every day."
+       ],
+       [
+        {
+         "bn": "সাধারণ ভবিষ্যৎ",
+         "ro": "sadharon bhobishyot"
+        },
+        "Simple future",
+        {
+         "bn": "আমি ভাত খাব।",
+         "ro": "ami bhat khabo."
+        },
+        "I will eat rice."
+       ],
+       [
+        {
+         "bn": "ঘটমান ভবিষ্যৎ",
+         "ro": "ghotoman bhobishyot"
+        },
+        "Future continuous",
+        {
+         "bn": "আমি ভাত খেতে থাকব।",
+         "ro": "ami bhat khete thakbo."
+        },
+        "I will be eating rice."
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "The future continuous (খেতে থাকব) is a textbook form. In everyday speech people more often use the simple future or say 'I will be doing' with খাচ্ছি."
+     }
+    ]
+   },
+   {
+    "id": "endings",
+    "title": "Endings",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Take the root (করা → কর-) and add the ending for the tense and the person. The ending shows the person; the verb does not change for singular or plural (ছেলেটা যায়, ছেলেরা যায়)."
+     },
+     {
+      "t": "table",
+      "title": "Present endings",
+      "head": [
+       "Tense",
+       "আমি",
+       "তুই",
+       "তুমি",
+       "আপনি / তিনি",
+       "সে"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "সাধারণ বর্তমান",
+         "ro": "sadharon bortoman"
+        },
+        {
+         "bn": "-ি",
+         "ro": "-i"
+        },
+        {
+         "bn": "-িস",
+         "ro": "-is"
+        },
+        {
+         "bn": "-ো",
+         "ro": "-o"
+        },
+        {
+         "bn": "-েন",
+         "ro": "-en"
+        },
+        {
+         "bn": "-ে",
+         "ro": "-e"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান বর্তমান",
+         "ro": "ghotoman bortoman"
+        },
+        {
+         "bn": "-ছি",
+         "ro": "-chhi"
+        },
+        {
+         "bn": "-ছিস",
+         "ro": "-chhis"
+        },
+        {
+         "bn": "-ছ",
+         "ro": "-chho"
+        },
+        {
+         "bn": "-ছেন",
+         "ro": "-chhen"
+        },
+        {
+         "bn": "-ছে",
+         "ro": "-chhe"
+        }
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত বর্তমান",
+         "ro": "puraghotito bortoman"
+        },
+        {
+         "bn": "-েছি",
+         "ro": "-echhi"
+        },
+        {
+         "bn": "-েছিস",
+         "ro": "-echhis"
+        },
+        {
+         "bn": "-েছ",
+         "ro": "-echho"
+        },
+        {
+         "bn": "-েছেন",
+         "ro": "-echhen"
+        },
+        {
+         "bn": "-েছে",
+         "ro": "-echhe"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "table",
+      "title": "Past endings",
+      "head": [
+       "Tense",
+       "আমি",
+       "তুই",
+       "তুমি",
+       "আপনি / তিনি",
+       "সে"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "সাধারণ অতীত",
+         "ro": "sadharon otit"
+        },
+        {
+         "bn": "-লাম",
+         "ro": "-lam"
+        },
+        {
+         "bn": "-লি",
+         "ro": "-li"
+        },
+        {
+         "bn": "-লে",
+         "ro": "-le"
+        },
+        {
+         "bn": "-লেন",
+         "ro": "-len"
+        },
+        {
+         "bn": "-ল",
+         "ro": "-lo"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান অতীত",
+         "ro": "ghotoman otit"
+        },
+        {
+         "bn": "-ছিলাম",
+         "ro": "-chhilam"
+        },
+        {
+         "bn": "-ছিলি",
+         "ro": "-chhili"
+        },
+        {
+         "bn": "-ছিলে",
+         "ro": "-chhile"
+        },
+        {
+         "bn": "-ছিলেন",
+         "ro": "-chhilen"
+        },
+        {
+         "bn": "-ছিল",
+         "ro": "-chhilo"
+        }
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত অতীত",
+         "ro": "puraghotito otit"
+        },
+        {
+         "bn": "-েছিলাম",
+         "ro": "-echhilam"
+        },
+        {
+         "bn": "-েছিলি",
+         "ro": "-echhili"
+        },
+        {
+         "bn": "-েছিলে",
+         "ro": "-echhile"
+        },
+        {
+         "bn": "-েছিলেন",
+         "ro": "-echhilen"
+        },
+        {
+         "bn": "-েছিল",
+         "ro": "-echhilo"
+        }
+       ],
+       [
+        {
+         "bn": "নিত্যবৃত্ত অতীত",
+         "ro": "nityobritto otit"
+        },
+        {
+         "bn": "-তাম",
+         "ro": "-tam"
+        },
+        {
+         "bn": "-তিস",
+         "ro": "-tis"
+        },
+        {
+         "bn": "-তে",
+         "ro": "-te"
+        },
+        {
+         "bn": "-তেন",
+         "ro": "-ten"
+        },
+        {
+         "bn": "-ত",
+         "ro": "-to"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "table",
+      "title": "Future endings",
+      "head": [
+       "Tense",
+       "আমি",
+       "তুই",
+       "তুমি",
+       "আপনি / তিনি",
+       "সে"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "সাধারণ ভবিষ্যৎ",
+         "ro": "sadharon bhobishyot"
+        },
+        {
+         "bn": "-ব",
+         "ro": "-bo"
+        },
+        {
+         "bn": "-বি",
+         "ro": "-bi"
+        },
+        {
+         "bn": "-বে",
+         "ro": "-be"
+        },
+        {
+         "bn": "-বেন",
+         "ro": "-ben"
+        },
+        {
+         "bn": "-বে",
+         "ro": "-be"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "Spelling varies: you may see করছো or করছ, করেছো or করেছ for তুমি. The sounds are the same."
+     }
+    ]
+   },
+   {
+    "id": "kora",
+    "title": "করা in full",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "করা (to do) is regular, so it shows the pattern clearly. Read across a row to see one tense for every person; আপনি and তিনি share the same ending."
+     },
+     {
+      "t": "table",
+      "title": "করা: present",
+      "head": [
+       "Tense",
+       "আমি",
+       "তুই",
+       "তুমি",
+       "আপনি / তিনি",
+       "সে"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "সাধারণ বর্তমান",
+         "ro": "sadharon bortoman"
+        },
+        {
+         "bn": "করি",
+         "ro": "kori"
+        },
+        {
+         "bn": "করিস",
+         "ro": "koris"
+        },
+        {
+         "bn": "করো",
+         "ro": "koro"
+        },
+        {
+         "bn": "করেন",
+         "ro": "koren"
+        },
+        {
+         "bn": "করে",
+         "ro": "kore"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান বর্তমান",
+         "ro": "ghotoman bortoman"
+        },
+        {
+         "bn": "করছি",
+         "ro": "korchhi"
+        },
+        {
+         "bn": "করছিস",
+         "ro": "korchhis"
+        },
+        {
+         "bn": "করছ",
+         "ro": "korchho"
+        },
+        {
+         "bn": "করছেন",
+         "ro": "korchhen"
+        },
+        {
+         "bn": "করছে",
+         "ro": "korchhe"
+        }
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত বর্তমান",
+         "ro": "puraghotito bortoman"
+        },
+        {
+         "bn": "করেছি",
+         "ro": "korechhi"
+        },
+        {
+         "bn": "করেছিস",
+         "ro": "korechhis"
+        },
+        {
+         "bn": "করেছ",
+         "ro": "korechho"
+        },
+        {
+         "bn": "করেছেন",
+         "ro": "korechhen"
+        },
+        {
+         "bn": "করেছে",
+         "ro": "korechhe"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "table",
+      "title": "করা: past",
+      "head": [
+       "Tense",
+       "আমি",
+       "তুই",
+       "তুমি",
+       "আপনি / তিনি",
+       "সে"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "সাধারণ অতীত",
+         "ro": "sadharon otit"
+        },
+        {
+         "bn": "করলাম",
+         "ro": "korlam"
+        },
+        {
+         "bn": "করলি",
+         "ro": "korli"
+        },
+        {
+         "bn": "করলে",
+         "ro": "korle"
+        },
+        {
+         "bn": "করলেন",
+         "ro": "korlen"
+        },
+        {
+         "bn": "করল",
+         "ro": "korlo"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান অতীত",
+         "ro": "ghotoman otit"
+        },
+        {
+         "bn": "করছিলাম",
+         "ro": "korchhilam"
+        },
+        {
+         "bn": "করছিলি",
+         "ro": "korchhili"
+        },
+        {
+         "bn": "করছিলে",
+         "ro": "korchhile"
+        },
+        {
+         "bn": "করছিলেন",
+         "ro": "korchhilen"
+        },
+        {
+         "bn": "করছিল",
+         "ro": "korchhilo"
+        }
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত অতীত",
+         "ro": "puraghotito otit"
+        },
+        {
+         "bn": "করেছিলাম",
+         "ro": "korechhilam"
+        },
+        {
+         "bn": "করেছিলি",
+         "ro": "korechhili"
+        },
+        {
+         "bn": "করেছিলে",
+         "ro": "korechhile"
+        },
+        {
+         "bn": "করেছিলেন",
+         "ro": "korechhilen"
+        },
+        {
+         "bn": "করেছিল",
+         "ro": "korechhilo"
+        }
+       ],
+       [
+        {
+         "bn": "নিত্যবৃত্ত অতীত",
+         "ro": "nityobritto otit"
+        },
+        {
+         "bn": "করতাম",
+         "ro": "kortam"
+        },
+        {
+         "bn": "করতিস",
+         "ro": "kortis"
+        },
+        {
+         "bn": "করতে",
+         "ro": "korte"
+        },
+        {
+         "bn": "করতেন",
+         "ro": "korten"
+        },
+        {
+         "bn": "করত",
+         "ro": "korto"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "table",
+      "title": "করা: future",
+      "head": [
+       "Tense",
+       "আমি",
+       "তুই",
+       "তুমি",
+       "আপনি / তিনি",
+       "সে"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "সাধারণ ভবিষ্যৎ",
+         "ro": "sadharon bhobishyot"
+        },
+        {
+         "bn": "করব",
+         "ro": "korbo"
+        },
+        {
+         "bn": "করবি",
+         "ro": "korbi"
+        },
+        {
+         "bn": "করবে",
+         "ro": "korbe"
+        },
+        {
+         "bn": "করবেন",
+         "ro": "korben"
+        },
+        {
+         "bn": "করবে",
+         "ro": "korbe"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান ভবিষ্যৎ",
+         "ro": "ghotoman bhobishyot"
+        },
+        {
+         "bn": "করতে থাকব",
+         "ro": "korte thakbo"
+        },
+        {
+         "bn": "করতে থাকবি",
+         "ro": "korte thakbi"
+        },
+        {
+         "bn": "করতে থাকবে",
+         "ro": "korte thakbe"
+        },
+        {
+         "bn": "করতে থাকবেন",
+         "ro": "korte thakben"
+        },
+        {
+         "bn": "করতে থাকবে",
+         "ro": "korte thakbe"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "verbs",
+    "title": "More verbs",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Most verbs follow the same endings. A few change the root: খাওয়া, যাওয়া, দেওয়া and আসা change in some tenses. Learn those as they come."
+     },
+     {
+      "t": "table",
+      "title": "বলা (bola), to say",
+      "head": [
+       "Tense",
+       "আমি",
+       "তুই",
+       "তুমি",
+       "আপনি / তিনি",
+       "সে"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "সাধারণ বর্তমান",
+         "ro": "sadharon bortoman"
+        },
+        {
+         "bn": "বলি",
+         "ro": "boli"
+        },
+        {
+         "bn": "বলিস",
+         "ro": "bolis"
+        },
+        {
+         "bn": "বলো",
+         "ro": "bolo"
+        },
+        {
+         "bn": "বলেন",
+         "ro": "bolen"
+        },
+        {
+         "bn": "বলে",
+         "ro": "bole"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান বর্তমান",
+         "ro": "ghotoman bortoman"
+        },
+        {
+         "bn": "বলছি",
+         "ro": "bolchhi"
+        },
+        {
+         "bn": "বলছিস",
+         "ro": "bolchhis"
+        },
+        {
+         "bn": "বলছ",
+         "ro": "bolchho"
+        },
+        {
+         "bn": "বলছেন",
+         "ro": "bolchhen"
+        },
+        {
+         "bn": "বলছে",
+         "ro": "bolchhe"
+        }
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত বর্তমান",
+         "ro": "puraghotito bortoman"
+        },
+        {
+         "bn": "বলেছি",
+         "ro": "bolechhi"
+        },
+        {
+         "bn": "বলেছিস",
+         "ro": "bolechhis"
+        },
+        {
+         "bn": "বলেছ",
+         "ro": "bolechho"
+        },
+        {
+         "bn": "বলেছেন",
+         "ro": "bolechhen"
+        },
+        {
+         "bn": "বলেছে",
+         "ro": "bolechhe"
+        }
+       ],
+       [
+        {
+         "bn": "সাধারণ অতীত",
+         "ro": "sadharon otit"
+        },
+        {
+         "bn": "বললাম",
+         "ro": "bollam"
+        },
+        {
+         "bn": "বললি",
+         "ro": "bolli"
+        },
+        {
+         "bn": "বললে",
+         "ro": "bolle"
+        },
+        {
+         "bn": "বললেন",
+         "ro": "bollen"
+        },
+        {
+         "bn": "বলল",
+         "ro": "bollo"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান অতীত",
+         "ro": "ghotoman otit"
+        },
+        {
+         "bn": "বলছিলাম",
+         "ro": "bolchhilam"
+        },
+        {
+         "bn": "বলছিলি",
+         "ro": "bolchhili"
+        },
+        {
+         "bn": "বলছিলে",
+         "ro": "bolchhile"
+        },
+        {
+         "bn": "বলছিলেন",
+         "ro": "bolchhilen"
+        },
+        {
+         "bn": "বলছিল",
+         "ro": "bolchhilo"
+        }
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত অতীত",
+         "ro": "puraghotito otit"
+        },
+        {
+         "bn": "বলেছিলাম",
+         "ro": "bolechhilam"
+        },
+        {
+         "bn": "বলেছিলি",
+         "ro": "bolechhili"
+        },
+        {
+         "bn": "বলেছিলে",
+         "ro": "bolechhile"
+        },
+        {
+         "bn": "বলেছিলেন",
+         "ro": "bolechhilen"
+        },
+        {
+         "bn": "বলেছিল",
+         "ro": "bolechhilo"
+        }
+       ],
+       [
+        {
+         "bn": "নিত্যবৃত্ত অতীত",
+         "ro": "nityobritto otit"
+        },
+        {
+         "bn": "বলতাম",
+         "ro": "boltam"
+        },
+        {
+         "bn": "বলতিস",
+         "ro": "boltis"
+        },
+        {
+         "bn": "বলতে",
+         "ro": "bolte"
+        },
+        {
+         "bn": "বলতেন",
+         "ro": "bolten"
+        },
+        {
+         "bn": "বলত",
+         "ro": "bolto"
+        }
+       ],
+       [
+        {
+         "bn": "সাধারণ ভবিষ্যৎ",
+         "ro": "sadharon bhobishyot"
+        },
+        {
+         "bn": "বলব",
+         "ro": "bolbo"
+        },
+        {
+         "bn": "বলবি",
+         "ro": "bolbi"
+        },
+        {
+         "bn": "বলবে",
+         "ro": "bolbe"
+        },
+        {
+         "bn": "বলবেন",
+         "ro": "bolben"
+        },
+        {
+         "bn": "বলবে",
+         "ro": "bolbe"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান ভবিষ্যৎ",
+         "ro": "ghotoman bhobishyot"
+        },
+        {
+         "bn": "বলতে থাকব",
+         "ro": "bolte thakbo"
+        },
+        {
+         "bn": "বলতে থাকবি",
+         "ro": "bolte thakbi"
+        },
+        {
+         "bn": "বলতে থাকবে",
+         "ro": "bolte thakbe"
+        },
+        {
+         "bn": "বলতে থাকবেন",
+         "ro": "bolte thakben"
+        },
+        {
+         "bn": "বলতে থাকবে",
+         "ro": "bolte thakbe"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "table",
+      "title": "দেখা (dekha), to see",
+      "head": [
+       "Tense",
+       "আমি",
+       "তুই",
+       "তুমি",
+       "আপনি / তিনি",
+       "সে"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "সাধারণ বর্তমান",
+         "ro": "sadharon bortoman"
+        },
+        {
+         "bn": "দেখি",
+         "ro": "dekhi"
+        },
+        {
+         "bn": "দেখিস",
+         "ro": "dekhis"
+        },
+        {
+         "bn": "দেখো",
+         "ro": "dekho"
+        },
+        {
+         "bn": "দেখেন",
+         "ro": "dekhen"
+        },
+        {
+         "bn": "দেখে",
+         "ro": "dekhe"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান বর্তমান",
+         "ro": "ghotoman bortoman"
+        },
+        {
+         "bn": "দেখছি",
+         "ro": "dekhchhi"
+        },
+        {
+         "bn": "দেখছিস",
+         "ro": "dekhchhis"
+        },
+        {
+         "bn": "দেখছ",
+         "ro": "dekhchho"
+        },
+        {
+         "bn": "দেখছেন",
+         "ro": "dekhchhen"
+        },
+        {
+         "bn": "দেখছে",
+         "ro": "dekhchhe"
+        }
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত বর্তমান",
+         "ro": "puraghotito bortoman"
+        },
+        {
+         "bn": "দেখেছি",
+         "ro": "dekhechhi"
+        },
+        {
+         "bn": "দেখেছিস",
+         "ro": "dekhechhis"
+        },
+        {
+         "bn": "দেখেছ",
+         "ro": "dekhechho"
+        },
+        {
+         "bn": "দেখেছেন",
+         "ro": "dekhechhen"
+        },
+        {
+         "bn": "দেখেছে",
+         "ro": "dekhechhe"
+        }
+       ],
+       [
+        {
+         "bn": "সাধারণ অতীত",
+         "ro": "sadharon otit"
+        },
+        {
+         "bn": "দেখলাম",
+         "ro": "dekhlam"
+        },
+        {
+         "bn": "দেখলি",
+         "ro": "dekhli"
+        },
+        {
+         "bn": "দেখলে",
+         "ro": "dekhle"
+        },
+        {
+         "bn": "দেখলেন",
+         "ro": "dekhlen"
+        },
+        {
+         "bn": "দেখল",
+         "ro": "dekhlo"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান অতীত",
+         "ro": "ghotoman otit"
+        },
+        {
+         "bn": "দেখছিলাম",
+         "ro": "dekhchhilam"
+        },
+        {
+         "bn": "দেখছিলি",
+         "ro": "dekhchhili"
+        },
+        {
+         "bn": "দেখছিলে",
+         "ro": "dekhchhile"
+        },
+        {
+         "bn": "দেখছিলেন",
+         "ro": "dekhchhilen"
+        },
+        {
+         "bn": "দেখছিল",
+         "ro": "dekhchhilo"
+        }
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত অতীত",
+         "ro": "puraghotito otit"
+        },
+        {
+         "bn": "দেখেছিলাম",
+         "ro": "dekhechhilam"
+        },
+        {
+         "bn": "দেখেছিলি",
+         "ro": "dekhechhili"
+        },
+        {
+         "bn": "দেখেছিলে",
+         "ro": "dekhechhile"
+        },
+        {
+         "bn": "দেখেছিলেন",
+         "ro": "dekhechhilen"
+        },
+        {
+         "bn": "দেখেছিল",
+         "ro": "dekhechhilo"
+        }
+       ],
+       [
+        {
+         "bn": "নিত্যবৃত্ত অতীত",
+         "ro": "nityobritto otit"
+        },
+        {
+         "bn": "দেখতাম",
+         "ro": "dekhtam"
+        },
+        {
+         "bn": "দেখতিস",
+         "ro": "dekhtis"
+        },
+        {
+         "bn": "দেখতে",
+         "ro": "dekhte"
+        },
+        {
+         "bn": "দেখতেন",
+         "ro": "dekhten"
+        },
+        {
+         "bn": "দেখত",
+         "ro": "dekhto"
+        }
+       ],
+       [
+        {
+         "bn": "সাধারণ ভবিষ্যৎ",
+         "ro": "sadharon bhobishyot"
+        },
+        {
+         "bn": "দেখব",
+         "ro": "dekhbo"
+        },
+        {
+         "bn": "দেখবি",
+         "ro": "dekhbi"
+        },
+        {
+         "bn": "দেখবে",
+         "ro": "dekhbe"
+        },
+        {
+         "bn": "দেখবেন",
+         "ro": "dekhben"
+        },
+        {
+         "bn": "দেখবে",
+         "ro": "dekhbe"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান ভবিষ্যৎ",
+         "ro": "ghotoman bhobishyot"
+        },
+        {
+         "bn": "দেখতে থাকব",
+         "ro": "dekhte thakbo"
+        },
+        {
+         "bn": "দেখতে থাকবি",
+         "ro": "dekhte thakbi"
+        },
+        {
+         "bn": "দেখতে থাকবে",
+         "ro": "dekhte thakbe"
+        },
+        {
+         "bn": "দেখতে থাকবেন",
+         "ro": "dekhte thakben"
+        },
+        {
+         "bn": "দেখতে থাকবে",
+         "ro": "dekhte thakbe"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "table",
+      "title": "খাওয়া (khaoya), to eat",
+      "head": [
+       "Tense",
+       "আমি",
+       "তুই",
+       "তুমি",
+       "আপনি / তিনি",
+       "সে"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "সাধারণ বর্তমান",
+         "ro": "sadharon bortoman"
+        },
+        {
+         "bn": "খাই",
+         "ro": "khai"
+        },
+        {
+         "bn": "খাস",
+         "ro": "khas"
+        },
+        {
+         "bn": "খাও",
+         "ro": "khao"
+        },
+        {
+         "bn": "খান",
+         "ro": "khan"
+        },
+        {
+         "bn": "খায়",
+         "ro": "khay"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান বর্তমান",
+         "ro": "ghotoman bortoman"
+        },
+        {
+         "bn": "খাচ্ছি",
+         "ro": "khachchhi"
+        },
+        {
+         "bn": "খাচ্ছিস",
+         "ro": "khachchhis"
+        },
+        {
+         "bn": "খাচ্ছ",
+         "ro": "khachchho"
+        },
+        {
+         "bn": "খাচ্ছেন",
+         "ro": "khachchhen"
+        },
+        {
+         "bn": "খাচ্ছে",
+         "ro": "khachchhe"
+        }
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত বর্তমান",
+         "ro": "puraghotito bortoman"
+        },
+        {
+         "bn": "খেয়েছি",
+         "ro": "kheyechhi"
+        },
+        {
+         "bn": "খেয়েছিস",
+         "ro": "kheyechhis"
+        },
+        {
+         "bn": "খেয়েছ",
+         "ro": "kheyechho"
+        },
+        {
+         "bn": "খেয়েছেন",
+         "ro": "kheyechhen"
+        },
+        {
+         "bn": "খেয়েছে",
+         "ro": "kheyechhe"
+        }
+       ],
+       [
+        {
+         "bn": "সাধারণ অতীত",
+         "ro": "sadharon otit"
+        },
+        {
+         "bn": "খেলাম",
+         "ro": "khelam"
+        },
+        {
+         "bn": "খেলি",
+         "ro": "kheli"
+        },
+        {
+         "bn": "খেলে",
+         "ro": "khele"
+        },
+        {
+         "bn": "খেলেন",
+         "ro": "khelen"
+        },
+        {
+         "bn": "খেল",
+         "ro": "khelo"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান অতীত",
+         "ro": "ghotoman otit"
+        },
+        {
+         "bn": "খাচ্ছিলাম",
+         "ro": "khachchhilam"
+        },
+        {
+         "bn": "খাচ্ছিলি",
+         "ro": "khachchhili"
+        },
+        {
+         "bn": "খাচ্ছিলে",
+         "ro": "khachchhile"
+        },
+        {
+         "bn": "খাচ্ছিলেন",
+         "ro": "khachchhilen"
+        },
+        {
+         "bn": "খাচ্ছিল",
+         "ro": "khachchhilo"
+        }
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত অতীত",
+         "ro": "puraghotito otit"
+        },
+        {
+         "bn": "খেয়েছিলাম",
+         "ro": "kheyechhilam"
+        },
+        {
+         "bn": "খেয়েছিলি",
+         "ro": "kheyechhili"
+        },
+        {
+         "bn": "খেয়েছিলে",
+         "ro": "kheyechhile"
+        },
+        {
+         "bn": "খেয়েছিলেন",
+         "ro": "kheyechhilen"
+        },
+        {
+         "bn": "খেয়েছিল",
+         "ro": "kheyechhilo"
+        }
+       ],
+       [
+        {
+         "bn": "নিত্যবৃত্ত অতীত",
+         "ro": "nityobritto otit"
+        },
+        {
+         "bn": "খেতাম",
+         "ro": "khetam"
+        },
+        {
+         "bn": "খেতিস",
+         "ro": "khetis"
+        },
+        {
+         "bn": "খেতে",
+         "ro": "khete"
+        },
+        {
+         "bn": "খেতেন",
+         "ro": "kheten"
+        },
+        {
+         "bn": "খেত",
+         "ro": "kheto"
+        }
+       ],
+       [
+        {
+         "bn": "সাধারণ ভবিষ্যৎ",
+         "ro": "sadharon bhobishyot"
+        },
+        {
+         "bn": "খাব",
+         "ro": "khabo"
+        },
+        {
+         "bn": "খাবি",
+         "ro": "khabi"
+        },
+        {
+         "bn": "খাবে",
+         "ro": "khabe"
+        },
+        {
+         "bn": "খাবেন",
+         "ro": "khaben"
+        },
+        {
+         "bn": "খাবে",
+         "ro": "khabe"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান ভবিষ্যৎ",
+         "ro": "ghotoman bhobishyot"
+        },
+        {
+         "bn": "খেতে থাকব",
+         "ro": "khete thakbo"
+        },
+        {
+         "bn": "খেতে থাকবি",
+         "ro": "khete thakbi"
+        },
+        {
+         "bn": "খেতে থাকবে",
+         "ro": "khete thakbe"
+        },
+        {
+         "bn": "খেতে থাকবেন",
+         "ro": "khete thakben"
+        },
+        {
+         "bn": "খেতে থাকবে",
+         "ro": "khete thakbe"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "table",
+      "title": "যাওয়া (jaoya), to go",
+      "head": [
+       "Tense",
+       "আমি",
+       "তুই",
+       "তুমি",
+       "আপনি / তিনি",
+       "সে"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "সাধারণ বর্তমান",
+         "ro": "sadharon bortoman"
+        },
+        {
+         "bn": "যাই",
+         "ro": "jai"
+        },
+        {
+         "bn": "যাস",
+         "ro": "jas"
+        },
+        {
+         "bn": "যাও",
+         "ro": "jao"
+        },
+        {
+         "bn": "যান",
+         "ro": "jan"
+        },
+        {
+         "bn": "যায়",
+         "ro": "jay"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান বর্তমান",
+         "ro": "ghotoman bortoman"
+        },
+        {
+         "bn": "যাচ্ছি",
+         "ro": "jachchhi"
+        },
+        {
+         "bn": "যাচ্ছিস",
+         "ro": "jachchhis"
+        },
+        {
+         "bn": "যাচ্ছ",
+         "ro": "jachchho"
+        },
+        {
+         "bn": "যাচ্ছেন",
+         "ro": "jachchhen"
+        },
+        {
+         "bn": "যাচ্ছে",
+         "ro": "jachchhe"
+        }
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত বর্তমান",
+         "ro": "puraghotito bortoman"
+        },
+        {
+         "bn": "গিয়েছি",
+         "ro": "giyechhi"
+        },
+        {
+         "bn": "গিয়েছিস",
+         "ro": "giyechhis"
+        },
+        {
+         "bn": "গিয়েছ",
+         "ro": "giyechho"
+        },
+        {
+         "bn": "গিয়েছেন",
+         "ro": "giyechhen"
+        },
+        {
+         "bn": "গিয়েছে",
+         "ro": "giyechhe"
+        }
+       ],
+       [
+        {
+         "bn": "সাধারণ অতীত",
+         "ro": "sadharon otit"
+        },
+        {
+         "bn": "গেলাম",
+         "ro": "gelam"
+        },
+        {
+         "bn": "গেলি",
+         "ro": "geli"
+        },
+        {
+         "bn": "গেলে",
+         "ro": "gele"
+        },
+        {
+         "bn": "গেলেন",
+         "ro": "gelen"
+        },
+        {
+         "bn": "গেল",
+         "ro": "gelo"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান অতীত",
+         "ro": "ghotoman otit"
+        },
+        {
+         "bn": "যাচ্ছিলাম",
+         "ro": "jachchhilam"
+        },
+        {
+         "bn": "যাচ্ছিলি",
+         "ro": "jachchhili"
+        },
+        {
+         "bn": "যাচ্ছিলে",
+         "ro": "jachchhile"
+        },
+        {
+         "bn": "যাচ্ছিলেন",
+         "ro": "jachchhilen"
+        },
+        {
+         "bn": "যাচ্ছিল",
+         "ro": "jachchhilo"
+        }
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত অতীত",
+         "ro": "puraghotito otit"
+        },
+        {
+         "bn": "গিয়েছিলাম",
+         "ro": "giyechhilam"
+        },
+        {
+         "bn": "গিয়েছিলি",
+         "ro": "giyechhili"
+        },
+        {
+         "bn": "গিয়েছিলে",
+         "ro": "giyechhile"
+        },
+        {
+         "bn": "গিয়েছিলেন",
+         "ro": "giyechhilen"
+        },
+        {
+         "bn": "গিয়েছিল",
+         "ro": "giyechhilo"
+        }
+       ],
+       [
+        {
+         "bn": "নিত্যবৃত্ত অতীত",
+         "ro": "nityobritto otit"
+        },
+        {
+         "bn": "যেতাম",
+         "ro": "jetam"
+        },
+        {
+         "bn": "যেতিস",
+         "ro": "jetis"
+        },
+        {
+         "bn": "যেতে",
+         "ro": "jete"
+        },
+        {
+         "bn": "যেতেন",
+         "ro": "jeten"
+        },
+        {
+         "bn": "যেত",
+         "ro": "jeto"
+        }
+       ],
+       [
+        {
+         "bn": "সাধারণ ভবিষ্যৎ",
+         "ro": "sadharon bhobishyot"
+        },
+        {
+         "bn": "যাব",
+         "ro": "jabo"
+        },
+        {
+         "bn": "যাবি",
+         "ro": "jabi"
+        },
+        {
+         "bn": "যাবে",
+         "ro": "jabe"
+        },
+        {
+         "bn": "যাবেন",
+         "ro": "jaben"
+        },
+        {
+         "bn": "যাবে",
+         "ro": "jabe"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান ভবিষ্যৎ",
+         "ro": "ghotoman bhobishyot"
+        },
+        {
+         "bn": "যেতে থাকব",
+         "ro": "jete thakbo"
+        },
+        {
+         "bn": "যেতে থাকবি",
+         "ro": "jete thakbi"
+        },
+        {
+         "bn": "যেতে থাকবে",
+         "ro": "jete thakbe"
+        },
+        {
+         "bn": "যেতে থাকবেন",
+         "ro": "jete thakben"
+        },
+        {
+         "bn": "যেতে থাকবে",
+         "ro": "jete thakbe"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "table",
+      "title": "দেওয়া (deoya), to give",
+      "head": [
+       "Tense",
+       "আমি",
+       "তুই",
+       "তুমি",
+       "আপনি / তিনি",
+       "সে"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "সাধারণ বর্তমান",
+         "ro": "sadharon bortoman"
+        },
+        {
+         "bn": "দিই",
+         "ro": "dii"
+        },
+        {
+         "bn": "দিস",
+         "ro": "dis"
+        },
+        {
+         "bn": "দাও",
+         "ro": "dao"
+        },
+        {
+         "bn": "দেন",
+         "ro": "den"
+        },
+        {
+         "bn": "দেয়",
+         "ro": "dey"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান বর্তমান",
+         "ro": "ghotoman bortoman"
+        },
+        {
+         "bn": "দিচ্ছি",
+         "ro": "dichchhi"
+        },
+        {
+         "bn": "দিচ্ছিস",
+         "ro": "dichchhis"
+        },
+        {
+         "bn": "দিচ্ছ",
+         "ro": "dichchho"
+        },
+        {
+         "bn": "দিচ্ছেন",
+         "ro": "dichchhen"
+        },
+        {
+         "bn": "দিচ্ছে",
+         "ro": "dichchhe"
+        }
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত বর্তমান",
+         "ro": "puraghotito bortoman"
+        },
+        {
+         "bn": "দিয়েছি",
+         "ro": "diyechhi"
+        },
+        {
+         "bn": "দিয়েছিস",
+         "ro": "diyechhis"
+        },
+        {
+         "bn": "দিয়েছ",
+         "ro": "diyechho"
+        },
+        {
+         "bn": "দিয়েছেন",
+         "ro": "diyechhen"
+        },
+        {
+         "bn": "দিয়েছে",
+         "ro": "diyechhe"
+        }
+       ],
+       [
+        {
+         "bn": "সাধারণ অতীত",
+         "ro": "sadharon otit"
+        },
+        {
+         "bn": "দিলাম",
+         "ro": "dilam"
+        },
+        {
+         "bn": "দিলি",
+         "ro": "dili"
+        },
+        {
+         "bn": "দিলে",
+         "ro": "dile"
+        },
+        {
+         "bn": "দিলেন",
+         "ro": "dilen"
+        },
+        {
+         "bn": "দিল",
+         "ro": "dilo"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান অতীত",
+         "ro": "ghotoman otit"
+        },
+        {
+         "bn": "দিচ্ছিলাম",
+         "ro": "dichchhilam"
+        },
+        {
+         "bn": "দিচ্ছিলি",
+         "ro": "dichchhili"
+        },
+        {
+         "bn": "দিচ্ছিলে",
+         "ro": "dichchhile"
+        },
+        {
+         "bn": "দিচ্ছিলেন",
+         "ro": "dichchhilen"
+        },
+        {
+         "bn": "দিচ্ছিল",
+         "ro": "dichchhilo"
+        }
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত অতীত",
+         "ro": "puraghotito otit"
+        },
+        {
+         "bn": "দিয়েছিলাম",
+         "ro": "diyechhilam"
+        },
+        {
+         "bn": "দিয়েছিলি",
+         "ro": "diyechhili"
+        },
+        {
+         "bn": "দিয়েছিলে",
+         "ro": "diyechhile"
+        },
+        {
+         "bn": "দিয়েছিলেন",
+         "ro": "diyechhilen"
+        },
+        {
+         "bn": "দিয়েছিল",
+         "ro": "diyechhilo"
+        }
+       ],
+       [
+        {
+         "bn": "নিত্যবৃত্ত অতীত",
+         "ro": "nityobritto otit"
+        },
+        {
+         "bn": "দিতাম",
+         "ro": "ditam"
+        },
+        {
+         "bn": "দিতিস",
+         "ro": "ditis"
+        },
+        {
+         "bn": "দিতে",
+         "ro": "dite"
+        },
+        {
+         "bn": "দিতেন",
+         "ro": "diten"
+        },
+        {
+         "bn": "দিত",
+         "ro": "dito"
+        }
+       ],
+       [
+        {
+         "bn": "সাধারণ ভবিষ্যৎ",
+         "ro": "sadharon bhobishyot"
+        },
+        {
+         "bn": "দেব",
+         "ro": "debo"
+        },
+        {
+         "bn": "দিবি",
+         "ro": "dibi"
+        },
+        {
+         "bn": "দেবে",
+         "ro": "debe"
+        },
+        {
+         "bn": "দেবেন",
+         "ro": "deben"
+        },
+        {
+         "bn": "দেবে",
+         "ro": "debe"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান ভবিষ্যৎ",
+         "ro": "ghotoman bhobishyot"
+        },
+        {
+         "bn": "দিতে থাকব",
+         "ro": "dite thakbo"
+        },
+        {
+         "bn": "দিতে থাকবি",
+         "ro": "dite thakbi"
+        },
+        {
+         "bn": "দিতে থাকবে",
+         "ro": "dite thakbe"
+        },
+        {
+         "bn": "দিতে থাকবেন",
+         "ro": "dite thakben"
+        },
+        {
+         "bn": "দিতে থাকবে",
+         "ro": "dite thakbe"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "table",
+      "title": "আসা (asha), to come",
+      "head": [
+       "Tense",
+       "আমি",
+       "তুই",
+       "তুমি",
+       "আপনি / তিনি",
+       "সে"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "সাধারণ বর্তমান",
+         "ro": "sadharon bortoman"
+        },
+        {
+         "bn": "আসি",
+         "ro": "ashi"
+        },
+        {
+         "bn": "আসিস",
+         "ro": "ashis"
+        },
+        {
+         "bn": "আসো",
+         "ro": "asho"
+        },
+        {
+         "bn": "আসেন",
+         "ro": "ashen"
+        },
+        {
+         "bn": "আসে",
+         "ro": "ashe"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান বর্তমান",
+         "ro": "ghotoman bortoman"
+        },
+        {
+         "bn": "আসছি",
+         "ro": "aschhi"
+        },
+        {
+         "bn": "আসছিস",
+         "ro": "aschhis"
+        },
+        {
+         "bn": "আসছ",
+         "ro": "aschho"
+        },
+        {
+         "bn": "আসছেন",
+         "ro": "aschhen"
+        },
+        {
+         "bn": "আসছে",
+         "ro": "aschhe"
+        }
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত বর্তমান",
+         "ro": "puraghotito bortoman"
+        },
+        {
+         "bn": "এসেছি",
+         "ro": "eshechhi"
+        },
+        {
+         "bn": "এসেছিস",
+         "ro": "eshechhis"
+        },
+        {
+         "bn": "এসেছ",
+         "ro": "eshechho"
+        },
+        {
+         "bn": "এসেছেন",
+         "ro": "eshechhen"
+        },
+        {
+         "bn": "এসেছে",
+         "ro": "eshechhe"
+        }
+       ],
+       [
+        {
+         "bn": "সাধারণ অতীত",
+         "ro": "sadharon otit"
+        },
+        {
+         "bn": "এলাম",
+         "ro": "elam"
+        },
+        {
+         "bn": "এলি",
+         "ro": "eli"
+        },
+        {
+         "bn": "এলে",
+         "ro": "ele"
+        },
+        {
+         "bn": "এলেন",
+         "ro": "elen"
+        },
+        {
+         "bn": "এল",
+         "ro": "elo"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান অতীত",
+         "ro": "ghotoman otit"
+        },
+        {
+         "bn": "আসছিলাম",
+         "ro": "aschhilam"
+        },
+        {
+         "bn": "আসছিলি",
+         "ro": "aschhili"
+        },
+        {
+         "bn": "আসছিলে",
+         "ro": "aschhile"
+        },
+        {
+         "bn": "আসছিলেন",
+         "ro": "aschhilen"
+        },
+        {
+         "bn": "আসছিল",
+         "ro": "aschhilo"
+        }
+       ],
+       [
+        {
+         "bn": "পুরাঘটিত অতীত",
+         "ro": "puraghotito otit"
+        },
+        {
+         "bn": "এসেছিলাম",
+         "ro": "eshechhilam"
+        },
+        {
+         "bn": "এসেছিলি",
+         "ro": "eshechhili"
+        },
+        {
+         "bn": "এসেছিলে",
+         "ro": "eshechhile"
+        },
+        {
+         "bn": "এসেছিলেন",
+         "ro": "eshechhilen"
+        },
+        {
+         "bn": "এসেছিল",
+         "ro": "eshechhilo"
+        }
+       ],
+       [
+        {
+         "bn": "নিত্যবৃত্ত অতীত",
+         "ro": "nityobritto otit"
+        },
+        {
+         "bn": "আসতাম",
+         "ro": "astam"
+        },
+        {
+         "bn": "আসতিস",
+         "ro": "astis"
+        },
+        {
+         "bn": "আসতে",
+         "ro": "aste"
+        },
+        {
+         "bn": "আসতেন",
+         "ro": "asten"
+        },
+        {
+         "bn": "আসত",
+         "ro": "asto"
+        }
+       ],
+       [
+        {
+         "bn": "সাধারণ ভবিষ্যৎ",
+         "ro": "sadharon bhobishyot"
+        },
+        {
+         "bn": "আসব",
+         "ro": "asbo"
+        },
+        {
+         "bn": "আসবি",
+         "ro": "asbi"
+        },
+        {
+         "bn": "আসবে",
+         "ro": "asbe"
+        },
+        {
+         "bn": "আসবেন",
+         "ro": "asben"
+        },
+        {
+         "bn": "আসবে",
+         "ro": "asbe"
+        }
+       ],
+       [
+        {
+         "bn": "ঘটমান ভবিষ্যৎ",
+         "ro": "ghotoman bhobishyot"
+        },
+        {
+         "bn": "আসতে থাকব",
+         "ro": "aste thakbo"
+        },
+        {
+         "bn": "আসতে থাকবি",
+         "ro": "aste thakbi"
+        },
+        {
+         "bn": "আসতে থাকবে",
+         "ro": "aste thakbe"
+        },
+        {
+         "bn": "আসতে থাকবেন",
+         "ro": "aste thakben"
+        },
+        {
+         "bn": "আসতে থাকবে",
+         "ro": "aste thakbe"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "যাওয়া changes its root: যা- in the present and future, গি- / গে- for completed and simple past, যে- in the habitual past."
+     }
+    ]
+   },
+   {
+    "id": "link",
+    "title": "'Has been doing' and linking words",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "English has tenses like 'I have been living here for two years' and 'I had been waiting for an hour'. Bengali has no separate form for these. It uses the ordinary present or past continuous and adds a time word: ধরে (for), থেকে (since), আগে (before), যখন … তখন (when … then)."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "English idea",
+       "Bengali pattern",
+       "Example"
+      ],
+      "rows": [
+       [
+        "has / have been doing (for a time)",
+        "present (or present continuous) + ধরে",
+        {
+         "bn": "আমি দু বছর ধরে এখানে থাকি।",
+         "ro": "ami du bochhor dhore ekhane thaki."
+        }
+       ],
+       [
+        "has / have been doing (since a time)",
+        "present continuous + থেকে",
+        {
+         "bn": "সে সকাল থেকে কাজ করছে।",
+         "ro": "she shokal theke kaj korchhe."
+        }
+       ],
+       [
+        "had been doing (for a time)",
+        "past continuous + ধরে",
+        {
+         "bn": "আমি এক ঘণ্টা ধরে অপেক্ষা করছিলাম।",
+         "ro": "ami ek ghonta dhore opekkha korchhilam."
+        }
+       ],
+       [
+        "before / after",
+        "verbal noun (-া) + র + আগে / পরে",
+        {
+         "bn": "খাওয়ার আগে হাত ধোও।",
+         "ro": "khaoyar age hat dhoo."
+        }
+       ],
+       [
+        "when … then …",
+        "যখন … তখন …",
+        {
+         "bn": "আমি যখন এলাম, তখন সে ঘুমাচ্ছিল।",
+         "ro": "ami jokhon elam, tokhon she ghumachchhilo."
+        }
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "'Not yet' is এখনও … নি: আমি এখনও খাইনি (I have not eaten yet). 'Already' is ইতিমধ্যে or আগেই: সে ইতিমধ্যে চলে গিয়েছে."
+     }
+    ]
+   },
+   {
+    "id": "use",
+    "title": "Choosing the tense",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Time words help you choose. রোজ (every day) and সাধারণত (usually) go with the simple present. এখন (now) goes with the continuous. ইতিমধ্যে (already) goes with the perfect. গতকাল (yesterday) goes with the simple past. আগামীকাল (tomorrow) goes with the future."
+     },
+     {
+      "t": "note",
+      "text": "কাল (kal) means both 'yesterday' and 'tomorrow'. The verb tells you which: কাল আমি গেলাম (yesterday) and কাল আমি যাব (tomorrow). To be clear, say গতকাল (yesterday) or আগামীকাল (tomorrow)."
+     },
+     {
+      "t": "ex",
+      "title": null,
+      "items": [
+       [
+        "আমি রোজ সকালে চা খাই।",
+        "ami roj shokale cha khai.",
+        "I drink tea every morning."
+       ],
+       [
+        "আমি এখন পড়ছি।",
+        "ami ekhon porchhi.",
+        "I am studying now."
+       ],
+       [
+        "আমি ইতিমধ্যে খেয়েছি।",
+        "ami itimodhye kheyechhi.",
+        "I have already eaten."
+       ],
+       [
+        "গতকাল আমি বাজারে গেলাম।",
+        "gotokal ami bajare gelam.",
+        "Yesterday I went to the market."
+       ],
+       [
+        "ছোটবেলায় আমি রোজ মাঠে খেলতাম।",
+        "chhotobelay ami roj mathe kheltam.",
+        "When I was little I used to play in the field every day."
+       ],
+       [
+        "আগামীকাল আমি স্কুলে যাব।",
+        "agamikal ami skule jabo.",
+        "Tomorrow I will go to school."
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "exercises": [
+   {
+    "q": "Choose the right form.",
+    "sentence": {
+     "bn": "আমি রোজ ভাত ___।",
+     "ro": "ami roj bhat ___."
+    },
+    "options": [
+     {
+      "bn": "খাই",
+      "ro": "khai"
+     },
+     {
+      "bn": "খাচ্ছি",
+      "ro": "khachchhi"
+     },
+     {
+      "bn": "খেলাম",
+      "ro": "khelam"
+     }
+    ],
+    "answer": 0,
+    "why": "A daily habit uses the simple present."
+   },
+   {
+    "q": "Choose the right form.",
+    "sentence": {
+     "bn": "আমি এখন ভাত ___।",
+     "ro": "ami ekhon bhat ___."
+    },
+    "options": [
+     {
+      "bn": "খাই",
+      "ro": "khai"
+     },
+     {
+      "bn": "খাচ্ছি",
+      "ro": "khachchhi"
+     },
+     {
+      "bn": "খেলাম",
+      "ro": "khelam"
+     }
+    ],
+    "answer": 1,
+    "why": "এখন (now) needs the present continuous."
+   },
+   {
+    "q": "Choose the right form.",
+    "sentence": {
+     "bn": "আমি গতকাল ভাত ___।",
+     "ro": "ami gotokal bhat ___."
+    },
+    "options": [
+     {
+      "bn": "খাব",
+      "ro": "khabo"
+     },
+     {
+      "bn": "খেলাম",
+      "ro": "khelam"
+     },
+     {
+      "bn": "খাচ্ছি",
+      "ro": "khachchhi"
+     }
+    ],
+    "answer": 1,
+    "why": "গতকাল (yesterday) is the past: খেলাম."
+   },
+   {
+    "q": "Choose the right form.",
+    "sentence": {
+     "bn": "আমি আগামীকাল স্কুলে ___।",
+     "ro": "ami agamikal skule ___."
+    },
+    "options": [
+     {
+      "bn": "যাব",
+      "ro": "jabo"
+     },
+     {
+      "bn": "গেলাম",
+      "ro": "gelam"
+     },
+     {
+      "bn": "যাচ্ছি",
+      "ro": "jachchhi"
+     }
+    ],
+    "answer": 0,
+    "why": "আগামীকাল (tomorrow) needs the future: যাব."
+   },
+   {
+    "q": "Choose the right form for তুমি.",
+    "sentence": {
+     "bn": "তুমি এখন কী ___?",
+     "ro": "tumi ekhon ki ___?"
+    },
+    "options": [
+     {
+      "bn": "করছ",
+      "ro": "korchho"
+     },
+     {
+      "bn": "করেছ",
+      "ro": "korechho"
+     },
+     {
+      "bn": "করবে",
+      "ro": "korbe"
+     }
+    ],
+    "answer": 0,
+    "why": "এখন (now) with তুমি: করছ."
+   },
+   {
+    "q": "Choose the right form ('I have already eaten').",
+    "sentence": {
+     "bn": "আমি ইতিমধ্যে ভাত ___।",
+     "ro": "ami itimodhye bhat ___."
+    },
+    "options": [
+     {
+      "bn": "খেয়েছি",
+      "ro": "kheyechhi"
+     },
+     {
+      "bn": "খেলাম",
+      "ro": "khelam"
+     },
+     {
+      "bn": "খাব",
+      "ro": "khabo"
+     }
+    ],
+    "answer": 0,
+    "why": "ইতিমধ্যে (already) goes with the present perfect."
+   },
+   {
+    "q": "Choose the right form ('used to play').",
+    "sentence": {
+     "bn": "ছোটবেলায় আমি রোজ মাঠে ___।",
+     "ro": "chhotobelay ami roj mathe ___."
+    },
+    "options": [
+     {
+      "bn": "খেলতাম",
+      "ro": "kheltam"
+     },
+     {
+      "bn": "খেললাম",
+      "ro": "khellam"
+     },
+     {
+      "bn": "খেলব",
+      "ro": "khelbo"
+     }
+    ],
+    "answer": 0,
+    "why": "A past habit uses the -তাম form."
+   },
+   {
+    "q": "Which tense is আমি খাচ্ছিলাম?",
+    "sentence": null,
+    "options": [
+     "সাধারণ অতীত (simple past)",
+     "ঘটমান অতীত (past continuous)",
+     "ঘটমান বর্তমান (present continuous)"
+    ],
+    "answer": 1,
+    "why": "-ছিলাম marks the past continuous: I was eating."
+   },
+   {
+    "q": "Choose the right verb for আপনি (tomorrow).",
+    "sentence": {
+     "bn": "আপনি আগামীকাল কোথায় ___?",
+     "ro": "apni agamikal kothay ___?"
+    },
+    "options": [
+     {
+      "bn": "যাবেন",
+      "ro": "jaben"
+     },
+     {
+      "bn": "যাবে",
+      "ro": "jabe"
+     },
+     {
+      "bn": "যাব",
+      "ro": "jabo"
+     }
+    ],
+    "answer": 0,
+    "why": "আপনি takes -বেন in the future."
+   },
+   {
+    "q": "Choose the right verb for তুই (past).",
+    "sentence": {
+     "bn": "তুই কী ___?",
+     "ro": "tui ki ___?"
+    },
+    "options": [
+     {
+      "bn": "করলি",
+      "ro": "korli"
+     },
+     {
+      "bn": "করলে",
+      "ro": "korle"
+     },
+     {
+      "bn": "করলাম",
+      "ro": "korlam"
+     }
+    ],
+    "answer": 0,
+    "why": "তুই takes -লি in the simple past."
+   },
+   {
+    "q": "In কাল আমি স্কুলে যাব, 'কাল' means:",
+    "sentence": null,
+    "options": [
+     "yesterday",
+     "tomorrow"
+    ],
+    "answer": 1,
+    "why": "The future verb যাব shows that কাল means 'tomorrow'."
+   },
+   {
+    "q": "Choose the right form ('I was at home').",
+    "sentence": {
+     "bn": "আমি তখন বাড়িতে ___।",
+     "ro": "ami tokhon barite ___."
+    },
+    "options": [
+     {
+      "bn": "ছিলাম",
+      "ro": "chhilam"
+     },
+     {
+      "bn": "আছি",
+      "ro": "achhi"
+     },
+     {
+      "bn": "থাকব",
+      "ro": "thakbo"
+     }
+    ],
+    "answer": 0,
+    "why": "Past of 'to be there': ছিলাম."
+   }
+  ]
+ },
+ {
+  "id": "karak",
+  "title": [
+   "কারক",
+   "Karak",
+   "Case roles"
+  ],
+  "blurb": "The job each noun does for the verb: who acts, what is acted on, with what, for whom, from where, where.",
+  "sections": [
+   {
+    "id": "six",
+    "title": "The six karak",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "কারক (karak) is the relationship between a noun and the verb. To find a noun's karak, ask the verb a question: Who does it? What is done? With what? To whom? From where? Where or when?"
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Karak",
+       "Ask the verb",
+       "Marker",
+       "Example"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "কর্তৃকারক",
+         "ro": "kortrikarok"
+        },
+        "Who does it? (কে?)",
+        "no ending",
+        {
+         "bn": "রাম বই পড়ে।",
+         "ro": "ram boi pore."
+        }
+       ],
+       [
+        {
+         "bn": "কর্মকারক",
+         "ro": "kormokarok"
+        },
+        "What / whom? (কী / কাকে?)",
+        "-কে or none",
+        {
+         "bn": "রাম বই পড়ে।",
+         "ro": "ram boi pore."
+        }
+       ],
+       [
+        {
+         "bn": "করণকারক",
+         "ro": "koronkarok"
+        },
+        "With what? (কী দিয়ে?)",
+        "দিয়ে, দ্বারা",
+        {
+         "bn": "সে কলম দিয়ে লেখে।",
+         "ro": "she kolom diye lekhe."
+        }
+       ],
+       [
+        {
+         "bn": "সম্প্রদানকারক",
+         "ro": "sompradankarok"
+        },
+        "To whom is it given? (কাকে?)",
+        "-কে, জন্য",
+        {
+         "bn": "গরিবকে ভাত দাও।",
+         "ro": "goribke bhat dao."
+        }
+       ],
+       [
+        {
+         "bn": "অপাদানকারক",
+         "ro": "opadankarok"
+        },
+        "From where? (কোথা থেকে?)",
+        "থেকে",
+        {
+         "bn": "গাছ থেকে ফল পড়ে।",
+         "ro": "gachh theke phol pore."
+        }
+       ],
+       [
+        {
+         "bn": "অধিকরণকারক",
+         "ro": "odhikoronkarok"
+        },
+        "Where / when? (কোথায় / কখন?)",
+        "-এ, -তে, -য়",
+        {
+         "bn": "পাখি গাছে বসে।",
+         "ro": "pakhi gachhe boshe."
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "examples",
+    "title": "Each karak in a sentence",
+    "blocks": [
+     {
+      "t": "ex",
+      "title": "Find the karak by the question",
+      "items": [
+       [
+        "রাম ভাত খায়।",
+        "ram bhat khay.",
+        "Ram eats rice. রাম = কর্তা (who eats?)"
+       ],
+       [
+        "মা ছেলেকে ডাকলেন।",
+        "ma chheleke daklen.",
+        "Mother called the boy. ছেলেকে = কর্ম (whom?)"
+       ],
+       [
+        "সে কলম দিয়ে লেখে।",
+        "she kolom diye lekhe.",
+        "He / she writes with a pen. কলম দিয়ে = করণ (with what?)"
+       ],
+       [
+        "গরিবকে ভাত দাও।",
+        "goribke bhat dao.",
+        "Give rice to the poor person. গরিবকে = সম্প্রদান (to whom?)"
+       ],
+       [
+        "গাছ থেকে ফল পড়ে।",
+        "gachh theke phol pore.",
+        "Fruit falls from the tree. গাছ থেকে = অপাদান (from where?)"
+       ],
+       [
+        "পাখি গাছে বসে।",
+        "pakhi gachhe boshe.",
+        "The bird sits on the tree. গাছে = অধিকরণ (where?)"
+       ],
+       [
+        "সকালে আমি স্কুলে যাই।",
+        "shokale ami skule jai.",
+        "In the morning I go to school. সকালে = অধিকরণ (when?)"
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "-কে is used for both the object (কর্ম) and the one who receives (সম্প্রদান). Meaning decides: ছেলেকে ডাকলেন (called the boy) has the boy as the thing acted on. গরিবকে ভাত দাও has the poor person as the recipient of something given."
+     }
+    ]
+   },
+   {
+    "id": "whole",
+    "title": "All together",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "One sentence can carry several karak at once. Each noun answers a different question to the verb."
+     },
+     {
+      "t": "ex",
+      "title": null,
+      "items": [
+       [
+        "রাম ঘরে বসে কলম দিয়ে বন্ধুকে চিঠি লেখে।",
+        "ram ghore boshe kolom diye bondhuke chithi lekhe.",
+        "Ram, sitting at home, writes a letter to a friend with a pen."
+       ],
+       [
+        "সে কলকাতা থেকে এসেছে।",
+        "she kolkata theke eshechhe.",
+        "He / she has come from Kolkata."
+       ]
+      ]
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Word",
+       "Karak",
+       "Question it answers"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "রাম",
+         "ro": "ram"
+        },
+        {
+         "bn": "কর্তা",
+         "ro": "korta"
+        },
+        "Who writes?"
+       ],
+       [
+        {
+         "bn": "ঘরে",
+         "ro": "ghore"
+        },
+        {
+         "bn": "অধিকরণ",
+         "ro": "odhikoron"
+        },
+        "Where?"
+       ],
+       [
+        {
+         "bn": "কলম দিয়ে",
+         "ro": "kolom diye"
+        },
+        {
+         "bn": "করণ",
+         "ro": "koron"
+        },
+        "With what?"
+       ],
+       [
+        {
+         "bn": "বন্ধুকে",
+         "ro": "bondhuke"
+        },
+        {
+         "bn": "সম্প্রদান",
+         "ro": "sompradan"
+        },
+        "To whom?"
+       ],
+       [
+        {
+         "bn": "চিঠি",
+         "ro": "chithi"
+        },
+        {
+         "bn": "কর্ম",
+         "ro": "kormo"
+        },
+        "What is written?"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "notkarak",
+    "title": "Not a karak",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Two kinds of word are not counted as a karak because they are not directly linked to the verb."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Name",
+       "Job",
+       "Example"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "সম্বন্ধ পদ",
+         "ro": "sombondho pod"
+        },
+        "Shows that something belongs to something or someone. It ends in -র / -এর.",
+        {
+         "bn": "এটা আমার বই।",
+         "ro": "eta amar boi."
+        }
+       ],
+       [
+        {
+         "bn": "সম্বোধন পদ",
+         "ro": "sombodhon pod"
+        },
+        "Calls someone. It often has ও, হে, ওগো.",
+        {
+         "bn": "ও রাম, এদিকে এসো।",
+         "ro": "o ram, edike esho."
+        }
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "Some books count the genitive (সম্বন্ধ) as a sixth karak. Most Bengali school grammar treats it as a separate relationship."
+     }
+    ]
+   }
+  ],
+  "exercises": [
+   {
+    "q": "Which karak is রাম?",
+    "sentence": {
+     "bn": "রাম বই পড়ে।",
+     "ro": "ram boi pore."
+    },
+    "options": [
+     "কর্তা (who does)",
+     "কর্ম (what is done)",
+     "অধিকরণ (where)"
+    ],
+    "answer": 0,
+    "why": "রাম does the reading."
+   },
+   {
+    "q": "Which karak is বই?",
+    "sentence": {
+     "bn": "রাম বই পড়ে।",
+     "ro": "ram boi pore."
+    },
+    "options": [
+     "কর্তা",
+     "কর্ম",
+     "করণ"
+    ],
+    "answer": 1,
+    "why": "বই is what is read, so it is the object."
+   },
+   {
+    "q": "Which karak is কলম দিয়ে?",
+    "sentence": {
+     "bn": "সে কলম দিয়ে লেখে।",
+     "ro": "she kolom diye lekhe."
+    },
+    "options": [
+     "করণ (with what)",
+     "অপাদান",
+     "সম্প্রদান"
+    ],
+    "answer": 0,
+    "why": "It tells with what he / she writes."
+   },
+   {
+    "q": "Which karak is গাছ থেকে?",
+    "sentence": {
+     "bn": "গাছ থেকে ফল পড়ে।",
+     "ro": "gachh theke phol pore."
+    },
+    "options": [
+     "অপাদান (from where)",
+     "অধিকরণ",
+     "করণ"
+    ],
+    "answer": 0,
+    "why": "থেকে shows the starting place."
+   },
+   {
+    "q": "Which karak is গাছে?",
+    "sentence": {
+     "bn": "পাখি গাছে বসে।",
+     "ro": "pakhi gachhe boshe."
+    },
+    "options": [
+     "অধিকরণ (where)",
+     "অপাদান",
+     "কর্ম"
+    ],
+    "answer": 0,
+    "why": "গাছে shows the place."
+   },
+   {
+    "q": "Which karak is গরিবকে?",
+    "sentence": {
+     "bn": "গরিবকে ভাত দাও।",
+     "ro": "goribke bhat dao."
+    },
+    "options": [
+     "সম্প্রদান (to whom)",
+     "কর্তা",
+     "অধিকরণ"
+    ],
+    "answer": 0,
+    "why": "The poor person receives the rice."
+   },
+   {
+    "q": "Which karak is ছেলেকে?",
+    "sentence": {
+     "bn": "মা ছেলেকে ডাকলেন।",
+     "ro": "ma chheleke daklen."
+    },
+    "options": [
+     "কর্ম (whom)",
+     "সম্প্রদান",
+     "কর্তা"
+    ],
+    "answer": 0,
+    "why": "The boy is the one acted on (called)."
+   },
+   {
+    "q": "What is আমার here?",
+    "sentence": {
+     "bn": "এটা আমার বই।",
+     "ro": "eta amar boi."
+    },
+    "options": [
+     "সম্বন্ধ পদ (belonging)",
+     "কর্তা",
+     "কর্ম"
+    ],
+    "answer": 0,
+    "why": "আমার shows belonging and is not a karak."
+   },
+   {
+    "q": "What is রাম here?",
+    "sentence": {
+     "bn": "ও রাম, শোনো।",
+     "ro": "o ram, shono."
+    },
+    "options": [
+     "সম্বোধন পদ (calling)",
+     "কর্তা",
+     "করণ"
+    ],
+    "answer": 0,
+    "why": "It is used to call someone."
+   },
+   {
+    "q": "Which karak is সকালে?",
+    "sentence": {
+     "bn": "সকালে আমি স্কুলে যাই।",
+     "ro": "shokale ami skule jai."
+    },
+    "options": [
+     "অধিকরণ (when)",
+     "কর্তা",
+     "অপাদান"
+    ],
+    "answer": 0,
+    "why": "Time words ending in -এ are অধিকরণ (time)."
+   },
+   {
+    "q": "Which question finds the object (কর্ম)?",
+    "sentence": null,
+    "options": [
+     "কী বা কাকে? (what / whom)",
+     "কে? (who)",
+     "কোথায়? (where)"
+    ],
+    "answer": 0,
+    "why": "Ask 'what / whom is done?'."
+   },
+   {
+    "q": "Which karak is কলকাতা থেকে?",
+    "sentence": {
+     "bn": "সে কলকাতা থেকে এসেছে।",
+     "ro": "she kolkata theke eshechhe."
+    },
+    "options": [
+     "অপাদান (from where)",
+     "অধিকরণ",
+     "কর্তা"
+    ],
+    "answer": 0,
+    "why": "থেকে shows where it started."
+   }
+  ]
+ },
+ {
+  "id": "bibhakti",
+  "title": [
+   "বিভক্তি",
+   "Bibhokti",
+   "Case endings"
+  ],
+  "blurb": "The seven endings and little words that mark a noun, and how they change with the last sound of the noun.",
+  "sections": [
+   {
+    "id": "seven",
+    "title": "The seven bibhakti",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "বিভক্তি (bibhokti) is the ending or marker added to a noun to show its karak. Karak is the job; bibhakti is the mark. Traditional grammar counts seven bibhakti."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Bibhakti",
+       "Marker",
+       "Usually shows",
+       "Example"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "প্রথমা (1st)",
+         "ro": "prothoma"
+        },
+        "no ending",
+        "কর্তা (subject)",
+        {
+         "bn": "ছেলে যায়।",
+         "ro": "chhele jay."
+        }
+       ],
+       [
+        {
+         "bn": "দ্বিতীয়া (2nd)",
+         "ro": "ditiyo"
+        },
+        "-কে",
+        "কর্ম (object)",
+        {
+         "bn": "ছেলেকে ডাকো।",
+         "ro": "chheleke dako."
+        }
+       ],
+       [
+        {
+         "bn": "তৃতীয়া (3rd)",
+         "ro": "tritiyo"
+        },
+        "দিয়ে, দ্বারা",
+        "করণ (with what)",
+        {
+         "bn": "কলম দিয়ে লেখো।",
+         "ro": "kolom diye lekho."
+        }
+       ],
+       [
+        {
+         "bn": "চতুর্থী (4th)",
+         "ro": "choturthi"
+        },
+        "-কে, জন্য",
+        "সম্প্রদান (for whom)",
+        {
+         "bn": "তোমার জন্য এনেছি।",
+         "ro": "tomar jonyo enechhi."
+        }
+       ],
+       [
+        {
+         "bn": "পঞ্চমী (5th)",
+         "ro": "pocchomi"
+        },
+        "থেকে, হতে",
+        "অপাদান (from)",
+        {
+         "bn": "বাড়ি থেকে এসেছি।",
+         "ro": "bari theke eshechhi."
+        }
+       ],
+       [
+        {
+         "bn": "ষষ্ঠী (6th)",
+         "ro": "shoshthi"
+        },
+        "-র, -এর",
+        "সম্বন্ধ (of)",
+        {
+         "bn": "বাড়ির দরজা",
+         "ro": "barir dorja"
+        }
+       ],
+       [
+        {
+         "bn": "সপ্তমী (7th)",
+         "ro": "soptomi"
+        },
+        "-এ, -তে, -য়",
+        "অধিকরণ (in, at, on)",
+        {
+         "bn": "ঘরে আছি।",
+         "ro": "ghore achhi."
+        }
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "The same marker can serve two bibhakti (-কে is both 2nd and 4th). Meaning decides which one you have. Calling a person (ও রাম, হে ঈশ্বর) is the সম্বোধন, listed outside the seven."
+     }
+    ]
+   },
+   {
+    "id": "genitive",
+    "title": "Belonging: -র and -এর",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "To say 'of' or 'belonging to', add -র after a vowel sound and -এর after a consonant."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Noun",
+       "Ends in",
+       "Of the noun"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "ছেলে (boy)",
+         "ro": "chhele"
+        },
+        "vowel",
+        {
+         "bn": "ছেলের",
+         "ro": "chheler"
+        }
+       ],
+       [
+        {
+         "bn": "বাড়ি (house)",
+         "ro": "bari"
+        },
+        "vowel",
+        {
+         "bn": "বাড়ির",
+         "ro": "barir"
+        }
+       ],
+       [
+        {
+         "bn": "নদী (river)",
+         "ro": "nodi"
+        },
+        "vowel",
+        {
+         "bn": "নদীর",
+         "ro": "nodir"
+        }
+       ],
+       [
+        {
+         "bn": "বন্ধু (friend)",
+         "ro": "bondhu"
+        },
+        "vowel",
+        {
+         "bn": "বন্ধুর",
+         "ro": "bondhur"
+        }
+       ],
+       [
+        {
+         "bn": "মা (mother)",
+         "ro": "ma"
+        },
+        "vowel -া",
+        {
+         "bn": "মায়ের (also মার)",
+         "ro": "mayer (also mar)"
+        }
+       ],
+       [
+        {
+         "bn": "ঘর (room)",
+         "ro": "ghor"
+        },
+        "consonant",
+        {
+         "bn": "ঘরের",
+         "ro": "ghorer"
+        }
+       ],
+       [
+        {
+         "bn": "গাছ (tree)",
+         "ro": "gachh"
+        },
+        "consonant",
+        {
+         "bn": "গাছের",
+         "ro": "gachher"
+        }
+       ],
+       [
+        {
+         "bn": "স্কুল (school)",
+         "ro": "skul"
+        },
+        "consonant",
+        {
+         "bn": "স্কুলের",
+         "ro": "skuler"
+        }
+       ],
+       [
+        {
+         "bn": "কলম (pen)",
+         "ro": "kolom"
+        },
+        "consonant",
+        {
+         "bn": "কলমের",
+         "ro": "kolomer"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "ex",
+      "title": null,
+      "items": [
+       [
+        "এটা ছেলের বই।",
+        "eta chheler boi.",
+        "This is the boy's book."
+       ],
+       [
+        "এটা বাড়ির দরজা।",
+        "eta barir dorja.",
+        "This is the door of the house."
+       ],
+       [
+        "এটা গাছের ডাল।",
+        "eta gachher dal.",
+        "This is a branch of the tree."
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "locative",
+    "title": "Place: -এ, -তে, -য়",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "To say 'in', 'at' or 'on' a place or time, add -এ after a consonant, -তে after the vowels -ি and -ী / -ু, and -য় after -া."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Noun",
+       "Ends in",
+       "In / at the noun"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "ঘর (room)",
+         "ro": "ghor"
+        },
+        "consonant",
+        {
+         "bn": "ঘরে",
+         "ro": "ghore"
+        }
+       ],
+       [
+        {
+         "bn": "স্কুল (school)",
+         "ro": "skul"
+        },
+        "consonant",
+        {
+         "bn": "স্কুলে",
+         "ro": "skule"
+        }
+       ],
+       [
+        {
+         "bn": "বাজার (market)",
+         "ro": "bajar"
+        },
+        "consonant",
+        {
+         "bn": "বাজারে",
+         "ro": "bajare"
+        }
+       ],
+       [
+        {
+         "bn": "মাঠ (field)",
+         "ro": "math"
+        },
+        "consonant",
+        {
+         "bn": "মাঠে",
+         "ro": "mathe"
+        }
+       ],
+       [
+        {
+         "bn": "বাড়ি (house)",
+         "ro": "bari"
+        },
+        "vowel -ি",
+        {
+         "bn": "বাড়িতে",
+         "ro": "barite"
+        }
+       ],
+       [
+        {
+         "bn": "নদী (river)",
+         "ro": "nodi"
+        },
+        "vowel -ী",
+        {
+         "bn": "নদীতে",
+         "ro": "nodite"
+        }
+       ],
+       [
+        {
+         "bn": "ঢাকা (Dhaka)",
+         "ro": "dhaka"
+        },
+        "-া",
+        {
+         "bn": "ঢাকায়",
+         "ro": "dhakay"
+        }
+       ],
+       [
+        {
+         "bn": "কলকাতা (Kolkata)",
+         "ro": "kolkata"
+        },
+        "-া",
+        {
+         "bn": "কলকাতায়",
+         "ro": "kolkatay"
+        }
+       ],
+       [
+        {
+         "bn": "রাস্তা (road)",
+         "ro": "rasta"
+        },
+        "-া",
+        {
+         "bn": "রাস্তায়",
+         "ro": "rastay"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "ex",
+      "title": null,
+      "items": [
+       [
+        "আমি বাড়িতে আছি।",
+        "ami barite achhi.",
+        "I am at home."
+       ],
+       [
+        "সে স্কুলে পড়ে।",
+        "she skule pore.",
+        "He / she studies at school."
+       ],
+       [
+        "আমরা কলকাতায় থাকি।",
+        "amra kolkatay thaki.",
+        "We live in Kolkata."
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "object",
+    "title": "Objects: -কে or nothing",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Add -কে to a noun that names a person or an animal when it is the object: মাকে, বন্ধুকে, কুকুরকে. A thing you do something to usually takes no ending: আমি বই পড়ি, আমি ভাত খাই."
+     },
+     {
+      "t": "ex",
+      "title": null,
+      "items": [
+       [
+        "আমি মাকে ডাকলাম।",
+        "ami make daklam.",
+        "I called mother."
+       ],
+       [
+        "সে বন্ধুকে চিঠি লিখল।",
+        "she bondhuke chithi likhlo.",
+        "He / she wrote a letter to a friend."
+       ],
+       [
+        "আমি বই পড়ি।",
+        "ami boi pori.",
+        "I read a book. (no ending on বই)"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "postpos",
+    "title": "Little words after the noun",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Bengali often uses small words after a noun instead of an ending. They are called অনুসর্গ (onushorgo), postpositions. Words like জন্য, সঙ্গে, মধ্যে, কাছে usually follow the -র form of the noun. থেকে, দিয়ে and পর্যন্ত follow the plain noun."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Word",
+       "Meaning",
+       "Example"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "জন্য",
+         "ro": "jonyo"
+        },
+        "for",
+        {
+         "bn": "তোমার জন্য",
+         "ro": "tomar jonyo"
+        }
+       ],
+       [
+        {
+         "bn": "সঙ্গে",
+         "ro": "songe"
+        },
+        "with (a person)",
+        {
+         "bn": "বন্ধুর সঙ্গে",
+         "ro": "bondhur songe"
+        }
+       ],
+       [
+        {
+         "bn": "মধ্যে",
+         "ro": "moddhe"
+        },
+        "inside, among",
+        {
+         "bn": "ঘরের মধ্যে",
+         "ro": "ghorer moddhe"
+        }
+       ],
+       [
+        {
+         "bn": "কাছে",
+         "ro": "kachhe"
+        },
+        "near, with (someone)",
+        {
+         "bn": "আমার কাছে",
+         "ro": "amar kachhe"
+        }
+       ],
+       [
+        {
+         "bn": "থেকে",
+         "ro": "theke"
+        },
+        "from, since",
+        {
+         "bn": "স্কুল থেকে",
+         "ro": "skul theke"
+        }
+       ],
+       [
+        {
+         "bn": "দিয়ে",
+         "ro": "diye"
+        },
+        "with, by means of",
+        {
+         "bn": "কলম দিয়ে",
+         "ro": "kolom diye"
+        }
+       ],
+       [
+        {
+         "bn": "পর্যন্ত",
+         "ro": "porjonto"
+        },
+        "up to, until",
+        {
+         "bn": "সকাল পর্যন্ত",
+         "ro": "shokal porjonto"
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "exercises": [
+   {
+    "q": "Choose 'of the room'.",
+    "sentence": {
+     "bn": "এটা ___ দরজা।",
+     "ro": "eta ___ dorja."
+    },
+    "options": [
+     {
+      "bn": "ঘরের",
+      "ro": "ghorer"
+     },
+     {
+      "bn": "ঘরে",
+      "ro": "ghore"
+     },
+     {
+      "bn": "ঘরকে",
+      "ro": "ghorke"
+     }
+    ],
+    "answer": 0,
+    "why": "-এর marks belonging after a consonant."
+   },
+   {
+    "q": "Choose 'of the house'.",
+    "sentence": {
+     "bn": "এটা ___ দরজা।",
+     "ro": "eta ___ dorja."
+    },
+    "options": [
+     {
+      "bn": "বাড়ির",
+      "ro": "barir"
+     },
+     {
+      "bn": "বাড়িতে",
+      "ro": "barite"
+     },
+     {
+      "bn": "বাড়িকে",
+      "ro": "barike"
+     }
+    ],
+    "answer": 0,
+    "why": "-র marks belonging after a vowel."
+   },
+   {
+    "q": "Choose 'of mother'.",
+    "sentence": {
+     "bn": "এটা ___ শাড়ি।",
+     "ro": "eta ___ shari."
+    },
+    "options": [
+     {
+      "bn": "মায়ের",
+      "ro": "mayer"
+     },
+     {
+      "bn": "মাকে",
+      "ro": "make"
+     },
+     {
+      "bn": "মাতে",
+      "ro": "mate"
+     }
+    ],
+    "answer": 0,
+    "why": "মা takes -য়ের in the genitive."
+   },
+   {
+    "q": "Choose 'in the room'.",
+    "sentence": {
+     "bn": "আমি ___ আছি।",
+     "ro": "ami ___ achhi."
+    },
+    "options": [
+     {
+      "bn": "ঘরে",
+      "ro": "ghore"
+     },
+     {
+      "bn": "ঘরের",
+      "ro": "ghorer"
+     },
+     {
+      "bn": "ঘরতে",
+      "ro": "ghorte"
+     }
+    ],
+    "answer": 0,
+    "why": "-এ shows place after a consonant."
+   },
+   {
+    "q": "Choose 'at home'.",
+    "sentence": {
+     "bn": "আমি ___ আছি।",
+     "ro": "ami ___ achhi."
+    },
+    "options": [
+     {
+      "bn": "বাড়িতে",
+      "ro": "barite"
+     },
+     {
+      "bn": "বাড়ির",
+      "ro": "barir"
+     },
+     {
+      "bn": "বাড়িয়",
+      "ro": "bariy"
+     }
+    ],
+    "answer": 0,
+    "why": "After -ি, the place ending is -তে."
+   },
+   {
+    "q": "Choose 'in Dhaka'.",
+    "sentence": {
+     "bn": "আমি ___ থাকি।",
+     "ro": "ami ___ thaki."
+    },
+    "options": [
+     {
+      "bn": "ঢাকায়",
+      "ro": "dhakay"
+     },
+     {
+      "bn": "ঢাকাতে",
+      "ro": "dhakate"
+     },
+     {
+      "bn": "ঢাকার",
+      "ro": "dhakar"
+     }
+    ],
+    "answer": 0,
+    "why": "After -া, use -য়: ঢাকায়."
+   },
+   {
+    "q": "Choose the right form.",
+    "sentence": {
+     "bn": "আমি ___ ডাকলাম।",
+     "ro": "ami ___ daklam."
+    },
+    "options": [
+     {
+      "bn": "মাকে",
+      "ro": "make"
+     },
+     {
+      "bn": "মা",
+      "ro": "ma"
+     },
+     {
+      "bn": "মায়ের",
+      "ro": "mayer"
+     }
+    ],
+    "answer": 0,
+    "why": "A person who is the object takes -কে."
+   },
+   {
+    "q": "Choose the natural form.",
+    "sentence": {
+     "bn": "আমি ___ পড়ি।",
+     "ro": "ami ___ pori."
+    },
+    "options": [
+     {
+      "bn": "বই",
+      "ro": "boi"
+     },
+     {
+      "bn": "বইকে",
+      "ro": "boike"
+     },
+     {
+      "bn": "বইয়ের",
+      "ro": "boier"
+     }
+    ],
+    "answer": 0,
+    "why": "A thing that is read usually takes no ending."
+   },
+   {
+    "q": "Choose the right form.",
+    "sentence": {
+     "bn": "___ সঙ্গে যাব।",
+     "ro": "___ songe jabo."
+    },
+    "options": [
+     {
+      "bn": "বন্ধুর",
+      "ro": "bondhur"
+     },
+     {
+      "bn": "বন্ধু",
+      "ro": "bondhu"
+     },
+     {
+      "bn": "বন্ধুকে",
+      "ro": "bondhuke"
+     }
+    ],
+    "answer": 0,
+    "why": "সঙ্গে follows the -র form."
+   },
+   {
+    "q": "Choose the right word.",
+    "sentence": {
+     "bn": "স্কুল ___ এসেছি।",
+     "ro": "skul ___ eshechhi."
+    },
+    "options": [
+     {
+      "bn": "থেকে",
+      "ro": "theke"
+     },
+     {
+      "bn": "জন্য",
+      "ro": "jonyo"
+     },
+     {
+      "bn": "দিয়ে",
+      "ro": "diye"
+     }
+    ],
+    "answer": 0,
+    "why": "থেকে means 'from'."
+   },
+   {
+    "q": "Choose the right word.",
+    "sentence": {
+     "bn": "কলম ___ লিখি।",
+     "ro": "kolom ___ likhi."
+    },
+    "options": [
+     {
+      "bn": "দিয়ে",
+      "ro": "diye"
+     },
+     {
+      "bn": "থেকে",
+      "ro": "theke"
+     },
+     {
+      "bn": "পর্যন্ত",
+      "ro": "porjonto"
+     }
+    ],
+    "answer": 0,
+    "why": "দিয়ে means 'with, by means of'."
+   },
+   {
+    "q": "-কে is the ending of which bibhakti (the object)?",
+    "sentence": null,
+    "options": [
+     "দ্বিতীয়া (2nd)",
+     "ষষ্ঠী (6th)",
+     "সপ্তমী (7th)"
+    ],
+    "answer": 0,
+    "why": "-কে marks the object, the second bibhakti."
+   },
+   {
+    "q": "Which bibhakti shows belonging (-র / -এর)?",
+    "sentence": null,
+    "options": [
+     "ষষ্ঠী (6th)",
+     "প্রথমা (1st)",
+     "পঞ্চমী (5th)"
+    ],
+    "answer": 0,
+    "why": "Belonging is the sixth bibhakti."
+   }
+  ]
+ },
+ {
+  "id": "bachan",
+  "title": [
+   "বচন",
+   "Bochon",
+   "Number & counting words"
+  ],
+  "blurb": "One or many: plural endings, and the little words used when counting people and things.",
+  "sections": [
+   {
+    "id": "plural",
+    "title": "One and many",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "বচন (bochon) is number: একবচন (one) and বহুবচন (many). Bengali often leaves the plural out when the meaning is clear. The verb does not change for number: ছেলেটা স্কুলে যায়, ছেলেরা স্কুলে যায়।"
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Ending",
+       "Used for",
+       "Example",
+       "Plural"
+      ],
+      "rows": [
+       [
+        "-রা",
+        "people and living beings",
+        {
+         "bn": "ছেলে (boy)",
+         "ro": "chhele"
+        },
+        {
+         "bn": "ছেলেরা",
+         "ro": "chhelera"
+        }
+       ],
+       [
+        "-রা",
+        "people and living beings",
+        {
+         "bn": "মেয়ে (girl)",
+         "ro": "meye"
+        },
+        {
+         "bn": "মেয়েরা",
+         "ro": "meyera"
+        }
+       ],
+       [
+        "-গুলো / -গুলি",
+        "things, or particular animals",
+        {
+         "bn": "বই (book)",
+         "ro": "boi"
+        },
+        {
+         "bn": "বইগুলো",
+         "ro": "boigulo"
+        }
+       ],
+       [
+        "-গুলো / -গুলি",
+        "things, or particular animals",
+        {
+         "bn": "গাছ (tree)",
+         "ro": "gachh"
+        },
+        {
+         "bn": "গাছগুলো",
+         "ro": "gachhgulo"
+        }
+       ],
+       [
+        "-দের",
+        "object / belonging of people",
+        {
+         "bn": "ছেলে (boy)",
+         "ro": "chhele"
+        },
+        {
+         "bn": "ছেলেদের",
+         "ro": "chheleder"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "Words like সব (all), অনেক (many) and numbers already say 'many', so the noun stays plain: অনেক ছেলে, সব বই, দুটো বই."
+     },
+     {
+      "t": "ex",
+      "title": null,
+      "items": [
+       [
+        "ছেলেরা মাঠে খেলছে।",
+        "chhelera mathe khelchhe.",
+        "The boys are playing in the field."
+       ],
+       [
+        "বইগুলো টেবিলে আছে।",
+        "boigulo tebile achhe.",
+        "The books are on the table."
+       ],
+       [
+        "আমি ছেলেদের ডাকলাম।",
+        "ami chheleder daklam.",
+        "I called the boys."
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "classifiers",
+    "title": "Counting words",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "When you count, Bengali adds a small word after the number: -টা / -টি for things, -জন for people. The noun itself does not take a plural ending."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Number",
+       "Things",
+       "People"
+      ],
+      "rows": [
+       [
+        "1",
+        {
+         "bn": "একটা",
+         "ro": "ekta"
+        },
+        {
+         "bn": "একজন",
+         "ro": "ekjon"
+        }
+       ],
+       [
+        "2",
+        {
+         "bn": "দুটো",
+         "ro": "duto"
+        },
+        {
+         "bn": "দুজন",
+         "ro": "dujon"
+        }
+       ],
+       [
+        "3",
+        {
+         "bn": "তিনটে",
+         "ro": "tinte"
+        },
+        {
+         "bn": "তিনজন",
+         "ro": "tinjon"
+        }
+       ],
+       [
+        "4",
+        {
+         "bn": "চারটে",
+         "ro": "charte"
+        },
+        {
+         "bn": "চারজন",
+         "ro": "charjon"
+        }
+       ],
+       [
+        "5",
+        {
+         "bn": "পাঁচটা",
+         "ro": "panchta"
+        },
+        {
+         "bn": "পাঁচজন",
+         "ro": "panchjon"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "ex",
+      "title": null,
+      "items": [
+       [
+        "আমার দুটো বই আছে।",
+        "amar duto boi achhe.",
+        "I have two books."
+       ],
+       [
+        "ক্লাসে পাঁচজন ছাত্র আছে।",
+        "klase panchjon chhatro achhe.",
+        "There are five students in the class."
+       ],
+       [
+        "আমি একটা কলম কিনলাম।",
+        "ami ekta kolom kinlam.",
+        "I bought a pen."
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "-টি is the more formal form of -টা: একটি বই. Do not add -গুলো after a number: say দুটো বই, not দুটো বইগুলো."
+     }
+    ]
+   },
+   {
+    "id": "definite",
+    "title": "'A' and 'the'",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Bengali has no word for 'a' or 'the'. Instead: a plain noun is general, a number + -টা means 'one', and the noun + -টা means 'the particular one'."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Form",
+       "Meaning",
+       "Example"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "বই",
+         "ro": "boi"
+        },
+        "book, books (general)",
+        {
+         "bn": "আমি বই পড়ি।",
+         "ro": "ami boi pori."
+        }
+       ],
+       [
+        {
+         "bn": "একটা বই",
+         "ro": "ekta boi"
+        },
+        "a book, one book",
+        {
+         "bn": "আমি একটা বই কিনেছি।",
+         "ro": "ami ekta boi kinechhi."
+        }
+       ],
+       [
+        {
+         "bn": "বইটা",
+         "ro": "boita"
+        },
+        "the book (that one)",
+        {
+         "bn": "বইটা ভালো।",
+         "ro": "boita bhalo."
+        }
+       ],
+       [
+        {
+         "bn": "বইগুলো",
+         "ro": "boigulo"
+        },
+        "the books (those)",
+        {
+         "bn": "বইগুলো ভালো।",
+         "ro": "boigulo bhalo."
+        }
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "exercises": [
+   {
+    "q": "What is the plural of ছেলে (people)?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "ছেলেরা",
+      "ro": "chhelera"
+     },
+     {
+      "bn": "ছেলেগুলো",
+      "ro": "chhelegulo"
+     },
+     {
+      "bn": "ছেলেটা",
+      "ro": "chheleta"
+     }
+    ],
+    "answer": 0,
+    "why": "People take -রা: ছেলেরা."
+   },
+   {
+    "q": "Choose 'those books'.",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "বইগুলো",
+      "ro": "boigulo"
+     },
+     {
+      "bn": "বইরা",
+      "ro": "boira"
+     },
+     {
+      "bn": "বইটা",
+      "ro": "boita"
+     }
+    ],
+    "answer": 0,
+    "why": "Things take -গুলো."
+   },
+   {
+    "q": "How do you say 'three boys'?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "তিনজন ছেলে",
+      "ro": "tinjon chhele"
+     },
+     {
+      "bn": "তিনটে ছেলে",
+      "ro": "tinte chhele"
+     },
+     {
+      "bn": "তিন ছেলেরা",
+      "ro": "tin chhelera"
+     }
+    ],
+    "answer": 0,
+    "why": "Use -জন when counting people; no plural ending."
+   },
+   {
+    "q": "How do you say 'two books'?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "দুটো বই",
+      "ro": "duto boi"
+     },
+     {
+      "bn": "দুজন বই",
+      "ro": "dujon boi"
+     },
+     {
+      "bn": "দুটো বইগুলো",
+      "ro": "duto boigulo"
+     }
+    ],
+    "answer": 0,
+    "why": "Use -টো (things) after two, and no plural ending."
+   },
+   {
+    "q": "How do you say 'the book'?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "বইটা",
+      "ro": "boita"
+     },
+     {
+      "bn": "বইরা",
+      "ro": "boira"
+     },
+     {
+      "bn": "একজন বই",
+      "ro": "ekjon boi"
+     }
+    ],
+    "answer": 0,
+    "why": "Noun + -টা means 'the particular one'."
+   },
+   {
+    "q": "Choose the right verb.",
+    "sentence": {
+     "bn": "ছেলেটা স্কুলে যায়। ছেলেরা স্কুলে ___।",
+     "ro": "chheleta skule jay. chhelera skule ___."
+    },
+    "options": [
+     {
+      "bn": "যায়",
+      "ro": "jay"
+     },
+     {
+      "bn": "যায়েন",
+      "ro": "jayen"
+     },
+     {
+      "bn": "যাই",
+      "ro": "jai"
+     }
+    ],
+    "answer": 0,
+    "why": "The verb stays the same for one or many."
+   },
+   {
+    "q": "Choose the right number word.",
+    "sentence": {
+     "bn": "আমার ___ কলম আছে।",
+     "ro": "amar ___ kolom achhe."
+    },
+    "options": [
+     {
+      "bn": "দুটো",
+      "ro": "duto"
+     },
+     {
+      "bn": "দুজন",
+      "ro": "dujon"
+     },
+     {
+      "bn": "দুগুলো",
+      "ro": "dugulo"
+     }
+    ],
+    "answer": 0,
+    "why": "Pens are things: দুটো."
+   },
+   {
+    "q": "Choose 'of the boys / the boys (object)'.",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "ছেলেদের",
+      "ro": "chheleder"
+     },
+     {
+      "bn": "ছেলেরা",
+      "ro": "chhelera"
+     },
+     {
+      "bn": "ছেলের",
+      "ro": "chheler"
+     }
+    ],
+    "answer": 0,
+    "why": "-দের is the plural for object and belonging."
+   },
+   {
+    "q": "How do you say 'five students'?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "পাঁচজন ছাত্র",
+      "ro": "panchjon chhatro"
+     },
+     {
+      "bn": "পাঁচটা ছাত্র",
+      "ro": "panchta chhatro"
+     },
+     {
+      "bn": "পাঁচগুলো ছাত্র",
+      "ro": "panchgulo chhatro"
+     }
+    ],
+    "answer": 0,
+    "why": "People: -জন."
+   },
+   {
+    "q": "Which counting word is for people?",
+    "sentence": null,
+    "options": [
+     "-টা",
+     "-জন",
+     "-গুলো"
+    ],
+    "answer": 1,
+    "why": "-জন is for people."
+   }
+  ]
+ },
+ {
+  "id": "nishedh",
+  "title": [
+   "নিষেধ ও প্রশ্ন",
+   "Nishedh o Proshno",
+   "Saying no, and asking"
+  ],
+  "blurb": "Negative sentences, 'is not', 'there is none', and the question words you need every day.",
+  "sections": [
+   {
+    "id": "neg",
+    "title": "Saying no",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "To make a sentence negative, put না after the verb for the present and the future. For the past, add -নি to the verb."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "",
+       "Positive",
+       "Negative"
+      ],
+      "rows": [
+       [
+        "Present",
+        {
+         "bn": "আমি যাই।",
+         "ro": "ami jai."
+        },
+        {
+         "bn": "আমি যাই না।",
+         "ro": "ami jai na."
+        }
+       ],
+       [
+        "Present",
+        {
+         "bn": "সে ভাত খায়।",
+         "ro": "she bhat khay."
+        },
+        {
+         "bn": "সে ভাত খায় না।",
+         "ro": "she bhat khay na."
+        }
+       ],
+       [
+        "Future",
+        {
+         "bn": "আমি যাব।",
+         "ro": "ami jabo."
+        },
+        {
+         "bn": "আমি যাব না।",
+         "ro": "ami jabo na."
+        }
+       ],
+       [
+        "Past (-নি)",
+        {
+         "bn": "আমি গিয়েছি।",
+         "ro": "ami giyechhi."
+        },
+        {
+         "bn": "আমি যাইনি।",
+         "ro": "ami jaini."
+        }
+       ],
+       [
+        "Past (-নি)",
+        {
+         "bn": "সে খেয়েছে।",
+         "ro": "she kheyechhe."
+        },
+        {
+         "bn": "সে খায়নি।",
+         "ro": "she khayni."
+        }
+       ]
+      ]
+     },
+     {
+      "t": "p",
+      "text": "The -নি form is built on the present form of the verb for each person:"
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Verb",
+       "আমি",
+       "তুমি",
+       "আপনি"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "করা",
+         "ro": "kora"
+        },
+        {
+         "bn": "করিনি",
+         "ro": "korini"
+        },
+        {
+         "bn": "করোনি",
+         "ro": "koroni"
+        },
+        {
+         "bn": "করেননি",
+         "ro": "korenni"
+        }
+       ],
+       [
+        {
+         "bn": "খাওয়া",
+         "ro": "khaoya"
+        },
+        {
+         "bn": "খাইনি",
+         "ro": "khaini"
+        },
+        {
+         "bn": "খাওনি",
+         "ro": "khaoni"
+        },
+        {
+         "bn": "খাননি",
+         "ro": "khanni"
+        }
+       ],
+       [
+        {
+         "bn": "যাওয়া",
+         "ro": "jaoya"
+        },
+        {
+         "bn": "যাইনি",
+         "ro": "jaini"
+        },
+        {
+         "bn": "যাওনি",
+         "ro": "jaoni"
+        },
+        {
+         "bn": "যাননি",
+         "ro": "janni"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "In a command, না comes after the verb too: যেও না (don't go), করো না (don't do)."
+     }
+    ]
+   },
+   {
+    "id": "isnot",
+    "title": "'Is not' and 'there is none'",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "To say 'am / is / are not' between two nouns, use নই, নও, নন, নয়. To say something does not exist or you do not have it, use নেই."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "",
+       "আমি",
+       "তুই / তুমি",
+       "আপনি / তিনি",
+       "সে"
+      ],
+      "rows": [
+       [
+        "is not",
+        {
+         "bn": "নই",
+         "ro": "noi"
+        },
+        {
+         "bn": "নস / নও",
+         "ro": "nos / nou"
+        },
+        {
+         "bn": "নন",
+         "ro": "non"
+        },
+        {
+         "bn": "নয়",
+         "ro": "noy"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "ex",
+      "title": null,
+      "items": [
+       [
+        "আমি ডাক্তার নই।",
+        "ami daktar noi.",
+        "I am not a doctor."
+       ],
+       [
+        "তুমি ছাত্র নও।",
+        "tumi chhatro nou.",
+        "You are not a student."
+       ],
+       [
+        "সে শিক্ষক নয়।",
+        "she shikkhok noy.",
+        "He / she is not a teacher."
+       ],
+       [
+        "আমার কাছে টাকা নেই।",
+        "amar kachhe taka nei.",
+        "I have no money."
+       ],
+       [
+        "বাড়িতে কেউ নেই।",
+        "barite keu nei.",
+        "There is nobody at home."
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ask",
+    "title": "Asking questions",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Question words usually come just before the verb. For a yes / no question, add কি (or কী) to the sentence, or just raise your voice at the end."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Question word",
+       "Meaning",
+       "Example"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "কে",
+         "ro": "ke"
+        },
+        "who",
+        {
+         "bn": "ও কে?",
+         "ro": "o ke?"
+        }
+       ],
+       [
+        {
+         "bn": "কী",
+         "ro": "ki"
+        },
+        "what",
+        {
+         "bn": "তুমি কী খাচ্ছ?",
+         "ro": "tumi ki khachchho?"
+        }
+       ],
+       [
+        {
+         "bn": "কোথায়",
+         "ro": "kothay"
+        },
+        "where",
+        {
+         "bn": "তুমি কোথায় যাচ্ছ?",
+         "ro": "tumi kothay jachchho?"
+        }
+       ],
+       [
+        {
+         "bn": "কখন",
+         "ro": "kokhon"
+        },
+        "when",
+        {
+         "bn": "তুমি কখন আসবে?",
+         "ro": "tumi kokhon asbe?"
+        }
+       ],
+       [
+        {
+         "bn": "কেন",
+         "ro": "keno"
+        },
+        "why",
+        {
+         "bn": "তুমি কেন কাঁদছ?",
+         "ro": "tumi keno kadchho?"
+        }
+       ],
+       [
+        {
+         "bn": "কীভাবে",
+         "ro": "kibhabe"
+        },
+        "how",
+        {
+         "bn": "এটা কীভাবে করব?",
+         "ro": "eta kibhabe korbo?"
+        }
+       ],
+       [
+        {
+         "bn": "কত",
+         "ro": "koto"
+        },
+        "how much / how many",
+        {
+         "bn": "এটা কত টাকা?",
+         "ro": "eta koto taka?"
+        }
+       ],
+       [
+        {
+         "bn": "কোন",
+         "ro": "kon"
+        },
+        "which",
+        {
+         "bn": "কোন বইটা?",
+         "ro": "kon boita?"
+        }
+       ],
+       [
+        {
+         "bn": "কার",
+         "ro": "kar"
+        },
+        "whose",
+        {
+         "bn": "এটা কার বই?",
+         "ro": "eta kar boi?"
+        }
+       ],
+       [
+        {
+         "bn": "কাকে",
+         "ro": "kake"
+        },
+        "whom",
+        {
+         "bn": "তুমি কাকে ডাকছ?",
+         "ro": "tumi kake dakchho?"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "ex",
+      "title": null,
+      "items": [
+       [
+        "তুমি কি যাবে?",
+        "tumi ki jabe?",
+        "Will you go? (yes / no)"
+       ],
+       [
+        "আপনি কি বাংলা বলতে পারেন?",
+        "apni ki bangla bolte paren?",
+        "Can you speak Bengali?"
+       ],
+       [
+        "তোমার নাম কী?",
+        "tomar nam ki?",
+        "What is your name?"
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "Word order is subject, object, verb (SOV): আমি ভাত খাই, 'I rice eat'. The verb comes last."
+     }
+    ]
+   }
+  ],
+  "exercises": [
+   {
+    "q": "Make this negative.",
+    "sentence": {
+     "bn": "আমি ভাত খাই।",
+     "ro": "ami bhat khai."
+    },
+    "options": [
+     {
+      "bn": "আমি ভাত খাই না।",
+      "ro": "ami bhat khai na."
+     },
+     {
+      "bn": "আমি ভাত না খাই।",
+      "ro": "ami bhat na khai."
+     },
+     {
+      "bn": "আমি না ভাত খাই।",
+      "ro": "ami na bhat khai."
+     }
+    ],
+    "answer": 0,
+    "why": "না comes after the verb: খাই না."
+   },
+   {
+    "q": "Make this negative (past).",
+    "sentence": {
+     "bn": "আমি গিয়েছি।",
+     "ro": "ami giyechhi."
+    },
+    "options": [
+     {
+      "bn": "আমি যাইনি।",
+      "ro": "ami jaini."
+     },
+     {
+      "bn": "আমি যাই না।",
+      "ro": "ami jai na."
+     },
+     {
+      "bn": "আমি যাব না।",
+      "ro": "ami jabo na."
+     }
+    ],
+    "answer": 0,
+    "why": "The past negative adds -নি to the present form: যাইনি."
+   },
+   {
+    "q": "Choose the right word.",
+    "sentence": {
+     "bn": "আমি ছাত্র ___।",
+     "ro": "ami chhatro ___."
+    },
+    "options": [
+     {
+      "bn": "নই",
+      "ro": "noi"
+     },
+     {
+      "bn": "নও",
+      "ro": "nou"
+     },
+     {
+      "bn": "নয়",
+      "ro": "noy"
+     }
+    ],
+    "answer": 0,
+    "why": "'I am not' is আমি … নই."
+   },
+   {
+    "q": "Choose the right word.",
+    "sentence": {
+     "bn": "তুমি ছাত্র ___।",
+     "ro": "tumi chhatro ___."
+    },
+    "options": [
+     {
+      "bn": "নও",
+      "ro": "nou"
+     },
+     {
+      "bn": "নই",
+      "ro": "noi"
+     },
+     {
+      "bn": "নন",
+      "ro": "non"
+     }
+    ],
+    "answer": 0,
+    "why": "'You (তুমি) are not' is তুমি … নও."
+   },
+   {
+    "q": "Choose the right word.",
+    "sentence": {
+     "bn": "সে ডাক্তার ___।",
+     "ro": "she daktar ___."
+    },
+    "options": [
+     {
+      "bn": "নয়",
+      "ro": "noy"
+     },
+     {
+      "bn": "নই",
+      "ro": "noi"
+     },
+     {
+      "bn": "নও",
+      "ro": "nou"
+     }
+    ],
+    "answer": 0,
+    "why": "'He / she is not' is সে … নয়."
+   },
+   {
+    "q": "Choose the right word ('I have no money').",
+    "sentence": {
+     "bn": "আমার কাছে টাকা ___।",
+     "ro": "amar kachhe taka ___."
+    },
+    "options": [
+     {
+      "bn": "নেই",
+      "ro": "nei"
+     },
+     {
+      "bn": "নয়",
+      "ro": "noy"
+     },
+     {
+      "bn": "না",
+      "ro": "na"
+     }
+    ],
+    "answer": 0,
+    "why": "'There is none / do not have' is নেই."
+   },
+   {
+    "q": "Choose the question word for 'where'.",
+    "sentence": {
+     "bn": "তুমি ___ যাচ্ছ?",
+     "ro": "tumi ___ jachchho?"
+    },
+    "options": [
+     {
+      "bn": "কোথায়",
+      "ro": "kothay"
+     },
+     {
+      "bn": "কখন",
+      "ro": "kokhon"
+     },
+     {
+      "bn": "কেন",
+      "ro": "keno"
+     }
+    ],
+    "answer": 0,
+    "why": "কোথায় means where."
+   },
+   {
+    "q": "Choose the question word for 'why'.",
+    "sentence": {
+     "bn": "তুমি ___ কাঁদছ?",
+     "ro": "tumi ___ kadchho?"
+    },
+    "options": [
+     {
+      "bn": "কেন",
+      "ro": "keno"
+     },
+     {
+      "bn": "কত",
+      "ro": "koto"
+     },
+     {
+      "bn": "কে",
+      "ro": "ke"
+     }
+    ],
+    "answer": 0,
+    "why": "কেন means why."
+   },
+   {
+    "q": "Choose the question word for 'how much'.",
+    "sentence": {
+     "bn": "এটা ___ টাকা?",
+     "ro": "eta ___ taka?"
+    },
+    "options": [
+     {
+      "bn": "কত",
+      "ro": "koto"
+     },
+     {
+      "bn": "কোন",
+      "ro": "kon"
+     },
+     {
+      "bn": "কার",
+      "ro": "kar"
+     }
+    ],
+    "answer": 0,
+    "why": "কত asks about amount or price."
+   },
+   {
+    "q": "Which sentence has the right word order?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "আমি ভাত খাই।",
+      "ro": "ami bhat khai."
+     },
+     {
+      "bn": "আমি খাই ভাত।",
+      "ro": "ami khai bhat."
+     },
+     {
+      "bn": "ভাত খাই আমি।",
+      "ro": "bhat khai ami."
+     }
+    ],
+    "answer": 0,
+    "why": "The verb comes at the end: subject, object, verb."
+   }
+  ]
+ }
+];

@@ -1,0 +1,65 @@
+export type Segment = "reading" | "speaking" | "writing" | "grammar";
+
+type Item = { title: string; blurb: string };
+export const SEGMENTS: Record<
+  Segment,
+  { title: string; bn: string; icon: string; blurb: string; activities: (Item & { href: string })[]; soon: Item[] }
+> = {
+  reading: {
+    title: "Reading", bn: "পড়া", icon: "📖",
+    blurb: "Recognise Bengali letters and words on the page.",
+    activities: [
+      { href: "/learn/reading/alphabet", title: "Alphabet", blurb: "Learn every letter, then quiz yourself: letter → word, word → letter." },
+      { href: "/learn/reading/matras", title: "Vowel signs", blurb: "The signs (কার) that change a consonant's vowel: what they look like, where they go, and how to read them." },
+      { href: "/learn/reading/stories", title: "Stories", blurb: "Short Bengali fables: words first, then Bengali only, line by line with meanings, English, and a quiz." },
+      { href: "/learn/reading/numbers", title: "Numbers & money", blurb: "Read numerals and prices in টাকা: numeral → word and word → numeral." },
+      { href: "/learn/reading/flashcards", title: "Flashcards", blurb: "Spaced-repetition review of letters, words and numbers." },
+    ],
+    soon: [
+      { title: "Short dialogues", blurb: "Read simple conversations." },
+    ],
+  },
+  speaking: {
+    title: "Speaking", bn: "বলা", icon: "🗣️",
+    blurb: "Hear Bengali and say it out loud.",
+    activities: [
+      { href: "/learn/speaking/sounds", title: "Letter sounds", blurb: "Tap any letter to hear it, then take the listening quiz." },
+      { href: "/learn/speaking/numbers", title: "Numbers & money listening", blurb: "Hear a number or price, pick the numeral." },
+      { href: "/learn/speaking/flashcards", title: "Say it aloud", blurb: "See the English meaning, say the Bengali word, then check." },
+    ],
+    soon: [
+      { title: "Pronunciation drills", blurb: "Listen and repeat tricky sounds." },
+      { title: "Basic conversations", blurb: "Greetings, introductions, shopping." },
+      { title: "Directions", blurb: "Asking for and giving directions." },
+      { title: "Role-play", blurb: "Practise real situations." },
+    ],
+  },
+  writing: {
+    title: "Writing", bn: "লেখা", icon: "✍️",
+    blurb: "Form the letters and spell words yourself.",
+    activities: [
+      { href: "/learn/writing/trace", title: "Trace letters", blurb: "Draw each letter with your finger or mouse over a guide." },
+      { href: "/learn/writing/words", title: "Build the word", blurb: "Arrange the pieces to spell a word from its meaning." },
+      { href: "/learn/writing/sentences", title: "Build the sentence", blurb: "Put the words in order to make a sentence." },
+      { href: "/learn/writing/flashcards", title: "Write it down", blurb: "See the meaning, write the word on paper, then check." },
+    ],
+    soon: [
+      { title: "Write numerals", blurb: "০ to ৯ and bigger numbers." },
+    ],
+  },
+  grammar: {
+    title: "Grammar", bn: "ব্যাকরণ", icon: "📐",
+    blurb: "How Bengali works: persons, verbs, tenses, karak and bibhakti, with practice.",
+    activities: [
+      { href: "/learn/grammar/workout", title: "Tense workout", blurb: "Ten rounds of tense drills: cues, negatives, spot the mistake, translate, rewrite and combine." },
+      { href: "/learn/grammar/purush", title: "Persons & pronouns", blurb: "Who is speaking, and the three levels of 'you'." },
+      { href: "/learn/grammar/kriya", title: "Verbs", blurb: "Roots, verb forms, 'to be' and 'to have', and commands." },
+      { href: "/learn/grammar/kal", title: "Tenses", blurb: "Present, past and future, with full tables for every person." },
+      { href: "/learn/grammar/karak", title: "Karak", blurb: "The job each noun does for the verb." },
+      { href: "/learn/grammar/bibhakti", title: "Bibhakti", blurb: "Case endings and the little words after nouns." },
+      { href: "/learn/grammar/bachan", title: "Number & counting words", blurb: "Plurals, and counting people and things." },
+      { href: "/learn/grammar/nishedh", title: "Saying no, and asking", blurb: "Negatives and question words." },
+    ],
+    soon: [],
+  },
+};
