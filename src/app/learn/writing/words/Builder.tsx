@@ -90,7 +90,7 @@ export default function Builder({ initialCounts, letters }: { initialCounts: Rec
       {result === "right" && <p className="feedback good">Correct! {q.letter.word}</p>}
       {result === "wrong" && <p className="feedback bad">Not quite. The word is {q.letter.word}.</p>}
       <button className="btn ghost" disabled={!picked.length || result === "right"} onClick={() => { setPicked([]); setResult(null); }}>Start over</button>
-      {result && <button className="btn" onClick={next}>Next word →</button>}
+      {result && <button className="btn" onClick={next}>Next word</button>}
     </>
   );
 }

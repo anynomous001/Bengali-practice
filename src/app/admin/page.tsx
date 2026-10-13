@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getUser } from "@/lib/auth";
 import { query } from "@/lib/db";
 import { addStudent, grantYear, removeStudent, revokeAccess } from "./actions";
+import Icon from "../learn/Icon";
 
 type Row = { email: string; note: string; access_expires_at: Date | null; created_at: Date };
 const fmt = (d: Date) => d.toLocaleDateString("en-GB", { dateStyle: "medium" });
@@ -19,7 +20,7 @@ export default async function AdminPage() {
   return (
     <div className="page">
       <header className="top">
-        <Link href="/learn" className="navbtn">← Back</Link>
+        <Link href="/learn" className="navbtn"><Icon name="prev" size={16} />Back</Link>
         <span className="spacer" />
         <span className="chip">{students.length} students</span>
       </header>

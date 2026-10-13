@@ -85,8 +85,8 @@ export default function StoryReader({ story, best }: { story: Story; best: { sco
 
       {step !== "quiz" && (
         <div className="step-nav">
-          {idx > 0 && <button className="btn ghost" onClick={() => setStep(STEPS[idx - 1].id)}>← {STEPS[idx - 1].label}</button>}
-          <button className="btn" onClick={() => { setStep(STEPS[idx + 1].id); window.scrollTo({ top: 0 }); }}>{STEPS[idx + 1].label} →</button>
+          {idx > 0 && <button className="btn ghost" onClick={() => setStep(STEPS[idx - 1].id)}><Icon name="prev" size={16} />{STEPS[idx - 1].label}</button>}
+          <button className="btn" onClick={() => { setStep(STEPS[idx + 1].id); window.scrollTo({ top: 0 }); }}>{STEPS[idx + 1].label}<Icon name="next" size={16} /></button>
         </div>
       )}
     </>
@@ -144,7 +144,7 @@ function Question({ story, index, score, onDone }: { story: Story; index: number
       {picked !== null && (
         <>
           <p className="feedback">{picked === q.answer ? "Correct!" : `Not quite. The answer is: ${q.options[q.answer]}`}</p>
-          <button className="btn" onClick={() => onDone(picked === q.answer)}>{index + 1 === story.quiz.length ? "See my score" : "Next →"}</button>
+          <button className="btn" onClick={() => onDone(picked === q.answer)}>{index + 1 === story.quiz.length ? "See my score" : "Next"}</button>
         </>
       )}
     </>

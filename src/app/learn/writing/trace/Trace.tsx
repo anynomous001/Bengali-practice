@@ -98,7 +98,7 @@ export default function Trace({
         <canvas ref={drawRef} className="trace-canvas draw" onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up} />
       </div>
       <p>Letter <b>{sel}</b>{roman && ` (${letter.rom})`}{counts[sel] ? ` · written ${counts[sel]}×` : ""}</p>
-      <button className="btn" onClick={done}>I wrote it ✓</button>
+      <button className="btn" onClick={done}>I wrote it</button>
       <button className="btn ghost" onClick={clear}>Clear</button>
       <button className="btn ghost" onClick={() => setGuide((g) => !g)}>{guide ? "Hide guide" : "Show guide"}</button>
       {GROUPS.map((g) => (
@@ -108,7 +108,7 @@ export default function Trace({
             {LETTERS.filter((l) => l.group === g.id).map((l) => (
               <button key={l.ch} className={"tile" + (counts[l.ch] ? " done" : "") + (l.ch === sel ? " current" : "")} onClick={() => setSel(l.ch)}>
                 <span className="ch">{l.ch}</span>
-                <span className="rom">{counts[l.ch] ? `✓ ${counts[l.ch]}×` : roman ? l.rom : ""}</span>
+                <span className="rom">{counts[l.ch] ? `${counts[l.ch]}×` : roman ? l.rom : ""}</span>
               </button>
             ))}
           </div>

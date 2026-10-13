@@ -5,6 +5,7 @@ import { DECKS } from "@/data/decks";
 import type { Segment } from "@/data/segments";
 import Session from "./Session";
 import LessonFrame from "./LessonFrame";
+import Icon from "./Icon";
 
 const NEW_PER_SESSION = 10;
 const MAX_PER_SESSION = 25;
@@ -33,7 +34,7 @@ export default async function FlashcardsView({ segment, deckId }: { segment: Seg
     const queue = [...chosen.due, ...chosen.fresh.slice(0, NEW_PER_SESSION)].slice(0, MAX_PER_SESSION);
     return (
       <LessonFrame lessonId={`${segment}/flashcards`}>
-        <Link href={base} className="back">← Decks</Link>
+        <Link href={base} className="back"><Icon name="prev" size={16} />Decks</Link>
         <h1>{chosen.deck.title}</h1>
         <Session cards={queue} hint={chosen.deck.hint} autoSpeak={chosen.deck.autoSpeak} backHref={base} />
       </LessonFrame>

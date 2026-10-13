@@ -32,7 +32,7 @@ export default async function CourseOverview({ courseId }: { courseId: string })
                 <Link key={t.href} href={t.href} className="tool">
                   <Icon name="list" size={18} />
                   <span><b>{t.label}</b><small>{t.blurb}</small></span>
-                  <Icon name="arrow" size={16} />
+                  <Icon name="next" size={16} />
                 </Link>
               ))}
             </div>

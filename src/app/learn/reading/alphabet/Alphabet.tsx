@@ -120,8 +120,8 @@ function Quiz({ progress, onAnswer, modes }: { progress: Progress; onAnswer: (ch
       <>
         <h2>Choose a quiz</h2>
         <div className="menu">
-          {modes.includes("letter2word") && <button className="card" onClick={() => start("letter2word")}><b>Letter → word</b><span>See a letter, pick the word it starts</span></button>}
-          {modes.includes("word2letter") && <button className="card" onClick={() => start("word2letter")}><b>Word → letter</b><span>See a word, pick its first letter</span></button>}
+          {modes.includes("letter2word") && <button className="card" onClick={() => start("letter2word")}><b>Letter to word</b><span>See a letter, pick the word it starts</span></button>}
+          {modes.includes("word2letter") && <button className="card" onClick={() => start("word2letter")}><b>Word to letter</b><span>See a word, pick its first letter</span></button>}
           {modes.includes("listen") && <button className="card" onClick={() => start("listen")}><b>Listen</b><span>Hear a letter, pick the right one</span></button>}
         </div>
         <p className="muted">Scope:</p>
@@ -186,7 +186,7 @@ function Question({ run, onAnswer, onNext }: { run: Run; onAnswer: (ok: boolean)
       {picked && (
         <>
           <p className="feedback">{picked === q.ch ? "Correct!" : `Not quite – it's ${q.ch}${roman ? ` (${q.rom})` : ""}.`}</p>
-          <button className="btn" onClick={onNext}>Next →</button>
+          <button className="btn" onClick={onNext}>Next</button>
         </>
       )}
     </>
@@ -208,7 +208,7 @@ function ProgressView({ progress }: { progress: Progress }) {
           return (
             <div key={l.ch} className={"tile static" + (mastered(progress, l.ch) ? " done" : "")}>
               <span className="ch">{l.ch}</span>
-              <span className="rom">{s ? `✓${s.right} ✗${s.wrong}` : "–"}</span>
+              <span className="rom">{s ? <><Icon name="check" size={12} />{s.right} <Icon name="close" size={12} />{s.wrong}</> : "–"}</span>
             </div>
           );
         })}

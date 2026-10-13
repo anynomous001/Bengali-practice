@@ -22,7 +22,7 @@ export default async function SegmentHub({ segment }: { segment: Segment }) {
             <span className="idx">{String(i + 1).padStart(2, "0")}</span>
             <b>{a.title}</b>
             <span>{a.blurb}</span>
-            <span className="go">Open <Icon name="arrow" size={15} /></span>
+            <span className="go">Open <Icon name="next" size={15} /></span>
           </Link>
         ))}
       </div>

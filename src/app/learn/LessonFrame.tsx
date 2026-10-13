@@ -36,7 +36,7 @@ export default async function LessonFrame({ lessonId, toc, children }: { lessonI
           {children}
           <footer className="lp-foot">
             <div className="lp-nav">
-              {prev ? <Link href={prev.href} className="btn ghost small"><Icon name="back" size={16} />{prev.title}</Link> : <span />}
+              {prev ? <Link href={prev.href} className="btn ghost small"><Icon name="prev" size={16} />{prev.title}</Link> : <span />}
             </div>
             <CompleteButton lessonId={lesson.id} done={done.has(lesson.id)} nextHref={next?.href ?? null} courseHref={courseHref} />
           </footer>

@@ -21,7 +21,7 @@ export default function NavLinks({ variant }: { variant: "side" | "tabs" }) {
         const active = it.href === "/learn" ? path === "/learn" : path === it.href || path.startsWith(it.href + "/");
         return (
           <Link key={it.href} href={it.href} data-seg={it.seg} className={variant === "side" ? "nav-item" : "tab"} aria-current={active ? "page" : undefined}>
-            <Icon name={it.icon} size={variant === "side" ? 19 : 22} />
+            <Icon name={it.icon} size={variant === "side" ? 20 : 24} weight={active ? "fill" : "regular"} />
             <span>{it.label}</span>
             {variant === "side" && it.bn && <span className="nav-bn" lang="bn">{it.bn}</span>}
           </Link>

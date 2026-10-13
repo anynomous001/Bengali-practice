@@ -36,11 +36,11 @@ export default function NumberQuiz({ numbers, listening }: { numbers: Num[]; lis
       <>
         <div className="menu">
           {listening ? (
-            <button className="card" onClick={() => start("listen")}><b>Listen → numeral</b><span>Hear it, pick the numeral</span></button>
+            <button className="card" onClick={() => start("listen")}><b>Listen, pick the numeral</b><span>Hear it, pick the numeral</span></button>
           ) : (
             <>
-              <button className="card" onClick={() => start("n2w")}><b>Numeral → word</b><span>See ৫০, pick পঞ্চাশ</span></button>
-              <button className="card" onClick={() => start("w2n")}><b>Word → numeral</b><span>See পঞ্চাশ, pick ৫০</span></button>
+              <button className="card" onClick={() => start("n2w")}><b>Numeral to word</b><span>See ৫০, pick পঞ্চাশ</span></button>
+              <button className="card" onClick={() => start("w2n")}><b>Word to numeral</b><span>See পঞ্চাশ, pick ৫০</span></button>
             </>
           )}
         </div>
@@ -98,7 +98,7 @@ function Question({ run, setRun, numbers }: { run: Run; setRun: React.Dispatch<R
           </p>
           <button className="btn ghost" onClick={() => speak(wordText(q, kind))}><Icon name="sound" size={18} /> Hear it</button>
           <button className="btn ghost" onClick={() => speak(wordText(q, kind), { slow: true })}>Slowly</button>
-          <button className="btn" onClick={() => setRun((r) => r && { ...r, i: r.i + 1 })}>Next →</button>
+          <button className="btn" onClick={() => setRun((r) => r && { ...r, i: r.i + 1 })}>Next</button>
         </>
       )}
     </>

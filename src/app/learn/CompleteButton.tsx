@@ -27,7 +27,7 @@ export default function CompleteButton({ lessonId, done, nextHref, courseHref }:
   return (
     <div className="done-actions">
       <span className="done-badge"><Icon name="done" size={18} />Completed</span>
-      {nextHref ? <Link href={nextHref} className="btn">Next lesson<Icon name="arrow" size={18} /></Link> : <Link href={courseHref} className="btn">Back to course</Link>}
+      {nextHref ? <Link href={nextHref} className="btn">Next lesson<Icon name="next" size={18} /></Link> : <Link href={courseHref} className="btn">Back to course</Link>}
       <button type="button" className="textbtn" disabled={pending} onClick={() => toggle(false)}>Mark incomplete</button>
     </div>
   );

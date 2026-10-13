@@ -20,7 +20,7 @@ export default async function WordFinderPage({ searchParams }: { searchParams: P
 
   return (
     <main data-seg="vocabulary" className="wide vocab-home">
-      <Link href="/learn/vocabulary" className="back">← Vocabulary</Link>
+      <Link href="/learn/vocabulary" className="back"><Icon name="prev" size={16} />Vocabulary</Link>
       <header className="page-head">
         <span className="page-icon"><Icon name="list" size={26} /></span>
         <div>

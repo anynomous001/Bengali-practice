@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Icon from "./learn/Icon";
 
 /** Split-screen frame for sign-in, purchase and other account pages. */
 export default function AuthFrame({ children, back = true, wide = false }: { children: React.ReactNode; back?: boolean; wide?: boolean }) {
@@ -18,7 +19,7 @@ export default function AuthFrame({ children, back = true, wide = false }: { chi
       </aside>
       <main className={"auth-main" + (wide ? " wide" : "")}>
         <div className="auth-card">
-          {back && <Link href="/" className="back">← Home</Link>}
+          {back && <Link href="/" className="back"><Icon name="prev" size={16} />Home</Link>}
           {children}
         </div>
       </main>

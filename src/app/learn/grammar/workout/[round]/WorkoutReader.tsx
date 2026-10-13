@@ -85,7 +85,7 @@ function Item({ item, n, total, score, onDone }: { item: WorkItem; n: number; to
           {picked !== null && (
             <>
               <p className="feedback">{picked === item.answer ? "Correct! " : "Not quite. "}<span className="g-why">{item.why}</span></p>
-              <button className="btn" onClick={() => onDone(picked === item.answer)}>{n === total ? "See my score" : "Next →"}</button>
+              <button className="btn" onClick={() => onDone(picked === item.answer)}>{n === total ? "See my score" : "Next"}</button>
             </>
           )}
         </>
@@ -107,7 +107,7 @@ function Item({ item, n, total, score, onDone }: { item: WorkItem; n: number; to
               <p className="muted">Compare with what you wrote. Did you use the right tense and verb ending?</p>
               <div className="step-nav">
                 <button className="btn ghost" onClick={() => onDone(false)}>Not yet</button>
-                <button className="btn" onClick={() => onDone(true)}>I got it ✓</button>
+                <button className="btn" onClick={() => onDone(true)}>I got it</button>
               </div>
             </>
           )}

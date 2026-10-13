@@ -32,7 +32,7 @@ export default async function Dashboard() {
           {target?.s.next ? (
             <Link href={target.s.next.href} className="btn light">
               <span className="btn-stack"><small>{complete ? `Resume ${target.c.title}` : "Start with"}</small><b>{target.s.next.title}</b></span>
-              <Icon name="arrow" size={18} />
+              <Icon name="next" size={18} />
             </Link>
           ) : (
             <p className="hero-sub">You have finished every lesson. Keep it fresh with flashcards.</p>
@@ -60,7 +60,7 @@ export default async function Dashboard() {
             </div>
             {s.next && <p className="cc-next"><small>{s.done ? "Up next" : "First lesson"}</small>{s.next.title}</p>}
             <Link href={s.next?.href ?? `/learn/${c.id}`} className={"btn" + (s.done ? "" : " ghost")}>
-              {s.next ? (s.done ? "Resume" : "Start") : "Review"}<Icon name="arrow" size={16} />
+              {s.next ? (s.done ? "Resume" : "Start") : "Review"}
             </Link>
           </article>
         ))}

@@ -3,13 +3,14 @@ import { requireAccess } from "@/lib/access";
 import { loadStoryProgress } from "@/lib/progress";
 import { STORIES } from "@/data/stories";
 import StoryTitle from "./StoryTitle";
+import Icon from "../../Icon";
 
 export default async function StoriesPage() {
   await requireAccess();
   const progress = await loadStoryProgress();
   return (
     <main data-seg="reading" className="wide">
-      <Link href="/learn/reading" className="back">← Reading</Link>
+      <Link href="/learn/reading" className="back"><Icon name="prev" size={16} />Reading</Link>
       <h1>Stories</h1>
       <p className="muted">Short fables to read. Each one has words to learn, then the story in layers, then a quiz. Start with Level 1.</p>
       <div className="menu">

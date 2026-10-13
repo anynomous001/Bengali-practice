@@ -68,7 +68,7 @@ export default function SentenceBuilder({ initialCounts, sentences }: { initialC
       {result === "right" && <p className="feedback good">Correct!</p>}
       {result === "wrong" && <p className="feedback bad">Not quite. It is: {q.s.bn}</p>}
       <button className="btn ghost" disabled={!picked.length || result === "right"} onClick={() => { setPicked([]); setResult(null); }}>Start over</button>
-      {result && <button className="btn" onClick={() => { setQ(makeQuestion(sentences, q.s.id)); setPicked([]); setResult(null); }}>Next →</button>}
+      {result && <button className="btn" onClick={() => { setQ(makeQuestion(sentences, q.s.id)); setPicked([]); setResult(null); }}>Next</button>}
     </>
   );
 }
