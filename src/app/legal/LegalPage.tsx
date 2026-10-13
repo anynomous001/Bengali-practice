@@ -31,7 +31,7 @@ export default function LegalPage({ title, children }: { title: string; children
       <main className="legal-body">
         <Link href="/" className="back"><Icon name="prev" size={16} />Home</Link>
         <h1>{title}</h1>
-        <p className="muted">{BUSINESS.product} is operated by {BUSINESS.name}. Last updated {BUSINESS.updated}.</p>
+        <p className="muted">{BUSINESS.name === BUSINESS.product ? `${BUSINESS.product} is based in Kolkata, India.` : `${BUSINESS.product} is operated by ${BUSINESS.name}.`} Last updated {BUSINESS.updated}.</p>
         {children}
       </main>
       <SiteFooter />
