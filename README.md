@@ -129,3 +129,13 @@ Audio recordings and the remaining modules.
 
 - **Role play** (`src/data/roleplay.ts`, `/learn/speaking/roleplay/<id>`): one scrolling lesson per scenario (shop bargaining, rickshaw/auto, restaurant, asking the way) with the situation, words, phrases you say, phrases you hear, two example conversations (one goes well, one goes wrong) and a "now you speak" practice where the app plays the other person. Completes at the end of the practice. Add a scenario by adding an object to `SCENARIOS`; the course and lesson pages pick it up. All Bengali is authored by the assistant and needs the teacher's review.
 - **Impromptu topics** (`src/data/impromptu.ts`, `/learn/speaking/impromptu`): choose casual, professional, open or surprise, plus preparation time (30 s to 2 min) and speaking time (1 to 3 min). A server action hands out one random topic at a time; the page runs both countdowns with a sound between them and ends with a self-check list. The app cannot judge speech.
+
+### Payment go-live checklist
+
+1. Razorpay: request International Payments, create test keys, set `RAZORPAY_KEY_ID`, `RAZORPAY_KEY_SECRET`, `RAZORPAY_WEBHOOK_SECRET`, `PRICE_USD` in Vercel.
+2. Webhook URL `https://<site>/api/razorpay/webhook` with events `payment.captured` and `refund.processed`.
+3. Set `DATABASE_URL`, `AUTH_SECRET`, `ADMIN_EMAILS`, `APP_URL`, `RESEND_API_KEY`, `EMAIL_FROM` (sign-in emails).
+4. Make one test-mode purchase with your own email: the payment appears under "Recent online payments" in `/admin` and a sign-in email arrives.
+5. Switch to live keys and update the webhook secret.
+
+Buyers type their email twice; signed-in students renewing have it filled in. Students with 30 days or less left see a renew banner on the dashboard. The server-side flow (signature checks, amount check, one-time grant, renewal, webhook-only grant, full and partial refunds) was exercised against a mock Razorpay API; a real test-mode payment has not been run.

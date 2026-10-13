@@ -9,6 +9,7 @@ export default async function Dashboard() {
   const user = await requireAccess();
   const { done, recent } = await loadLessonProgress();
 
+  const daysLeft = user.expiresAt ? Math.ceil((user.expiresAt.getTime() - Date.now()) / 86_400_000) : Infinity;
   const rows = COURSES.map((c) => ({ c, s: courseStats(c, done) }));
   const total = rows.reduce((n, r) => n + r.s.total, 0);
   const complete = rows.reduce((n, r) => n + r.s.done, 0);
@@ -20,6 +21,12 @@ export default async function Dashboard() {
 
   return (
     <main className="wide">
+      {user.expiresAt && !user.isAdmin && daysLeft <= 30 && (
+        <div className="renew-banner" role="status">
+          <span>{daysLeft <= 0 ? "Your access has ended." : `Your access ends in ${daysLeft} ${daysLeft === 1 ? "day" : "days"}.`} Renew now and 12 months are added to the end of your current time.</span>
+          <Link href="/buy" className="btn small">Renew access</Link>
+        </div>
+      )}
       <section className="hero-card">
         <div className="hero-copy">
           <p className="eyebrow">Welcome back</p>

@@ -6,7 +6,7 @@ export default function AuthFrame({ children, back = true, wide = false }: { chi
   return (
     <div className="auth">
       <aside className="auth-aside">
-        <Link href="/" className="side-brand">
+        <Link href="/" className="side-brand on-dark">
           <span className="mark" lang="bn">বাং</span>
           <span><b lang="bn">বাংলা</b><small>Practice</small></span>
         </Link>

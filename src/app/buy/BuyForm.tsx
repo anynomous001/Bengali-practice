@@ -19,8 +19,9 @@ function loadCheckout(): Promise<void> {
   });
 }
 
-export default function BuyForm({ price }: { price: number }) {
-  const [email, setEmail] = useState("");
+export default function BuyForm({ price, knownEmail }: { price: number; knownEmail?: string }) {
+  const [email, setEmail] = useState(knownEmail ?? "");
+  const [again, setAgain] = useState(knownEmail ?? "");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [paidEmail, setPaidEmail] = useState("");
@@ -28,6 +29,7 @@ export default function BuyForm({ price }: { price: number }) {
   async function pay(e: React.FormEvent) {
     e.preventDefault();
     setError("");
+    if (email.trim().toLowerCase() !== again.trim().toLowerCase()) { setError("The two email addresses do not match. Access is sent to this address, so please check it."); return; }
     setBusy(true);
     try {
       const res = await fetch("/api/checkout/order", {
@@ -84,7 +86,13 @@ export default function BuyForm({ price }: { price: number }) {
   return (
     <form onSubmit={pay} className="stack">
       <label htmlFor="email">Your email (this is how you'll sign in)</label>
-      <input id="email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" autoComplete="email" />
+      <input id="email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" autoComplete="email" readOnly={!!knownEmail} />
+      {!knownEmail && (
+        <>
+          <label htmlFor="email2">Type it again to be sure</label>
+          <input id="email2" type="email" required value={again} onChange={(e) => setAgain(e.target.value)} placeholder="you@example.com" autoComplete="off" onPaste={(e) => e.preventDefault()} />
+        </>
+      )}
       <button className="btn" disabled={busy}>{busy ? "Please wait…" : `Pay $${price}`}</button>
       {error && <p className="msg bad" role="alert">{error}</p>}
     </form>

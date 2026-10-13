@@ -668,3 +668,7 @@ html { scroll-behavior:smooth; } @media (prefers-reduced-motion: reduce) { html 
 .nav-item[aria-current="page"] { font-weight:600; }
 .back svg, .navbtn svg { flex:none; }
 .go svg { transition:transform .15s; }
+
+.renew-banner { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; margin:0 0 18px; padding:14px 18px; border:1px solid color-mix(in srgb, var(--gold, #c98a00) 45%, var(--line)); border-radius:var(--radius-sm); background:color-mix(in srgb, var(--gold, #c98a00) 10%, var(--surface)); }
+.renew-banner .btn { margin:0; }
+.side-brand.on-dark { color:#fff; } .side-brand.on-dark small { color:rgba(255,255,255,.62); }

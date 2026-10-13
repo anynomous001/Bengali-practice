@@ -14,7 +14,7 @@ export async function POST(req: Request) {
   }
   try {
     const email = await fulfillOrder(orderId, paymentId);
-    if (!email) return NextResponse.json({ error: "Payment is not confirmed yet." }, { status: 409 });
+    if (!email) return NextResponse.json({ error: "Your payment is still being confirmed. Access is switched on automatically within a few minutes and a sign-in link is emailed. If nothing arrives, contact your teacher." }, { status: 409 });
     // Send a sign-in link straight away; failure here must not undo the purchase.
     try {
       const token = await createLoginToken(email);
