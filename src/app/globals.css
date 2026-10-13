@@ -672,3 +672,13 @@ html { scroll-behavior:smooth; } @media (prefers-reduced-motion: reduce) { html 
 .renew-banner { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; margin:0 0 18px; padding:14px 18px; border:1px solid color-mix(in srgb, var(--gold, #c98a00) 45%, var(--line)); border-radius:var(--radius-sm); background:color-mix(in srgb, var(--gold, #c98a00) 10%, var(--surface)); }
 .renew-banner .btn { margin:0; }
 .side-brand.on-dark { color:#fff; } .side-brand.on-dark small { color:rgba(255,255,255,.62); }
+
+/* ---- Public policy pages ---- */
+.foot-links { display:flex; flex-wrap:wrap; gap:6px 18px; } .foot-links a { color:var(--ink-2); text-decoration:none; } .foot-links a:hover { color:var(--ink); text-decoration:underline; }
+.legal-body { max-width:44rem; margin:0 auto; padding:24px 0 56px; }
+.legal-body h1 { margin:8px 0 6px; font-size:2.1rem; letter-spacing:-.02em; }
+.legal-body h2 { margin:30px 0 8px; font-size:1.2rem; }
+.legal-body p, .legal-body li { line-height:1.7; } .legal-body ul { padding-left:1.3rem; display:grid; gap:8px; }
+.legal-body a { color:var(--primary); }
+.contact-list { display:grid; gap:12px; margin:20px 0; } .contact-list div { padding:14px 16px; border:1px solid var(--line); border-radius:var(--radius-sm); background:var(--surface); }
+.contact-list dt { font-size:.8rem; font-weight:600; color:var(--ink-2); } .contact-list dd { margin:2px 0 0; font-weight:500; }

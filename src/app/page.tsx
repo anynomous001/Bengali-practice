@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { getUser } from "@/lib/auth";
 import { priceUsd } from "@/lib/razorpay";
 import Icon from "./learn/Icon";
+import { SiteFooter } from "./legal/LegalPage";
 
 const FEATURES = [
   { seg: "reading", icon: "reading", title: "Reading", bn: "পড়া", body: "Start from the alphabet and vowel signs, then read short fables in three layers: Bengali only, line by line with meanings, and English." },
@@ -107,10 +108,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <footer className="land-foot">
-        <span lang="bn">বাংলা Practice</span>
-        <span>Private to enrolled students · <Link href="/login">Sign in</Link></span>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

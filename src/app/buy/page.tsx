@@ -22,7 +22,7 @@ export default async function BuyPage() {
         </ul>
         <BuyForm price={price} knownEmail={user?.email} />
       </div>
-      <p className="muted small">Pay by card in US dollars, processed securely by Razorpay. Already have access? <Link href="/login">Sign in</Link>.</p>
+      <p className="muted small">Pay by card in US dollars, processed securely by Razorpay. Already have access? <Link href="/login">Sign in</Link>. By paying you agree to the <Link href="/terms">terms</Link> and the <Link href="/refunds">refund policy</Link>; see also the <Link href="/privacy">privacy policy</Link>.</p>
     </AuthFrame>
   );
 }
