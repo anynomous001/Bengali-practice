@@ -7,6 +7,7 @@ import { WORKOUT } from "./tense-workout";
 import { VOCAB, VOCAB_GROUPS, wordCount } from "./vocabulary";
 import { getExam } from "./exams";
 import { CLASSWORK } from "./classwork";
+import { SCENARIOS } from "./roleplay";
 
 export type CourseId = "reading" | "speaking" | "vocabulary" | "grammar";
 export type Kind = "Lesson" | "Practice" | "Quiz" | "Review" | "Exam";
@@ -61,6 +62,8 @@ export const COURSES: Course[] = [
       "Tell similar Bengali sounds apart by ear",
       "Understand numbers and prices when you hear them",
       "Say words aloud, slowly or at normal speed, and check yourself",
+      "Handle real situations: bargaining, rickshaws, restaurants and asking the way",
+      "Speak on a topic you have never seen before, against the clock",
     ],
     tools: [{ label: "Vocabulary course", href: "/learn/vocabulary", blurb: "Build your word bank, topic by topic, with phrases to say aloud." }],
     modules: [
@@ -73,13 +76,16 @@ export const COURSES: Course[] = [
       { id: "say", title: "Say it aloud", blurb: "See the meaning, say the word, then check.", lessons: [
         { id: "speaking/flashcards", title: "Say-it-aloud flashcards", blurb: "English first: say the Bengali word before you reveal it.", href: "/learn/speaking/flashcards", kind: "Review" },
       ] },
+      { id: "roleplay", title: "Role play", blurb: "Real situations: the words, the phrases, and two example conversations each. Then you speak.", lessons:
+        SCENARIOS.map((r): Lesson => ({ id: `speaking/roleplay-${r.id}`, title: r.title, blurb: r.blurb, href: `/learn/speaking/roleplay/${r.id}`, kind: "Practice" })) },
+      { id: "impromptu", title: "Impromptu speaking", blurb: "A random topic, time to prepare, then speak on your own.", lessons: [
+        { id: "speaking/impromptu", title: "Impromptu topics", blurb: "Choose the kind of topic and how long to prepare and speak. The app picks the topic and keeps time.", href: "/learn/speaking/impromptu", kind: "Practice" },
+      ] },
       { id: "exam", title: "Exam", blurb: "A timed listening test.", lessons: [exam("listening")] },
     ],
     upcoming: [
       { title: "Pronunciation drills", blurb: "Listen and repeat tricky sounds." },
-      { title: "Basic conversations", blurb: "Greetings, introductions, shopping." },
-      { title: "Directions", blurb: "Asking for and giving directions." },
-      { title: "Role-play", blurb: "Practise real situations." },
+      { title: "More role plays", blurb: "Doctor, phone calls, hotel and train bookings." },
     ],
   },
   {

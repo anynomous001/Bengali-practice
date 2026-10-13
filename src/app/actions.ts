@@ -11,6 +11,7 @@ import { READING_LESSONS } from "@/data/reading-lessons";
 import { WORKOUT } from "@/data/tense-workout";
 import { STORIES } from "@/data/stories";
 import { isLessonId } from "@/data/curriculum";
+import { TOPICS, type TopicKind } from "@/data/impromptu";
 import { VOCAB, VOCAB_QUIZ_LEN } from "@/data/vocabulary";
 import { getExam } from "@/data/exams";
 import { generateExam, toPublic, type ExamQ, type PublicExamQ } from "@/lib/examgen";
@@ -177,6 +178,19 @@ export async function translationRound(direction: Direction, source: Source): Pr
   if (!user?.hasAccess) return [];
   if (!["en2bn", "bn2en"].includes(direction) || !["all", "phrases", "grammar"].includes(source)) return [];
   return makeRound(direction, source);
+}
+
+/** One random impromptu topic. Topics stay on the server and are handed out one at a time. */
+export async function impromptuTopic(kind: string, level: string, seen: string[]): Promise<{ en: string; ideas: string[]; kind: TopicKind } | null> {
+  const user = await getUser();
+  if (!user?.hasAccess) return null;
+  const kinds = Object.keys(TOPICS) as TopicKind[];
+  const k: TopicKind = kinds.includes(kind as TopicKind) ? (kind as TopicKind) : kinds[Math.floor(Math.random() * kinds.length)];
+  const pool = TOPICS[k].filter((t) => level !== "easy" || t.level === 1);
+  const fresh = pool.filter((t) => !seen.includes(t.en));
+  const list = fresh.length ? fresh : pool;
+  const t = list[Math.floor(Math.random() * list.length)];
+  return { en: t.en, ideas: t.ideas, kind: k };
 }
 
 // ---------------- timed exams ----------------
