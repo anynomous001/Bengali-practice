@@ -1,51 +1,94 @@
 "use client";
 
 import { useState } from "react";
-import type { L, RelayCard, RelayOpening } from "@/data/story-relay";
+import type { Helper, Hook, L, RelayCard, RelayOpening, Theme } from "@/data/story-relay";
 import { speak } from "@/lib/speak";
 import { setLessonDone } from "../../../actions";
 import Icon from "../../Icon";
 import { useRoman } from "../../Roman";
-import UnderlineTabs from "../../UnderlineTabs";
-import WordRow from "../../WordRow";
 
-type Sample = { who: "you" | "partner"; lines: L[] };
+type Sample = { who: "you" | "partner"; lines: L[]; note: string };
+type Wrap = { retell: L[]; short: L[] };
 
-function Line({ line }: { line: L }) {
+function Listen({ text, label }: { text: string; label: string }) {
+  return <button type="button" className="wplay" onClick={() => speak(text)} aria-label={`Hear: ${label}`}><Icon name="sound" size={18} /></button>;
+}
+
+/** Sentences as a plain table: Bengali (with a listen button), romanized, English. */
+function Lines({ lines, caption }: { lines: L[]; caption?: string }) {
   const { roman } = useRoman();
   return (
-    <div className="rp-line">
-      <button type="button" className="wplay" onClick={() => speak(line[0])} aria-label={`Hear: ${line[2]}`}><Icon name="sound" size={18} /></button>
-      <span className="wtext">
-        <span className="wbn" lang="bn">{line[0]}</span>
-        {roman && <span className="wro">{line[1]}</span>}
-        <span className="rp-en">{line[2]}</span>
-      </span>
-    </div>
+    <table className="relay-table">
+      {caption && <caption>{caption}</caption>}
+      <thead><tr><th scope="col">Bengali</th>{roman && <th scope="col">Romanized</th>}<th scope="col">Meaning</th></tr></thead>
+      <tbody>
+        {lines.map((l) => (
+          <tr key={l[0]}>
+            <td><span className="rt-bn"><Listen text={l[0]} label={l[2]} /><span lang="bn">{l[0]}</span></span></td>
+            {roman && <td className="rt-ro">{l[1]}</td>}
+            <td>{l[2]}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 }
 
+function Bn({ l }: { l: L }) {
+  const { roman } = useRoman();
+  return <span className="rt-bn"><Listen text={l[0]} label={l[2]} /><span><b lang="bn">{l[0]}</b>{roman && <small className="rt-ro">{l[1]}</small>}</span></span>;
+}
+
 const TURNS = 5;
+const pick = <T,>(a: T[]) => a[Math.floor(Math.random() * a.length)];
+const pickN = <T,>(a: T[], n: number) => [...a].sort(() => Math.random() - 0.5).slice(0, n);
 
-function Play({ openings, cards }: { openings: RelayOpening[]; cards: RelayCard[] }) {
+function Play({ openings, themes, cards, helpers, hooks }: { openings: RelayOpening[]; themes: Theme[]; cards: RelayCard[]; helpers: Helper[]; hooks: Hook[] }) {
   const [mode, setMode] = useState<"a" | "b">("a");
+  const [theme, setTheme] = useState("all");
   const [opening, setOpening] = useState<RelayOpening | null>(null);
+  const [seen, setSeen] = useState<string[]>([]);
   const [turn, setTurn] = useState(0); // 0 = not started, 1..TURNS, TURNS+1 = wrap-up
+  const [hookSet, setHookSet] = useState<Hook[]>([]);
   const [ticks, setTicks] = useState([false, false, false]);
+  const { roman } = useRoman();
 
-  function start() {
-    setOpening(openings[Math.floor(Math.random() * openings.length)]);
-    setTurn(1); setTicks([false, false, false]);
+  function nextOpening() {
+    const pool = openings.filter((o) => theme === "all" || o.theme === theme);
+    const fresh = pool.filter((o) => !seen.includes(o.id));
+    const o = pick(fresh.length ? fresh : pool);
+    setSeen(fresh.length ? [...seen, o.id] : [o.id]);
+    setOpening(o);
   }
-  function finishWrap() { void setLessonDone("speaking/story-relay", true); }
+  function start() { nextOpening(); setTurn(1); setTicks([false, false, false]); setHookSet(pickN(hooks, 3)); }
+  function advance() { setTurn(turn + 1); setHookSet(pickN(hooks, 3)); }
 
-  const WRAP = ["I retold the whole story in 4 to 5 sentences, and my partner corrected me gently", "My partner retold it back to me in a shorter version", "We noticed at least one mistake and said the right form aloud"];
+  const WRAPSTEPS = ["I retold the whole story in 4 or 5 sentences, and my partner corrected me gently", "My partner retold it back to me in a shorter version", "We noticed at least one mistake and said the right form aloud"];
+  const poolSize = openings.filter((o) => theme === "all" || o.theme === theme).length;
 
   if (turn === 0) {
     return (
       <div className="q-card">
-        <UnderlineTabs label="Option" tabs={[{ id: "a", label: "Option A: free" }, { id: "b", label: "Option B: with tenses" }]} value={mode} onChange={setMode} />
-        <p className="q-inst"><b>What to do:</b> Play with a partner, or with your teacher. Press Start to get an opening. Then take turns: each turn is 2 or 3 spoken sentences. {mode === "b" ? "In Option B, sentence 1 of every turn must use the tense on the card." : "In Option A there is no tense rule."}</p>
+        <p className="q-inst"><b>What to do:</b> Play with a partner or your teacher. Choose what you want, then press Start. The app gives you an opening and keeps count of the turns.</p>
+        <h3 className="g-h">1. Option</h3>
+        <div className="choice-group" role="radiogroup" aria-label="Option">
+          {[{ id: "a" as const, t: "Option A: free", d: "No tense rule. Just tell the story." }, { id: "b" as const, t: "Option B: tense cards", d: "Sentence 1 of every turn uses the tense on the card." }].map((x) => (
+            <label key={x.id} className={"choice" + (mode === x.id ? " on" : "")}>
+              <input type="radio" name="relay-mode" checked={mode === x.id} onChange={() => setMode(x.id)} />
+              <span><b>{x.t}</b><small>{x.d}</small></span>
+            </label>
+          ))}
+        </div>
+        <h3 className="g-h">2. Kind of story</h3>
+        <div className="choice-group" role="radiogroup" aria-label="Kind of story">
+          {[{ id: "all", title: "Surprise me" }, ...themes].map((x) => (
+            <label key={x.id} className={"choice" + (theme === x.id ? " on" : "")}>
+              <input type="radio" name="relay-theme" checked={theme === x.id} onChange={() => setTheme(x.id)} />
+              <span><b>{x.title}</b></span>
+            </label>
+          ))}
+        </div>
+        <p className="muted">{poolSize} openings in this group. You will not see the same one twice until you have seen them all.</p>
         <button className="btn" onClick={start}><Icon name="play" size={16} /> Start</button>
       </div>
     );
@@ -56,14 +99,14 @@ function Play({ openings, cards }: { openings: RelayOpening[]; cards: RelayCard[
     return (
       <div className="q-card">
         <div className="q-top"><span className="q-kind">Wrap-up</span><span className="q-count">About 2 minutes</span></div>
-        <p className="q-inst"><b>What to do:</b> Retell the whole story in 4 to 5 sentences. Your partner corrects you naturally as you go. Then your partner retells it back to you, shorter. Tick each step when it is done.</p>
+        <p className="q-inst"><b>What to do:</b> Retell the whole story in 4 or 5 sentences. Your partner corrects you naturally as you go. Then your partner retells it back to you, shorter. Tick each step when it is done.</p>
         <ul className="imp-checks">
-          {WRAP.map((w, i) => (
+          {WRAPSTEPS.map((w, i) => (
             <li key={w}><label className="check"><input type="checkbox" checked={ticks[i]} onChange={() => setTicks((t) => t.map((x, k) => (k === i ? !x : x)))} /> {w}</label></li>
           ))}
         </ul>
         {all && <p>Story finished. This lesson is now complete.</p>}
-        <button className="btn" disabled={!all} onClick={() => { finishWrap(); setTurn(0); }}>Finish</button>
+        <button className="btn" disabled={!all} onClick={() => { void setLessonDone("speaking/story-relay", true); setTurn(0); }}>Finish</button>
         <button className="btn ghost" onClick={() => setTurn(0)}>New story</button>
       </div>
     );
@@ -75,92 +118,156 @@ function Play({ openings, cards }: { openings: RelayOpening[]; cards: RelayCard[
     <div className="q-card">
       <div className="q-top"><span className="q-kind">{mode === "a" ? "Option A" : "Option B"}</span><span className="q-count">Turn {turn} of {TURNS}</span></div>
       <div className="bar" aria-hidden><div style={{ width: `${((turn - 1) / TURNS) * 100}%` }} /></div>
+
       {turn === 1 && opening && (
         <>
-          <p className="q-inst"><b>What to do:</b> You start. Say this opening aloud, or use it as an idea and say it in your own words.</p>
-          <div className="rp-lines">{opening.lines.map((l) => <Line key={l[0]} line={l} />)}</div>
+          <p className="q-inst"><b>What to do:</b> You start. Say the opening aloud, or use it as an idea and say it in your own words.</p>
+          <Lines lines={opening.lines} />
+          <button className="btn ghost small" onClick={nextOpening}>Show a different opening</button>
         </>
       )}
       <p className="rp-prompt"><span className="rp-who">Speaking now</span>{speaker}{turn === 1 ? " (the opening)" : ""}</p>
-      {turn > 1 && <p className="q-inst"><b>What to do:</b> Sentence 1: continue from what was just said. Sentence 2: add a detail (a name, a place, a feeling, a thing). Sentence 3 (optional): end on a hook, such as a surprise or a problem.</p>}
+      {turn > 1 && <ol className="relay-steps"><li><b>Sentence 1:</b> continue from what was just said.</li><li><b>Sentence 2:</b> add a detail (a name, a place, a feeling, a thing).</li><li><b>Sentence 3 (optional):</b> end on a hook.</li></ol>}
+
       {mode === "b" && (
         <div className="relay-card">
           <span className="rp-who">Tense card</span>
-          <b lang="bn" className="wbn">{card.word[0]}</b>
-          <span className="wro">{card.word[1]} ({card.word[2]})</span>
-          <span>{card.tense}. {card.hint} Sentence 1 must use it.</span>
+          <span className="rt-bn"><Listen text={card.word[0]} label={card.word[2]} /><span><b lang="bn" className="wbn">{card.word[0]}</b>{roman && <small className="rt-ro">{card.word[1]}</small>}</span></span>
+          <span><b>{card.tense}.</b> {card.how} Sentence 1 must use it.</span>
+          {card.forms.length > 0 && <span className="muted">Forms: {card.forms.join(" · ")}</span>}
         </div>
       )}
-      <button className="btn" onClick={() => setTurn(turn + 1)}>{turn === TURNS ? "Go to wrap-up" : "Next turn"}</button>
+
+      {turn > 1 && (
+        <div className="relay-ideas">
+          <p className="muted"><b>Need a hook?</b> Try one of these ideas.</p>
+          <ul>{hookSet.map((h) => <li key={h.example[0]}><span className="rt-bn"><Listen text={h.example[0]} label={h.example[2]} /><span><span className="rt-kind">{h.kind}</span><span lang="bn">{h.example[0]}</span>{roman && <small className="rt-ro">{h.example[1]}</small>}<small>{h.example[2]}</small></span></span></li>)}</ul>
+        </div>
+      )}
+
+      <details className="relay-helpers">
+        <summary>Helper words</summary>
+        <ul>{helpers.map((h) => <li key={h.word[0]}><Listen text={h.word[0]} label={h.word[2]} /><span lang="bn">{h.word[0]}</span>{roman && <small className="rt-ro">{h.word[1]}</small>}<small>{h.word[2]}</small></li>)}</ul>
+      </details>
+
+      <button className="btn" onClick={advance}>{turn === TURNS ? "Go to wrap-up" : "Next turn"}</button>
       <button className="btn ghost" onClick={() => setTurn(0)}>Stop</button>
     </div>
   );
 }
 
-export default function StoryRelay({ helpers, openings, cards, sampleA, sampleB }: { helpers: L[]; openings: RelayOpening[]; cards: RelayCard[]; sampleA: Sample[]; sampleB: L[] }) {
+export default function StoryRelay({ glossary, rules, helpers, hooks, themes, openings, sampleA, cards, wrap }: {
+  glossary: { term: string; meaning: string }[]; rules: { n: string; title: string; text: string; tip: string }[]; helpers: Helper[]; hooks: Hook[];
+  themes: Theme[]; openings: RelayOpening[]; sampleA: Sample[]; cards: RelayCard[]; wrap: Wrap;
+}) {
   return (
     <article className="lesson">
       <header className="lesson-head">
         <p className="eyebrow" lang="bn">গল্প বলা</p>
         <h1>Story relay</h1>
-        <p className="lede">Build one story together, a few sentences at a time. You speak, your partner continues, and the last sentence always leaves something to answer.</p>
+        <p className="lede">Build one story together, a few sentences at a time. You speak, your partner continues, and every turn ends with something to answer.</p>
       </header>
 
+      <section className="g-sec" id="sec-meaning">
+        <h2>What it means</h2>
+        <p>These are the words used in this activity, in plain English.</p>
+        <dl className="relay-glossary">
+          {glossary.map((g) => <div key={g.term}><dt>{g.term}</dt><dd>{g.meaning}</dd></div>)}
+        </dl>
+      </section>
+
       <section className="g-sec" id="sec-rules">
-        <h2>How it works</h2>
-        <p>Two people build one story by taking turns. Each turn is 2 to 3 sentences, and the last sentence leaves a hook so the next person has something to build on. Do 4 to 5 turns each, so the story reaches about 10 to 12 sentences.</p>
-        <ol className="relay-rules">
-          <li><b>Sentence 1.</b> Continue from what the other person just said.</li>
-          <li><b>Sentence 2.</b> Add a detail: a name, a place, a feeling, a thing.</li>
-          <li><b>Sentence 3 (optional).</b> End on a hook, such as a surprise or a problem, so the other person has something to answer.</li>
-        </ol>
+        <h2>The rules</h2>
+        <p>Each turn is 2 or 3 sentences. Do 4 or 5 turns each, so the story reaches about 10 to 15 sentences.</p>
+        <table className="relay-table wide">
+          <thead><tr><th scope="col">Sentence</th><th scope="col">What you do</th><th scope="col">How</th></tr></thead>
+          <tbody>{rules.map((r) => <tr key={r.n}><th scope="row">{r.n}</th><td><b>{r.title}.</b> {r.text}</td><td>{r.tip}</td></tr>)}</tbody>
+        </table>
       </section>
 
       <section className="g-sec" id="sec-helpers">
         <h2>Helper words</h2>
-        <p className="muted">Keep these on the board, so you can link your sentences.</p>
-        <ul className="wlist">{helpers.map((h) => <li key={h[0]}><WordRow bn={h[0]} roman={h[1]} en={h[2]} /></li>)}</ul>
+        <p>Keep these where you can see them. They join your sentences, and many of them make a good hook.</p>
+        <table className="relay-table wide">
+          <thead><tr><th scope="col">Word</th><th scope="col">Meaning</th><th scope="col">Use it to</th><th scope="col">Example</th></tr></thead>
+          <tbody>{helpers.map((h) => (
+            <tr key={h.word[0]}>
+              <td><Bn l={h.word} /></td><td>{h.word[2]}</td><td>{h.use}</td>
+              <td><Bn l={h.example} /><small className="rt-en">{h.example[2]}</small></td>
+            </tr>
+          ))}</tbody>
+        </table>
+      </section>
+
+      <section className="g-sec" id="sec-hooks">
+        <h2>Hooks: how to end your turn</h2>
+        <p>A hook is the last sentence of your turn. It leaves one thing open, so your partner has something to answer. There are eight easy kinds.</p>
+        <table className="relay-table wide">
+          <thead><tr><th scope="col">Kind</th><th scope="col">What it does</th><th scope="col">Example</th></tr></thead>
+          <tbody>{hooks.map((h) => (
+            <tr key={h.kind}><th scope="row">{h.kind}</th><td>{h.use}</td><td><Bn l={h.example} /><small className="rt-en">{h.example[2]}</small></td></tr>
+          ))}</tbody>
+        </table>
       </section>
 
       <section className="g-sec" id="sec-a">
         <h2>Option A: free, no tense rule</h2>
-        <p>Pick one of these openings, or let the app choose. Then take turns.</p>
-        {openings.map((o, i) => (
-          <div key={o.id} className="rp-group"><h3 className="g-h">Opening {i + 1}</h3><div className="rp-lines">{o.lines.map((l) => <Line key={l[0]} line={l} />)}</div></div>
+        <p>Pick any opening, or let the app give you one in the Play section. There are {openings.length} openings in {themes.length} groups.</p>
+        {themes.map((t, ti) => (
+          <details key={t.id} className="relay-theme" open={ti === 0}>
+            <summary>{t.title} <span className="muted">({openings.filter((o) => o.theme === t.id).length})</span></summary>
+            {openings.filter((o) => o.theme === t.id).map((o, i) => <Lines key={o.id} lines={o.lines} caption={`Opening ${i + 1}`} />)}
+          </details>
         ))}
-        <h3 className="g-h">A sample run</h3>
-        <ol className="rp-turns">
+      </section>
+
+      <section className="g-sec" id="sec-sample">
+        <h2>A full sample story</h2>
+        <p>Five turns, 15 sentences. Read the note on each turn, and see how every turn ends with something to answer.</p>
+        <ol className="relay-sample">
           {sampleA.map((t, i) => (
-            <li key={i} className={t.who === "you" ? "you" : "them"}>
-              <p className="rp-who">{t.who === "you" ? "You" : "Your partner"}</p>
-              <div className="rp-lines">{t.lines.map((l) => <Line key={l[0]} line={l} />)}</div>
+            <li key={i}>
+              <p className="relay-turn"><b>Turn {i + 1}: {t.who === "you" ? "You" : "Your partner"}.</b> <span className="muted">{t.note}</span></p>
+              <Lines lines={t.lines} />
             </li>
           ))}
-          <li className="them"><p className="rp-who">Your partner</p><p className="muted">continues the worry in their own way, and so on for 4 to 5 turns each.</p></li>
         </ol>
       </section>
 
       <section className="g-sec" id="sec-b">
-        <h2>Option B: with tenses</h2>
-        <p>Add one rule: <b>sentence 1 of each turn must use the tense on the card.</b> Sentences 2 and 3 are free, so the story keeps its flow. Use the cards in this order:</p>
-        <ol className="relay-cards">
-          {cards.map((c) => (
-            <li key={c.id}><b lang="bn" className="wbn">{c.word[0]}</b><span className="wro">{c.word[1]}</span><span>{c.word[2]}. {c.tense}</span></li>
-          ))}
-        </ol>
-        <h3 className="g-h">A sample turn (card: ekhon)</h3>
-        <div className="rp-lines">{sampleB.map((l) => <Line key={l[0]} line={l} />)}</div>
-        <p className="muted">The first and third sentences use the card tense.</p>
+        <h2>Option B: with tense cards</h2>
+        <p>Add one rule: <b>sentence 1 of each turn must use the tense on the card.</b> Sentences 2 and 3 are free, so the story keeps its flow. Use the cards in this order, one per turn.</p>
+        <table className="relay-table wide">
+          <thead><tr><th scope="col">Turn</th><th scope="col">Card</th><th scope="col">Tense</th><th scope="col">How to build it</th></tr></thead>
+          <tbody>{cards.map((c, i) => (
+            <tr key={c.id}>
+              <th scope="row">{i + 1}</th><td><Bn l={c.word} /><small className="rt-en">{c.word[2]}</small></td><td>{c.tense}</td>
+              <td>{c.how}{c.forms.length > 0 && <small className="rt-en">{c.forms.join(" · ")}</small>}</td>
+            </tr>
+          ))}</tbody>
+        </table>
+        {cards.map((c, i) => (
+          <details key={c.id} className="relay-theme">
+            <summary>Turn {i + 1}: {c.word[1]} ({c.tense}), with examples and a sample turn</summary>
+            {c.examples.length > 0 && <Lines lines={c.examples} caption="Short examples" />}
+            <Lines lines={c.turn} caption="A sample turn" />
+          </details>
+        ))}
       </section>
 
       <section className="g-sec" id="sec-wrap">
         <h2>Wrap-up (2 minutes)</h2>
-        <p>Retell the whole story in 4 to 5 sentences. Your partner corrects your mistakes naturally as you go. Then your partner retells it back to you in a shorter version.</p>
+        <ol className="relay-steps">
+          <li><b>You retell</b> the whole story in 4 or 5 sentences. Your partner corrects your mistakes naturally as you go, by saying the right form back.</li>
+          <li><b>Your partner retells</b> it back to you in a shorter version.</li>
+        </ol>
+        <Lines lines={wrap.retell} caption="A sample retelling (5 sentences)" />
+        <Lines lines={wrap.short} caption="The shorter version your partner says" />
       </section>
 
       <section className="g-sec" id="sec-practice">
         <h2>Play</h2>
-        <Play openings={openings} cards={cards} />
+        <Play openings={openings} themes={themes} cards={cards} helpers={helpers} hooks={hooks} />
       </section>
     </article>
   );
