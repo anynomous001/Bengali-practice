@@ -684,3 +684,9 @@ html { scroll-behavior:smooth; } @media (prefers-reduced-motion: reduce) { html 
 .legal-body a { color:var(--primary); }
 .contact-list { display:grid; gap:12px; margin:20px 0; } .contact-list div { padding:14px 16px; border:1px solid var(--line); border-radius:var(--radius-sm); background:var(--surface); }
 .contact-list dt { font-size:.8rem; font-weight:600; color:var(--ink-2); } .contact-list dd { margin:2px 0 0; font-weight:500; }
+
+/* ---- Story relay ---- */
+.relay-rules { padding-left:1.3rem; display:grid; gap:8px; line-height:1.65; }
+.relay-cards { list-style:none; padding:0; margin:12px 0; display:grid; gap:8px; grid-template-columns:repeat(auto-fill, minmax(min(100%, 250px), 1fr)); counter-reset:rc; }
+.relay-cards li { display:flex; flex-direction:column; gap:2px; padding:12px 14px; border:1px solid var(--line); border-left:4px solid var(--seg, var(--primary)); border-radius:var(--radius-sm); background:var(--surface); }
+.relay-card { display:flex; flex-direction:column; gap:3px; margin:12px 0; padding:14px 16px; border:1px solid color-mix(in srgb, var(--seg, var(--primary)) 35%, var(--line)); border-radius:var(--radius-sm); background:color-mix(in srgb, var(--seg, var(--primary)) 8%, var(--surface)); }

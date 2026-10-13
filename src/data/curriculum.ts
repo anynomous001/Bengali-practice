@@ -78,8 +78,9 @@ export const COURSES: Course[] = [
       ] },
       { id: "roleplay", title: "Role play", blurb: "Real situations: the words, the phrases, and two example conversations each. Then you speak.", lessons:
         SCENARIOS.map((r): Lesson => ({ id: `speaking/roleplay-${r.id}`, title: r.title, blurb: r.blurb, href: `/learn/speaking/roleplay/${r.id}`, kind: "Practice" })) },
-      { id: "impromptu", title: "Impromptu speaking", blurb: "A random topic, time to prepare, then speak on your own.", lessons: [
+      { id: "impromptu", title: "Free speaking", blurb: "Speak on a topic you have never seen, or build a story with a partner.", lessons: [
         { id: "speaking/impromptu", title: "Impromptu topics", blurb: "Choose the kind of topic and how long to prepare and speak. The app picks the topic and keeps time.", href: "/learn/speaking/impromptu", kind: "Practice" },
+        { id: "speaking/story-relay", title: "Story relay", blurb: "Build one story together, taking turns of 2 to 3 sentences. Free, or with a tense card each turn.", href: "/learn/speaking/story-relay", kind: "Practice" },
       ] },
       { id: "exam", title: "Exam", blurb: "A timed listening test.", lessons: [exam("listening")] },
     ],
