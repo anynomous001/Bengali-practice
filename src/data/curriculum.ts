@@ -85,7 +85,7 @@ export const COURSES: Course[] = [
     ],
     upcoming: [
       { title: "Pronunciation drills", blurb: "Listen and repeat tricky sounds." },
-      { title: "More role plays", blurb: "Doctor, phone calls, hotel and train bookings." },
+      { title: "More role plays", blurb: "Hotel and train bookings." },
     ],
   },
   {
