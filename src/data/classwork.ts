@@ -125,6 +125,28 @@ export const CLASSWORK: CwSet[] = [
       { prompt: "[I am learning Bengali] + [I moved here two years ago]", hint: "Present Perfect Continuous, connector: dhore", answer: "Ami dui bochor dhore Bangla shikhchhi, karon ami dui bochor age ekhane esechhi.", alt: ["Ami dui bochor dhore ekhane thakchhi ebong Bangla shikhchhi."] },
     ],
   },
+  {
+    id: "bochon-ling",
+    title: "Number and gender practice",
+    blurb: "Make plurals, fix mistakes, choose the right gender word and translate.",
+    inst: "Follow the instruction in each question and write your answer in Banglish. Remember: a counted noun stays singular, people take -ra, things take -gulo, and adjectives do not change for gender.",
+    items: [
+      { prompt: "Make plural: chhele", hint: "boy", answer: "chhelera", note: "People: add -ra." },
+      { prompt: "Make plural: meye", hint: "girl", answer: "meyera", note: "People: add -ra." },
+      { prompt: "Make plural: tumi", hint: "you", answer: "tomra", note: "Pronouns change completely." },
+      { prompt: "Make plural: boi (things)", hint: "book", answer: "boigulo", note: "Things: add -gulo." },
+      { prompt: "Make plural: se", hint: "he / she", answer: "tara", note: "Pronouns change completely." },
+      { prompt: "Make plural: bondhu", hint: "friend", answer: "bondhura", note: "People: add -ra." },
+      { prompt: "Fix the mistake: \"Dui ta boigulo amar achhe.\"", hint: "I have two books.", answer: "Duto boi amar achhe.", note: "After a number the noun stays singular, with no -gulo. And the counter is written duto, not dui ta." },
+      { prompt: "Is this right? \"Chhelera boi porchhe.\" Say why.", hint: "The boys are reading a book.", answer: "Right. Chhelera is the correct plural for people (-ra), the noun boi stays plain, and the verb porchhe is the same for one boy or many.", note: "The verb never changes for number." },
+      { prompt: "Choose: \"Meyeti khub (bhalo / bhali)?\"", hint: "The girl is very good.", answer: "Meyeti khub bhalo.", note: "Adjectives do not change for gender. Bhalo is used for girls and boys. (Bhali is not used.)" },
+      { prompt: "Give the feminine of: chhatro, shikkhok", answer: "chhatri, shikkhika", note: "-tro becomes -tri, and -ok becomes -ika." },
+      { prompt: "Translate: She went to the market. / He went to the market.", answer: "Se bajare gelo.", note: "Se means both he and she, and the verb is the same." },
+      { prompt: "Translate: Those girls are going to school.", answer: "Oi meyera school-e jachchhe.", alt: ["Oi meyera skule jachchhe."], note: "Meyera: people take -ra. Jachchhe is the same for one girl or many." },
+      { prompt: "Translate: I have three books.", answer: "Amar tinte boi achhe.", note: "After a number: no -gulo, and use the counter -ta/-te for things." },
+      { prompt: "Translate: My sister is a teacher. My brother is a doctor.", answer: "Amar bon shikkhika. Amar bhai daktar.", note: "Shikkhika is the feminine of shikkhok; daktar works for both." },
+    ],
+  },
 ];
 
 export const getClasswork = (id: string) => CLASSWORK.find((s) => s.id === id);

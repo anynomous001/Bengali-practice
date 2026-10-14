@@ -132,7 +132,7 @@ export const COURSES: Course[] = [
         ...WORKOUT.map((r, i): Lesson => ({ id: `grammar/w-${r.id}`, title: `Practice round ${i + 1}: ${r.title}`, blurb: r.mode === "check" ? `${r.items.length} items, checked for you` : `${r.items.length} items, write then check`, href: `/learn/grammar/workout/${r.id}`, kind: "Practice" })),
       ] },
       { id: "cases", title: "Karak and bibhakti", blurb: "The job each noun does for the verb, and the endings and little words that show it.", lessons: [topic("karak"), topic("bibhakti")] },
-      { id: "sentences", title: "Building sentences", blurb: "Singular and plural, counting, saying no and asking, word order and joining ideas.", lessons: [topic("bachan"), topic("nishedh"), topic("vakya")] },
+      { id: "sentences", title: "Building sentences", blurb: "Singular and plural, gender, counting, saying no and asking, word order and joining ideas.", lessons: [topic("bachan"), topic("ling"), topic("nishedh"), topic("vakya")] },
       { id: "classwork", title: "Class exercises", blurb: "The kinds of exercises done in class: build, fix, translate, transform and combine sentences.", lessons: CLASSWORK.map((c): Lesson => ({ id: `grammar/class-${c.id}`, title: c.title, blurb: c.blurb, href: `/learn/grammar/class/${c.id}`, kind: "Practice" })) },
       { id: "translate", title: "Translation", blurb: "Turn English into Bengali and Bengali into English, quickly and often.", lessons: [
         { id: "grammar/translate", title: "Quick translation", blurb: "Ten sentences a round, in either direction. Pick the answer, or think it and check.", href: "/learn/grammar/translate", kind: "Practice" },

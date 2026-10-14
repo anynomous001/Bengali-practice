@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).parent / "gram"))
 import lib
 from lib import VERBS, TENSES, PERSONS, verb_table, c  # re-exported for build_workout.py
 
-ORDER = ["t_purush", "t_kriya", "t_kal", "t_karak", "t_bibhakti", "t_bachan", "t_nishedh", "t_vakya"]
+ORDER = ["t_purush", "t_kriya", "t_kal", "t_karak", "t_bibhakti", "t_bachan", "t_ling", "t_nishedh", "t_vakya"]
 T = []
 for name in ORDER:
     T += importlib.import_module(name).TOPICS

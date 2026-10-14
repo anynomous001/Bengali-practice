@@ -22157,6 +22157,143 @@
   "blurb": "Singular and plural: how to say 'a', 'the' and 'some', how to make plurals for people and for things, and how to count with the right counting word.",
   "sections": [
    {
+    "id": "board",
+    "title": "The board summary: four rules",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Bengali has two numbers. একবচন (ekbochon) is singular and বহুবচন (bohubochon) is plural. Four rules are enough for a first lesson."
+     },
+     {
+      "t": "table",
+      "title": "Making the plural",
+      "head": [
+       "Rule",
+       "Singular",
+       "Plural"
+      ],
+      "rows": [
+       [
+        "People: add -রা / -ra",
+        {
+         "bn": "ছেলে",
+         "ro": "chhele"
+        },
+        {
+         "bn": "ছেলেরা",
+         "ro": "chhelera"
+        }
+       ],
+       [
+        "",
+        {
+         "bn": "মেয়ে",
+         "ro": "meye"
+        },
+        {
+         "bn": "মেয়েরা",
+         "ro": "meyera"
+        }
+       ],
+       [
+        "",
+        {
+         "bn": "বন্ধু",
+         "ro": "bondhu"
+        },
+        {
+         "bn": "বন্ধুরা",
+         "ro": "bondhura"
+        }
+       ],
+       [
+        "Things and animals: add -গুলো / -gulo",
+        {
+         "bn": "বই",
+         "ro": "boi"
+        },
+        {
+         "bn": "বইগুলো",
+         "ro": "boigulo"
+        }
+       ],
+       [
+        "",
+        {
+         "bn": "গাছ",
+         "ro": "gachh"
+        },
+        {
+         "bn": "গাছগুলো",
+         "ro": "gachhgulo"
+        }
+       ],
+       [
+        "Pronouns change completely",
+        {
+         "bn": "আমি",
+         "ro": "ami"
+        },
+        {
+         "bn": "আমরা",
+         "ro": "amra"
+        }
+       ],
+       [
+        "",
+        {
+         "bn": "তুমি",
+         "ro": "tumi"
+        },
+        {
+         "bn": "তোমরা",
+         "ro": "tomra"
+        }
+       ],
+       [
+        "",
+        {
+         "bn": "আপনি",
+         "ro": "apni"
+        },
+        {
+         "bn": "আপনারা",
+         "ro": "apnara"
+        }
+       ],
+       [
+        "",
+        {
+         "bn": "সে",
+         "ro": "se"
+        },
+        {
+         "bn": "তারা",
+         "ro": "tara"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "rule",
+      "title": "After a number, no plural marker",
+      "text": "When you count, the noun stays singular and a counter follows the number: -টা (-টো, -টে) for things and -জন for people.",
+      "items": [
+       [
+        "দুটো বই",
+        "duto boi",
+        "two books"
+       ],
+       [
+        "তিনজন ছেলে",
+        "tinjon chhele",
+        "three boys"
+       ]
+      ]
+     }
+    ]
+   },
+   {
     "id": "what",
     "title": "One or many: singular and plural",
     "blocks": [
@@ -24162,6 +24299,946 @@
     ],
     "answer": 0,
     "why": "ছেলেরা is ordinary third person: খেলছে."
+   }
+  ]
+ },
+ {
+  "id": "ling",
+  "title": [
+   "লিঙ্গ",
+   "Ling",
+   "Gender: he, she and it"
+  ],
+  "blurb": "Gender in Bengali lives only in some nouns. Learn the pairs, the two common endings, and the big surprise: he and she, verbs and adjectives do not change.",
+  "sections": [
+   {
+    "id": "what",
+    "title": "Gender lives in the words",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "লিঙ্গ (ling) means 'gender'. Bengali has three kinds. পুংলিঙ্গ (pumlingo) is masculine, স্ত্রীলিঙ্গ (strilingo) is feminine, and ক্লীবলিঙ্গ (klibolingo) is neuter, for things with no gender. You only need to remember the three terms once: the important thing is how gender behaves."
+     },
+     {
+      "t": "p",
+      "text": "In Bengali, gender shows only in the words themselves. A few nouns have a masculine and a feminine form, like ছেলে (boy) and মেয়ে (girl). Everything else in the sentence stays the same. This is much simpler than languages where verbs and adjectives change for gender."
+     },
+     {
+      "t": "table",
+      "title": "The three genders",
+      "head": [
+       "Name",
+       "Meaning",
+       "Examples"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "পুংলিঙ্গ",
+         "ro": "pumlingo"
+        },
+        "masculine",
+        {
+         "bn": "ছেলে, বাবা, ছাত্র",
+         "ro": "chhele, baba, chhatro"
+        }
+       ],
+       [
+        {
+         "bn": "স্ত্রীলিঙ্গ",
+         "ro": "strilingo"
+        },
+        "feminine",
+        {
+         "bn": "মেয়ে, মা, ছাত্রী",
+         "ro": "meye, ma, chhatri"
+        }
+       ],
+       [
+        {
+         "bn": "ক্লীবলিঙ্গ",
+         "ro": "klibolingo"
+        },
+        "neuter: no gender",
+        {
+         "bn": "বই, টেবিল, গাছ",
+         "ro": "boi, tebil, gachh"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "pairs",
+    "title": "Masculine and feminine pairs",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Many words for people come in pairs. Learn them together."
+     },
+     {
+      "t": "table",
+      "title": "Masculine (পুংলিঙ্গ) and feminine (স্ত্রীলিঙ্গ)",
+      "head": [
+       "Masculine",
+       "Meaning",
+       "Feminine",
+       "Meaning"
+      ],
+      "rows": [
+       [
+        {
+         "bn": "ছেলে",
+         "ro": "chhele"
+        },
+        "boy",
+        {
+         "bn": "মেয়ে",
+         "ro": "meye"
+        },
+        "girl"
+       ],
+       [
+        {
+         "bn": "ভাই",
+         "ro": "bhai"
+        },
+        "brother",
+        {
+         "bn": "বোন",
+         "ro": "bon"
+        },
+        "sister"
+       ],
+       [
+        {
+         "bn": "বাবা",
+         "ro": "baba"
+        },
+        "father",
+        {
+         "bn": "মা",
+         "ro": "ma"
+        },
+        "mother"
+       ],
+       [
+        {
+         "bn": "দাদা",
+         "ro": "dada"
+        },
+        "elder brother",
+        {
+         "bn": "দিদি",
+         "ro": "didi"
+        },
+        "elder sister"
+       ],
+       [
+        {
+         "bn": "ঠাকুরদা",
+         "ro": "thakurda"
+        },
+        "grandfather",
+        {
+         "bn": "ঠাকুমা",
+         "ro": "thakuma"
+        },
+        "grandmother"
+       ],
+       [
+        {
+         "bn": "কাকা",
+         "ro": "kaka"
+        },
+        "uncle (father's brother)",
+        {
+         "bn": "কাকিমা",
+         "ro": "kakima"
+        },
+        "aunt (his wife)"
+       ],
+       [
+        {
+         "bn": "মামা",
+         "ro": "mama"
+        },
+        "uncle (mother's brother)",
+        {
+         "bn": "মামি",
+         "ro": "mami"
+        },
+        "aunt (his wife)"
+       ],
+       [
+        {
+         "bn": "রাজা",
+         "ro": "raja"
+        },
+        "king",
+        {
+         "bn": "রানি",
+         "ro": "rani"
+        },
+        "queen"
+       ],
+       [
+        {
+         "bn": "ছাত্র",
+         "ro": "chhatro"
+        },
+        "male student",
+        {
+         "bn": "ছাত্রী",
+         "ro": "chhatri"
+        },
+        "female student"
+       ],
+       [
+        {
+         "bn": "শিক্ষক",
+         "ro": "shikkhok"
+        },
+        "male teacher",
+        {
+         "bn": "শিক্ষিকা",
+         "ro": "shikkhika"
+        },
+        "female teacher"
+       ],
+       [
+        {
+         "bn": "লেখক",
+         "ro": "lekhok"
+        },
+        "male writer",
+        {
+         "bn": "লেখিকা",
+         "ro": "lekhika"
+        },
+        "female writer"
+       ],
+       [
+        {
+         "bn": "গায়ক",
+         "ro": "gayok"
+        },
+        "male singer",
+        {
+         "bn": "গায়িকা",
+         "ro": "gayika"
+        },
+        "female singer"
+       ],
+       [
+        {
+         "bn": "নায়ক",
+         "ro": "nayok"
+        },
+        "hero, actor",
+        {
+         "bn": "নায়িকা",
+         "ro": "nayika"
+        },
+        "heroine, actress"
+       ],
+       [
+        {
+         "bn": "বালক",
+         "ro": "balok"
+        },
+        "boy",
+        {
+         "bn": "বালিকা",
+         "ro": "balika"
+        },
+        "girl"
+       ]
+      ]
+     },
+     {
+      "t": "h",
+      "text": "In sentences"
+     },
+     {
+      "t": "ex",
+      "title": "Pairs in use",
+      "items": [
+       [
+        "আমার ভাই ডাক্তার।",
+        "amar bhai daktar.",
+        "My brother is a doctor."
+       ],
+       [
+        "আমার বোন ডাক্তার।",
+        "amar bon daktar.",
+        "My sister is a doctor."
+       ],
+       [
+        "আমার বাবা শিক্ষক।",
+        "amar baba shikkhok.",
+        "My father is a teacher."
+       ],
+       [
+        "আমার মা শিক্ষিকা।",
+        "amar ma shikkhika.",
+        "My mother is a teacher."
+       ],
+       [
+        "রাহুল একজন ছাত্র।",
+        "rahul ekjon chhatro.",
+        "Rahul is a student."
+       ],
+       [
+        "রিনা একজন ছাত্রী।",
+        "rina ekjon chhatri.",
+        "Rina is a student."
+       ],
+       [
+        "তিনি একজন লেখিকা।",
+        "tini ekjon lekhika.",
+        "She is a writer."
+       ],
+       [
+        "তিনি একজন গায়ক।",
+        "tini ekjon gayok.",
+        "He is a singer."
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "endings",
+    "title": "Two endings that make the feminine",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Many pairs follow a pattern. Some feminine words are made by changing the ending of the masculine word. Others are separate words, so learn them one by one."
+     },
+     {
+      "t": "table",
+      "title": "How the feminine is made",
+      "head": [
+       "Pattern",
+       "Masculine",
+       "Feminine"
+      ],
+      "rows": [
+       [
+        "-ক becomes -িকা",
+        {
+         "bn": "শিক্ষক",
+         "ro": "shikkhok"
+        },
+        {
+         "bn": "শিক্ষিকা",
+         "ro": "shikkhika"
+        }
+       ],
+       [
+        "",
+        {
+         "bn": "লেখক",
+         "ro": "lekhok"
+        },
+        {
+         "bn": "লেখিকা",
+         "ro": "lekhika"
+        }
+       ],
+       [
+        "",
+        {
+         "bn": "গায়ক",
+         "ro": "gayok"
+        },
+        {
+         "bn": "গায়িকা",
+         "ro": "gayika"
+        }
+       ],
+       [
+        "",
+        {
+         "bn": "নায়ক",
+         "ro": "nayok"
+        },
+        {
+         "bn": "নায়িকা",
+         "ro": "nayika"
+        }
+       ],
+       [
+        "",
+        {
+         "bn": "বালক",
+         "ro": "balok"
+        },
+        {
+         "bn": "বালিকা",
+         "ro": "balika"
+        }
+       ],
+       [
+        "-ত্র becomes -ত্রী",
+        {
+         "bn": "ছাত্র",
+         "ro": "chhatro"
+        },
+        {
+         "bn": "ছাত্রী",
+         "ro": "chhatri"
+        }
+       ],
+       [
+        "a different word",
+        {
+         "bn": "ছেলে",
+         "ro": "chhele"
+        },
+        {
+         "bn": "মেয়ে",
+         "ro": "meye"
+        }
+       ],
+       [
+        "",
+        {
+         "bn": "ভাই",
+         "ro": "bhai"
+        },
+        {
+         "bn": "বোন",
+         "ro": "bon"
+        }
+       ],
+       [
+        "",
+        {
+         "bn": "বাবা",
+         "ro": "baba"
+        },
+        {
+         "bn": "মা",
+         "ro": "ma"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "Many people today use the masculine form for both, for example শিক্ষক for any teacher. The feminine forms are still correct and you will hear and read them often."
+     }
+    ]
+   },
+   {
+    "id": "nochange",
+    "title": "What does not change",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "This is the good news. In Bengali the pronoun সে, the verb and the adjective stay the same for men and women."
+     },
+     {
+      "t": "table",
+      "title": "Gender and the rest of the sentence",
+      "head": [
+       "Part of the sentence",
+       "Does it change for gender?",
+       "Example"
+      ],
+      "rows": [
+       [
+        "pronoun সে / তিনি",
+        "No: one word for he and she",
+        {
+         "bn": "সে স্কুলে যায়।",
+         "ro": "she skule jay."
+        }
+       ],
+       [
+        "verb",
+        "No",
+        {
+         "bn": "ছেলেটি পড়ছে। মেয়েটি পড়ছে।",
+         "ro": "chheleti porchhe. meyeti porchhe."
+        }
+       ],
+       [
+        "adjective",
+        "No",
+        {
+         "bn": "ছেলেটি ভালো। মেয়েটি ভালো।",
+         "ro": "chheleti bhalo. meyeti bhalo."
+        }
+       ]
+      ]
+     },
+     {
+      "t": "ex",
+      "title": "Same word, same verb",
+      "items": [
+       [
+        "সে স্কুলে যায়।",
+        "she skule jay.",
+        "He goes to school. / She goes to school."
+       ],
+       [
+        "তিনি আমার শিক্ষক।",
+        "tini amar shikkhok.",
+        "He is my teacher. (tini is respectful: he or she)"
+       ],
+       [
+        "ছেলেটি খুব ভালো।",
+        "chheleti khub bhalo.",
+        "The boy is very good."
+       ],
+       [
+        "মেয়েটি খুব ভালো।",
+        "meyeti khub bhalo.",
+        "The girl is very good."
+       ],
+       [
+        "মেয়েটি গান গাইছে।",
+        "meyeti gan gaichhe.",
+        "The girl is singing."
+       ],
+       [
+        "ছেলেটি গান গাইছে।",
+        "chheleti gan gaichhe.",
+        "The boy is singing."
+       ],
+       [
+        "সে বাজারে গেল।",
+        "she bajare gelo.",
+        "He went to the market. / She went to the market."
+       ]
+      ]
+     },
+     {
+      "t": "mistakes",
+      "title": "Do not change the adjective",
+      "items": [
+       [
+        "মেয়েটি ভালি।",
+        "meyeti bhali.",
+        "মেয়েটি ভালো।",
+        "meyeti bhalo.",
+        "The adjective does not take a feminine form. ভালো is used for girls and boys alike."
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "id": "common",
+    "title": "Common and neuter words",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "Some words are for both men and women: ডাক্তার (daktar, doctor) is used for a male or a female doctor, and so are বন্ধু (friend), মানুষ (person) and শিশু (child). Things such as বই (book), টেবিল (table) and গাছ (tree) are neuter: they take no gender at all."
+     },
+     {
+      "t": "ex",
+      "title": "Common and neuter",
+      "items": [
+       [
+        "আমার বন্ধু ডাক্তার।",
+        "amar bondhu daktar.",
+        "My friend is a doctor. (a man or a woman)"
+       ],
+       [
+        "ডাক্তার এসেছেন।",
+        "daktar eshechhen.",
+        "The doctor has come. (a man or a woman)"
+       ],
+       [
+        "বইটা টেবিলে আছে।",
+        "boita tebile achhe.",
+        "The book is on the table."
+       ],
+       [
+        "গাছটা অনেক বড়।",
+        "gachhta onek boro.",
+        "The tree is very big."
+       ],
+       [
+        "শিশুটি ঘুমোচ্ছে।",
+        "shishuti ghumochchhe.",
+        "The child is sleeping."
+       ]
+      ]
+     }
+    ]
+   }
+  ],
+  "exercises": [
+   {
+    "kind": "pick",
+    "inst": "Choose the word.",
+    "q": "What is the Bengali word for 'masculine'?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "পুংলিঙ্গ",
+      "ro": "pumlingo"
+     },
+     {
+      "bn": "স্ত্রীলিঙ্গ",
+      "ro": "strilingo"
+     },
+     {
+      "bn": "ক্লীবলিঙ্গ",
+      "ro": "klibolingo"
+     }
+    ],
+    "answer": 0,
+    "why": "পুংলিঙ্গ is masculine."
+   },
+   {
+    "kind": "pick",
+    "inst": "Choose the word.",
+    "q": "What is the Bengali word for 'feminine'?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "স্ত্রীলিঙ্গ",
+      "ro": "strilingo"
+     },
+     {
+      "bn": "পুংলিঙ্গ",
+      "ro": "pumlingo"
+     },
+     {
+      "bn": "ক্লীবলিঙ্গ",
+      "ro": "klibolingo"
+     }
+    ],
+    "answer": 0,
+    "why": "স্ত্রীলিঙ্গ is feminine."
+   },
+   {
+    "kind": "pick",
+    "inst": "Choose the word.",
+    "q": "What is the Bengali word for 'neuter'?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "ক্লীবলিঙ্গ",
+      "ro": "klibolingo"
+     },
+     {
+      "bn": "পুংলিঙ্গ",
+      "ro": "pumlingo"
+     },
+     {
+      "bn": "স্ত্রীলিঙ্গ",
+      "ro": "strilingo"
+     }
+    ],
+    "answer": 0,
+    "why": "ক্লীবলিঙ্গ is neuter."
+   },
+   {
+    "kind": "pick",
+    "inst": "Choose the feminine word.",
+    "q": "Which is the feminine of ছাত্র (male student)?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "ছাত্রী",
+      "ro": "chhatri"
+     },
+     {
+      "bn": "ছাত্রিকা",
+      "ro": "chhatrika"
+     },
+     {
+      "bn": "ছাত্রা",
+      "ro": "chhatra"
+     }
+    ],
+    "answer": 0,
+    "why": "-ত্র becomes -ত্রী: ছাত্রী."
+   },
+   {
+    "kind": "pick",
+    "inst": "Choose the feminine word.",
+    "q": "Which is the feminine of শিক্ষক (male teacher)?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "শিক্ষিকা",
+      "ro": "shikkhika"
+     },
+     {
+      "bn": "শিক্ষকী",
+      "ro": "shikkhoki"
+     },
+     {
+      "bn": "শিক্ষকা",
+      "ro": "shikkhoka"
+     }
+    ],
+    "answer": 0,
+    "why": "-ক becomes -িকা: শিক্ষিকা."
+   },
+   {
+    "kind": "pick",
+    "inst": "Choose the word.",
+    "q": "Which means 'sister'?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "বোন",
+      "ro": "bon"
+     },
+     {
+      "bn": "ভাই",
+      "ro": "bhai"
+     },
+     {
+      "bn": "ছেলে",
+      "ro": "chhele"
+     }
+    ],
+    "answer": 0,
+    "why": "বোন is the sister, the partner of ভাই."
+   },
+   {
+    "kind": "pick",
+    "inst": "Choose the word.",
+    "q": "Which means 'girl'?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "মেয়ে",
+      "ro": "meye"
+     },
+     {
+      "bn": "ছেলে",
+      "ro": "chhele"
+     },
+     {
+      "bn": "বাবা",
+      "ro": "baba"
+     }
+    ],
+    "answer": 0,
+    "why": "মেয়ে is the girl, the partner of ছেলে."
+   },
+   {
+    "kind": "pick",
+    "inst": "Choose the neuter word.",
+    "q": "Which one is a neuter word?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "বই",
+      "ro": "boi"
+     },
+     {
+      "bn": "ছাত্রী",
+      "ro": "chhatri"
+     },
+     {
+      "bn": "বাবা",
+      "ro": "baba"
+     }
+    ],
+    "answer": 0,
+    "why": "বই, a thing, has no gender."
+   },
+   {
+    "kind": "pick",
+    "inst": "Choose the word.",
+    "q": "Which word can be used for both a man and a woman?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "ডাক্তার",
+      "ro": "daktar"
+     },
+     {
+      "bn": "ছাত্রী",
+      "ro": "chhatri"
+     },
+     {
+      "bn": "ছেলে",
+      "ro": "chhele"
+     }
+    ],
+    "answer": 0,
+    "why": "ডাক্তার works for any doctor."
+   },
+   {
+    "kind": "pick",
+    "inst": "Choose the true statement.",
+    "q": "Does the verb change between 'the boy is singing' and 'the girl is singing'?",
+    "sentence": null,
+    "options": [
+     "No, it stays the same",
+     "Yes, it takes a feminine ending",
+     "Yes, it adds -রা"
+    ],
+    "answer": 0,
+    "why": "Bengali verbs do not change for gender."
+   },
+   {
+    "kind": "pick",
+    "inst": "Choose the meaning.",
+    "q": "What does সে mean?",
+    "sentence": null,
+    "options": [
+     "only 'he'",
+     "only 'she'",
+     "'he' or 'she'"
+    ],
+    "answer": 2,
+    "why": "সে is one word for both he and she."
+   },
+   {
+    "kind": "fill",
+    "inst": "Choose the word that fits.",
+    "q": "Which word fills the blank?",
+    "sentence": {
+     "bn": "রিনা একজন ___। (female student)",
+     "ro": "rina ekjon ___."
+    },
+    "options": [
+     {
+      "bn": "ছাত্রী",
+      "ro": "chhatri"
+     },
+     {
+      "bn": "ছাত্র",
+      "ro": "chhatro"
+     },
+     {
+      "bn": "ছাত্রিকা",
+      "ro": "chhatrika"
+     }
+    ],
+    "answer": 0,
+    "why": "A female student: ছাত্রী."
+   },
+   {
+    "kind": "fill",
+    "inst": "Choose the word that fits.",
+    "q": "Which word fills the blank?",
+    "sentence": {
+     "bn": "আমার মা ___। (a teacher)",
+     "ro": "amar ma ___."
+    },
+    "options": [
+     {
+      "bn": "শিক্ষিকা",
+      "ro": "shikkhika"
+     },
+     {
+      "bn": "শিক্ষক",
+      "ro": "shikkhok"
+     },
+     {
+      "bn": "শিক্ষকা",
+      "ro": "shikkhoka"
+     }
+    ],
+    "answer": 0,
+    "why": "For a woman teacher: শিক্ষিকা."
+   },
+   {
+    "kind": "fill",
+    "inst": "Choose the word that fits.",
+    "q": "Which word fills the blank?",
+    "sentence": {
+     "bn": "আমার ভাই ___। (a doctor)",
+     "ro": "amar bhai ___."
+    },
+    "options": [
+     {
+      "bn": "ডাক্তার",
+      "ro": "daktar"
+     },
+     {
+      "bn": "ডাক্তারী",
+      "ro": "daktari"
+     },
+     {
+      "bn": "ডাক্তারিকা",
+      "ro": "daktarika"
+     }
+    ],
+    "answer": 0,
+    "why": "ডাক্তার is used for both."
+   },
+   {
+    "kind": "spot",
+    "inst": "Only one sentence is correct. Choose it.",
+    "q": "Which sentence is correct?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "মেয়েটি ভালো।",
+      "ro": "meyeti bhalo."
+     },
+     {
+      "bn": "মেয়েটি ভালি।",
+      "ro": "meyeti bhali."
+     },
+     {
+      "bn": "মেয়েটি ভালা।",
+      "ro": "meyeti bhala."
+     }
+    ],
+    "answer": 0,
+    "why": "The adjective ভালো does not change for gender."
+   },
+   {
+    "kind": "meaning",
+    "inst": "Choose the Bengali sentence that means the same as the English sentence.",
+    "q": "My sister is a teacher.",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "আমার বোন শিক্ষিকা।",
+      "ro": "amar bon shikkhika."
+     },
+     {
+      "bn": "আমার ভাই শিক্ষিকা।",
+      "ro": "amar bhai shikkhika."
+     },
+     {
+      "bn": "আমার মা শিক্ষক।",
+      "ro": "amar ma shikkhok."
+     }
+    ],
+    "answer": 0,
+    "why": "বোন (sister) with শিক্ষিকা (female teacher)."
+   },
+   {
+    "kind": "meaning",
+    "inst": "Choose the Bengali sentence that means the same as the English sentence.",
+    "q": "My brother is a doctor.",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "আমার ভাই ডাক্তার।",
+      "ro": "amar bhai daktar."
+     },
+     {
+      "bn": "আমার বোন ডাক্তার।",
+      "ro": "amar bon daktar."
+     },
+     {
+      "bn": "আমার বাবা ডাক্তার।",
+      "ro": "amar baba daktar."
+     }
+    ],
+    "answer": 0,
+    "why": "ভাই is brother, ডাক্তার is doctor."
    }
   ]
  },

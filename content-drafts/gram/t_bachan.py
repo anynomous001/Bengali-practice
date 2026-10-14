@@ -11,6 +11,23 @@ PEOPLE = [("ছেলে","chhele","boy","ছেলেটি","chheleti","ছে
 TOPICS = [finish(dict(id="bachan", title=("বচন", "Bochon", "Number: one, many and counting"),
  blurb="Singular and plural: how to say 'a', 'the' and 'some', how to make plurals for people and for things, and how to count with the right counting word.",
  sections=[
+  dict(id="board", title="The board summary: four rules", blocks=[
+   P("Bengali has two numbers. একবচন (ekbochon) is singular and বহুবচন (bohubochon) is plural. Four rules are enough for a first lesson."),
+   TABLE(["Rule", "Singular", "Plural"], [
+     ["People: add -রা / -ra", c("ছেলে","chhele"), c("ছেলেরা","chhelera")],
+     ["", c("মেয়ে","meye"), c("মেয়েরা","meyera")],
+     ["", c("বন্ধু","bondhu"), c("বন্ধুরা","bondhura")],
+     ["Things and animals: add -গুলো / -gulo", c("বই","boi"), c("বইগুলো","boigulo")],
+     ["", c("গাছ","gachh"), c("গাছগুলো","gachhgulo")],
+     ["Pronouns change completely", c("আমি","ami"), c("আমরা","amra")],
+     ["", c("তুমি","tumi"), c("তোমরা","tomra")],
+     ["", c("আপনি","apni"), c("আপনারা","apnara")],
+     ["", c("সে","se"), c("তারা","tara")],
+   ], "Making the plural"),
+   RULE("After a number, no plural marker", "When you count, the noun stays singular and a counter follows the number: -টা (-টো, -টে) for things and -জন for people.", [
+     ("দুটো বই", "duto boi", "two books"), ("তিনজন ছেলে", "tinjon chhele", "three boys")]),
+  ]),
+
   dict(id="what", title="One or many: singular and plural", blocks=[
    P("বচন (bochon) means 'number': one or many. Singular is একবচন (ek-bochon, 'one-number') and plural is বহুবচন (bohu-bochon, 'many-number'). Bengali treats number more lightly than English. A plain noun can mean one or many, and the plural ending is used only when you need to be clear. The verb never changes for number."),
    TABLE(["", "Singular (একবচন)", "Plural (বহুবচন)"], [
