@@ -3,7 +3,7 @@ import { query } from "./db";
 
 const API = process.env.RAZORPAY_API_BASE ?? "https://api.razorpay.com/v1";
 
-export const priceUsd = () => Number(process.env.PRICE_USD ?? 40);
+export const priceUsd = () => Number(process.env.PRICE_USD ?? 50);
 export const configured = () => !!process.env.RAZORPAY_KEY_ID && !!process.env.RAZORPAY_KEY_SECRET;
 
 function auth() {

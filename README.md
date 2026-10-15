@@ -33,7 +33,7 @@ Without `RESEND_API_KEY`, sign-in links are printed to the server log instead of
 
 ## Online payment (Razorpay)
 
-Students can buy 12 months of access at `/buy` ($40 by default, set `PRICE_USD`). The server creates a USD order, the student pays in Razorpay Checkout, and the server then confirms the payment with Razorpay before granting access (and emails a sign-in link). Buying again before expiry adds another 12 months. Each order grants access once, even if Checkout and the webhook both report it.
+Students can buy 12 months of access at `/buy` ($50 by default, set `PRICE_USD`). The server creates a USD order, the student pays in Razorpay Checkout, and the server then confirms the payment with Razorpay before granting access (and emails a sign-in link). Buying again before expiry adds another 12 months. Each order grants access once, even if Checkout and the webhook both report it.
 
 Setup:
 1. In the Razorpay dashboard, request **International Payments** so USD cards work, and use **Test mode** keys first.
