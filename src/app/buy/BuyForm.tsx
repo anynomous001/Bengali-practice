@@ -19,8 +19,9 @@ function loadCheckout(): Promise<void> {
   });
 }
 
-export default function BuyForm({ price, priceInr = 0, knownEmail }: { price: number; priceInr?: number; knownEmail?: string }) {
-  const [currency, setCurrency] = useState<"USD" | "INR">("USD");
+export default function BuyForm({ price, inr, rate, fixedInr, start, knownEmail, children }: { children?: React.ReactNode; price: number; inr: number; rate: number; fixedInr: boolean; start: "USD" | "INR"; knownEmail?: string }) {
+  const [currency, setCurrency] = useState<"USD" | "INR">(start);
+  const shown = currency === "INR" ? `₹${inr.toLocaleString("en-IN")}` : `$${price}`;
   const [email, setEmail] = useState(knownEmail ?? "");
   const [again, setAgain] = useState(knownEmail ?? "");
   const [busy, setBusy] = useState(false);
@@ -86,18 +87,16 @@ export default function BuyForm({ price, priceInr = 0, knownEmail }: { price: nu
 
   return (
     <form onSubmit={pay} className="stack">
-      {priceInr > 0 && (
-        <div className="choice-group" role="radiogroup" aria-label="How do you want to pay?">
-          <label className={"choice" + (currency === "USD" ? " on" : "")}>
-            <input type="radio" name="currency" checked={currency === "USD"} onChange={() => setCurrency("USD")} />
-            <span><b>US dollars: ${price}</b><small>Credit or debit card, from anywhere.</small></span>
-          </label>
-          <label className={"choice" + (currency === "INR" ? " on" : "")}>
-            <input type="radio" name="currency" checked={currency === "INR"} onChange={() => setCurrency("INR")} />
-            <span><b>Indian rupees: ₹{priceInr}</b><small>UPI, cards and net banking, from an Indian bank.</small></span>
-          </label>
-        </div>
-      )}
+      <div className="price">{shown} <small>one-time · 12 months</small></div>
+      <p className="muted small price-note">
+        {currency === "INR"
+          ? <>Pay with UPI, cards or net banking. {fixedInr ? "" : `Converted from $${price} at today's rate (₹${rate} per US dollar). `}</>
+          : <>Pay by credit or debit card. </>}
+        <button type="button" className="textbtn" onClick={() => setCurrency(currency === "INR" ? "USD" : "INR")}>
+          {currency === "INR" ? `Pay in US dollars ($${price}) instead` : `Pay in Indian rupees (₹${inr.toLocaleString("en-IN")}) instead`}
+        </button>
+      </p>
+      {children}
       <label htmlFor="email">Your email (this is how you'll sign in)</label>
       <input id="email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" autoComplete="email" readOnly={!!knownEmail} />
       {!knownEmail && (
@@ -106,7 +105,7 @@ export default function BuyForm({ price, priceInr = 0, knownEmail }: { price: nu
           <input id="email2" type="email" required value={again} onChange={(e) => setAgain(e.target.value)} placeholder="you@example.com" autoComplete="off" onPaste={(e) => e.preventDefault()} />
         </>
       )}
-      <button className="btn" disabled={busy}>{busy ? "Please wait…" : currency === "INR" ? `Pay ₹${priceInr}` : `Pay $${price}`}</button>
+      <button className="btn" disabled={busy}>{busy ? "Please wait…" : `Pay ${shown}`}</button>
       {error && <p className="msg bad" role="alert">{error}</p>}
     </form>
   );

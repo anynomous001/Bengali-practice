@@ -1,13 +1,11 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 import { query } from "./db";
+import { priceInr, priceUsd, type Currency } from "./pricing";
+export { parseCurrency, priceUsd, type Currency } from "./pricing";
 
 const API = process.env.RAZORPAY_API_BASE ?? "https://api.razorpay.com/v1";
 
-export const priceUsd = () => Number(process.env.PRICE_USD ?? 50);
-/** Rupee price for students in India (UPI, cards, net banking). 0 means the rupee option is switched off. */
-export const priceInr = () => Number(process.env.PRICE_INR ?? 0) || 0;
-export type Currency = "USD" | "INR";
-export const parseCurrency = (v: unknown): Currency => (v === "INR" ? "INR" : "USD");
+
 export const configured = () => !!process.env.RAZORPAY_KEY_ID && !!process.env.RAZORPAY_KEY_SECRET;
 
 function auth() {
@@ -47,8 +45,7 @@ export const webhookSignatureOk = (rawBody: string, signature: string) => {
 };
 
 export async function createOrder(email: string, currency: Currency = "USD") {
-  if (currency === "INR" && !priceInr()) throw new Error("Rupee payments are not available yet.");
-  const amount = Math.round((currency === "INR" ? priceInr() : priceUsd()) * 100); // cents or paise
+  const amount = Math.round((currency === "INR" ? (await priceInr()).amount : priceUsd()) * 100); // paise or cents
   const recent = await query<{ n: string }>(
     "SELECT count(*) AS n FROM orders WHERE email = $1 AND created_at > now() - interval '1 hour'",
     [email],

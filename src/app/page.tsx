@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getUser } from "@/lib/auth";
-import { priceInr, priceUsd } from "@/lib/razorpay";
+import { priceUsd } from "@/lib/razorpay";
 import Icon from "./learn/Icon";
 import { SiteFooter } from "./legal/LegalPage";
 
@@ -101,7 +101,7 @@ export default async function Home() {
             <ul className="ticks">
               <li>All four courses</li>
               <li>Flashcards and progress saved</li>
-              <li>Pay by card in US dollars{priceInr() > 0 ? ", or by UPI in rupees" : ""}, via Razorpay</li>
+              <li>Pay in US dollars by card, or in rupees by UPI, via Razorpay</li>
             </ul>
             <Link className="btn" href="/buy">Get access</Link>
           </div>

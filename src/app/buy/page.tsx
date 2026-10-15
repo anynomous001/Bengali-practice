@@ -1,28 +1,30 @@
 import Link from "next/link";
 import { getUser } from "@/lib/auth";
-import { priceInr, priceUsd } from "@/lib/razorpay";
+import { headers } from "next/headers";
+import { defaultCurrency, priceInr, priceUsd } from "@/lib/pricing";
 import AuthFrame from "../AuthFrame";
 import BuyForm from "./BuyForm";
 
 export default async function BuyPage() {
   const price = priceUsd();
-  const user = await getUser();
+  const [user, inr, h] = await Promise.all([getUser(), priceInr(), headers()]);
+  const start = defaultCurrency(h.get("x-vercel-ip-country"));
   return (
     <AuthFrame>
       <p className="eyebrow">Get access</p>
       <h1>12 months of Bengali practice</h1>
       <div className="price-card">
-        <div className="price">${price} <small>one-time · 12 months</small></div>
-        <ul className="ticks">
-          <li>Reading, speaking, vocabulary and grammar courses</li>
-          <li>Role plays, quick translation and timed exams</li>
-          <li>Flashcards that remember what you know</li>
-          <li>New lessons added during your year</li>
-          <li>Renew early and 12 months are added on</li>
-        </ul>
-        <BuyForm price={price} priceInr={priceInr()} knownEmail={user?.email} />
+        <BuyForm price={price} inr={inr.amount} rate={Math.round(inr.rate * 100) / 100} fixedInr={inr.fixed} start={start} knownEmail={user?.email}>
+          <ul className="ticks">
+            <li>Reading, speaking, vocabulary and grammar courses</li>
+            <li>Role plays, quick translation and timed exams</li>
+            <li>Flashcards that remember what you know</li>
+            <li>New lessons added during your year</li>
+            <li>Renew early and 12 months are added on</li>
+          </ul>
+        </BuyForm>
       </div>
-      <p className="muted small">Pay securely with Razorpay{priceInr() > 0 ? ": cards in US dollars, or UPI, cards and net banking in rupees" : ": credit or debit card, in US dollars"}. Already have access? <Link href="/login">Sign in</Link>. By paying you agree to the <Link href="/terms">terms</Link> and the <Link href="/refunds">refund policy</Link>; see also the <Link href="/privacy">privacy policy</Link>.</p>
+      <p className="muted small">Payments are processed securely by Razorpay. Already have access? <Link href="/login">Sign in</Link>. By paying you agree to the <Link href="/terms">terms</Link> and the <Link href="/refunds">refund policy</Link>; see also the <Link href="/privacy">privacy policy</Link>.</p>
     </AuthFrame>
   );
 }
