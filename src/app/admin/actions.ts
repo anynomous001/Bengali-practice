@@ -2,10 +2,10 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { createLoginToken, getUser, normalizeEmail, validEmail } from "@/lib/auth";
+import { getUser, normalizeEmail, validEmail } from "@/lib/auth";
 import { appBase } from "@/lib/base-url";
 import { query } from "@/lib/db";
-import { sendLoginEmail } from "@/lib/email";
+import { sendInviteEmail } from "@/lib/email";
 
 async function requireAdmin() {
   const user = await getUser();
@@ -54,27 +54,17 @@ export async function removeStudent(fd: FormData) {
   revalidatePath("/admin");
 }
 
-/** Adds the person (12 months of access) and emails them a sign-in link. No separate invitation record is kept: they simply appear in the student list. */
-export async function inviteStudent(fd: FormData) {
+/** Emails the person a link to the site. Nothing is stored and no access is granted: they pay like anyone else. */
+export async function inviteSomeone(fd: FormData) {
   await requireAdmin();
   const email = emailOf(fd);
   if (!validEmail(email)) redirect("/admin?invite=invalid");
-  await query(
-    `INSERT INTO students (email, note, access_expires_at) VALUES ($1, 'invited', now() + interval '12 months')
-     ON CONFLICT (email) DO UPDATE SET
-       access_expires_at = GREATEST(now(), COALESCE(students.access_expires_at, now())) + interval '12 months'
-       WHERE students.access_expires_at IS NULL OR students.access_expires_at < now()`,
-    [email],
-  );
   let result = "sent";
   try {
-    const token = await createLoginToken(email);
-    if (!token) result = "limited";
-    else await sendLoginEmail(email, `${await appBase()}/login/verify?token=${encodeURIComponent(token)}`, true);
+    await sendInviteEmail(email, `${await appBase()}/buy`);
   } catch (e) {
     console.error("invite email failed", e);
     result = "failed";
   }
-  revalidatePath("/admin");
   redirect(`/admin?invite=${result}&to=${encodeURIComponent(email)}`);
 }

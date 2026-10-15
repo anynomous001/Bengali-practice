@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getUser } from "@/lib/auth";
 import { query } from "@/lib/db";
-import { addStudent, grantYear, inviteStudent, removeStudent, revokeAccess } from "./actions";
+import { addStudent, grantYear, inviteSomeone, removeStudent, revokeAccess } from "./actions";
 import Icon from "../learn/Icon";
 
 type Row = { email: string; note: string; access_expires_at: Date | null; created_at: Date };
@@ -26,14 +26,13 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
         <span className="chip">{students.length} students</span>
       </header>
 
-      <form action={inviteStudent} className="stack card-static">
+      <form action={inviteSomeone} className="stack card-static">
         <h2>Invite someone</h2>
-        <p className="muted">Gives them 12 months of access and emails them a sign-in link. Nothing else is recorded: they just appear in the list below.</p>
+        <p className="muted">Emails them a link to the site. It gives no access and nothing is recorded: they pay like anyone else.</p>
         <input name="email" type="email" required placeholder="friend@example.com" />
         <button className="btn">Send invite</button>
         {invite === "sent" && <p className="msg good" role="status">Invite sent to {to}.</p>}
-        {invite === "failed" && <p className="msg bad" role="status">{to} now has access, but the email could not be sent. Ask them to use the Sign in page.</p>}
-        {invite === "limited" && <p className="msg bad" role="status">{to} now has access, but too many links were requested for them just now. Try again in a few minutes.</p>}
+        {invite === "failed" && <p className="msg bad" role="status">The email to {to} could not be sent. Please try again.</p>}
         {invite === "invalid" && <p className="msg bad" role="status">That email address doesn&apos;t look right.</p>}
       </form>
 
