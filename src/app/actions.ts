@@ -13,6 +13,7 @@ import { STORIES } from "@/data/stories";
 import { isLessonId } from "@/data/curriculum";
 import { TOPICS, type TopicKind } from "@/data/impromptu";
 import { DEV_TOPICS } from "@/data/devotional";
+import { recordActivity } from "@/lib/activity";
 import { getDevStory } from "@/data/devotional-stories";
 import { VOCAB, VOCAB_QUIZ_LEN } from "@/data/vocabulary";
 import { getExam } from "@/data/exams";
@@ -76,6 +77,7 @@ export async function recordAnswer(letter: string, correct: boolean) {
        right_count = progress.right_count + $3, wrong_count = progress.wrong_count + $4`,
     [user.email, letter, correct ? 1 : 0, correct ? 0 : 1],
   );
+  if (correct) await recordActivity(user.email, "drill", letter);
 }
 
 // Leitner boxes: days until a card is due again, by box.
@@ -97,6 +99,7 @@ export async function rateCard(cardId: string, rating: "again" | "good" | "easy"
        reviews = flashcards.reviews + 1`,
     [user.email, cardId, jump, max, INTERVAL_DAYS, rating === "again"],
   );
+  await recordActivity(user.email, "flash", cardId);
 }
 
 export async function recordWriting(item: string) {
@@ -111,13 +114,15 @@ export async function recordWriting(item: string) {
      ON CONFLICT (email, item) DO UPDATE SET count = writing_practice.count + 1`,
     [user.email, item],
   );
+  await recordActivity(user.email, "writing", item);
 }
 
 async function completeLesson(email: string, lessonId: string) {
-  await query(
-    "INSERT INTO lesson_progress (email, lesson_id) VALUES ($1, $2) ON CONFLICT (email, lesson_id) DO NOTHING",
+  const added = await query(
+    "INSERT INTO lesson_progress (email, lesson_id) VALUES ($1, $2) ON CONFLICT (email, lesson_id) DO NOTHING RETURNING lesson_id",
     [email, lessonId],
   );
+  if (added.length) await recordActivity(email, "lesson", lessonId); // points the first time only
 }
 
 /** Mark a lesson complete, or undo it. Only known lesson ids are accepted. */
@@ -142,6 +147,7 @@ export async function recordStoryQuiz(storyId: string, score: number) {
        attempts = story_progress.attempts + 1, updated_at = now()`,
     [user.email, storyId, s, total],
   );
+  await recordActivity(user.email, "quiz", `story:${storyId}`, { pass: s >= Math.ceil(total * 0.7) });
   await completeLesson(user.email, dev ? `reading/${storyId}` : `reading/story-${storyId}`);
 }
 
@@ -162,6 +168,7 @@ export async function recordGrammarQuiz(topicId: string, score: number) {
        attempts = grammar_progress.attempts + 1, updated_at = now()`,
     [user.email, topicId, s, total],
   );
+  await recordActivity(user.email, "quiz", topicId, { pass: s >= Math.ceil(total * 0.7) });
   if (translate) {
     if (s >= Math.ceil(total * 0.7)) await completeLesson(user.email, "grammar/translate");
     return;
@@ -247,6 +254,7 @@ export async function submitExam(attemptId: string, answers: (number | null)[]):
   const pct = Math.round((score / total) * 100);
   const passed = !late && pct >= def.pass;
   await query("UPDATE exam_attempts SET finished_at = now(), answers = $2, score = $3, total = $4 WHERE id = $1", [attemptId, JSON.stringify(chosen), score, total]);
+  await recordActivity(user.email, "exam", row.exam_id, { pass: passed });
   if (passed) await completeLesson(user.email, def.lessonId);
   return {
     score, total, pct, passed, late, pass: def.pass,

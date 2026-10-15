@@ -106,6 +106,31 @@ const SCHEMA = `
       count int NOT NULL DEFAULT 0,
       PRIMARY KEY (email, item)
     );
+    CREATE TABLE IF NOT EXISTS activity (
+      id bigserial PRIMARY KEY,
+      email text NOT NULL,
+      day text NOT NULL,
+      kind text NOT NULL,
+      ref text NOT NULL DEFAULT '',
+      points int NOT NULL DEFAULT 0,
+      created_at timestamptz NOT NULL DEFAULT now()
+    );
+    CREATE INDEX IF NOT EXISTS activity_email_day ON activity (email, day);
+    CREATE TABLE IF NOT EXISTS student_settings (
+      email text PRIMARY KEY,
+      tz text,
+      daily_goal int NOT NULL DEFAULT 40,
+      display_name text,
+      remind boolean NOT NULL DEFAULT false,
+      last_reminded text
+    );
+    CREATE TABLE IF NOT EXISTS milestones (
+      email text NOT NULL,
+      key text NOT NULL,
+      earned_at timestamptz NOT NULL DEFAULT now(),
+      seen boolean NOT NULL DEFAULT false,
+      PRIMARY KEY (email, key)
+    );
     CREATE TABLE IF NOT EXISTS flashcards (
       email text NOT NULL,
       card_id text NOT NULL,

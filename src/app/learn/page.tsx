@@ -4,10 +4,17 @@ import { loadLessonProgress } from "@/lib/progress";
 import { COURSES, allLessons, courseStats } from "@/data/curriculum";
 import Icon from "./Icon";
 import ProgressBar from "./ProgressBar";
+import StreakCard from "./StreakCard";
+import { loadStats, markMilestonesSeen, MILESTONES, syncMilestones } from "@/lib/activity";
 
 export default async function Dashboard() {
   const user = await requireAccess();
   const { done, recent } = await loadLessonProgress();
+  const stats = await loadStats(user.email);
+  const { earned, fresh } = await syncMilestones(user.email, stats);
+  if (fresh.length) await markMilestonesSeen(user.email);
+  const nextMilestone = MILESTONES.find((m) => !earned.has(m.key))?.title ?? null;
+  const freshMilestones = MILESTONES.filter((m) => fresh.includes(m.key));
 
   const daysLeft = user.expiresAt ? Math.ceil((user.expiresAt.getTime() - Date.now()) / 86_400_000) : Infinity;
   const rows = COURSES.map((c) => ({ c, s: courseStats(c, done) }));
@@ -27,6 +34,12 @@ export default async function Dashboard() {
           <Link href="/buy" className="btn small">Renew access</Link>
         </div>
       )}
+      {freshMilestones.map((m) => (
+        <div key={m.key} className="milestone-banner" role="status">
+          <Icon name="trophy" size={22} weight="fill" />
+          <span><b>New milestone: {m.title}.</b> {m.text}</span>
+        </div>
+      ))}
       <section className="hero-card">
         <div className="hero-copy">
           <p className="eyebrow">Welcome back</p>
@@ -51,6 +64,8 @@ export default async function Dashboard() {
           <p>{complete} of {total} lessons complete</p>
         </div>
       </section>
+
+      <StreakCard stats={stats} next={nextMilestone} />
 
       <h2 className="section-title">Your courses</h2>
       <div className="course-grid">

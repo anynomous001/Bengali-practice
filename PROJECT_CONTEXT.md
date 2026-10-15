@@ -89,6 +89,12 @@ A separate track inside each course (module marked `devotional` in `src/data/cur
 - Light and dark themes (cookie `bp_theme`, else follows the system), custom radio buttons, mobile bottom tab bar, `Logo` component (`src/app/Logo.tsx`) and `src/app/icon.png` for the browser tab.
 - Fonts: Plus Jakarta Sans (UI), Noto Sans/Serif Bengali (loaded from Google Fonts).
 
+### Daily practice: streaks, points and milestones
+- A practice day is a day (in the student's own time zone, taken from the browser) with at least one full action (a lesson, quiz round, exam) or ten light ones (flashcards, letter drills, writing). Streaks are gentle: one missed day per week is forgiven. Points per action and daily caps are in `src/lib/points.ts`; streak rules in `src/lib/streak.ts`; recording, milestones and class views in `src/lib/activity.ts`.
+- Tables (created automatically): `activity` (one row per practice action), `student_settings` (time zone, daily goal, display name, reminder opt-in), `milestones`. No backfill: it starts counting from release.
+- Students see a streak card on the dashboard, a "My progress" page (calendar, milestones in three groups including Devotional, class board, settings), and a "practised today" chip on course pages. Students choose a daily goal (Light 20, Regular 40, Serious 80). The class board lists only students who set a display name. The admin page has a Student activity table for the teacher.
+- Optional evening reminder email: Vercel Cron calls `/api/cron/reminders` daily at 23:00 UTC (`vercel.json`); it needs the `CRON_SECRET` environment variable in Vercel.
+
 ## 8. Testing approach used so far
 
 - Playwright (playwright-core, Chromium at `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`) with a saved login state, screenshots at desktop and phone widths.

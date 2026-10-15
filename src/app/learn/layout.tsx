@@ -8,6 +8,7 @@ import Icon from "./Icon";
 import NavLinks from "./NavLinks";
 import { RomanProvider, RomanToggle } from "./Roman";
 import ThemeToggle from "./ThemeToggle";
+import TzSync from "./TzSync";
 
 export default async function LearnLayout({ children }: { children: React.ReactNode }) {
   const user = await getUser();
@@ -20,6 +21,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
   const theme = t === "light" || t === "dark" ? t : "system";
   return (
     <RomanProvider initial={roman}>
+      <TzSync />
       <div className="app">
         <aside className="side">
           <Link href="/learn" className="side-brand">
@@ -46,6 +48,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
           <span className="spacer" />
           <RomanToggle label="Roman" />
           <ThemeToggle initial={theme} compact />
+          <Link href="/learn/progress" className="icon-link" aria-label="My progress"><Icon name="trophy" size={18} /></Link>
           {user.isAdmin && <Link href="/admin" className="icon-link" aria-label="Admin"><Icon name="shield" size={18} /></Link>}
           <form action={logout}><button className="icon-link" aria-label="Sign out"><Icon name="logout" size={18} /></button></form>
         </header>

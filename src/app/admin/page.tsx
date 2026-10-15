@@ -4,6 +4,7 @@ import { getUser } from "@/lib/auth";
 import { query } from "@/lib/db";
 import { addStudent, grantYear, inviteSomeone, removeStudent, revokeAccess } from "./actions";
 import Icon from "../learn/Icon";
+import { loadTeacherView } from "@/lib/activity";
 
 type Row = { email: string; note: string; access_expires_at: Date | null; created_at: Date };
 const fmt = (d: Date) => d.toLocaleDateString("en-GB", { dateStyle: "medium" });
@@ -14,6 +15,7 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
   if (!user?.isAdmin) notFound();
   const students = await query<Row>("SELECT email, note, access_expires_at, created_at FROM students ORDER BY created_at DESC");
 
+  const activity = await loadTeacherView();
   const orders = await query<{ email: string; amount: number; currency: string; payment_id: string; paid_at: Date }>(
     "SELECT email, amount, currency, payment_id, paid_at FROM orders WHERE status = 'paid' ORDER BY paid_at DESC LIMIT 20",
   );
@@ -66,6 +68,17 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
           );
         })}
         {!students.length && <p className="muted">No students yet.</p>}
+      </div>
+
+      <h2>Student activity</h2>
+      <div className="list">
+        {activity.map((a) => (
+          <div key={a.email} className="row">
+            <span><b>{a.email}</b></span>
+            <span className="muted">{a.current}-day streak (best {a.longest}) · {a.weekPoints} points this week · {a.totalPoints} in total · last practised {a.lastActive ? fmt(new Date(a.lastActive + "T00:00:00Z")) : "never"}</span>
+          </div>
+        ))}
+        {!activity.length && <p className="muted">No students yet.</p>}
       </div>
 
       <h2>Recent online payments</h2>

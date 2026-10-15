@@ -99,3 +99,16 @@ export function sendInviteEmail(to: string, link: string) {
     note: "You received this because someone at Bengali Practice invited you.",
   });
 }
+
+/** An optional evening nudge, sent only to students who switched reminders on and have not practised today. */
+export function sendReminderEmail(to: string, link: string, streak: number) {
+  return send(to, `A few minutes of Bengali today?`, {
+    preheader: streak > 0 ? `Keep your ${streak}-day streak going.` : "A short session is enough.",
+    heading: "A few minutes of Bengali today?",
+    paragraphs: [
+      streak > 0 ? `You are on a ${streak}-day streak. A short lesson, a quiz or ten flashcards keeps it going.` : "A short lesson, a quiz or ten flashcards is enough to count as a practice day.",
+    ],
+    button: { label: "Practise now", href: link },
+    note: "You get this because you turned on reminders. You can switch them off any time on the My progress page.",
+  });
+}

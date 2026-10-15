@@ -3,16 +3,18 @@ import { notFound } from "next/navigation";
 import { requireAccess } from "@/lib/access";
 import { loadLessonProgress } from "@/lib/progress";
 import { courseStats, getCourse } from "@/data/curriculum";
+import { loadStats } from "@/lib/activity";
 import Icon from "./Icon";
 import LessonStatus from "./LessonStatus";
 import ProgressBar from "./ProgressBar";
 
 /** The course home: progress, resume, what you will learn, and the full syllabus. */
 export default async function CourseOverview({ courseId }: { courseId: string }) {
-  await requireAccess();
+  const user = await requireAccess();
   const course = getCourse(courseId);
   if (!course) notFound();
   const { done, recent } = await loadLessonProgress();
+  const day = await loadStats(user.email);
   const stats = courseStats(course, done);
   const started = stats.done > 0;
   const finished = stats.done === stats.total;
@@ -26,6 +28,7 @@ export default async function CourseOverview({ courseId }: { courseId: string })
           <p className="eyebrow" lang="bn">{course.bn}</p>
           <h1>{course.title}</h1>
           <p className="lede">{course.blurb}</p>
+          <Link href="/learn/progress" className={"practised" + (day.practisedToday ? " on" : "")}><Icon name="flame" size={16} weight="fill" />{day.practisedToday ? "Practised today" : "Not practised yet today"}{day.current > 0 && ` · ${day.current}-day streak`}</Link>
           {course.tools && course.tools.length > 0 && (
             <div className="tools">
               {course.tools.map((t) => (
