@@ -10,7 +10,7 @@ export async function sendLoginEmail(to: string, link: string) {
     body: JSON.stringify({
       from: process.env.EMAIL_FROM,
       to,
-      subject: "Your Bengali Practice sign-in link",
+      subject: "Your Shikhi sign-in link",
       text: `Click to sign in (valid for 15 minutes, works once):\n\n${link}\n\nIf you didn't ask for this, ignore this email.`,
     }),
   });
@@ -30,8 +30,8 @@ export async function sendInviteEmail(to: string, link: string) {
     body: JSON.stringify({
       from: process.env.EMAIL_FROM,
       to,
-      subject: "You're invited to Bengali Practice",
-      text: `You've been invited to Bengali Practice, a private space for learning Bengali.\n\nGet started here:\n\n${link}`,
+      subject: "You're invited to Shikhi",
+      text: `You've been invited to Shikhi, a private space for learning Bengali with your teacher.\n\nGet started here:\n\n${link}`,
     }),
   });
   if (!res.ok) throw new Error(`Resend failed: ${res.status} ${await res.text()}`);

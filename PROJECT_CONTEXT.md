@@ -1,4 +1,4 @@
-# Bengali Practice: full project context
+# Shikhi (শিখি): full project context
 
 Last updated: 15 Oct 2026. Written so the whole thing can be pasted into a new chat or handed to another developer. No secrets are included; only the names of environment variables.
 
@@ -6,7 +6,7 @@ Last updated: 15 Oct 2026. Written so the whole thing can be pasted into a new c
 
 ## 1. What this is
 
-A private Bengali-learning web app for the students of one teacher in Kolkata. Most students live in the USA. The brand is "Bengali Practice" (বাংলা PRACTICE). The logo is the letter **বা** ("ba") in white on a crimson rounded square.
+A private Bengali-learning web app for the students of one teacher in Kolkata. Most students live in the USA. The brand is **Shikhi (শিখি)**, previously "Bengali Practice". Tagline: "Learn Bengali with your teacher". The logo is a white sprout growing out of a speech bubble on a crimson rounded square (`public/shikhi-logo.png`, tab icon `src/app/icon.png`, `src/app/apple-icon.png`). The repo, domain (bengali-practice.gencore.co.in), cookie names and database names keep the old name on purpose.
 
 - Live site: https://bengali-practice.gencore.co.in/
 - Repo: `anynomous001/Bengali-practice` (GitHub). I develop on branch `claude/grammar-deep` and push to `main` only when the owner says "push it to main" (`git push origin claude/grammar-deep:main`). Vercel deploys from main.
@@ -27,7 +27,7 @@ A private Bengali-learning web app for the students of one teacher in Kolkata. M
 - **Who may sign in** (`canSignIn` in `src/lib/auth.ts`): anyone in `ADMIN_EMAILS`, or anyone in the `students` table (even if their access expired).
 - **Who has access** to lessons: admins, and students whose `access_expires_at` is in the future. Expired students see the "access ended" page and can renew.
 - The login form always answers "If this email is enrolled, a sign-in link is on its way", whether or not the email is enrolled, so nobody can probe the list. Limit: 5 links per email per 10 minutes.
-- **Email** is sent through **Resend** (`src/lib/email.ts`). With no `RESEND_API_KEY`, the link is only written to the server log. The sending domain `mail.gencore.co.in` is **verified** in Resend; `EMAIL_FROM` must be `Bengali Practice <login@mail.gencore.co.in>` (a wrong domain was the cause of an earlier failure).
+- **Email** is sent through **Resend** (`src/lib/email.ts`). With no `RESEND_API_KEY`, the link is only written to the server log. The sending domain `mail.gencore.co.in` is **verified** in Resend; `EMAIL_FROM` must be `Shikhi <login@mail.gencore.co.in>` (a wrong domain was the cause of an earlier failure).
 - **Post-payment email:** right after a payment is confirmed, the app also emails a sign-in link to the buyer (`/api/checkout/verify`). Tested live; it can take a few minutes to arrive on a new sending domain.
 - **Admin page** `/admin`: shows a 404 unless signed in as admin. Add or remove students, grant 12 months, revoke access, and see the last 20 paid orders.
 
@@ -76,7 +76,7 @@ Vocabulary lessons, flashcards, and a timed vocabulary exam.
 
 - Docs-style lesson layout with underline tabs and a stepper (replaced the old tab bars).
 - **Phosphor icon overhaul** (`src/app/learn/Icon.tsx`) after the owner said the old icons and arrows looked AI-generated and wanted a "real premium website" feel.
-- Light and dark themes (cookie `bp_theme`, else follows the system), custom radio buttons, mobile bottom tab bar, `Logo` component (`src/app/Logo.tsx`) and `src/app/icon.svg` for the browser tab.
+- Light and dark themes (cookie `bp_theme`, else follows the system), custom radio buttons, mobile bottom tab bar, `Logo` component (`src/app/Logo.tsx`) and `src/app/icon.png` for the browser tab.
 - Fonts: Plus Jakarta Sans (UI), Noto Sans/Serif Bengali (loaded from Google Fonts).
 
 ## 8. Testing approach used so far

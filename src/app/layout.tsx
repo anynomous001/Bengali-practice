@@ -3,8 +3,9 @@ import { cookies } from "next/headers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Bengali Practice",
-  description: "Practice Bengali: alphabet, pronunciation, conversations and more.",
+  title: { default: "Shikhi", template: "%s · Shikhi" },
+  description: "Learn Bengali with your teacher: alphabet, pronunciation, conversations and more.",
+  openGraph: { siteName: "Shikhi", title: "Shikhi", description: "Learn Bengali with your teacher." },
   robots: { index: false, follow: false },
 };
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: [{ media: "(prefers-color-scheme: light)", color: "#f3f5fa" }, { media: "(prefers-color-scheme: dark)", color: "#0a0e1f" }] };

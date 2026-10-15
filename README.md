@@ -1,4 +1,4 @@
-# Bengali Practice
+# Shikhi (শিখি)
 
 Private practice web app for my Bengali students. Next.js (App Router) + Postgres, deployed on Vercel.
 

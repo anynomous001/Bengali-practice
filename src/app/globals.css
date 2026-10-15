@@ -1,5 +1,5 @@
 /* =====================================================================
-   Bengali Practice: design system
+   Shikhi: design system
    Warm paper + ink, a deep-ink sidebar, serif display type, one accent.
    ===================================================================== */
 
@@ -60,9 +60,10 @@ p { margin:0 0 12px; }
 
 /* ---------- brand ---------- */
 .side-brand { display:inline-flex; align-items:center; gap:12px; text-decoration:none; color:var(--side-ink); }
-.side-brand .mark { display:block; flex:none; width:40px; height:40px; border-radius:12px; box-shadow:0 6px 14px -6px rgba(216,52,79,.6); }
-.side-brand b { display:block; font:700 1.25rem/1.1 var(--font-bn-serif); }
+.side-brand .mark { display:block; flex:none; width:40px; height:40px; border-radius:22.5%; box-shadow:0 6px 14px -6px rgba(216,52,79,.6); }
+.side-brand b { display:block; font:800 1.3rem/1.1 var(--font-ui); letter-spacing:-.02em; }
 .side-brand small { display:block; margin-top:2px; font:600 .66rem/1 var(--font-ui); letter-spacing:.2em; text-transform:uppercase; color:var(--side-mute); }
+.side-brand small[lang=bn] { font:600 .78rem/1 var(--font-bn); letter-spacing:0; text-transform:none; margin-top:3px; }
 .side-brand.dark { color:var(--ink); }
 .side-brand.dark small { color:var(--ink-2); }
 
@@ -96,7 +97,7 @@ p { margin:0 0 12px; }
   .side { display:none; }
   .mtop { position:sticky; top:0; z-index:20; display:flex; align-items:center; gap:8px; height:58px; padding:0 14px; background:color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
   .mtop .side-brand { color:var(--ink); }
-  .mtop .side-brand .mark { width:34px; height:34px; border-radius:10px; }
+  .mtop .side-brand .mark { width:34px; height:34px; }
   .mtop .side-brand b { font-size:1.15rem; }
   .icon-link { display:inline-grid; place-items:center; width:40px; height:40px; border:1px solid var(--line); border-radius:50%; background:var(--surface); color:var(--ink); cursor:pointer; text-decoration:none; }
   .icon-link:hover { background:var(--surface-2); }
