@@ -1,3 +1,4 @@
+import Logo from "../Logo";
 import Link from "next/link";
 import { BUSINESS } from "@/data/business";
 import Icon from "../learn/Icon";
@@ -23,7 +24,7 @@ export default function LegalPage({ title, children }: { title: string; children
     <div className="land legal">
       <header className="land-nav">
         <Link href="/" className="side-brand dark">
-          <span className="mark" lang="bn">বাং</span>
+          <Logo />
           <span><b lang="bn">বাংলা</b><small>Practice</small></span>
         </Link>
         <nav><Link href="/buy" className="btn small">Get access</Link></nav>

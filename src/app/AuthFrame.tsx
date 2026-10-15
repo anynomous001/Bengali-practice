@@ -1,3 +1,4 @@
+import Logo from "./Logo";
 import Link from "next/link";
 import Icon from "./learn/Icon";
 
@@ -7,7 +8,7 @@ export default function AuthFrame({ children, back = true, wide = false }: { chi
     <div className="auth">
       <aside className="auth-aside">
         <Link href="/" className="side-brand on-dark">
-          <span className="mark" lang="bn">বাং</span>
+          <Logo />
           <span><b lang="bn">বাংলা</b><small>Practice</small></span>
         </Link>
         <div className="auth-quote">

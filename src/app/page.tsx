@@ -1,3 +1,4 @@
+import Logo from "./Logo";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getUser } from "@/lib/auth";
@@ -25,7 +26,7 @@ export default async function Home() {
     <div className="land">
       <header className="land-nav">
         <Link href="/" className="side-brand dark">
-          <span className="mark" lang="bn">বাং</span>
+          <Logo />
           <span><b lang="bn">বাংলা</b><small>Practice</small></span>
         </Link>
         <nav>

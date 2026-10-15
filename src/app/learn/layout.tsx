@@ -1,3 +1,4 @@
+import Logo from "../Logo";
 import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
@@ -22,7 +23,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
       <div className="app">
         <aside className="side">
           <Link href="/learn" className="side-brand">
-            <span className="mark" lang="bn">বাং</span>
+            <Logo />
             <span><b lang="bn">বাংলা</b><small>Practice</small></span>
           </Link>
           <nav className="side-nav" aria-label="Main"><NavLinks variant="side" /></nav>
@@ -39,7 +40,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
 
         <header className="mtop">
           <Link href="/learn" className="side-brand">
-            <span className="mark" lang="bn">বাং</span>
+            <Logo />
             <span><b lang="bn">বাংলা</b></span>
           </Link>
           <span className="spacer" />
