@@ -139,3 +139,5 @@ Audio recordings and the remaining modules.
 5. Switch to live keys and update the webhook secret.
 
 Buyers type their email twice; signed-in students renewing have it filled in. Students with 30 days or less left see a renew banner on the dashboard. The server-side flow (signature checks, amount check, one-time grant, renewal, webhook-only grant, full and partial refunds) was exercised against a mock Razorpay API; a real test-mode payment has not been run.
+
+**Rupees and UPI.** UPI only works in rupees, so a US dollar order never shows it. Set `PRICE_INR` (for example `4200`) and `/buy` offers a choice: US dollars with cards, or rupees with UPI, cards and net banking. Leave it empty and only the dollar option shows. Enable UPI under Payment Methods in the Razorpay dashboard.

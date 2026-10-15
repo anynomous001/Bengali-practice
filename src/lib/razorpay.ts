@@ -4,6 +4,10 @@ import { query } from "./db";
 const API = process.env.RAZORPAY_API_BASE ?? "https://api.razorpay.com/v1";
 
 export const priceUsd = () => Number(process.env.PRICE_USD ?? 50);
+/** Rupee price for students in India (UPI, cards, net banking). 0 means the rupee option is switched off. */
+export const priceInr = () => Number(process.env.PRICE_INR ?? 0) || 0;
+export type Currency = "USD" | "INR";
+export const parseCurrency = (v: unknown): Currency => (v === "INR" ? "INR" : "USD");
 export const configured = () => !!process.env.RAZORPAY_KEY_ID && !!process.env.RAZORPAY_KEY_SECRET;
 
 function auth() {
@@ -42,8 +46,9 @@ export const webhookSignatureOk = (rawBody: string, signature: string) => {
   return !!secret && safeEqualHex(hmac(secret, rawBody), signature);
 };
 
-export async function createOrder(email: string) {
-  const amount = Math.round(priceUsd() * 100); // USD cents
+export async function createOrder(email: string, currency: Currency = "USD") {
+  if (currency === "INR" && !priceInr()) throw new Error("Rupee payments are not available yet.");
+  const amount = Math.round((currency === "INR" ? priceInr() : priceUsd()) * 100); // cents or paise
   const recent = await query<{ n: string }>(
     "SELECT count(*) AS n FROM orders WHERE email = $1 AND created_at > now() - interval '1 hour'",
     [email],
@@ -53,10 +58,10 @@ export async function createOrder(email: string) {
   if (Number(burst[0].n) >= 30) throw new Error("Busy right now. Please try again in a minute.");
   const order = await rz<{ id: string }>("/orders", {
     method: "POST",
-    body: { amount, currency: "USD", receipt: `bp_${Date.now()}`, notes: { email } },
+    body: { amount, currency, receipt: `bp_${Date.now()}`, notes: { email } },
   });
-  await query("INSERT INTO orders (order_id, email, amount, currency) VALUES ($1, $2, $3, 'USD')", [order.id, email, amount]);
-  return { orderId: order.id, amount, currency: "USD", keyId: process.env.RAZORPAY_KEY_ID! };
+  await query("INSERT INTO orders (order_id, email, amount, currency) VALUES ($1, $2, $3, $4)", [order.id, email, amount, currency]);
+  return { orderId: order.id, amount, currency, keyId: process.env.RAZORPAY_KEY_ID! };
 }
 
 type Payment = { id: string; order_id: string; status: string; amount: number; currency: string };

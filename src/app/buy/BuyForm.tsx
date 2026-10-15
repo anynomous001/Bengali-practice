@@ -19,7 +19,8 @@ function loadCheckout(): Promise<void> {
   });
 }
 
-export default function BuyForm({ price, knownEmail }: { price: number; knownEmail?: string }) {
+export default function BuyForm({ price, priceInr = 0, knownEmail }: { price: number; priceInr?: number; knownEmail?: string }) {
+  const [currency, setCurrency] = useState<"USD" | "INR">("USD");
   const [email, setEmail] = useState(knownEmail ?? "");
   const [again, setAgain] = useState(knownEmail ?? "");
   const [busy, setBusy] = useState(false);
@@ -35,7 +36,7 @@ export default function BuyForm({ price, knownEmail }: { price: number; knownEma
       const res = await fetch("/api/checkout/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, currency }),
       });
       const order = await res.json();
       if (!res.ok) throw new Error(order.error ?? "Could not start the payment.");
@@ -85,6 +86,18 @@ export default function BuyForm({ price, knownEmail }: { price: number; knownEma
 
   return (
     <form onSubmit={pay} className="stack">
+      {priceInr > 0 && (
+        <div className="choice-group" role="radiogroup" aria-label="How do you want to pay?">
+          <label className={"choice" + (currency === "USD" ? " on" : "")}>
+            <input type="radio" name="currency" checked={currency === "USD"} onChange={() => setCurrency("USD")} />
+            <span><b>US dollars: ${price}</b><small>Credit or debit card, from anywhere.</small></span>
+          </label>
+          <label className={"choice" + (currency === "INR" ? " on" : "")}>
+            <input type="radio" name="currency" checked={currency === "INR"} onChange={() => setCurrency("INR")} />
+            <span><b>Indian rupees: ₹{priceInr}</b><small>UPI, cards and net banking, from an Indian bank.</small></span>
+          </label>
+        </div>
+      )}
       <label htmlFor="email">Your email (this is how you'll sign in)</label>
       <input id="email" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" autoComplete="email" readOnly={!!knownEmail} />
       {!knownEmail && (
@@ -93,7 +106,7 @@ export default function BuyForm({ price, knownEmail }: { price: number; knownEma
           <input id="email2" type="email" required value={again} onChange={(e) => setAgain(e.target.value)} placeholder="you@example.com" autoComplete="off" onPaste={(e) => e.preventDefault()} />
         </>
       )}
-      <button className="btn" disabled={busy}>{busy ? "Please wait…" : `Pay $${price}`}</button>
+      <button className="btn" disabled={busy}>{busy ? "Please wait…" : currency === "INR" ? `Pay ₹${priceInr}` : `Pay $${price}`}</button>
       {error && <p className="msg bad" role="alert">{error}</p>}
     </form>
   );
