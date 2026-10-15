@@ -1,4 +1,5 @@
 import { Pool } from "pg";
+import { attachDatabasePool } from "@vercel/functions";
 
 // Zero-config local mode: with no DATABASE_URL, `npm run dev` stores data in ./.local-db (embedded Postgres).
 // Never used in production builds.
@@ -9,11 +10,17 @@ const globalForPool = globalThis as unknown as { pool?: Pool; local?: Promise<Lo
 
 function pool(): Pool {
   if (!process.env.DATABASE_URL) throw new Error("DATABASE_URL is not set");
-  return (globalForPool.pool ??= new Pool({
-    connectionString: process.env.DATABASE_URL,
-    max: 3,
-    ssl: process.env.DATABASE_URL.includes("localhost") ? undefined : { rejectUnauthorized: false },
-  }));
+  if (!globalForPool.pool) {
+    // Pooled Neon connection string (-pooler host): right for serverless web traffic. On Vercel, attachDatabasePool
+    // lets Fluid compute close idle connections cleanly before the function is suspended.
+    globalForPool.pool = new Pool({
+      connectionString: process.env.DATABASE_URL,
+      max: 3,
+      ssl: process.env.DATABASE_URL.includes("localhost") ? undefined : { rejectUnauthorized: false },
+    });
+    if (process.env.VERCEL) attachDatabasePool(globalForPool.pool);
+  }
+  return globalForPool.pool;
 }
 
 function local(): Promise<Local> {
