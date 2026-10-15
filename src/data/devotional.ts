@@ -6,6 +6,7 @@
 import type { VocabTopic, Word, Phrase } from "./vocabulary";
 import type { Scenario } from "./roleplay";
 import type { CwSet } from "./classwork";
+import { DEV_VOCAB_2, DEV_READING_2, DEV_SCENARIOS_2, DEV_CLASSWORK_2, DEV_SAY_2 } from "./devotional-2";
 
 /** Romanization in the app's plain style (the source notes use diacritics such as ô and ṭ). */
 const ro = (s: string) =>
@@ -17,13 +18,15 @@ export type DevTopic = VocabTopic & {
   /** The curriculum lesson this topic completes. */
   lessonId: string;
   course: "vocabulary" | "reading";
+  /** Phrase lessons are listed apart from word lessons. */
+  part?: "words" | "phrases";
 };
 
 const topic = (t: Omit<DevTopic, "group">): DevTopic => ({ group: "devotional", ...t });
 
 // ---------------------------------------------------------------- Vocabulary
 
-export const DEV_VOCAB: DevTopic[] = [
+const DEV_VOCAB_1: DevTopic[] = [
   topic({
     id: "dev-greetings", lessonId: "vocabulary/dev-greetings", course: "vocabulary",
     title: ["অভিবাদন", "obhibadon", "Greetings and partings"],
@@ -224,7 +227,7 @@ export const DEV_VOCAB: DevTopic[] = [
     ],
   }),
   topic({
-    id: "dev-phrases", lessonId: "vocabulary/dev-phrases", course: "vocabulary",
+    id: "dev-phrases", lessonId: "vocabulary/dev-phrases", course: "vocabulary", part: "phrases",
     title: ["সাধুসঙ্গের কথা", "shadhushôngger kotha", "Everyday phrases in sādhu-saṅga"],
     blurb: "Short sentences you can actually use at an ashram. Polite আপনি forms throughout.",
     sections: [
@@ -261,7 +264,7 @@ export const DEV_VOCAB: DevTopic[] = [
 
 // ---------------------------------------------------------------- Reading
 
-export const DEV_READING: DevTopic[] = [
+const DEV_READING_1: DevTopic[] = [
   topic({
     id: "dev-ladder", lessonId: "reading/dev-ladder", course: "reading",
     title: ["শব্দের সিঁড়ি", "shôbder shi~ri", "Devotional word ladder"],
@@ -339,6 +342,8 @@ export const DEV_READING: DevTopic[] = [
   }),
 ];
 
+export const DEV_VOCAB: DevTopic[] = [...DEV_VOCAB_1, ...DEV_VOCAB_2];
+export const DEV_READING: DevTopic[] = [...DEV_READING_1, ...DEV_READING_2];
 export const DEV_TOPICS: DevTopic[] = [...DEV_VOCAB, ...DEV_READING];
 export const getDevTopic = (id: string) => DEV_TOPICS.find((t) => t.id === id);
 
@@ -349,7 +354,7 @@ const l = (bn: string, r: string, en: string): L => [bn, ro(r), en];
 const you = (bn: string, r: string, en: string) => ({ who: "you" as const, line: l(bn, r, en) });
 const them = (bn: string, r: string, en: string) => ({ who: "them" as const, line: l(bn, r, en) });
 
-export const DEV_SCENARIOS: Scenario[] = [
+const DEV_SCENARIOS_1: Scenario[] = [
   {
     id: "dev-ashram",
     title: "Arriving at the ashram",
@@ -493,11 +498,12 @@ export const DEV_SCENARIOS: Scenario[] = [
   },
 ];
 
+export const DEV_SCENARIOS: Scenario[] = [...DEV_SCENARIOS_1, ...DEV_SCENARIOS_2];
 export const getDevScenario = (id: string) => DEV_SCENARIOS.find((s) => s.id === id);
 
 // ---------------------------------------------------------------- Grammar: devotional exercises
 
-export const DEV_CLASSWORK: CwSet[] = [
+const DEV_CLASSWORK_1: CwSet[] = [
   {
     id: "dev-blanks",
     title: "Complete the devotional line",
@@ -552,12 +558,14 @@ export const DEV_CLASSWORK: CwSet[] = [
   },
 ];
 
+export const DEV_CLASSWORK: CwSet[] = [...DEV_CLASSWORK_1, ...DEV_CLASSWORK_2];
 export const getDevClasswork = (id: string) => DEV_CLASSWORK.find((s) => s.id === id);
 
 // ---------------------------------------------------------------- Flashcards
 
 /** Short, useful lines for the say-it-aloud deck. */
 export const DEV_SAY: [bn: string, roman: string, en: string][] = [
-  ...DEV_VOCAB[0].sections[0].words.map((w): [string, string, string] => [w[0], w[1], w[2]]),
-  ...DEV_VOCAB[5].sections.flatMap((s) => s.words).map((w): [string, string, string] => [w[0], w[1], w[2]]),
+  ...DEV_VOCAB_1[0].sections[0].words.map((w): [string, string, string] => [w[0], w[1], w[2]]),
+  ...DEV_VOCAB_1[5].sections.flatMap((s) => s.words).map((w): [string, string, string] => [w[0], w[1], w[2]]),
+  ...DEV_SAY_2,
 ];

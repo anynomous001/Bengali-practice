@@ -13,6 +13,7 @@ import { STORIES } from "@/data/stories";
 import { isLessonId } from "@/data/curriculum";
 import { TOPICS, type TopicKind } from "@/data/impromptu";
 import { DEV_TOPICS } from "@/data/devotional";
+import { getDevStory } from "@/data/devotional-stories";
 import { VOCAB, VOCAB_QUIZ_LEN } from "@/data/vocabulary";
 import { getExam } from "@/data/exams";
 import { generateExam, toPublic, type ExamQ, type PublicExamQ } from "@/lib/examgen";
@@ -129,7 +130,8 @@ export async function setLessonDone(lessonId: string, done: boolean) {
 
 export async function recordStoryQuiz(storyId: string, score: number) {
   const user = await getUser();
-  const story = STORIES.find((s) => s.id === storyId);
+  const dev = getDevStory(storyId);
+  const story = dev ?? STORIES.find((s) => s.id === storyId);
   if (!user?.hasAccess || !story || !Number.isFinite(score)) return;
   const total = story.quiz.length;
   const s = Math.max(0, Math.min(total, Math.floor(score)));
@@ -140,7 +142,7 @@ export async function recordStoryQuiz(storyId: string, score: number) {
        attempts = story_progress.attempts + 1, updated_at = now()`,
     [user.email, storyId, s, total],
   );
-  await completeLesson(user.email, `reading/story-${storyId}`);
+  await completeLesson(user.email, dev ? `reading/${storyId}` : `reading/story-${storyId}`);
 }
 
 export async function recordGrammarQuiz(topicId: string, score: number) {

@@ -9,12 +9,13 @@ import { recordStoryQuiz } from "../../../../actions";
 import { useRoman } from "../../../Roman";
 import Stepper from "../../../Stepper";
 
-type Step = "words" | "bengali" | "lines" | "english" | "quiz";
-const STEPS: { id: Step; label: string; blurb: string }[] = [
+type Step = "words" | "bengali" | "lines" | "english" | "original" | "quiz";
+const ALL_STEPS: { id: Step; label: string; blurb: string }[] = [
   { id: "words", label: "Words", blurb: "Learn the new words first." },
   { id: "bengali", label: "Bengali", blurb: "Layer 1 · The story in Bengali only. Try reading it yourself." },
   { id: "lines", label: "Lines", blurb: "Layer 2 · Line by line, with the meaning of each line." },
   { id: "english", label: "English", blurb: "Layer 3 · The whole story in English." },
+  { id: "original", label: "Original", blurb: "Layer 4 · The text as it is written in the book. Use what you have learned to read it." },
   { id: "quiz", label: "Quiz", blurb: "Check what you understood." },
 ];
 
@@ -30,10 +31,12 @@ function shuffle<T>(a: T[]): T[] {
 export default function StoryReader({ story, best }: { story: Story; best: { score: number; total: number; attempts: number } | null }) {
   const { roman } = useRoman();
   const [step, setStep] = useState<Step>("words");
+  const STEPS = ALL_STEPS.filter((s) => s.id !== "original" || !!story.original);
   const idx = STEPS.findIndex((s) => s.id === step);
 
   return (
     <>
+      {story.devotional && <p><span className="dev-tag">Devotional</span></p>}
       <h1 lang="bn" className="story-h1">{story.title[0]}</h1>
       <p className="muted">{roman ? `${story.title[1]} · ` : ""}{story.title[2]} · Level {story.level}</p>
 
@@ -56,13 +59,14 @@ export default function StoryReader({ story, best }: { story: Story; best: { sco
         <article className="story-text">
           <button className="btn ghost small" onClick={() => speak(story.lines.map((l) => l[0]).join(" "))}><Icon name="sound" size={16} /> Listen to the story</button>
           <p lang="bn" className="story-bn">{story.lines.map((l) => l[0]).join(" ")}</p>
-          <p lang="bn" className="story-bn lesson"><b>শিক্ষা:</b> {story.moral[0]}</p>
+          {story.moral && <p lang="bn" className="story-bn lesson"><b>শিক্ষা:</b> {story.moral[0]}</p>}
+          {roman && <p className="story-roman">{story.lines.map((l) => l[1]).join(" ")}</p>}
         </article>
       )}
 
       {step === "lines" && (
         <ol className="lines">
-          {[...story.lines, story.moral].map(([bn, ro, en], i) => (
+          {[...story.lines, ...(story.moral ? [story.moral] : [])].map(([bn, ro, en], i) => (
             <li key={i} className={i === story.lines.length ? "lesson" : ""}>
               <div className="line-top">
                 <span lang="bn" className="line-bn">{i === story.lines.length && <b>শিক্ষা: </b>}{bn}</span>
@@ -78,11 +82,20 @@ export default function StoryReader({ story, best }: { story: Story; best: { sco
       {step === "english" && (
         <article className="story-text">
           <p className="story-en">{story.lines.map((l) => l[2]).join(" ")}</p>
-          <p className="story-en lesson"><b>Lesson:</b> {story.moral[2]}</p>
+          {story.moral && <p className="story-en lesson"><b>Lesson:</b> {story.moral[2]}</p>}
+        </article>
+      )}
+
+      {step === "original" && story.original && (
+        <article className="story-text">
+          <button className="btn ghost small" onClick={() => speak(story.original!.join(" "))}><Icon name="sound" size={16} /> Listen</button>
+          {story.original.map((l, i) => <p key={i} className="story-orig"><BnText text={l} /></p>)}
+          <p className="muted">{story.source}</p>
         </article>
       )}
 
       {step === "quiz" && <Quiz story={story} best={best} />}
+      {step === "quiz" && story.tryThis && <div className="card-static try-this"><h2>Try this</h2><p><BnText text={story.tryThis} /></p></div>}
 
       {step !== "quiz" && (
         <div className="step-nav">

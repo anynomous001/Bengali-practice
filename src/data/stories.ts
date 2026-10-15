@@ -8,9 +8,15 @@ export type Story = {
   title: Triple;
   source: string;
   lines: Triple[];
-  moral: Triple;
+  moral: Triple | null;
   vocab: Triple[];
   quiz: StoryQuestion[];
+  /** Devotional passages are tagged and kept apart from the general stories. */
+  devotional?: boolean;
+  /** The original text from the book, shown as an extra layer. */
+  original?: string[];
+  /** A short suggestion for what to do after the quiz. */
+  tryThis?: string;
 };
 
 export const STORIES: Story[] = [

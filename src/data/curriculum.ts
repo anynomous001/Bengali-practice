@@ -9,6 +9,7 @@ import { getExam } from "./exams";
 import { CLASSWORK } from "./classwork";
 import { SCENARIOS } from "./roleplay";
 import { DEV_VOCAB, DEV_READING, DEV_SCENARIOS, DEV_CLASSWORK } from "./devotional";
+import { DEV_STORIES } from "./devotional-stories";
 
 export type CourseId = "reading" | "speaking" | "vocabulary" | "grammar";
 export type Kind = "Lesson" | "Practice" | "Quiz" | "Review" | "Exam";
@@ -51,8 +52,11 @@ export const COURSES: Course[] = [
       ] },
       { id: "stories", title: "Stories", blurb: "Short fables, each in layers: words, Bengali only, line by line, English, quiz.", lessons:
         STORIES.map((s) => ({ id: `reading/story-${s.id}`, title: s.title[2], blurb: `${s.title[0]} · Level ${s.level} · ${s.lines.length + 1} lines`, href: `/learn/reading/stories/${s.id}`, kind: "Quiz" as Kind })) },
-      { id: "devotional", devotional: true, title: "Devotional reading", blurb: "Read the words, the nām and short lines from the devotional books. Kept separate from the main course.", lessons:
-        DEV_READING.map((d): Lesson => ({ id: d.lessonId, title: d.title[2], blurb: `${d.sections.reduce((n, s) => n + s.words.length, 0)} items · ${d.title[0]}`, href: `/learn/reading/devotional/${d.id}`, kind: "Lesson" })) },
+      { id: "devotional", devotional: true, title: "Devotional reading", blurb: "Read the words, the nām, the verse decoder, short lines and eight short passages from the devotional books. Kept separate from the main course.", lessons:
+        [
+          ...DEV_READING.map((d): Lesson => ({ id: d.lessonId, title: d.title[2], blurb: `${d.sections.reduce((n, s) => n + s.words.length, 0)} items · ${d.title[0]}`, href: `/learn/reading/devotional/${d.id}`, kind: "Lesson" })),
+          ...DEV_STORIES.map((s): Lesson => ({ id: `reading/${s.id}`, title: s.title[2], blurb: `${s.lines.length} lines · Level ${s.level} · ${s.source.startsWith("Rāmdās") ? "Rāmdās Charitāmṛta" : "Kathāmṛta"}`, href: `/learn/reading/devotional/stories/${s.id}`, kind: "Quiz" })),
+        ] },
       { id: "review", title: "Review", blurb: "Spaced repetition keeps what you learned.", lessons: [
         { id: "reading/flashcards", title: "Reading flashcards", blurb: "Letters, vowel signs, words and numbers. Cards you miss come back sooner.", href: "/learn/reading/flashcards", kind: "Review" },
       ] },
@@ -118,9 +122,10 @@ export const COURSES: Course[] = [
           href: `/learn/vocabulary/${t.id}`, kind: "Lesson",
         })),
       })),
-      { id: "devotional", devotional: true, title: "Devotional vocabulary", blurb: "Greetings, forms of address, practice words, feelings, names and phrases of the sādhu-saṅga. Kept separate from the main course.", lessons: [
-        ...DEV_VOCAB.map((d): Lesson => ({ id: d.lessonId, title: d.title[2], blurb: `${d.sections.reduce((n, s) => n + s.words.length, 0)} items · ${d.title[0]}`, href: `/learn/vocabulary/${d.id}`, kind: "Lesson" })),
-      ] },
+      { id: "devotional", devotional: true, title: "Devotional vocabulary", blurb: "Greetings, forms of address, practice words, action words, music, food, places, numbers and question words of the sādhu-saṅga. Kept separate from the main course.", lessons:
+        DEV_VOCAB.filter((d) => d.part !== "phrases").map((d): Lesson => ({ id: d.lessonId, title: d.title[2], blurb: `${d.sections.reduce((n, s) => n + s.words.length, 0)} items · ${d.title[0]}`, href: `/learn/vocabulary/${d.id}`, kind: "Lesson" })) },
+      { id: "devotional-phrases", devotional: true, title: "Devotional phrases", blurb: "What to say at the temple, at kīrtan, about your own path, on festivals and in messages. Kept separate from the main course.", lessons:
+        DEV_VOCAB.filter((d) => d.part === "phrases").map((d): Lesson => ({ id: d.lessonId, title: d.title[2], blurb: `${d.sections.reduce((n, s) => n + s.words.length, 0)} phrases · ${d.title[0]}`, href: `/learn/vocabulary/${d.id}`, kind: "Lesson" })) },
       { id: "review", title: "Review", blurb: "Spaced repetition keeps the words in your memory.", lessons: [
         { id: "vocabulary/flashcards", title: "Vocabulary flashcards", blurb: "One deck per topic: see the meaning, say the word, then check.", href: "/learn/vocabulary/flashcards", kind: "Review" },
       ] },
