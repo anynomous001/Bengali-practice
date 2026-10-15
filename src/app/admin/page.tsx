@@ -2,13 +2,14 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getUser } from "@/lib/auth";
 import { query } from "@/lib/db";
-import { addStudent, grantYear, removeStudent, revokeAccess } from "./actions";
+import { addStudent, grantYear, inviteStudent, removeStudent, revokeAccess } from "./actions";
 import Icon from "../learn/Icon";
 
 type Row = { email: string; note: string; access_expires_at: Date | null; created_at: Date };
 const fmt = (d: Date) => d.toLocaleDateString("en-GB", { dateStyle: "medium" });
 
-export default async function AdminPage() {
+export default async function AdminPage({ searchParams }: { searchParams: Promise<{ invite?: string; to?: string }> }) {
+  const { invite, to } = await searchParams;
   const user = await getUser();
   if (!user?.isAdmin) notFound();
   const students = await query<Row>("SELECT email, note, access_expires_at, created_at FROM students ORDER BY created_at DESC");
@@ -24,6 +25,17 @@ export default async function AdminPage() {
         <span className="spacer" />
         <span className="chip">{students.length} students</span>
       </header>
+
+      <form action={inviteStudent} className="stack card-static">
+        <h2>Invite someone</h2>
+        <p className="muted">Gives them 12 months of access and emails them a sign-in link. Nothing else is recorded: they just appear in the list below.</p>
+        <input name="email" type="email" required placeholder="friend@example.com" />
+        <button className="btn">Send invite</button>
+        {invite === "sent" && <p className="msg good" role="status">Invite sent to {to}.</p>}
+        {invite === "failed" && <p className="msg bad" role="status">{to} now has access, but the email could not be sent. Ask them to use the Sign in page.</p>}
+        {invite === "limited" && <p className="msg bad" role="status">{to} now has access, but too many links were requested for them just now. Try again in a few minutes.</p>}
+        {invite === "invalid" && <p className="msg bad" role="status">That email address doesn&apos;t look right.</p>}
+      </form>
 
       <form action={addStudent} className="stack card-static">
         <h2>Add a student</h2>

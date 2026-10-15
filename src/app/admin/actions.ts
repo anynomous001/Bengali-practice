@@ -1,8 +1,11 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { getUser, normalizeEmail, validEmail } from "@/lib/auth";
+import { redirect } from "next/navigation";
+import { createLoginToken, getUser, normalizeEmail, validEmail } from "@/lib/auth";
+import { appBase } from "@/lib/base-url";
 import { query } from "@/lib/db";
+import { sendLoginEmail } from "@/lib/email";
 
 async function requireAdmin() {
   const user = await getUser();
@@ -49,4 +52,29 @@ export async function removeStudent(fd: FormData) {
   await query("DELETE FROM students WHERE email = $1", [email]);
   await query("DELETE FROM progress WHERE email = $1", [email]);
   revalidatePath("/admin");
+}
+
+/** Adds the person (12 months of access) and emails them a sign-in link. No separate invitation record is kept: they simply appear in the student list. */
+export async function inviteStudent(fd: FormData) {
+  await requireAdmin();
+  const email = emailOf(fd);
+  if (!validEmail(email)) redirect("/admin?invite=invalid");
+  await query(
+    `INSERT INTO students (email, note, access_expires_at) VALUES ($1, 'invited', now() + interval '12 months')
+     ON CONFLICT (email) DO UPDATE SET
+       access_expires_at = GREATEST(now(), COALESCE(students.access_expires_at, now())) + interval '12 months'
+       WHERE students.access_expires_at IS NULL OR students.access_expires_at < now()`,
+    [email],
+  );
+  let result = "sent";
+  try {
+    const token = await createLoginToken(email);
+    if (!token) result = "limited";
+    else await sendLoginEmail(email, `${await appBase()}/login/verify?token=${encodeURIComponent(token)}`, true);
+  } catch (e) {
+    console.error("invite email failed", e);
+    result = "failed";
+  }
+  revalidatePath("/admin");
+  redirect(`/admin?invite=${result}&to=${encodeURIComponent(email)}`);
 }
