@@ -729,3 +729,9 @@ html { scroll-behavior:smooth; } @media (prefers-reduced-motion: reduce) { html 
 .bn-ro { color:var(--ink-2); font-family:var(--font-ui); font-style:italic; font-weight:400; font-size:.88em; }
 .piece-ro { display:block; margin-top:2px; font:italic 400 .72rem/1.2 var(--font-ui); color:var(--ink-2); }
 .bn-ro-line { display:block; margin-top:2px; font-style:italic; font-weight:400; font-size:.9rem; color:var(--ink-2); font-family:var(--font-ui); }
+
+/* ---------- alphabet quiz: choose a range of letters ---------- */
+.alpha-range { display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:12px; margin:14px 0 4px; padding:14px 16px; background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--seg, var(--primary)); border-radius:14px; }
+.alpha-range label { display:grid; gap:6px; font:600 .82rem/1.2 var(--font-ui); color:var(--ink-2); }
+.alpha-range select { font-size:1.15rem; font-family:var(--font-bn), var(--font-ui); }
+.alpha-range > p { grid-column:1 / -1; margin:0; }

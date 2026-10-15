@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import type { Letter } from "@/data/letters";
 import { recordAnswer } from "../../../actions";
 import { speak } from "@/lib/speak";
@@ -100,19 +100,45 @@ function Learn({ progress }: { progress: Progress }) {
   );
 }
 
-type Run = { mode: Mode; queue: Letter[]; i: number; score: number };
+type Run = { mode: Mode; queue: Letter[]; pool: Letter[]; i: number; score: number };
 
 function Quiz({ progress, onAnswer, modes }: { progress: Progress; onAnswer: (ch: string, ok: boolean) => void; modes: Mode[] }) {
-  const { QUIZ_LETTERS, GROUPS } = useContext(D);
+  const { LETTERS, QUIZ_LETTERS, GROUPS } = useContext(D);
+  const { roman } = useRoman();
   const [scope, setScope] = useState("all");
   const [run, setRun] = useState<Run | null>(null);
+  // A range: the first and last letter the student has learned so far, in alphabet order.
+  const [from, setFrom] = useState(LETTERS[0].ch);
+  const [to, setTo] = useState(LETTERS[LETTERS.length - 1].ch);
+  useEffect(() => {
+    try {
+      const saved = JSON.parse(localStorage.getItem("bp_alpha_range") ?? "null");
+      if (saved && LETTERS.some((l) => l.ch === saved.from) && LETTERS.some((l) => l.ch === saved.to)) { setFrom(saved.from); setTo(saved.to); setScope("range"); }
+    } catch { /* no saved range */ }
+  }, [LETTERS]);
+  const order = (ch: string) => LETTERS.findIndex((l) => l.ch === ch);
+  const lo = Math.min(order(from), order(to));
+  const hi = Math.max(order(from), order(to));
+  const inRange = new Set(LETTERS.slice(lo, hi + 1).map((l) => l.ch));
+  const rangePool = QUIZ_LETTERS.filter((l) => inRange.has(l.ch));
+  const rangeTooSmall = scope === "range" && rangePool.length < 4;
+  const label = (ch: string) => { const l = LETTERS.find((x) => x.ch === ch)!; return roman ? `${l.ch}  (${l.rom})` : l.ch; };
+
+  function pick(setter: (v: string) => void, other: string, isFrom: boolean) {
+    return (e: React.ChangeEvent<HTMLSelectElement>) => {
+      setter(e.target.value);
+      const next = isFrom ? { from: e.target.value, to: other } : { from: other, to: e.target.value };
+      try { localStorage.setItem("bp_alpha_range", JSON.stringify(next)); } catch { /* storage unavailable */ }
+    };
+  }
 
   function start(mode: Mode) {
     let pool = QUIZ_LETTERS;
-    if (scope === "weak") pool = pool.filter((l) => !mastered(progress, l.ch));
+    if (scope === "range") pool = rangePool;
+    else if (scope === "weak") pool = pool.filter((l) => !mastered(progress, l.ch));
     else if (scope !== "all") pool = pool.filter((l) => l.group === scope);
     if (pool.length < 4) pool = QUIZ_LETTERS;
-    setRun({ mode, queue: shuffle(pool).slice(0, 10), i: 0, score: 0 });
+    setRun({ mode, queue: shuffle(pool).slice(0, 10), pool, i: 0, score: 0 });
   }
 
   if (!run) {
@@ -120,16 +146,28 @@ function Quiz({ progress, onAnswer, modes }: { progress: Progress; onAnswer: (ch
       <>
         <h2>Choose a quiz</h2>
         <div className="menu">
-          {modes.includes("letter2word") && <button className="card" onClick={() => start("letter2word")}><b>Letter to word</b><span>See a letter, pick the word it starts</span></button>}
-          {modes.includes("word2letter") && <button className="card" onClick={() => start("word2letter")}><b>Word to letter</b><span>See a word, pick its first letter</span></button>}
-          {modes.includes("listen") && <button className="card" onClick={() => start("listen")}><b>Listen</b><span>Hear a letter, pick the right one</span></button>}
+          {modes.includes("letter2word") && <button className="card" disabled={rangeTooSmall} onClick={() => start("letter2word")}><b>Letter to word</b><span>See a letter, pick the word it starts</span></button>}
+          {modes.includes("word2letter") && <button className="card" disabled={rangeTooSmall} onClick={() => start("word2letter")}><b>Word to letter</b><span>See a word, pick its first letter</span></button>}
+          {modes.includes("listen") && <button className="card" disabled={rangeTooSmall} onClick={() => start("listen")}><b>Listen</b><span>Hear a letter, pick the right one</span></button>}
         </div>
         <p className="muted">Scope:</p>
         <select value={scope} onChange={(e) => setScope(e.target.value)}>
           <option value="all">All letters</option>
+          <option value="range">A range of letters (from … to …)</option>
           {GROUPS.map((g) => <option key={g.id} value={g.id}>{g.title}</option>)}
           <option value="weak">My weak letters</option>
         </select>
+        {scope === "range" && (
+          <div className="alpha-range">
+            <label>From
+              <select value={from} onChange={pick(setFrom, to, true)}>{LETTERS.map((l) => <option key={l.ch} value={l.ch}>{label(l.ch)}</option>)}</select>
+            </label>
+            <label>To
+              <select value={to} onChange={pick(setTo, from, false)}>{LETTERS.map((l) => <option key={l.ch} value={l.ch}>{label(l.ch)}</option>)}</select>
+            </label>
+            <p className="muted">{rangeTooSmall ? "Pick a range with at least 4 letters, for example অ to ঈ. All questions and answer choices come from this range only." : `${rangePool.length} letters in this range. All questions and answer choices come from this range only.`}</p>
+          </div>
+        )}
       </>
     );
   }
@@ -154,11 +192,10 @@ function Quiz({ progress, onAnswer, modes }: { progress: Progress; onAnswer: (ch
 }
 
 function Question({ run, onAnswer, onNext }: { run: Run; onAnswer: (ok: boolean) => void; onNext: () => void }) {
-  const { QUIZ_LETTERS } = useContext(D);
   const { roman } = useRoman();
   const q = run.queue[run.i];
   const [options] = useState(() =>
-    shuffle([q, ...shuffle(QUIZ_LETTERS.filter((l) => l.ch !== q.ch && l.word !== q.word)).slice(0, 3)]),
+    shuffle([q, ...shuffle(run.pool.filter((l) => l.ch !== q.ch && l.word !== q.word)).slice(0, 3)]),
   );
   const [picked, setPicked] = useState<string | null>(null);
   const m = run.mode;
