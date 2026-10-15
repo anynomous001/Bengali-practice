@@ -12,7 +12,7 @@ export default async function VerifyPage({ searchParams }: { searchParams: Promi
       <p className="muted">Confirm to finish signing in on this device.</p>
       <form action={verifyLogin} className="stack">
         <input type="hidden" name="token" value={token ?? ""} />
-        <button className="btn">Continue to Shikhi</button>
+        <button className="btn">Continue to Bengali Practice</button>
       </form>
     </AuthFrame>
   );

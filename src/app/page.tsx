@@ -27,7 +27,7 @@ export default async function Home() {
       <header className="land-nav">
         <Link href="/" className="side-brand dark">
           <Logo />
-          <span><b>Shikhi</b><small lang="bn">শিখি</small></span>
+          <span><b lang="bn">বাংলা</b><small>Practice</small></span>
         </Link>
         <nav>
           <Link href="/login" className="navbtn">Sign in</Link>

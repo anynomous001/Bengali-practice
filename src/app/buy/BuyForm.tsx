@@ -48,10 +48,10 @@ export default function BuyForm({ price, inr, rate, fixedInr, start, knownEmail,
         order_id: order.orderId,
         amount: order.amount,
         currency: order.currency,
-        name: "Shikhi",
-        description: "Shikhi: 12 months of access",
+        name: "Bengali Practice",
+        description: "12 months of access",
         prefill: { email },
-        theme: { color: "#c0392b" },
+        theme: { color: "#3830d0" },
         handler: async (r: RzResponse) => {
           const v = await fetch("/api/checkout/verify", {
             method: "POST",

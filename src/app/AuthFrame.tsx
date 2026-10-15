@@ -9,7 +9,7 @@ export default function AuthFrame({ children, back = true, wide = false }: { chi
       <aside className="auth-aside">
         <Link href="/" className="side-brand on-dark">
           <Logo />
-          <span><b>Shikhi</b><small lang="bn">শিখি</small></span>
+          <span><b lang="bn">বাংলা</b><small>Practice</small></span>
         </Link>
         <div className="auth-quote">
           <p className="glyph" lang="bn" aria-hidden>অ আ ক খ</p>

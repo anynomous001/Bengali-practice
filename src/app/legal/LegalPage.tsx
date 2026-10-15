@@ -6,7 +6,7 @@ import Icon from "../learn/Icon";
 export function SiteFooter() {
   return (
     <footer className="land-foot">
-      <span>Shikhi <span lang="bn">শিখি</span></span>
+      <span lang="bn">বাংলা Practice</span>
       <nav className="foot-links" aria-label="Policies">
         <Link href="/terms">Terms</Link>
         <Link href="/privacy">Privacy</Link>
@@ -25,7 +25,7 @@ export default function LegalPage({ title, children }: { title: string; children
       <header className="land-nav">
         <Link href="/" className="side-brand dark">
           <Logo />
-          <span><b>Shikhi</b><small lang="bn">শিখি</small></span>
+          <span><b lang="bn">বাংলা</b><small>Practice</small></span>
         </Link>
         <nav><Link href="/buy" className="btn small">Get access</Link></nav>
       </header>

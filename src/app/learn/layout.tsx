@@ -24,7 +24,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
         <aside className="side">
           <Link href="/learn" className="side-brand">
             <Logo />
-            <span><b>Shikhi</b><small lang="bn">শিখি</small></span>
+            <span><b lang="bn">বাংলা</b><small>Practice</small></span>
           </Link>
           <nav className="side-nav" aria-label="Main"><NavLinks variant="side" /></nav>
           <div className="side-foot">
@@ -41,7 +41,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
         <header className="mtop">
           <Link href="/learn" className="side-brand">
             <Logo />
-            <span><b>Shikhi</b></span>
+            <span><b lang="bn">বাংলা</b></span>
           </Link>
           <span className="spacer" />
           <RomanToggle label="Roman" />
