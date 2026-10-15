@@ -82,6 +82,8 @@ A separate track inside each course (module marked `devotional` in `src/data/cur
 
 ## 7. Design and front end
 
+- **Romanization everywhere:** when "Romanized English" is on, every question, option, note and explanation that contains Bengali shows its roman spelling. Hand-written romanization is used where the lesson data has it; otherwise `src/lib/translit.ts` converts automatically (about 80% identical to the hand-written spelling in the vocabulary data, so spelling can differ slightly) through the `BnText` component. Switching the toggle off hides all of it.
+
 - Docs-style lesson layout with underline tabs and a stepper (replaced the old tab bars).
 - **Phosphor icon overhaul** (`src/app/learn/Icon.tsx`) after the owner said the old icons and arrows looked AI-generated and wanted a "real premium website" feel.
 - Light and dark themes (cookie `bp_theme`, else follows the system), custom radio buttons, mobile bottom tab bar, `Logo` component (`src/app/Logo.tsx`) and `src/app/icon.png` for the browser tab.

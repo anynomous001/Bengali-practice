@@ -1,5 +1,6 @@
 "use client";
 
+import BnText from "./BnText";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { ExamResult, StartedExam } from "../actions";
 import { startExam, submitExam } from "../actions";
@@ -121,8 +122,8 @@ export default function ExamRunner({ exam, history }: { exam: Pub; history: Hist
           {shown.map(({ r, n }) => (
             <li key={n} className={r.chosen === r.answer ? "ok" : "no"}>
               <p className="rv-top"><b>{n + 1}.</b> <span className="q-kind">{r.topic}</span> <span className="rv-flag">{r.chosen === r.answer ? "Correct" : r.chosen === null ? "Not answered" : "Wrong"}</span></p>
-              <p className="rv-inst">{r.inst}</p>
-              <p className="quiz-q">{r.q}</p>
+              <p className="rv-inst"><BnText text={r.inst} /></p>
+              <p className="quiz-q"><BnText text={r.q} /></p>
               {r.sentence && <p className="g-sentence"><span lang="bn" className="g-ex-bn">{r.sentence.bn}</span>{roman && <span className="g-ro-line">{r.sentence.ro}</span>}</p>}
               <ul className="rv-opts">
                 {r.options.map((o, k) => (
@@ -132,7 +133,7 @@ export default function ExamRunner({ exam, history }: { exam: Pub; history: Hist
                   </li>
                 ))}
               </ul>
-              {r.why && <p className="g-why">{r.why}</p>}
+              {r.why && <p className="g-why"><BnText text={r.why} /></p>}
             </li>
           ))}
         </ol>
@@ -152,14 +153,14 @@ export default function ExamRunner({ exam, history }: { exam: Pub; history: Hist
       </div>
       <div className="q-card">
         <div className="q-top"><span className="q-kind">{q.topic}</span><span className="q-count">Question {cur + 1} of {run.questions.length}</span></div>
-        <p className="q-inst"><b>What to do:</b> {q.inst}</p>
+        <p className="q-inst"><b>What to do:</b> <BnText text={q.inst} /></p>
         {q.audio && (
           <div className="exam-audio">
             <button className="btn big-btn" onClick={() => speak(q.audio!)}><Icon name="sound" size={18} /> Play</button>
             <button className="btn ghost" onClick={() => speak(q.audio!, { slow: true })}>Play slowly</button>
           </div>
         )}
-        <h3 className="quiz-q">{q.q}</h3>
+        <h3 className="quiz-q"><BnText text={q.q} /></h3>
         {q.sentence && <p className="g-sentence"><span lang="bn" className="g-ex-bn">{q.sentence.bn}</span>{roman && <span className="g-ro-line">{q.sentence.ro}</span>}</p>}
         <div className="options">
           {q.options.map((o, k) => (

@@ -127,7 +127,7 @@ export default function VocabTopic({ topic, best, quizLen, flashHref, devotional
                   <button key={o[0]} disabled={picked !== null} onClick={() => answer(k)}
                     className={"opt" + (q.kind === "en2bn" ? " bn" : " text") + (picked !== null && k === q.correct ? " right" : "") + (picked === k && k !== q.correct ? " wrong" : "")}>
                     {optionText(o, q.kind)}
-                    {q.kind === "en2bn" && roman && picked !== null && <small className="opt-ro">{o[1]}</small>}
+                    {q.kind === "en2bn" && roman && <small className="opt-ro">{o[1]}</small>}
                   </button>
                 ))}
               </div>

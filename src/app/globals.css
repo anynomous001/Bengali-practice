@@ -724,3 +724,8 @@ html { scroll-behavior:smooth; } @media (prefers-reduced-motion: reduce) { html 
 .dev-tag { display:inline-block; margin-left:8px; padding:2px 9px; border-radius:999px; font:700 .68rem/1.5 var(--font-ui); letter-spacing:.06em; text-transform:uppercase; vertical-align:middle; color:light-dark(#9a4a06, #ffc680); background:light-dark(#fff1e0, rgba(255,170,80,.14)); border:1px solid light-dark(#f4c58b, rgba(255,170,80,.35)); }
 .crumbs .dev-tag, p > .dev-tag:first-child, h2 > .dev-tag { margin-left:0; }
 .crumbs .dev-tag { margin-left:10px; }
+
+/* ---------- automatic roman for Bengali inside questions ---------- */
+.bn-ro { color:var(--ink-2); font-family:var(--font-ui); font-style:italic; font-weight:400; font-size:.88em; }
+.piece-ro { display:block; margin-top:2px; font:italic 400 .72rem/1.2 var(--font-ui); color:var(--ink-2); }
+.bn-ro-line { display:block; margin-top:2px; font-style:italic; font-weight:400; font-size:.9rem; color:var(--ink-2); font-family:var(--font-ui); }

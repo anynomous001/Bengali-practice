@@ -1,5 +1,6 @@
 "use client";
 
+import BnText from "../../../BnText";
 import { useState } from "react";
 import type { CwSet } from "@/data/classwork";
 import { setLessonDone } from "../../../../actions";
@@ -37,9 +38,9 @@ export default function ClassworkReader({ set }: { set: CwSet }) {
           <ol className="missed">
             {missed.map(({ it, n }) => (
               <li key={n}>
-                <span className="g-en">{it.prompt}{it.hint ? ` (${it.hint})` : ""}</span>
+                <span className="g-en"><BnText text={it.prompt} />{it.hint ? <> (<BnText text={it.hint} />)</> : ""}</span>
                 <b>{it.answer}</b>
-                {it.note && <span className="g-why">{it.note}</span>}
+                {it.note && <span className="g-why"><BnText text={it.note} /></span>}
               </li>
             ))}
           </ol>
@@ -59,9 +60,9 @@ export default function ClassworkReader({ set }: { set: CwSet }) {
           <span className="q-count">{i + 1} of {set.items.length}</span>
         </div>
         <div className="bar" aria-hidden><div style={{ width: `${(i / set.items.length) * 100}%` }} /></div>
-        <p className="q-inst"><b>What to do:</b> {set.inst}</p>
-        <p className="quiz-q">{item.prompt}</p>
-        {item.hint && <p className="muted">{item.hint}</p>}
+        <p className="q-inst"><b>What to do:</b> <BnText text={set.inst} /></p>
+        <p className="quiz-q"><BnText text={item.prompt} /></p>
+        {item.hint && <p className="muted"><BnText text={item.hint} /></p>}
         <label className="visually-hidden" htmlFor="cw-draft">Your answer</label>
         <textarea id="cw-draft" className="draft" rows={2} value={drafts[i]} readOnly={revealed}
           onChange={(e) => setDrafts((d) => d.map((x, k) => (k === i ? e.target.value : x)))}
@@ -74,7 +75,7 @@ export default function ClassworkReader({ set }: { set: CwSet }) {
               <p className="model-label">Model answer</p>
               <b>{item.answer}</b>
               {item.alt?.map((a) => <span key={a} className="g-also">Also fine: {a}</span>)}
-              {item.note && <p className="g-why">{item.note}</p>}
+              {item.note && <p className="g-why"><BnText text={item.note} /></p>}
               <p className="muted">Spelling in Banglish can vary. Compare the verb ending and the tense, not every letter.</p>
             </div>
             <div className="step-nav">

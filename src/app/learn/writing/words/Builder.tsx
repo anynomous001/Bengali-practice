@@ -87,8 +87,8 @@ export default function Builder({ initialCounts, letters }: { initialCounts: Rec
           </button>
         ))}
       </div>
-      {result === "right" && <p className="feedback good">Correct! {q.letter.word}</p>}
-      {result === "wrong" && <p className="feedback bad">Not quite. The word is {q.letter.word}.</p>}
+      {result === "right" && <p className="feedback good">Correct! {q.letter.word}{roman && ` (${q.letter.wrom})`}</p>}
+      {result === "wrong" && <p className="feedback bad">Not quite. The word is {q.letter.word}{roman && ` (${q.letter.wrom})`}.</p>}
       <button className="btn ghost" disabled={!picked.length || result === "right"} onClick={() => { setPicked([]); setResult(null); }}>Start over</button>
       {result && <button className="btn" onClick={next}>Next word</button>}
     </>

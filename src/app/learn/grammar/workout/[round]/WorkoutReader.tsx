@@ -1,5 +1,6 @@
 "use client";
 
+import BnText from "../../../BnText";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { Cell } from "@/data/grammar";
@@ -62,7 +63,7 @@ function Item({ item, n, total, score, onDone }: { item: WorkItem; n: number; to
       </div>
       <div className="bar" aria-hidden><div style={{ width: `${((n - 1) / total) * 100}%` }} /></div>
       <p className="q-inst"><b>What to do:</b> {item.kind === "choose" ? "Read the instruction below and choose the correct Bengali sentence. You will see straight away whether you were right." : "Write the Bengali sentence the instruction asks for, in the box or on paper. Then press Show model answer, compare, and say honestly whether you got it."}</p>
-      <h3 className="quiz-q">{item.q}</h3>
+      <h3 className="quiz-q"><BnText text={item.q} /></h3>
       {item.sentence && (
         <p className="g-sentence">
           <span lang="bn" className="g-ex-bn">{item.sentence.bn}</span>
@@ -84,7 +85,7 @@ function Item({ item, n, total, score, onDone }: { item: WorkItem; n: number; to
           </div>
           {picked !== null && (
             <>
-              <p className="feedback">{picked === item.answer ? "Correct! " : "Not quite. "}<span className="g-why">{item.why}</span></p>
+              <p className="feedback">{picked === item.answer ? "Correct! " : "Not quite. "}<span className="g-why"><BnText text={item.why} /></span></p>
               <button className="btn" onClick={() => onDone(picked === item.answer)}>{n === total ? "See my score" : "Next"}</button>
             </>
           )}
@@ -101,8 +102,8 @@ function Item({ item, n, total, score, onDone }: { item: WorkItem; n: number; to
                 <p className="model-label">Model answer</p>
                 <span lang="bn" className="g-ex-bn">{item.answer.bn}</span>
                 {roman && <span className="g-ro-line">{item.answer.ro}</span>}
-                {item.also && <p className="g-also"><b>Also fine:</b> <span lang="bn">{item.also}</span></p>}
-                <p className="g-why">{item.why}</p>
+                {item.also && <p className="g-also"><b>Also fine:</b> <BnText text={item.also} /></p>}
+                <p className="g-why"><BnText text={item.why} /></p>
               </div>
               <p className="muted">Compare with what you wrote. Did you use the right tense and verb ending?</p>
               <div className="step-nav">

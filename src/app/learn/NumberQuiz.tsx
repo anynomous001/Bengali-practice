@@ -88,7 +88,7 @@ function Question({ run, setRun, numbers }: { run: Run; setRun: React.Dispatch<R
       <div className={"options" + (mode === "n2w" ? "" : " letters")}>
         {options.map((o) => {
           const cls = picked !== null ? (o.value === q.value ? " right" : o.value === picked ? " wrong" : "") : "";
-          return <button key={o.value} className={"opt" + cls} disabled={picked !== null} onClick={() => choose(o)}>{label(o)}</button>;
+          return <button key={o.value} className={"opt" + cls} disabled={picked !== null} onClick={() => choose(o)}>{label(o)}{mode === "n2w" && roman && <small className="opt-ro">{o.wrom}{kind === "prices" ? " taka" : ""}</small>}</button>;
         })}
       </div>
       {picked !== null && (

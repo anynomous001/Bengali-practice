@@ -1,5 +1,6 @@
 "use client";
 
+import BnText from "../../../BnText";
 import { useState } from "react";
 import type { Story } from "@/data/stories";
 import { speak } from "@/lib/speak";
@@ -134,16 +135,16 @@ function Question({ story, index, score, onDone }: { story: Story; index: number
   return (
     <>
       <p className="muted">Question {index + 1} of {story.quiz.length} · Score {score}</p>
-      <h2 className="quiz-q">{q.q}</h2>
+      <h2 className="quiz-q"><BnText text={q.q} /></h2>
       <div className="options">
         {order.map((o) => {
           const cls = picked === null ? "" : o.k === q.answer ? " right" : o.k === picked ? " wrong" : "";
-          return <button key={o.k} className={"opt text" + cls} disabled={picked !== null} onClick={() => setPicked(o.k)}>{o.text}</button>;
+          return <button key={o.k} className={"opt text" + cls} disabled={picked !== null} onClick={() => setPicked(o.k)}><BnText text={o.text} /></button>;
         })}
       </div>
       {picked !== null && (
         <>
-          <p className="feedback">{picked === q.answer ? "Correct!" : `Not quite. The answer is: ${q.options[q.answer]}`}</p>
+          <p className="feedback">{picked === q.answer ? "Correct!" : <>Not quite. The answer is: <BnText text={q.options[q.answer]} /></>}</p>
           <button className="btn" onClick={() => onDone(picked === q.answer)}>{index + 1 === story.quiz.length ? "See my score" : "Next"}</button>
         </>
       )}

@@ -5,6 +5,7 @@ import type { Block, Cell, Exercise, ExerciseKind, GrammarTopic } from "@/data/g
 import { recordGrammarQuiz } from "../actions";
 import Icon from "./Icon";
 import { useRoman } from "./Roman";
+import BnText from "./BnText";
 
 export function shuffle<T>(a: T[]): T[] {
   a = a.slice();
@@ -16,7 +17,7 @@ export function shuffle<T>(a: T[]): T[] {
 }
 
 export function CellView({ cell, roman }: { cell: Cell; roman: boolean }) {
-  if (typeof cell === "string") return <>{cell}</>;
+  if (typeof cell === "string") return <BnText text={cell} />;
   return (
     <>
       <span lang="bn" className="g-bn">{cell.bn}</span>
@@ -42,38 +43,38 @@ function Examples({ items, roman }: { items: [string, string, string][]; roman: 
 function BlockView({ block, roman }: { block: Block; roman: boolean }) {
   switch (block.t) {
     case "p":
-      return <p className="g-p">{block.text}</p>;
+      return <p className="g-p"><BnText text={block.text} /></p>;
     case "h":
-      return <h3 className="g-h">{block.text}</h3>;
+      return <h3 className="g-h"><BnText text={block.text} /></h3>;
     case "note":
-      return <p className="g-note"><b>Note:</b> {block.text}</p>;
+      return <p className="g-note"><b>Note:</b> <BnText text={block.text} /></p>;
     case "list": {
       const Tag = block.ordered ? "ol" : "ul";
       return (
         <div className="g-list">
-          {block.title && <h3>{block.title}</h3>}
-          <Tag>{block.items.map((it, i) => <li key={i}>{it}</li>)}</Tag>
+          {block.title && <h3><BnText text={block.title} /></h3>}
+          <Tag>{block.items.map((it, i) => <li key={i}><BnText text={it} /></li>)}</Tag>
         </div>
       );
     }
     case "rule":
       return (
         <div className="g-rule">
-          <p className="g-rule-title">{block.title}</p>
-          <p className="g-rule-text">{block.text}</p>
+          <p className="g-rule-title"><BnText text={block.title} /></p>
+          <p className="g-rule-text"><BnText text={block.text} /></p>
           {block.items.length > 0 && <Examples items={block.items} roman={roman} />}
         </div>
       );
     case "mistakes":
       return (
         <div className="g-mistakes">
-          <h3>{block.title}</h3>
+          <h3><BnText text={block.title} /></h3>
           <ul>
             {block.items.map(([wb, wr, rb, rr, why]) => (
               <li key={wb}>
                 <p className="mis wrong"><Icon name="close" size={16} /><span><span lang="bn" className="g-ex-bn">{wb}</span>{roman && <span className="g-ro-line">{wr}</span>}</span></p>
                 <p className="mis right"><Icon name="check" size={16} /><span><span lang="bn" className="g-ex-bn">{rb}</span>{roman && <span className="g-ro-line">{rr}</span>}</span></p>
-                <p className="mis-why">{why}</p>
+                <p className="mis-why"><BnText text={why} /></p>
               </li>
             ))}
           </ul>
@@ -82,17 +83,17 @@ function BlockView({ block, roman }: { block: Block; roman: boolean }) {
     case "ex":
       return (
         <div className="g-ex">
-          {block.title && <h3>{block.title}</h3>}
+          {block.title && <h3><BnText text={block.title} /></h3>}
           <Examples items={block.items} roman={roman} />
         </div>
       );
     case "table":
       return (
         <div className="g-table-wrap">
-          {block.title && <h3>{block.title}</h3>}
+          {block.title && <h3><BnText text={block.title} /></h3>}
           <div className="g-scroll" tabIndex={0} role="region" aria-label={block.title ?? "Table"}>
             <table className="g-table">
-              <thead><tr>{block.head.map((h, i) => <th key={i} scope="col">{h}</th>)}</tr></thead>
+              <thead><tr>{block.head.map((h, i) => <th key={i} scope="col"><BnText text={h} /></th>)}</tr></thead>
               <tbody>
                 {block.rows.map((r, i) => (
                   <tr key={i}>{r.map((c, j) => (j === 0 ? <th key={j} scope="row"><CellView cell={c} roman={roman} /></th> : <td key={j}><CellView cell={c} roman={roman} /></td>))}</tr>
@@ -171,7 +172,7 @@ function Practice({ topic, best }: { topic: GrammarTopic; best: Best }) {
                   <li key={m}>
                     <span className="g-en">{ex.sentence ? `${ex.q} ` : `${ex.q} `}</span>
                     <span lang="bn" className="g-ex-bn"><CellView cell={right} roman={roman} /></span>
-                    <span className="g-why"> {ex.why}</span>
+                    <span className="g-why"> <BnText text={ex.why} /></span>
                   </li>
                 );
               })}
@@ -211,8 +212,8 @@ function Question({ ex, n, total, onDone }: { ex: Exercise; n: number; total: nu
         <span className="q-count">{n} of {total}</span>
       </div>
       <div className="bar" aria-hidden><div style={{ width: `${((n - 1) / total) * 100}%` }} /></div>
-      {ex.inst && <p className="q-inst"><b>What to do:</b> {ex.inst}</p>}
-      <h3 className="quiz-q">{ex.q}</h3>
+      {ex.inst && <p className="q-inst"><b>What to do:</b> <BnText text={ex.inst} /></p>}
+      <h3 className="quiz-q"><BnText text={ex.q} /></h3>
       {ex.sentence && (
         <p className="g-sentence">
           <span lang="bn" className="g-ex-bn">{ex.sentence.bn}</span>
@@ -231,7 +232,7 @@ function Question({ ex, n, total, onDone }: { ex: Exercise; n: number; total: nu
       </div>
       {picked !== null && (
         <>
-          <p className="feedback">{picked === ex.answer ? "Correct. " : "Not quite. "}<span className="g-why">{ex.why}</span></p>
+          <p className="feedback">{picked === ex.answer ? "Correct. " : "Not quite. "}<span className="g-why"><BnText text={ex.why} /></span></p>
           <button className="btn" onClick={() => onDone(picked === ex.answer)}>{n === total ? "See my score" : "Next question"}</button>
         </>
       )}

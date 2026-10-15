@@ -1,5 +1,6 @@
 "use client";
 
+import { bnToRoman } from "@/lib/translit";
 import { useEffect, useState } from "react";
 import type { Sentence } from "@/data/sentences";
 import { recordWriting } from "../../../actions";
@@ -58,15 +59,15 @@ export default function SentenceBuilder({ initialCounts, sentences }: { initialC
       <p className="muted">{total} of {sentences.length} sentences built</p>
       <div className="prompt"><span className="word-en">{q.s.en}</span>{roman && <small>{q.s.rom}</small>}</div>
       <div className={"built" + (result ? " " + result : "")} aria-live="polite">
-        {picked.length ? picked.map(text).join(" ") : <span className="muted">Tap the words in order</span>}
+        {picked.length ? <>{picked.map(text).join(" ")}{roman && <small className="piece-ro">{bnToRoman(picked.map(text).join(" "))}</small>}</> : <span className="muted">Tap the words in order</span>}
       </div>
       <div className="pieces">
         {q.tiles.map((t) => (
-          <button key={t.id} className="piece" disabled={picked.includes(t.id) || !!result} onClick={() => pick(t.id)}>{t.text}</button>
+          <button key={t.id} className="piece" disabled={picked.includes(t.id) || !!result} onClick={() => pick(t.id)}>{t.text}{roman && <small className="piece-ro">{bnToRoman(t.text)}</small>}</button>
         ))}
       </div>
       {result === "right" && <p className="feedback good">Correct!</p>}
-      {result === "wrong" && <p className="feedback bad">Not quite. It is: {q.s.bn}</p>}
+      {result === "wrong" && <p className="feedback bad">Not quite. It is: {q.s.bn}{roman && ` (${q.s.rom})`}</p>}
       <button className="btn ghost" disabled={!picked.length || result === "right"} onClick={() => { setPicked([]); setResult(null); }}>Start over</button>
       {result && <button className="btn" onClick={() => { setQ(makeQuestion(sentences, q.s.id)); setPicked([]); setResult(null); }}>Next</button>}
     </>
