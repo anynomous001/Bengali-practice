@@ -39,9 +39,9 @@ A private Bengali-learning web app for the students of one teacher in Kolkata. M
 - **Flow:** `/buy` form (email entered twice) → `POST /api/checkout/order` creates the Razorpay order and an `orders` row (amount, currency) → Razorpay checkout → `POST /api/checkout/verify` (HMAC-SHA256 signature check) → `fulfillOrder`.
 - **`fulfillOrder`** (in `src/lib/razorpay.ts`) is idempotent: checks the payment with Razorpay, captures it if only authorized, flips the order `created → paid` exactly once, and adds/extends the student by 12 months.
 - **Webhook** `POST /api/razorpay/webhook` (signature checked with `RAZORPAY_WEBHOOK_SECRET`): handles `payment.captured` (grants access even if the buyer closed the page) and `refund.processed` (a full refund revokes access). Events to subscribe: `payment.captured`, `refund.processed` only.
-- **Status:** Razorpay is now in **Live mode** with live keys in Vercel. A live $1 payment succeeded and granted access (verified in the database). The refund and webhook delivery have not been confirmed yet.
+- **Status:** Razorpay is now in **Live mode** with live keys in Vercel. A live test payment succeeded and granted access (verified in the database). Refund and webhook delivery have not been confirmed yet.
 - **Environment variables (Vercel, Production):** `RAZORPAY_KEY_ID`, `RAZORPAY_KEY_SECRET`, `RAZORPAY_WEBHOOK_SECRET`, `PRICE_USD`, `APP_URL`, `ADMIN_EMAILS`, `AUTH_SECRET`, `DATABASE_URL`, `RESEND_API_KEY`, `EMAIL_FROM`. Changed variables only take effect after a redeploy.
-- **Open item right now:** `PRICE_USD` is still `1` from a test. It must be set back to `50` and redeployed before real students pay. The $1 payment should be refunded in Razorpay.
+- `PRICE_USD` is set to `50`.
 
 ## 5. Data and infrastructure
 
@@ -82,12 +82,12 @@ Vocabulary lessons, flashcards, and a timed vocabulary exam.
 ## 8. Testing approach used so far
 
 - Playwright (playwright-core, Chromium at `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`) with a saved login state, screenshots at desktop and phone widths.
-- Live payment test in test mode (test Visa) passed, with database writes checked on Neon; later a real $1 live payment.
+- Live payment test in test mode (test Visa) passed, with database writes checked on Neon; later a real live test payment.
 - Sandbox notes: outbound network needs an allowlist (Razorpay, Neon, Resend hosts were added by the owner; `api.frankfurter.dev` was not). Don't kill processes with `pkill -f`; don't delete `.next` under a running dev server.
 
 ## 9. Open items / next steps
 
-1. Set `PRICE_USD` back to **50** and redeploy (currently 1 from the test). Refund the $1 payment and check that the refund removes access (tests the refund webhook).
+1. Refund the live test payment and check that the refund removes access (tests the refund webhook).
 2. Confirm the live webhook shows successful deliveries in Razorpay; secret in Razorpay must match `RAZORPAY_WEBHOOK_SECRET` in Vercel.
 3. **Rotate secrets that were pasted into chats:** Razorpay live and test key secrets, webhook secret, Neon API key, Neon database password, Resend key.
 4. Confirm UPI is enabled in Razorpay (Payment Methods) and International Cards is enabled.
