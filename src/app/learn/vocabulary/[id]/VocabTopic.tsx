@@ -27,7 +27,7 @@ function makeQuiz(words: Word[], n: number): Q[] {
   });
 }
 
-export default function VocabTopic({ topic, best, quizLen, flashHref }: { topic: Topic; best: Best; quizLen: number; flashHref: string }) {
+export default function VocabTopic({ topic, best, quizLen, flashHref, devotional = false }: { topic: Topic; best: Best; quizLen: number; flashHref?: string; devotional?: boolean }) {
   const [cover, setCover] = useState(false);
   const { roman } = useRoman();
   const all = topic.sections.flatMap((s) => s.words);
@@ -56,10 +56,11 @@ export default function VocabTopic({ topic, best, quizLen, flashHref }: { topic:
   return (
     <div className="vocab-topic">
       <header className="topic-head">
+        {devotional && <p><span className="dev-tag">Devotional</span></p>}
         <p className="eyebrow" lang="bn">{topic.title[0]}</p>
         <h1>{topic.title[2]}</h1>
         <p className="lede">{topic.blurb}</p>
-        <p className="topic-meta">{all.length} words · {topic.phrases.length} phrases{best ? ` · best practice score ${best.score}/${best.total}` : ""}</p>
+        <p className="topic-meta">{all.length} items{topic.phrases.length ? ` · ${topic.phrases.length} phrase${topic.phrases.length === 1 ? "" : "s"}` : ""}{best ? ` · best practice score ${best.score}/${best.total}` : ""}</p>
       </header>
 
       <section id="sec-words" className="g-sec vwords">
@@ -67,7 +68,7 @@ export default function VocabTopic({ topic, best, quizLen, flashHref }: { topic:
         <div className="vsections">
           <div className="vtools">
             <label className="check"><input type="checkbox" checked={cover} onChange={(e) => setCover(e.target.checked)} /> Cover the English (test yourself)</label>
-            <a className="btn ghost small" href={flashHref}>Practise as flashcards</a>
+            {flashHref && <a className="btn ghost small" href={flashHref}>Practise as flashcards</a>}
           </div>
           {topic.sections.map((s, si) => (
             <section key={s.title} id={`sec-w${si}`} className="vsection">
@@ -80,7 +81,7 @@ export default function VocabTopic({ topic, best, quizLen, flashHref }: { topic:
         </div>
       </section>
 
-      <section id="sec-phrases" className="g-sec">
+      {topic.phrases.length > 0 && <section id="sec-phrases" className="g-sec">
         <h2>Phrases that use these words</h2>
         <ul className="plist">
           {topic.phrases.map((p) => (
@@ -97,7 +98,7 @@ export default function VocabTopic({ topic, best, quizLen, flashHref }: { topic:
             </li>
           ))}
         </ul>
-      </section>
+      </section>}
 
       <section id="sec-practice" className="g-sec">
         <h2>Practice</h2>

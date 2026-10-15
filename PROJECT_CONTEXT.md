@@ -66,6 +66,14 @@ Vocabulary lessons, flashcards, and a timed vocabulary exam.
 - **Timed exams** for grammar, vocabulary and listening (`src/data/exams.ts`, `src/lib/examgen.ts`, `ExamRunner.tsx`); attempts are stored in `exam_attempts`.
 - **Class exercise sets** (7 sets in `src/data/classwork.ts`, route `grammar/class/[set]`), built from the teacher's worksheets (Exercise E/F, mixed tenses, translation, transformation, combination). Each question can be marked "I got it right" or "I missed it".
 
+### Devotional track (tagged "Devotional")
+A separate track inside each course (module marked `devotional` in `src/data/curriculum.ts`, content in `src/data/devotional.ts`), built from the teacher's devotional phrase bank (Rāmdās Bābājī's line). Each lesson shows a Devotional tag. It has its own progress and is not counted in the main course progress, exams, word finder or general flashcards.
+- Vocabulary: 6 topics (greetings, forms of address, practice words, feelings, names and places, everyday sādhu-saṅga phrases), each with words, phrases, a practice round and flashcards.
+- Reading: word ladder, Bābājī's nām, lines from Rāmdās Charitāmṛta, sayings from the Kathāmṛta.
+- Speaking: 3 role plays (arriving at the ashram, prasād and kīrtan, blessings and leaving) and a say-it-aloud deck.
+- Grammar: 3 exercise sets (complete the line, say it politely, Bengali-style spelling).
+- Not built from the teacher's list: greeting match, who-do-I-call, nām builder, ashram object hunt, saying of the day, letter template. All Bengali needs the teacher's review.
+
 ### Speaking
 - **Role plays** (8 scenarios in `src/data/roleplay.ts`): shop bargaining, doctor, phone call, hotel booking, train booking, and others, with useful phrases and demo dialogues showing it going well and badly.
 - **Impromptu topics** (`src/data/impromptu.ts`): casual, professional and ambiguous topics with prep and speaking timers.

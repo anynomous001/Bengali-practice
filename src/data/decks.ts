@@ -1,6 +1,7 @@
 import { LETTERS } from "./letters";
 import { NUMBERS } from "./numbers";
 import { VOCAB } from "./vocabulary";
+import { DEV_VOCAB, DEV_SAY } from "./devotional";
 
 const SIGN_CARDS: [sign: string, roman: string, name: string, vowel: string][] = [
   ["া", "kaa", "আ-কার", "আ"], ["ি", "ki", "ই-কার", "ই"], ["ী", "kii", "ঈ-কার", "ঈ"], ["ু", "ku", "উ-কার", "উ"], ["ূ", "kuu", "ঊ-কার", "ঊ"],
@@ -29,6 +30,8 @@ export type Card = {
 export type Deck = {
   id: string;
   segment: "reading" | "speaking" | "writing" | "vocabulary";
+  /** Devotional decks are listed apart from the general ones and tagged. */
+  devotional?: boolean;
   title: string;
   blurb: string;
   /** Instruction shown above the card. */
@@ -151,5 +154,29 @@ export const DECKS: Deck[] = [
     cards: t.sections.flatMap((sec) => sec.words).map(([bn, roman, en]) => ({ id: `vc:${t.id}:${bn}`, front: en, back: bn, roman, speak: bn })),
   })),
 ];
+
+// Devotional decks: kept separate from the general decks.
+DECKS.push(
+  ...DEV_VOCAB.map((t): Deck => ({
+    id: `vocab-${t.id}`,
+    segment: "vocabulary",
+    devotional: true,
+    title: t.title[2],
+    blurb: t.blurb,
+    hint: "Say it aloud before you flip the card.",
+    autoSpeak: true,
+    cards: t.sections.flatMap((sec) => sec.words).map(([bn, roman, en]) => ({ id: `vc:${t.id}:${bn}`, front: en, back: bn, roman, speak: bn })),
+  })),
+  {
+    id: "dev-say",
+    segment: "speaking",
+    devotional: true,
+    title: "Devotional phrases aloud",
+    blurb: "Greetings and everyday phrases of the sādhu-saṅga: see the meaning, say it out loud, then check.",
+    hint: "Say it aloud before you flip the card.",
+    autoSpeak: true,
+    cards: DEV_SAY.map(([bn, roman, en]) => ({ id: `ds:${bn}`, front: en, back: bn, roman, speak: bn })),
+  },
+);
 
 export const ALL_CARD_IDS = new Set(DECKS.flatMap((d) => d.cards.map((c) => c.id)));

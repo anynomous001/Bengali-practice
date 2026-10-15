@@ -8,11 +8,13 @@ import { VOCAB, VOCAB_GROUPS, wordCount } from "./vocabulary";
 import { getExam } from "./exams";
 import { CLASSWORK } from "./classwork";
 import { SCENARIOS } from "./roleplay";
+import { DEV_VOCAB, DEV_READING, DEV_SCENARIOS, DEV_CLASSWORK } from "./devotional";
 
 export type CourseId = "reading" | "speaking" | "vocabulary" | "grammar";
 export type Kind = "Lesson" | "Practice" | "Quiz" | "Review" | "Exam";
 export type Lesson = { id: string; title: string; blurb: string; href: string; kind: Kind };
-export type Module = { id: string; title: string; blurb: string; lessons: Lesson[] };
+/** `devotional` modules are tagged "Devotional", kept apart from the main course, and not counted in its progress. */
+export type Module = { id: string; title: string; blurb: string; lessons: Lesson[]; devotional?: boolean };
 export type Course = {
   id: CourseId; title: string; bn: string; blurb: string; outcomes: string[];
   modules: Module[]; upcoming: { title: string; blurb: string }[];
@@ -49,6 +51,8 @@ export const COURSES: Course[] = [
       ] },
       { id: "stories", title: "Stories", blurb: "Short fables, each in layers: words, Bengali only, line by line, English, quiz.", lessons:
         STORIES.map((s) => ({ id: `reading/story-${s.id}`, title: s.title[2], blurb: `${s.title[0]} · Level ${s.level} · ${s.lines.length + 1} lines`, href: `/learn/reading/stories/${s.id}`, kind: "Quiz" as Kind })) },
+      { id: "devotional", devotional: true, title: "Devotional reading", blurb: "Read the words, the nām and short lines from the devotional books. Kept separate from the main course.", lessons:
+        DEV_READING.map((d): Lesson => ({ id: d.lessonId, title: d.title[2], blurb: `${d.sections.reduce((n, s) => n + s.words.length, 0)} items · ${d.title[0]}`, href: `/learn/reading/devotional/${d.id}`, kind: "Lesson" })) },
       { id: "review", title: "Review", blurb: "Spaced repetition keeps what you learned.", lessons: [
         { id: "reading/flashcards", title: "Reading flashcards", blurb: "Letters, vowel signs, words and numbers. Cards you miss come back sooner.", href: "/learn/reading/flashcards", kind: "Review" },
       ] },
@@ -65,7 +69,10 @@ export const COURSES: Course[] = [
       "Handle real situations: bargaining, rickshaws, restaurants and asking the way",
       "Speak on a topic you have never seen before, against the clock",
     ],
-    tools: [{ label: "Vocabulary course", href: "/learn/vocabulary", blurb: "Build your word bank, topic by topic, with phrases to say aloud." }],
+    tools: [
+      { label: "Vocabulary course", href: "/learn/vocabulary", blurb: "Build your word bank, topic by topic, with phrases to say aloud." },
+      { label: "Devotional phrases aloud", href: "/learn/speaking/flashcards?deck=dev-say", blurb: "Devotional: greetings and everyday phrases of the sādhu-saṅga, to say out loud." },
+    ],
     modules: [
       { id: "sounds", title: "Sounds", blurb: "Tap a letter to hear it, then test your ear.", lessons: [
         { id: "speaking/sounds", title: "Letter sounds", blurb: "Listen to every letter, then take the listening quiz.", href: "/learn/speaking/sounds", kind: "Lesson" },
@@ -81,6 +88,9 @@ export const COURSES: Course[] = [
       { id: "impromptu", title: "Free speaking", blurb: "Speak on a topic you have never seen, or build a story with a partner.", lessons: [
         { id: "speaking/impromptu", title: "Impromptu topics", blurb: "Choose the kind of topic and how long to prepare and speak. The app picks the topic and keeps time.", href: "/learn/speaking/impromptu", kind: "Practice" },
         { id: "speaking/story-relay", title: "Story relay", blurb: "Build one story together, taking turns of 2 to 3 sentences. Free, or with a tense card each turn.", href: "/learn/speaking/story-relay", kind: "Practice" },
+      ] },
+      { id: "devotional", devotional: true, title: "Devotional speaking", blurb: "Greetings, prasād and farewells in the sādhu-saṅga, with role plays and say-it-aloud cards. Kept separate from the main course.", lessons: [
+        ...DEV_SCENARIOS.map((r): Lesson => ({ id: `speaking/roleplay-${r.id}`, title: r.title, blurb: r.blurb, href: `/learn/speaking/roleplay/${r.id}`, kind: "Practice" })),
       ] },
       { id: "exam", title: "Exam", blurb: "A timed listening test.", lessons: [exam("listening")] },
     ],
@@ -108,6 +118,9 @@ export const COURSES: Course[] = [
           href: `/learn/vocabulary/${t.id}`, kind: "Lesson",
         })),
       })),
+      { id: "devotional", devotional: true, title: "Devotional vocabulary", blurb: "Greetings, forms of address, practice words, feelings, names and phrases of the sādhu-saṅga. Kept separate from the main course.", lessons: [
+        ...DEV_VOCAB.map((d): Lesson => ({ id: d.lessonId, title: d.title[2], blurb: `${d.sections.reduce((n, s) => n + s.words.length, 0)} items · ${d.title[0]}`, href: `/learn/vocabulary/${d.id}`, kind: "Lesson" })),
+      ] },
       { id: "review", title: "Review", blurb: "Spaced repetition keeps the words in your memory.", lessons: [
         { id: "vocabulary/flashcards", title: "Vocabulary flashcards", blurb: "One deck per topic: see the meaning, say the word, then check.", href: "/learn/vocabulary/flashcards", kind: "Review" },
       ] },
@@ -137,6 +150,8 @@ export const COURSES: Course[] = [
       { id: "translate", title: "Translation", blurb: "Turn English into Bengali and Bengali into English, quickly and often.", lessons: [
         { id: "grammar/translate", title: "Quick translation", blurb: "Ten sentences a round, in either direction. Pick the answer, or think it and check.", href: "/learn/grammar/translate", kind: "Practice" },
       ] },
+      { id: "devotional", devotional: true, title: "Devotional practice", blurb: "Complete lines, say things politely and spell devotional words the Bengali way. Kept separate from the main course.", lessons:
+        DEV_CLASSWORK.map((c): Lesson => ({ id: `grammar/class-${c.id}`, title: c.title, blurb: c.blurb, href: `/learn/grammar/class/${c.id}`, kind: "Practice" })) },
       { id: "exam", title: "Exam", blurb: "A timed test across the whole course.", lessons: [exam("grammar")] },
     ],
     upcoming: [],
@@ -149,7 +164,11 @@ export type Located = { course: Course; module: Module; lesson: Lesson; prev: Le
 
 export function findLesson(id: string): Located | null {
   for (const course of COURSES) {
-    const flat = course.modules.flatMap((m) => m.lessons.map((l) => ({ m, l })));
+    const all = course.modules.flatMap((m) => m.lessons.map((l) => ({ m, l })));
+    const at = all.find((x) => x.l.id === id);
+    if (!at) continue;
+    // Previous and next stay inside the same track: devotional lessons are not part of the main course.
+    const flat = all.filter((x) => !!x.m.devotional === !!at.m.devotional);
     const i = flat.findIndex((x) => x.l.id === id);
     if (i >= 0) return { course, module: flat[i].m, lesson: flat[i].l, prev: flat[i - 1]?.l ?? null, next: flat[i + 1]?.l ?? null };
   }
@@ -157,11 +176,14 @@ export function findLesson(id: string): Located | null {
 }
 
 export const allLessons = (c: Course) => c.modules.flatMap((m) => m.lessons);
+/** The main course, without the devotional track. */
+export const coreLessons = (c: Course) => c.modules.filter((m) => !m.devotional).flatMap((m) => m.lessons);
+export const devotionalLessons = (c: Course) => c.modules.filter((m) => m.devotional).flatMap((m) => m.lessons);
 export const isLessonId = (id: string) => COURSES.some((c) => allLessons(c).some((l) => l.id === id));
 
 /** Counts for one course given the set of completed lesson ids. */
-export function courseStats(c: Course, done: ReadonlySet<string>) {
-  const lessons = allLessons(c);
+export function courseStats(c: Course, done: ReadonlySet<string>, devotional = false) {
+  const lessons = devotional ? devotionalLessons(c) : coreLessons(c);
   const n = lessons.filter((l) => done.has(l.id)).length;
   const next = lessons.find((l) => !done.has(l.id)) ?? null;
   return { done: n, total: lessons.length, pct: lessons.length ? Math.round((n / lessons.length) * 100) : 0, next };

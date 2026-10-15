@@ -15,7 +15,8 @@ export default async function LessonFrame({ lessonId, toc, children }: { lessonI
   if (!at) notFound();
   const { course, module, lesson, prev, next } = at;
   const { done } = await loadLessonProgress();
-  const stats = courseStats(course, done);
+  const isDev = !!module.devotional;
+  const stats = courseStats(course, done, isDev); // devotional lessons have their own progress
   const courseHref = `/learn/${course.id}`;
 
   return (
@@ -24,10 +25,11 @@ export default async function LessonFrame({ lessonId, toc, children }: { lessonI
         <Link href={courseHref}>{course.title}</Link>
         <Icon name="chevron" size={14} />
         <span>{module.title}</span>
+        {isDev && <span className="dev-tag">Devotional</span>}
       </nav>
       <div className="lp-progress">
-        <ProgressBar value={stats.done} max={stats.total} label={`${course.title} course progress`} size="sm" />
-        <span>{stats.done} of {stats.total} lessons · {stats.pct}%</span>
+        <ProgressBar value={stats.done} max={stats.total} label={`${isDev ? "Devotional" : course.title} progress`} size="sm" />
+        <span>{isDev ? "Devotional: " : ""}{stats.done} of {stats.total} lessons · {stats.pct}%</span>
       </div>
 
       <div className="lp-grid">
@@ -50,7 +52,7 @@ export default async function LessonFrame({ lessonId, toc, children }: { lessonI
             return (
               <details key={m.id} open={m.id === module.id}>
                 <summary>
-                  <span className="mod-name"><b>{mi + 1}.</b> {m.title}</span>
+                  <span className="mod-name"><b>{mi + 1}.</b> {m.title}{m.devotional && <span className="dev-tag">Devotional</span>}</span>
                   <span className="mod-count">{mDone}/{m.lessons.length}</span>
                 </summary>
                 <ul>

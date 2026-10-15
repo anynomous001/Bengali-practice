@@ -65,7 +65,7 @@ export default async function CourseOverview({ courseId }: { courseId: string })
             <details key={m.id} className="module" open={open}>
               <summary>
                 <span className="mod-num">{mi + 1}</span>
-                <span className="mod-info"><b>{m.title}</b><small>{m.blurb}</small></span>
+                <span className="mod-info"><b>{m.title}{m.devotional && <span className="dev-tag">Devotional</span>}</b><small>{m.blurb}</small></span>
                 <span className="mod-meta">
                   <span>{mDone}/{m.lessons.length}</span>
                   <ProgressBar value={mDone} max={m.lessons.length} label={`${m.title} progress`} size="sm" />

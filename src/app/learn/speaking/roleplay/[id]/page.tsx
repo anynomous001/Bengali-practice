@@ -1,13 +1,14 @@
 import { notFound } from "next/navigation";
 import { requireAccess } from "@/lib/access";
 import { getScenario } from "@/data/roleplay";
+import { getDevScenario } from "@/data/devotional";
 import LessonFrame from "../../../LessonFrame";
 import RolePlay from "./RolePlay";
 
 export default async function RolePlayPage({ params }: { params: Promise<{ id: string }> }) {
   await requireAccess();
   const { id } = await params;
-  const s = getScenario(id);
+  const s = getScenario(id) ?? getDevScenario(id);
   if (!s) notFound();
   const toc = [
     { id: "sec-situation", label: "The situation" },
