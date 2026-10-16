@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
-import type { Letter } from "@/data/letters";
+import { PLACES, type Letter } from "@/data/letters";
 import { recordAnswer } from "../../../actions";
 import { speak } from "@/lib/speak";
 import Icon from "../../Icon";
@@ -73,6 +73,14 @@ function Learn({ progress }: { progress: Progress }) {
   const { LETTERS, GROUPS } = useContext(D);
   const { roman } = useRoman();
   const [sel, setSel] = useState<Letter | null>(null);
+  const [view, setView] = useState<"order" | "place">("order");
+  const place = sel ? PLACES.find((p) => p.id === sel.place) : null;
+  const tile = (l: Letter) => (
+    <button key={l.ch} className={"tile" + (mastered(progress, l.ch) ? " done" : "")} onClick={() => setSel(l)}>
+      <span className="ch">{l.ch}</span>
+      {roman && <span className="rom">{l.rom.split(" (")[0]}</span>}
+    </button>
+  );
   return (
     <>
       {sel && (
@@ -85,29 +93,41 @@ function Learn({ progress }: { progress: Progress }) {
             <button className="btn ghost" onClick={() => speak(sel.ch, { slow: true })}>Slow</button>
             {sel.word && <button className="btn" onClick={() => speak(sel.word!)}><Icon name="sound" size={18} /> Word</button>}
             {sel.word && <button className="btn ghost" onClick={() => speak(sel.word!, { slow: true })}>Slow</button>}
+            {place && (
+              <p className="place-line">Made in the <b lang="bn">{place.bn}</b> place: {place.en}</p>
+            )}
             {sel.tip && (
               <div className="trick">
                 <b>Trick for saying it</b>
                 <p><TipText text={sel.tip} /></p>
                 {sel.vs && <p className="trick-vs">Do not mix it up with <TipText text={sel.vs} />.</p>}
+                {place && <p className="trick-vs">{place.how}</p>}
               </div>
             )}
           </div>
         </section>
       )}
-      {GROUPS.map((g) => (
+      <div className="place-switch" role="group" aria-label="Group the letters by">
+        <button type="button" className={view === "order" ? "on" : ""} onClick={() => setView("order")}>In order</button>
+        <button type="button" className={view === "place" ? "on" : ""} onClick={() => setView("place")}>By sound place</button>
+      </div>
+      {view === "order" && GROUPS.map((g) => (
         <section key={g.id}>
           <h2>{g.title}</h2>
-          <div className="grid">
-            {LETTERS.filter((l) => l.group === g.id).map((l) => (
-              <button key={l.ch} className={"tile" + (mastered(progress, l.ch) ? " done" : "")} onClick={() => setSel(l)}>
-                <span className="ch">{l.ch}</span>
-                {roman && <span className="rom">{l.rom.split(" (")[0]}</span>}
-              </button>
-            ))}
-          </div>
+          <div className="grid">{LETTERS.filter((l) => l.group === g.id).map(tile)}</div>
         </section>
       ))}
+      {view === "place" && PLACES.map((p) => {
+        const ls = LETTERS.filter((l) => l.place === p.id);
+        if (!ls.length) return null;
+        return (
+          <section key={p.id}>
+            <h2><span lang="bn">{p.bn}</span> <span className="place-en">{p.en}</span></h2>
+            <p className="place-how">{p.how}</p>
+            <div className="grid">{ls.map(tile)}</div>
+          </section>
+        );
+      })}
     </>
   );
 }

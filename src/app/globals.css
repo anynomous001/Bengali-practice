@@ -774,3 +774,10 @@ html { scroll-behavior:smooth; } @media (prefers-reduced-motion: reduce) { html 
 .trick p { margin:6px 0 0; font-size:1rem; line-height:1.5; }
 .trick-vs { color:var(--ink-2); font-size:.92rem !important; }
 .tip-bn { font-size:1.3em; line-height:1; padding:0 1px; }
+
+/* Alphabet: grouping by place of articulation */
+.place-switch { display: inline-flex; gap: 4px; padding: 4px; margin: 4px 0 12px; border: 1px solid var(--line, #e3e7f1); border-radius: 10px; }
+.place-switch button { border: 0; background: transparent; padding: 6px 12px; border-radius: 7px; font: inherit; font-weight: 600; cursor: pointer; color: inherit; }
+.place-switch button.on { background: var(--blue, #3830d0); color: #fff; }
+.place-en { font-size: 0.8em; font-weight: 500; opacity: 0.7; }
+.place-how, .place-line { margin: 0 0 10px; opacity: 0.85; }

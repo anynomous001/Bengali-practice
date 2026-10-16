@@ -117,6 +117,30 @@ const TIPS: Record<string, [string, string?]> = {
   "ঁ": ["Say the vowel through your nose, like the on in French bon: চাঁদ (chãd)."],
 };
 
+/** The traditional Bengali grouping by where in the mouth a sound is made (উচ্চারণ স্থান). */
+export const PLACES: { id: string; bn: string; en: string; how: string }[] = [
+  { id: "kanthya", bn: "কণ্ঠ্য", en: "Throat (velar)", how: "Made at the back of the throat, where the tongue lifts to meet the soft palate, as in the k of sky or the g of go." },
+  { id: "talabya", bn: "তালব্য", en: "Palate (palatal)", how: "The middle of the tongue rises to the hard palate, the roof of the mouth. Say the ch of cheese or the j of jam and feel where the tongue touches." },
+  { id: "murdhonyo", bn: "মূর্ধন্য", en: "Curled tongue (retroflex)", how: "Curl the tip of the tongue back to the top of the mouth, behind the gum ridge. This is the hard T and D, close to the t in train." },
+  { id: "dontyo", bn: "দন্ত্য", en: "Teeth (dental)", how: "The tip of the tongue touches the back of the upper teeth, as in Spanish or French t and d. Softer than English." },
+  { id: "oshthyo", bn: "ওষ্ঠ্য", en: "Lips (labial)", how: "Both lips do the work: close them for p, b, m, or round them for the vowels u and oo." },
+  { id: "kontho-talabya", bn: "কণ্ঠ-তালব্য", en: "Throat + palate", how: "A vowel that starts at the throat and glides towards the palate: e and oi." },
+  { id: "kontho-oshthyo", bn: "কণ্ঠ-ওষ্ঠ্য", en: "Throat + lips", how: "A vowel that starts at the throat and rounds the lips: o and ou." },
+  { id: "nasikyo", bn: "নাসিক্য", en: "Nose (nasal)", how: "The sound comes out through the nose as well as the mouth." },
+];
+
+const PLACE_OF: Record<string, string> = {};
+for (const [id, chars] of Object.entries({
+  kanthya: "অআকখগঘঙহঃং",
+  talabya: "ই ঈ চ ছ জ ঝ ঞ শ য য়",
+  murdhonyo: "ঋ ট ঠ ড ঢ ণ ষ র ড় ঢ়",
+  dontyo: "তথদধনলসৎ",
+  oshthyo: "উঊপফবভম",
+  "kontho-talabya": "এঐ",
+  "kontho-oshthyo": "ওঔ",
+  nasikyo: "ঁ",
+})) for (const c of chars.includes(" ") ? chars.split(" ") : Array.from(chars)) PLACE_OF[c] = id;
+
 export type Letter = {
   ch: string;
   rom: string;
@@ -124,6 +148,8 @@ export type Letter = {
   wrom: string | null;
   wmean: string | null;
   group: string;
+  /** Place of articulation id, see PLACES. */
+  place: string;
   /** A trick for saying the letter, comparing it with English sounds. */
   tip: string | null;
   /** What it is easily mixed up with. */
@@ -140,6 +166,7 @@ export const LETTERS: Letter[] = GROUPS_RAW.flatMap((g) =>
     wrom: wrom ?? null,
     wmean: wmean ?? null,
     group: g.id,
+    place: PLACE_OF[ch] ?? "kanthya",
     tip: TIPS[ch]?.[0] ?? null,
     vs: TIPS[ch]?.[1] ?? null,
   })),
