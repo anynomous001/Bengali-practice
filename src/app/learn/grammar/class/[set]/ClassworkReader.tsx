@@ -62,7 +62,7 @@ export default function ClassworkReader({ set }: { set: CwSet }) {
         <div className="bar" aria-hidden><div style={{ width: `${(i / set.items.length) * 100}%` }} /></div>
         <p className="q-inst"><b>What to do:</b> <BnText text={set.inst} /></p>
         <p className="quiz-q"><BnText text={item.prompt} /></p>
-        {item.hint && <p className="muted"><BnText text={item.hint} /></p>}
+        {item.hint && <p className="muted gloss"><BnText text={item.hint} /></p>}
         <label className="visually-hidden" htmlFor="cw-draft">Your answer</label>
         <textarea id="cw-draft" className="draft" rows={2} value={drafts[i]} readOnly={revealed}
           onChange={(e) => setDrafts((d) => d.map((x, k) => (k === i ? e.target.value : x)))}

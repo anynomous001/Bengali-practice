@@ -6,7 +6,7 @@ import type { Story } from "@/data/stories";
 import { speak } from "@/lib/speak";
 import Icon from "../../../Icon";
 import { recordStoryQuiz } from "../../../../actions";
-import { useRoman } from "../../../Roman";
+import { useEnglish, useRoman } from "../../../Roman";
 import Stepper from "../../../Stepper";
 
 type Step = "words" | "bengali" | "lines" | "english" | "original" | "quiz";
@@ -31,7 +31,9 @@ function shuffle<T>(a: T[]): T[] {
 export default function StoryReader({ story, best }: { story: Story; best: { score: number; total: number; attempts: number } | null }) {
   const { roman } = useRoman();
   const [step, setStep] = useState<Step>("words");
-  const STEPS = ALL_STEPS.filter((s) => s.id !== "original" || !!story.original);
+  const { english } = useEnglish();
+  // With English meanings off, the whole-story English layer is left out.
+  const STEPS = ALL_STEPS.filter((s) => (s.id !== "original" || !!story.original) && (s.id !== "english" || english));
   const idx = STEPS.findIndex((s) => s.id === step);
 
   return (
@@ -48,7 +50,7 @@ export default function StoryReader({ story, best }: { story: Story; best: { sco
           {story.vocab.map(([bn, ro, en]) => (
             <li key={bn + en}>
               <span lang="bn" className="vocab-bn">{bn}</span>
-              <span className="vocab-meaning">{roman && <i>{ro}</i>}<span>{en}</span></span>
+              <span className="vocab-meaning">{roman && <i>{ro}</i>}<span className="gloss">{en}</span></span>
               <button className="icon-btn" onClick={() => speak(bn)} aria-label={`Hear ${en}`}><Icon name="sound" size={18} /></button>
             </li>
           ))}
@@ -73,7 +75,7 @@ export default function StoryReader({ story, best }: { story: Story; best: { sco
                 <button className="icon-btn" onClick={() => speak(bn)} aria-label="Hear this line"><Icon name="sound" size={18} /></button>
               </div>
               {roman && <span className="line-roman">{ro}</span>}
-              <span className="line-en">{en}</span>
+              <span className="line-en gloss">{en}</span>
             </li>
           ))}
         </ol>

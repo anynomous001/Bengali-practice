@@ -75,7 +75,7 @@ function Learn({ progress }: { progress: Progress }) {
           <div className="big">{sel.ch}</div>
           <div>
             {roman && <p className="sound">Sounds like: <b>{sel.rom}</b></p>}
-            {sel.word && <p><span className="word">{sel.word}</span>{roman && ` (${sel.wrom})`} – {sel.wmean}</p>}
+            {sel.word && <p><span className="word">{sel.word}</span>{roman && ` (${sel.wrom})`}<span className="gloss"> – {sel.wmean}</span></p>}
             <button className="btn" onClick={() => speak(sel.ch)}><Icon name="sound" size={18} /> Letter</button>
             <button className="btn ghost" onClick={() => speak(sel.ch, { slow: true })}>Slow</button>
             {sel.word && <button className="btn" onClick={() => speak(sel.word!)}><Icon name="sound" size={18} /> Word</button>}

@@ -18,7 +18,7 @@ function Line({ line, label }: { line: L; label?: string }) {
         {label && <span className="rp-who">{label}</span>}
         <span className="wbn" lang="bn">{line[0]}</span>
         {roman && <span className="wro">{line[1]}</span>}
-        <span className="rp-en">{line[2]}</span>
+        <span className="rp-en gloss">{line[2]}</span>
       </span>
     </div>
   );

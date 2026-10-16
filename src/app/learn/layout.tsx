@@ -6,7 +6,7 @@ import { getUser } from "@/lib/auth";
 import { logout } from "../actions";
 import Icon from "./Icon";
 import NavLinks from "./NavLinks";
-import { RomanProvider, RomanToggle } from "./Roman";
+import { EnglishToggle, RomanProvider, RomanToggle } from "./Roman";
 import ThemeToggle from "./ThemeToggle";
 import TzSync from "./TzSync";
 
@@ -17,12 +17,13 @@ export default async function LearnLayout({ children }: { children: React.ReactN
 
   const jar = await cookies();
   const roman = jar.get("bp_roman")?.value !== "0"; // on unless the student turned it off
+  const english = jar.get("bp_english")?.value !== "0";
   const t = jar.get("bp_theme")?.value;
   const theme = t === "light" || t === "dark" ? t : "system";
   return (
-    <RomanProvider initial={roman}>
+    <RomanProvider initial={roman} initialEnglish={english}>
       <TzSync />
-      <div className="app">
+      <div className="app" data-english={english ? "on" : "off"}>
         <aside className="side">
           <Link href="/learn" className="side-brand">
             <Logo />
@@ -31,6 +32,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
           <nav className="side-nav" aria-label="Main"><NavLinks variant="side" /></nav>
           <div className="side-foot">
             <RomanToggle />
+            <EnglishToggle />
             <ThemeToggle initial={theme} />
             <div className="who" title={user.email}>{user.email}</div>
             <div className="side-actions">
@@ -47,6 +49,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
           </Link>
           <span className="spacer" />
           <RomanToggle label="Roman" />
+          <EnglishToggle label="English" />
           <ThemeToggle initial={theme} compact />
           <Link href="/learn/progress" className="icon-link" aria-label="My progress"><Icon name="trophy" size={18} /></Link>
           {user.isAdmin && <Link href="/admin" className="icon-link" aria-label="Admin"><Icon name="shield" size={18} /></Link>}

@@ -90,7 +90,7 @@ export default function Session({
           <span className="flash-back">
             {card.back && <b>{card.back}</b>}
             {roman && card.roman && <span className={card.back ? "" : "roman-main"}>{card.roman}</span>}
-            {card.note && <span>{card.note}</span>}
+            {card.note && <span className="gloss">{card.note}</span>}
             {!card.back && !(roman && card.roman) && !card.note && <span className="muted">Tap Listen and repeat it.</span>}
           </span>
         ) : (

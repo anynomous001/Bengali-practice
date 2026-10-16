@@ -20,13 +20,13 @@ function Lines({ lines, caption }: { lines: L[]; caption?: string }) {
   return (
     <table className="relay-table">
       {caption && <caption>{caption}</caption>}
-      <thead><tr><th scope="col">Bengali</th>{roman && <th scope="col">Romanized</th>}<th scope="col">Meaning</th></tr></thead>
+      <thead><tr><th scope="col">Bengali</th>{roman && <th scope="col">Romanized</th>}<th scope="col" className="gloss">Meaning</th></tr></thead>
       <tbody>
         {lines.map((l) => (
           <tr key={l[0]}>
             <td><span className="rt-bn"><Listen text={l[0]} label={l[2]} /><span lang="bn">{l[0]}</span></span></td>
             {roman && <td className="rt-ro">{l[1]}</td>}
-            <td>{l[2]}</td>
+            <td className="gloss">{l[2]}</td>
           </tr>
         ))}
       </tbody>
@@ -189,11 +189,11 @@ export default function StoryRelay({ glossary, rules, helpers, hooks, themes, op
         <h2>Helper words</h2>
         <p>Keep these where you can see them. They join your sentences, and many of them make a good hook.</p>
         <table className="relay-table wide">
-          <thead><tr><th scope="col">Word</th><th scope="col">Meaning</th><th scope="col">Use it to</th><th scope="col">Example</th></tr></thead>
+          <thead><tr><th scope="col">Word</th><th scope="col" className="gloss">Meaning</th><th scope="col">Use it to</th><th scope="col">Example</th></tr></thead>
           <tbody>{helpers.map((h) => (
             <tr key={h.word[0]}>
-              <td><Bn l={h.word} /></td><td>{h.word[2]}</td><td>{h.use}</td>
-              <td><Bn l={h.example} /><small className="rt-en">{h.example[2]}</small></td>
+              <td><Bn l={h.word} /></td><td className="gloss">{h.word[2]}</td><td>{h.use}</td>
+              <td><Bn l={h.example} /><small className="rt-en gloss">{h.example[2]}</small></td>
             </tr>
           ))}</tbody>
         </table>
@@ -205,7 +205,7 @@ export default function StoryRelay({ glossary, rules, helpers, hooks, themes, op
         <table className="relay-table wide">
           <thead><tr><th scope="col">Kind</th><th scope="col">What it does</th><th scope="col">Example</th></tr></thead>
           <tbody>{hooks.map((h) => (
-            <tr key={h.kind}><th scope="row">{h.kind}</th><td>{h.use}</td><td><Bn l={h.example} /><small className="rt-en">{h.example[2]}</small></td></tr>
+            <tr key={h.kind}><th scope="row">{h.kind}</th><td>{h.use}</td><td><Bn l={h.example} /><small className="rt-en gloss">{h.example[2]}</small></td></tr>
           ))}</tbody>
         </table>
       </section>
@@ -241,8 +241,8 @@ export default function StoryRelay({ glossary, rules, helpers, hooks, themes, op
           <thead><tr><th scope="col">Turn</th><th scope="col">Card</th><th scope="col">Tense</th><th scope="col">How to build it</th></tr></thead>
           <tbody>{cards.map((c, i) => (
             <tr key={c.id}>
-              <th scope="row">{i + 1}</th><td><Bn l={c.word} /><small className="rt-en">{c.word[2]}</small></td><td>{c.tense}</td>
-              <td>{c.how}{c.forms.length > 0 && <small className="rt-en">{c.forms.join(" · ")}</small>}</td>
+              <th scope="row">{i + 1}</th><td><Bn l={c.word} /><small className="rt-en gloss">{c.word[2]}</small></td><td>{c.tense}</td>
+              <td>{c.how}{c.forms.length > 0 && <small className="rt-en gloss">{c.forms.join(" · ")}</small>}</td>
             </tr>
           ))}</tbody>
         </table>

@@ -67,7 +67,7 @@ export default function VocabTopic({ topic, best, quizLen, flashHref, devotional
         <h2>Words</h2>
         <div className="vsections">
           <div className="vtools">
-            <label className="check"><input type="checkbox" checked={cover} onChange={(e) => setCover(e.target.checked)} /> Cover the English (test yourself)</label>
+            <label className="check gloss"><input type="checkbox" checked={cover} onChange={(e) => setCover(e.target.checked)} /> Cover the English (test yourself)</label>
             {flashHref && <a className="btn ghost small" href={flashHref}>Practise as flashcards</a>}
           </div>
           {topic.sections.map((s, si) => (
@@ -89,7 +89,7 @@ export default function VocabTopic({ topic, best, quizLen, flashHref, devotional
               <div>
                 <span className="pbn" lang="bn">{p[0]}</span>
                 {roman && <span className="pro">{p[1]}</span>}
-                <span className="pen">{p[2]}</span>
+                <span className="pen gloss">{p[2]}</span>
               </div>
               <span className="pbtns">
                 <button type="button" className="icon-btn" onClick={() => speak(p[0])} aria-label="Hear this phrase"><Icon name="sound" size={18} /></button>

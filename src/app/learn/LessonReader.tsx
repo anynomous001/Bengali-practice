@@ -33,7 +33,7 @@ function Examples({ items, roman }: { items: [string, string, string][]; roman: 
         <li key={bn}>
           <span lang="bn" className="g-ex-bn">{bn}</span>
           {roman && <span className="g-ro-line">{ro}</span>}
-          <span className="g-en">{en}</span>
+          <span className="g-en gloss">{en}</span>
         </li>
       ))}
     </ul>

@@ -17,7 +17,7 @@ export default function WordRow({ bn, roman, en, hideMeaning = false }: { bn: st
         <span className="wbn" lang="bn">{bn}</span>
         {showRoman && <span className="wro">{roman}</span>}
       </span>
-      <button type="button" className={"wen" + (covered ? " covered" : "")} onClick={() => setShown((v) => !v)} disabled={!hideMeaning} aria-label={covered ? "Show meaning" : undefined}>
+      <button type="button" className={"wen gloss" + (covered ? " covered" : "")} onClick={() => setShown((v) => !v)} disabled={!hideMeaning} aria-label={covered ? "Show meaning" : undefined}>
         {covered ? "tap to reveal" : en}
       </button>
     </div>
