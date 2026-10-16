@@ -64,6 +64,11 @@ export default function Alphabet({
   );
 }
 
+/** Tip text with the Bengali letters in it shown large enough to read. */
+function TipText({ text }: { text: string }) {
+  return <>{text.split(/([\u0980-\u09FF]+)/).map((s, i) => (/[\u0980-\u09FF]/.test(s) ? <span key={i} lang="bn" className="tip-bn">{s}</span> : s))}</>;
+}
+
 function Learn({ progress }: { progress: Progress }) {
   const { LETTERS, GROUPS } = useContext(D);
   const { roman } = useRoman();
@@ -80,6 +85,13 @@ function Learn({ progress }: { progress: Progress }) {
             <button className="btn ghost" onClick={() => speak(sel.ch, { slow: true })}>Slow</button>
             {sel.word && <button className="btn" onClick={() => speak(sel.word!)}><Icon name="sound" size={18} /> Word</button>}
             {sel.word && <button className="btn ghost" onClick={() => speak(sel.word!, { slow: true })}>Slow</button>}
+            {sel.tip && (
+              <div className="trick">
+                <b>Trick for saying it</b>
+                <p><TipText text={sel.tip} /></p>
+                {sel.vs && <p className="trick-vs">Do not mix it up with <TipText text={sel.vs} />.</p>}
+              </div>
+            )}
           </div>
         </section>
       )}
@@ -90,7 +102,7 @@ function Learn({ progress }: { progress: Progress }) {
             {LETTERS.filter((l) => l.group === g.id).map((l) => (
               <button key={l.ch} className={"tile" + (mastered(progress, l.ch) ? " done" : "")} onClick={() => setSel(l)}>
                 <span className="ch">{l.ch}</span>
-                {roman && <span className="rom">{l.rom}</span>}
+                {roman && <span className="rom">{l.rom.split(" (")[0]}</span>}
               </button>
             ))}
           </div>

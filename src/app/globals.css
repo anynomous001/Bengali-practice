@@ -767,3 +767,10 @@ html { scroll-behavior:smooth; } @media (prefers-reduced-motion: reduce) { html 
 /* ---------- English meanings off: hide glosses, keep questions and instructions ---------- */
 .app[data-english="off"] .gloss { display:none !important; }
 .app[data-english="off"] .wrow { grid-template-columns:auto minmax(0, 1fr); }
+
+/* ---------- alphabet: a trick for saying each letter ---------- */
+.trick { margin-top:14px; padding:12px 14px; background:var(--surface-2); border-left:4px solid var(--seg, var(--primary)); border-radius:10px; }
+.trick b { display:block; font:700 .8rem var(--font-ui); letter-spacing:.06em; text-transform:uppercase; color:var(--ink-2); }
+.trick p { margin:6px 0 0; font-size:1rem; line-height:1.5; }
+.trick-vs { color:var(--ink-2); font-size:.92rem !important; }
+.tip-bn { font-size:1.3em; line-height:1; padding:0 1px; }

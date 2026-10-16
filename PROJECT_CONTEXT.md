@@ -54,6 +54,7 @@ A private Bengali-learning web app for the students of one teacher in Kolkata. M
 ## 6. The courses and what exists
 
 ### Reading
+The alphabet screen shows a "trick for saying it" for every letter (comparison with English sounds, and what it is easily mixed up with), kept in `TIPS` in `src/data/letters.ts`. Hard and soft letters are told apart in the romanization: ট is "To" and ত is "to".
 Alphabet and reading lessons with letters, practice and tracked progress (`progress` table).
 
 ### Vocabulary
