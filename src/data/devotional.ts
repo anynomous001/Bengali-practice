@@ -6,6 +6,7 @@
 import type { VocabTopic, Word, Phrase } from "./vocabulary";
 import type { Scenario } from "./roleplay";
 import type { CwSet } from "./classwork";
+import { DEV_READING_3 } from "./devotional-3";
 import { DEV_VOCAB_2, DEV_READING_2, DEV_SCENARIOS_2, DEV_CLASSWORK_2, DEV_SAY_2 } from "./devotional-2";
 
 /** Romanization in the app's plain style (the source notes use diacritics such as ô and ṭ). */
@@ -343,7 +344,7 @@ const DEV_READING_1: DevTopic[] = [
 ];
 
 export const DEV_VOCAB: DevTopic[] = [...DEV_VOCAB_1, ...DEV_VOCAB_2];
-export const DEV_READING: DevTopic[] = [...DEV_READING_1, ...DEV_READING_2];
+export const DEV_READING: DevTopic[] = [...DEV_READING_1, ...DEV_READING_2, ...DEV_READING_3];
 export const DEV_TOPICS: DevTopic[] = [...DEV_VOCAB, ...DEV_READING];
 export const getDevTopic = (id: string) => DEV_TOPICS.find((t) => t.id === id);
 

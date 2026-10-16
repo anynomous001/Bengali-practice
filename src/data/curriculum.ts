@@ -52,7 +52,7 @@ export const COURSES: Course[] = [
       ] },
       { id: "stories", title: "Stories", blurb: "Short fables, each in layers: words, Bengali only, line by line, English, quiz.", lessons:
         STORIES.map((s) => ({ id: `reading/story-${s.id}`, title: s.title[2], blurb: `${s.title[0]} · Level ${s.level} · ${s.lines.length + 1} lines`, href: `/learn/reading/stories/${s.id}`, kind: "Quiz" as Kind })) },
-      { id: "devotional", devotional: true, title: "Devotional reading", blurb: "Read the words, the nām, the verse decoder, short lines and eight short passages from the devotional books. Kept separate from the main course.", lessons:
+      { id: "devotional", devotional: true, title: "Devotional reading", blurb: "Read the words, the nām, the verse decoder, short lines, eight short passages, a bhajan, mantras and prayers. Kept separate from the main course.", lessons:
         [
           ...DEV_READING.map((d): Lesson => ({ id: d.lessonId, title: d.title[2], blurb: `${d.sections.reduce((n, s) => n + s.words.length, 0)} items · ${d.title[0]}`, href: `/learn/reading/devotional/${d.id}`, kind: "Lesson" })),
           ...DEV_STORIES.map((s): Lesson => ({ id: `reading/${s.id}`, title: s.title[2], blurb: `${s.lines.length} lines · Level ${s.level} · ${s.source.startsWith("Rāmdās") ? "Rāmdās Charitāmṛta" : "Kathāmṛta"}`, href: `/learn/reading/devotional/stories/${s.id}`, kind: "Quiz" })),

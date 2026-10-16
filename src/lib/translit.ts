@@ -20,7 +20,7 @@ type Unit = { c: string; vowel: string | null; halant: boolean; cluster: boolean
 function word(w: string): string {
   // normalise decomposed nukta forms
   w = w.replace(/ড়/g, "ড়").replace(/ঢ়/g, "ঢ়").replace(/য়/g, "য়").replace(/ড়/g, "ড়").replace(/ঢ়/g, "ঢ়").replace(/য়/g, "য়");
-  const chars = Array.from(w);
+  const chars = Array.from(w.replace(/ৰ/g, "র").normalize("NFC")); // precomposed ড় ঢ় য় become consonant + nukta; ো and ৌ stay whole
   const out: string[] = [];
   // Build syllable-ish units: a consonant (or cluster) plus its vowel.
   const units: Unit[] = [];
@@ -95,4 +95,42 @@ function word(w: string): string {
 /** Converts any text: Bengali runs become Roman, everything else is kept. */
 export function bnToRoman(text: string): string {
   return text.replace(/[ঀ-৿‌‍]+/g, (run) => word(run));
+}
+
+// ---------------------------------------------------------------- Sanskrit in Bengali script
+// Mantras are chanted the Sanskrit way: every inherent vowel is pronounced (namah, not nomoh), ব is v, and য is y.
+const SK_CONS: Record<string, string> = {
+  ক: "k", খ: "kh", গ: "g", ঘ: "gh", ঙ: "n", চ: "c", ছ: "chh", জ: "j", ঝ: "jh", ঞ: "n", ট: "t", ঠ: "th", ড: "d", ঢ: "dh", ণ: "n",
+  ত: "t", থ: "th", দ: "d", ধ: "dh", ন: "n", প: "p", ফ: "ph", ব: "v", ভ: "bh", ম: "m", য: "y", র: "r", ল: "l", শ: "sh", ষ: "sh", স: "s", হ: "h", ৎ: "t",
+};
+const SK_VOWELS: Record<string, string> = { অ: "a", আ: "a", ই: "i", ঈ: "i", উ: "u", ঊ: "u", ঋ: "ri", এ: "e", ঐ: "ai", ও: "o", ঔ: "au" };
+const SK_SIGNS: Record<string, string> = { "া": "a", "ি": "i", "ী": "i", "ু": "u", "ূ": "u", "ৃ": "ri", "ে": "e", "ৈ": "ai", "ো": "o", "ৌ": "au" };
+
+function skWord(w: string): string {
+  const c = Array.from(w.replace(/ৰ/g, "র").replace(/বৃহস্পতি/g, "বরিহস্পতি").normalize("NFC"));
+  let out = "";
+  for (let i = 0; i < c.length; i++) {
+    const ch = c[i];
+    if (SK_CONS[ch]) {
+      let base = SK_CONS[ch];
+      if (c[i + 1] === NUKTA) { base = ch === "ড" ? "r" : ch === "ঢ" ? "rh" : ch === "য" ? "y" : base; i++; }
+      if (ch === "ব" && c[i + 1] === HALANT && c[i + 2] === "র") base = "b"; // brahma
+      if (ch === "ক" && c[i + 1] === HALANT && c[i + 2] === "ষ") { base = "ksh"; i += 2; }
+      else if (ch === "জ" && c[i + 1] === HALANT && c[i + 2] === "ঞ") { base = "jn"; i += 2; }
+      if (c[i + 1] === HALANT) { out += base; i++; }
+      else if (c[i + 1] && SK_SIGNS[c[i + 1]]) { out += base + SK_SIGNS[c[i + 1]]; i++; }
+      else out += base + "a";
+    } else if (SK_VOWELS[ch]) out += SK_VOWELS[ch];
+    else if (ch === "ং" || ch === "ঁ") out += "m";
+    else if (ch === "ঃ") out += "h";
+    else if (DIGITS.includes(ch)) out += String(DIGITS.indexOf(ch));
+    else if (ch === "ঽ") out += "'";
+    else if (ch !== "‌" && ch !== "‍") out += ch;
+  }
+  return out;
+}
+
+/** Roman spelling for Sanskrit text written in Bengali script, as it is chanted. */
+export function sanskritRoman(text: string): string {
+  return text.replace(/[ঀ-৿‌‍]+/g, (run) => skWord(run)).replace(/।/g, "|").replace(/॥/g, "||");
 }
