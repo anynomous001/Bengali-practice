@@ -76,3 +76,11 @@ export async function resolveFeedback(fd: FormData) {
   await query("UPDATE feedback SET resolved = NOT resolved WHERE id = $1", [id]);
   revalidatePath("/admin");
 }
+
+export async function setBuddies(fd: FormData) {
+  await requireAdmin();
+  const value = fd.get("on") === "1" ? "on" : "off";
+  await query("INSERT INTO app_flags (key, value) VALUES ('buddies', $1) ON CONFLICT (key) DO UPDATE SET value = $1", [value]);
+  revalidatePath("/admin");
+  revalidatePath("/learn/leaderboard");
+}

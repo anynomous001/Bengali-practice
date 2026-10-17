@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { requireAccess } from "@/lib/access";
-import { getSettings, loadLeaderboard, loadStats, markMilestonesSeen, MILESTONES, syncMilestones } from "@/lib/activity";
+import { getSettings, loadStats, markMilestonesSeen, MILESTONES, syncMilestones } from "@/lib/activity";
 import { GOALS } from "@/lib/points";
 import { addDays, weekStart } from "@/lib/streak";
 import Icon from "../Icon";
@@ -14,7 +15,6 @@ export default async function ProgressPage() {
   const settings = await getSettings(user.email);
   const { earned, fresh } = await syncMilestones(user.email, stats);
   if (fresh.length) await markMilestonesSeen(user.email);
-  const board = await loadLeaderboard(user.email);
 
   // Calendar: 17 weeks, Monday first, ending with the current week.
   const start = addDays(weekStart(stats.today), -16 * 7);
@@ -63,20 +63,7 @@ export default async function ProgressPage() {
         </section>
       ))}
 
-      <h2 className="section-title">Class this week</h2>
-      {board.length ? (
-        <ol className="board">
-          {board.map((r, i) => (
-            <li key={i} className={r.you ? "you" : ""}>
-              <span className="rank">{i + 1}</span>
-              <span className="who">{r.name}{r.you && " (you)"}</span>
-              <span className="streak"><Icon name="flame" size={14} weight="fill" />{r.streak}</span>
-              <b>{r.points}</b>
-            </li>
-          ))}
-        </ol>
-      ) : <p className="muted">Nobody is on the class board yet. Choose a display name below to join it.</p>}
-      <p className="muted">Only students who choose a display name appear here. Points are from the last seven days.</p>
+      <Link href="/learn/leaderboard" className="card-static lb-link"><Icon name="medal" size={22} /><span><b>Class leaderboard</b><small>See how your points compare this week, this month and all time.</small></span><Icon name="next" size={18} /></Link>
 
       <h2 className="section-title">Settings</h2>
       <form action={saveSettings} className="stack card-static settings-form">
@@ -89,8 +76,9 @@ export default async function ProgressPage() {
           </div>
         </fieldset>
         <label className="field">Display name on the class board
-          <input name="name" defaultValue={settings.name ?? ""} maxLength={24} placeholder="Leave empty to stay off the board" autoComplete="nickname" />
+          <input name="name" defaultValue={settings.name ?? ""} maxLength={24} placeholder="Leave empty to appear as “Student”" autoComplete="nickname" />
         </label>
+        <label className="check"><input type="checkbox" name="showBoard" defaultChecked={settings.showBoard} /> Show me on the class leaderboard</label>
         <label className="check"><input type="checkbox" name="remind" defaultChecked={settings.remind} /> Email me a reminder in the evening if I have not practised yet</label>
         <button className="btn">Save</button>
       </form>

@@ -2,9 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getUser } from "@/lib/auth";
 import { query } from "@/lib/db";
-import { addStudent, grantYear, inviteSomeone, removeStudent, resolveFeedback, revokeAccess } from "./actions";
+import { addStudent, grantYear, inviteSomeone, removeStudent, resolveFeedback, revokeAccess, setBuddies } from "./actions";
 import Icon from "../learn/Icon";
 import { loadTeacherView } from "@/lib/activity";
+import { buddiesOn } from "@/lib/leaderboard";
+import { BUDDIES, BUDDY_MAX_REAL } from "@/data/buddies";
 
 type Row = { email: string; note: string; access_expires_at: Date | null; created_at: Date };
 const fmt = (d: Date) => d.toLocaleDateString("en-GB", { dateStyle: "medium" });
@@ -32,6 +34,7 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
   const feedback = await query<{ id: number; email: string; area: string; ref: string; topic: string; message: string; resolved: boolean; created_at: Date }>(
     "SELECT id, email, area, ref, topic, message, resolved, created_at FROM feedback ORDER BY resolved, created_at DESC LIMIT 100",
   );
+  const buddies = await buddiesOn();
   const now = Date.now();
   const isActive = (s: Row) => !!s.access_expires_at && s.access_expires_at.getTime() > now;
   const activeCount = students.filter(isActive).length;
@@ -79,6 +82,16 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
                 ))}
               </ul>
             ) : <p className="muted">Nobody&apos;s access ends soon.</p>}
+          </section>
+
+          <section className="adm-card">
+            <h2>Leaderboard practice buddies</h2>
+            <p className="muted">Example classmates ({BUDDIES.map((b) => b.name).join(", ")}) shown on the student leaderboard, labelled “Practice buddy”, with points near the real students&apos;. They are not real accounts and appear in no counts. They hide automatically once {BUDDY_MAX_REAL} real students are on the board.</p>
+            <form action={setBuddies}>
+              <input type="hidden" name="on" value={buddies ? "0" : "1"} />
+              <button className="btn small">{buddies ? "Turn practice buddies off" : "Turn practice buddies on"}</button>
+              <span className={"chip " + (buddies ? "ok" : "")} style={{ marginLeft: 10 }}>{buddies ? "On" : "Off"}</span>
+            </form>
           </section>
 
           <section className="adm-card">

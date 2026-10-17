@@ -124,6 +124,11 @@ const SCHEMA = `
       remind boolean NOT NULL DEFAULT false,
       last_reminded text
     );
+    ALTER TABLE student_settings ADD COLUMN IF NOT EXISTS show_board boolean NOT NULL DEFAULT true;
+    CREATE TABLE IF NOT EXISTS app_flags (
+      key text PRIMARY KEY,
+      value text NOT NULL
+    );
     CREATE TABLE IF NOT EXISTS milestones (
       email text NOT NULL,
       key text NOT NULL,

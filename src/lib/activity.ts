@@ -4,14 +4,14 @@ import { COURSES, allLessons, coreLessons, devotionalLessons } from "@/data/curr
 import { DEFAULT_GOAL, LIGHT_DAY_MIN, RULES, TRY_POINTS, type Kind } from "./points";
 import { addDays, computeStreak, dayIn, validTz, weekStart } from "./streak";
 
-export type Settings = { tz: string | null; goal: number; name: string | null; remind: boolean };
+export type Settings = { tz: string | null; goal: number; name: string | null; remind: boolean; showBoard: boolean };
 
 async function loadSettings(email: string): Promise<Settings> {
-  const r = (await query<{ tz: string | null; daily_goal: number; display_name: string | null; remind: boolean }>(
-    "SELECT tz, daily_goal, display_name, remind FROM student_settings WHERE email = $1",
+  const r = (await query<{ tz: string | null; daily_goal: number; display_name: string | null; remind: boolean; show_board: boolean }>(
+    "SELECT tz, daily_goal, display_name, remind, show_board FROM student_settings WHERE email = $1",
     [email],
   ))[0];
-  return { tz: r?.tz ?? null, goal: r?.daily_goal ?? DEFAULT_GOAL, name: r?.display_name ?? null, remind: r?.remind ?? false };
+  return { tz: r?.tz ?? null, goal: r?.daily_goal ?? DEFAULT_GOAL, name: r?.display_name ?? null, remind: r?.remind ?? false, showBoard: r?.show_board ?? true };
 }
 export const getSettings = loadSettings;
 
@@ -169,21 +169,6 @@ export async function markMilestonesSeen(email: string) {
 }
 
 // ---------------------------------------------------------------- class views
-
-export type BoardRow = { name: string; points: number; streak: number; you: boolean };
-
-/** Points over the last seven days for students who chose a display name. */
-export async function loadLeaderboard(email: string): Promise<BoardRow[]> {
-  const students = await query<{ email: string; display_name: string; tz: string | null }>(
-    "SELECT email, display_name, tz FROM student_settings WHERE display_name IS NOT NULL AND display_name <> ''",
-  );
-  const out: BoardRow[] = [];
-  for (const s of students) {
-    const st = await loadStats(s.email, s.tz || "UTC");
-    out.push({ name: s.display_name, points: st.weekPoints, streak: st.current, you: s.email === email });
-  }
-  return out.sort((a, b) => b.points - a.points || b.streak - a.streak).slice(0, 20);
-}
 
 export type TeacherRow = { email: string; current: number; longest: number; lastActive: string | null; weekPoints: number; totalPoints: number };
 
