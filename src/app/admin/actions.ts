@@ -58,7 +58,7 @@ export async function removeStudent(fd: FormData) {
 export async function inviteSomeone(fd: FormData) {
   await requireAdmin();
   const email = emailOf(fd);
-  if (!validEmail(email)) redirect("/admin?invite=invalid");
+  if (!validEmail(email)) redirect("/admin?tab=students&invite=invalid");
   let result = "sent";
   try {
     await sendInviteEmail(email, `${await appBase()}/buy`);
@@ -66,7 +66,7 @@ export async function inviteSomeone(fd: FormData) {
     console.error("invite email failed", e);
     result = "failed";
   }
-  redirect(`/admin?invite=${result}&to=${encodeURIComponent(email)}`);
+  redirect(`/admin?tab=students&invite=${result}&to=${encodeURIComponent(email)}`);
 }
 
 export async function resolveFeedback(fd: FormData) {
