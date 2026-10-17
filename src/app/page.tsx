@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Logo from "./Logo";
 import Link from "next/link";
@@ -23,6 +24,8 @@ import { GRAMMAR } from "@/data/grammar";
 import { SCENARIOS } from "@/data/roleplay";
 import { CLASSWORK } from "@/data/classwork";
 import { EXAMS } from "@/data/exams";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 const VOCAB_WORDS = VOCAB.reduce((n, t) => n + t.sections.reduce((m, s) => m + s.words.length, 0), 0);
 const VOCAB_ROUND = Math.round(VOCAB_WORDS / 100) * 100;
@@ -105,6 +108,7 @@ export default async function Home() {
         </header>
       </div>
 
+      <main>
       <section className="band hero-band">
         <div className="lp-wrap hero-grid">
           <div className="hero-copy">
@@ -276,7 +280,7 @@ export default async function Home() {
               <BuyLink place="pricing" className="btn">Get 12 months · {price}</BuyLink>
               <p className="promise">Not for you? Email us within {BUSINESS.refundDays} days for a full refund.</p>
               <p className="fine">Secure checkout by Razorpay · <Link href="/refunds">Refund policy</Link></p>
-              <p className="cards" aria-label="Cards accepted"><span>Visa</span><span>Mastercard</span><span>Amex</span></p>
+              <p className="cards"><span>Visa</span><span>Mastercard</span><span>Amex</span></p>
             </div>
           </div>
         </section>
@@ -308,6 +312,8 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      </main>
 
       <div className="lp-wrap"><SiteFooter /></div>
       <PricingSeen />

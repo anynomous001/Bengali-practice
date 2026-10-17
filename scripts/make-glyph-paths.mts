@@ -15,7 +15,7 @@ const OUT = join(process.cwd(), "src/data/glyph-paths.json");
 const OLD_BROWSER = "Mozilla/5.0 (Linux; U; Android 4.0.3; en-us) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30";
 
 // Keep this list in step with what the landing page shows.
-const STRINGS = ["ক", "জ", "ল", "জল", "৫", "বাংলা", "আমি বাংলা শিখছি।", "ক", "কা", "কি", "কী", "কু", "কে", "কো"];
+const STRINGS = ["ক", "জল", "৫", "আমি বাংলা শিখছি।", "ক", "কা", "কি", "কী", "কু", "কে", "কো"];
 
 async function loadFont(): Promise<ArrayBuffer> {
   if (!existsSync(CACHE)) {

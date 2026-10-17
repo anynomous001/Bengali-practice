@@ -60,7 +60,7 @@ export default function Taster() {
   }
   const canHear = !!CLIPS[q.bn] || canSpeak;
   return (
-    <div className="taster" id="try" aria-live="polite">
+    <div className="taster" id="try">
       <p className="tq-step">Question {i + 1} of {QUESTIONS.length}</p>
       <p className="tq-prompt">{q.prompt}</p>
       <div className="tq-bn-row">
@@ -73,9 +73,11 @@ export default function Taster() {
           return <button key={o} type="button" className={"tq-opt" + cls} disabled={!!picked} onClick={() => { setPicked(o); if (o === q.answer) setScore((s) => s + 1); }}>{o}</button>;
         })}
       </div>
+      <div aria-live="polite" role="status" className="tq-live">
+        {picked && <p className={"tq-fb " + (picked === q.answer ? "ok" : "no")}>{picked === q.answer ? "Correct. " : "Not quite. "}{q.after}</p>}
+      </div>
       {picked ? (
         <>
-          <p className={"tq-fb " + (picked === q.answer ? "ok" : "no")}>{picked === q.answer ? "Correct. " : "Not quite. "}{q.after}</p>
           <button ref={nextRef} type="button" className="btn" onClick={() => { setI(i + 1); setPicked(null); }}>{i + 1 === QUESTIONS.length ? "See my result" : "Next"}</button>
         </>
       ) : <p className="tq-hint">{q.hint}</p>}

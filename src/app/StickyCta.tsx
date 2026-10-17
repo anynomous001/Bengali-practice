@@ -17,8 +17,8 @@ export default function StickyCta({ label }: { label: string }) {
     return () => window.removeEventListener("scroll", on);
   }, []);
   return (
-    <div className={"sticky-cta" + (show ? " on" : "")} aria-hidden={!show}>
+    <aside className={"sticky-cta" + (show ? " on" : "")} aria-label="Get access" inert={!show}>
       <BuyLink place="sticky" className="btn">{label}</BuyLink>
-    </div>
+    </aside>
   );
 }

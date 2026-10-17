@@ -48,7 +48,8 @@ export default function Trace({
     ctx.setLineDash([]);
     if (guide) {
       ctx.fillStyle = "rgba(192,57,43,.22)";
-      ctx.font = `${SIZE * 0.62}px "Noto Sans Bengali", "Nirmala UI", sans-serif`;
+      const family = getComputedStyle(document.documentElement).getPropertyValue("--font-bn").trim() || '"Noto Sans Bengali", "Nirmala UI", sans-serif';
+      ctx.font = `${SIZE * 0.62}px ${family}`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       ctx.fillText(sel, SIZE / 2, SIZE / 2);

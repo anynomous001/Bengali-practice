@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { cookies } from "next/headers";
+import { Noto_Sans_Bengali, Noto_Serif_Bengali, Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/lib/site";
 import "./globals.css";
@@ -13,19 +14,21 @@ export const metadata: Metadata = {
 };
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: [{ media: "(prefers-color-scheme: light)", color: "#f3f5fa" }, { media: "(prefers-color-scheme: dark)", color: "#0a0e1f" }] };
 
+// Fonts are downloaded at build time and served from this site, so the page never waits on a font stylesheet from another host.
+const ui = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], style: ["normal", "italic"], display: "swap", variable: "--f-ui" });
+const bnSans = Noto_Sans_Bengali({ subsets: ["bengali"], weight: ["400", "500", "600", "700"], display: "swap", variable: "--f-bn", preload: false });
+const bnSerif = Noto_Serif_Bengali({ subsets: ["bengali"], weight: ["400", "500", "600", "700"], display: "swap", variable: "--f-bn-serif", preload: false });
+
+const MOTION_OK = `(function(){try{var d=document.documentElement;if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)return;var seen=false;try{seen=!!sessionStorage.getItem("bp_lp_motion")}catch(e){}if(!seen)d.classList.add("motion-ok")}catch(e){}})();`;
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const t = (await cookies()).get("bp_theme")?.value;
   const theme = t === "light" || t === "dark" ? t : undefined; // otherwise follow the system
   return (
-    <html lang="en" data-theme={theme} suppressHydrationWarning>
+    <html lang="en" data-theme={theme} className={`${ui.variable} ${bnSans.variable} ${bnSerif.variable}`} suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap"
-        />
+        {/* Animated parts of the home page start hidden only when this class is set. Without it, or without JavaScript, every page shows its finished state. */}
+        <script dangerouslySetInnerHTML={{ __html: MOTION_OK }} />
       </head>
       <body suppressHydrationWarning>
         {children}
