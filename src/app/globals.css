@@ -858,3 +858,4 @@ a.adm-stat:hover { box-shadow: var(--shadow-hover); }
 .pace-tag.good { background: color-mix(in srgb, var(--gold) 18%, var(--surface)); color: var(--gold); }
 .pace-tag.push { background: var(--surface-2); color: var(--ink-2); }
 @media (max-width: 560px) { .board .who { display: flex; flex-wrap: wrap; gap: 4px 0; } .pace-tag, .buddy-tag { margin-left: 0; margin-right: 6px; } }
+.goal-opts .pts { font-style: normal; font-weight: 600; color: var(--ink-2); font-size: .9rem; }

@@ -15,7 +15,7 @@ export default function SettingsForm({ settings }: { settings: S }) {
         <legend>Daily goal</legend>
         <div className="goal-opts">
           {GOALS.map((g) => (
-            <label key={g.id} className="choice"><input type="radio" name="goal" value={g.id} defaultChecked={settings.goal === g.id} /><span><b>{g.label}</b> · {g.id} points<small>{g.blurb}</small></span></label>
+            <label key={g.id} className="choice"><input type="radio" name="goal" value={g.id} defaultChecked={settings.goal === g.id} /><span><b>{g.label}</b><i className="pts">{g.id} points a day</i><small>{g.blurb}</small></span></label>
           ))}
         </div>
       </fieldset>
