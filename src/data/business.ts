@@ -4,7 +4,7 @@ export const BUSINESS = {
   name: "Bengali Practice",
   /** Product name used in the policies. */
   product: "Bengali Practice",
-  email: "hello@gencore.co.in",
+  email: "chakrobortypritam.work@gmail.com",
   phone: "+91 98743 53532",
   address: "Ichapur, Kolkata, West Bengal 743144, India",
   /** Days after payment in which a refund can be asked for. */
