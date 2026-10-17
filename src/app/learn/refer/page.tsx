@@ -29,7 +29,6 @@ export default async function ReferPage() {
         <ul className="ticks">
           <li>The reward is added after your friend&apos;s payment is confirmed.</li>
           <li>It works for people who have never had an account before.</li>
-          <li>If your friend is fully refunded, the {REFERRAL_MONTHS} months are taken back.</li>
         </ul>
       </section>
       <div className="pg-top">
