@@ -4,6 +4,7 @@ import { getUser } from "@/lib/auth";
 import { query } from "@/lib/db";
 import { addStudent, grantYear, inviteSomeone, removeStudent, resolveFeedback, revokeAccess, setBuddies } from "./actions";
 import Icon from "../learn/Icon";
+import Toast from "../Toast";
 import { loadTeacherView } from "@/lib/activity";
 import { buddiesOn } from "@/lib/leaderboard";
 import { BUDDIES, BUDDY_MAX_REAL } from "@/data/buddies";
@@ -20,8 +21,8 @@ const TABS = [
 ] as const;
 type TabId = (typeof TABS)[number]["id"];
 
-export default async function AdminPage({ searchParams }: { searchParams: Promise<{ tab?: string; invite?: string; to?: string }> }) {
-  const { tab: tabParam, invite, to } = await searchParams;
+export default async function AdminPage({ searchParams }: { searchParams: Promise<{ tab?: string; invite?: string; to?: string; notice?: string }> }) {
+  const { tab: tabParam, invite, to, notice } = await searchParams;
   const user = await getUser();
   if (!user?.isAdmin) notFound();
   const tab: TabId = TABS.some((t) => t.id === tabParam) ? (tabParam as TabId) : "overview";
@@ -45,6 +46,7 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
 
   return (
     <div className="page adm">
+      <Toast message={notice} kind={notice && /doesn.t look right|could not/.test(notice) ? "bad" : "good"} clearParam="notice" />
       <header className="adm-head">
         <div>
           <p className="eyebrow">Teacher area</p>
@@ -77,7 +79,7 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
               <ul className="adm-plain">
                 {expiring.map((s) => (
                   <li key={s.email}><span>{s.email}</span><span className="muted">ends {fmt(s.access_expires_at!)}</span>
-                    <form action={grantYear}><input type="hidden" name="email" value={s.email} /><button className="btn small">+12 months</button></form>
+                    <form action={grantYear}><input type="hidden" name="tab" value={tab} /><input type="hidden" name="email" value={s.email} /><button className="btn small">+12 months</button></form>
                   </li>
                 ))}
               </ul>
@@ -86,8 +88,9 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
 
           <section className="adm-card">
             <h2>Leaderboard practice buddies</h2>
-            <p className="muted">Example classmates ({BUDDIES.map((b) => b.name).join(", ")}) shown on the student leaderboard, labelled “Practice buddy”, with points near the real students&apos;. They are not real accounts and appear in no counts. They hide automatically once {BUDDY_MAX_REAL} real students are on the board.</p>
+            <p className="muted">Example classmates ({BUDDIES.map((b) => b.name).join(", ")}) shown on the student leaderboard, labelled “Practice buddy”. Each paces itself to the viewing student&apos;s own daily goal, so the goal becomes a place to aim for. They are not real accounts and appear in no counts. They hide automatically once {BUDDY_MAX_REAL} real students are on the board.</p>
             <form action={setBuddies}>
+              <input type="hidden" name="tab" value="overview" />
               <input type="hidden" name="on" value={buddies ? "0" : "1"} />
               <button className="btn small">{buddies ? "Turn practice buddies off" : "Turn practice buddies on"}</button>
               <span className={"chip " + (buddies ? "ok" : "")} style={{ marginLeft: 10 }}>{buddies ? "On" : "Off"}</span>
@@ -96,7 +99,7 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
 
           <section className="adm-card">
             <h2>Latest feedback</h2>
-            {feedback.slice(0, 3).map((f) => <FeedbackItem key={f.id} f={f} />)}
+            {feedback.slice(0, 3).map((f) => <FeedbackItem key={f.id} f={f} tab={tab} />)}
             {!feedback.length && <p className="muted">Nothing yet. Students send ideas from the Feedback page.</p>}
             {feedback.length > 0 && <Link href="/admin?tab=feedback" className="adm-more">See all feedback</Link>}
           </section>
@@ -140,9 +143,9 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
                       <small className="muted">Last practised {fmtDay(a?.lastActive ?? null)}</small>
                     </span>
                     <span role="cell" className="adm-end adm-actions">
-                      <form action={grantYear}><input type="hidden" name="email" value={s.email} /><button className="btn small">+12 months</button></form>
-                      {active && <form action={revokeAccess}><input type="hidden" name="email" value={s.email} /><button className="btn small ghost">Revoke</button></form>}
-                      <form action={removeStudent}><input type="hidden" name="email" value={s.email} /><button className="btn small ghost">Remove</button></form>
+                      <form action={grantYear}><input type="hidden" name="tab" value={tab} /><input type="hidden" name="email" value={s.email} /><button className="btn small">+12 months</button></form>
+                      {active && <form action={revokeAccess}><input type="hidden" name="tab" value="students" /><input type="hidden" name="email" value={s.email} /><button className="btn small ghost">Revoke</button></form>}
+                      <form action={removeStudent}><input type="hidden" name="tab" value="students" /><input type="hidden" name="email" value={s.email} /><button className="btn small ghost">Remove</button></form>
                     </span>
                   </div>
                 );
@@ -156,7 +159,7 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
       {tab === "feedback" && (
         <section className="adm-card">
           <h2>Student feedback {openFeedback > 0 && <span className="chip bad">{openFeedback} open</span>}</h2>
-          {feedback.map((f) => <FeedbackItem key={f.id} f={f} />)}
+          {feedback.map((f) => <FeedbackItem key={f.id} f={f} tab={tab} />)}
           {!feedback.length && <p className="muted">No feedback yet. Students send ideas and problems from the Feedback page, or report a letter from the alphabet page.</p>}
         </section>
       )}
@@ -184,7 +187,7 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
 
 type FB = { id: number; email: string; area: string; ref: string; topic: string; message: string; resolved: boolean; created_at: Date };
 
-function FeedbackItem({ f }: { f: FB }) {
+function FeedbackItem({ f, tab }: { f: FB; tab: string }) {
   return (
     <article className={"adm-fb" + (f.resolved ? " done" : "")}>
       <div className="adm-fb-top">
@@ -193,7 +196,7 @@ function FeedbackItem({ f }: { f: FB }) {
         {f.area === "alphabet" && <b lang="bn" className="tip-bn">{f.ref}</b>}
         {f.resolved && <span className="chip ok">Done</span>}
         <span className="spacer" />
-        <form action={resolveFeedback}><input type="hidden" name="id" value={f.id} /><button className="btn small ghost">{f.resolved ? "Reopen" : "Mark done"}</button></form>
+        <form action={resolveFeedback}><input type="hidden" name="tab" value={tab} /><input type="hidden" name="id" value={f.id} /><button className="btn small ghost">{f.resolved ? "Reopen" : "Mark done"}</button></form>
       </div>
       {f.message && <p className="adm-fb-msg">{f.message}</p>}
       <small className="muted">{f.email} · {fmt(f.created_at)}</small>

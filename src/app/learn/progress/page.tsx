@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { requireAccess } from "@/lib/access";
 import { getSettings, loadStats, markMilestonesSeen, MILESTONES, syncMilestones } from "@/lib/activity";
-import { GOALS } from "@/lib/points";
 import { addDays, weekStart } from "@/lib/streak";
 import Icon from "../Icon";
 import { GoalRing } from "../StreakCard";
-import { saveSettings } from "./actions";
+import SettingsForm from "./SettingsForm";
 
 const fmtDay = (d: string) => new Date(d + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
 
@@ -66,22 +65,7 @@ export default async function ProgressPage() {
       <Link href="/learn/leaderboard" className="card-static lb-link"><Icon name="medal" size={22} /><span><b>Class leaderboard</b><small>See how your points compare this week, this month and all time.</small></span><Icon name="next" size={18} /></Link>
 
       <h2 className="section-title">Settings</h2>
-      <form action={saveSettings} className="stack card-static settings-form">
-        <fieldset>
-          <legend>Daily goal</legend>
-          <div className="goal-opts">
-            {GOALS.map((g) => (
-              <label key={g.id} className="choice"><input type="radio" name="goal" value={g.id} defaultChecked={settings.goal === g.id} /><span><b>{g.label}</b> · {g.id} points<small>{g.blurb}</small></span></label>
-            ))}
-          </div>
-        </fieldset>
-        <label className="field">Display name on the class board
-          <input name="name" defaultValue={settings.name ?? ""} maxLength={24} placeholder="Leave empty to appear as “Student”" autoComplete="nickname" />
-        </label>
-        <label className="check"><input type="checkbox" name="showBoard" defaultChecked={settings.showBoard} /> Show me on the class leaderboard</label>
-        <label className="check"><input type="checkbox" name="remind" defaultChecked={settings.remind} /> Email me a reminder in the evening if I have not practised yet</label>
-        <button className="btn">Save</button>
-      </form>
+      <SettingsForm settings={settings} />
     </main>
   );
 }

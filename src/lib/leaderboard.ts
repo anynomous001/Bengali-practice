@@ -1,13 +1,13 @@
 import { query } from "./db";
-import { loadStats } from "./activity";
+import { getSettings, loadStats } from "./activity";
 import { addDays } from "./streak";
 import { BUDDIES, BUDDY_MAX_REAL } from "@/data/buddies";
 
 export type Range = "week" | "month" | "all";
-export const RANGES: { id: Range; label: string; days: number | null; baseline: number }[] = [
-  { id: "week", label: "This week", days: 7, baseline: 90 },
-  { id: "month", label: "This month", days: 30, baseline: 320 },
-  { id: "all", label: "All time", days: null, baseline: 600 },
+export const RANGES: { id: Range; label: string; days: number | null }[] = [
+  { id: "week", label: "This week", days: 7 },
+  { id: "month", label: "This month", days: 30 },
+  { id: "all", label: "All time", days: null },
 ];
 
 export type BoardRow = { name: string; points: number; streak: number; you: boolean; buddy: boolean };
@@ -24,7 +24,7 @@ function seeded(text: string): number {
   return ((h >>> 0) % 1000) / 1000;
 }
 
-export async function loadLeaderboard(email: string, range: Range): Promise<{ rows: BoardRow[]; hidden: boolean; buddiesShown: boolean }> {
+export async function loadLeaderboard(email: string, range: Range): Promise<{ rows: BoardRow[]; hidden: boolean; buddiesShown: boolean; goal: number }> {
   const def = RANGES.find((r) => r.id === range)!;
   const today = new Date().toISOString().slice(0, 10);
   const from = def.days ? addDays(today, -(def.days - 1)) : "0000-00-00";
@@ -48,15 +48,17 @@ export async function loadLeaderboard(email: string, range: Range): Promise<{ ro
   let buddies: BoardRow[] = [];
   const buddiesShown = real.length < BUDDY_MAX_REAL && (await buddiesOn());
   if (buddiesShown) {
-    // Stay close to the real students: use the middle of their scores, and a typical score only while nobody has any yet.
-    const sorted = real.map((r) => r.points).filter((p) => p > 0).sort((a, b) => a - b);
-    const ref = sorted.length ? sorted[Math.floor(sorted.length / 2)] : def.baseline;
+    // Buddies keep a pace based on the viewer's own daily goal, so the goal is also a place on the board to aim for.
+    const goal = (await getSettings(email)).goal;
+    const joined = (await query<{ d: Date }>("SELECT created_at AS d FROM students WHERE email = $1", [email]))[0]?.d;
+    const sinceJoin = joined ? Math.ceil((Date.now() - joined.getTime()) / 864e5) : 7;
+    const days = def.days ?? Math.min(365, Math.max(7, sinceJoin));
     buddies = BUDDIES.map((b) => {
-      const wobble = 0.9 + seeded(b.name + today) * 0.2;
-      return { name: b.name, points: Math.round(ref * b.factor * wobble), streak: 2 + Math.floor(seeded(b.name) * 12), you: false, buddy: true };
+      const wobble = 0.95 + seeded(b.name + today) * 0.1;
+      return { name: b.name, points: Math.round(goal * days * b.factor * wobble), streak: 2 + Math.floor(seeded(b.name) * 12), you: false, buddy: true };
     });
   }
   const rows = [...real, ...buddies].sort((a, b) => b.points - a.points || b.streak - a.streak);
   const hidden = !visible.some((s) => s.email === email);
-  return { rows, hidden, buddiesShown };
+  return { rows, hidden, buddiesShown, goal: (await getSettings(email)).goal };
 }
