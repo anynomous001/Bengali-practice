@@ -6,7 +6,7 @@ import { speak } from "@/lib/speak";
 import type { VocabTopic as Topic, Word } from "@/data/vocabulary";
 import Icon from "../../Icon";
 import { useRoman } from "../../Roman";
-import WordRow from "../../WordRow";
+import WordRow, { isLong } from "../../WordRow";
 
 type Kind = "bn2en" | "en2bn" | "listen";
 type Q = { kind: Kind; word: Word; options: Word[]; correct: number };
@@ -73,7 +73,7 @@ export default function VocabTopic({ topic, best, quizLen, flashHref, devotional
           {topic.sections.map((s, si) => (
             <section key={s.title} id={`sec-w${si}`} className="vsection">
               <h2>{s.title} <span>{s.words.length}</span></h2>
-              <ul className="wlist">
+              <ul className={"wlist" + (s.words.some((w) => isLong(w[0])) ? " one" : "")}>
                 {s.words.map((w) => <li key={w[0]}><WordRow bn={w[0]} roman={w[1]} en={w[2]} hideMeaning={cover} /></li>)}
               </ul>
             </section>

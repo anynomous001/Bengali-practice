@@ -872,3 +872,12 @@ a.adm-stat:hover { box-shadow: var(--shadow-hover); }
 .nnum { font-size: 1.5rem; font-weight: 700; line-height: 1.2; }
 .nword { font-size: .95rem; }
 .nrom { font-size: .78rem; color: var(--ink-2); }
+
+/* long lines and verses: one per row, stacked */
+.wlist.one { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+.wrow.long { grid-template-columns: auto minmax(0, 1fr); align-items: start; padding: 18px 18px 16px; gap: 6px 16px; }
+.wrow.long .wplay { margin-top: 4px; }
+.wrow.long .wbn { font-size: 1.45rem; line-height: 1.65; }
+.wrow.long .wro { font-size: .92rem; line-height: 1.55; margin-top: 6px; }
+.wrow.long .wen { grid-column: 2; margin-top: 8px; padding: 10px 0 0; border-top: 1px solid var(--line); font-size: 1rem; line-height: 1.55; }
+.wrow.long .wen.covered { padding: 10px; border-top: 0; }
