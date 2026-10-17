@@ -47,8 +47,8 @@ export const COURSES: Course[] = [
         { id: "reading/alphabet", title: "Alphabet", blurb: "Every vowel and consonant, with a quiz: letter to word and word to letter.", href: "/learn/reading/alphabet", kind: "Lesson" },
         { id: "reading/matras", title: "Vowel signs (কার)", blurb: "What each sign looks like, where it goes, and how to read it.", href: "/learn/reading/matras", kind: "Lesson" },
       ] },
-      { id: "numbers", title: "Numbers and money", blurb: "Read the numerals you will see on prices and signs.", lessons: [
-        { id: "reading/numbers", title: "Numbers and money", blurb: "Numeral to word and word to numeral, with prices in টাকা.", href: "/learn/reading/numbers", kind: "Practice" },
+      { id: "numbers", title: "Numbers, money and time", blurb: "Numbers, prices, days and months: learn them, then practise.", lessons: [
+        { id: "reading/numbers", title: "Numbers, money and time", blurb: "Numbers 0 to 100, prices in টাকা, days and months, then a quiz.", href: "/learn/reading/numbers", kind: "Lesson" },
       ] },
       { id: "stories", title: "Stories", blurb: "Short fables, each in layers: words, Bengali only, line by line, English, quiz.", lessons:
         STORIES.map((s) => ({ id: `reading/story-${s.id}`, title: s.title[2], blurb: `${s.title[0]} · Level ${s.level} · ${s.lines.length + 1} lines`, href: `/learn/reading/stories/${s.id}`, kind: "Quiz" as Kind })) },
