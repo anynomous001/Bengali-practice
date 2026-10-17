@@ -14,7 +14,7 @@ export default async function LeaderboardPage({ searchParams }: { searchParams: 
   const row = (x: (typeof rows)[number], i: number) => (
     <li key={i} className={(x.you ? "you " : "") + (i < 3 ? "podium" : "")}>
       <span className="rank">{i + 1}</span>
-      <span className="who">{x.name}{x.you && " (you)"}{x.buddy && <span className="buddy-tag">Practice buddy</span>}</span>
+      <span className="who">{x.name}{x.you && " (you)"}{x.buddy && <span className="buddy-tag">Practice buddy</span>}{x.tag && <span className={"pace-tag " + x.tag.tone}>{x.tag.text}</span>}</span>
       <span className="streak"><Icon name="flame" size={14} weight="fill" />{x.streak}</span>
       <b>{x.points}</b>
     </li>

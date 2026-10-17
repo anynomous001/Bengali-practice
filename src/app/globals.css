@@ -852,3 +852,9 @@ a.adm-stat:hover { box-shadow: var(--shadow-hover); }
 .toast.bad { border-left-color: var(--bad); }
 .toast button { background: none; border: 0; color: inherit; font-size: 1.2rem; line-height: 1; cursor: pointer; opacity: .7; }
 @keyframes toast-in { from { transform: translateY(10px); opacity: 0; } to { transform: none; opacity: 1; } }
+
+.pace-tag { display: inline-block; margin-left: 8px; padding: 2px 9px; border-radius: 999px; font-size: .72rem; font-weight: 700; white-space: nowrap; }
+.pace-tag.great { background: color-mix(in srgb, var(--ok) 16%, var(--surface)); color: var(--ok); }
+.pace-tag.good { background: color-mix(in srgb, var(--gold) 18%, var(--surface)); color: var(--gold); }
+.pace-tag.push { background: var(--surface-2); color: var(--ink-2); }
+@media (max-width: 560px) { .board .who { display: flex; flex-wrap: wrap; gap: 4px 0; } .pace-tag, .buddy-tag { margin-left: 0; margin-right: 6px; } }
