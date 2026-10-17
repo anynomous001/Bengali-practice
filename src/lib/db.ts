@@ -131,6 +131,16 @@ const SCHEMA = `
       seen boolean NOT NULL DEFAULT false,
       PRIMARY KEY (email, key)
     );
+    CREATE TABLE IF NOT EXISTS feedback (
+      id bigserial PRIMARY KEY,
+      email text NOT NULL,
+      area text NOT NULL,
+      ref text NOT NULL DEFAULT '',
+      topic text NOT NULL,
+      message text NOT NULL DEFAULT '',
+      resolved boolean NOT NULL DEFAULT false,
+      created_at timestamptz NOT NULL DEFAULT now()
+    );
     CREATE TABLE IF NOT EXISTS flashcards (
       email text NOT NULL,
       card_id text NOT NULL,

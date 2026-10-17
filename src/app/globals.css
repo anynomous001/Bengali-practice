@@ -781,3 +781,6 @@ html { scroll-behavior:smooth; } @media (prefers-reduced-motion: reduce) { html 
 .place-switch button.on { background: var(--blue, #3830d0); color: #fff; }
 .place-en { font-size: 0.8em; font-weight: 500; opacity: 0.7; }
 .place-how, .place-line { margin: 0 0 10px; opacity: 0.85; }
+.linkbtn { background: none; border: 0; padding: 0; font: inherit; text-decoration: underline; cursor: pointer; opacity: 0.75; color: inherit; }
+.fb-form { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 8px 0; }
+.fb-form input { flex: 1 1 200px; }

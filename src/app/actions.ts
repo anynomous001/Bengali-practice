@@ -80,6 +80,18 @@ export async function recordAnswer(letter: string, correct: boolean) {
   if (correct) await recordActivity(user.email, "drill", letter);
 }
 
+const FEEDBACK_TOPICS = ["Sound is wrong", "Tip is unclear", "Example word is wrong", "Place of sound is wrong", "Other"];
+
+/** A student's note on one letter. Rows are read by the teacher on the admin page. */
+export async function sendLetterFeedback(letter: string, topic: string, message: string): Promise<{ ok: boolean }> {
+  const user = await getUser();
+  if (!user?.hasAccess || !LETTERS.some((l) => l.ch === letter) || !FEEDBACK_TOPICS.includes(topic)) return { ok: false };
+  const recent = await query<{ n: string }>("SELECT COUNT(*) AS n FROM feedback WHERE email = $1 AND created_at > now() - interval '1 hour'", [user.email]);
+  if (Number(recent[0]?.n ?? 0) >= 20) return { ok: false };
+  await query("INSERT INTO feedback (email, area, ref, topic, message) VALUES ($1, 'alphabet', $2, $3, $4)", [user.email, letter, topic, message.trim().slice(0, 500)]);
+  return { ok: true };
+}
+
 // Leitner boxes: days until a card is due again, by box.
 const INTERVAL_DAYS = [0, 1, 3, 7, 14, 30];
 

@@ -68,3 +68,11 @@ export async function inviteSomeone(fd: FormData) {
   }
   redirect(`/admin?invite=${result}&to=${encodeURIComponent(email)}`);
 }
+
+export async function resolveFeedback(fd: FormData) {
+  await requireAdmin();
+  const id = Number(fd.get("id"));
+  if (!Number.isInteger(id)) return;
+  await query("UPDATE feedback SET resolved = NOT resolved WHERE id = $1", [id]);
+  revalidatePath("/admin");
+}

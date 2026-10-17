@@ -2,7 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getUser } from "@/lib/auth";
 import { query } from "@/lib/db";
-import { addStudent, grantYear, inviteSomeone, removeStudent, revokeAccess } from "./actions";
+import { addStudent, grantYear, inviteSomeone, removeStudent, resolveFeedback, revokeAccess } from "./actions";
+import { LETTERS, PLACES } from "@/data/letters";
 import Icon from "../learn/Icon";
 import { loadTeacherView } from "@/lib/activity";
 
@@ -19,6 +20,19 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
   const orders = await query<{ email: string; amount: number; currency: string; payment_id: string; paid_at: Date }>(
     "SELECT email, amount, currency, payment_id, paid_at FROM orders WHERE status = 'paid' ORDER BY paid_at DESC LIMIT 20",
   );
+
+  const feedback = await query<{ id: number; email: string; ref: string; topic: string; message: string; resolved: boolean; created_at: Date }>(
+    "SELECT id, email, ref, topic, message, resolved, created_at FROM feedback ORDER BY resolved, created_at DESC LIMIT 50",
+  );
+  const answers = await query<{ letter: string; r: string; w: string }>("SELECT letter, SUM(right_count) AS r, SUM(wrong_count) AS w FROM progress GROUP BY letter");
+  const tally = new Map(answers.map((a) => [a.letter, { r: Number(a.r), w: Number(a.w) }]));
+  const byPlace = PLACES.map((p) => {
+    let r = 0, w = 0;
+    for (const l of LETTERS.filter((x) => x.place === p.id)) { const t = tally.get(l.ch); if (t) { r += t.r; w += t.w; } }
+    return { ...p, r, w };
+  }).filter((p) => p.r + p.w > 0);
+  const hardest = LETTERS.map((l) => ({ ch: l.ch, ...(tally.get(l.ch) ?? { r: 0, w: 0 }) }))
+    .filter((l) => l.r + l.w >= 5).map((l) => ({ ...l, miss: l.w / (l.r + l.w) })).sort((a, b) => b.miss - a.miss).slice(0, 8);
 
   return (
     <div className="page">
@@ -79,6 +93,33 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
           </div>
         ))}
         {!activity.length && <p className="muted">No students yet.</p>}
+      </div>
+
+      <h2>Letter feedback {feedback.some((f) => !f.resolved) && <span className="chip bad">{feedback.filter((f) => !f.resolved).length} open</span>}</h2>
+      <div className="list">
+        {feedback.map((f) => (
+          <div key={f.id} className="row">
+            <span>
+              <b lang="bn" className="tip-bn">{f.ref}</b> · {f.topic}{f.resolved && <span className="chip ok"> done</span>}
+              {f.message && <span className="muted"> · “{f.message}”</span>}
+              <span className="muted"> · {f.email} · {fmt(f.created_at)}</span>
+            </span>
+            <form action={resolveFeedback}><input type="hidden" name="id" value={f.id} /><button className="btn small ghost">{f.resolved ? "Reopen" : "Mark done"}</button></form>
+          </div>
+        ))}
+        {!feedback.length && <p className="muted">No feedback yet. Students can report a problem from any letter on the alphabet page.</p>}
+      </div>
+
+      <h2>Alphabet quiz results by sound place</h2>
+      <div className="list">
+        {byPlace.map((p) => (
+          <div key={p.id} className="row">
+            <span><b lang="bn">{p.bn}</b> <span className="muted">{p.en}</span></span>
+            <span className="muted">{Math.round((p.r / (p.r + p.w)) * 100)}% correct · {p.r + p.w} answers</span>
+          </div>
+        ))}
+        {!byPlace.length && <p className="muted">No quiz answers yet.</p>}
+        {hardest.length > 0 && <p className="muted">Hardest letters (most misses, at least 5 answers): {hardest.map((l) => `${l.ch} ${Math.round(l.miss * 100)}%`).join(" · ")}</p>}
       </div>
 
       <h2>Recent online payments</h2>

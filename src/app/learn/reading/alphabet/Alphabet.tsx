@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 import { PLACES, type Letter } from "@/data/letters";
-import { recordAnswer } from "../../../actions";
+import { recordAnswer, sendLetterFeedback } from "../../../actions";
 import { speak } from "@/lib/speak";
 import Icon from "../../Icon";
 import UnderlineTabs from "../../UnderlineTabs";
@@ -96,6 +96,7 @@ function Learn({ progress }: { progress: Progress }) {
             {place && (
               <p className="place-line">Made in the <b lang="bn">{place.bn}</b> place: {place.en}</p>
             )}
+            <LetterFeedback key={sel.ch} letter={sel.ch} />
             {sel.tip && (
               <div className="trick">
                 <b>Trick for saying it</b>
@@ -129,6 +130,24 @@ function Learn({ progress }: { progress: Progress }) {
         );
       })}
     </>
+  );
+}
+
+function LetterFeedback({ letter }: { letter: string }) {
+  const topics = ["Sound is wrong", "Tip is unclear", "Example word is wrong", "Place of sound is wrong", "Other"];
+  const [open, setOpen] = useState(false);
+  const [topic, setTopic] = useState(topics[0]);
+  const [msg, setMsg] = useState("");
+  const [state, setState] = useState<"idle" | "sent" | "failed">("idle");
+  if (state === "sent") return <p className="muted">Thank you. Your teacher will see this.</p>;
+  if (!open) return <p><button type="button" className="linkbtn" onClick={() => setOpen(true)}>Report a problem with this letter</button></p>;
+  return (
+    <form className="fb-form" onSubmit={async (e) => { e.preventDefault(); const r = await sendLetterFeedback(letter, topic, msg); setState(r.ok ? "sent" : "failed"); }}>
+      <select value={topic} onChange={(e) => setTopic(e.target.value)} aria-label="What is wrong">{topics.map((t) => <option key={t}>{t}</option>)}</select>
+      <input value={msg} onChange={(e) => setMsg(e.target.value)} maxLength={500} placeholder="Tell your teacher more (optional)" aria-label="More detail" />
+      <button className="btn small">Send</button>
+      {state === "failed" && <span className="msg bad" role="status">Could not send. Please try again.</span>}
+    </form>
   );
 }
 
@@ -168,6 +187,7 @@ function Quiz({ progress, onAnswer, modes }: { progress: Progress; onAnswer: (ch
     let pool = QUIZ_LETTERS;
     if (scope === "range") pool = rangePool;
     else if (scope === "weak") pool = pool.filter((l) => !mastered(progress, l.ch));
+    else if (scope.startsWith("place:")) pool = pool.filter((l) => l.place === scope.slice(6));
     else if (scope !== "all") pool = pool.filter((l) => l.group === scope);
     if (pool.length < 4) pool = QUIZ_LETTERS;
     setRun({ mode, queue: shuffle(pool).slice(0, 10), pool, i: 0, score: 0 });
@@ -187,6 +207,7 @@ function Quiz({ progress, onAnswer, modes }: { progress: Progress; onAnswer: (ch
           <option value="all">All letters</option>
           <option value="range">A range of letters (from … to …)</option>
           {GROUPS.map((g) => <option key={g.id} value={g.id}>{g.title}</option>)}
+          {PLACES.filter((p) => QUIZ_LETTERS.filter((l) => l.place === p.id).length >= 4).map((p) => <option key={p.id} value={"place:" + p.id}>Sound place: {p.bn}, {p.en}</option>)}
           <option value="weak">My weak letters</option>
         </select>
         {scope === "range" && (
