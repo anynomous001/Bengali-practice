@@ -12,10 +12,8 @@ import Taster from "./Taster";
 import StickyCta from "./StickyCta";
 import BuyLink from "./BuyLink";
 import PricingSeen from "./PricingSeen";
-import FlipCard from "./FlipCard";
 import LandingMotion from "./LandingMotion";
 import AssembleSentence from "./AssembleSentence";
-import PrepCounter from "./PrepCounter";
 import VowelStrip from "./VowelStrip";
 import { BUSINESS } from "@/data/business";
 import { QUOTES, TEACHER, type Quote } from "@/data/landing";
@@ -38,16 +36,10 @@ const COURSES = [
   { seg: "grammar", icon: "grammar", bn: "ব্যাকরণ", title: "Grammar", outcome: "Build correct sentences in every tense.", body: "Persons, verbs, tenses, karak and bibhakti with many examples, tense practice rounds, quick translation and a timed exam." },
 ] as const;
 
-const AUDIENCE: { kind: Quote["kind"]; title: string; body: string }[] = [
-  { kind: "heritage", title: "Heritage learners", body: "You grew up hearing Bengali at home and want to read it, speak it with your family, and finally understand the script." },
-  { kind: "partner", title: "Partners and in-laws", body: "Your partner, friends or relatives speak Bengali and you want to join the conversation, starting from zero." },
-  { kind: "devotee", title: "Devotees and readers", body: "You want to read bhajans, mantras and the words of the sādhu-saṅga in the original, with a separate devotional track." },
-];
-
-const STEPS = [
-  { n: "1", title: "Get access", body: "Pay once. No subscription, no password." },
-  { n: "2", title: "Sign in with your email", body: "We send you a sign-in link straight away. It works on phone and laptop." },
-  { n: "3", title: "Practice a little every day", body: "Ten minutes a day is enough. Streaks and goals keep you going; every lesson remembers where you stopped." },
+const AUDIENCE: { kind: Quote["kind"]; lead: string; body: string }[] = [
+  { kind: "heritage", lead: "You grew up hearing Bengali at home.", body: "You want to read it, speak it with your family, and finally understand the script. Most of my heritage learners start with the alphabet and are reading short stories within a few weeks." },
+  { kind: "partner", lead: "Your partner, friends or relatives speak Bengali.", body: "You want to join the conversation, starting from zero. We begin with the sounds and the greetings, then the words you will actually need at the table." },
+  { kind: "devotee", lead: "You want to read bhajans, mantras and the words of the sādhu-saṅga in the original.", body: "There is a separate devotional track for this, kept apart from the main course." },
 ];
 
 const POINTS = [
@@ -86,10 +78,24 @@ export default async function Home() {
   const hasProof = proofQuotes.length > 0 || TEACHER.stats.length > 0;
   const hasAbout = TEACHER.story.length > 0;
 
+  const shots = [
+    { id: "home", title: "Your home page", text: "Your streak, today's goal and exactly where you left off.", alt: "The learner home page showing a streak and the next lesson" },
+    { id: "flashcard", title: "Flashcards that remember", text: "Cards you miss come back sooner, so the words you know stay known.", alt: "A vocabulary flashcard" },
+    { id: "roleplay", title: `${SCENARIOS.length} role plays`, text: "Practice the market, the doctor and the phone, with the words you need and what goes wrong when you get them wrong.", alt: "A role play lesson" },
+    { id: "grammar", title: `${GRAMMAR.length} grammar topics`, text: "Persons, verbs, tenses, karak and more, each with exercises that explain every answer.", alt: "A grammar exercise" },
+    { id: "exam", title: "Timed exams", text: `${EXAMS.length} exams, ${Math.min(...EXAM_MINUTES)} to ${Math.max(...EXAM_MINUTES)} minutes each: grammar, vocabulary and listening. A score and what to fix.`, alt: "A timed exam in progress" },
+  ];
+  const alsoIn = [
+    { title: "Quick translation", text: "Translate short sentences both ways and see the right answer." },
+    { title: "Impromptu speaking", text: "Get a topic, prepare for a moment, then speak out loud against the clock." },
+    { title: "Story relay", text: "Build a story with a partner, one line each, using words you have just learned." },
+    { title: `${CLASSWORK.length} class worksheet sets`, text: "Worksheets from my own classes. Write your answer, then check it." },
+  ];
+
   return (
     <div className="lp">
-      <noscript><style>{".lp .eyebrow::before{transform:none!important}"}</style></noscript>
       <LandingMotion />
+
       <div className="lp-wrap">
         <header className="land-nav">
           <Link href="/" className="side-brand dark">
@@ -114,16 +120,40 @@ export default async function Home() {
           <div className="hero-copy">
             <p className="eyebrow">Practice built by an online Bengali teacher</p>
             <h1>Read, speak and write Bengali, <em>one short lesson a day.</em></h1>
-            <p className="lead">I teach Bengali online. My students needed somewhere to practice between lessons, so I built it: reading, speaking, vocabulary and grammar in one place.</p>
+            <p className="lead">I&apos;m Pritam. I teach Bengali online, one to one. This is where my students practice between our lessons, and now you can too.</p>
             <div className="cta">
               <BuyLink place="hero" className="btn">Start learning · {price} for 12 months</BuyLink>
               <a className="btn ghost" href="#try">Try a letter</a>
             </div>
-            <p className="trust-line">One payment · Nothing renews · No password</p>
+            <p className="trust-line">Pay once for a year. No password, just an email link.</p>
           </div>
           <Taster />
         </div>
       </section>
+
+      {hasAbout && (
+        <section className="lp-wrap about" id="about">
+          <div className={"about-grid" + (TEACHER.photo ? " has-photo" : "")}>
+            {TEACHER.photo && <Image src={TEACHER.photo} alt={`${TEACHER.name}, your Bengali teacher`} width={480} height={560} className="about-photo" />}
+            <div>
+              <h2>Why I built this</h2>
+              {TEACHER.story.map((p) => <p key={p} className="about-p">{p}</p>)}
+              <p className="about-sign">{TEACHER.name}</p>
+              {TEACHER.stats.length > 0 && (
+                <dl className="stat-row small">{TEACHER.stats.map((s) => <div key={s.label}><dt>{s.label}</dt><dd>{s.value}</dd></div>)}</dl>
+              )}
+              {TEACHER.worksheet && <Image src={TEACHER.worksheet} alt="A class worksheet" width={640} height={420} className="about-worksheet" />}
+              {TEACHER.videoSrc && (
+                <video className="about-video" controls playsInline preload="none" poster={TEACHER.videoPoster}>
+                  <source src={TEACHER.videoSrc} />
+                  {TEACHER.captionsSrc && <track kind="captions" src={TEACHER.captionsSrc} srcLang="en" label="English" default />}
+                </video>
+              )}
+              {TEACHER.liveLessonsUrl && <p><a className="quiet-link" href={TEACHER.liveLessonsUrl}>Want live lessons too? I teach one to one online.</a></p>}
+            </div>
+          </div>
+        </section>
+      )}
 
       {hasProof && (
         <section className="lp-wrap proof">
@@ -149,71 +179,45 @@ export default async function Home() {
       )}
 
       <div className="lp-wrap">
-        <section className="land-section">
-          <p className="eyebrow">Who it is for</p>
-          <h2>Made for people who want Bengali in their lives.</h2>
-          <div className="aud-grid">
+        <section className="land-section audience">
+          <h2>Who comes to me</h2>
+          <div className="audience-list">
             {AUDIENCE.map((a) => {
               const q = quoteFor(a.kind);
               return (
-                <article key={a.title} className="aud">
-                  <h3>{a.title}</h3>
-                  <p>{a.body}</p>
+                <div key={a.kind}>
+                  <p><b>{a.lead}</b> {a.body}</p>
                   {q && <blockquote className="aud-quote">“{q.text}”<cite>{q.name}, {q.city}</cite></blockquote>}
-                </article>
+                </div>
               );
             })}
           </div>
         </section>
 
         <section className="land-section" id="practice">
-          <p className="eyebrow">Ways to practice</p>
-          <h2>More ways to practice Bengali than any phrasebook.</h2>
-          <div className="bento">
-            <article className="tile-b span2" data-reveal>
-              <FlipCard front="জল" back="water" note="Cards you miss come back sooner." />
-              <div><h3>Flashcards that remember</h3><p>Tap the card to flip it. Easy cards come back after days, hard ones tomorrow.</p></div>
-            </article>
-            <article className="tile-b span2" data-reveal>
-              <svg className="ring" viewBox="0 0 64 64" aria-hidden><circle cx="32" cy="32" r="27" className="ring-track" /><circle cx="32" cy="32" r="27" className="ring-fill" pathLength="100" /><text x="32" y="37" textAnchor="middle" className="ring-text">{EXAM_MINUTES[0]}:00</text></svg>
-              <div><h3>Timed exams</h3><p>{EXAMS.length} exams, {Math.min(...EXAM_MINUTES)} to {Math.max(...EXAM_MINUTES)} minutes each: grammar, vocabulary and listening. A score and what to fix.</p></div>
-            </article>
-            <article className="tile-b">
-              <b className="big-n">{GRAMMAR.length}</b>
-              <div><h3>Grammar topics</h3><p>Persons, verbs, tenses, karak and more, each with exercises.</p></div>
-            </article>
-            <article className="tile-b">
-              <div className="trans" aria-hidden><span lang="bn">আমি বাংলা শিখছি।</span><span>I am learning Bengali.</span></div>
-              <div><h3>Quick translation</h3><p>Translate short sentences both ways and see the right answer.</p></div>
-            </article>
-            <article className="tile-b span2" data-reveal>
-              <div className="bubbles" aria-hidden><span className="bub them" lang="bn">এটা কত টাকা?</span><span className="bub you">How much is this?</span></div>
-              <div><h3>{SCENARIOS.length} role plays</h3><p>Practice the market, the doctor and the phone, with the words you need and what goes wrong when you get them wrong.</p></div>
-            </article>
-            <article className="tile-b span2">
-              <div className="timers" aria-hidden><span><small>Prep</small><PrepCounter /></span><Icon name="arrow" size={18} /><span><small>Speak</small>1:00</span></div>
-              <div><h3>Impromptu speaking</h3><p>Get a topic, prepare for a moment, then speak out loud against the clock.</p></div>
-            </article>
-            <article className="tile-b" data-reveal>
-              <div className="bubbles relay" aria-hidden>
-                <span className="bub them"><span lang="bn">একদিন একটা বিড়াল...</span><small>Once there was a cat...</small></span>
-                <span className="bub you"><span lang="bn">...সে বাজারে গেল।</span><small>...it went to the market.</small></span>
-              </div>
-              <div><h3>Story relay</h3><p>Build a story with a partner, one line each, using words you have just learned.</p></div>
-            </article>
-            <article className="tile-b">
-              <b className="big-n">{CLASSWORK.length}</b>
-              <div><h3>Class worksheet sets</h3><p>Worksheets from my own classes. Write your answer, then check it.</p></div>
-            </article>
+          <h2 className="h-xl">What you&apos;ll do here</h2>
+          <div className="shows">
+            {shots.map((sh) => (
+              <article key={sh.id} className="show">
+                <figure className="shot">
+                  <Image className="shot-d" src={`/landing/shots/${sh.id}-1440.webp`} width={1440} height={900} sizes="(max-width: 900px) 100vw, 720px" alt={sh.alt} />
+                  <Image className="shot-m" src={`/landing/shots/${sh.id}-390.webp`} width={780} height={1688} sizes="320px" alt={sh.alt} />
+                </figure>
+                <div className="show-text"><h3>{sh.title}</h3><p>{sh.text}</p></div>
+              </article>
+            ))}
           </div>
+          <h3 className="also-h">Also in the box</h3>
+          <dl className="also">
+            {alsoIn.map((a) => <div key={a.title}><dt>{a.title}</dt><dd>{a.text}</dd></div>)}
+          </dl>
           <ul className="points">
             {POINTS.map((p) => <li key={p.title}><b>{p.title}</b><span>{p.body}</span></li>)}
           </ul>
         </section>
 
         <section className="land-section" id="learn">
-          <p className="eyebrow">What you will practice</p>
-          <h2>Four courses, taken in order.</h2>
+          <h2>Four courses, in the order I teach them.</h2>
           <div className="feature-grid">
             {COURSES.map((f) => (
               <article key={f.title} className="feature" data-seg={f.seg}>
@@ -228,43 +232,9 @@ export default async function Home() {
           <p className="muted land-note">Plus a separate <b>devotional track</b> with mantras, bhajans and passages from the sādhu-saṅga, kept apart from the main course.</p>
         </section>
 
-        <section className="land-section">
-          <p className="eyebrow">How it works</p>
-          <h2>Start in two minutes.</h2>
-          <ol className="steps">
-            {STEPS.map((s) => <li key={s.n}><span className="step-n">{s.n}</span><div><b>{s.title}</b><p>{s.body}</p></div></li>)}
-          </ol>
-        </section>
-
-        {hasAbout && (
-          <section className="land-section about" id="about">
-            <div className={"about-grid" + (TEACHER.photo ? " has-photo" : "")}>
-              {TEACHER.photo && <Image src={TEACHER.photo} alt={`${TEACHER.name}, your Bengali teacher`} width={480} height={560} className="about-photo" />}
-              <div>
-                <p className="eyebrow">Why I built this</p>
-                <h2>Practice that comes from real lessons.</h2>
-                {TEACHER.story.map((p) => <p key={p} className="about-p">{p}</p>)}
-                <p className="about-sign">{TEACHER.name}</p>
-                {TEACHER.stats.length > 0 && (
-                  <dl className="stat-row small">{TEACHER.stats.map((s) => <div key={s.label}><dt>{s.label}</dt><dd>{s.value}</dd></div>)}</dl>
-                )}
-                {TEACHER.worksheet && <Image src={TEACHER.worksheet} alt="A class worksheet" width={640} height={420} className="about-worksheet" />}
-                {TEACHER.videoSrc && (
-                  <video className="about-video" controls playsInline preload="none" poster={TEACHER.videoPoster}>
-                    <source src={TEACHER.videoSrc} />
-                    {TEACHER.captionsSrc && <track kind="captions" src={TEACHER.captionsSrc} srcLang="en" label="English" default />}
-                  </video>
-                )}
-                {TEACHER.liveLessonsUrl && <p><a className="quiet-link" href={TEACHER.liveLessonsUrl}>Want live lessons too? I teach one to one online.</a></p>}
-              </div>
-            </div>
-          </section>
-        )}
-
         <section className="land-section" id="pricing">
           <div className="offer">
             <div>
-              <p className="eyebrow">Simple pricing</p>
               <h2>One price. Twelve months. Nothing renews.</h2>
               <p className="lead">New activities are added during your year. Renew early and 12 months are added on. Know someone who would like it? Every student gets a link that adds 3 months to their plan for each friend who joins.</p>
               <p className="lead compare">Most language apps charge $9 to $20 every month and renew automatically.</p>
@@ -274,6 +244,7 @@ export default async function Home() {
               <ul className="ticks">
                 <li>All four courses and the devotional track</li>
                 <li>Flashcards, streaks and progress saved</li>
+                <li>You get a sign-in link by email; no password</li>
                 <li>{india ? "Pay by UPI or card, in rupees" : "Pay by card in US dollars; students in India pay in rupees by UPI"}</li>
                 <li>No subscription, nothing renews by itself</li>
               </ul>
@@ -285,9 +256,8 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="land-section" id="faq">
-          <p className="eyebrow">Questions</p>
-          <h2>Good to know before you start.</h2>
+        <section className="land-section faq-section" id="faq">
+          <h2 className="h-sm">Good to know before you start.</h2>
           <div className="faq">
             {FAQ.map((f) => (
               <details key={f.q}>
@@ -312,7 +282,6 @@ export default async function Home() {
           </div>
         </div>
       </section>
-
       </main>
 
       <div className="lp-wrap"><SiteFooter /></div>

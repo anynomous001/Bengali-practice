@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { cookies } from "next/headers";
-import { Noto_Sans_Bengali, Noto_Serif_Bengali, Plus_Jakarta_Sans } from "next/font/google";
+import { Newsreader, Noto_Sans_Bengali, Noto_Serif_Bengali, Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/lib/site";
 import "./globals.css";
@@ -16,6 +16,8 @@ export const viewport: Viewport = { width: "device-width", initialScale: 1, them
 
 // Fonts are downloaded at build time and served from this site, so the page never waits on a font stylesheet from another host.
 const ui = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], style: ["normal", "italic"], display: "swap", variable: "--f-ui" });
+// A Latin serif for the landing page headings, chosen to sit beside Noto Serif Bengali.
+const serif = Newsreader({ subsets: ["latin"], style: ["normal", "italic"], display: "swap", variable: "--f-serif" });
 const bnSans = Noto_Sans_Bengali({ subsets: ["bengali"], weight: ["400", "500", "600", "700"], display: "swap", variable: "--f-bn", preload: false });
 const bnSerif = Noto_Serif_Bengali({ subsets: ["bengali"], weight: ["400", "500", "600", "700"], display: "swap", variable: "--f-bn-serif", preload: false });
 
@@ -25,7 +27,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const t = (await cookies()).get("bp_theme")?.value;
   const theme = t === "light" || t === "dark" ? t : undefined; // otherwise follow the system
   return (
-    <html lang="en" data-theme={theme} className={`${ui.variable} ${bnSans.variable} ${bnSerif.variable}`} suppressHydrationWarning>
+    <html lang="en" data-theme={theme} className={`${ui.variable} ${serif.variable} ${bnSans.variable} ${bnSerif.variable}`} suppressHydrationWarning>
       <head>
         {/* Animated parts of the home page start hidden only when this class is set. Without it, or without JavaScript, every page shows its finished state. */}
         <script dangerouslySetInnerHTML={{ __html: MOTION_OK }} />
