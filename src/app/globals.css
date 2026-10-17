@@ -926,3 +926,6 @@ a.adm-stat:hover { box-shadow: var(--shadow-hover); }
 .sticky-cta .btn { width: 100%; margin: 0; }
 @media (max-width: 760px) { .sticky-cta { display: block; } .sticky-cta.on { transform: none; } }
 @media (max-width: 899px) { .land-section.try { grid-template-columns: minmax(0, 1fr); } }
+
+.promise { margin: 12px 0 4px; text-align: center; font-weight: 600; color: var(--ink); }
+.offer-card .fine, .price-card .fine { margin-top: 6px; }

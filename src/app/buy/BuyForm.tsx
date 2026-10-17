@@ -1,5 +1,6 @@
 "use client";
 
+import { track } from "@vercel/analytics";
 import { useState } from "react";
 
 type RzResponse = { razorpay_order_id: string; razorpay_payment_id: string; razorpay_signature: string };
@@ -19,7 +20,7 @@ function loadCheckout(): Promise<void> {
   });
 }
 
-export default function BuyForm({ price, inr, rate, fixedInr, start, knownEmail, refCode, children }: { refCode?: string; children?: React.ReactNode; price: number; inr: number; rate: number; fixedInr: boolean; start: "USD" | "INR"; knownEmail?: string }) {
+export default function BuyForm({ price, inr, rate, fixedInr, start, knownEmail, refCode, refundDays, children }: { refCode?: string; refundDays?: number; children?: React.ReactNode; price: number; inr: number; rate: number; fixedInr: boolean; start: "USD" | "INR"; knownEmail?: string }) {
   const [currency, setCurrency] = useState<"USD" | "INR">(start);
   const shown = currency === "INR" ? `₹${inr.toLocaleString("en-IN")}` : `$${price}`;
   const [email, setEmail] = useState(knownEmail ?? "");
@@ -34,6 +35,7 @@ export default function BuyForm({ price, inr, rate, fixedInr, start, knownEmail,
     if (email.trim().toLowerCase() !== again.trim().toLowerCase()) { setError("The two email addresses do not match. Access is sent to this address, so please check it."); return; }
     setBusy(true);
     try {
+      track("checkout_started", { currency });
       const res = await fetch("/api/checkout/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -106,6 +108,7 @@ export default function BuyForm({ price, inr, rate, fixedInr, start, knownEmail,
         </>
       )}
       <button className="btn" disabled={busy}>{busy ? "Please wait…" : `Pay ${shown}`}</button>
+      {refundDays ? <p className="promise">Not for you? Email us within {refundDays} days for a full refund.</p> : null}
       {error && <p className="msg bad" role="alert">{error}</p>}
     </form>
   );

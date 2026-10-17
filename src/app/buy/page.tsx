@@ -3,6 +3,7 @@ import { getUser } from "@/lib/auth";
 import { headers } from "next/headers";
 import { defaultCurrency, priceInr, priceUsd } from "@/lib/pricing";
 import { codeIsValid } from "@/lib/referrals";
+import { BUSINESS } from "@/data/business";
 import AuthFrame from "../AuthFrame";
 import BuyForm from "./BuyForm";
 
@@ -18,7 +19,7 @@ export default async function BuyPage({ searchParams }: { searchParams: Promise<
       <h1>12 months of Bengali practice</h1>
       {referred && <p className="msg good">A friend invited you. Welcome! They get a thank-you when you join.</p>}
       <div className="price-card">
-        <BuyForm price={price} inr={inr.amount} rate={Math.round(inr.rate * 100) / 100} fixedInr={inr.fixed} start={start} knownEmail={user?.email} refCode={referred ? ref : undefined}>
+        <BuyForm price={price} inr={inr.amount} rate={Math.round(inr.rate * 100) / 100} fixedInr={inr.fixed} start={start} knownEmail={user?.email} refCode={referred ? ref : undefined} refundDays={BUSINESS.refundDays}>
           <ul className="ticks">
             <li>Reading, speaking, vocabulary and grammar courses</li>
             <li>Role plays, quick translation and timed exams</li>

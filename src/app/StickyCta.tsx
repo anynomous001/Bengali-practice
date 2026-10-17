@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import BuyLink from "./BuyLink";
 import { useEffect, useState } from "react";
 
 /** A thin bar with the way in, shown on phones once the visitor has scrolled past the top. */
@@ -18,7 +18,7 @@ export default function StickyCta({ label }: { label: string }) {
   }, []);
   return (
     <div className={"sticky-cta" + (show ? " on" : "")} aria-hidden={!show}>
-      <Link className="btn" href="/buy" tabIndex={show ? 0 : -1}>{label}</Link>
+      <BuyLink place="sticky" className="btn">{label}</BuyLink>
     </div>
   );
 }

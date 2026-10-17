@@ -1,8 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getUser } from "@/lib/auth";
 import { logout } from "../actions";
 import AuthFrame from "../AuthFrame";
+
+export const metadata: Metadata = { robots: { index: false } };
 
 export default async function AccessEnded() {
   const user = await getUser();

@@ -4,12 +4,12 @@ export const BUSINESS = {
   name: "Bengali Practice",
   /** Product name used in the policies. */
   product: "Bengali Practice",
-  email: "chakrobortypritam.work@gmail.com",
+  email: "hello@gencore.co.in",
   phone: "+91 98743 53532",
   address: "Ichapur, Kolkata, West Bengal 743144, India",
   /** Days after payment in which a refund can be asked for. */
   refundDays: 7,
   /** Updated whenever the policies change. */
-  updated: "13 October 2026",
+  updated: "17 October 2026",
 };
 export const PRICE_NOTE = "US dollars";

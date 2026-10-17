@@ -1,8 +1,11 @@
+import type { Metadata } from "next";
 import AuthFrame from "../../AuthFrame";
 import { verifyLogin } from "../../actions";
 
 // The link only shows a button; the token is consumed on click, so email
 // scanners that pre-fetch links can't use it up.
+export const metadata: Metadata = { robots: { index: false } };
+
 export default async function VerifyPage({ searchParams }: { searchParams: Promise<{ token?: string }> }) {
   const { token } = await searchParams;
   return (

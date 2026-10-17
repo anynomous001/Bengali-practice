@@ -6,6 +6,8 @@ import { headers } from "next/headers";
 import { defaultCurrency, priceInr, priceUsd } from "@/lib/pricing";
 import Taster from "./Taster";
 import StickyCta from "./StickyCta";
+import BuyLink from "./BuyLink";
+import PricingSeen from "./PricingSeen";
 import { BUSINESS } from "@/data/business";
 import Icon from "./learn/Icon";
 import { SiteFooter } from "./legal/LegalPage";
@@ -44,7 +46,7 @@ const FAQ = [
   { q: "Is it a subscription?", a: "No. You pay once for 12 months of access. It does not renew by itself, and if you renew early the 12 months are added on." },
   { q: "Can I pay from India?", a: "Yes. Students in India can pay in rupees by UPI or card. Everyone else pays in US dollars by card. Payments are handled by Razorpay." },
   { q: "Does it work on my phone?", a: "Yes. Every lesson, quiz and recording works on phones, tablets and laptops." },
-  { q: "What about refunds?", a: "Please read our refund policy before you buy. If anything goes wrong with a payment, write to us and we will sort it out." },
+  { q: "What about refunds?", a: `Not for you? Email ${BUSINESS.email} within ${BUSINESS.refundDays} days of paying for a full refund. If anything goes wrong with a payment, write to us and we will sort it out.` },
   { q: "Who is behind this?", a: `Bengali Practice is run from ${BUSINESS.address.split(",").slice(0, 2).join(",")} and built from one teacher's lessons. You can write to ${BUSINESS.email} with any question.` },
 ];
 
@@ -67,7 +69,7 @@ export default async function Home() {
           <a href="#pricing" className="navlink">Pricing</a>
           <a href="#faq" className="navlink">FAQ</a>
           <Link href="/login" className="navbtn">Sign in</Link>
-          <Link href="/buy" className="btn small">Get access</Link>
+          <BuyLink place="nav" className="btn small">Get access</BuyLink>
         </nav>
       </header>
 
@@ -77,7 +79,7 @@ export default async function Home() {
           <h1>Read, speak and write Bengali, <em>one short lesson a day.</em></h1>
           <p className="lead">Courses built around one teacher&apos;s real lessons in Kolkata. Start from the alphabet, hear every word, and practise with quizzes, flashcards and exams that remember where you are.</p>
           <div className="cta">
-            <Link className="btn" href="/buy">Start learning · {price} for 12 months</Link>
+            <BuyLink place="hero" className="btn">Start learning · {price} for 12 months</BuyLink>
             <a className="btn ghost" href="#try">Try a free mini-quiz</a>
           </div>
           <ul className="trust">
@@ -171,8 +173,9 @@ export default async function Home() {
               <li>{india ? "Pay by UPI or card, in rupees" : "Pay by card in US dollars; students in India pay in rupees by UPI"}</li>
               <li>No subscription, nothing renews by itself</li>
             </ul>
-            <Link className="btn" href="/buy">Get 12 months · {price}</Link>
-            <p className="fine">Secure payment by Razorpay. See the <Link href="/refunds">refund policy</Link>.</p>
+            <BuyLink place="pricing" className="btn">Get 12 months · {price}</BuyLink>
+            <p className="promise">Not for you? Email us within {BUSINESS.refundDays} days for a full refund.</p>
+            <p className="fine">Secure checkout by Razorpay · Visa · Mastercard · Amex · <Link href="/refunds">Refund policy</Link></p>
           </div>
         </div>
       </section>
@@ -191,12 +194,13 @@ export default async function Home() {
         <h2>Ready to read your first Bengali sentence?</h2>
         <p className="lead">Start today with the alphabet. Ten minutes a day is enough.</p>
         <div className="cta">
-          <Link className="btn" href="/buy">Start learning · {price}</Link>
+          <BuyLink place="final" className="btn">Start learning · {price}</BuyLink>
           <Link className="btn ghost" href="/login">Student sign in</Link>
         </div>
       </section>
 
       <SiteFooter />
+      <PricingSeen />
       <StickyCta label={`Start learning · ${price}`} />
     </div>
   );

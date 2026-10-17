@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
-import { useState } from "react";
+import { track } from "@vercel/analytics";
+import { useEffect, useState } from "react";
+import BuyLink from "./BuyLink";
 
 type Q = { prompt: React.ReactNode; hint: string; options: string[]; answer: string; after: string };
 
@@ -18,6 +19,7 @@ export default function Taster() {
   const [score, setScore] = useState(0);
   const done = i >= QUESTIONS.length;
   const q = QUESTIONS[i];
+  useEffect(() => { if (done) track("quiz_finished", { score }); }, [done]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (done) {
     return (
@@ -25,7 +27,7 @@ export default function Taster() {
         <h3>You got {score} of {QUESTIONS.length}.</h3>
         <p>That was one minute of a full alphabet course, 900 words and a full grammar course. Pick up where you left off, with every answer explained.</p>
         <div className="cta">
-          <Link className="btn" href="/buy">Start learning</Link>
+          <BuyLink place="quiz" className="btn">Start learning</BuyLink>
           <button type="button" className="btn ghost" onClick={() => { setI(0); setPicked(null); setScore(0); }}>Try again</button>
         </div>
       </div>

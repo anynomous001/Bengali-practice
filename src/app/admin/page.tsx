@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getUser } from "@/lib/auth";
@@ -20,6 +21,8 @@ const TABS = [
   { id: "payments", label: "Payments" },
 ] as const;
 type TabId = (typeof TABS)[number]["id"];
+
+export const metadata: Metadata = { robots: { index: false } };
 
 export default async function AdminPage({ searchParams }: { searchParams: Promise<{ tab?: string; invite?: string; to?: string; notice?: string }> }) {
   const { tab: tabParam, invite, to, notice } = await searchParams;

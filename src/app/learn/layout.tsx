@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Logo from "../Logo";
 import { cookies } from "next/headers";
 import Link from "next/link";
@@ -9,6 +10,8 @@ import NavLinks from "./NavLinks";
 import { EnglishToggle, RomanProvider, RomanToggle } from "./Roman";
 import ThemeToggle from "./ThemeToggle";
 import TzSync from "./TzSync";
+
+export const metadata: Metadata = { robots: { index: false } };
 
 export default async function LearnLayout({ children }: { children: React.ReactNode }) {
   const user = await getUser();
