@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "audio": "tsx scripts/make-audio.ts"
+    "audio": "tsx scripts/make-audio.ts",
+    "glyphs": "tsx scripts/make-glyph-paths.mts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1152.0",
@@ -29,6 +30,7 @@
     "@types/pg": "^8.23.1",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "harfbuzzjs": "^1.6.3",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   }

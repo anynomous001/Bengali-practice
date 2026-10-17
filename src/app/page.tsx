@@ -12,6 +12,10 @@ import StickyCta from "./StickyCta";
 import BuyLink from "./BuyLink";
 import PricingSeen from "./PricingSeen";
 import FlipCard from "./FlipCard";
+import LandingMotion from "./LandingMotion";
+import AssembleSentence from "./AssembleSentence";
+import PrepCounter from "./PrepCounter";
+import VowelStrip from "./VowelStrip";
 import { BUSINESS } from "@/data/business";
 import { QUOTES, TEACHER, type Quote } from "@/data/landing";
 import { VOCAB } from "@/data/vocabulary";
@@ -81,6 +85,8 @@ export default async function Home() {
 
   return (
     <div className="lp">
+      <noscript><style>{".lp .eyebrow::before{transform:none!important}"}</style></noscript>
+      <LandingMotion />
       <div className="lp-wrap">
         <header className="land-nav">
           <Link href="/" className="side-brand dark">
@@ -160,11 +166,11 @@ export default async function Home() {
           <p className="eyebrow">Ways to practice</p>
           <h2>More ways to practice Bengali than any phrasebook.</h2>
           <div className="bento">
-            <article className="tile-b span2">
+            <article className="tile-b span2" data-reveal>
               <FlipCard front="জল" back="water" note="Cards you miss come back sooner." />
               <div><h3>Flashcards that remember</h3><p>Tap the card to flip it. Easy cards come back after days, hard ones tomorrow.</p></div>
             </article>
-            <article className="tile-b span2">
+            <article className="tile-b span2" data-reveal>
               <svg className="ring" viewBox="0 0 64 64" aria-hidden><circle cx="32" cy="32" r="27" className="ring-track" /><circle cx="32" cy="32" r="27" className="ring-fill" pathLength="100" /><text x="32" y="37" textAnchor="middle" className="ring-text">{EXAM_MINUTES[0]}:00</text></svg>
               <div><h3>Timed exams</h3><p>{EXAMS.length} exams, {Math.min(...EXAM_MINUTES)} to {Math.max(...EXAM_MINUTES)} minutes each: grammar, vocabulary and listening. A score and what to fix.</p></div>
             </article>
@@ -176,19 +182,22 @@ export default async function Home() {
               <div className="trans" aria-hidden><span lang="bn">আমি বাংলা শিখছি।</span><span>I am learning Bengali.</span></div>
               <div><h3>Quick translation</h3><p>Translate short sentences both ways and see the right answer.</p></div>
             </article>
-            <article className="tile-b span2">
+            <article className="tile-b span2" data-reveal>
               <div className="bubbles" aria-hidden><span className="bub them" lang="bn">এটা কত টাকা?</span><span className="bub you">How much is this?</span></div>
               <div><h3>{SCENARIOS.length} role plays</h3><p>Practice the market, the doctor and the phone, with the words you need and what goes wrong when you get them wrong.</p></div>
             </article>
             <article className="tile-b span2">
-              <div className="timers" aria-hidden><span><small>Prep</small>0:30</span><Icon name="arrow" size={18} /><span><small>Speak</small>1:00</span></div>
+              <div className="timers" aria-hidden><span><small>Prep</small><PrepCounter /></span><Icon name="arrow" size={18} /><span><small>Speak</small>1:00</span></div>
               <div><h3>Impromptu speaking</h3><p>Get a topic, prepare for a moment, then speak out loud against the clock.</p></div>
             </article>
-            <article className="tile-b span2">
-              <div className="relay" aria-hidden><span className="chip">You</span><span className="chip">Partner</span><span className="chip">You</span></div>
+            <article className="tile-b" data-reveal>
+              <div className="bubbles relay" aria-hidden>
+                <span className="bub them"><span lang="bn">একদিন একটা বিড়াল...</span><small>Once there was a cat...</small></span>
+                <span className="bub you"><span lang="bn">...সে বাজারে গেল।</span><small>...it went to the market.</small></span>
+              </div>
               <div><h3>Story relay</h3><p>Build a story with a partner, one line each, using words you have just learned.</p></div>
             </article>
-            <article className="tile-b wide">
+            <article className="tile-b">
               <b className="big-n">{CLASSWORK.length}</b>
               <div><h3>Class worksheet sets</h3><p>Worksheets from my own classes. Write your answer, then check it.</p></div>
             </article>
@@ -208,6 +217,7 @@ export default async function Home() {
                 <h3><span className="seg-icon"><Icon name={f.icon} size={20} /></span>{f.title}</h3>
                 <p className="outcome">{f.outcome}</p>
                 <p>{f.body}</p>
+                {f.seg === "reading" && <VowelStrip />}
               </article>
             ))}
           </div>
@@ -289,7 +299,7 @@ export default async function Home() {
 
       <section className="band final-band">
         <div className="lp-wrap final">
-          <span className="final-bn" lang="bn" aria-hidden>বাংলা</span>
+          <AssembleSentence text="আমি বাংলা শিখছি।" roman="ami bangla shikhchhi" english="I am learning Bengali." />
           <h2>Ready to read your first Bengali sentence?</h2>
           <p className="lead">Start today with the alphabet. Ten minutes a day is enough.</p>
           <div className="cta">

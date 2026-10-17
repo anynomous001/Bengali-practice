@@ -5,6 +5,8 @@ import { useEffect, useRef, useState } from "react";
 import { CLIPS } from "@/data/landing";
 import { speak } from "@/lib/speak";
 import BuyLink from "./BuyLink";
+import BnPath, { type Phase } from "./BnPath";
+import { motionAllowed, prefersReducedMotion } from "./landing-motion";
 import Icon from "./learn/Icon";
 
 type Q = { bn: string; prompt: string; hint: string; options: string[]; answer: string; after: string };
@@ -29,10 +31,18 @@ export default function Taster() {
   const [score, setScore] = useState(0);
   const [canSpeak, setCanSpeak] = useState(false);
   const nextRef = useRef<HTMLButtonElement>(null);
+  // The letter draws itself like chalk. The phase is tied to the question it was set for, so a new question starts hidden, never flashes.
+  const [ph, setPh] = useState<{ i: number; v: Phase }>({ i: -1, v: "hold" });
+  const phase: Phase = ph.i === i ? ph.v : "hold";
   const done = i >= QUESTIONS.length;
   const q = QUESTIONS[i];
 
   useEffect(() => { setCanSpeak("speechSynthesis" in window); }, []);
+  useEffect(() => {
+    if (done) return;
+    const play = i === 0 ? motionAllowed() : !prefersReducedMotion();
+    setPh({ i, v: play ? "draw" : "done" });
+  }, [i, done]);
   useEffect(() => { if (done) track("quiz_finished", { score }); }, [done]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { if (picked) nextRef.current?.focus(); }, [picked]);
 
@@ -54,7 +64,7 @@ export default function Taster() {
       <p className="tq-step">Question {i + 1} of {QUESTIONS.length}</p>
       <p className="tq-prompt">{q.prompt}</p>
       <div className="tq-bn-row">
-        <span className="tq-bn" lang="bn">{q.bn}</span>
+        <span className="tq-bn"><BnPath key={i} text={q.bn} phase={phase} seconds={i === 0 ? 0.9 : 0.5} /></span>
         {canHear && <button type="button" className="tq-hear" onClick={() => hear(q.bn)}><Icon name="sound" size={18} /> Hear it</button>}
       </div>
       <div className="tq-opts" role="group" aria-label="Answers">
