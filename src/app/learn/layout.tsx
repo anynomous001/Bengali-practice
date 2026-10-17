@@ -52,6 +52,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
           <EnglishToggle label="English" />
           <ThemeToggle initial={theme} compact />
           <Link href="/learn/progress" className="icon-link" aria-label="My progress"><Icon name="trophy" size={18} /></Link>
+          <Link href="/learn/feedback" className="icon-link" aria-label="Feedback"><Icon name="feedback" size={18} /></Link>
           {user.isAdmin && <Link href="/admin" className="icon-link" aria-label="Admin"><Icon name="shield" size={18} /></Link>}
           <form action={logout}><button className="icon-link" aria-label="Sign out"><Icon name="logout" size={18} /></button></form>
         </header>

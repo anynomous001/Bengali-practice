@@ -21,8 +21,8 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
     "SELECT email, amount, currency, payment_id, paid_at FROM orders WHERE status = 'paid' ORDER BY paid_at DESC LIMIT 20",
   );
 
-  const feedback = await query<{ id: number; email: string; ref: string; topic: string; message: string; resolved: boolean; created_at: Date }>(
-    "SELECT id, email, ref, topic, message, resolved, created_at FROM feedback ORDER BY resolved, created_at DESC LIMIT 50",
+  const feedback = await query<{ id: number; email: string; area: string; ref: string; topic: string; message: string; resolved: boolean; created_at: Date }>(
+    "SELECT id, email, area, ref, topic, message, resolved, created_at FROM feedback ORDER BY resolved, created_at DESC LIMIT 50",
   );
   const answers = await query<{ letter: string; r: string; w: string }>("SELECT letter, SUM(right_count) AS r, SUM(wrong_count) AS w FROM progress GROUP BY letter");
   const tally = new Map(answers.map((a) => [a.letter, { r: Number(a.r), w: Number(a.w) }]));
@@ -95,19 +95,19 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
         {!activity.length && <p className="muted">No students yet.</p>}
       </div>
 
-      <h2>Letter feedback {feedback.some((f) => !f.resolved) && <span className="chip bad">{feedback.filter((f) => !f.resolved).length} open</span>}</h2>
+      <h2>Student feedback {feedback.some((f) => !f.resolved) && <span className="chip bad">{feedback.filter((f) => !f.resolved).length} open</span>}</h2>
       <div className="list">
         {feedback.map((f) => (
           <div key={f.id} className="row">
             <span>
-              <b lang="bn" className="tip-bn">{f.ref}</b> · {f.topic}{f.resolved && <span className="chip ok"> done</span>}
-              {f.message && <span className="muted"> · “{f.message}”</span>}
+              {f.area === "alphabet" ? <><span className="chip">Letter</span> <b lang="bn" className="tip-bn">{f.ref}</b></> : <span className="chip">App</span>} <b>{f.topic}</b>{f.resolved && <span className="chip ok"> done</span>}
+              {f.message && <span className="msg-text"> {f.message}</span>}
               <span className="muted"> · {f.email} · {fmt(f.created_at)}</span>
             </span>
             <form action={resolveFeedback}><input type="hidden" name="id" value={f.id} /><button className="btn small ghost">{f.resolved ? "Reopen" : "Mark done"}</button></form>
           </div>
         ))}
-        {!feedback.length && <p className="muted">No feedback yet. Students can report a problem from any letter on the alphabet page.</p>}
+        {!feedback.length && <p className="muted">No feedback yet. Students send ideas and problems from the Feedback page, or report a letter from the alphabet page.</p>}
       </div>
 
       <h2>Alphabet quiz results by sound place</h2>

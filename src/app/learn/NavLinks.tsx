@@ -11,6 +11,7 @@ const ITEMS: { href: string; label: string; bn?: string; icon: IconName; seg?: s
   { href: "/learn/vocabulary", label: "Vocabulary", bn: "শব্দ", icon: "vocabulary", seg: "vocabulary" },
   { href: "/learn/grammar", label: "Grammar", bn: "ব্যাকরণ", icon: "grammar", seg: "grammar" },
   { href: "/learn/progress", label: "My progress", icon: "trophy", sideOnly: true },
+  { href: "/learn/feedback", label: "Feedback", icon: "feedback", sideOnly: true },
 ];
 
 /** Primary navigation: a sidebar list on large screens, a bottom tab bar on small ones. */

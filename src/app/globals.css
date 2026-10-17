@@ -784,3 +784,6 @@ html { scroll-behavior:smooth; } @media (prefers-reduced-motion: reduce) { html 
 .linkbtn { background: none; border: 0; padding: 0; font: inherit; text-decoration: underline; cursor: pointer; opacity: 0.75; color: inherit; }
 .fb-form { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 8px 0; }
 .fb-form input { flex: 1 1 200px; }
+.fb-page-form label { display: grid; gap: 6px; font-weight: 600; }
+.fb-page-form textarea { font: inherit; padding: 10px 12px; border: 1px solid var(--line, #e3e7f1); border-radius: 10px; background: transparent; color: inherit; resize: vertical; }
+.msg-text { display: block; white-space: pre-wrap; margin-top: 4px; }
