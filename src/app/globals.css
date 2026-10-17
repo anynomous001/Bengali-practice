@@ -859,3 +859,8 @@ a.adm-stat:hover { box-shadow: var(--shadow-hover); }
 .pace-tag.push { background: var(--surface-2); color: var(--ink-2); }
 @media (max-width: 560px) { .board .who { display: flex; flex-wrap: wrap; gap: 4px 0; } .pace-tag, .buddy-tag { margin-left: 0; margin-right: 6px; } }
 .goal-opts .pts { font-style: normal; font-weight: 600; color: var(--ink-2); font-size: .9rem; }
+
+/* referral */
+.ref-copy { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 14px; }
+.ref-copy input { flex: 1 1 280px; min-width: 0; padding: 10px 12px; border: 1px solid var(--line-2); border-radius: 10px; background: var(--surface-2); color: inherit; font: inherit; }
+.ref-copy .btn { margin: 0; }

@@ -1,5 +1,6 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 import { query } from "./db";
+import { applyReferral, reverseReferral, validRefCode } from "./referrals";
 import { priceInr, priceUsd, type Currency } from "./pricing";
 export { parseCurrency, priceUsd, type Currency } from "./pricing";
 
@@ -44,7 +45,7 @@ export const webhookSignatureOk = (rawBody: string, signature: string) => {
   return !!secret && safeEqualHex(hmac(secret, rawBody), signature);
 };
 
-export async function createOrder(email: string, currency: Currency = "USD") {
+export async function createOrder(email: string, currency: Currency = "USD", ref?: string) {
   const amount = Math.round((currency === "INR" ? (await priceInr()).amount : priceUsd()) * 100); // paise or cents
   const recent = await query<{ n: string }>(
     "SELECT count(*) AS n FROM orders WHERE email = $1 AND created_at > now() - interval '1 hour'",
@@ -57,7 +58,7 @@ export async function createOrder(email: string, currency: Currency = "USD") {
     method: "POST",
     body: { amount, currency, receipt: `bp_${Date.now()}`, notes: { email } },
   });
-  await query("INSERT INTO orders (order_id, email, amount, currency) VALUES ($1, $2, $3, $4)", [order.id, email, amount, currency]);
+  await query("INSERT INTO orders (order_id, email, amount, currency, ref_code) VALUES ($1, $2, $3, $4, $5)", [order.id, email, amount, currency, validRefCode(ref) ? ref : null]);
   return { orderId: order.id, amount, currency, keyId: process.env.RAZORPAY_KEY_ID! };
 }
 
@@ -69,8 +70,8 @@ type Payment = { id: string; order_id: string; status: string; amount: number; c
  * Returns the buyer's email when this order is paid, or null if it is not.
  */
 export async function fulfillOrder(orderId: string, paymentId: string): Promise<string | null> {
-  const rows = await query<{ email: string; amount: number; currency: string; status: string }>(
-    "SELECT email, amount, currency, status FROM orders WHERE order_id = $1",
+  const rows = await query<{ email: string; amount: number; currency: string; status: string; ref_code: string | null }>(
+    "SELECT email, amount, currency, status, ref_code FROM orders WHERE order_id = $1",
     [orderId],
   );
   const order = rows[0];
@@ -94,12 +95,15 @@ export async function fulfillOrder(orderId: string, paymentId: string): Promise<
     [orderId, paymentId],
   );
   if (claimed.length) {
+    // A referral counts only for someone who has never been a student before.
+    const isNew = !(await query("SELECT 1 FROM students WHERE email = $1", [order.email])).length;
     await query(
       `INSERT INTO students (email, note, access_expires_at) VALUES ($1, 'paid online', now() + interval '12 months')
        ON CONFLICT (email) DO UPDATE SET
          access_expires_at = GREATEST(now(), COALESCE(students.access_expires_at, now())) + interval '12 months'`,
       [order.email],
     );
+    if (isNew && order.ref_code) await applyReferral(order.ref_code, order.email, orderId);
   }
   return order.email;
 }
@@ -115,5 +119,6 @@ export async function handleRefund(paymentId: string, refundedAmount: number) {
   );
   if (rows.length) {
     await query("UPDATE students SET access_expires_at = access_expires_at - interval '12 months' WHERE email = $1", [rows[0].email]);
+    await reverseReferral(rows[0].email);
   }
 }

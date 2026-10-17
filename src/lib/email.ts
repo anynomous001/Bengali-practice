@@ -100,6 +100,17 @@ export function sendInviteEmail(to: string, link: string) {
   });
 }
 
+/** Tells a student that a friend they referred has joined and that three months were added. */
+export function sendReferralEmail(to: string, link: string, months: number) {
+  return send(to, `${months} months added to your plan`, {
+    preheader: "A friend you referred just joined.",
+    heading: `${months} extra months, thank you`,
+    paragraphs: [`Someone you referred has joined ${BRAND}. As a thank you we added ${months} months to your plan.`, "Keep sharing your link: every friend who joins adds another three months."],
+    button: { label: "See my referrals", href: link },
+    note: "You get this email because your referral link was used for a first-time purchase.",
+  });
+}
+
 /** An optional evening nudge, sent only to students who switched reminders on and have not practised today. */
 export function sendReminderEmail(to: string, link: string, streak: number) {
   return send(to, `A few minutes of Bengali today?`, {

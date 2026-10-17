@@ -35,6 +35,9 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
   const feedback = await query<{ id: number; email: string; area: string; ref: string; topic: string; message: string; resolved: boolean; created_at: Date }>(
     "SELECT id, email, area, ref, topic, message, resolved, created_at FROM feedback ORDER BY resolved, created_at DESC LIMIT 100",
   );
+  const referrals = await query<{ referee_email: string; referrer_email: string; reversed: boolean; created_at: Date }>(
+    "SELECT referee_email, referrer_email, reversed, created_at FROM referrals ORDER BY created_at DESC LIMIT 50",
+  );
   const buddies = await buddiesOn();
   const now = Date.now();
   const isActive = (s: Row) => !!s.access_expires_at && s.access_expires_at.getTime() > now;
@@ -178,6 +181,24 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
               </div>
             ))}
             {!orders.length && <p className="muted adm-pad">No online payments yet.</p>}
+          </div>
+        </section>
+      )}
+
+      {tab === "payments" && (
+        <section className="adm-card flush">
+          <h2 className="adm-pad">Referrals <span className="muted">(+3 months for the referrer)</span></h2>
+          <div className="adm-table" role="table" aria-label="Referrals">
+            <div className="adm-tr adm-th adm-pay" role="row"><span role="columnheader">Referrer</span><span role="columnheader">Friend who joined</span><span role="columnheader">Date</span><span role="columnheader">Status</span></div>
+            {referrals.map((r) => (
+              <div key={r.referee_email} className="adm-tr adm-pay" role="row">
+                <span role="cell"><b>{r.referrer_email}</b></span>
+                <span role="cell">{r.referee_email}</span>
+                <span role="cell">{fmt(r.created_at)}</span>
+                <span role="cell"><span className={"chip " + (r.reversed ? "bad" : "ok")}>{r.reversed ? "Reversed (refund)" : "3 months added"}</span></span>
+              </div>
+            ))}
+            {!referrals.length && <p className="muted adm-pad">No referrals yet.</p>}
           </div>
         </section>
       )}

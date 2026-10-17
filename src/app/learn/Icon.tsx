@@ -1,6 +1,6 @@
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 import {
-  ArrowRight, BookOpenText, Medal, ChatCircleText, Fire, Target, Trophy, CaretDown, CaretLeft, CaretRight, Cards, Check, CheckCircle, Circle, Clock, Desktop, House, ListBullets,
+  ArrowRight, BookOpenText, Gift, Medal, ChatCircleText, Fire, Target, Trophy, CaretDown, CaretLeft, CaretRight, Cards, Check, CheckCircle, Circle, Clock, Desktop, House, ListBullets,
   Lock, Microphone, Moon, PencilSimpleLine, Play, ShieldCheck, SignOut, SpeakerHigh, Sun, TextAa, Translate, X,
 } from "@phosphor-icons/react/dist/ssr";
 
@@ -38,6 +38,7 @@ const ICONS = {
   target: Target,
   feedback: ChatCircleText,
   medal: Medal,
+  gift: Gift,
 } satisfies Record<string, PhosphorIcon>;
 
 export type IconName = keyof typeof ICONS;

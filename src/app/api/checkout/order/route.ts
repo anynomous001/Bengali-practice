@@ -8,7 +8,7 @@ export async function POST(req: Request) {
   const email = normalizeEmail(String(body.email ?? ""));
   if (!validEmail(email)) return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
   try {
-    return NextResponse.json(await createOrder(email, parseCurrency(body.currency)));
+    return NextResponse.json(await createOrder(email, parseCurrency(body.currency), typeof body.ref === "string" ? body.ref : undefined));
   } catch (e) {
     console.error("createOrder failed", e);
     const msg = e instanceof Error ? e.message : "Could not start the payment.";

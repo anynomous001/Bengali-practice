@@ -19,7 +19,7 @@ function loadCheckout(): Promise<void> {
   });
 }
 
-export default function BuyForm({ price, inr, rate, fixedInr, start, knownEmail, children }: { children?: React.ReactNode; price: number; inr: number; rate: number; fixedInr: boolean; start: "USD" | "INR"; knownEmail?: string }) {
+export default function BuyForm({ price, inr, rate, fixedInr, start, knownEmail, refCode, children }: { refCode?: string; children?: React.ReactNode; price: number; inr: number; rate: number; fixedInr: boolean; start: "USD" | "INR"; knownEmail?: string }) {
   const [currency, setCurrency] = useState<"USD" | "INR">(start);
   const shown = currency === "INR" ? `₹${inr.toLocaleString("en-IN")}` : `$${price}`;
   const [email, setEmail] = useState(knownEmail ?? "");
@@ -37,7 +37,7 @@ export default function BuyForm({ price, inr, rate, fixedInr, start, knownEmail,
       const res = await fetch("/api/checkout/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, currency }),
+        body: JSON.stringify({ email, currency, ref: refCode }),
       });
       const order = await res.json();
       if (!res.ok) throw new Error(order.error ?? "Could not start the payment.");

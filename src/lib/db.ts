@@ -100,6 +100,16 @@ const SCHEMA = `
       created_at timestamptz NOT NULL DEFAULT now(),
       paid_at timestamptz
     );
+    ALTER TABLE orders ADD COLUMN IF NOT EXISTS ref_code text;
+    ALTER TABLE students ADD COLUMN IF NOT EXISTS ref_code text;
+    CREATE UNIQUE INDEX IF NOT EXISTS students_ref_code ON students (ref_code);
+    CREATE TABLE IF NOT EXISTS referrals (
+      referee_email text PRIMARY KEY,
+      referrer_email text NOT NULL,
+      order_id text NOT NULL,
+      reversed boolean NOT NULL DEFAULT false,
+      created_at timestamptz NOT NULL DEFAULT now()
+    );
     CREATE TABLE IF NOT EXISTS writing_practice (
       email text NOT NULL,
       item text NOT NULL,
