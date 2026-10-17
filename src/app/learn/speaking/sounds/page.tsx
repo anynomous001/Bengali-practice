@@ -6,8 +6,9 @@ import LessonFrame from "../../LessonFrame";
 
 export default async function SoundsPage() {
   await requireAccess();
+  const toc = GROUPS.map((g) => ({ id: `sec-${g.id}`, label: g.title }));
   return (
-    <LessonFrame lessonId="speaking/sounds">
+    <LessonFrame lessonId="speaking/sounds" toc={toc}>
       <Alphabet initialProgress={await loadProgress()} segment="speaking" letters={LETTERS} groups={GROUPS} />
     </LessonFrame>
   );

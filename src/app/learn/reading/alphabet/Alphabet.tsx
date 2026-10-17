@@ -74,6 +74,17 @@ function Learn({ progress }: { progress: Progress }) {
   const { roman } = useRoman();
   const [sel, setSel] = useState<Letter | null>(null);
   const [view, setView] = useState<"order" | "place">("order");
+  // "On this page" links point at the in-order sections: switch to that view first if the sound-place view is showing.
+  useEffect(() => {
+    const onHash = () => {
+      const id = location.hash.slice(1);
+      if (!id.startsWith("sec-") || document.getElementById(id)) return;
+      setView("order");
+      setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }), 60);
+    };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
   const place = sel ? PLACES.find((p) => p.id === sel.place) : null;
   const tile = (l: Letter) => (
     <button key={l.ch} className={"tile" + (mastered(progress, l.ch) ? " done" : "")} onClick={() => setSel(l)}>
@@ -113,7 +124,7 @@ function Learn({ progress }: { progress: Progress }) {
         <button type="button" className={view === "place" ? "on" : ""} onClick={() => setView("place")}>By sound place</button>
       </div>
       {view === "order" && GROUPS.map((g) => (
-        <section key={g.id}>
+        <section key={g.id} id={`sec-${g.id}`} className="anchor">
           <h2>{g.title}</h2>
           <div className="grid">{LETTERS.filter((l) => l.group === g.id).map(tile)}</div>
         </section>
@@ -122,7 +133,7 @@ function Learn({ progress }: { progress: Progress }) {
         const ls = LETTERS.filter((l) => l.place === p.id);
         if (!ls.length) return null;
         return (
-          <section key={p.id}>
+          <section key={p.id} className="anchor">
             <h2><span lang="bn">{p.bn}</span> <span className="place-en">{p.en}</span></h2>
             <p className="place-how">{p.how}</p>
             <div className="grid">{ls.map(tile)}</div>

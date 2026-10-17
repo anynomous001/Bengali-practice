@@ -11,10 +11,19 @@ function section(title: string): Word[] {
 }
 const plain = (ws: Word[]): [string, string, string][] => ws.map((w) => [w[0], w[1], w[2]]);
 
+const TOC = [
+  { id: "sec-chart", label: "Numbers 0 to 100" },
+  { id: "sec-big", label: "Bigger numbers" },
+  { id: "sec-money", label: "Money and prices" },
+  { id: "sec-days", label: "Days of the week" },
+  { id: "sec-months", label: "Months" },
+  { id: "sec-practice", label: "Practice" },
+];
+
 export default async function Page() {
   await requireAccess();
   return (
-    <LessonFrame lessonId="reading/numbers">
+    <LessonFrame lessonId="reading/numbers" toc={TOC}>
       <h1>Numbers, money &amp; time</h1>
       <NumbersLesson
         data={{
