@@ -795,6 +795,50 @@
   "text": "প্রতিবেশী",
   "from": "vocab family"
  },
+ "444e2b4f4a60b25e": {
+  "text": "ইনি আমার মা।",
+  "from": "vocab family phrase"
+ },
+ "415f16f670ae06c2": {
+  "text": "আমার একটা ছোট ভাই আছে।",
+  "from": "vocab family phrase"
+ },
+ "26769814a73c6eef": {
+  "text": "তোমার বাড়িতে কে কে আছে?",
+  "from": "vocab family phrase"
+ },
+ "c8587a169c74a192": {
+  "text": "আমার বাবা অফিসে কাজ করেন।",
+  "from": "vocab family phrase"
+ },
+ "7af714f0e32b28d8": {
+  "text": "আমার মা খুব ভালো রান্না করেন।",
+  "from": "vocab family phrase"
+ },
+ "0c1bbdba26a6c17a": {
+  "text": "ঠাকুমা আমাকে গল্প শোনান।",
+  "from": "vocab family phrase"
+ },
+ "3c6b3f3a535f208e": {
+  "text": "আমার দিদি কলেজে পড়ে।",
+  "from": "vocab family phrase"
+ },
+ "1b1684c4d0ba5e4f": {
+  "text": "মামা কাল আমাদের বাড়িতে আসবেন।",
+  "from": "vocab family phrase"
+ },
+ "db268413d0c028c4": {
+  "text": "তোমার কয়টা ভাইবোন?",
+  "from": "vocab family phrase"
+ },
+ "12172abe41158e46": {
+  "text": "আমার বন্ধু আমার প্রতিবেশী।",
+  "from": "vocab family phrase"
+ },
+ "18510414caf575d0": {
+  "text": "আমার পরিবারে পাঁচজন লোক।",
+  "from": "vocab family phrase"
+ },
  "82f6cac221fa1ba2": {
   "text": "মানুষ",
   "from": "vocab people"
@@ -914,6 +958,50 @@
  "5b92fb3389345658": {
   "text": "পুরোহিত",
   "from": "vocab people"
+ },
+ "4ee6a78c50e68245": {
+  "text": "আপনি কী করেন?",
+  "from": "vocab people phrase"
+ },
+ "9cc5b5c48a24cca0": {
+  "text": "আমি শিক্ষক।",
+  "from": "vocab people phrase"
+ },
+ "905cd8d0ab56fe1a": {
+  "text": "উনি ডাক্তার।",
+  "from": "vocab people phrase"
+ },
+ "5451b214951ae02a": {
+  "text": "আমার বাবা একজন শিক্ষক।",
+  "from": "vocab people phrase"
+ },
+ "d16fbc36b6fb86c2": {
+  "text": "ডাক্তার ওষুধ দিলেন।",
+  "from": "vocab people phrase"
+ },
+ "5bf41ea165195aa4": {
+  "text": "চাষি মাঠে কাজ করছে।",
+  "from": "vocab people phrase"
+ },
+ "f1972d0ee793272c": {
+  "text": "জেলে নদীতে মাছ ধরছে।",
+  "from": "vocab people phrase"
+ },
+ "0df0625cb1a49f9f": {
+  "text": "ড্রাইভার গাড়ি চালাচ্ছে।",
+  "from": "vocab people phrase"
+ },
+ "04f74707f61866b7": {
+  "text": "আমার ছেলে ইঞ্জিনিয়ার হতে চায়।",
+  "from": "vocab people phrase"
+ },
+ "eb4f0314769de9f0": {
+  "text": "অতিথিরা এসে গেছেন।",
+  "from": "vocab people phrase"
+ },
+ "b4ccbc337a90cd07": {
+  "text": "শিল্পী ছবি আঁকছেন।",
+  "from": "vocab people phrase"
  },
  "2de8647492279cde": {
   "text": "মাথা",
@@ -1059,6 +1147,50 @@
   "text": "ওষুধ",
   "from": "vocab body"
  },
+ "b5f570ca0ae6c670": {
+  "text": "আমার মাথা ব্যথা করছে।",
+  "from": "vocab body phrase"
+ },
+ "2d84b33f085892a0": {
+  "text": "আমার জ্বর হয়েছে।",
+  "from": "vocab body phrase"
+ },
+ "2862660947a9d54c": {
+  "text": "আমার পেটে ব্যথা।",
+  "from": "vocab body phrase"
+ },
+ "070f665be90eb858": {
+  "text": "আমার কান ব্যথা করছে।",
+  "from": "vocab body phrase"
+ },
+ "4387877488ebf861": {
+  "text": "তোমার হাত ধুয়ে নাও।",
+  "from": "vocab body phrase"
+ },
+ "50efedf5d37629d1": {
+  "text": "তুমি কি দাঁত মেজেছ?",
+  "from": "vocab body phrase"
+ },
+ "6f7864ed5afcaf8b": {
+  "text": "ডাক্তার বললেন, ওষুধ খেতে হবে।",
+  "from": "vocab body phrase"
+ },
+ "d3ad27156bf02fa7": {
+  "text": "আমার পা কেটে গেছে, রক্ত পড়ছে।",
+  "from": "vocab body phrase"
+ },
+ "34937fd255a61380": {
+  "text": "তার চোখ দুটো খুব সুন্দর।",
+  "from": "vocab body phrase"
+ },
+ "e612ad731c90cf88": {
+  "text": "আমার গলা ব্যথা করছে।",
+  "from": "vocab body phrase"
+ },
+ "2c577021e08c329f": {
+  "text": "আমার সর্দি-কাশি হয়েছে।",
+  "from": "vocab body phrase"
+ },
  "0be196e674f8a38e": {
   "text": "খুশি",
   "from": "vocab feelings"
@@ -1126,6 +1258,50 @@
  "57c631fbc4831e8a": {
   "text": "একা",
   "from": "vocab feelings"
+ },
+ "be9e6edae5aceecb": {
+  "text": "আমার খুব খিদে পেয়েছে।",
+  "from": "vocab feelings phrase"
+ },
+ "d2e3cb9c661473e5": {
+  "text": "আমার ঘুম পাচ্ছে।",
+  "from": "vocab feelings phrase"
+ },
+ "ab051eac17222cf4": {
+  "text": "আমি খুব খুশি।",
+  "from": "vocab feelings phrase"
+ },
+ "518d6df15644bed5": {
+  "text": "সে খুব রেগে গেছে।",
+  "from": "vocab feelings phrase"
+ },
+ "da1806feaa564568": {
+  "text": "আমার ভয় করছে।",
+  "from": "vocab feelings phrase"
+ },
+ "5e10649fe10c2b51": {
+  "text": "আমি খুব ক্লান্ত, আমি ঘুমাব।",
+  "from": "vocab feelings phrase"
+ },
+ "de52223e6aeef44c": {
+  "text": "আমার তেষ্টা পেয়েছে, জল দাও।",
+  "from": "vocab feelings phrase"
+ },
+ "501e7d00805059aa": {
+  "text": "তুমি কি অসুস্থ?",
+  "from": "vocab feelings phrase"
+ },
+ "16bb1f9121d8ddb0": {
+  "text": "আমি তোমাকে নিয়ে চিন্তা করছি।",
+  "from": "vocab feelings phrase"
+ },
+ "310e67749012500e": {
+  "text": "সে একা থাকতে ভালোবাসে।",
+  "from": "vocab feelings phrase"
+ },
+ "990115217239afd7": {
+  "text": "খবরটা শুনে আমি অবাক হলাম।",
+  "from": "vocab feelings phrase"
  },
  "15b7803460a15483": {
   "text": "খাবার",
@@ -1271,6 +1447,50 @@
   "text": "সুস্বাদু",
   "from": "vocab food"
  },
+ "ae2eed5b730f0303": {
+  "text": "আমি ভাত খাই।",
+  "from": "vocab food phrase"
+ },
+ "7b3e742345f1b60b": {
+  "text": "আমাকে এক গ্লাস জল দিন।",
+  "from": "vocab food phrase"
+ },
+ "bc1a92ec99724645": {
+  "text": "ঝালটা একটু কম দেবেন।",
+  "from": "vocab food phrase"
+ },
+ "677a2313e036d405": {
+  "text": "আমি রোজ সকালে চা খাই।",
+  "from": "vocab food phrase"
+ },
+ "f9cbf2e828d7c0c3": {
+  "text": "মা ডাল আর ভাত রান্না করেছেন।",
+  "from": "vocab food phrase"
+ },
+ "e12b72bf1d00bca9": {
+  "text": "আমি ঝোল ভাত খেতে ভালোবাসি।",
+  "from": "vocab food phrase"
+ },
+ "769d31fdaf7ab0cf": {
+  "text": "রুটির সঙ্গে তরকারি দাও।",
+  "from": "vocab food phrase"
+ },
+ "291ffca220e2f7f6": {
+  "text": "দুধে একটু চিনি দিন।",
+  "from": "vocab food phrase"
+ },
+ "b5e159722c552ee3": {
+  "text": "খাবারটা খুব সুস্বাদু হয়েছে।",
+  "from": "vocab food phrase"
+ },
+ "4b0c4508030a1bc6": {
+  "text": "এই তরকারিতে নুন কম।",
+  "from": "vocab food phrase"
+ },
+ "9e8893a7c882ff5a": {
+  "text": "আমি আজ খিচুড়ি খাব।",
+  "from": "vocab food phrase"
+ },
  "62baebfe9f4d1de7": {
   "text": "রুই",
   "from": "vocab fish-meat"
@@ -1346,6 +1566,50 @@
  "46d84a3add4910cc": {
   "text": "জাল",
   "from": "vocab fish-meat"
+ },
+ "4875a8573e2e4f38": {
+  "text": "আমি ইলিশ মাছ ভালোবাসি।",
+  "from": "vocab fish-meat phrase"
+ },
+ "6d860ec1a3acdf06": {
+  "text": "মাছটা কত করে কিলো?",
+  "from": "vocab fish-meat phrase"
+ },
+ "72eca09b8cadacf4": {
+  "text": "এটা কি ভেটকি?",
+  "from": "vocab fish-meat phrase"
+ },
+ "f79db3fe46d6eadf": {
+  "text": "আজ বাজারে ভালো ইলিশ পাওয়া যাচ্ছে।",
+  "from": "vocab fish-meat phrase"
+ },
+ "3ab3ea66a26589d6": {
+  "text": "আমি মাছ খাই কিন্তু মাংস খাই না।",
+  "from": "vocab fish-meat phrase"
+ },
+ "bc758e09bb424293": {
+  "text": "মা রুই মাছের ঝোল রেঁধেছেন।",
+  "from": "vocab fish-meat phrase"
+ },
+ "828879785eb92116": {
+  "text": "চিংড়ি মাছের দাম অনেক বেশি।",
+  "from": "vocab fish-meat phrase"
+ },
+ "752ed7b561addad6": {
+  "text": "মুরগির মাংস কি তাজা?",
+  "from": "vocab fish-meat phrase"
+ },
+ "607102fe68dee675": {
+  "text": "মাছের কাঁটা বেছে খেতে হয়।",
+  "from": "vocab fish-meat phrase"
+ },
+ "f62eaafc46cf1c5d": {
+  "text": "জেলে জাল ফেলছে।",
+  "from": "vocab fish-meat phrase"
+ },
+ "028162504ffbd771": {
+  "text": "আজ রাতে ডিম আর ভাত খাব।",
+  "from": "vocab fish-meat phrase"
  },
  "2fe29b18edc81d75": {
   "text": "কলা",
@@ -1438,6 +1702,50 @@
  "51af8cb39eb93f10": {
   "text": "কাজু",
   "from": "vocab fruits"
+ },
+ "fe15002efd73da3d": {
+  "text": "আমি আম খেতে ভালোবাসি।",
+  "from": "vocab fruits phrase"
+ },
+ "e934e8901fbb7a36": {
+  "text": "এই আমটা কি মিষ্টি?",
+  "from": "vocab fruits phrase"
+ },
+ "d5b03808f7cb5b96": {
+  "text": "আমাকে আধ কিলো আঙুর দিন।",
+  "from": "vocab fruits phrase"
+ },
+ "457ac331e853f029": {
+  "text": "আমি রোজ একটা কলা খাই।",
+  "from": "vocab fruits phrase"
+ },
+ "15aa3c3aa5dd6c77": {
+  "text": "গরমে তরমুজ খেতে ভালো লাগে।",
+  "from": "vocab fruits phrase"
+ },
+ "79a7422d73354d95": {
+  "text": "কাঁঠাল আমার খুব প্রিয়।",
+  "from": "vocab fruits phrase"
+ },
+ "6a23979b73437289": {
+  "text": "এই আপেলটা কত করে?",
+  "from": "vocab fruits phrase"
+ },
+ "8dc829a7edeba7c9": {
+  "text": "একটা লেবু দিন।",
+  "from": "vocab fruits phrase"
+ },
+ "05942664861c1673": {
+  "text": "নারকেলের জল খুব ঠান্ডা।",
+  "from": "vocab fruits phrase"
+ },
+ "7ef3b34f99e5e1b0": {
+  "text": "পেয়ারা গাছে অনেক পেয়ারা হয়েছে।",
+  "from": "vocab fruits phrase"
+ },
+ "01ad4878c6b92244": {
+  "text": "আমরা ফল কিনতে বাজারে যাব।",
+  "from": "vocab fruits phrase"
  },
  "836f5e12800e0a8f": {
   "text": "সবজি",
@@ -1603,6 +1911,50 @@
   "text": "কালোজিরে",
   "from": "vocab vegetables"
  },
+ "15e71567f0e20001": {
+  "text": "আমি আলু আর পেঁয়াজ কিনব।",
+  "from": "vocab vegetables phrase"
+ },
+ "911e04e4374779c9": {
+  "text": "আজ কী তরকারি হয়েছে?",
+  "from": "vocab vegetables phrase"
+ },
+ "8aa187a6cc4edb3b": {
+  "text": "একটু নুন আর হলুদ দিন।",
+  "from": "vocab vegetables phrase"
+ },
+ "264f666c6e75f7e9": {
+  "text": "আজ আমি পটল ভাজা খাব।",
+  "from": "vocab vegetables phrase"
+ },
+ "06b677d1b963c9d9": {
+  "text": "শাকটা ভালো করে ধুয়ে নাও।",
+  "from": "vocab vegetables phrase"
+ },
+ "fd1370b273a76694": {
+  "text": "এক কিলো টমেটো কত?",
+  "from": "vocab vegetables phrase"
+ },
+ "dcd7b87fdcb859c2": {
+  "text": "তরকারিতে হলুদ আর জিরে দিয়েছি।",
+  "from": "vocab vegetables phrase"
+ },
+ "8debe7ceeddd9ee3": {
+  "text": "আমি ঝাল খাই না, কাঁচা লঙ্কা দেবেন না।",
+  "from": "vocab vegetables phrase"
+ },
+ "f319473b3a2b9669": {
+  "text": "বেগুন ভাজা আমার প্রিয়।",
+  "from": "vocab vegetables phrase"
+ },
+ "e64b4cb2b2bae00c": {
+  "text": "ফুলকপির তরকারি রান্না হচ্ছে।",
+  "from": "vocab vegetables phrase"
+ },
+ "6c2a00ab599ec6eb": {
+  "text": "রসুন আর আদা বেটে নাও।",
+  "from": "vocab vegetables phrase"
+ },
  "32e9d68e24453802": {
   "text": "রসগোল্লা",
   "from": "vocab sweets-snacks"
@@ -1686,6 +2038,50 @@
  "c75fa81544071110": {
   "text": "সিঙ্গারা",
   "from": "vocab sweets-snacks"
+ },
+ "7c54bfef7c92cd77": {
+  "text": "আমাকে দুটো রসগোল্লা দিন।",
+  "from": "vocab sweets-snacks phrase"
+ },
+ "70ebda3913ae58c8": {
+  "text": "এখানকার ফুচকা খুব ভালো।",
+  "from": "vocab sweets-snacks phrase"
+ },
+ "22a777a12e7c693c": {
+  "text": "একটা ঝালমুড়ি দিন, ঝাল কম।",
+  "from": "vocab sweets-snacks phrase"
+ },
+ "c84520830598d613": {
+  "text": "বিকেলে আমরা ঝালমুড়ি খাব।",
+  "from": "vocab sweets-snacks phrase"
+ },
+ "8d30665551004ed3": {
+  "text": "পুজোয় আমরা অনেক মিষ্টি খাই।",
+  "from": "vocab sweets-snacks phrase"
+ },
+ "d3c428f5bae44bb3": {
+  "text": "সন্দেশ বানাতে দুধ লাগে।",
+  "from": "vocab sweets-snacks phrase"
+ },
+ "b65db2d9bb62cf24": {
+  "text": "শীতে গরম তেলেভাজা দারুণ লাগে।",
+  "from": "vocab sweets-snacks phrase"
+ },
+ "869aaf80b03cfe4b": {
+  "text": "তুমি কি মিষ্টি দই খেয়েছ?",
+  "from": "vocab sweets-snacks phrase"
+ },
+ "b185fcbc16d20464": {
+  "text": "আমাকে আরেকটা সিঙ্গারা দিন।",
+  "from": "vocab sweets-snacks phrase"
+ },
+ "0fc50b7407bbc8f9": {
+  "text": "এখানে চা আর বিস্কুট পাওয়া যায়।",
+  "from": "vocab sweets-snacks phrase"
+ },
+ "fb8c4e75f4f7b4e7": {
+  "text": "নলেন গুড়ের সন্দেশ শীতকালে পাওয়া যায়।",
+  "from": "vocab sweets-snacks phrase"
  },
  "3feda68eb523e068": {
   "text": "বাড়ি",
@@ -1782,6 +2178,50 @@
  "224cafc6f84591b0": {
   "text": "ঘণ্টা",
   "from": "vocab house"
+ },
+ "6705b10ff08c0c65": {
+  "text": "আমার বাড়ি কলকাতায়।",
+  "from": "vocab house phrase"
+ },
+ "e304e80bb27b5ffb": {
+  "text": "দরজাটা বন্ধ করে দাও।",
+  "from": "vocab house phrase"
+ },
+ "c3a22fa26b21351a": {
+  "text": "জানালাটা খুলে দিন।",
+  "from": "vocab house phrase"
+ },
+ "456c76a0a31c7bf0": {
+  "text": "আমাদের বাড়িতে তিনটে ঘর আছে।",
+  "from": "vocab house phrase"
+ },
+ "e9f93e261cb352ee": {
+  "text": "রান্নাঘরে মা রান্না করছেন।",
+  "from": "vocab house phrase"
+ },
+ "be14eb18959b1c28": {
+  "text": "ছাদে অনেক হাওয়া।",
+  "from": "vocab house phrase"
+ },
+ "2c1bb65fe339892c": {
+  "text": "তুমি কি দরজায় তালা দিয়েছ?",
+  "from": "vocab house phrase"
+ },
+ "6a81986b4f5f805e": {
+  "text": "চাবিটা কোথায় রেখেছ?",
+  "from": "vocab house phrase"
+ },
+ "e4751cccbf137c83": {
+  "text": "বারান্দা থেকে নদী দেখা যায়।",
+  "from": "vocab house phrase"
+ },
+ "59dd6b4e6776a026": {
+  "text": "আলোটা জ্বেলে দাও।",
+  "from": "vocab house phrase"
+ },
+ "65f3baa12fde75fb": {
+  "text": "সিঁড়ি দিয়ে উপরে যাও।",
+  "from": "vocab house phrase"
  },
  "5a642eaa31a635ca": {
   "text": "জিনিস",
@@ -1915,6 +2355,50 @@
   "text": "কাগজ",
   "from": "vocab things"
  },
+ "7a029533376a9cc9": {
+  "text": "টেবিলের উপর বইটা রাখো।",
+  "from": "vocab things phrase"
+ },
+ "42a2dcab01837ad6": {
+  "text": "আমার ছাতাটা কোথায়?",
+  "from": "vocab things phrase"
+ },
+ "42810cc794fa756f": {
+  "text": "এই থালাটা পরিষ্কার করো।",
+  "from": "vocab things phrase"
+ },
+ "34bab67f74507e59": {
+  "text": "বইগুলো আলমারিতে রাখো।",
+  "from": "vocab things phrase"
+ },
+ "d7c1c9a5299ef17e": {
+  "text": "আমার ব্যাগটা কোথায়?",
+  "from": "vocab things phrase"
+ },
+ "185bf62826cfd4e3": {
+  "text": "বালতিতে জল ভরো।",
+  "from": "vocab things phrase"
+ },
+ "23b41a60cb3aaeb0": {
+  "text": "রাতে বিছানায় শুতে যাও।",
+  "from": "vocab things phrase"
+ },
+ "1148068ed64626f1": {
+  "text": "ঘড়িতে এখন কটা বাজে?",
+  "from": "vocab things phrase"
+ },
+ "f84ab30a20bf01e2": {
+  "text": "টর্চটা জ্বালাও, অন্ধকার।",
+  "from": "vocab things phrase"
+ },
+ "8ae54256b27db5bd": {
+  "text": "চামচ দিয়ে খাও।",
+  "from": "vocab things phrase"
+ },
+ "e429b579152e2404": {
+  "text": "ছুরিটা সাবধানে ধরো।",
+  "from": "vocab things phrase"
+ },
  "e60008269e61fec7": {
   "text": "পোশাক",
   "from": "vocab clothes"
@@ -2015,6 +2499,50 @@
   "text": "বেল্ট",
   "from": "vocab clothes"
  },
+ "f615825fe2a81261": {
+  "text": "আজ আমি নতুন শাড়ি পরব।",
+  "from": "vocab clothes phrase"
+ },
+ "b3aa19d578bf2873": {
+  "text": "এই জামাটা আমাকে মানাচ্ছে না।",
+  "from": "vocab clothes phrase"
+ },
+ "967911017ceee6ec": {
+  "text": "আমার জুতো ছোট হয়ে গেছে।",
+  "from": "vocab clothes phrase"
+ },
+ "788361339348288e": {
+  "text": "আমি পুজোয় নতুন জামা পরব।",
+  "from": "vocab clothes phrase"
+ },
+ "773588ff14806c6e": {
+  "text": "শীতে আমি সোয়েটার পরি।",
+  "from": "vocab clothes phrase"
+ },
+ "a259d438e08e25ce": {
+  "text": "তার শাড়িটা খুব সুন্দর।",
+  "from": "vocab clothes phrase"
+ },
+ "b45ed55542c4446c": {
+  "text": "বাবা ধুতি আর পাঞ্জাবি পরেছেন।",
+  "from": "vocab clothes phrase"
+ },
+ "26af45dc16776da3": {
+  "text": "আমার একজোড়া নতুন জুতো চাই।",
+  "from": "vocab clothes phrase"
+ },
+ "1211c3c09256f22a": {
+  "text": "গামছাটা দাও, স্নান করব।",
+  "from": "vocab clothes phrase"
+ },
+ "07758656fb3ad0b8": {
+  "text": "আমি সোনার হার আর চুড়ি কিনেছি।",
+  "from": "vocab clothes phrase"
+ },
+ "4f0a238b32ba1569": {
+  "text": "এই জামাটা ধুতে হবে।",
+  "from": "vocab clothes phrase"
+ },
  "cf8f99d9f9702093": {
   "text": "পশু",
   "from": "vocab animals"
@@ -2111,6 +2639,50 @@
   "text": "ব্যাঙ",
   "from": "vocab animals"
  },
+ "7d2bfc20f5cca2e3": {
+  "text": "আমার একটা কুকুর আছে।",
+  "from": "vocab animals phrase"
+ },
+ "53bcaf8222e14c9b": {
+  "text": "সুন্দরবনে বাঘ আছে।",
+  "from": "vocab animals phrase"
+ },
+ "28ce19faf973a57c": {
+  "text": "বিড়ালটা দুধ খাচ্ছে।",
+  "from": "vocab animals phrase"
+ },
+ "ac59115bd3cab640": {
+  "text": "রাস্তায় একটা কুকুর ঘুরছে।",
+  "from": "vocab animals phrase"
+ },
+ "ee28b36e975148cc": {
+  "text": "গরু ঘাস খাচ্ছে।",
+  "from": "vocab animals phrase"
+ },
+ "0eea18e9625a5c07": {
+  "text": "আমরা হাতি দেখতে চিড়িয়াখানায় যাব।",
+  "from": "vocab animals phrase"
+ },
+ "5178e79c45f476eb": {
+  "text": "বাঘ বনে থাকে।",
+  "from": "vocab animals phrase"
+ },
+ "2544df70d99d8d4a": {
+  "text": "ইঁদুরটা বিড়ালকে দেখে পালাল।",
+  "from": "vocab animals phrase"
+ },
+ "ac07066ff777c695": {
+  "text": "সাপ দেখলে আমি ভয় পাই।",
+  "from": "vocab animals phrase"
+ },
+ "80e685ee5cab5069": {
+  "text": "ঘোড়া খুব জোরে দৌড়ায়।",
+  "from": "vocab animals phrase"
+ },
+ "bccadc8e4b082346": {
+  "text": "বাঁদরটা গাছে উঠেছে।",
+  "from": "vocab animals phrase"
+ },
  "8926a6281f81b31b": {
   "text": "কাক",
   "from": "vocab birds-insects"
@@ -2206,6 +2778,50 @@
  "8531e4baadbee41b": {
   "text": "বাসা",
   "from": "vocab birds-insects"
+ },
+ "cac427320161d205": {
+  "text": "গাছে একটা পাখি বসে আছে।",
+  "from": "vocab birds-insects phrase"
+ },
+ "eba435c0588024cf": {
+  "text": "কোকিল গান গাইছে।",
+  "from": "vocab birds-insects phrase"
+ },
+ "84f0804d87856546": {
+  "text": "রাতে খুব মশা কামড়ায়।",
+  "from": "vocab birds-insects phrase"
+ },
+ "df863d4afa3886b7": {
+  "text": "ভোরে পাখি ডাকে।",
+  "from": "vocab birds-insects phrase"
+ },
+ "0106db9238f4ea41": {
+  "text": "কাকটা জানালায় বসে আছে।",
+  "from": "vocab birds-insects phrase"
+ },
+ "fef271457ed4f1f3": {
+  "text": "ময়ূর পেখম মেলেছে।",
+  "from": "vocab birds-insects phrase"
+ },
+ "512c8fc202dc91dd": {
+  "text": "রাতে ঘরে অনেক মশা।",
+  "from": "vocab birds-insects phrase"
+ },
+ "3f6301aad414b759": {
+  "text": "ফুলে একটা প্রজাপতি বসেছে।",
+  "from": "vocab birds-insects phrase"
+ },
+ "f32db4f760507d69": {
+  "text": "পিঁপড়েরা চিনির কাছে এসেছে।",
+  "from": "vocab birds-insects phrase"
+ },
+ "03167bf37a46f49e": {
+  "text": "হাঁস পুকুরে সাঁতার কাটছে।",
+  "from": "vocab birds-insects phrase"
+ },
+ "73d33ee4ad254ede": {
+  "text": "পেঁচা রাতে জেগে থাকে।",
+  "from": "vocab birds-insects phrase"
  },
  "a408387f50fbe0f9": {
   "text": "আকাশ",
@@ -2367,6 +2983,50 @@
   "text": "রজনীগন্ধা",
   "from": "vocab nature"
  },
+ "c414a8f03e84f926": {
+  "text": "আকাশে মেঘ করেছে।",
+  "from": "vocab nature phrase"
+ },
+ "af87d3cc0005ed28": {
+  "text": "নদীর পাড়ে অনেক গাছ আছে।",
+  "from": "vocab nature phrase"
+ },
+ "b2d50f21d9b357aa": {
+  "text": "শরতে কাশফুল ফোটে।",
+  "from": "vocab nature phrase"
+ },
+ "844a9dd4090fafcc": {
+  "text": "আজ আকাশে অনেক তারা।",
+  "from": "vocab nature phrase"
+ },
+ "93228d0f0f3a3993": {
+  "text": "সূর্য পূর্ব দিকে ওঠে।",
+  "from": "vocab nature phrase"
+ },
+ "8aeb6fb9db88a623": {
+  "text": "নদীর জল খুব পরিষ্কার।",
+  "from": "vocab nature phrase"
+ },
+ "d841bfb70791d914": {
+  "text": "বনে অনেক গাছ আছে।",
+  "from": "vocab nature phrase"
+ },
+ "6de5d316dd20fe59": {
+  "text": "ঝড়ে গাছ ভেঙে পড়েছে।",
+  "from": "vocab nature phrase"
+ },
+ "37a628c568fd3d4e": {
+  "text": "পাহাড়ের উপর মেঘ জমেছে।",
+  "from": "vocab nature phrase"
+ },
+ "889845f7d2cd125f": {
+  "text": "সমুদ্রের ঢেউ খুব বড়।",
+  "from": "vocab nature phrase"
+ },
+ "93e018a88deb65fa": {
+  "text": "বাগানে গোলাপ ফুটেছে।",
+  "from": "vocab nature phrase"
+ },
  "a4854b0530dbd5cd": {
   "text": "ঋতু",
   "from": "vocab weather"
@@ -2430,6 +3090,50 @@
  "db471be3ae17610a": {
   "text": "আরামদায়ক",
   "from": "vocab weather"
+ },
+ "d4593c1d51cae98a": {
+  "text": "আজ খুব গরম।",
+  "from": "vocab weather phrase"
+ },
+ "290ab6b3a474dd58": {
+  "text": "বাইরে বৃষ্টি হচ্ছে।",
+  "from": "vocab weather phrase"
+ },
+ "e804d161199a8c28": {
+  "text": "কলকাতায় শীত খুব কম।",
+  "from": "vocab weather phrase"
+ },
+ "10ba2ac94c565b9f": {
+  "text": "বর্ষায় কলকাতায় অনেক বৃষ্টি হয়।",
+  "from": "vocab weather phrase"
+ },
+ "d42b23d5330bf242": {
+  "text": "শীতকালে সকালে কুয়াশা থাকে।",
+  "from": "vocab weather phrase"
+ },
+ "4e6f7ca131289f14": {
+  "text": "আজ আকাশ মেঘলা।",
+  "from": "vocab weather phrase"
+ },
+ "9adcac7f7d7bac83": {
+  "text": "বাইরে যাওয়ার সময় ছাতা নিয়ে যাও।",
+  "from": "vocab weather phrase"
+ },
+ "ad246dd596ab39c5": {
+  "text": "গ্রীষ্মকালে খুব গরম পড়ে।",
+  "from": "vocab weather phrase"
+ },
+ "39caedee79be5061": {
+  "text": "বসন্তে সবকিছু সুন্দর লাগে।",
+  "from": "vocab weather phrase"
+ },
+ "1656840cbfbe5be6": {
+  "text": "কাল কি বৃষ্টি হবে?",
+  "from": "vocab weather phrase"
+ },
+ "44bcad8800fb9495": {
+  "text": "আজকের আবহাওয়া ভালো।",
+  "from": "vocab weather phrase"
  },
  "799dca93cbe8a331": {
   "text": "রবিবার",
@@ -2567,6 +3271,50 @@
   "text": "তাড়াতাড়ি",
   "from": "vocab time"
  },
+ "cb884d4f1735d43a": {
+  "text": "আজ কী বার?",
+  "from": "vocab time phrase"
+ },
+ "59a57dabae77d950": {
+  "text": "আমি প্রতিদিন সকালে চা খাই।",
+  "from": "vocab time phrase"
+ },
+ "9079daa3869d260c": {
+  "text": "এখন কটা বাজে?",
+  "from": "vocab time phrase"
+ },
+ "b031c9bf42a0d3b2": {
+  "text": "আজ সোমবার।",
+  "from": "vocab time phrase"
+ },
+ "6ec9e9bbaaeaf0f3": {
+  "text": "কাল রবিবার, আমার ছুটি।",
+  "from": "vocab time phrase"
+ },
+ "c8827a9c93941506": {
+  "text": "আমি সকালে ছটায় উঠি।",
+  "from": "vocab time phrase"
+ },
+ "da1f8aa32556b5fd": {
+  "text": "বিকেলে আমরা পার্কে যাব।",
+  "from": "vocab time phrase"
+ },
+ "d981c7f708a66564": {
+  "text": "আমি রাত দশটায় ঘুমাই।",
+  "from": "vocab time phrase"
+ },
+ "6454b20808ba0660": {
+  "text": "গতকাল আমি বাজারে গিয়েছিলাম।",
+  "from": "vocab time phrase"
+ },
+ "7a1f99bb486d438c": {
+  "text": "এক সপ্তাহে সাত দিন।",
+  "from": "vocab time phrase"
+ },
+ "4b018ca924525510": {
+  "text": "একটু পরে আসছি।",
+  "from": "vocab time phrase"
+ },
  "b0c3ceda494d48b4": {
   "text": "বৈশাখ",
   "from": "vocab months"
@@ -2679,6 +3427,50 @@
   "text": "ছুটি",
   "from": "vocab months"
  },
+ "b5635adf2208e0e7": {
+  "text": "বাংলা নববর্ষ পয়লা বৈশাখে।",
+  "from": "vocab months phrase"
+ },
+ "e7b6d5ea72e2e8af": {
+  "text": "তোমার জন্মদিন কবে?",
+  "from": "vocab months phrase"
+ },
+ "9228ce3f07497f19": {
+  "text": "আমার জন্মদিন মার্চ মাসে।",
+  "from": "vocab months phrase"
+ },
+ "8c4b99fa54ad96de": {
+  "text": "বাংলা বছর বৈশাখ মাসে শুরু হয়।",
+  "from": "vocab months phrase"
+ },
+ "7508b370e262ef44": {
+  "text": "শ্রাবণ মাসে খুব বৃষ্টি হয়।",
+  "from": "vocab months phrase"
+ },
+ "cd546acf899a2e8a": {
+  "text": "আশ্বিন মাসে দুর্গাপূজা হয়।",
+  "from": "vocab months phrase"
+ },
+ "64f8382111966642": {
+  "text": "ফেব্রুয়ারি মাসে বইমেলা হয়।",
+  "from": "vocab months phrase"
+ },
+ "15c04316c90b1b0a": {
+  "text": "আমি জানুয়ারি মাসে কলকাতায় এসেছি।",
+  "from": "vocab months phrase"
+ },
+ "4c0698b2d493b667": {
+  "text": "এটা কোন মাস?",
+  "from": "vocab months phrase"
+ },
+ "a17874c54673e75d": {
+  "text": "পৌষ মাসে পিঠে খাওয়া হয়।",
+  "from": "vocab months phrase"
+ },
+ "e28c7b4cb32e32cf": {
+  "text": "বছরে বারো মাস।",
+  "from": "vocab months phrase"
+ },
  "41e2aa806d9d2033": {
   "text": "রং",
   "from": "vocab colours"
@@ -2742,6 +3534,50 @@
  "cfff5d887bb13bd7": {
   "text": "উজ্জ্বল",
   "from": "vocab colours"
+ },
+ "0c3ce9f495866de7": {
+  "text": "আমার প্রিয় রং নীল।",
+  "from": "vocab colours phrase"
+ },
+ "302f319e94f2d6d9": {
+  "text": "এই শাড়িটা লাল আর সাদা।",
+  "from": "vocab colours phrase"
+ },
+ "de99a48c8ef2f9e3": {
+  "text": "আকাশটা আজ খুব নীল।",
+  "from": "vocab colours phrase"
+ },
+ "ff699ccc43a968ea": {
+  "text": "আমি লাল রং ভালোবাসি।",
+  "from": "vocab colours phrase"
+ },
+ "0555d68b9f132f39": {
+  "text": "আকাশ নীল আর ঘাস সবুজ।",
+  "from": "vocab colours phrase"
+ },
+ "b4167392dcfd55b3": {
+  "text": "তার চুল কালো।",
+  "from": "vocab colours phrase"
+ },
+ "a4d1567f449962ca": {
+  "text": "ফুলটা হলুদ রঙের।",
+  "from": "vocab colours phrase"
+ },
+ "936017a35a77ef23": {
+  "text": "আমাকে একটা সাদা জামা দিন।",
+  "from": "vocab colours phrase"
+ },
+ "614492adfe29ad9e": {
+  "text": "তোমার প্রিয় রং কী?",
+  "from": "vocab colours phrase"
+ },
+ "6d9c4e53fb3dc77d": {
+  "text": "দুর্গাপূজায় সাদা-লাল শাড়ি পরা হয়।",
+  "from": "vocab colours phrase"
+ },
+ "c68b4bd99451c218": {
+  "text": "এটা গাঢ় নীল না ফিকে নীল?",
+  "from": "vocab colours phrase"
  },
  "065476e1173e9cf4": {
   "text": "জায়গা",
@@ -2867,6 +3703,50 @@
   "text": "শিয়ালদহ",
   "from": "vocab places"
  },
+ "d1bd6e5362115973": {
+  "text": "এখানে কাছে কি কোনো ওষুধের দোকান আছে?",
+  "from": "vocab places phrase"
+ },
+ "018be36184ac9365": {
+  "text": "আমি কলেজ স্ট্রিটে বই কিনতে যাচ্ছি।",
+  "from": "vocab places phrase"
+ },
+ "58b6ab903fc6f36d": {
+  "text": "হাসপাতালটা কোথায়?",
+  "from": "vocab places phrase"
+ },
+ "f8f99d67aaba04c3": {
+  "text": "বাজার কোন দিকে?",
+  "from": "vocab places phrase"
+ },
+ "89831fdd3fe4b968": {
+  "text": "আমি স্কুলে পড়ি।",
+  "from": "vocab places phrase"
+ },
+ "ffa1cfb3f39aa955": {
+  "text": "মন্দিরে অনেক ভিড়।",
+  "from": "vocab places phrase"
+ },
+ "6c047c06fb0821f2": {
+  "text": "পার্কে ছেলেমেয়েরা খেলছে।",
+  "from": "vocab places phrase"
+ },
+ "ca2a7c4ac3d8ed67": {
+  "text": "ব্যাংকটা কখন খোলে?",
+  "from": "vocab places phrase"
+ },
+ "0e9522e0373ee0ca": {
+  "text": "আমরা কাল জাদুঘরে যাব।",
+  "from": "vocab places phrase"
+ },
+ "35419fb828bc2662": {
+  "text": "ডাকঘরে একটা চিঠি ফেলতে হবে।",
+  "from": "vocab places phrase"
+ },
+ "ed50cebf8486cd05": {
+  "text": "আমার অফিস হাওড়ায়।",
+  "from": "vocab places phrase"
+ },
  "6b53d437d17a8100": {
   "text": "দিক",
   "from": "vocab directions"
@@ -2983,6 +3863,50 @@
   "text": "ঠিকানা",
   "from": "vocab directions"
  },
+ "2d4fa86e39bb43f7": {
+  "text": "সোজা গিয়ে ডান দিকে ঘুরুন।",
+  "from": "vocab directions phrase"
+ },
+ "ec3f64f850058b42": {
+  "text": "স্টেশনটা এখান থেকে কত দূর?",
+  "from": "vocab directions phrase"
+ },
+ "c4cd5d777dfcebbc": {
+  "text": "এটা কি সঠিক রাস্তা?",
+  "from": "vocab directions phrase"
+ },
+ "bb867cdada91e6ad": {
+  "text": "ডান দিকে ঘুরুন।",
+  "from": "vocab directions phrase"
+ },
+ "73e216a02b008950": {
+  "text": "বাঁ দিকে একটা দোকান আছে।",
+  "from": "vocab directions phrase"
+ },
+ "d63d96bec9c25c1d": {
+  "text": "হাসপাতাল এখান থেকে কাছে।",
+  "from": "vocab directions phrase"
+ },
+ "bccf934f25e7def8": {
+  "text": "স্টেশন একটু দূরে।",
+  "from": "vocab directions phrase"
+ },
+ "3e0c26cc3c602a4a": {
+  "text": "মোড়ের মাথায় দাঁড়ান।",
+  "from": "vocab directions phrase"
+ },
+ "009f73759a990b39": {
+  "text": "রাস্তাটা সোজা গেছে।",
+  "from": "vocab directions phrase"
+ },
+ "df5536a551dda9c5": {
+  "text": "ঠিকানাটা লিখে দিন।",
+  "from": "vocab directions phrase"
+ },
+ "91593d96c2b213f6": {
+  "text": "কলেজ স্ট্রিট কোথায়?",
+  "from": "vocab directions phrase"
+ },
  "5a0cc4562419a162": {
   "text": "গাড়ি",
   "from": "vocab transport"
@@ -3070,6 +3994,50 @@
  "50c6633b164f5a9b": {
   "text": "যাত্রা",
   "from": "vocab transport"
+ },
+ "2b8215e4dc47bb86": {
+  "text": "ভাড়া কত?",
+  "from": "vocab transport phrase"
+ },
+ "f29a991971bfc78f": {
+  "text": "এই বাসটা কোথায় যাবে?",
+  "from": "vocab transport phrase"
+ },
+ "69fa752376e17706": {
+  "text": "আমাকে হাওড়া স্টেশনে নিয়ে যান।",
+  "from": "vocab transport phrase"
+ },
+ "c19f0328b916d4e2": {
+  "text": "আমি ট্রামে করে অফিস যাই।",
+  "from": "vocab transport phrase"
+ },
+ "210ba3f86ca43654": {
+  "text": "মেট্রোতে ভিড় কম।",
+  "from": "vocab transport phrase"
+ },
+ "5ee631459e50208e": {
+  "text": "একটা রিকশা ডাকো।",
+  "from": "vocab transport phrase"
+ },
+ "925bc2e4edf8ff0e": {
+  "text": "ট্রেন কটায় ছাড়বে?",
+  "from": "vocab transport phrase"
+ },
+ "7b17a1c76e88d43c": {
+  "text": "আমাকে একটা টিকিট দিন।",
+  "from": "vocab transport phrase"
+ },
+ "e90398ed1e265d2f": {
+  "text": "আমরা নৌকায় নদী পার হব।",
+  "from": "vocab transport phrase"
+ },
+ "39a6cf5ad8393734": {
+  "text": "এখান থেকে বিমানবন্দর কত দূর?",
+  "from": "vocab transport phrase"
+ },
+ "cb71ede2e4b31825": {
+  "text": "ট্যাক্সিওয়ালা ভাড়া বেশি চাইছে।",
+  "from": "vocab transport phrase"
  },
  "ac02ad892eebc8af": {
   "text": "পয়সা",
@@ -3166,6 +4134,50 @@
  "0905e1fb3d4c1d26": {
   "text": "অনেক",
   "from": "vocab market"
+ },
+ "454e3fa5f12f3b51": {
+  "text": "এটার দাম কত?",
+  "from": "vocab market phrase"
+ },
+ "c9b6fcae8a6dd22f": {
+  "text": "একটু কমান।",
+  "from": "vocab market phrase"
+ },
+ "8c5db99f5c582c31": {
+  "text": "আমি এক কিলো আলু চাই।",
+  "from": "vocab market phrase"
+ },
+ "704b78ead2cee728": {
+  "text": "এক ডজন কলার দাম কত?",
+  "from": "vocab market phrase"
+ },
+ "e61aeb736fc7d7fa": {
+  "text": "আপনার কাছে খুচরো আছে?",
+  "from": "vocab market phrase"
+ },
+ "e3f893d8e19d7bd4": {
+  "text": "দামটা একটু বেশি।",
+  "from": "vocab market phrase"
+ },
+ "3006df8025f1bf06": {
+  "text": "আমি কার্ডে দাম দেব।",
+  "from": "vocab market phrase"
+ },
+ "621e77d36d830a5e": {
+  "text": "আধ কিলো ডাল দিন।",
+  "from": "vocab market phrase"
+ },
+ "06a0a57da1e3e1b5": {
+  "text": "রসিদটা দেবেন?",
+  "from": "vocab market phrase"
+ },
+ "fe96b3de6aa3521d": {
+  "text": "আজ কিছু ছাড় পাব?",
+  "from": "vocab market phrase"
+ },
+ "a21c63d39e4689fe": {
+  "text": "বাজার থেকে সবজি কিনে আনো।",
+  "from": "vocab market phrase"
  },
  "697445077342e535": {
   "text": "ক্লাস",
@@ -3271,6 +4283,50 @@
   "text": "নম্বর",
   "from": "vocab school"
  },
+ "a4d49c4f0d793133": {
+  "text": "আমি বাংলা শিখছি।",
+  "from": "vocab school phrase"
+ },
+ "9deb1040ff705cb0": {
+  "text": "আমি বুঝতে পারিনি।",
+  "from": "vocab school phrase"
+ },
+ "04c721b990dc0cba": {
+  "text": "আরেকবার বলবেন?",
+  "from": "vocab school phrase"
+ },
+ "14aade1b684dc3dd": {
+  "text": "আমি রোজ স্কুলে যাই।",
+  "from": "vocab school phrase"
+ },
+ "776f3f1dd612a77f": {
+  "text": "খাতায় লেখো।",
+  "from": "vocab school phrase"
+ },
+ "09d8c61334b1ebfc": {
+  "text": "আজ আমাদের বাংলা ক্লাস আছে।",
+  "from": "vocab school phrase"
+ },
+ "0cf411d9c9577598": {
+  "text": "আমার পরীক্ষা সামনে।",
+  "from": "vocab school phrase"
+ },
+ "62a645df72e840a7": {
+  "text": "প্রশ্নের উত্তর দাও।",
+  "from": "vocab school phrase"
+ },
+ "5060f527ba696f05": {
+  "text": "এই বাক্যটা পড়ো।",
+  "from": "vocab school phrase"
+ },
+ "d6cfeb417d0048c5": {
+  "text": "আমি অঙ্ক ভালোবাসি।",
+  "from": "vocab school phrase"
+ },
+ "efeea70f65e01939": {
+  "text": "শিক্ষক আমাদের নতুন পাঠ শেখালেন।",
+  "from": "vocab school phrase"
+ },
  "d007e1d601250141": {
   "text": "কাজ",
   "from": "vocab media"
@@ -3358,6 +4414,50 @@
  "dd1e9752661a83d5": {
   "text": "কবিতা",
   "from": "vocab media"
+ },
+ "15d2d9ae6d5f65b2": {
+  "text": "আমি অফিসে যাচ্ছি।",
+  "from": "vocab media phrase"
+ },
+ "133745b1bd1eb1db": {
+  "text": "আপনার ফোন নম্বর কত?",
+  "from": "vocab media phrase"
+ },
+ "f6d33f6d81b4ea9c": {
+  "text": "আমাকে একটা মেসেজ পাঠাও।",
+  "from": "vocab media phrase"
+ },
+ "ee0d99fe1264c7af": {
+  "text": "আমি রোজ খবরের কাগজ পড়ি।",
+  "from": "vocab media phrase"
+ },
+ "90df511416e8af07": {
+  "text": "আমাকে ফোন করো।",
+  "from": "vocab media phrase"
+ },
+ "4aebabff7c181ed4": {
+  "text": "আমি একটা চিঠি লিখছি।",
+  "from": "vocab media phrase"
+ },
+ "011a9091e2482abd": {
+  "text": "ইন্টারনেট ধীর চলছে।",
+  "from": "vocab media phrase"
+ },
+ "af5c0532da8cb13c": {
+  "text": "আমি তোমাকে একটা ছবি পাঠালাম।",
+  "from": "vocab media phrase"
+ },
+ "676406cf104cb7db": {
+  "text": "কাল অফিসে মিটিং আছে।",
+  "from": "vocab media phrase"
+ },
+ "f7ca5af6d9ecbba5": {
+  "text": "আজ টিভিতে ভালো সিনেমা আছে।",
+  "from": "vocab media phrase"
+ },
+ "3708682ad4ad54c2": {
+  "text": "এই গল্পটা খুব মজার।",
+  "from": "vocab media phrase"
  },
  "45483f4a4681c3c3": {
   "text": "উৎসব",
@@ -3470,6 +4570,50 @@
  "2a773b918da338c3": {
   "text": "আড্ডা",
   "from": "vocab festivals"
+ },
+ "162d930143f840f7": {
+  "text": "শুভ নববর্ষ!",
+  "from": "vocab festivals phrase"
+ },
+ "86c9576fe215e227": {
+  "text": "দুর্গাপূজায় আমরা ঠাকুর দেখতে যাব।",
+  "from": "vocab festivals phrase"
+ },
+ "d5a8cc9ae6ad20d7": {
+  "text": "শুভ বিজয়া!",
+  "from": "vocab festivals phrase"
+ },
+ "f9290d15387989f9": {
+  "text": "দুর্গাপূজায় ঢাক বাজে।",
+  "from": "vocab festivals phrase"
+ },
+ "256edba31b7a7afa": {
+  "text": "আমরা মণ্ডপে প্রতিমা দেখতে যাব।",
+  "from": "vocab festivals phrase"
+ },
+ "016625fe1e7b2dae": {
+  "text": "পয়লা বৈশাখে আমরা নতুন জামা পরি।",
+  "from": "vocab festivals phrase"
+ },
+ "e320d69f99744575": {
+  "text": "মা ঠাকুরের জন্য প্রসাদ বানিয়েছেন।",
+  "from": "vocab festivals phrase"
+ },
+ "f088098ee9cc9443": {
+  "text": "বইমেলায় অনেক বই পাওয়া যায়।",
+  "from": "vocab festivals phrase"
+ },
+ "3af5f3b87b768393": {
+  "text": "রবীন্দ্রসংগীত আমার খুব ভালো লাগে।",
+  "from": "vocab festivals phrase"
+ },
+ "f14332fda97d66d9": {
+  "text": "দীপাবলিতে বাড়িতে আলো জ্বলে।",
+  "from": "vocab festivals phrase"
+ },
+ "092714d370c74f89": {
+  "text": "আমি বন্ধুদের সঙ্গে আড্ডা দেব।",
+  "from": "vocab festivals phrase"
  },
  "90a8b0ae98b49ba0": {
   "text": "যাওয়া",
@@ -3663,6 +4807,50 @@
   "text": "থাকা",
   "from": "vocab verbs"
  },
+ "0605e73e246503a8": {
+  "text": "আমি রোজ সকালে হাঁটি।",
+  "from": "vocab verbs phrase"
+ },
+ "e48a72d6ae12465d": {
+  "text": "তুমি কী চাও?",
+  "from": "vocab verbs phrase"
+ },
+ "b8512a897576e043": {
+  "text": "আমি তোমাকে ভুলব না।",
+  "from": "vocab verbs phrase"
+ },
+ "5f156e65792b2c00": {
+  "text": "আমি রোজ বাংলা পড়ি।",
+  "from": "vocab verbs phrase"
+ },
+ "e6e8a76fb115cc3f": {
+  "text": "সে বাজারে যাচ্ছে।",
+  "from": "vocab verbs phrase"
+ },
+ "c104ef3774ea688a": {
+  "text": "তুমি কী খাবে?",
+  "from": "vocab verbs phrase"
+ },
+ "0dfaa996929d8f58": {
+  "text": "আমি গান শুনছি।",
+  "from": "vocab verbs phrase"
+ },
+ "6fb807c2849eb2f3": {
+  "text": "আমি তোমাকে ডাকছি।",
+  "from": "vocab verbs phrase"
+ },
+ "4bc3e0eb7454a159": {
+  "text": "দরজাটা খুলে দাও।",
+  "from": "vocab verbs phrase"
+ },
+ "6dc5aa79ac2f3816": {
+  "text": "সে ভালো গান গায়।",
+  "from": "vocab verbs phrase"
+ },
+ "c5ee536dec9a2364": {
+  "text": "আমি কিছু বুঝতে পারছি না।",
+  "from": "vocab verbs phrase"
+ },
  "7f5c3e1f44517a96": {
   "text": "ছোট",
   "from": "vocab describing"
@@ -3819,6 +5007,50 @@
   "text": "ব্যস্ত",
   "from": "vocab describing"
  },
+ "e59c201e3bf9d0c1": {
+  "text": "এই ঘরটা খুব বড়।",
+  "from": "vocab describing phrase"
+ },
+ "d591d0a1ec4a7d99": {
+  "text": "প্রশ্নটা কঠিন, কিন্তু উত্তরটা সহজ।",
+  "from": "vocab describing phrase"
+ },
+ "a307bda3aefdbda6": {
+  "text": "আস্তে আস্তে বলুন।",
+  "from": "vocab describing phrase"
+ },
+ "3cc850df53657463": {
+  "text": "এটা খুব সুন্দর ফুল।",
+  "from": "vocab describing phrase"
+ },
+ "fc72145c8882a57e": {
+  "text": "আজকের পরীক্ষা সহজ ছিল।",
+  "from": "vocab describing phrase"
+ },
+ "8abe8b6211bc2a2e": {
+  "text": "ব্যাগটা খুব ভারী।",
+  "from": "vocab describing phrase"
+ },
+ "e1a39910e30ed558": {
+  "text": "তার বাড়ি অনেক বড়।",
+  "from": "vocab describing phrase"
+ },
+ "fa8faaf214efdc5e": {
+  "text": "আমি ব্যস্ত, পরে ফোন করব।",
+  "from": "vocab describing phrase"
+ },
+ "46ee59fe957ff16b": {
+  "text": "গ্লাসটা খালি।",
+  "from": "vocab describing phrase"
+ },
+ "e67f5225aa0f114f": {
+  "text": "এই রাস্তাটা পরিষ্কার।",
+  "from": "vocab describing phrase"
+ },
+ "a0af7a1f328eb7ec": {
+  "text": "তুমি কি সুখী?",
+  "from": "vocab describing phrase"
+ },
  "2ca85ec4899a31be": {
   "text": "কে",
   "from": "vocab questions"
@@ -3866,6 +5098,46 @@
  "937bf11992ef9128": {
   "text": "কেমন",
   "from": "vocab questions"
+ },
+ "701bd5fb440f7902": {
+  "text": "আপনার নাম কী?",
+  "from": "vocab questions phrase"
+ },
+ "54241e50db1d7cee": {
+  "text": "আপনি কোথায় থাকেন?",
+  "from": "vocab questions phrase"
+ },
+ "4ceb5ce09d65577a": {
+  "text": "এটা কত টাকা?",
+  "from": "vocab questions phrase"
+ },
+ "241c29279f4b5d40": {
+  "text": "এটা কী?",
+  "from": "vocab questions phrase"
+ },
+ "ee145afd99507b52": {
+  "text": "তুমি কেন কাঁদছ?",
+  "from": "vocab questions phrase"
+ },
+ "1c3b93eac79604f1": {
+  "text": "আপনি কখন আসবেন?",
+  "from": "vocab questions phrase"
+ },
+ "3d8639c6f4ada02b": {
+  "text": "এটা কার বই?",
+  "from": "vocab questions phrase"
+ },
+ "fa4510c9f7a40641": {
+  "text": "আপনি কোন স্কুলে পড়েন?",
+  "from": "vocab questions phrase"
+ },
+ "ce2d8d99f753975b": {
+  "text": "আমি কীভাবে যাব?",
+  "from": "vocab questions phrase"
+ },
+ "6f91e8d945172334": {
+  "text": "তোমার বাড়িতে কে আছে?",
+  "from": "vocab questions phrase"
  },
  "732ac4754e8dae35": {
   "text": "নমস্কার",
@@ -3927,10 +5199,6 @@
   "text": "ভালো আছি",
   "from": "vocab greetings"
  },
- "701bd5fb440f7902": {
-  "text": "আপনার নাম কী?",
-  "from": "vocab greetings"
- },
  "40e867a430dfd08d": {
   "text": "আস্তে বলুন",
   "from": "vocab greetings"
@@ -3950,5 +5218,49 @@
  "c98ccf6e9ee0b696": {
   "text": "আমি বুঝিনি",
   "from": "vocab greetings"
+ },
+ "77f49ea46b9af1e3": {
+  "text": "নমস্কার, আপনি কেমন আছেন?",
+  "from": "vocab greetings phrase"
+ },
+ "a343adb4c092ba9a": {
+  "text": "ধন্যবাদ, আমি ভালো আছি।",
+  "from": "vocab greetings phrase"
+ },
+ "ce50429e7e20aa1a": {
+  "text": "দয়া করে একটু সাহায্য করুন।",
+  "from": "vocab greetings phrase"
+ },
+ "4be2b7cda8fed5b6": {
+  "text": "শুভ সকাল! আজ কেমন আছেন?",
+  "from": "vocab greetings phrase"
+ },
+ "360142f047ad6a65": {
+  "text": "আপনাকে ধন্যবাদ।",
+  "from": "vocab greetings phrase"
+ },
+ "6afcccbc9cfb1173": {
+  "text": "মাফ করবেন, আমি দেরি করে ফেলেছি।",
+  "from": "vocab greetings phrase"
+ },
+ "8521f16397ef38af": {
+  "text": "আবার দেখা হবে।",
+  "from": "vocab greetings phrase"
+ },
+ "841dc3181a8f739c": {
+  "text": "আমার নাম রাহুল।",
+  "from": "vocab greetings phrase"
+ },
+ "742bb5651988ece1": {
+  "text": "আপনি কি ইংরেজি বলতে পারেন?",
+  "from": "vocab greetings phrase"
+ },
+ "59c6730314b3afab": {
+  "text": "আস্তে বলবেন?",
+  "from": "vocab greetings phrase"
+ },
+ "96cd67b394b15b72": {
+  "text": "স্বাগতম, ভেতরে আসুন।",
+  "from": "vocab greetings phrase"
  }
 }
