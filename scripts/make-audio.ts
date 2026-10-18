@@ -11,7 +11,7 @@
  *   npm run audio -- --voices      # list the Bengali voices your provider offers (Google)
  *   npm run audio -- --force       # regenerate even clips that exist
  *
- * Sarvam: the speaker names are on https://docs.sarvam.ai (Text to Speech, voices). TTS_MODEL defaults to bulbul:v3.
+ * Sarvam: TTS_MODEL defaults to bulbul:v3, whose Bengali speakers are shubh (male, the default) and ishita (female).
  * Free keys are limited to about 30 requests a minute, so the script paces itself (TTS_RPM to change it).
  * Generate the final clips through the API with your own key, not the web playground.
  *
@@ -31,7 +31,7 @@ const args = new Set(process.argv.slice(2));
 const provider = (process.env.TTS_PROVIDER ?? "google").toLowerCase();
 const key = process.env.TTS_API_KEY ?? "";
 const endpoint = process.env.TTS_ENDPOINT; // override, used by the tests
-const voiceName = process.env.TTS_VOICE ?? (provider === "azure" ? "bn-IN-TanishaaNeural" : provider === "sarvam" ? "" : "bn-IN-Wavenet-A");
+const voiceName = process.env.TTS_VOICE ?? (provider === "azure" ? "bn-IN-TanishaaNeural" : provider === "sarvam" ? "shubh" : "bn-IN-Wavenet-A");
 const model = process.env.TTS_MODEL ?? "bulbul:v3";
 const TAKA = "টাকা";
 
@@ -51,13 +51,22 @@ function collect(): Map<string, string> {
   return out;
 }
 
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 async function synth(text: string, speaker = voiceName): Promise<Buffer> {
   if (provider === "sarvam") {
     if (!speaker) throw new Error("Set TTS_VOICE to a Sarvam speaker name (see the comment at the top of this file).");
-    const r = await fetch(endpoint ?? "https://api.sarvam.ai/text-to-speech", {
-      method: "POST", headers: { "Content-Type": "application/json", "api-subscription-key": key },
-      body: JSON.stringify({ text, target_language_code: "bn-IN", speaker, model, output_audio_codec: "mp3", speech_sample_rate: 24000 }),
-    });
+    // bulbul:v3 has shubh (male) and ishita (female). bulbul:v4-flash has arnab_bn_conversation, roopa_bn_conversational, bimal_bn_suspense.
+    // Names are lowercase and must match the model.
+    let r: Response;
+    for (let attempt = 0; ; attempt++) {
+      r = await fetch(endpoint ?? "https://api.sarvam.ai/text-to-speech", {
+        method: "POST", headers: { "Content-Type": "application/json", "api-subscription-key": key },
+        body: JSON.stringify({ text, language_code: "bn-IN", speaker, model, output_audio_codec: "mp3" }),
+      });
+      if (r.status !== 429 || attempt >= 5) break;
+      await sleep(5000 * (attempt + 1)); // over the rate limit: wait, then try again
+    }
     if (!r.ok) throw new Error(`Sarvam ${r.status}: ${await r.text()}`);
     const j = (await r.json()) as { audios?: string[] };
     if (!j.audios?.[0]) throw new Error("Sarvam returned no audio");
@@ -81,8 +90,7 @@ async function synth(text: string, speaker = voiceName): Promise<Buffer> {
   return Buffer.from(((await r.json()) as { audioContent: string }).audioContent, "base64");
 }
 
-const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
-const gap = provider === "sarvam" ? Math.ceil(60000 / Number(process.env.TTS_RPM ?? 25)) : 0;
+const gap = provider === "sarvam" ? Math.ceil(60000 / Number(process.env.TTS_RPM ?? 28)) : 0;
 
 /** Ten texts that cover what the app says: a letter, a number, short and long words, a conjunct, a price. */
 const SAMPLE = ["অ", "ক", "পঞ্চাশ", "জল", "ভাত", "বিদ্যালয়", "ধন্যবাদ", "আমি ভালো আছি।", "একশো টাকা", "স্বাগতম"];
