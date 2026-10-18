@@ -1,11 +1,19 @@
 /**
- * Make pronunciation clips for everything the app can say aloud.
+ * Make pronunciation clips for the places the app plays sound: letters (and their example words),
+ * numbers, and vocabulary words. Phrases are left out unless you ask for them with --phrases.
  *
- *   TTS_API_KEY=... npm run audio                 # Google Cloud Text-to-Speech (default)
+ *   TTS_PROVIDER=sarvam TTS_API_KEY=... TTS_VOICE=<speaker> npm run audio -- --sample
+ *       # 10 test clips per voice in content-audio/samples/, for your teacher to compare. TTS_VOICES=a,b,c tries several.
+ *   TTS_PROVIDER=sarvam TTS_API_KEY=... TTS_VOICE=<speaker> npm run audio
+ *   TTS_PROVIDER=google TTS_API_KEY=... npm run audio          # Google Cloud Text-to-Speech (needs a billing account)
  *   TTS_PROVIDER=azure TTS_API_KEY=... TTS_REGION=centralindia npm run audio
  *   npm run audio -- --list        # print the texts and ids, make nothing (use this for recordings)
  *   npm run audio -- --voices      # list the Bengali voices your provider offers (Google)
  *   npm run audio -- --force       # regenerate even clips that exist
+ *
+ * Sarvam: the speaker names are on https://docs.sarvam.ai (Text to Speech, voices). TTS_MODEL defaults to bulbul:v3.
+ * Free keys are limited to about 30 requests a minute, so the script paces itself (TTS_RPM to change it).
+ * Generate the final clips through the API with your own key, not the web playground.
  *
  * Clips are written to content-audio/<id>.mp3 and served only to signed-in students (see /api/audio).
  * A clip that already exists is never overwritten, so a recording by your teacher
@@ -16,9 +24,6 @@ import path from "node:path";
 import { audioId } from "../src/lib/audio";
 import { LETTERS } from "../src/data/letters";
 import { NUMBERS } from "../src/data/numbers";
-import { SENTENCES } from "../src/data/sentences";
-import { DECKS } from "../src/data/decks";
-import { STORIES } from "../src/data/stories";
 import { VOCAB } from "../src/data/vocabulary";
 
 const DIR = path.join(process.cwd(), "content-audio");
@@ -26,7 +31,8 @@ const args = new Set(process.argv.slice(2));
 const provider = (process.env.TTS_PROVIDER ?? "google").toLowerCase();
 const key = process.env.TTS_API_KEY ?? "";
 const endpoint = process.env.TTS_ENDPOINT; // override, used by the tests
-const voiceName = process.env.TTS_VOICE ?? (provider === "azure" ? "bn-IN-TanishaaNeural" : "bn-IN-Wavenet-A");
+const voiceName = process.env.TTS_VOICE ?? (provider === "azure" ? "bn-IN-TanishaaNeural" : provider === "sarvam" ? "" : "bn-IN-Wavenet-A");
+const model = process.env.TTS_MODEL ?? "bulbul:v3";
 const TAKA = "টাকা";
 
 /** Every text the app speaks, with where it comes from. */
@@ -38,22 +44,25 @@ function collect(): Map<string, string> {
   };
   for (const l of LETTERS) { add(l.ch, "letter"); add(l.word, "letter word"); }
   for (const n of NUMBERS) { add(n.word, "number"); add(`${n.word} ${TAKA}`, "price"); }
-  for (const s of SENTENCES) add(s.bn, "sentence");
-  for (const d of DECKS) for (const c of d.cards) add(c.speak, `deck ${d.id}`);
-  for (const s of STORIES) {
-    add(s.title[0], `story ${s.id}`);
-    for (const l of s.lines) add(l[0], `story ${s.id}`);
-    for (const v of s.vocab) add(v[0], `story ${s.id} vocab`);
-    add(s.lines.map((l) => l[0]).join(" "), `story ${s.id} whole`);
-  }
   for (const t of VOCAB) {
     for (const sec of t.sections) for (const w of sec.words) add(w[0], `vocab ${t.id}`);
-    for (const p of t.phrases) add(p[0], `vocab ${t.id} phrase`);
+    if (args.has("--phrases")) for (const p of t.phrases) add(p[0], `vocab ${t.id} phrase`);
   }
   return out;
 }
 
-async function synth(text: string): Promise<Buffer> {
+async function synth(text: string, speaker = voiceName): Promise<Buffer> {
+  if (provider === "sarvam") {
+    if (!speaker) throw new Error("Set TTS_VOICE to a Sarvam speaker name (see the comment at the top of this file).");
+    const r = await fetch(endpoint ?? "https://api.sarvam.ai/text-to-speech", {
+      method: "POST", headers: { "Content-Type": "application/json", "api-subscription-key": key },
+      body: JSON.stringify({ text, target_language_code: "bn-IN", speaker, model, output_audio_codec: "mp3", speech_sample_rate: 24000 }),
+    });
+    if (!r.ok) throw new Error(`Sarvam ${r.status}: ${await r.text()}`);
+    const j = (await r.json()) as { audios?: string[] };
+    if (!j.audios?.[0]) throw new Error("Sarvam returned no audio");
+    return Buffer.from(j.audios[0], "base64");
+  }
   if (provider === "azure") {
     const region = process.env.TTS_REGION ?? "centralindia";
     const url = endpoint ?? `https://${region}.tts.speech.microsoft.com/cognitiveservices/v1`;
@@ -72,6 +81,29 @@ async function synth(text: string): Promise<Buffer> {
   return Buffer.from(((await r.json()) as { audioContent: string }).audioContent, "base64");
 }
 
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+const gap = provider === "sarvam" ? Math.ceil(60000 / Number(process.env.TTS_RPM ?? 25)) : 0;
+
+/** Ten texts that cover what the app says: a letter, a number, short and long words, a conjunct, a price. */
+const SAMPLE = ["অ", "ক", "পঞ্চাশ", "জল", "ভাত", "বিদ্যালয়", "ধন্যবাদ", "আমি ভালো আছি।", "একশো টাকা", "স্বাগতম"];
+
+async function sample() {
+  const voices = (process.env.TTS_VOICES ?? voiceName).split(",").map((v) => v.trim()).filter(Boolean);
+  if (!voices.length) { console.error("Set TTS_VOICE (or TTS_VOICES=a,b,c) to try."); process.exit(1); }
+  const dir = path.join(DIR, "samples");
+  await mkdir(dir, { recursive: true });
+  for (const v of voices) {
+    for (const [i, t] of SAMPLE.entries()) {
+      const file = path.join(dir, `${v}-${String(i + 1).padStart(2, "0")}.mp3`);
+      await writeFile(file, await synth(t, v));
+      process.stdout.write(".");
+      if (gap) await sleep(gap);
+    }
+  }
+  await writeFile(path.join(dir, "samples.txt"), SAMPLE.map((t, i) => `${i + 1}\t${t}`).join("\n") + "\n");
+  console.log(`\n${voices.length * SAMPLE.length} sample clips in content-audio/samples/ (numbers match samples.txt). Nothing was added to the app.`);
+}
+
 const exists = (f: string) => access(f).then(() => true, () => false);
 
 async function main() {
@@ -88,12 +120,13 @@ async function main() {
     return;
   }
   if (!key) { console.error("Set TTS_API_KEY (see the comment at the top of this file)."); process.exit(1); }
+  if (args.has("--sample")) return sample();
   await mkdir(DIR, { recursive: true });
   let made = 0, kept = 0, failed = 0;
   for (const [text] of texts) {
     const file = path.join(DIR, `${audioId(text)}.mp3`);
     if (!args.has("--force") && (await exists(file))) { kept++; continue; }
-    try { await writeFile(file, await synth(text)); made++; process.stdout.write("."); }
+    try { await writeFile(file, await synth(text)); made++; process.stdout.write("."); if (gap) await sleep(gap); }
     catch (e) { failed++; console.error(`\nfailed: ${text}: ${(e as Error).message}`); if (failed >= 5) { console.error("Stopping after 5 failures."); break; } }
   }
   const index = Object.fromEntries([...texts].map(([t, from]) => [audioId(t), { text: t, from }]));
