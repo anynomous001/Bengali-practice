@@ -30,29 +30,33 @@ const VOCAB_ROUND = Math.round(VOCAB_WORDS / 100) * 100;
 const EXAM_MINUTES = EXAMS.map((e) => e.minutes);
 
 const COURSES = [
-  { seg: "reading", icon: "reading", bn: "পড়া", title: "Reading", outcome: "Read a short Bengali story on your own.", body: "Start from the alphabet and vowel signs, then read short fables in three layers: Bengali only, line by line with meanings, and English." },
-  { seg: "speaking", icon: "speaking", bn: "বলা", title: "Speaking", outcome: "Handle the market, the doctor and a phone call in Bengali.", body: "Hear every letter, number and word, then practice real conversations in role plays, speak on a topic with a timer, and build stories with a partner in story relay." },
-  { seg: "vocabulary", icon: "vocabulary", bn: "শব্দ", title: "Vocabulary", outcome: `About ${VOCAB_ROUND} everyday words in ${VOCAB.length} topics.`, body: "From family and food to Kolkata's streets, each topic with example phrases, flashcards and a practice round." },
-  { seg: "grammar", icon: "grammar", bn: "ব্যাকরণ", title: "Grammar", outcome: "Build correct sentences in every tense.", body: "Persons, verbs, tenses, karak and bibhakti with many examples, tense practice rounds, quick translation and a timed exam." },
+  { seg: "reading", icon: "reading", bn: "পড়া", ro: "pora", title: "Reading", outcome: "Read any Bengali word aloud.", body: "The alphabet and vowel signs, then short fables read in three layers: Bengali, romanized, English." },
+  { seg: "speaking", icon: "speaking", bn: "বলা", ro: "bola", title: "Speaking", outcome: "Hold a simple conversation.", body: `Hear it, then say it: everyday phrases, ${SCENARIOS.length} role plays and impromptu speaking against a timer.` },
+  { seg: "vocabulary", icon: "vocabulary", bn: "শব্দ", ro: "shobdo", title: "Vocabulary", outcome: `Know about ${VOCAB_ROUND} everyday words.`, body: `${VOCAB.length} topics, each with audio and spaced-repetition flashcards.` },
+  { seg: "grammar", icon: "grammar", bn: "ব্যাকরণ", ro: "bakoron", title: "Grammar", outcome: "Build sentences of your own.", body: `${GRAMMAR.length} topics, each explained in plain English and practiced until it sticks.` },
 ] as const;
 
-const AUDIENCE: { kind: Quote["kind"]; lead: string; body: string }[] = [
-  { kind: "heritage", lead: "You grew up hearing Bengali at home.", body: "You want to read it, speak it with your family, and finally understand the script. Most of my heritage learners start with the alphabet and are reading short stories within a few weeks." },
-  { kind: "partner", lead: "Your partner, friends or relatives speak Bengali.", body: "You want to join the conversation, starting from zero. We begin with the sounds and the greetings, then the words you will actually need at the table." },
-  { kind: "devotee", lead: "You want to read bhajans, mantras and the words of the sādhu-saṅga in the original.", body: "There is a separate devotional track for this, kept apart from the main course." },
+const AUDIENCE: { kind: Quote["kind"]; bn: string; ro: string; gloss: string; tag: string; lead: string; body: string }[] = [
+  { kind: "heritage", bn: "শিকড়", ro: "shikor", gloss: "roots", tag: "Heritage learners", lead: "You grew up hearing it. Now you want to read it.", body: "Many of my heritage students understand far more than they can say, and can't read a word. We start with the alphabet you've heard all your life and build towards reading your family's messages and answering back." },
+  { kind: "partner", bn: "আত্মীয়", ro: "attiyo", gloss: "family, kin", tag: "Partners and in-laws", lead: "You married into a Bengali family and want to join the conversation.", body: "You start from zero, and that is fine. Short daily lessons, romanized English you can switch off when you're ready, and role plays for the moments that matter: the dinner table, the phone call, the trip to Kolkata." },
+  { kind: "devotee", bn: "ভক্তি", ro: "bhokti", gloss: "devotion", tag: "Devotees", lead: "You want to read the bhajans and mantras in the original.", body: "Learn the script first, then read real mantras, bhajans and sādhu-saṅga passages letter by letter. The letters and words have audio, so you can check how they sound as you go." },
 ];
 
 const POINTS = [
-  { title: "Romanized English, on or off", body: "Start with a pronunciation guide under every Bengali word, then switch it off to test yourself." },
-  { title: "Hear it, then say it", body: "Tap any letter, word, number or price to hear it, with slow playback for the hard ones." },
-  { title: "Flashcards that remember", body: "Cards you miss come back sooner; cards you know come back after 1, 3, 7, 14, then 30 days." },
-  { title: "Streaks and goals", body: "Choose a daily goal, keep a streak, and see how you compare with other students." },
-  { title: "Built from my lessons", body: "Everything comes from my online lessons and the worksheets I use with my students, not a generic phrasebook." },
+  { n: "১", title: "Romanized English, on or off", body: "Lean on it at the start. Switch it off when you can read.", bn: "আমি বাংলা পড়ি", ro: "ami bangla pori", gloss: "I read Bengali" },
+  { n: "২", title: "Hear it, then say it", body: "Every letter, number and vocabulary word has audio. Listen, repeat, compare.", bn: "শোনো", ro: "shono", gloss: "listen" },
+  { n: "৩", title: "Flashcards that remember", body: "Words you miss come back sooner. Words you know wait longer.", bn: "মনে রাখা", ro: "mone rakha", gloss: "to remember" },
+  { n: "৪", title: "Streaks and goals", body: "A daily goal, a streak and a class leaderboard, kept quiet.", bn: "রোজ", ro: "roj", gloss: "every day" },
+  { n: "৫", title: "Built from my lessons", body: "Nothing generic. Every exercise is one I have used with a student.", bn: "ক্লাস", ro: "klas", gloss: "class" },
 ];
 
 const FAQ = [
   { q: "Do I need to know any Bengali already?", a: "No. The Reading course starts with the alphabet and the vowel signs. If you already speak a little, you can go straight to any course." },
   { q: "Is this live tutoring?", a: "No. It is self-paced practice you can use any time, on your own. Live lessons with me are separate and optional." },
+  { q: "How much time does it take?", a: "Lessons are short. Ten minutes a day is enough to make steady progress." },
+  { q: "Can I turn the romanized English off?", a: "Yes, at any time. Most students keep it on for the first weeks and switch it off once they can read." },
+  { q: "Is there audio?", a: "Yes, for every letter, number and vocabulary word, so you always know how it should sound." },
+  { q: "What is the devotional track?", a: "A separate set of readings: mantras, bhajans and sādhu-saṅga passages, to read in the original Bengali." },
   { q: "Who writes the lessons?", a: "I do, from the lessons and worksheets I use with my online students." },
   { q: "Which Bengali do you teach?", a: "The standard Bengali of West Bengal (Kolkata). Learners from Bangladesh will understand it, and a few everyday words differ: water is জল (jol) in Kolkata and পানি (pani) in Bangladesh." },
   { q: "How do I sign in?", a: "With your email address. We send a one-time link, valid for 15 minutes, so there is no password to remember." },
@@ -79,17 +83,17 @@ export default async function Home() {
   const hasAbout = TEACHER.story.length > 0;
 
   const shots = [
-    { id: "home", title: "Your home page", text: "Your streak, today's goal and exactly where you left off.", alt: "The learner home page showing a streak and the next lesson" },
-    { id: "flashcard", title: "Flashcards that remember", text: "Cards you miss come back sooner, so the words you know stay known.", alt: "A vocabulary flashcard" },
-    { id: "roleplay", title: `${SCENARIOS.length} role plays`, text: "Practice the market, the doctor and the phone, with the words you need and what goes wrong when you get them wrong.", alt: "A role play lesson" },
-    { id: "grammar", title: `${GRAMMAR.length} grammar topics`, text: "Persons, verbs, tenses, karak and more, each with exercises that explain every answer.", alt: "A grammar exercise" },
-    { id: "exam", title: "Timed exams", text: `${EXAMS.length} exams, ${Math.min(...EXAM_MINUTES)} to ${Math.max(...EXAM_MINUTES)} minutes each: grammar, vocabulary, and alphabet and numbers. A score and what to fix.`, alt: "A timed exam in progress" },
+    { id: "home", bn: "আজ", ro: "aj", gloss: "today", title: "A home page that knows where you left off", text: "Your streak, today's goal and the next lesson, in one place.", notes: ["Your streak", "Today's goal", "The next lesson, one tap away"], alt: "The learner home page showing a streak and the next lesson" },
+    { id: "flashcard", seg: "vocabulary", bn: "শব্দ", ro: "shobdo", gloss: "word", title: `Flashcards for about ${VOCAB_ROUND} words`, text: `${VOCAB.length} topics. Each word comes back just before you would forget it.`, alt: "A vocabulary flashcard" },
+    { id: "roleplay", seg: "speaking", bn: "বাজারে", ro: "bajare", gloss: "at the market", title: `${SCENARIOS.length} role plays`, text: "The market, the doctor, a phone call, a hotel, the train. Say your part out loud.", alt: "A role play lesson" },
+    { id: "grammar", seg: "grammar", bn: "ব্যাকরণ", ro: "bakoron", gloss: "grammar", title: `${GRAMMAR.length} grammar topics`, text: "Each topic explained in plain English, then practiced until it comes without thinking.", alt: "A grammar exercise" },
+    { id: "exam", bn: "পরীক্ষা", ro: "porikkha", gloss: "exam", title: "Timed exams", text: `Test yourself against the clock, the way a class would. ${EXAMS.length} exams, ${Math.min(...EXAM_MINUTES)} to ${Math.max(...EXAM_MINUTES)} minutes each: grammar, vocabulary, and alphabet and numbers.`, alt: "A timed exam in progress" },
   ];
   const alsoIn = [
-    { title: "Quick translation", text: "Translate short sentences both ways and see the right answer." },
-    { title: "Impromptu speaking", text: "Get a topic, prepare for a moment, then speak out loud against the clock." },
-    { title: "Story relay", text: "Build a story with a partner, one line each, using words you have just learned." },
-    { title: `${CLASSWORK.length} class worksheet sets`, text: "Worksheets from my own classes. Write your answer, then check it." },
+    { title: "Quick translation", bn: "অনুবাদ", ro: "onubad", text: "Short English sentences to turn into Bengali, fast." },
+    { title: "Impromptu speaking", bn: "বলো তো", ro: "bolo to", gloss: "go on, say it", text: "A prompt and a timer. Keep talking until it runs out." },
+    { title: "Story relay", bn: "গল্প", ro: "golpo", gloss: "story", text: "A story built one sentence at a time." },
+    { title: `${CLASSWORK.length} class worksheet sets`, bn: "খাতা", ro: "khata", gloss: "notebook", text: "The same worksheet sets I use in class." },
   ];
 
   return (
@@ -116,10 +120,22 @@ export default async function Home() {
 
       <main>
       <section className="band hero-band">
-        <div className="lp-wrap hero-grid">
+        <div className="lp-wrap hero-top">
           <div className="hero-copy">
             <p className="eyebrow">Practice built by an online Bengali teacher</p>
             <h1>Read, speak and write Bengali, <em>one short lesson a day.</em></h1>
+          </div>
+          <figure className="lpx-first">
+            <span className="lpx-glyph" lang="bn">অ</span>
+            <figcaption>
+              <i>o</i>
+              <b>The first letter</b>
+              <span>Every Bengali child starts here: <span lang="bn">অ-তে অজগর</span>, o-te ojogor, &ldquo;o is for python.&rdquo;</span>
+            </figcaption>
+          </figure>
+        </div>
+        <div className="lp-wrap hero-grid">
+          <div className="hero-copy">
             <p className="lead">I&apos;m Pritam. I teach Bengali online, one to one. This is where my students practice between our lessons, and now you can too.</p>
             <div className="cta">
               <BuyLink place="hero" className="btn">Start learning · {price} for 12 months</BuyLink>
@@ -133,12 +149,16 @@ export default async function Home() {
 
       {hasAbout && (
         <section className="lp-wrap about" id="about">
-          <div className={"about-grid" + (TEACHER.photo ? " has-photo" : "")}>
-            {TEACHER.photo && <Image src={TEACHER.photo} alt={`${TEACHER.name}, your Bengali teacher`} width={480} height={560} className="about-photo" />}
-            <div>
-              <h2>Why I built this</h2>
+          <p className="eyebrow"><span className="lpx-num" lang="bn">০১</span> Why I built this</p>
+          <div className="lpx-about">
+            <div className="lpx-about-head">
+              <h2>Between our lessons, my students had <em>nowhere to practice.</em></h2>
+              <p className="lpx-word"><span lang="bn">অভ্যাস</span><span><i>obbhash</i><small>practice; the daily habit of it</small></span></p>
+              {TEACHER.photo && <Image src={TEACHER.photo} alt={`${TEACHER.name}, your Bengali teacher`} width={480} height={560} className="about-photo" />}
+            </div>
+            <div className="lpx-about-body">
               {TEACHER.story.map((p) => <p key={p} className="about-p">{p}</p>)}
-              <p className="about-sign">{TEACHER.name}</p>
+              <p className="about-sign">{TEACHER.name} <span className="lpx-sign-bn" lang="bn">{TEACHER.nameBn}</span> <small>· {TEACHER.place}</small></p>
               {TEACHER.stats.length > 0 && (
                 <dl className="stat-row small">{TEACHER.stats.map((s) => <div key={s.label}><dt>{s.label}</dt><dd>{s.value}</dd></div>)}</dl>
               )}
@@ -179,23 +199,30 @@ export default async function Home() {
       )}
 
       <div className="lp-wrap">
-        <section className="land-section audience">
-          <h2>Who comes to me</h2>
-          <div className="audience-list">
+        <section className="land-section lpx-aud">
+          <p className="eyebrow"><span className="lpx-num" lang="bn">০২</span> Who comes to me</p>
+          <h2>Three kinds of student, one way of learning.</h2>
+          <div className="lpx-aud-list">
             {AUDIENCE.map((a) => {
               const q = quoteFor(a.kind);
               return (
-                <div key={a.kind}>
-                  <p><b>{a.lead}</b> {a.body}</p>
-                  {q && <blockquote className="aud-quote">“{q.text}”<cite>{q.name}, {q.city}</cite></blockquote>}
-                </div>
+                <article key={a.kind} className="lpx-aud-row">
+                  <p className="lpx-word v"><span lang="bn">{a.bn}</span><span><i>{a.ro}</i><small>· {a.gloss}</small></span></p>
+                  <div><p className="lpx-kicker">{a.tag}</p><p className="lpx-serif">{a.lead}</p></div>
+                  <div>
+                    <p className="lpx-aud-body">{a.body}</p>
+                    {q && <blockquote className="aud-quote">“{q.text}”<cite>{q.name}, {q.city}</cite></blockquote>}
+                  </div>
+                </article>
               );
             })}
           </div>
         </section>
 
         <section className="land-section" id="practice">
-          <h2 className="h-xl">What you&apos;ll do here</h2>
+          <p className="eyebrow"><span className="lpx-num" lang="bn">০৩</span> What you&apos;ll do here</p>
+          <h2 className="h-xl">The app, exactly as my students use it.</h2>
+          <p className="lpx-sub">Real screens, nothing mocked up.</p>
           <div className="shows">
             {shots.map((sh) => (
               <article key={sh.id} className="show">
@@ -203,25 +230,41 @@ export default async function Home() {
                   <Image className="shot-d" src={`/landing/shots/${sh.id}-1440.webp`} width={1440} height={900} sizes="(max-width: 900px) 100vw, 720px" alt={sh.alt} />
                   <Image className="shot-m" src={`/landing/shots/${sh.id}-390.webp`} width={780} height={1688} sizes="320px" alt={sh.alt} />
                 </figure>
-                <div className="show-text"><h3>{sh.title}</h3><p>{sh.text}</p></div>
+                <div className="show-text" data-seg={"seg" in sh ? sh.seg : undefined}>
+                  <p className="lpx-tag"><span lang="bn">{sh.bn}</span> <i>{sh.ro}</i> · {sh.gloss}</p>
+                  <h3>{sh.title}</h3>
+                  <p>{sh.text}</p>
+                  {"notes" in sh && sh.notes && <ol className="lpx-notes">{sh.notes.map((n) => <li key={n}>{n}</li>)}</ol>}
+                </div>
               </article>
             ))}
           </div>
           <h3 className="also-h">Also in the box</h3>
           <dl className="also">
-            {alsoIn.map((a) => <div key={a.title}><dt>{a.title}</dt><dd>{a.text}</dd></div>)}
+            {alsoIn.map((a) => <div key={a.title}><dt>{a.title} <span className="lpx-tag-inline"><span lang="bn">{a.bn}</span> <i>{a.ro}</i>{"gloss" in a && a.gloss ? ` · ${a.gloss}` : ""}</span></dt><dd>{a.text}</dd></div>)}
           </dl>
           <ul className="points">
-            {POINTS.map((p) => <li key={p.title}><b>{p.title}</b><span>{p.body}</span></li>)}
+            {POINTS.map((p) => (
+              <li key={p.title}>
+                <span className="lpx-pn" lang="bn">{p.n}</span>
+                <b>{p.title}</b>
+                <span className="lpx-pb">{p.body}</span>
+                <span className="lpx-ptag"><span lang="bn">{p.bn}</span> <i>{p.ro}</i> · {p.gloss}</span>
+              </li>
+            ))}
           </ul>
         </section>
 
         <section className="land-section" id="learn">
+          <p className="eyebrow"><span className="lpx-num" lang="bn">০৪</span> The courses</p>
           <h2>Four courses, in the order I teach them.</h2>
+          <p className="lpx-sub">Each one builds on the last. Reading comes first, because everything else is easier once the letters are yours.</p>
           <div className="feature-grid">
-            {COURSES.map((f) => (
+            {COURSES.map((f, i) => (
               <article key={f.title} className="feature" data-seg={f.seg}>
+                <span className="lpx-course-n">Course {["one", "two", "three", "four"][i]}</span>
                 <span className="course-bn" lang="bn">{f.bn}</span>
+                <span className="lpx-course-ro"><i>{f.ro}</i></span>
                 <h3><span className="seg-icon"><Icon name={f.icon} size={20} /></span>{f.title}</h3>
                 <p className="outcome">{f.outcome}</p>
                 <p>{f.body}</p>
@@ -229,27 +272,32 @@ export default async function Home() {
               </article>
             ))}
           </div>
-          <p className="muted land-note">Plus a separate <b>devotional track</b> with mantras, bhajans and passages from the sādhu-saṅga, kept apart from the main course.</p>
+          <p className="muted land-note"><span lang="bn" className="lpx-dev-bn">ভক্তি</span> <i>bhokti</i> · devotion. Alongside the four courses, a separate <b>devotional track</b>: mantras, bhajans and sādhu-saṅga passages, set for reading in the original once you know the letters.</p>
         </section>
 
         <section className="land-section" id="pricing">
           <div className="offer">
             <div>
+              <p className="eyebrow"><span className="lpx-num" lang="bn">০৫</span> Pricing</p>
               <h2>One price. Twelve months. Nothing renews.</h2>
-              <p className="lead">New activities are added during your year. Renew early and 12 months are added on. Know someone who would like it? Every student gets a link that adds 3 months to their plan for each friend who joins.</p>
-              <p className="lead compare">Most language apps charge $9 to $20 every month and renew automatically.</p>
+              <p className="lead">Most language apps charge $9 to $20 a month and renew automatically. Here you pay once. When the year is over, nothing happens unless you choose to come back.</p>
+              <p className="lead compare">New activities are added during your year, and if you renew early the 12 months are added on. Know someone who would like it? Every student gets a link that adds 3 months to their plan for each friend who joins.</p>
+              <p className="lpx-word on-night"><span lang="bn">এক বছর</span><span><i>ek bochhor</i><small>one year</small></span></p>
             </div>
             <div className="offer-card">
               <div className="price">{price} <small>one-time · about {perMonth} a month</small></div>
               <ul className="ticks">
-                <li>All four courses and the devotional track</li>
-                <li>Flashcards, streaks and progress saved</li>
+                <li>All four courses: Reading, Speaking, Vocabulary, Grammar</li>
+                <li>The devotional track</li>
+                <li>Audio for every letter, number and vocabulary word</li>
+                <li>Flashcards, role plays, worksheets and timed exams</li>
+                <li>Streaks, goals and the class leaderboard, with your progress saved</li>
                 <li>You get a sign-in link by email; no password</li>
                 <li>{india ? "Pay by UPI or card, in rupees" : "Pay by card in US dollars; students in India pay in rupees by UPI"}</li>
                 <li>No subscription, nothing renews by itself</li>
               </ul>
               <BuyLink place="pricing" className="btn">Get 12 months · {price}</BuyLink>
-              <p className="promise">Not for you? Email us within {BUSINESS.refundDays} days for a full refund.</p>
+              <p className="promise"><b>{BUSINESS.refundDays}-day full refund.</b> If it isn&apos;t right for you, write to me within {BUSINESS.refundDays} days and I&apos;ll refund every rupee or cent.</p>
               <p className="fine">Secure checkout by Razorpay · <Link href="/refunds">Refund policy</Link></p>
               <p className="cards"><span>Visa</span><span>Mastercard</span><span>Amex</span></p>
             </div>
@@ -257,7 +305,12 @@ export default async function Home() {
         </section>
 
         <section className="land-section faq-section" id="faq">
-          <h2 className="h-sm">Good to know before you start.</h2>
+          <div className="lpx-faq-side">
+            <p className="eyebrow"><span className="lpx-num" lang="bn">০৬</span> Questions</p>
+            <h2 className="h-sm">What people ask me first.</h2>
+            <p className="lpx-word"><span lang="bn">প্রশ্ন</span><span><i>proshno</i><small>question</small></span></p>
+            <p className="lpx-ask">Something not covered here? <a href={`mailto:${BUSINESS.email}`}>Write to me</a> and I&apos;ll answer myself.</p>
+          </div>
           <div className="faq">
             {FAQ.map((f) => (
               <details key={f.q}>
@@ -284,7 +337,10 @@ export default async function Home() {
       </section>
       </main>
 
-      <div className="lp-wrap"><SiteFooter /></div>
+      <div className="lp-wrap">
+        <SiteFooter />
+        <p className="lpx-made">Made and taught by Pritam, Kolkata, India. <span className="lpx-thanks"><span lang="bn">ধন্যবাদ</span> <i>dhonnobad</i> · thank you</span></p>
+      </div>
       <PricingSeen />
       <StickyCta label={`Start learning · ${price}`} />
     </div>

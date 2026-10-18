@@ -116,7 +116,6 @@ export default function RolePlay({ scenario }: { scenario: Scenario }) {
 
       <section className="g-sec" id="sec-words">
         <h2>Words you will need</h2>
-        <p className="muted">Tap the speaker to hear each word.</p>
         <ul className="wlist">
           {scenario.words.map((w) => <li key={w[0]}><WordRow bn={w[0]} roman={w[1]} en={w[2]} sound={false} /></li>)}
         </ul>

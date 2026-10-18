@@ -1130,3 +1130,75 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
 .rate-star:has(input:focus-visible) { outline: 2px solid var(--primary); border-radius: 8px; }
 .rate-word { margin: 0; min-height: 1.4em; }
 .rate-static { color: #e5a400; letter-spacing: 2px; } .rate-static .off { color: var(--line-2); }
+
+/* ---------- landing page, design pass: first-letter hero, rows, Bengali word tags ---------- */
+.lpx-num { font: 600 .95em var(--font-bn-serif); margin-right: 6px; letter-spacing: 0; }
+.lp .hero-top { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: clamp(24px, 5vw, 72px); align-items: center; padding-bottom: clamp(20px, 3vw, 36px); }
+.lp .hero-top h1 { max-width: 14ch; font-size: clamp(2.6rem, 5.6vw, 4.6rem); }
+.hero-top + .hero-grid { padding-top: clamp(20px, 3vw, 36px); border-top: 1px solid var(--night-line); }
+.hero-grid .lead { margin-top: 0; }
+.lpx-first { margin: 0; display: flex; align-items: center; justify-content: center; gap: clamp(16px, 3vw, 32px); }
+.lpx-glyph { font: 600 clamp(7rem, 15vw, 12rem)/1 var(--font-bn-serif); color: var(--chalk); }
+.lpx-first figcaption { display: grid; gap: 6px; max-width: 24ch; padding-left: clamp(14px, 2vw, 24px); border-left: 1px solid var(--night-line-2, rgba(255,255,255,.18)); font-size: .85rem; color: var(--night-mute); }
+.lpx-first figcaption i { font: italic 500 1.5rem var(--font-serif); color: var(--chalk); }
+.lpx-first figcaption b { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--night-ink); }
+.lpx-first figcaption span { line-height: 1.5; }
+
+/* a Bengali word with its romanization and meaning */
+.lpx-word { display: flex; align-items: baseline; gap: 12px; margin: 0; }
+.lpx-word > span:first-child { font: 500 clamp(2rem, 4vw, 2.8rem)/1.2 var(--font-bn-serif); color: var(--ink); }
+.lpx-word > span:last-child { display: grid; }
+.lpx-word i { font: italic 500 1.1rem var(--font-serif); color: var(--ink); }
+.lpx-word small { color: var(--ink-2); font-size: .85rem; }
+.lpx-word.v { flex-direction: column; align-items: flex-start; gap: 2px; } .lpx-word.v > span:last-child { display: block; } .lpx-word.v small { margin-left: 6px; }
+.lpx-word.on-night { margin-top: 18px; } .lpx-word.on-night > span:first-child, .lpx-word.on-night i { color: var(--chalk); } .lpx-word.on-night small { color: var(--night-mute); }
+
+/* why I built this */
+.lpx-about { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(28px, 6vw, 88px); align-items: start; margin-top: 8px; }
+.about .lpx-about-head h2 { font-size: clamp(2rem, 3.6vw, 2.8rem); line-height: 1.12; max-width: 14ch; margin: 0 0 26px; font-weight: 500; }
+.lpx-about-head h2 em { font-style: italic; }
+.lpx-about-head .lpx-word { padding-top: 22px; border-top: 1px solid var(--line); }
+.lpx-about-head .about-photo { margin-top: 24px; }
+.lpx-about-body .about-p { font-size: 1.12rem; }
+.lpx-sign-bn { font: 500 1.05rem var(--font-bn-serif); color: var(--ink-2); margin-left: 4px; } .about-sign small { font: 500 .9rem var(--font-ui); color: var(--ink-2); }
+
+/* who comes to me */
+.lpx-aud h2 { max-width: 18ch; }
+.lpx-aud-list { border-top: 1px solid var(--line); }
+.lpx-aud-row { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.1fr) minmax(0, 1.2fr); gap: clamp(16px, 3vw, 40px); align-items: start; padding: 28px 0; border-bottom: 1px solid var(--line); }
+.lpx-kicker { margin: 0 0 6px; font: 700 .72rem var(--font-ui); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
+.lpx-serif { margin: 0; font: 500 clamp(1.25rem, 2vw, 1.55rem)/1.25 var(--font-display); }
+.lpx-aud-body { margin: 0; color: var(--ink-2); line-height: 1.65; }
+
+/* what you'll do here */
+.lpx-sub { margin: -10px 0 36px; max-width: 46ch; color: var(--ink-2); font-size: 1.05rem; }
+.lpx-tag { margin: 0 0 8px !important; font-size: .85rem !important; color: var(--seg, var(--ink-2)) !important; }
+.lpx-tag span { font: 600 1.1rem var(--font-bn-serif); } .lpx-tag i { font: italic 500 .95rem var(--font-serif); color: var(--ink); }
+.lpx-notes { margin: 18px 0 0; padding: 0; list-style: none; counter-reset: n; max-width: 38ch; border-top: 1px solid var(--line); }
+.lpx-notes li { counter-increment: n; display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-weight: 600; }
+.lpx-notes li::before { content: counter(n); display: grid; place-items: center; width: 24px; height: 24px; flex: none; border-radius: 50%; background: var(--ink); color: var(--surface); font-size: .78rem; }
+.lpx-tag-inline { display: block; margin-top: 2px; font-weight: 500; font-size: .85rem; color: var(--ink-2); }
+.lpx-tag-inline span { font: 600 1rem var(--font-bn-serif); } .lpx-tag-inline i { font: italic 500 .9rem var(--font-serif); }
+.lp .points { display: block; margin-top: 56px; border-top: 2px solid var(--ink); }
+.lp .points li { display: grid; grid-template-columns: 40px minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, .8fr); gap: 8px clamp(14px, 3vw, 36px); align-items: baseline; padding: 20px 0; border-top: 0; border-bottom: 1px solid var(--line); }
+.lp .points li:first-child { padding-top: 20px; }
+.lpx-pn { font: 600 1rem var(--font-bn-serif); color: var(--ink-2); }
+.lp .points b { font: 500 clamp(1.15rem, 1.8vw, 1.4rem) var(--font-display); }
+.lpx-pb { color: var(--ink-2); } .lpx-ptag { font-size: .85rem; color: var(--ink-2); } .lpx-ptag span { font: 600 1rem var(--font-bn-serif); color: var(--ink); } .lpx-ptag i { font: italic 500 .9rem var(--font-serif); }
+
+/* courses, pricing, questions, footer */
+.lpx-course-n { font: 700 .72rem var(--font-ui); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
+.lpx-course-ro { margin-top: -6px; } .lpx-course-ro i { font: italic 500 1rem var(--font-serif); color: var(--ink-2); }
+.lpx-dev-bn { font: 600 1.2rem var(--font-bn-serif); color: var(--ink); }
+.faq-section { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.4fr); gap: clamp(24px, 5vw, 72px); align-items: start; }
+.lpx-faq-side h2 { margin: 0 0 18px; } .lpx-ask { margin: 18px 0 0; color: var(--ink-2); }
+.offer-card .promise b { display: block; font-size: 1.05rem; }
+.lpx-made { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; margin: 0; padding: 0 0 28px; color: var(--ink-2); font-size: .88rem; }
+.lpx-thanks span { font: 600 1rem var(--font-bn-serif); color: var(--ink); } .lpx-thanks i { font: italic 500 .95rem var(--font-serif); }
+
+@media (max-width: 899px) {
+  .lp .hero-top, .lpx-about, .faq-section { grid-template-columns: minmax(0, 1fr); }
+  .lpx-first { justify-content: flex-start; }
+  .lpx-aud-row { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 24px 0; }
+  .lp .points li { grid-template-columns: 28px minmax(0, 1fr); } .lp .points li > :nth-child(n+3) { grid-column: 2; }
+}

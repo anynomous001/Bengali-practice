@@ -4,6 +4,8 @@ const config: NextConfig = {
   poweredByHeader: false,
   // Stops Next.js writing an AGENTS.md file into the repo during `next dev`.
   agentRules: false,
+  // Keeps the dev-mode badge out of the landing-page screenshots (npm run shots).
+  devIndicators: false,
   serverExternalPackages: ["@electric-sql/pglite"],
   // Pronunciation clips are read from disk by /api/audio, so make sure they ship with the deployment.
   // Production only: in `next dev` this setting makes the page reload in a loop.
