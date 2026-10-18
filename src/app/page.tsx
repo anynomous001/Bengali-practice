@@ -149,7 +149,6 @@ export default async function Home() {
 
       {hasAbout && (
         <section className="lp-wrap about" id="about">
-          <p className="eyebrow"><span className="lpx-num" lang="bn">০১</span> Why I built this</p>
           <div className="lpx-about">
             <div className="lpx-about-head">
               <h2>Between our lessons, my students had <em>nowhere to practice.</em></h2>
@@ -200,7 +199,6 @@ export default async function Home() {
 
       <div className="lp-wrap">
         <section className="land-section lpx-aud">
-          <p className="eyebrow"><span className="lpx-num" lang="bn">০২</span> Who comes to me</p>
           <h2>Three kinds of student, one way of learning.</h2>
           <div className="lpx-aud-list">
             {AUDIENCE.map((a) => {
@@ -220,7 +218,6 @@ export default async function Home() {
         </section>
 
         <section className="land-section" id="practice">
-          <p className="eyebrow"><span className="lpx-num" lang="bn">০৩</span> What you&apos;ll do here</p>
           <h2 className="h-xl">The app, exactly as my students use it.</h2>
           <p className="lpx-sub">Real screens, nothing mocked up.</p>
           <div className="shows">
@@ -256,7 +253,6 @@ export default async function Home() {
         </section>
 
         <section className="land-section" id="learn">
-          <p className="eyebrow"><span className="lpx-num" lang="bn">০৪</span> The courses</p>
           <h2>Four courses, in the order I teach them.</h2>
           <p className="lpx-sub">Each one builds on the last. Reading comes first, because everything else is easier once the letters are yours.</p>
           <div className="feature-grid">
@@ -278,7 +274,6 @@ export default async function Home() {
         <section className="land-section" id="pricing">
           <div className="offer">
             <div>
-              <p className="eyebrow"><span className="lpx-num" lang="bn">০৫</span> Pricing</p>
               <h2>One price. Twelve months. Nothing renews.</h2>
               <p className="lead">Most language apps charge $9 to $20 a month and renew automatically. Here you pay once. When the year is over, nothing happens unless you choose to come back.</p>
               <p className="lead compare">New activities are added during your year, and if you renew early the 12 months are added on. Know someone who would like it? Every student gets a link that adds 3 months to their plan for each friend who joins.</p>
@@ -306,7 +301,6 @@ export default async function Home() {
 
         <section className="land-section faq-section" id="faq">
           <div className="lpx-faq-side">
-            <p className="eyebrow"><span className="lpx-num" lang="bn">০৬</span> Questions</p>
             <h2 className="h-sm">What people ask me first.</h2>
             <p className="lpx-word"><span lang="bn">প্রশ্ন</span><span><i>proshno</i><small>question</small></span></p>
             <p className="lpx-ask">Something not covered here? <a href={`mailto:${BUSINESS.email}`}>Write to me</a> and I&apos;ll answer myself.</p>
