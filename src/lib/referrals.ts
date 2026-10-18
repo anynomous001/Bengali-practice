@@ -16,10 +16,11 @@ export function canonEmail(email: string): string {
 
 export const validRefCode = (c: unknown): c is string => typeof c === "string" && /^[a-z0-9]{6,12}$/.test(c);
 
-/** A student's own referral code, made the first time it is needed. */
-export async function codeFor(email: string): Promise<string> {
-  const have = (await query<{ ref_code: string | null }>("SELECT ref_code FROM students WHERE email = $1", [email]))[0]?.ref_code;
-  if (have) return have;
+/** A student's own referral code, made the first time it is needed. Null when the account has no student plan (an admin account), since there is nothing to extend. */
+export async function codeFor(email: string): Promise<string | null> {
+  const row = (await query<{ ref_code: string | null }>("SELECT ref_code FROM students WHERE email = $1", [email]))[0];
+  if (!row) return null;
+  if (row.ref_code) return row.ref_code;
   for (let i = 0; i < 5; i++) {
     const code = randomBytes(6).toString("base64url").toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 8);
     if (code.length < 6) continue;

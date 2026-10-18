@@ -10,6 +10,17 @@ const mask = (e: string) => { const [l, d] = e.split("@"); return `${l.slice(0, 
 export default async function ReferPage() {
   const user = await requireAccess();
   const code = await codeFor(user.email);
+  if (!code) {
+    return (
+      <main className="wide">
+        <header>
+          <p className="eyebrow">Refer a friend</p>
+          <h1>Referral links are for students</h1>
+          <p className="lede">This account has no student plan, so there is nothing to extend with free months. Sign in with a student account to see its referral link.</p>
+        </header>
+      </main>
+    );
+  }
   const link = `${await appBase()}/buy?ref=${code}`;
   const joined = await query<{ referee_email: string; reversed: boolean; created_at: Date }>(
     "SELECT referee_email, reversed, created_at FROM referrals WHERE referrer_email = $1 ORDER BY created_at DESC",
