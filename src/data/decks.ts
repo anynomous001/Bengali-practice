@@ -37,7 +37,6 @@ export type Deck = {
   /** Instruction shown above the card. */
   hint?: string;
   /** Play the audio when the card is flipped. */
-  autoSpeak?: boolean;
   cards: Card[];
 };
 
@@ -111,7 +110,6 @@ export const DECKS: Deck[] = [
     title: "Say the number",
     blurb: "See the numeral, say it in Bengali, then check.",
     hint: "Say it aloud before you flip the card.",
-    autoSpeak: true,
     cards: NUMBERS.map((n) => ({ id: `ns:${n.value}`, front: n.numeral, back: n.word, roman: n.wrom, speak: n.word })),
   },
   {
@@ -120,7 +118,6 @@ export const DECKS: Deck[] = [
     title: "Say the word",
     blurb: "See the meaning, say the Bengali word out loud, then check.",
     hint: "Say it aloud before you flip the card.",
-    autoSpeak: true,
     cards: LETTERS.filter((l) => l.word).map((l) => ({
       id: `s:${l.ch}`,
       front: l.wmean!,
@@ -150,7 +147,6 @@ export const DECKS: Deck[] = [
     title: t.title[2],
     blurb: t.blurb,
     hint: "Say it aloud before you flip the card.",
-    autoSpeak: true,
     cards: t.sections.flatMap((sec) => sec.words).map(([bn, roman, en]) => ({ id: `vc:${t.id}:${bn}`, front: en, back: bn, roman, speak: bn })),
   })),
 ];
@@ -164,7 +160,6 @@ DECKS.push(
     title: t.title[2],
     blurb: t.blurb,
     hint: "Say it aloud before you flip the card.",
-    autoSpeak: true,
     cards: t.sections.flatMap((sec) => sec.words).map(([bn, roman, en]) => ({ id: `vc:${t.id}:${bn}`, front: en, back: bn, roman, speak: bn })),
   })),
   {
@@ -174,7 +169,6 @@ DECKS.push(
     title: "Devotional phrases aloud",
     blurb: "Greetings and everyday phrases of the sādhu-saṅga: see the meaning, say it out loud, then check.",
     hint: "Say it aloud before you flip the card.",
-    autoSpeak: true,
     cards: DEV_SAY.map(([bn, roman, en]) => ({ id: `ds:${bn}`, front: en, back: bn, roman, speak: bn })),
   },
 );

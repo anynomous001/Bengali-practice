@@ -50,7 +50,7 @@ export default async function FlashcardsView({ segment, deckId }: { segment: Seg
         <Link href={base} className="back"><Icon name="prev" size={16} />Decks</Link>
         {chosen.deck.devotional && <p><span className="dev-tag">Devotional</span></p>}
         <h1>{chosen.deck.title}</h1>
-        <Session cards={queue} hint={chosen.deck.hint} autoSpeak={chosen.deck.autoSpeak} backHref={base} />
+        <Session cards={queue} hint={chosen.deck.hint} backHref={base} />
       </>
     );
     // A devotional deck is not part of the main flashcards lesson, so it gets no lesson frame or completion button.

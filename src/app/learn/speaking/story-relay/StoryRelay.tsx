@@ -2,17 +2,12 @@
 
 import { useState } from "react";
 import type { Helper, Hook, L, RelayCard, RelayOpening, Theme } from "@/data/story-relay";
-import { speak } from "@/lib/speak";
 import { setLessonDone } from "../../../actions";
 import Icon from "../../Icon";
 import { useRoman } from "../../Roman";
 
 type Sample = { who: "you" | "partner"; lines: L[]; note: string };
 type Wrap = { retell: L[]; short: L[] };
-
-function Listen({ text, label }: { text: string; label: string }) {
-  return <button type="button" className="wplay" onClick={() => speak(text)} aria-label={`Hear: ${label}`}><Icon name="sound" size={18} /></button>;
-}
 
 /** Sentences as a plain table: Bengali (with a listen button), romanized, English. */
 function Lines({ lines, caption }: { lines: L[]; caption?: string }) {
@@ -24,7 +19,7 @@ function Lines({ lines, caption }: { lines: L[]; caption?: string }) {
       <tbody>
         {lines.map((l) => (
           <tr key={l[0]}>
-            <td><span className="rt-bn"><Listen text={l[0]} label={l[2]} /><span lang="bn">{l[0]}</span></span></td>
+            <td><span className="rt-bn"><span lang="bn">{l[0]}</span></span></td>
             {roman && <td className="rt-ro">{l[1]}</td>}
             <td className="gloss">{l[2]}</td>
           </tr>
@@ -36,7 +31,7 @@ function Lines({ lines, caption }: { lines: L[]; caption?: string }) {
 
 function Bn({ l }: { l: L }) {
   const { roman } = useRoman();
-  return <span className="rt-bn"><Listen text={l[0]} label={l[2]} /><span><b lang="bn">{l[0]}</b>{roman && <small className="rt-ro">{l[1]}</small>}</span></span>;
+  return <span className="rt-bn"><span><b lang="bn">{l[0]}</b>{roman && <small className="rt-ro">{l[1]}</small>}</span></span>;
 }
 
 const TURNS = 5;
@@ -132,7 +127,7 @@ function Play({ openings, themes, cards, helpers, hooks }: { openings: RelayOpen
       {mode === "b" && (
         <div className="relay-card">
           <span className="rp-who">Tense card</span>
-          <span className="rt-bn"><Listen text={card.word[0]} label={card.word[2]} /><span><b lang="bn" className="wbn">{card.word[0]}</b>{roman && <small className="rt-ro">{card.word[1]}</small>}</span></span>
+          <span className="rt-bn"><span><b lang="bn" className="wbn">{card.word[0]}</b>{roman && <small className="rt-ro">{card.word[1]}</small>}</span></span>
           <span><b>{card.tense}.</b> {card.how} Sentence 1 must use it.</span>
           {card.forms.length > 0 && <span className="muted">Forms: {card.forms.join(" · ")}</span>}
         </div>
@@ -141,13 +136,13 @@ function Play({ openings, themes, cards, helpers, hooks }: { openings: RelayOpen
       {turn > 1 && (
         <div className="relay-ideas">
           <p className="muted"><b>Need a hook?</b> Try one of these ideas.</p>
-          <ul>{hookSet.map((h) => <li key={h.example[0]}><span className="rt-bn"><Listen text={h.example[0]} label={h.example[2]} /><span><span className="rt-kind">{h.kind}</span><span lang="bn">{h.example[0]}</span>{roman && <small className="rt-ro">{h.example[1]}</small>}<small>{h.example[2]}</small></span></span></li>)}</ul>
+          <ul>{hookSet.map((h) => <li key={h.example[0]}><span className="rt-bn"><span><span className="rt-kind">{h.kind}</span><span lang="bn">{h.example[0]}</span>{roman && <small className="rt-ro">{h.example[1]}</small>}<small>{h.example[2]}</small></span></span></li>)}</ul>
         </div>
       )}
 
       <details className="relay-helpers">
         <summary>Helper words</summary>
-        <ul>{helpers.map((h) => <li key={h.word[0]}><Listen text={h.word[0]} label={h.word[2]} /><span lang="bn">{h.word[0]}</span>{roman && <small className="rt-ro">{h.word[1]}</small>}<small>{h.word[2]}</small></li>)}</ul>
+        <ul>{helpers.map((h) => <li key={h.word[0]}><span lang="bn">{h.word[0]}</span>{roman && <small className="rt-ro">{h.word[1]}</small>}<small>{h.word[2]}</small></li>)}</ul>
       </details>
 
       <button className="btn" onClick={advance}>{turn === TURNS ? "Go to wrap-up" : "Next turn"}</button>

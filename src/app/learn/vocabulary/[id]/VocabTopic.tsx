@@ -93,7 +93,6 @@ export default function VocabTopic({ topic, best, quizLen, flashHref, devotional
               </div>
               <span className="pbtns">
                 <button type="button" className="icon-btn" onClick={() => speak(p[0])} aria-label="Hear this phrase"><Icon name="sound" size={18} /></button>
-                <button type="button" className="icon-btn slow" onClick={() => speak(p[0], { slow: true })} aria-label="Hear it slowly">slow</button>
               </span>
             </li>
           ))}
@@ -119,7 +118,6 @@ export default function VocabTopic({ topic, best, quizLen, flashHref, devotional
                 {q.kind === "listen" && <>
                   <small>Listen, then pick the meaning</small>
                   <button className="btn big-btn" onClick={() => speak(q.word[0])}><Icon name="sound" size={18} /> Play</button>
-                  <button className="btn ghost" onClick={() => speak(q.word[0], { slow: true })}>Play slowly</button>
                 </>}
               </div>
               <div className="options">

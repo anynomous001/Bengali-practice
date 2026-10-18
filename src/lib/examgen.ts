@@ -65,24 +65,41 @@ function vocabExam(count: number): ExamQ[] {
   });
 }
 
-function listeningExam(count: number): ExamQ[] {
-  const per = Math.floor(count / 3);
+/** Alphabet, numbers and words, mostly read and seen; a small share (about one in five) is listening. */
+function soundsExam(count: number): ExamQ[] {
+  const listen = Math.max(3, Math.round(count * 0.2));
+  const rest = count - listen;
+  const seeLetters = Math.ceil(rest / 3);
+  const seeNumbers = Math.ceil((rest - seeLetters) / 2);
+  const seeWords = rest - seeLetters - seeNumbers;
   const out: ExamQ[] = [];
-  const letters = shuffle(LETTERS).slice(0, per);
-  for (const l of letters) {
-    const bad = shuffle(LETTERS.filter((x) => x.ch !== l.ch)).slice(0, 3);
-    out.push(withShuffledOptions({ id: `l:${out.length}`, topic: "Letter sounds", inst: "Press Play and listen. Then choose the letter you heard.", q: "Which letter did you hear?", sentence: null, audio: l.ch },
-      [{ bn: l.ch, ro: l.rom }, ...bad.map((b) => ({ bn: b.ch, ro: b.rom }))], 0, `You heard ${l.ch} (${l.rom}).`));
-  }
-  for (const n of shuffle(NUMBERS).slice(0, per)) {
-    const bad = shuffle(NUMBERS.filter((x) => x.value !== n.value)).slice(0, 3);
-    out.push(withShuffledOptions({ id: `l:${out.length}`, topic: "Numbers", inst: "Press Play and listen. Then choose the number you heard.", q: "Which number did you hear?", sentence: null, audio: n.word },
-      [{ bn: n.numeral, ro: n.wrom }, ...bad.map((b) => ({ bn: b.numeral, ro: b.wrom }))], 0, `You heard ${n.word}, which is ${n.numeral}.`));
-  }
+  const id = () => `l:${out.length}`;
   const pool = allWords();
+  const letterOpts = (l: (typeof LETTERS)[number]) => shuffle(LETTERS.filter((x) => x.ch !== l.ch)).slice(0, 3);
+  const numberOpts = (n: (typeof NUMBERS)[number]) => shuffle(NUMBERS.filter((x) => x.value !== n.value)).slice(0, 3);
+
+  for (const l of shuffle(LETTERS).slice(0, seeLetters)) {
+    out.push(withShuffledOptions({ id: id(), topic: "Letters", inst: "Choose the sound this letter makes.", q: l.ch, sentence: null },
+      [l.rom, ...letterOpts(l).map((b) => b.rom)], 0, `${l.ch} is “${l.rom}”.`));
+  }
+  for (const n of shuffle(NUMBERS).slice(0, seeNumbers)) {
+    out.push(withShuffledOptions({ id: id(), topic: "Numbers", inst: "Choose the word for this number.", q: n.numeral, sentence: null },
+      [{ bn: n.word, ro: n.wrom }, ...numberOpts(n).map((b) => ({ bn: b.word, ro: b.wrom }))], 0, `${n.numeral} is ${n.word}.`));
+  }
+  for (const w of shuffle(pool).slice(0, seeWords)) {
+    const bad = wrongWords(w, pool);
+    out.push(withShuffledOptions({ id: id(), topic: "Words", inst: "Choose the English meaning of the Bengali word.", q: w.bn, sentence: null }, [w.en, ...bad.map((b) => b.en)], 0, `${w.bn} means “${w.en}”.`));
+  }
+  // The listening share: one letter, one number, the rest words.
+  const l = shuffle(LETTERS)[0];
+  out.push(withShuffledOptions({ id: id(), topic: "Letter sounds", inst: "Press Play and listen. Then choose the letter you heard.", q: "Which letter did you hear?", sentence: null, audio: l.ch },
+    [{ bn: l.ch, ro: l.rom }, ...letterOpts(l).map((b) => ({ bn: b.ch, ro: b.rom }))], 0, `You heard ${l.ch} (${l.rom}).`));
+  const n = shuffle(NUMBERS)[0];
+  out.push(withShuffledOptions({ id: id(), topic: "Numbers", inst: "Press Play and listen. Then choose the number you heard.", q: "Which number did you hear?", sentence: null, audio: n.word },
+    [{ bn: n.numeral, ro: n.wrom }, ...numberOpts(n).map((b) => ({ bn: b.numeral, ro: b.wrom }))], 0, `You heard ${n.word}, which is ${n.numeral}.`));
   for (const w of shuffle(pool).slice(0, count - out.length)) {
     const bad = wrongWords(w, pool);
-    out.push(withShuffledOptions({ id: `l:${out.length}`, topic: "Words", inst: "Press Play and listen. Then choose the meaning of the word you heard.", q: "What does the word mean?", sentence: null, audio: w.bn }, [w.en, ...bad.map((b) => b.en)], 0, `You heard ${w.bn}, which means “${w.en}”.`));
+    out.push(withShuffledOptions({ id: id(), topic: "Words", inst: "Press Play and listen. Then choose the meaning of the word you heard.", q: "What does the word mean?", sentence: null, audio: w.bn }, [w.en, ...bad.map((b) => b.en)], 0, `You heard ${w.bn}, which means “${w.en}”.`));
   }
   return shuffle(out);
 }
@@ -90,7 +107,7 @@ function listeningExam(count: number): ExamQ[] {
 export function generateExam(id: ExamId, count: number): ExamQ[] {
   if (id === "grammar") return grammarExam(count);
   if (id === "vocabulary") return vocabExam(count);
-  return listeningExam(count);
+  return soundsExam(count);
 }
 
 export const toPublic = (qs: ExamQ[]): PublicExamQ[] => qs.map(({ answer: _a, why: _w, ...rest }) => { void _a; void _w; return rest; });

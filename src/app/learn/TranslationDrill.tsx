@@ -3,7 +3,6 @@
 import { useState } from "react";
 import type { Cell } from "@/data/grammar";
 import type { Direction, Source, TOption, TQuestion } from "@/lib/translation";
-import { speak } from "@/lib/speak";
 import { recordGrammarQuiz, translationRound } from "../actions";
 import Icon from "./Icon";
 import { CellView } from "./LessonReader";
@@ -132,7 +131,6 @@ export default function TranslationDrill({ best }: { best: { score: number; tota
           <>
             <span lang="bn" className="g-ex-bn t-bn">{q.prompt}</span>
             {roman && q.promptRo && <span className="g-ro-line">{q.promptRo}</span>}
-            <button type="button" className="btn ghost small" onClick={() => speak(q.prompt)}><Icon name="sound" size={16} /> Listen</button>
           </>
         )}
       </div>

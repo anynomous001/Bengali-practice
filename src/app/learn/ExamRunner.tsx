@@ -157,7 +157,6 @@ export default function ExamRunner({ exam, history }: { exam: Pub; history: Hist
         {q.audio && (
           <div className="exam-audio">
             <button className="btn big-btn" onClick={() => speak(q.audio!)}><Icon name="sound" size={18} /> Play</button>
-            <button className="btn ghost" onClick={() => speak(q.audio!, { slow: true })}>Play slowly</button>
           </div>
         )}
         <h3 className="quiz-q"><BnText text={q.q} /></h3>

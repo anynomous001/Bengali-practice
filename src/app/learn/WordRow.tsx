@@ -9,13 +9,13 @@ import { useRoman } from "./Roman";
 export const isLong = (bn: string) => bn.length > 22;
 
 /** One vocabulary word: Bengali, romanized (if on), English, and a listen button. Optionally hides the English until tapped. */
-export default function WordRow({ bn, roman, en, hideMeaning = false }: { bn: string; roman: string; en: string; hideMeaning?: boolean }) {
+export default function WordRow({ bn, roman, en, hideMeaning = false, sound = true }: { bn: string; roman: string; en: string; hideMeaning?: boolean; sound?: boolean }) {
   const { roman: showRoman } = useRoman();
   const [shown, setShown] = useState(false);
   const covered = hideMeaning && !shown;
   return (
     <div className={"wrow" + (isLong(bn) ? " long" : "")}>
-      <button type="button" className="wplay" onClick={() => speak(bn)} aria-label={`Hear ${en}`}><Icon name="sound" size={18} /></button>
+      {sound && <button type="button" className="wplay" onClick={() => speak(bn)} aria-label={`Hear ${en}`}><Icon name="sound" size={18} /></button>}
       <span className="wtext">
         <span className="wbn" lang="bn">{bn}</span>
         {showRoman && <span className="wro">{roman}</span>}

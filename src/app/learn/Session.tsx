@@ -3,7 +3,6 @@
 import { useCallback, useEffect, useState } from "react";
 import type { Card } from "@/data/decks";
 import { rateCard } from "../actions";
-import { speak } from "@/lib/speak";
 import Icon from "./Icon";
 import { useRoman } from "./Roman";
 
@@ -13,12 +12,10 @@ type Rating = "again" | "good" | "easy";
 export default function Session({
   cards,
   hint,
-  autoSpeak,
   backHref,
 }: {
   cards: Card[];
   hint?: string;
-  autoSpeak?: boolean;
   backHref: string;
 }) {
   const [queue, setQueue] = useState(cards);
@@ -31,10 +28,9 @@ export default function Session({
 
   const flip = useCallback(() => {
     setFlipped((f) => {
-      if (!f && autoSpeak && card) speak(card.speak);
       return !f;
     });
-  }, [autoSpeak, card]);
+  }, []);
 
   const rate = useCallback(
     (r: Rating) => {
@@ -97,8 +93,6 @@ export default function Session({
           <span className="muted">Tap to reveal</span>
         )}
       </button>
-      <button className="btn ghost" onClick={() => speak(card.speak)}><Icon name="sound" size={18} /> Listen</button>
-      <button className="btn ghost" onClick={() => speak(card.speak, { slow: true })}>Slowly</button>
       {flipped && (
         <div className="rate">
           <button className="btn bad-btn" onClick={() => rate("again")}>Again <small>1</small></button>

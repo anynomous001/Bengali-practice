@@ -2,8 +2,6 @@
 
 import { track } from "@vercel/analytics";
 import { useEffect, useRef, useState } from "react";
-import { CLIPS } from "@/data/landing";
-import { speak } from "@/lib/speak";
 import BuyLink from "./BuyLink";
 import BnPath, { type Phase } from "./BnPath";
 import { motionAllowed, prefersReducedMotion } from "./landing-motion";
@@ -17,19 +15,11 @@ const QUESTIONS: Q[] = [
   { bn: "৫", prompt: "Which number is this?", hint: "Bengali has its own numerals.", options: ["three", "five", "eight"], answer: "five", after: "৫ is five, পাঁচ (panch). Every number up to 100 has its own word." },
 ];
 
-/** Plays a recorded clip when there is one, otherwise the browser's Bengali voice. */
-function hear(bn: string) {
-  const file = CLIPS[bn];
-  if (file) { void new Audio(`/audio/landing/${file}`).play().catch(() => speak(bn)); return; }
-  speak(bn);
-}
-
 /** A three-question taste of the practice, with no sign-up. It sits on the dark hero band and ends with the way in. */
 export default function Taster() {
   const [i, setI] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const [score, setScore] = useState(0);
-  const [canSpeak, setCanSpeak] = useState(false);
   const nextRef = useRef<HTMLButtonElement>(null);
   // The letter draws itself like chalk. The phase is tied to the question it was set for, so a new question starts hidden, never flashes.
   const [ph, setPh] = useState<{ i: number; v: Phase }>({ i: -1, v: "hold" });
@@ -37,7 +27,6 @@ export default function Taster() {
   const done = i >= QUESTIONS.length;
   const q = QUESTIONS[i];
 
-  useEffect(() => { setCanSpeak("speechSynthesis" in window); }, []);
   useEffect(() => {
     if (done) return;
     const play = i === 0 ? motionAllowed() : !prefersReducedMotion();
@@ -58,14 +47,12 @@ export default function Taster() {
       </div>
     );
   }
-  const canHear = !!CLIPS[q.bn] || canSpeak;
   return (
     <div className="taster" id="try">
       <p className="tq-step">Question {i + 1} of {QUESTIONS.length}</p>
       <p className="tq-prompt">{q.prompt}</p>
       <div className="tq-bn-row">
         <span className="tq-bn"><BnPath key={i} text={q.bn} phase={phase} seconds={i === 0 ? 0.9 : 0.5} /></span>
-        {canHear && <button type="button" className="tq-hear" onClick={() => hear(q.bn)}><Icon name="sound" size={18} /> Hear it</button>}
       </div>
       <div className="tq-opts" role="group" aria-label="Answers">
         {q.options.map((o) => {

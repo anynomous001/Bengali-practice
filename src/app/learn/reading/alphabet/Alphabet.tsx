@@ -101,9 +101,7 @@ function Learn({ progress }: { progress: Progress }) {
             {roman && <p className="sound">Sounds like: <b>{sel.rom}</b></p>}
             {sel.word && <p><span className="word">{sel.word}</span>{roman && ` (${sel.wrom})`}<span className="gloss"> – {sel.wmean}</span></p>}
             <button className="btn" onClick={() => speak(sel.ch)}><Icon name="sound" size={18} /> Letter</button>
-            <button className="btn ghost" onClick={() => speak(sel.ch, { slow: true })}>Slow</button>
             {sel.word && <button className="btn" onClick={() => speak(sel.word!)}><Icon name="sound" size={18} /> Word</button>}
-            {sel.word && <button className="btn ghost" onClick={() => speak(sel.word!, { slow: true })}>Slow</button>}
             {place && (
               <p className="place-line">Made in the <b lang="bn">{place.bn}</b> place: {place.en}</p>
             )}
@@ -272,7 +270,6 @@ function Question({ run, onAnswer, onNext }: { run: Run; onAnswer: (ok: boolean)
         <div className="prompt"><span className="word">{q.word}</span><small>{roman ? `${q.wrom} – ${q.wmean}` : q.wmean}</small></div>
       )}
       {m === "listen" && <button className="btn big-btn" onClick={() => speak(q.ch)}><Icon name="sound" size={18} /> Play sound</button>}
-      {m === "listen" && <button className="btn ghost" onClick={() => speak(q.ch, { slow: true })}>Play slowly</button>}
       <div className={"options" + (m === "letter2word" ? "" : " letters")}>
         {options.map((o) => {
           const cls = picked ? (o.ch === q.ch ? " right" : o.ch === picked ? " wrong" : "") : "";

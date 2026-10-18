@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import type { Demo, L, Scenario } from "@/data/roleplay";
-import { speak } from "@/lib/speak";
 import { setLessonDone } from "../../../../actions";
 import Icon from "../../../Icon";
 import { useRoman } from "../../../Roman";
@@ -13,7 +12,6 @@ function Line({ line, label }: { line: L; label?: string }) {
   const { roman } = useRoman();
   return (
     <div className="rp-line">
-      <button type="button" className="wplay" onClick={() => speak(line[0])} aria-label={`Hear: ${line[2]}`}><Icon name="sound" size={18} /></button>
       <span className="wtext">
         {label && <span className="rp-who">{label}</span>}
         <span className="wbn" lang="bn">{line[0]}</span>
@@ -45,7 +43,6 @@ function Practice({ scenario }: { scenario: Scenario }) {
   const demo = scenario.demos.find((d) => d.id === demoId)!;
   const [i, setI] = useState(0);
   const [shown, setShown] = useState(false);
-  const [hideThem, setHideThem] = useState(false);
   const [done, setDone] = useState(false);
 
   const turn = demo.turns[i];
@@ -83,7 +80,6 @@ function Practice({ scenario }: { scenario: Scenario }) {
                 <>
                   <div className="model">
                     <p className="model-label">Say it like this</p>
-                    <button type="button" className="btn ghost small" onClick={() => speak(turn.line[0])}><Icon name="sound" size={16} /> Listen</button>
                     <span className="wbn" lang="bn">{turn.line[0]}</span>
                     {roman && <span className="wro">{turn.line[1]}</span>}
                   </div>
@@ -93,12 +89,7 @@ function Practice({ scenario }: { scenario: Scenario }) {
             </>
           ) : (
             <>
-              <div className="rp-them">
-                <button type="button" className="btn" onClick={() => speak(turn.line[0])}><Icon name="sound" size={18} /> Play</button>
-                <button type="button" className="btn ghost" onClick={() => speak(turn.line[0], { slow: true })}>Play slowly</button>
-              </div>
-              {hideThem ? <p className="muted">The text is hidden. Listen and work out what they said.</p> : <Line line={turn.line} />}
-              <label className="check"><input type="checkbox" checked={hideThem} onChange={(e) => setHideThem(e.target.checked)} /> Hide the text (listening only)</label>
+              <Line line={turn.line} />
               <button className="btn" onClick={next}>{i + 1 >= demo.turns.length ? "Finish" : "Next"}</button>
             </>
           )}
@@ -127,7 +118,7 @@ export default function RolePlay({ scenario }: { scenario: Scenario }) {
         <h2>Words you will need</h2>
         <p className="muted">Tap the speaker to hear each word.</p>
         <ul className="wlist">
-          {scenario.words.map((w) => <li key={w[0]}><WordRow bn={w[0]} roman={w[1]} en={w[2]} /></li>)}
+          {scenario.words.map((w) => <li key={w[0]}><WordRow bn={w[0]} roman={w[1]} en={w[2]} sound={false} /></li>)}
         </ul>
       </section>
 

@@ -16,6 +16,6 @@ export type ExamDef = {
 export const EXAMS: ExamDef[] = [
   { id: "grammar", course: "grammar", title: "Grammar exam", blurb: "Persons, verbs, tenses, karak and bibhakti, number, negatives, word order and translation, all mixed.", minutes: 25, count: 20, pass: 60, lessonId: "grammar/exam", href: "/learn/grammar/exam" },
   { id: "vocabulary", course: "vocabulary", title: "Vocabulary exam", blurb: "Words from every topic: Bengali to English, English to Bengali, and listening.", minutes: 12, count: 25, pass: 60, lessonId: "vocabulary/exam", href: "/learn/vocabulary/exam" },
-  { id: "listening", course: "speaking", title: "Listening exam", blurb: "Hear a letter, a number or a word, then pick what you heard. Uses audio, so turn your sound on.", minutes: 10, count: 15, pass: 60, lessonId: "speaking/exam", href: "/learn/speaking/exam" },
+  { id: "listening", course: "speaking", title: "Alphabet & numbers exam", blurb: "Letters, numbers and everyday words, with a few listening questions. Turn your sound on for those.", minutes: 10, count: 15, pass: 60, lessonId: "speaking/exam", href: "/learn/speaking/exam" },
 ];
 export const getExam = (id: string) => EXAMS.find((e) => e.id === id);

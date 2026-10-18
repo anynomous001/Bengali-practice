@@ -36,8 +36,3 @@ export const TEACHER: {
   ],
 };
 
-/**
- * Recorded pronunciations for the mini-quiz on the home page. Map the Bengali text to a file in
- * public/audio/landing/, for example { "ক": "ko.mp3" }. Without a file the browser's Bengali voice is used.
- */
-export const CLIPS: Record<string, string> = {};

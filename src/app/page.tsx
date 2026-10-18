@@ -83,7 +83,7 @@ export default async function Home() {
     { id: "flashcard", title: "Flashcards that remember", text: "Cards you miss come back sooner, so the words you know stay known.", alt: "A vocabulary flashcard" },
     { id: "roleplay", title: `${SCENARIOS.length} role plays`, text: "Practice the market, the doctor and the phone, with the words you need and what goes wrong when you get them wrong.", alt: "A role play lesson" },
     { id: "grammar", title: `${GRAMMAR.length} grammar topics`, text: "Persons, verbs, tenses, karak and more, each with exercises that explain every answer.", alt: "A grammar exercise" },
-    { id: "exam", title: "Timed exams", text: `${EXAMS.length} exams, ${Math.min(...EXAM_MINUTES)} to ${Math.max(...EXAM_MINUTES)} minutes each: grammar, vocabulary and listening. A score and what to fix.`, alt: "A timed exam in progress" },
+    { id: "exam", title: "Timed exams", text: `${EXAMS.length} exams, ${Math.min(...EXAM_MINUTES)} to ${Math.max(...EXAM_MINUTES)} minutes each: grammar, vocabulary, and alphabet and numbers. A score and what to fix.`, alt: "A timed exam in progress" },
   ];
   const alsoIn = [
     { title: "Quick translation", text: "Translate short sentences both ways and see the right answer." },

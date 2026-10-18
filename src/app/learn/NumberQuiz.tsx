@@ -84,7 +84,6 @@ function Question({ run, setRun, numbers }: { run: Run; setRun: React.Dispatch<R
       {mode === "n2w" && <div className="big">{numeralText(q, kind)}</div>}
       {mode === "w2n" && <div className="prompt"><span className="word">{wordText(q, kind)}</span>{roman && <small>{q.wrom}{kind === "prices" ? " taka" : ""}</small>}</div>}
       {mode === "listen" && <button className="btn big-btn" onClick={() => speak(wordText(q, kind))}><Icon name="sound" size={18} /> Play</button>}
-      {mode === "listen" && <button className="btn ghost" onClick={() => speak(wordText(q, kind), { slow: true })}>Play slowly</button>}
       <div className={"options" + (mode === "n2w" ? "" : " letters")}>
         {options.map((o) => {
           const cls = picked !== null ? (o.value === q.value ? " right" : o.value === picked ? " wrong" : "") : "";
@@ -96,8 +95,6 @@ function Question({ run, setRun, numbers }: { run: Run; setRun: React.Dispatch<R
           <p className="feedback">
             {picked === q.value ? "Correct!" : "Not quite."} {numeralText(q, kind)} = {wordText(q, kind)}{roman && ` (${q.wrom})`}
           </p>
-          <button className="btn ghost" onClick={() => speak(wordText(q, kind))}><Icon name="sound" size={18} /> Hear it</button>
-          <button className="btn ghost" onClick={() => speak(wordText(q, kind), { slow: true })}>Slowly</button>
           <button className="btn" onClick={() => setRun((r) => r && { ...r, i: r.i + 1 })}>Next</button>
         </>
       )}
