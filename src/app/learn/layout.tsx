@@ -6,6 +6,7 @@ import { redirect } from "next/navigation";
 import { getUser } from "@/lib/auth";
 import { logout } from "../actions";
 import Icon from "./Icon";
+import MobileMenu from "./MobileMenu";
 import NavLinks from "./NavLinks";
 import { EnglishToggle, RomanProvider, RomanToggle } from "./Roman";
 import ThemeToggle from "./ThemeToggle";
@@ -51,14 +52,17 @@ export default async function LearnLayout({ children }: { children: React.ReactN
             <span><b lang="bn">বাংলা</b></span>
           </Link>
           <span className="spacer" />
-          <RomanToggle label="Roman" />
-          <EnglishToggle label="English" />
-          <ThemeToggle initial={theme} compact />
-          <Link href="/learn/progress" className="icon-link" aria-label="My progress"><Icon name="trophy" size={18} /></Link>
-          <Link href="/learn/refer" className="icon-link" aria-label="Refer a friend"><Icon name="gift" size={18} /></Link>
-          <Link href="/learn/feedback" className="icon-link" aria-label="Feedback"><Icon name="feedback" size={18} /></Link>
-          {user.isAdmin && <Link href="/admin" className="icon-link" aria-label="Admin"><Icon name="shield" size={18} /></Link>}
-          <form action={logout}><button className="icon-link" aria-label="Sign out"><Icon name="logout" size={18} /></button></form>
+          <MobileMenu
+            items={[
+              { href: "/learn/progress", label: "My progress", icon: "trophy" },
+              { href: "/learn/leaderboard", label: "Leaderboard", icon: "medal" },
+              { href: "/learn/refer", label: "Refer a friend", icon: "gift" },
+              { href: "/learn/feedback", label: "Feedback", icon: "feedback" },
+              ...(user.isAdmin ? [{ href: "/admin", label: "Admin", icon: "shield" as const }] : []),
+            ]}
+            controls={<><RomanToggle /><EnglishToggle /><ThemeToggle initial={theme} /></>}
+            footer={<form action={logout}><button className="mm-link mm-signout"><Icon name="logout" size={20} />Sign out</button></form>}
+          />
         </header>
 
         <div className="main">{children}</div>

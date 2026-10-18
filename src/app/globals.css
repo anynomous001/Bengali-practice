@@ -1101,3 +1101,21 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
 @media (max-width: 700px) {
   .shot-d { display: none !important; } .shot-m { display: block !important; max-width: 320px; margin: 0 auto; }
 }
+
+/* ---------- app phone menu: the top bar keeps the logo and one button ---------- */
+@media (max-width:959px) {
+  .mtop { min-width: 0; justify-content: space-between; }
+  .app { overflow-x: clip; max-width: 100vw; }
+  .tabbar { box-sizing: border-box; width: 100%; max-width: 100vw; }
+  .mm-btn { flex: none; }
+  .mm-backdrop { position: fixed; inset: 0; z-index: 40; border: 0; padding: 0; background: rgba(8, 12, 30, .45); }
+  .mm-panel { position: fixed; top: 64px; right: 10px; z-index: 41; width: min(340px, calc(100vw - 20px)); max-height: calc(100dvh - 76px); overflow-y: auto; padding: 8px; background: var(--surface); border: 1px solid var(--line-2); border-radius: 12px; }
+  .mm-panel[hidden] { display: none; }
+  .mm-link { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 48px; padding: 0 12px; border: 0; border-radius: 10px; background: none; color: var(--ink); font: 600 1rem var(--font-ui); text-decoration: none; text-align: left; cursor: pointer; }
+  .mm-link:hover, .mm-link[aria-current="page"] { background: var(--surface-2); }
+  .mm-controls { display: grid; gap: 10px; padding: 12px; margin: 8px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .mm-controls .toolbar { justify-content: space-between; }
+  .mtop .mm-controls .toolbar-label { display: inline; font-size: .95rem; color: var(--ink); }
+  .mm-signout { color: var(--bad); }
+}
+@media (min-width:960px) { .mm-btn, .mm-panel, .mm-backdrop { display: none; } }
