@@ -1119,3 +1119,14 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
   .mm-signout { color: var(--bad); }
 }
 @media (min-width:960px) { .mm-btn, .mm-panel, .mm-backdrop { display: none; } }
+
+/* ---------- website review: stars on the Feedback page and in admin ---------- */
+.rate-field { border: 0; padding: 0; margin: 0; display: grid; gap: 8px; }
+.rate-field legend { font-weight: 600; padding: 0; margin-bottom: 6px; }
+.rate-stars { display: flex; gap: 4px; }
+.rate-star { position: relative; display: inline-flex; font-size: 2.2rem; line-height: 1; color: var(--line-2); cursor: pointer; padding: 2px 4px; }
+.rate-star.on { color: #e5a400; }
+.rate-star input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+.rate-star:has(input:focus-visible) { outline: 2px solid var(--primary); border-radius: 8px; }
+.rate-word { margin: 0; min-height: 1.4em; }
+.rate-static { color: #e5a400; letter-spacing: 2px; } .rate-static .off { color: var(--line-2); }

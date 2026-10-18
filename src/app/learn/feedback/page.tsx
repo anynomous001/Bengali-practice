@@ -1,6 +1,7 @@
 import { requireAccess } from "@/lib/access";
 import { query } from "@/lib/db";
 import FeedbackForm from "./FeedbackForm";
+import ReviewForm from "./ReviewForm";
 
 const fmt = (d: Date) => d.toLocaleDateString("en-GB", { dateStyle: "medium" });
 
@@ -10,6 +11,7 @@ export default async function FeedbackPage() {
     "SELECT id, topic, message, resolved, created_at FROM feedback WHERE email = $1 AND area = 'app' ORDER BY created_at DESC LIMIT 10",
     [user.email],
   );
+  const review = (await query<{ rating: number; comment: string }>("SELECT rating, comment FROM reviews WHERE email = $1", [user.email]))[0];
   return (
     <main className="wide">
       <header>
@@ -17,6 +19,9 @@ export default async function FeedbackPage() {
         <h1>Tell your teacher what you think</h1>
         <p className="lede">An idea for a new feature, something that is not working, a mistake in a lesson, or just what helps you. It goes straight to your teacher.</p>
       </header>
+      <h2>Review this website</h2>
+      <ReviewForm rating={review?.rating ?? 0} comment={review?.comment ?? ""} />
+      <h2>Send a message</h2>
       <FeedbackForm />
       {mine.length > 0 && (
         <>

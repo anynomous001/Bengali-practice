@@ -38,6 +38,10 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
   const feedback = await query<{ id: number; email: string; area: string; ref: string; topic: string; message: string; resolved: boolean; created_at: Date }>(
     "SELECT id, email, area, ref, topic, message, resolved, created_at FROM feedback ORDER BY resolved, created_at DESC LIMIT 100",
   );
+  const reviews = await query<{ email: string; rating: number; comment: string; updated_at: Date }>(
+    "SELECT email, rating, comment, updated_at FROM reviews ORDER BY updated_at DESC LIMIT 100",
+  );
+  const avgRating = reviews.length ? reviews.reduce((a, r) => a + r.rating, 0) / reviews.length : 0;
   const referrals = await query<{ referee_email: string; referrer_email: string; reversed: boolean; created_at: Date }>(
     "SELECT referee_email, referrer_email, reversed, created_at FROM referrals ORDER BY created_at DESC LIMIT 50",
   );
@@ -76,6 +80,7 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
             <Link href="/admin?tab=students" className="adm-stat"><b>{activeCount}</b><span>Active students</span><small>{students.length} added in total</small></Link>
             <div className="adm-stat"><b>{practisedThisWeek}</b><span>Practised this week</span><small>of {students.length} students</small></div>
             <Link href="/admin?tab=feedback" className="adm-stat"><b>{openFeedback}</b><span>Open feedback</span><small>{openFeedback ? "waiting for you" : "all caught up"}</small></Link>
+            <Link href="/admin?tab=feedback" className="adm-stat"><b>{reviews.length ? avgRating.toFixed(1) : "–"}</b><span>Average rating</span><small>{reviews.length ? `${reviews.length} review${reviews.length === 1 ? "" : "s"}` : "no reviews yet"}</small></Link>
             <Link href="/admin?tab=payments" className="adm-stat"><b>{orders.length}</b><span>Online payments</span><small>{orders[0] ? `latest ${fmt(orders[0].paid_at)}` : "none yet"}</small></Link>
           </div>
 
@@ -160,6 +165,20 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
             </div>
           </section>
         </>
+      )}
+
+      {tab === "feedback" && (
+        <section className="adm-card">
+          <h2>Website reviews {reviews.length > 0 && <span className="chip">{avgRating.toFixed(1)} ★ from {reviews.length}</span>}</h2>
+          {reviews.map((r) => (
+            <article key={r.email} className="adm-fb">
+              <div className="adm-fb-top"><b className="rate-static" aria-label={`${r.rating} out of 5 stars`}>{"★".repeat(r.rating)}<span className="off">{"★".repeat(5 - r.rating)}</span></b></div>
+              {r.comment && <p className="adm-fb-msg">{r.comment}</p>}
+              <small className="muted">{r.email} · {fmt(r.updated_at)}</small>
+            </article>
+          ))}
+          {!reviews.length && <p className="muted">No reviews yet. Students rate the website from the Feedback page.</p>}
+        </section>
       )}
 
       {tab === "feedback" && (

@@ -156,6 +156,13 @@ const SCHEMA = `
       resolved boolean NOT NULL DEFAULT false,
       created_at timestamptz NOT NULL DEFAULT now()
     );
+    CREATE TABLE IF NOT EXISTS reviews (
+      email text PRIMARY KEY,
+      rating int NOT NULL,
+      comment text NOT NULL DEFAULT '',
+      created_at timestamptz NOT NULL DEFAULT now(),
+      updated_at timestamptz NOT NULL DEFAULT now()
+    );
     CREATE TABLE IF NOT EXISTS flashcards (
       email text NOT NULL,
       card_id text NOT NULL,

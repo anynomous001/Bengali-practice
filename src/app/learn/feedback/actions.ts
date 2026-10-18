@@ -21,3 +21,19 @@ export async function sendFeedback(_prev: FeedbackState, fd: FormData): Promise<
   revalidatePath("/learn/feedback");
   return { ok: true, message: "Thank you. Your teacher will read this." };
 }
+
+/** A review of the whole website: one per student, which they can change later. */
+export async function saveReview(_prev: FeedbackState, fd: FormData): Promise<FeedbackState> {
+  const user = await getUser();
+  if (!user?.hasAccess) return { ok: false, message: "Please sign in again." };
+  const rating = Number(fd.get("rating"));
+  const comment = String(fd.get("comment") ?? "").trim().slice(0, 1000);
+  if (!Number.isInteger(rating) || rating < 1 || rating > 5) return { ok: false, message: "Please choose 1 to 5 stars." };
+  await query(
+    `INSERT INTO reviews (email, rating, comment) VALUES ($1, $2, $3)
+     ON CONFLICT (email) DO UPDATE SET rating = EXCLUDED.rating, comment = EXCLUDED.comment, updated_at = now()`,
+    [user.email, rating, comment],
+  );
+  revalidatePath("/learn/feedback");
+  return { ok: true, message: "Thank you for your review. You can change it any time." };
+}
