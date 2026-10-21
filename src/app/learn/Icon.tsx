@@ -1,7 +1,7 @@
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 import {
   ArrowRight, BookOpenText, Gift, List, Medal, ChatCircleText, Fire, Target, Trophy, CaretDown, CaretLeft, CaretRight, Cards, Check, CheckCircle, Circle, Clock, Desktop, House, ListBullets,
-  Lock, Microphone, Moon, PencilSimpleLine, Play, ShieldCheck, SignOut, SpeakerHigh, Sun, TextAa, Translate, X,
+  Lock, Microphone, Moon, Path, PencilSimpleLine, Play, ShieldCheck, SignOut, SpeakerHigh, Sun, TextAa, Translate, X,
 } from "@phosphor-icons/react/dist/ssr";
 
 // One icon family (Phosphor) for the whole app, so strokes, corners and weights match everywhere.
@@ -11,6 +11,7 @@ const ICONS = {
   reading: BookOpenText,
   speaking: Microphone,
   writing: PencilSimpleLine,
+  path: Path,
   grammar: TextAa,
   vocabulary: Translate,
   arrow: ArrowRight,

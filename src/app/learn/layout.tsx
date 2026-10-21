@@ -54,6 +54,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
           <span className="spacer" />
           <MobileMenu
             items={[
+              { href: "/learn/path", label: "My path", icon: "path" },
               { href: "/learn/writing", label: "Writing", icon: "writing" },
               { href: "/learn/progress", label: "My progress", icon: "trophy" },
               { href: "/learn/leaderboard", label: "Leaderboard", icon: "medal" },

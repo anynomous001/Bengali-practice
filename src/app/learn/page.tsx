@@ -5,6 +5,7 @@ import { COURSES, allLessons, courseStats } from "@/data/curriculum";
 import Icon from "./Icon";
 import ProgressBar from "./ProgressBar";
 import StreakCard from "./StreakCard";
+import { loadChosen, buildPath } from "@/lib/path";
 import { loadStats, markMilestonesSeen, MILESTONES, syncMilestones } from "@/lib/activity";
 
 export default async function Dashboard() {
@@ -15,6 +16,9 @@ export default async function Dashboard() {
   if (fresh.length) await markMilestonesSeen(user.email);
   const nextMilestone = MILESTONES.find((m) => !earned.has(m.key))?.title ?? null;
   const freshMilestones = MILESTONES.filter((m) => fresh.includes(m.key));
+
+  const chosen = await loadChosen(user.email);
+  const myPath = chosen ? buildPath(chosen.goal, chosen.reads, done) : null;
 
   const daysLeft = user.expiresAt ? Math.ceil((user.expiresAt.getTime() - Date.now()) / 86_400_000) : Infinity;
   const rows = COURSES.map((c) => ({ c, s: courseStats(c, done) }));
@@ -64,6 +68,35 @@ export default async function Dashboard() {
           <p>{complete} of {total} lessons complete</p>
         </div>
       </section>
+
+      {chosen && myPath ? (
+        <section className="pth-card">
+          <div>
+            <p className="eyebrow">My path</p>
+            <h2>{chosen.goal.title}</h2>
+            <ProgressBar value={myPath.done} max={myPath.total} label="Path progress" />
+            <p className="muted">{myPath.done} of {myPath.total} steps</p>
+          </div>
+          {myPath.next ? (
+            <Link href={myPath.next.lesson.href} className="btn">
+              <span className="btn-stack"><small>{myPath.done ? "Next step" : "Start here"}</small><b>{myPath.next.lesson.title}</b></span>
+              <Icon name="next" size={18} />
+            </Link>
+          ) : (
+            <Link href="/learn/path?change=1" className="btn ghost">Pick a new goal</Link>
+          )}
+          <Link href="/learn/path" className="pth-all">See the whole path</Link>
+        </section>
+      ) : (
+        <section className="pth-card">
+          <div>
+            <p className="eyebrow">My path</p>
+            <h2>Not sure where to start?</h2>
+            <p className="muted">Pick a goal, such as talking with family or reading, and get a path through the lessons.</p>
+          </div>
+          <Link href="/learn/path" className="btn">Choose my path</Link>
+        </section>
+      )}
 
       <StreakCard stats={stats} next={nextMilestone} />
 

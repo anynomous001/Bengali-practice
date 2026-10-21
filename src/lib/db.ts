@@ -163,6 +163,12 @@ const SCHEMA = `
       created_at timestamptz NOT NULL DEFAULT now(),
       updated_at timestamptz NOT NULL DEFAULT now()
     );
+    CREATE TABLE IF NOT EXISTS student_path (
+      email text PRIMARY KEY,
+      goal text NOT NULL,
+      reads text NOT NULL DEFAULT 'no',
+      updated_at timestamptz NOT NULL DEFAULT now()
+    );
     CREATE TABLE IF NOT EXISTS flashcards (
       email text NOT NULL,
       card_id text NOT NULL,

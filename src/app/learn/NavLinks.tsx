@@ -6,6 +6,7 @@ import Icon, { type IconName } from "./Icon";
 
 const ITEMS: { href: string; label: string; bn?: string; icon: IconName; seg?: string; sideOnly?: boolean }[] = [
   { href: "/learn", label: "Home", icon: "home" },
+  { href: "/learn/path", label: "My path", icon: "path", sideOnly: true },
   { href: "/learn/reading", label: "Reading", bn: "পড়া", icon: "reading", seg: "reading" },
   { href: "/learn/speaking", label: "Speaking", bn: "বলা", icon: "speaking", seg: "speaking" },
   { href: "/learn/vocabulary", label: "Vocabulary", bn: "শব্দ", icon: "vocabulary", seg: "vocabulary" },
