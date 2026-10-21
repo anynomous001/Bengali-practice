@@ -2,11 +2,8 @@ import { LETTERS } from "./letters";
 import { NUMBERS } from "./numbers";
 import { VOCAB } from "./vocabulary";
 import { DEV_VOCAB, DEV_SAY } from "./devotional";
+import { SIGNS as SIGN_CARDS } from "./signs";
 
-const SIGN_CARDS: [sign: string, roman: string, name: string, vowel: string][] = [
-  ["া", "kaa", "আ-কার", "আ"], ["ি", "ki", "ই-কার", "ই"], ["ী", "kii", "ঈ-কার", "ঈ"], ["ু", "ku", "উ-কার", "উ"], ["ূ", "kuu", "ঊ-কার", "ঊ"],
-  ["ৃ", "kri", "ঋ-কার", "ঋ"], ["ে", "ke", "এ-কার", "এ"], ["ৈ", "koi", "ঐ-কার", "ঐ"], ["ো", "ko", "ও-কার", "ও"], ["ৌ", "kou", "ঔ-কার", "ঔ"],
-];
 const SIGN_WORDS: [word: string, roman: string, name: string, meaning: string][] = [
   ["কাক", "kaak", "আ-কার (◌া)", "crow"], ["দিন", "din", "ই-কার (◌ি)", "day"], ["নদী", "nodi", "ঈ-কার (◌ী)", "river"], ["ফুল", "phul", "উ-কার (◌ু)", "flower"],
   ["ভূত", "bhut", "ঊ-কার (◌ূ)", "ghost"], ["কৃষ্ণ", "krishno", "ঋ-কার (◌ৃ)", "Krishna"], ["দেশ", "desh", "এ-কার (◌ে)", "country"], ["বৈষ্ণব", "boishnob", "ঐ-কার (◌ৈ)", "Vaishnava"],

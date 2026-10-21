@@ -10,6 +10,7 @@ const ITEMS: { href: string; label: string; bn?: string; icon: IconName; seg?: s
   { href: "/learn/speaking", label: "Speaking", bn: "বলা", icon: "speaking", seg: "speaking" },
   { href: "/learn/vocabulary", label: "Vocabulary", bn: "শব্দ", icon: "vocabulary", seg: "vocabulary" },
   { href: "/learn/grammar", label: "Grammar", bn: "ব্যাকরণ", icon: "grammar", seg: "grammar" },
+  { href: "/learn/writing", label: "Writing", bn: "লেখা", icon: "writing", seg: "writing", sideOnly: true },
   { href: "/learn/progress", label: "My progress", icon: "trophy", sideOnly: true },
   { href: "/learn/leaderboard", label: "Leaderboard", icon: "medal", sideOnly: true },
   { href: "/learn/refer", label: "Refer a friend", icon: "gift", sideOnly: true },

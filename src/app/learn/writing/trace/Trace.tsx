@@ -1,13 +1,25 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { Letter } from "@/data/letters";
 import { recordWriting } from "../../../actions";
 import { useRoman } from "../../Roman";
 
 const SIZE = 400;
 const PEN = 9;
 const ERASER = 30;
+/** One thing to practice writing: a letter, or a consonant with a vowel sign. */
+export type TraceItem = {
+  /** What is recorded in the practice count. */
+  id: string;
+  /** The faint shape drawn behind the pad. */
+  guide: string;
+  /** Short label for the grid tile. */
+  tile: string;
+  rom: string;
+  group: string;
+  /** Extra line under the pad, for example the name of a vowel sign. */
+  note?: string;
+};
 type Pt = { x: number; y: number };
 /** One pen or eraser stroke, kept only in memory so Undo can redraw the pad. Nothing here is saved or sent. */
 type Stroke = { erase: boolean; pts: Pt[] };
@@ -26,16 +38,22 @@ function segment(ctx: CanvasRenderingContext2D, s: Stroke, i: number) {
 
 export default function Trace({
   initialCounts,
-  letters: LETTERS,
+  items: ITEMS,
   groups: GROUPS,
+  noun = "Letter",
+  intro = "Trace the faint letter with your finger, a pen or the mouse.",
+  scale = 0.62,
 }: {
   initialCounts: Record<string, number>;
-  letters: Letter[];
+  items: TraceItem[];
   groups: { id: string; title: string }[];
+  noun?: string;
+  intro?: string;
+  scale?: number;
 }) {
   const { roman } = useRoman();
   const [counts, setCounts] = useState(initialCounts);
-  const [sel, setSel] = useState(LETTERS[0].ch);
+  const [sel, setSel] = useState(ITEMS[0].id);
   const [guide, setGuide] = useState(true);
   const guideRef = useRef<HTMLCanvasElement>(null);
   const drawRef = useRef<HTMLCanvasElement>(null);
@@ -43,7 +61,7 @@ export default function Trace({
   const live = useRef<Stroke | null>(null);
   const [tool, setTool] = useState<"pen" | "eraser">("pen");
   const [inked, setInked] = useState(false);
-  const letter = LETTERS.find((l) => l.ch === sel)!;
+  const item = ITEMS.find((l) => l.id === sel)!;
 
   // Both canvases are sized for the device pixel ratio so strokes stay sharp.
   useEffect(() => {
@@ -69,12 +87,12 @@ export default function Trace({
     if (guide) {
       ctx.fillStyle = "rgba(192,57,43,.22)";
       const family = getComputedStyle(document.documentElement).getPropertyValue("--font-bn").trim() || '"Noto Sans Bengali", "Nirmala UI", sans-serif';
-      ctx.font = `${SIZE * 0.62}px ${family}`;
+      ctx.font = `${SIZE * scale}px ${family}`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      ctx.fillText(sel, SIZE / 2, SIZE / 2);
+      ctx.fillText(item.guide, SIZE / 2, SIZE / 2);
     }
-  }, [sel, guide]);
+  }, [item, guide, scale]);
 
   function redraw() {
     const c = drawRef.current;
@@ -122,21 +140,21 @@ export default function Trace({
   function done() {
     setCounts((c) => ({ ...c, [sel]: (c[sel] ?? 0) + 1 }));
     void recordWriting(sel);
-    const i = LETTERS.findIndex((l) => l.ch === sel);
-    setSel(LETTERS[(i + 1) % LETTERS.length].ch);
+    const i = ITEMS.findIndex((l) => l.id === sel);
+    setSel(ITEMS[(i + 1) % ITEMS.length].id);
   }
 
   return (
     <>
-      <p className="muted">Trace the faint letter with your finger, a pen or the mouse. Use the eraser or undo if you slip. When you are happy with it, tap “I&apos;m done”. Nothing you draw is saved: only how many times you practiced each letter.</p>
-      <p className="trace-now">Letter <b lang="bn">{sel}</b>{roman && ` (${letter.rom})`}{counts[sel] ? ` · practiced ${counts[sel]}×` : ""}</p>
+      <p className="muted">{intro} Use the eraser or undo if you slip. When you are happy with it, tap “I&apos;m done”. Nothing you draw is saved: only how many times you practiced each one.</p>
+      <p className="trace-now">{noun} <b lang="bn">{item.guide}</b>{roman && ` (${item.rom})`}{counts[sel] ? ` · practiced ${counts[sel]}×` : ""}{item.note && <><br /><span className="muted">{item.note}</span></>}</p>
       <div className="trace-box">
         <canvas ref={guideRef} className="trace-canvas" aria-hidden />
         <canvas
           ref={drawRef}
           className="trace-canvas draw"
           role="img"
-          aria-label={`Drawing area for the letter ${sel}. Draw with a finger, a pen or the mouse.`}
+          aria-label={`Drawing area for ${item.guide}. Draw with a finger, a pen or the mouse.`}
           onPointerDown={down}
           onPointerMove={move}
           onPointerUp={up}
@@ -156,10 +174,10 @@ export default function Trace({
         <section key={g.id}>
           <h2>{g.title}</h2>
           <div className="grid">
-            {LETTERS.filter((l) => l.group === g.id).map((l) => (
-              <button key={l.ch} className={"tile" + (counts[l.ch] ? " done" : "") + (l.ch === sel ? " current" : "")} onClick={() => setSel(l.ch)}>
-                <span className="ch">{l.ch}</span>
-                <span className="rom">{counts[l.ch] ? `${counts[l.ch]}×` : roman ? l.rom : ""}</span>
+            {ITEMS.filter((l) => l.group === g.id).map((l) => (
+              <button key={l.id} className={"tile" + (counts[l.id] ? " done" : "") + (l.id === sel ? " current" : "")} onClick={() => setSel(l.id)}>
+                <span className="ch">{l.tile}</span>
+                <span className="rom">{counts[l.id] ? `${counts[l.id]}×` : roman ? l.rom : ""}</span>
               </button>
             ))}
           </div>

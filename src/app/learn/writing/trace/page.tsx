@@ -11,7 +11,7 @@ export default async function TracePage() {
     <main>
       <Link href="/learn/writing" className="back"><Icon name="prev" size={16} />Writing</Link>
       <h1>Trace letters</h1>
-      <Trace initialCounts={await loadWriting()} letters={LETTERS} groups={GROUPS} />
+      <Trace initialCounts={await loadWriting()} items={LETTERS.map((l) => ({ id: l.ch, guide: l.ch, tile: l.ch, rom: l.rom, group: l.group }))} groups={GROUPS} />
     </main>
   );
 }
