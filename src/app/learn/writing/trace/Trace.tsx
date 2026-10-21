@@ -19,6 +19,8 @@ export type TraceItem = {
   group: string;
   /** Extra line under the pad, for example the name of a vowel sign. */
   note?: string;
+  /** Guide size as a share of the pad; longer shapes need less. Defaults to the page's value. */
+  scale?: number;
 };
 type Pt = { x: number; y: number };
 /** One pen or eraser stroke, kept only in memory so Undo can redraw the pad. Nothing here is saved or sent. */
@@ -87,7 +89,7 @@ export default function Trace({
     if (guide) {
       ctx.fillStyle = "rgba(192,57,43,.22)";
       const family = getComputedStyle(document.documentElement).getPropertyValue("--font-bn").trim() || '"Noto Sans Bengali", "Nirmala UI", sans-serif';
-      ctx.font = `${SIZE * scale}px ${family}`;
+      ctx.font = `${SIZE * (item.scale ?? scale)}px ${family}`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       ctx.fillText(item.guide, SIZE / 2, SIZE / 2);
@@ -169,7 +171,7 @@ export default function Trace({
         <button type="button" className="btn ghost small" onClick={clear} disabled={!inked}>Clear</button>
         <button type="button" className="btn ghost small" onClick={() => setGuide((g) => !g)}>{guide ? "Hide letter" : "Show letter"}</button>
       </div>
-      <button className="btn trace-done" onClick={done}>I&apos;m done · next letter</button>
+      <button className="btn trace-done" onClick={done}>I&apos;m done · next {noun.toLowerCase()}</button>
       {GROUPS.map((g) => (
         <section key={g.id}>
           <h2>{g.title}</h2>

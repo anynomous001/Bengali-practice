@@ -5,6 +5,7 @@ import { after } from "next/server";
 import { randomUUID } from "node:crypto";
 import { ALL_CARD_IDS } from "@/data/decks";
 import { SIGNS } from "@/data/signs";
+import { NUMBER_CHART } from "@/data/numbers";
 import { LETTERS } from "@/data/letters";
 import { SENTENCES } from "@/data/sentences";
 import { GRAMMAR } from "@/data/grammar";
@@ -117,10 +118,11 @@ export async function rateCard(cardId: string, rating: "again" | "good" | "easy"
 
 export async function recordWriting(item: string) {
   const user = await getUser();
-  // Items are a letter ("ক"), a vowel sign ("m:ি"), a word-builder entry ("w:ক") or a sentence ("s:1").
+  // Items are a letter ("ক"), a vowel sign ("m:ি"), a numeral ("n:5"), a word-builder entry ("w:ক") or a sentence ("s:1").
   const valid =
     LETTERS.some((l) => l.ch === item || (l.word && `w:${l.ch}` === item)) ||
     SIGNS.some(([s]) => `m:${s}` === item) ||
+    NUMBER_CHART.some((n) => `n:${n.value}` === item) ||
     SENTENCES.some((s) => `s:${s.id}` === item);
   if (!user?.hasAccess || !valid) return;
   await query(

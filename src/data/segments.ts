@@ -40,13 +40,12 @@ export const SEGMENTS: Record<
     activities: [
       { href: "/learn/writing/trace", title: "Trace letters", blurb: "Draw each letter with your finger or mouse over a guide." },
       { href: "/learn/writing/matras", title: "Trace vowel signs", blurb: "Draw each vowel sign (কার) on a consonant, and see where it goes." },
+      { href: "/learn/writing/numerals", title: "Trace numerals", blurb: "Draw the digits ০ to ৯, then the bigger numbers." },
       { href: "/learn/writing/words", title: "Build the word", blurb: "Arrange the pieces to spell a word from its meaning." },
       { href: "/learn/writing/sentences", title: "Build the sentence", blurb: "Put the words in order to make a sentence." },
       { href: "/learn/writing/flashcards", title: "Write it down", blurb: "See the meaning, write the word on paper, then check." },
     ],
-    soon: [
-      { title: "Write numerals", blurb: "০ to ৯ and bigger numbers." },
-    ],
+    soon: [],
   },
   grammar: {
     title: "Grammar", bn: "ব্যাকরণ", icon: "📐",
