@@ -1258,3 +1258,7 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
 }
 .pth-prog .overall-top { display: flex; justify-content: space-between; align-items: baseline; color: var(--ink-2); font-weight: 600; }
 .pth-prog .overall-top b { color: var(--ink); font-size: 1.4rem; }
+.pth-time { margin: 2px 0 0; font-size: .92rem; }
+.pth-stage-head { align-items: flex-start; } .pth-stage-text { flex: 1; min-width: 0; }
+.pth-stage-time { flex: none; color: var(--ink-2); font-weight: 600; white-space: nowrap; padding-top: 6px; }
+.pth-stage.done .pth-stage-time { color: var(--ok); }

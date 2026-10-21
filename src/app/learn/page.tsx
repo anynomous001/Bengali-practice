@@ -5,7 +5,7 @@ import { COURSES, allLessons, courseStats } from "@/data/curriculum";
 import Icon from "./Icon";
 import ProgressBar from "./ProgressBar";
 import StreakCard from "./StreakCard";
-import { loadChosen, buildPath } from "@/lib/path";
+import { loadChosen, buildPath, fmtMinutes } from "@/lib/path";
 import { loadStats, markMilestonesSeen, MILESTONES, syncMilestones } from "@/lib/activity";
 
 export default async function Dashboard() {
@@ -75,7 +75,7 @@ export default async function Dashboard() {
             <p className="eyebrow">My path</p>
             <h2>{chosen.goal.title}</h2>
             <ProgressBar value={myPath.done} max={myPath.total} label="Path progress" />
-            <p className="muted">{myPath.done} of {myPath.total} steps</p>
+            <p className="muted">{myPath.done} of {myPath.total} steps{myPath.minutesLeft > 0 ? ` · about ${fmtMinutes(myPath.minutesLeft)} left` : ""}</p>
           </div>
           {myPath.next ? (
             <Link href={myPath.next.lesson.href} className="btn">

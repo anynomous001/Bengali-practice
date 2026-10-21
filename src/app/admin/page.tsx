@@ -7,6 +7,7 @@ import { addStudent, grantYear, inviteSomeone, removeStudent, resolveFeedback, r
 import Icon from "../learn/Icon";
 import Toast from "../Toast";
 import { loadTeacherView } from "@/lib/activity";
+import { GOALS } from "@/data/paths";
 import { buddiesOn } from "@/lib/leaderboard";
 import { BUDDIES, BUDDY_MAX_REAL } from "@/data/buddies";
 
@@ -42,6 +43,8 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
     "SELECT email, rating, comment, updated_at FROM reviews ORDER BY updated_at DESC LIMIT 100",
   );
   const avgRating = reviews.length ? reviews.reduce((a, r) => a + r.rating, 0) / reviews.length : 0;
+  const goalCounts = new Map((await query<{ goal: string; n: number }>("SELECT goal, COUNT(*)::int AS n FROM student_path GROUP BY goal")).map((r) => [r.goal, r.n]));
+  const goalsChosen = [...goalCounts.values()].reduce((a, b) => a + b, 0);
   const referrals = await query<{ referee_email: string; referrer_email: string; reversed: boolean; created_at: Date }>(
     "SELECT referee_email, referrer_email, reversed, created_at FROM referrals ORDER BY created_at DESC LIMIT 50",
   );
@@ -83,6 +86,17 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
             <Link href="/admin?tab=feedback" className="adm-stat"><b>{reviews.length ? avgRating.toFixed(1) : "–"}</b><span>Average rating</span><small>{reviews.length ? `${reviews.length} review${reviews.length === 1 ? "" : "s"}` : "no reviews yet"}</small></Link>
             <Link href="/admin?tab=payments" className="adm-stat"><b>{orders.length}</b><span>Online payments</span><small>{orders[0] ? `latest ${fmt(orders[0].paid_at)}` : "none yet"}</small></Link>
           </div>
+
+          <section className="adm-card">
+            <h2>What students want to get better at</h2>
+            {goalsChosen ? (
+              <ul className="adm-plain">
+                {GOALS.map((g) => ({ g, n: goalCounts.get(g.id) ?? 0 })).sort((a, b) => b.n - a.n).map(({ g, n }) => (
+                  <li key={g.id}><span>{g.title}</span><span className="muted">{n} {n === 1 ? "student" : "students"}</span></li>
+                ))}
+              </ul>
+            ) : <p className="muted">No student has picked a goal yet. They choose one on the My path page.</p>}
+          </section>
 
           <section className="adm-card">
             <h2>Access ending in the next 30 days</h2>

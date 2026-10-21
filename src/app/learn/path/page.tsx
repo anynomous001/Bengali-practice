@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { requireAccess } from "@/lib/access";
 import { loadLessonProgress } from "@/lib/progress";
-import { loadChosen, buildPath } from "@/lib/path";
+import { loadChosen, buildPath, fmtMinutes } from "@/lib/path";
 import { GOALS, READS } from "@/data/paths";
 import Icon from "../Icon";
 import ProgressBar from "../ProgressBar";
@@ -65,6 +65,7 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
         <div className="pth-prog">
           <div className="overall-top"><span>{path.done} of {path.total} steps</span><b>{path.total ? Math.round((path.done / path.total) * 100) : 0}%</b></div>
           <ProgressBar value={path.done} max={path.total} label="Path progress" size="lg" />
+          {path.minutesLeft > 0 && <p className="muted pth-time">About {fmtMinutes(path.minutesLeft)} left. At ten minutes a day, that is about {path.daysAtTen} {path.daysAtTen === 1 ? "day" : "days"}.</p>}
         </div>
         {path.next ? (
           <Link href={path.next.lesson.href} className="btn pth-next">
@@ -84,10 +85,11 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
             <li key={s.title} className={"pth-stage" + (current ? " current" : "") + (!s.skipped && left === 0 ? " done" : "") + (s.skipped ? " skipped" : "")}>
               <div className="pth-stage-head">
                 <span className="pth-n">{s.skipped ? "–" : left === 0 ? <Icon name="check" size={16} /> : i + 1}</span>
-                <div>
+                <div className="pth-stage-text">
                   <h2>{s.title}</h2>
                   <p className="muted">{s.skipped ? "Skipped, because you can already read Bengali letters." : s.blurb}</p>
                 </div>
+                {!s.skipped && <small className="pth-stage-time">{left === 0 ? "Done" : fmtMinutes(s.minutesLeft)}</small>}
               </div>
               {!s.skipped && (
                 <ul className="pth-steps">
@@ -96,7 +98,7 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
                       <Link href={x.lesson.href}>
                         <span className="pth-tick">{x.done ? <Icon name="check" size={14} /> : null}</span>
                         <span className="pth-text"><b>{x.lesson.title}</b><span className="muted">{x.why}</span></span>
-                        <small className="pth-kind">{x.course} · {x.lesson.kind}</small>
+                        <small className="pth-kind">{x.course} · {x.lesson.kind} · {fmtMinutes(x.minutes)}</small>
                       </Link>
                     </li>
                   ))}
