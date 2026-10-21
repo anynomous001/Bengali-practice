@@ -5,7 +5,24 @@ import type { Letter } from "@/data/letters";
 import { recordWriting } from "../../../actions";
 import { useRoman } from "../../Roman";
 
-const SIZE = 320;
+const SIZE = 400;
+const PEN = 9;
+const ERASER = 30;
+type Pt = { x: number; y: number };
+/** One pen or eraser stroke, kept only in memory so Undo can redraw the pad. Nothing here is saved or sent. */
+type Stroke = { erase: boolean; pts: Pt[] };
+
+function segment(ctx: CanvasRenderingContext2D, s: Stroke, i: number) {
+  ctx.globalCompositeOperation = s.erase ? "destination-out" : "source-over";
+  ctx.lineWidth = s.erase ? ERASER : PEN;
+  ctx.lineCap = ctx.lineJoin = "round";
+  ctx.beginPath();
+  const from = s.pts[Math.max(0, i - 1)];
+  ctx.moveTo(from.x, from.y);
+  ctx.lineTo(s.pts[i].x + 0.01, s.pts[i].y);
+  ctx.stroke();
+  ctx.globalCompositeOperation = "source-over";
+}
 
 export default function Trace({
   initialCounts,
@@ -22,7 +39,10 @@ export default function Trace({
   const [guide, setGuide] = useState(true);
   const guideRef = useRef<HTMLCanvasElement>(null);
   const drawRef = useRef<HTMLCanvasElement>(null);
-  const last = useRef<{ x: number; y: number } | null>(null);
+  const strokes = useRef<Stroke[]>([]);
+  const live = useRef<Stroke | null>(null);
+  const [tool, setTool] = useState<"pen" | "eraser">("pen");
+  const [inked, setInked] = useState(false);
   const letter = LETTERS.find((l) => l.ch === sel)!;
 
   // Both canvases are sized for the device pixel ratio so strokes stay sharp.
@@ -56,52 +76,82 @@ export default function Trace({
     }
   }, [sel, guide]);
 
-  const clear = () => drawRef.current?.getContext("2d")!.clearRect(0, 0, SIZE, SIZE);
-  useEffect(clear, [sel]);
+  function redraw() {
+    const c = drawRef.current;
+    if (!c) return;
+    const ctx = c.getContext("2d")!;
+    ctx.clearRect(0, 0, SIZE, SIZE);
+    ctx.strokeStyle = getComputedStyle(c).color;
+    for (const st of strokes.current) for (let i = 0; i < st.pts.length; i++) segment(ctx, st, i);
+  }
+  const clear = () => { strokes.current = []; live.current = null; setInked(false); redraw(); };
+  const undo = () => { strokes.current.pop(); setInked(strokes.current.length > 0); redraw(); };
+  useEffect(clear, [sel]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  function pos(e: React.PointerEvent<HTMLCanvasElement>) {
+  function pos(e: { clientX: number; clientY: number; currentTarget: HTMLCanvasElement }): Pt {
     const r = e.currentTarget.getBoundingClientRect();
     return { x: ((e.clientX - r.left) / r.width) * SIZE, y: ((e.clientY - r.top) / r.height) * SIZE };
   }
   function down(e: React.PointerEvent<HTMLCanvasElement>) {
+    if (e.pointerType === "mouse" && e.button !== 0) return;
     e.currentTarget.setPointerCapture(e.pointerId);
-    last.current = pos(e);
-    move(e);
+    live.current = { erase: tool === "eraser", pts: [] };
+    add(e, [e.nativeEvent]);
   }
   function move(e: React.PointerEvent<HTMLCanvasElement>) {
-    if (!last.current) return;
-    const ctx = e.currentTarget.getContext("2d")!;
-    const p = pos(e);
-    ctx.strokeStyle = getComputedStyle(e.currentTarget).color;
-    ctx.lineWidth = 9;
-    ctx.lineCap = ctx.lineJoin = "round";
-    ctx.beginPath();
-    ctx.moveTo(last.current.x, last.current.y);
-    ctx.lineTo(p.x + 0.01, p.y);
-    ctx.stroke();
-    last.current = p;
+    if (!live.current) return;
+    const batch = e.nativeEvent.getCoalescedEvents?.();
+    add(e, batch && batch.length ? batch : [e.nativeEvent]);
   }
-  const up = () => { last.current = null; };
+  function add(e: React.PointerEvent<HTMLCanvasElement>, evs: PointerEvent[]) {
+    const st = live.current;
+    if (!st) return;
+    const ctx = e.currentTarget.getContext("2d")!;
+    ctx.strokeStyle = getComputedStyle(e.currentTarget).color;
+    for (const ev of evs) {
+      st.pts.push(pos({ clientX: ev.clientX, clientY: ev.clientY, currentTarget: e.currentTarget }));
+      segment(ctx, st, st.pts.length - 1);
+    }
+  }
+  function up() {
+    const st = live.current;
+    live.current = null;
+    if (st && st.pts.length) { strokes.current.push(st); setInked(true); }
+  }
 
   function done() {
     setCounts((c) => ({ ...c, [sel]: (c[sel] ?? 0) + 1 }));
     void recordWriting(sel);
-    clear();
     const i = LETTERS.findIndex((l) => l.ch === sel);
     setSel(LETTERS[(i + 1) % LETTERS.length].ch);
   }
 
   return (
     <>
-      <p className="muted">Trace the faint letter with your finger or mouse. Then tap “I wrote it”. Tracing counts for practice only; you judge your own writing.</p>
+      <p className="muted">Trace the faint letter with your finger, a pen or the mouse. Use the eraser or undo if you slip. When you are happy with it, tap “I&apos;m done”. Nothing you draw is saved: only how many times you practiced each letter.</p>
+      <p className="trace-now">Letter <b lang="bn">{sel}</b>{roman && ` (${letter.rom})`}{counts[sel] ? ` · practiced ${counts[sel]}×` : ""}</p>
       <div className="trace-box">
-        <canvas ref={guideRef} className="trace-canvas" />
-        <canvas ref={drawRef} className="trace-canvas draw" onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up} />
+        <canvas ref={guideRef} className="trace-canvas" aria-hidden />
+        <canvas
+          ref={drawRef}
+          className="trace-canvas draw"
+          role="img"
+          aria-label={`Drawing area for the letter ${sel}. Draw with a finger, a pen or the mouse.`}
+          onPointerDown={down}
+          onPointerMove={move}
+          onPointerUp={up}
+          onPointerCancel={up}
+          onContextMenu={(e) => e.preventDefault()}
+        />
       </div>
-      <p>Letter <b>{sel}</b>{roman && ` (${letter.rom})`}{counts[sel] ? ` · written ${counts[sel]}×` : ""}</p>
-      <button className="btn" onClick={done}>I wrote it</button>
-      <button className="btn ghost" onClick={clear}>Clear</button>
-      <button className="btn ghost" onClick={() => setGuide((g) => !g)}>{guide ? "Hide guide" : "Show guide"}</button>
+      <div className="trace-tools" role="group" aria-label="Drawing tools">
+        <button type="button" className="btn ghost small" aria-pressed={tool === "pen"} onClick={() => setTool("pen")}>Pen</button>
+        <button type="button" className="btn ghost small" aria-pressed={tool === "eraser"} onClick={() => setTool("eraser")}>Eraser</button>
+        <button type="button" className="btn ghost small" onClick={undo} disabled={!inked}>Undo</button>
+        <button type="button" className="btn ghost small" onClick={clear} disabled={!inked}>Clear</button>
+        <button type="button" className="btn ghost small" onClick={() => setGuide((g) => !g)}>{guide ? "Hide letter" : "Show letter"}</button>
+      </div>
+      <button className="btn trace-done" onClick={done}>I&apos;m done · next letter</button>
       {GROUPS.map((g) => (
         <section key={g.id}>
           <h2>{g.title}</h2>

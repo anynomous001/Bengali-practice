@@ -291,7 +291,7 @@ a.card:hover, button.card:hover { transform:translateY(-3px); border-color:color
 .rate small { opacity:.75; margin-left:4px; font-weight:500; }
 
 /* ---------- writing ---------- */
-.trace-box { position:relative; width:100%; max-width:360px; aspect-ratio:1; margin:14px auto; }
+.trace-box { position:relative; width:100%; max-width:440px; aspect-ratio:1; margin:14px auto; }
 .trace-canvas { position:absolute; inset:0; width:100%; height:100%; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); color:var(--ink); box-shadow:var(--shadow); }
 .trace-canvas.draw { background:transparent; border-color:transparent; box-shadow:none; touch-action:none; cursor:crosshair; }
 .word-en { font:600 1.8rem var(--font-display); }
@@ -1202,3 +1202,11 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
   .lpx-aud-row { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 24px 0; }
   .lp .points li { grid-template-columns: 28px minmax(0, 1fr); } .lp .points li > :nth-child(n+3) { grid-column: 2; }
 }
+
+/* trace page: tools under the pad */
+.trace-canvas.draw { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+.trace-now { margin: 4px 0 0; text-align: center; }
+.trace-tools { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 440px; margin: 0 auto 12px; }
+.trace-tools .btn[aria-pressed="true"] { background: color-mix(in srgb, var(--primary) 12%, var(--surface)); border-color: var(--primary); color: var(--primary); }
+.trace-tools .btn:disabled { opacity: .45; }
+.trace-done { display: block; width: 100%; max-width: 440px; margin: 0 auto 28px; }
