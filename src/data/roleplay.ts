@@ -1,6 +1,8 @@
 // Role-play scenarios for Speaking. Written for this app: every Bengali line needs the teacher's review.
 // Only import this from server code (pages/actions) so the text is never in the public JS bundle.
 
+import { FAMILY_SCENARIOS } from "./roleplay-family";
+
 export type L = [bn: string, ro: string, en: string];
 export type RWord = L;
 export type Turn = { who: "you" | "them"; line: L };
@@ -612,6 +614,7 @@ export const SCENARIOS: Scenario[] = [
       ], takeaway: "If your first choice is full, ask for the next one with \"তাহলে ... আছে?\". Delays are normal, and \"আমি অপেক্ষা করছি\" is all you need to say." },
     ],
   },
+  ...FAMILY_SCENARIOS,
 ];
 
 export const getScenario = (id: string) => SCENARIOS.find((s) => s.id === id);

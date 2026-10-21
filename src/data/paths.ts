@@ -76,8 +76,18 @@ export const GOALS: PathGoal[] = [
         ],
       },
       {
+        title: "Family conversations",
+        blurb: "Four role plays for the conversations you will actually have: calls, grandparents, your partner's family and planning a visit.",
+        steps: [
+          { id: "speaking/roleplay-family-call", why: "Call your parents: ask how they are, if they have eaten, and tell them about your day." },
+          { id: "speaking/roleplay-family-grandparents", why: "Greet your grandparents with respect, ask for a story, and say yes to food kindly." },
+          { id: "speaking/roleplay-family-inlaws", why: "Meet your partner's parents: introduce yourself, praise the food, and ask people to slow down." },
+          { id: "speaking/roleplay-family-visit", why: "Plan a visit home: dates, who picks you up, and what to do when a flight changes." },
+        ],
+      },
+      {
         title: "Say it aloud",
-        blurb: "Hear it, say it, and have a conversation.",
+        blurb: "More practice speaking, with no script.",
         steps: [
           { id: "speaking/flashcards", why: "Say the Bengali word before you see it." },
           { id: "speaking/roleplay-phone", why: "Starting a call, asking for someone and ending politely." },
@@ -87,7 +97,6 @@ export const GOALS: PathGoal[] = [
         ],
       },
     ],
-    note: "This path is shorter than it should be. Role plays for talking with parents and in-laws are still to come.",
   },
   {
     id: "devotional",
