@@ -21,6 +21,7 @@ function draftFrom(fd: FormData): UpdateDraft {
     intro: s("intro", 800),
     bullets: s("bullets", 4000).split("\n").map((l) => l.replace(/^[-*•]\s*/, "").trim()).filter(Boolean).slice(0, 15),
     closing: s("closing", 800),
+    signoff: s("signoff", 200),
     buttonLabel: s("buttonLabel", 40) || "See what's new",
   };
 }
@@ -29,7 +30,7 @@ function draftFrom(fd: FormData): UpdateDraft {
 function personalize(d: UpdateDraft, name: string | null): UpdateDraft {
   const first = (name ?? "").trim().split(/\s+/)[0] || "there";
   const f = (t: string) => t.replace(/\{name\}/gi, first);
-  return { ...d, subject: f(d.subject), heading: f(d.heading), intro: f(d.intro), bullets: d.bullets.map(f), closing: f(d.closing) };
+  return { ...d, subject: f(d.subject), heading: f(d.heading), intro: f(d.intro), bullets: d.bullets.map(f), closing: f(d.closing), signoff: f(d.signoff) };
 }
 
 async function mailFor(draft: UpdateDraft, email: string, name: string | null) {

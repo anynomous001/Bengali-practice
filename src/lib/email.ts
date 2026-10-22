@@ -16,6 +16,8 @@ type Mail = {
   bullets?: string[];
   /** Paragraphs shown after the list. */
   closing?: string[];
+  /** A personal sign-off, shown under the closing paragraphs. Line breaks are kept. */
+  signoff?: string;
   /** A link that lets the person stop this kind of email. */
   unsubscribe?: string;
 };
@@ -48,6 +50,7 @@ export function renderMail(m: Mail) {
         ${m.paragraphs.map((p) => `<p style="margin:0 0 16px 0;color:#3a4260;">${esc(p)}</p>`).join("\n        ")}
         ${m.bullets?.length ? `<ul style="margin:0 0 16px 0;padding:0 0 0 22px;color:#3a4260;">${m.bullets.map((b) => `<li style="margin:0 0 8px 0;">${esc(b)}</li>`).join("")}</ul>` : ""}
         ${(m.closing ?? []).map((p) => `<p style="margin:0 0 16px 0;color:#3a4260;">${esc(p)}</p>`).join("\n        ")}
+        ${m.signoff ? `<p style="margin:0 0 16px 0;color:#3a4260;">${esc(m.signoff).replace(/\n/g, "<br>")}</p>` : ""}
         <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:24px 0;"><tr>
           <td style="background:${BLUE};border-radius:10px;"><a href="${esc(m.button.href)}" style="display:inline-block;padding:14px 28px;font:600 16px/1 -apple-system,'Segoe UI',Helvetica,Arial,sans-serif;color:#ffffff;text-decoration:none;">${esc(m.button.label)}</a></td>
         </tr></table>
@@ -65,7 +68,7 @@ export function renderMail(m: Mail) {
 </table>
 </body>
 </html>`;
-  const text = [m.heading, "", ...m.paragraphs.flatMap((p) => [p, ""]), ...(m.bullets?.length ? [...m.bullets.map((b) => `- ${b}`), ""] : []), ...(m.closing ?? []).flatMap((p) => [p, ""]), `${m.button.label}: ${m.button.href}`, "", m.note, "", `${BRAND}, ${BUSINESS.address}`, BUSINESS.email, ...(m.unsubscribe ? ["", `Stop these update emails: ${m.unsubscribe}`] : [])].join("\n");
+  const text = [m.heading, "", ...m.paragraphs.flatMap((p) => [p, ""]), ...(m.bullets?.length ? [...m.bullets.map((b) => `- ${b}`), ""] : []), ...(m.closing ?? []).flatMap((p) => [p, ""]), ...(m.signoff ? [m.signoff, ""] : []), `${m.button.label}: ${m.button.href}`, "", m.note, "", `${BRAND}, ${BUSINESS.address}`, BUSINESS.email, ...(m.unsubscribe ? ["", `Stop these update emails: ${m.unsubscribe}`] : [])].join("\n");
   return { html, text };
 }
 
@@ -133,7 +136,7 @@ export function sendReminderEmail(to: string, link: string, streak: number) {
 }
 
 /** What the teacher types into the updates composer. Plain text only. */
-export type UpdateDraft = { subject: string; heading: string; intro: string; bullets: string[]; closing: string; buttonLabel: string };
+export type UpdateDraft = { subject: string; heading: string; intro: string; bullets: string[]; closing: string; signoff: string; buttonLabel: string };
 
 export function updateMail(d: UpdateDraft, href: string, unsubscribe?: string): Mail {
   return {
@@ -142,6 +145,7 @@ export function updateMail(d: UpdateDraft, href: string, unsubscribe?: string): 
     paragraphs: d.intro ? [d.intro] : [],
     bullets: d.bullets,
     closing: d.closing ? [d.closing] : [],
+    signoff: d.signoff || undefined,
     button: { label: d.buttonLabel, href },
     note: `You get this because you have an account on ${BRAND}.`,
     unsubscribe,

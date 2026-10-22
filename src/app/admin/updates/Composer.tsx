@@ -3,7 +3,7 @@
 import { useRef, useState, useTransition } from "react";
 import { countAudience, previewHtml, sendTest, sendToStudents, type SendResult } from "./actions";
 
-export type Template = { subject: string; heading: string; intro: string; bullets: string; closing: string; buttonLabel: string };
+export type Template = { subject: string; heading: string; intro: string; bullets: string; closing: string; signoff: string; buttonLabel: string };
 
 export default function Composer({ template, counts }: { template: Template; counts: { active: number; all: number } }) {
   const form = useRef<HTMLFormElement>(null);
@@ -25,6 +25,7 @@ export default function Composer({ template, counts }: { template: Template; cou
         <label>Opening<textarea name="intro" defaultValue={template.intro} rows={3} maxLength={800} /></label>
         <label>What is new (one per line)<textarea name="bullets" defaultValue={template.bullets} rows={8} maxLength={4000} /></label>
         <label>Closing<textarea name="closing" defaultValue={template.closing} rows={2} maxLength={800} /></label>
+        <label>Sign-off<textarea name="signoff" defaultValue={template.signoff} rows={2} maxLength={200} /></label>
         <label>Button text<input name="buttonLabel" defaultValue={template.buttonLabel} maxLength={40} /></label>
 
         <div className="upd-actions">

@@ -25,6 +25,7 @@ const TEMPLATE: Template = {
     "Light and dark mode: switch with one tap",
 ].join("\n"),
   closing: "This is just the start. More is on the way, and I would love to hear what you want next. Reply to this email with any idea or question.",
+  signoff: "Warmly,\nPritam",
   buttonLabel: "Start writing",
 };
 
