@@ -135,6 +135,18 @@ const SCHEMA = `
       last_reminded text
     );
     ALTER TABLE student_settings ADD COLUMN IF NOT EXISTS show_board boolean NOT NULL DEFAULT true;
+    ALTER TABLE student_settings ADD COLUMN IF NOT EXISTS news boolean NOT NULL DEFAULT true;
+    CREATE TABLE IF NOT EXISTS announcements (
+      id bigserial PRIMARY KEY,
+      subject text NOT NULL,
+      body jsonb NOT NULL,
+      audience text NOT NULL,
+      recipients int NOT NULL DEFAULT 0,
+      sent int NOT NULL DEFAULT 0,
+      failed int NOT NULL DEFAULT 0,
+      sent_by text NOT NULL,
+      sent_at timestamptz NOT NULL DEFAULT now()
+    );
     CREATE TABLE IF NOT EXISTS app_flags (
       key text PRIMARY KEY,
       value text NOT NULL

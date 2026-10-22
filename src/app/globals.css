@@ -1061,3 +1061,17 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
 .steps-pics circle { fill: currentColor; }
 .steps-pics .sp-old { color: var(--ink); opacity: .82; }
 .steps-pics .sp-new { color: var(--primary); }
+
+.adm-head-links { display: flex; gap: 8px; flex-wrap: wrap; }
+.upd { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: start; margin-top: 16px; }
+.upd-form { display: grid; gap: 12px; }
+.upd-form label { display: grid; gap: 4px; font-weight: 600; font-size: 14px; }
+.upd-form input[type="text"], .upd-form input:not([type]), .upd-form textarea { font: inherit; font-weight: 400; padding: 10px 12px; border: 1px solid var(--line, #d9dce8); border-radius: 10px; background: var(--surface, #fff); color: inherit; }
+.upd-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.upd-send { border: 1px solid var(--line, #d9dce8); border-radius: 12px; padding: 14px; display: grid; gap: 8px; }
+.upd-radio { display: flex !important; align-items: center; gap: 8px; font-weight: 400 !important; }
+.upd-ok { color: #1a7f4b; margin: 0; } .upd-bad { color: #b3261e; margin: 0; }
+.upd-preview { position: sticky; top: 16px; }
+.upd-preview iframe { width: 100%; height: 640px; border: 1px solid var(--line, #d9dce8); border-radius: 12px; background: #fff; }
+.upd-history { margin-top: 32px; } .upd-history ul { list-style: none; padding: 0; display: grid; gap: 8px; }
+@media (max-width: 860px) { .upd { grid-template-columns: 1fr; } .upd-preview { position: static; } }

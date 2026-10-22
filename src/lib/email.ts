@@ -12,10 +12,16 @@ type Mail = {
   button: { label: string; href: string };
   /** Small print under the button. */
   note: string;
+  /** A list shown after the paragraphs, for example a list of updates. */
+  bullets?: string[];
+  /** Paragraphs shown after the list. */
+  closing?: string[];
+  /** A link that lets the person stop this kind of email. */
+  unsubscribe?: string;
 };
 
 /** Table-based, inline-styled HTML so it renders the same in Gmail, Outlook and Apple Mail. */
-function render(m: Mail) {
+export function renderMail(m: Mail) {
   const origin = new URL(m.button.href).origin;
   const logo = `${origin}/logo-email.png`;
   const html = `<!doctype html>
@@ -40,6 +46,8 @@ function render(m: Mail) {
       <tr><td style="background:#ffffff;border:1px solid #e3e7f1;border-radius:16px;padding:36px 32px;font:400 16px/1.6 -apple-system,'Segoe UI',Helvetica,Arial,sans-serif;color:#111830;">
         <h1 style="margin:0 0 16px 0;font:700 24px/1.3 -apple-system,'Segoe UI',Helvetica,Arial,sans-serif;color:#111830;">${esc(m.heading)}</h1>
         ${m.paragraphs.map((p) => `<p style="margin:0 0 16px 0;color:#3a4260;">${esc(p)}</p>`).join("\n        ")}
+        ${m.bullets?.length ? `<ul style="margin:0 0 16px 0;padding:0 0 0 22px;color:#3a4260;">${m.bullets.map((b) => `<li style="margin:0 0 8px 0;">${esc(b)}</li>`).join("")}</ul>` : ""}
+        ${(m.closing ?? []).map((p) => `<p style="margin:0 0 16px 0;color:#3a4260;">${esc(p)}</p>`).join("\n        ")}
         <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:24px 0;"><tr>
           <td style="background:${BLUE};border-radius:10px;"><a href="${esc(m.button.href)}" style="display:inline-block;padding:14px 28px;font:600 16px/1 -apple-system,'Segoe UI',Helvetica,Arial,sans-serif;color:#ffffff;text-decoration:none;">${esc(m.button.label)}</a></td>
         </tr></table>
@@ -50,14 +58,14 @@ function render(m: Mail) {
         ${esc(BRAND)} &middot; ${esc(BUSINESS.address)}<br>
         <a href="mailto:${esc(BUSINESS.email)}" style="color:#8a92ad;">${esc(BUSINESS.email)}</a> &middot;
         <a href="${origin}/terms" style="color:#8a92ad;">Terms</a> &middot;
-        <a href="${origin}/privacy" style="color:#8a92ad;">Privacy</a>
+        <a href="${origin}/privacy" style="color:#8a92ad;">Privacy</a>${m.unsubscribe ? `<br><a href="${esc(m.unsubscribe)}" style="color:#8a92ad;">Stop these update emails</a>` : ""}
       </td></tr>
     </table>
   </td></tr>
 </table>
 </body>
 </html>`;
-  const text = [m.heading, "", ...m.paragraphs.flatMap((p) => [p, ""]), `${m.button.label}: ${m.button.href}`, "", m.note, "", `${BRAND}, ${BUSINESS.address}`, BUSINESS.email].join("\n");
+  const text = [m.heading, "", ...m.paragraphs.flatMap((p) => [p, ""]), ...(m.bullets?.length ? [...m.bullets.map((b) => `- ${b}`), ""] : []), ...(m.closing ?? []).flatMap((p) => [p, ""]), `${m.button.label}: ${m.button.href}`, "", m.note, "", `${BRAND}, ${BUSINESS.address}`, BUSINESS.email, ...(m.unsubscribe ? ["", `Stop these update emails: ${m.unsubscribe}`] : [])].join("\n");
   return { html, text };
 }
 
@@ -67,7 +75,7 @@ async function send(to: string, subject: string, mail: Mail) {
     console.log(`[${subject} for ${to}] ${mail.button.href}`);
     return;
   }
-  const { html, text } = render(mail);
+  const { html, text } = renderMail(mail);
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
@@ -122,4 +130,36 @@ export function sendReminderEmail(to: string, link: string, streak: number) {
     button: { label: "Practise now", href: link },
     note: "You get this because you turned on reminders. You can switch them off any time on the My progress page.",
   });
+}
+
+/** What the teacher types into the updates composer. Plain text only. */
+export type UpdateDraft = { subject: string; heading: string; intro: string; bullets: string[]; closing: string; buttonLabel: string };
+
+export function updateMail(d: UpdateDraft, href: string, unsubscribe?: string): Mail {
+  return {
+    preheader: d.bullets[0] ?? d.intro,
+    heading: d.heading,
+    paragraphs: d.intro ? [d.intro] : [],
+    bullets: d.bullets,
+    closing: d.closing ? [d.closing] : [],
+    button: { label: d.buttonLabel, href },
+    note: `You get this because you have an account on ${BRAND}.`,
+    unsubscribe,
+  };
+}
+
+/** Sends many different emails at once through Resend's batch endpoint (up to 100 per request). Returns how many were accepted. */
+export async function sendBatch(items: { to: string; subject: string; mail: Mail; unsubscribe?: string }[]): Promise<number> {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) {
+    console.log(`[updates] no RESEND_API_KEY: would send ${items.length} emails: ${items.map((i) => i.to).join(", ")}`);
+    return items.length;
+  }
+  const body = items.map((i) => {
+    const { html, text } = renderMail(i.mail);
+    return { from: process.env.EMAIL_FROM, to: i.to, subject: i.subject, html, text, ...(i.unsubscribe ? { headers: { "List-Unsubscribe": `<${i.unsubscribe}>` } } : {}) };
+  });
+  const res = await fetch("https://api.resend.com/emails/batch", { method: "POST", headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  if (!res.ok) throw new Error(`Resend batch failed: ${res.status} ${await res.text()}`);
+  return items.length;
 }

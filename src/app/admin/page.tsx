@@ -65,7 +65,10 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
           <p className="eyebrow">Teacher area</p>
           <h1>Admin</h1>
         </div>
-        <Link href="/learn" className="navbtn"><Icon name="prev" size={16} />Back to lessons</Link>
+        <div className="adm-head-links">
+          <Link href="/admin/updates" className="navbtn">Send updates</Link>
+          <Link href="/learn" className="navbtn"><Icon name="prev" size={16} />Back to lessons</Link>
+        </div>
       </header>
 
       <nav className="adm-tabs" aria-label="Admin sections">
