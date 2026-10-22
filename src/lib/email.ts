@@ -23,6 +23,9 @@ type Mail = {
 };
 
 /** Table-based, inline-styled HTML so it renders the same in Gmail, Outlook and Apple Mail. */
+// Replies go to the teacher's own inbox, because the sending address has no mailbox.
+const REPLY_TO = process.env.EMAIL_REPLY_TO || BUSINESS.email;
+
 export function renderMail(m: Mail) {
   const origin = new URL(m.button.href).origin;
   const logo = `${origin}/logo-email.png`;
@@ -82,7 +85,7 @@ async function send(to: string, subject: string, mail: Mail) {
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ from: process.env.EMAIL_FROM, to, subject, html, text }),
+    body: JSON.stringify({ from: process.env.EMAIL_FROM, reply_to: REPLY_TO, to, subject, html, text }),
   });
   if (!res.ok) throw new Error(`Resend failed: ${res.status} ${await res.text()}`);
 }
@@ -161,7 +164,7 @@ export async function sendBatch(items: { to: string; subject: string; mail: Mail
   }
   const body = items.map((i) => {
     const { html, text } = renderMail(i.mail);
-    return { from: process.env.EMAIL_FROM, to: i.to, subject: i.subject, html, text, ...(i.unsubscribe ? { headers: { "List-Unsubscribe": `<${i.unsubscribe}>` } } : {}) };
+    return { from: process.env.EMAIL_FROM, reply_to: REPLY_TO, to: i.to, subject: i.subject, html, text, ...(i.unsubscribe ? { headers: { "List-Unsubscribe": `<${i.unsubscribe}>` } } : {}) };
   });
   const res = await fetch("https://api.resend.com/emails/batch", { method: "POST", headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" }, body: JSON.stringify(body) });
   if (!res.ok) throw new Error(`Resend batch failed: ${res.status} ${await res.text()}`);
