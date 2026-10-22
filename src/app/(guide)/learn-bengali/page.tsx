@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "../../JsonLd";
-import { OG_IMAGES, PREPLY_URL, SITE_NAME, SITE_URL } from "@/lib/site";
+import { OG_IMAGES, PREPLY_URL, SITE_NAME, SITE_URL, TWITTER_SITE } from "@/lib/site";
 import { Crumbs, GuideCta } from "../GuideBits";
 
 const TITLE = "How to Learn Bengali from Zero";
@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   title: { absolute: `${TITLE} | ${SITE_NAME}` },
   description: DESC,
   alternates: { canonical: "/learn-bengali" },
-  openGraph: { type: "article", url: "/learn-bengali", title: TITLE, description: SHORT, images: OG_IMAGES },
-  twitter: { card: "summary_large_image", title: TITLE, description: SHORT, images: ["/twitter-image"] },
+  openGraph: { type: "article", locale: "en_US", url: "/learn-bengali", title: TITLE, description: SHORT, images: OG_IMAGES },
+  twitter: { card: "summary_large_image", site: TWITTER_SITE, title: TITLE, description: SHORT, images: ["/twitter-image"] },
 };
 
 const FAQ = [

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BIG_NUMBERS, NUMBER_CHART, PRICE_PHRASES } from "@/data/numbers";
-import { OG_IMAGES, SITE_NAME } from "@/lib/site";
+import { OG_IMAGES, SITE_NAME, TWITTER_SITE } from "@/lib/site";
 import { Crumbs, GuideCta } from "../GuideBits";
 
 const TITLE = "Bengali Numbers 1 to 100";
@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   title: { absolute: `${TITLE} | ${SITE_NAME}` },
   description: DESC,
   alternates: { canonical: "/bengali-numbers" },
-  openGraph: { type: "article", url: "/bengali-numbers", title: TITLE, description: SHORT, images: OG_IMAGES },
-  twitter: { card: "summary_large_image", title: TITLE, description: SHORT, images: ["/twitter-image"] },
+  openGraph: { type: "article", locale: "en_US", url: "/bengali-numbers", title: TITLE, description: SHORT, images: OG_IMAGES },
+  twitter: { card: "summary_large_image", site: TWITTER_SITE, title: TITLE, description: SHORT, images: ["/twitter-image"] },
 };
 
 export default function BengaliNumbers() {

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GROUPS, LETTERS } from "@/data/letters";
-import { OG_IMAGES, SITE_NAME } from "@/lib/site";
+import { OG_IMAGES, SITE_NAME, TWITTER_SITE } from "@/lib/site";
 import { Crumbs, GuideCta } from "../GuideBits";
 
 const TITLE = "Bengali Alphabet with Pronunciation";
@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   title: { absolute: `${TITLE} | ${SITE_NAME}` },
   description: DESC,
   alternates: { canonical: "/bengali-alphabet" },
-  openGraph: { type: "article", url: "/bengali-alphabet", title: TITLE, description: SHORT, images: OG_IMAGES },
-  twitter: { card: "summary_large_image", title: TITLE, description: SHORT, images: ["/twitter-image"] },
+  openGraph: { type: "article", locale: "en_US", url: "/bengali-alphabet", title: TITLE, description: SHORT, images: OG_IMAGES },
+  twitter: { card: "summary_large_image", site: TWITTER_SITE, title: TITLE, description: SHORT, images: ["/twitter-image"] },
 };
 
 const KAR = [["া", "kaa", "কা"], ["ি", "ki", "কি"], ["ী", "kee", "কী"], ["ু", "ku", "কু"], ["ূ", "koo", "কূ"], ["ে", "ke", "কে"], ["ৈ", "koi", "কৈ"], ["ো", "ko", "কো"], ["ৌ", "kou", "কৌ"]];

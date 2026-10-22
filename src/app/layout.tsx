@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Newsreader, Noto_Sans_Bengali, Noto_Serif_Bengali, Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, SITE_TITLE, SITE_URL, SOCIAL_DESCRIPTION } from "@/lib/site";
+import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, SITE_TITLE, SITE_URL, SOCIAL_DESCRIPTION, TWITTER_SITE } from "@/lib/site";
 import GoogleAnalytics from "./GoogleAnalytics";
 import "./globals.css";
 
@@ -22,7 +22,12 @@ export const metadata: Metadata = {
   // Search Console and Bing Webmaster Tools verification: set these two variables in Vercel, no code change needed.
   verification: { google: process.env.GOOGLE_SITE_VERIFICATION || undefined, other: process.env.BING_SITE_VERIFICATION ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION } : undefined },
   openGraph: { siteName: SITE_NAME, type: "website", url: "/", title: SITE_TITLE, description: SOCIAL_DESCRIPTION, locale: "en_US" },
-  twitter: { card: "summary_large_image", title: SITE_TITLE, description: SOCIAL_DESCRIPTION },
+  twitter: { card: "summary_large_image", site: TWITTER_SITE, title: SITE_TITLE, description: SOCIAL_DESCRIPTION },
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }, { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" }],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 };
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: [{ media: "(prefers-color-scheme: light)", color: "#f3f5fa" }, { media: "(prefers-color-scheme: dark)", color: "#0a0e1f" }] };
 

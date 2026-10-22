@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "./JsonLd";
 import { inter } from "./inter";
-import { OG_IMAGES, PREPLY_URL, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL, SOCIAL_DESCRIPTION } from "@/lib/site";
+import { OG_IMAGES, PREPLY_URL, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL, SOCIAL_DESCRIPTION, TWITTER_SITE } from "@/lib/site";
 import "./landing.css";
 import type { CSSProperties } from "react";
 import Image from "next/image";
@@ -37,7 +37,8 @@ export const metadata: Metadata = {
   title: { absolute: SITE_TITLE },
   description: SITE_DESCRIPTION,
   alternates: { canonical: "/" },
-  openGraph: { type: "website", url: "/", siteName: SITE_NAME, title: SITE_TITLE, description: SOCIAL_DESCRIPTION, images: OG_IMAGES },
+  openGraph: { type: "website", locale: "en_US", url: "/", siteName: SITE_NAME, title: SITE_TITLE, description: SOCIAL_DESCRIPTION, images: OG_IMAGES },
+  twitter: { card: "summary_large_image", site: TWITTER_SITE, title: SITE_TITLE, description: SOCIAL_DESCRIPTION, images: ["/twitter-image"] },
 };
 
 const VOCAB_WORDS = VOCAB.reduce((n, t) => n + t.sections.reduce((m, s) => m + s.words.length, 0), 0);
@@ -100,7 +101,6 @@ export default async function Home() {
   const hasProof = proofQuotes.length > 0 || TEACHER.stats.length > 0;
   const hasAbout = TEACHER.story.length > 0;
 
-  const refundAnswer = `Not for you? Email ${BUSINESS.email} within ${BUSINESS.refundDays} days of paying for a full refund. If anything goes wrong with a payment, write to us and we will sort it out.`;
   const org = { "@type": "EducationalOrganization", "@id": `${SITE_URL}/#org`, name: SITE_NAME, url: SITE_URL, logo: `${SITE_URL}/logo.png`, email: BUSINESS.email, founder: { "@id": `${SITE_URL}/#pritam` }, sameAs: [PREPLY_URL], address: { "@type": "PostalAddress", addressLocality: "Kolkata", addressRegion: "West Bengal", addressCountry: "IN" } };
   const graph = {
     "@context": "https://schema.org",
@@ -115,7 +115,6 @@ export default async function Home() {
         hasCourseInstance: { "@type": "CourseInstance", courseMode: "online", courseWorkload: "PT10M", instructor: { "@id": `${SITE_URL}/#pritam` } },
         offers: { "@type": "Offer", category: "Paid", price: usd, priceCurrency: "USD", url: `${SITE_URL}/buy`, availability: "https://schema.org/InStock" },
       },
-      { "@type": "FAQPage", mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a === "REFUND" ? refundAnswer : f.a } })) },
     ],
   };
 
