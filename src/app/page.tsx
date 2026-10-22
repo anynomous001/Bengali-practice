@@ -291,7 +291,6 @@ export default async function Home() {
               <div>
                 <h2>Between our lessons, my students had <em>nowhere to practice.</em></h2>
                 <p className="cr-word"><span lang="bn">অভ্যাস</span><span><i>obbhash</i><small>practice; the daily habit of it</small></span></p>
-                {TEACHER.photo && <Image src={TEACHER.photo} alt={`${TEACHER.name}, your Bengali teacher`} width={480} height={560} className="cr-photo" />}
               </div>
               <div className="cr-story">
                 {TEACHER.story.map((p) => <p key={p}>{p}</p>)}
@@ -314,32 +313,19 @@ export default async function Home() {
 
         <section className="cr-sec cr-wrap" id="live">
           <div className="cr-head" data-reveal>
-            <h2>Two ways to learn with me.</h2>
-            <p>Practice on your own here, or learn live with me on Preply. Many students do both.</p>
+            <h2>The complete way to learn Bengali.</h2>
+            <p>Learn it live in class with me, then practice it here between lessons. The two work together, and you move faster than with either one alone.</p>
           </div>
           <div className="cr-ways">
-            <article className="cr-panel cr-way" data-tint="about" data-reveal>
-              <p className="cr-tag"><span lang="bn">নিজে</span> <i>nije</i> · by yourself</p>
-              <h3>On your own, on this platform</h3>
-              <p>For learning at your own pace, any time of day, between or instead of live lessons.</p>
-              <ul className="cr-ticks">
-                <li>Ten minutes a day is enough</li>
-                <li>Five courses, a path for your goal, and audio for every word</li>
-                <li>One price for 12 months, nothing renews</li>
-              </ul>
-              <a className="cr-btn" href="#pricing">See pricing</a>
-            </article>
             <article className="cr-way cr-way-live" data-reveal>
               <div className="cr-way-top">
-                {TEACHER.photo
-                  ? <Image src={TEACHER.photo} alt={`${TEACHER.name}, your Bengali teacher`} width={120} height={120} className="cr-way-photo" />
-                  : <span className="cr-way-bn" lang="bn" aria-hidden="true">{TEACHER.nameBn}</span>}
+                <Image src={TEACHER.photo ?? "/landing/pritam.jpg"} alt={`${TEACHER.name}, your Bengali teacher`} width={160} height={160} className="cr-way-photo" />
                 <div>
-                  <p className="cr-tag"><span lang="bn">সামনাসামনি</span> <i>samnasamni</i> · face to face</p>
-                  <h3>Live with me, one to one</h3>
+                  <p className="cr-tag"><span lang="bn">ক্লাস</span> <i>klas</i> · class, with me on Preply</p>
+                  <h3>Learn it live with me</h3>
                 </div>
               </div>
-              <p>If you want a real, hands-on experience, book me on Preply. Lessons are conversation first from the very first one. I explain in English or Hindi and move into Bengali as you grow, and I tailor each lesson to your goal: family, heritage, travel, business or reading in the original.</p>
+              <p>If you want a real, hands-on experience, book me on Preply. Lessons are one to one and conversation first from the very first one. I explain in English or Hindi and move into Bengali as you grow, and I tailor each lesson to your goal: family, heritage, travel, business or reading in the original.</p>
               <ul className="cr-facts">
                 <li><b>5.0</b> from 3 reviews</li>
                 <li><b>55</b> lessons taught</li>
@@ -356,6 +342,20 @@ export default async function Home() {
               </figure>
               <a className="cr-btn on-dark" href={TEACHER.liveLessonsUrl} target="_blank" rel="noopener">Book me on Preply</a>
               <p className="cr-fine-dark">Lessons start at $8 for 50 minutes. See my calendar and current rates on my Preply profile.</p>
+            </article>
+            <span className="cr-plus" aria-hidden="true">+</span>
+            <article className="cr-panel cr-way" data-tint="about" data-reveal>
+              <p className="cr-tag"><span lang="bn">অভ্যাস</span> <i>obbhash</i> · practice, on this platform</p>
+              <h3>Practice it here, every day</h3>
+              <p>A lesson is only an hour a week. This is where what we cover in class turns into something you can read, say and remember, in ten minutes a day.</p>
+              <ul className="cr-ticks">
+                <li>Flashcards that bring back the words you are about to forget</li>
+                <li>Audio, role plays and a writing pad, to say it and write it</li>
+                <li>A path built around your goal, with timed exams to check yourself</li>
+                <li>One price for 12 months, nothing renews</li>
+              </ul>
+              <a className="cr-btn" href="#pricing">See pricing</a>
+              <p className="cr-fine">No lessons booked yet? The platform also works on its own, at your own pace.</p>
             </article>
           </div>
         </section>

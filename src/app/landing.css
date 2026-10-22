@@ -243,11 +243,13 @@ html.motion-ok .cr [data-reveal] { transition: opacity .6s ease, transform .6s e
 @media (prefers-reduced-motion: reduce) { .cr [data-reveal], .cr-btn { transition: none !important; animation: none !important; } }
 
 /* two ways to learn: this platform, or live on Preply */
-.cr-ways { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: var(--cr-gap); align-items: stretch; }
+.cr-ways { display: grid; grid-template-columns: minmax(0, 1.1fr) auto minmax(0, .9fr); gap: var(--cr-gap); align-items: stretch; }
+.cr-plus { align-self: center; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--surface); border: 1px solid var(--line-2); font: 300 2rem/1 var(--f-inter), var(--font-ui); color: var(--primary); }
+.cr-way .cr-fine { color: var(--ink-2); font-size: .9rem; }
 .cr-way { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
 .cr-way > p:not(.cr-tag) { color: var(--ink-2); }
 .cr-way .cr-ticks { width: 100%; margin-bottom: 8px; }
-.cr-way .cr-btn { margin-top: auto; }
+.cr-way .cr-btn { margin-top: auto; } .cr-way .cr-ticks li { font-size: .98rem; }
 .cr-way-live { padding: clamp(26px, 4.4vw, 56px); border-radius: var(--cr-r); background: var(--night); color: var(--night-ink); }
 .cr-way-live > p:not(.cr-tag):not(.cr-fine-dark) { color: var(--night-mute); }
 .cr-way-live .cr-tag { color: var(--night-mute); margin-bottom: 8px; } .cr-way-live .cr-tag [lang="bn"] { color: var(--chalk); }
@@ -260,5 +262,5 @@ html.motion-ok .cr [data-reveal] { transition: opacity .6s ease, transform .6s e
 .cr-say { margin: 0; padding: 16px 18px; border-radius: 18px; background: rgba(255,255,255,.05); }
 .cr-say blockquote { margin: 0; font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; line-height: 1.35; color: var(--night-ink); }
 .cr-say figcaption { margin-top: 8px; font-size: .85rem; color: var(--night-mute); }
-@media (max-width: 1000px) { .cr-ways { grid-template-columns: 1fr; } }
+@media (max-width: 1000px) { .cr-ways { grid-template-columns: 1fr; } .cr-plus { justify-self: center; margin: -4px 0; } }
 @media (max-width: 700px) { .cr-way .cr-btn { width: 100%; } }
