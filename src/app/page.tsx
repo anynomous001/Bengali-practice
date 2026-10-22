@@ -25,6 +25,10 @@ import { SCENARIOS } from "@/data/roleplay";
 import { CLASSWORK } from "@/data/classwork";
 import { EXAMS } from "@/data/exams";
 import { GOALS } from "@/data/paths";
+import { STORIES } from "@/data/stories";
+import { DEV_STORIES } from "@/data/devotional-stories";
+import { DEV_TOPICS } from "@/data/devotional";
+import { TOPICS } from "@/data/impromptu";
 
 const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--f-inter" });
 
@@ -32,13 +36,15 @@ export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 const VOCAB_WORDS = VOCAB.reduce((n, t) => n + t.sections.reduce((m, s) => m + s.words.length, 0), 0);
 const VOCAB_ROUND = Math.round(VOCAB_WORDS / 100) * 100;
+const IMPROMPTU_COUNT = Object.values(TOPICS).flat().length;
 const EXAM_MINUTES = EXAMS.map((e) => e.minutes);
 
 const COURSES = [
-  { seg: "reading", icon: "reading", bn: "পড়া", ro: "pora", title: "Reading", outcome: "Read any Bengali word aloud.", body: "The alphabet and vowel signs, then short fables read in three layers: Bengali, romanized, English." },
-  { seg: "speaking", icon: "speaking", bn: "বলা", ro: "bola", title: "Speaking", outcome: "Hold a simple conversation.", body: `Hear it, then say it: everyday phrases, ${SCENARIOS.length} role plays and impromptu speaking against a timer.` },
+  { seg: "reading", icon: "reading", bn: "পড়া", ro: "pora", title: "Reading", outcome: "Read any Bengali word aloud.", body: `The alphabet, vowel signs, numbers and money, then ${STORIES.length} short fables read in three layers: Bengali, romanized, English.` },
+  { seg: "speaking", icon: "speaking", bn: "বলা", ro: "bola", title: "Speaking", outcome: "Hold a simple conversation.", body: `Hear it, then say it: letter sounds, everyday phrases, ${SCENARIOS.length} role plays and impromptu speaking against a timer.` },
   { seg: "vocabulary", icon: "vocabulary", bn: "শব্দ", ro: "shobdo", title: "Vocabulary", outcome: `Know about ${VOCAB_ROUND} everyday words.`, body: `${VOCAB.length} topics, each with audio and spaced-repetition flashcards.` },
-  { seg: "grammar", icon: "grammar", bn: "ব্যাকরণ", ro: "bakoron", title: "Grammar", outcome: "Build sentences of your own.", body: `${GRAMMAR.length} topics, each explained in plain English and practiced until it sticks.` },
+  { seg: "grammar", icon: "grammar", bn: "ব্যাকরণ", ro: "bakoron", title: "Grammar", outcome: "Build sentences of your own.", body: `${GRAMMAR.length} topics, each explained in plain English and practiced until it sticks, with a tense workout and translation drills.` },
+  { seg: "writing", icon: "writing", bn: "লেখা", ro: "lekha", title: "Writing", outcome: "Write the script by hand.", body: "Trace letters, vowel signs and numerals on the screen with your finger or a mouse, then build words and sentences piece by piece." },
 ] as const;
 
 const AUDIENCE: { kind: Quote["kind"]; bn: string; ro: string; gloss: string; tag: string; lead: string; body: string }[] = [
@@ -60,6 +66,8 @@ const FAQ = [
   { q: "Is this live tutoring?", a: "No. It is self-paced practice you can use any time, on your own. Live lessons with me are separate and optional." },
   { q: "How much time does it take?", a: "Lessons are short. Ten minutes a day is enough to make steady progress." },
   { q: "Can I turn the romanized English off?", a: "Yes, at any time. Most students keep it on for the first weeks and switch it off once they can read." },
+  { q: "Can I practice writing?", a: "Yes. The Writing course has you trace letters, vowel signs and numerals on the screen with your finger or a mouse, then build words and sentences from their pieces." },
+  { q: "What is My path?", a: "A plan built from the lessons already in the app. You pick a goal, such as talking with family, devotional reading, work, travel or reading Bengali, and it lines up the lessons in order with the time each needs. If you already read the script, you can skip that stage." },
   { q: "Is there audio?", a: "Yes, for every letter, number and vocabulary word, so you always know how it should sound." },
   { q: "What is the devotional track?", a: "A separate set of readings: mantras, bhajans and sādhu-saṅga passages, to read in the original Bengali." },
   { q: "Who writes the lessons?", a: "I do, from the lessons and worksheets I use with my online students." },
@@ -95,8 +103,11 @@ export default async function Home() {
     { id: "exam", bn: "পরীক্ষা", ro: "porikkha", gloss: "exam", title: "Timed exams", text: `Test yourself against the clock, the way a class would. ${EXAMS.length} exams, ${Math.min(...EXAM_MINUTES)} to ${Math.max(...EXAM_MINUTES)} minutes each: grammar, vocabulary, and alphabet and numbers.`, alt: "A timed exam in progress" },
   ];
   const alsoIn = [
+    { title: "Word finder", bn: "খোঁজো", ro: "khonjo", gloss: "look it up", text: `Type English, Bengali or romanized and find any of the ${VOCAB_ROUND} words, with audio.` },
+    { title: "Tense workout", bn: "কাল", ro: "kal", gloss: "tense", text: "Rounds on tense cues, time words and negatives, to check and to write." },
+    { title: "Numbers and money", bn: "টাকা", ro: "taka", gloss: "money", text: "Read and hear numerals and prices, from one to the big numbers." },
     { title: "Quick translation", bn: "অনুবাদ", ro: "onubad", text: "Short English sentences to turn into Bengali, fast." },
-    { title: "Impromptu speaking", bn: "বলো তো", ro: "bolo to", gloss: "go on, say it", text: "A prompt and a timer. Keep talking until it runs out." },
+    { title: "Impromptu speaking", bn: "বলো তো", ro: "bolo to", gloss: "go on, say it", text: `${IMPROMPTU_COUNT} prompts, casual, professional and open. Keep talking until the timer runs out.` },
     { title: "Story relay", bn: "গল্প", ro: "golpo", gloss: "story", text: "A story built one sentence at a time." },
     { title: `${CLASSWORK.length} class worksheet sets`, bn: "খাতা", ro: "khata", gloss: "notebook", text: "The same worksheet sets I use in class." },
   ];
@@ -150,15 +161,15 @@ export default async function Home() {
 
         <section className="cr-sec cr-wrap" id="learn">
           <div className="cr-head" data-reveal>
-            <h2>Four courses, in the order I teach them.</h2>
+            <h2>Five courses, in the order I teach them.</h2>
             <p>Each one builds on the last. Reading comes first, because everything else is easier once the letters are yours.</p>
           </div>
           <div className="cr-courses">
             {COURSES.map((f, i) => (
-              <article key={f.title} className="cr-course" data-seg={f.seg} data-reveal>
+              <article key={f.title} className={"cr-course" + (f.seg === "writing" ? " wide" : "")} data-seg={f.seg} data-reveal>
                 <div className="cr-course-top">
                   <IconTile name={f.icon} size={36} />
-                  <span className="cr-course-n">Course {["one", "two", "three", "four"][i]}</span>
+                  <span className="cr-course-n">Course {["one", "two", "three", "four", "five"][i]}</span>
                 </div>
                 <p className="cr-bnword" lang="bn">{f.bn}</p>
                 <p className="cr-ro"><i>{f.ro}</i></p>
@@ -166,10 +177,11 @@ export default async function Home() {
                 <p className="cr-outcome">{f.outcome}</p>
                 <p>{f.body}</p>
                 {f.seg === "reading" && <div className="cr-vowels"><VowelStrip /></div>}
+                {f.seg === "writing" && <p className="cr-bigletters" lang="bn" aria-hidden="true"><span>ক</span><span>কি</span><span>৫</span><span>আমি</span></p>}
               </article>
             ))}
           </div>
-          <p className="cr-note"><span lang="bn">ভক্তি</span> <i>bhokti</i> · devotion. Alongside the four courses, a separate <b>devotional track</b>: mantras, bhajans and sādhu-saṅga passages, set for reading in the original once you know the letters.</p>
+          <p className="cr-note"><span lang="bn">ভক্তি</span> <i>bhokti</i> · devotion. Alongside the five courses, a separate <b>devotional track</b>: {DEV_TOPICS.length} topics and {DEV_STORIES.length} stories, with mantras, bhajans and sādhu-saṅga passages, set for reading in the original once you know the letters.</p>
         </section>
 
         <section className="cr-sec cr-wrap" id="practice">
@@ -201,11 +213,11 @@ export default async function Home() {
               <p>Learning for family, for devotion, for work or for a trip? Choose a goal and My path lines up the lessons that matter for it, in order, with a line on why each one is there. Already read the script? Skip that stage.</p>
               <ul className="cr-goals">{GOALS.map((g) => <li key={g.id}>{g.title}</li>)}</ul>
             </article>
-            <article className="cr-panel" data-tint="writing" data-reveal>
-              <p className="cr-tag"><span lang="bn">লেখা</span> <i>lekha</i> · writing</p>
-              <h3>Write the letters yourself.</h3>
-              <p>Trace each letter, vowel sign and numeral on the screen with your finger or a mouse, until the shapes feel familiar. Reading gets easier once your hand knows the letters too.</p>
-              <p className="cr-bigletters" lang="bn" aria-hidden="true"><span>ক</span><span>কি</span><span>৫</span></p>
+            <article className="cr-panel" data-tint="progress" data-reveal>
+              <p className="cr-tag"><span lang="bn">অগ্রগতি</span> <i>ogrogoti</i> · progress</p>
+              <h3>See yourself getting better.</h3>
+              <p>A daily goal and a streak keep the habit going. Your progress page shows the last 17 weeks of practice and your milestones, and a quiet class leaderboard shows how you compare. Bring a friend with your referral link and add 3 months to your plan.</p>
+              <ul className="cr-goals"><li>Daily goal</li><li>Streak</li><li>17-week calendar</li><li>Milestones</li><li>Class leaderboard</li><li>Refer a friend</li></ul>
             </article>
           </div>
 
@@ -314,8 +326,8 @@ export default async function Home() {
             <div className="cr-price-light">
               <h3>What&apos;s included</h3>
               <ul className="cr-ticks">
-                <li>All four courses: Reading, Speaking, Vocabulary, Grammar</li>
-                <li>Writing practice and My path, a plan for your goal</li>
+                <li>All five courses: Reading, Speaking, Vocabulary, Grammar, Writing</li>
+                <li>My path, a lesson plan for your goal</li>
                 <li>The devotional track</li>
                 <li>Audio for every letter, number and vocabulary word</li>
                 <li>Flashcards, role plays, worksheets and timed exams</li>

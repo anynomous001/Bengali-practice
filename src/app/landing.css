@@ -81,13 +81,15 @@
 .cr-course h3 { margin-top: 8px; }
 .cr-outcome { font-weight: 600; font-size: 1.1rem; }
 .cr-course p:not(.cr-bnword):not(.cr-ro):not(.cr-outcome) { color: var(--ink-2); }
+.cr-course.wide { grid-column: 1 / -1; }
+.cr-course .cr-bigletters { margin-top: 12px; }
 .cr-vowels { margin-top: 12px; padding: 14px 16px; border-radius: 18px; background: var(--surface); display: inline-block; align-self: flex-start; }
 .cr-note { max-width: 760px; margin: 28px auto 0; text-align: center; color: var(--ink-2); }
 
 /* panels */
 .cr-panel { --t: var(--primary); padding: clamp(26px, 4.4vw, 56px); border-radius: var(--cr-r); background: color-mix(in srgb, var(--t) 11%, var(--surface)); border: 1px solid color-mix(in srgb, var(--t) 16%, transparent); }
 .cr-panel[data-tint="flashcard"] { --t: var(--vocab); } .cr-panel[data-tint="roleplay"] { --t: var(--speak); } .cr-panel[data-tint="grammar"] { --t: var(--gram); }
-.cr-panel[data-tint="exam"], .cr-panel[data-tint="devotee"] { --t: var(--gold); } .cr-panel[data-tint="writing"] { --t: var(--write); } .cr-panel[data-tint="path"] { --t: var(--alta); }
+.cr-panel[data-tint="exam"], .cr-panel[data-tint="devotee"] { --t: var(--gold); } .cr-panel[data-tint="writing"] { --t: var(--write); } .cr-panel[data-tint="path"] { --t: var(--alta); } .cr-panel[data-tint="progress"] { --t: var(--ok); }
 .cr-panel[data-tint="heritage"] { --t: var(--read); } .cr-panel[data-tint="partner"] { --t: var(--gram); }
 .cr-stack { display: grid; gap: var(--cr-gap); }
 .cr-tag { font-size: .85rem; font-weight: 500; color: var(--ink-2); margin-bottom: 14px; }
