@@ -1,3 +1,4 @@
+import SessionHint from "../SessionHint";
 import type { Metadata } from "next";
 import Logo from "../Logo";
 import { cookies } from "next/headers";
@@ -26,6 +27,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
   const theme = t === "light" || t === "dark" ? t : "system";
   return (
     <RomanProvider initial={roman} initialEnglish={english}>
+      <SessionHint mode="set" />
       <TzSync />
       <div className="app" data-english={english ? "on" : "off"}>
         <aside className="side">

@@ -1,3 +1,4 @@
+import SessionHint from "../SessionHint";
 import type { Metadata } from "next";
 import AuthFrame from "../AuthFrame";
 import LoginForm from "./LoginForm";
@@ -8,6 +9,7 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
   const { error } = await searchParams;
   return (
     <AuthFrame>
+      <SessionHint mode="clear" />
       <p className="eyebrow">Student sign in</p>
       <h1>Welcome back</h1>
       {error && <p className="msg bad">That sign-in link has expired or was already used. Request a new one.</p>}

@@ -87,6 +87,7 @@ export async function startSession(email: string) {
 
 export async function endSession() {
   (await cookies()).delete(COOKIE);
+  (await cookies()).delete("bp_in");
 }
 
 export type User = { email: string; isAdmin: boolean; hasAccess: boolean; expiresAt: Date | null };

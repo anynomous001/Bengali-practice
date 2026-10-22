@@ -18,6 +18,7 @@ import PricingSeen from "./PricingSeen";
 import LandingMotion from "./LandingMotion";
 import ScrollFx from "./ScrollFx";
 import ThemeSwitch from "./ThemeSwitch";
+import { REDIRECT_IF_SIGNED_IN } from "./SessionHint";
 import AssembleSentence from "./AssembleSentence";
 import VowelStrip from "./VowelStrip";
 import { BUSINESS } from "@/data/business";
@@ -90,7 +91,7 @@ const FAQ = [
   { q: "Who is behind this?", a: `I am Pritam, an online Bengali teacher. I teach one to one, mostly learners in the US, and I built this because my students needed somewhere to practice between lessons. You can write to ${BUSINESS.email} with any question.` },
 ];
 
-// Built once and refreshed every six hours (the rupee price follows the exchange rate). Signed-in visitors are sent on by src/proxy.ts.
+// Built once and refreshed every six hours (the rupee price follows the exchange rate). Signed-in visitors are sent on by a tiny script (see SessionHint.tsx).
 export const revalidate = 21600;
 
 export default async function Home() {
@@ -140,6 +141,7 @@ export default async function Home() {
 
   return (
     <div className={`cr ${inter.variable}`}>
+      <script dangerouslySetInnerHTML={{ __html: REDIRECT_IF_SIGNED_IN }} />
       <JsonLd data={graph} />
       <LandingMotion />
       <ScrollFx />
