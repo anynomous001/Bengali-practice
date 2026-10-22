@@ -114,7 +114,7 @@
 
 /* small cards */
 .cr-also { display: grid; gap: var(--cr-gap); }
-.cr-also { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cr-also { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .cr-card { padding: 22px; border-radius: 22px; background: var(--surface); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
 .cr-card .cr-tag { margin: 0 0 4px; font-size: .78rem; }
 .cr-card p:not(.cr-tag) { color: var(--ink-2); font-size: .95rem; }
@@ -186,7 +186,38 @@ html.motion-ok .cr [data-reveal] { transition: opacity .6s ease, transform .6s e
 @keyframes cr-in { to { opacity: 1; transform: none; } }
 
 /* tablet and phone */
+/* why it works: a sticky heading beside a list that comes into focus as you scroll */
+.cr-why { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+.cr-why-side { position: sticky; top: 120px; display: grid; gap: 14px; } .cr-why-side p { color: var(--ink-2); font-size: 1.125rem; }
+.cr-why-list { list-style: none; margin: 0; padding: 0; }
+.cr-why-list li { padding: clamp(28px, 4vw, 48px) 0; border-top: 1px solid var(--line-2); } .cr-why-list li:last-child { border-bottom: 1px solid var(--line-2); }
+.cr-why-list h3 { margin-bottom: 10px; } .cr-why-list li > p:last-child { color: var(--ink-2); font-size: 1.125rem; max-width: 46ch; }
+
+/* hero shapes: tilted letter tiles that float and turn as the page scrolls */
+.cr-hero { position: relative; overflow: clip; }
+.cr-hero > :not(.cr-floats) { position: relative; z-index: 1; }
+.cr-floats { position: absolute; inset: 0; z-index: 0; pointer-events: none; perspective: 1200px; }
+.cr-fl { position: absolute; display: grid; place-items: center; width: clamp(72px, 8vw, 112px); aspect-ratio: 1; border-radius: 26%; font-size: clamp(2.2rem, 4vw, 3.6rem); font-weight: 600; line-height: 1; color: #0f1538;
+  transform: rotateY(var(--ry, 0deg)) rotate(var(--r, 0deg)); box-shadow: 0 22px 40px -18px rgba(0,0,0,.6), inset 0 -6px 0 rgba(0,0,0,.14); rotate: calc(var(--fx, 0) * 1deg); }
+.cr-fl.a { left: 6%; top: 34%; --r: -10deg; --ry: 14deg; background: var(--read-l); }
+.cr-fl.b { left: 12%; top: 47%; --r: 8deg; --ry: -12deg; width: clamp(56px, 6vw, 84px); background: var(--chalk); }
+.cr-fl.c { right: 7%; top: 30%; --r: 9deg; --ry: -14deg; background: var(--write-l); }
+.cr-fl.d { right: 13%; top: 46%; --r: -7deg; --ry: 12deg; width: clamp(60px, 6.5vw, 92px); background: var(--speak-l); }
+@keyframes cr-bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -12px; } }
+.cr.fx-on .cr-fl { animation: cr-bob 6s ease-in-out infinite; } .cr.fx-on .cr-fl.b { animation-delay: -1.5s; } .cr.fx-on .cr-fl.c { animation-delay: -3s; } .cr.fx-on .cr-fl.d { animation-delay: -4.5s; }
+
+/* scroll-linked effects, only once ScrollFx has switched them on */
+.cr.fx-on [data-fx="zoom"] img { scale: var(--fx, 1); transform-origin: 50% 40%; }
+.cr.fx-on [data-fx="focus"] { opacity: var(--fx, 1); }
+.cr.fx-on [data-fx="par"] { translate: 0 calc(var(--fx, 0) * 1px); }
+/* stacked panels: each one slides over the last */
+@media (min-width: 1000px) and (min-height: 700px) {
+  .cr.fx-on .cr-stack .cr-show { position: sticky; top: calc(92px + var(--i, 0) * 14px); box-shadow: 0 -14px 30px -22px var(--sh-c); }
+}
+
 @media (max-width: 1000px) {
+  .cr-fl { display: none; }
+  .cr-why { grid-template-columns: 1fr; } .cr-why-side { position: static; }
   .cr-pill nav { display: none; }
   .cr-also { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cr-aud-grid { grid-template-columns: 1fr; }

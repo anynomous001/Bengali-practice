@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./landing.css";
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import Logo from "./Logo";
 import Link from "next/link";
@@ -15,6 +16,7 @@ import StickyCta from "./StickyCta";
 import BuyLink from "./BuyLink";
 import PricingSeen from "./PricingSeen";
 import LandingMotion from "./LandingMotion";
+import ScrollFx from "./ScrollFx";
 import AssembleSentence from "./AssembleSentence";
 import VowelStrip from "./VowelStrip";
 import { BUSINESS } from "@/data/business";
@@ -107,6 +109,7 @@ export default async function Home() {
     { title: "Word finder", bn: "খোঁজো", ro: "khonjo", gloss: "look it up", text: `Type English, Bengali or romanized and find any of the ${VOCAB_ROUND} words, with audio.` },
     { title: "Tense workout", bn: "কাল", ro: "kal", gloss: "tense", text: "Rounds on tense cues, time words and negatives, to check and to write." },
     { title: "Numbers and money", bn: "টাকা", ro: "taka", gloss: "money", text: "Read and hear numerals and prices, from one to the big numbers." },
+    { title: "Devotional readings", bn: "ভক্তি", ro: "bhokti", gloss: "devotion", text: `${DEV_TOPICS.length} topics and ${DEV_STORIES.length} stories of mantras, bhajans and passages, to read in the original.` },
     { title: "Quick translation", bn: "অনুবাদ", ro: "onubad", text: "Short English sentences to turn into Bengali, fast." },
     { title: "Impromptu speaking", bn: "বলো তো", ro: "bolo to", gloss: "go on, say it", text: `${IMPROMPTU_COUNT} prompts, casual, professional and open. Keep talking until the timer runs out.` },
     { title: "Story relay", bn: "গল্প", ro: "golpo", gloss: "story", text: "A story built one sentence at a time." },
@@ -117,6 +120,7 @@ export default async function Home() {
   return (
     <div className={`cr ${inter.variable}`}>
       <LandingMotion />
+      <ScrollFx />
 
       <header className="cr-nav">
         <div className="cr-pill">
@@ -140,6 +144,12 @@ export default async function Home() {
 
       <main>
         <section className="cr-hero">
+          <div className="cr-floats" aria-hidden="true">
+            <span className="cr-fl a" data-fx="tilt" data-amt="-30" lang="bn">ক</span>
+            <span className="cr-fl b" data-fx="tilt" data-amt="26" lang="bn">৫</span>
+            <span className="cr-fl c" data-fx="tilt" data-amt="-26" lang="bn">আ</span>
+            <span className="cr-fl d" data-fx="tilt" data-amt="30" lang="bn">কি</span>
+          </div>
           <p className="cr-chip">Practice built by an online Bengali teacher</p>
           <h1>Read, speak and write Bengali, <em>one short lesson a day.</em></h1>
           <p className="cr-lead">I&apos;m Pritam. I teach Bengali online, one to one. This is where my students practice between our lessons, and now you can too.</p>
@@ -192,14 +202,14 @@ export default async function Home() {
           </div>
           <div className="cr-stack">
             {shots.map((sh, i) => (
-              <article key={sh.id} className={"cr-panel cr-show" + (i % 2 ? " rev" : "")} data-tint={sh.id} data-reveal>
+              <article key={sh.id} className={"cr-panel cr-show" + (i % 2 ? " rev" : "")} data-tint={sh.id} style={{ "--i": i } as CSSProperties} data-reveal>
                 <div className="cr-show-text">
                   <p className="cr-tag"><span lang="bn">{sh.bn}</span> <i>{sh.ro}</i> · {sh.gloss}</p>
                   <h3>{sh.title}</h3>
                   <p>{sh.text}</p>
                   {"notes" in sh && sh.notes && <ul className="cr-notes">{sh.notes.map((n) => <li key={n}>{n}</li>)}</ul>}
                 </div>
-                <figure className="cr-shot">
+                <figure className="cr-shot" data-fx="zoom">
                   <Image className="d" src={`/landing/shots/${sh.id}-1440.webp`} width={1440} height={900} sizes="(max-width: 900px) 100vw, 640px" alt={sh.alt} />
                   <Image className="m" src={`/landing/shots/${sh.id}-390.webp`} width={780} height={1688} sizes="300px" alt={sh.alt} />
                 </figure>
@@ -224,21 +234,30 @@ export default async function Home() {
 
           <h3 className="cr-sub" data-reveal>Also in the box</h3>
           <div className="cr-also">
-            {alsoIn.map((a) => (
-              <div key={a.title} className="cr-card" data-reveal>
+            {alsoIn.map((a, n) => (
+              <div key={a.title} className="cr-card" data-fx="par" data-amt={n % 2 ? 90 : -90} data-reveal>
                 <p className="cr-tag"><span lang="bn">{a.bn}</span> <i>{a.ro}</i>{"gloss" in a && a.gloss ? ` · ${a.gloss}` : ""}</p>
                 <h4>{a.title}</h4>
                 <p>{a.text}</p>
               </div>
             ))}
-            {POINTS.map((p) => (
-              <div key={p.title} className="cr-card" data-reveal>
-                <p className="cr-tag"><span lang="bn">{p.bn}</span> <i>{p.ro}</i> · {p.gloss}</p>
-                <h4>{p.title}</h4>
-                <p>{p.body}</p>
-              </div>
-            ))}
           </div>
+        </section>
+
+        <section className="cr-sec cr-wrap cr-why">
+          <div className="cr-why-side" data-reveal>
+            <h2>How it helps you learn.</h2>
+            <p>Five things I built in because my own students needed them.</p>
+          </div>
+          <ol className="cr-why-list">
+            {POINTS.map((p) => (
+              <li key={p.title} data-fx="focus">
+                <p className="cr-tag"><span lang="bn">{p.bn}</span> <i>{p.ro}</i> · {p.gloss}</p>
+                <h3>{p.title}</h3>
+                <p>{p.body}</p>
+              </li>
+            ))}
+          </ol>
         </section>
 
         <section className="cr-sec cr-wrap cr-aud">
