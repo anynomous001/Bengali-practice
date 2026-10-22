@@ -10,7 +10,7 @@ import { motionAllowed } from "./landing-motion";
  */
 export default function LandingMotion() {
   useEffect(() => {
-    const root = document.querySelector(".lp");
+    const root = document.querySelector(".cr");
     if (!root) return;
     if (!motionAllowed()) { root.classList.add("motion-off"); return; }
     root.classList.add("motion-on");

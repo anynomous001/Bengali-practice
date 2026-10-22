@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./landing.css";
 import Image from "next/image";
 import Logo from "./Logo";
 import Link from "next/link";
@@ -22,6 +24,9 @@ import { GRAMMAR } from "@/data/grammar";
 import { SCENARIOS } from "@/data/roleplay";
 import { CLASSWORK } from "@/data/classwork";
 import { EXAMS } from "@/data/exams";
+import { GOALS } from "@/data/paths";
+
+const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--f-inter" });
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 
@@ -96,193 +101,221 @@ export default async function Home() {
     { title: `${CLASSWORK.length} class worksheet sets`, bn: "খাতা", ro: "khata", gloss: "notebook", text: "The same worksheet sets I use in class." },
   ];
 
+
   return (
-    <div className="lp">
+    <div className={`cr ${inter.variable}`}>
       <LandingMotion />
 
-      <div className="lp-wrap">
-        <header className="land-nav">
-          <Link href="/" className="side-brand dark">
+      <header className="cr-nav">
+        <div className="cr-pill">
+          <Link href="/" className="cr-brand">
             <Logo />
-            <span><b lang="bn">বাংলা</b><small>Practice</small></span>
+            <span><b lang="bn">বাংলা</b> Practice</span>
           </Link>
-          <nav>
-            <a href="#learn" className="navlink">Courses</a>
-            <a href="#try" className="navlink">Try it</a>
-            <a href="#about" className="navlink">About</a>
-            <a href="#pricing" className="navlink">Pricing</a>
-            <a href="#faq" className="navlink">FAQ</a>
-            <Link href="/login" className="navbtn">Sign in</Link>
-            <BuyLink place="nav" className="btn small">Get access</BuyLink>
+          <nav aria-label="Sections">
+            <a href="#learn">Courses</a>
+            <a href="#try">Try it</a>
+            <a href="#about">About</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
           </nav>
-        </header>
-      </div>
+          <div className="cr-pill-end">
+            <Link href="/login" className="cr-signin">Sign in</Link>
+            <BuyLink place="nav" className="cr-btn sm">Get access</BuyLink>
+          </div>
+        </div>
+      </header>
 
       <main>
-      <section className="band hero-band">
-        <div className="lp-wrap hero-top">
-          <div className="hero-copy">
-            <p className="eyebrow">Practice built by an online Bengali teacher</p>
-            <h1>Read, speak and write Bengali, <em>one short lesson a day.</em></h1>
+        <section className="cr-hero">
+          <p className="cr-chip">Practice built by an online Bengali teacher</p>
+          <h1>Read, speak and write Bengali, <em>one short lesson a day.</em></h1>
+          <p className="cr-lead">I&apos;m Pritam. I teach Bengali online, one to one. This is where my students practice between our lessons, and now you can too.</p>
+          <div className="cr-cta">
+            <BuyLink place="hero" className="cr-btn on-dark">Start learning · {price} for 12 months</BuyLink>
+            <a className="cr-btn ghost-dark" href="#try">Try a letter</a>
           </div>
-          <figure className="lpx-first">
-            <span className="lpx-glyph" lang="bn">অ</span>
-            <figcaption>
-              <i>o</i>
-              <b>The first letter</b>
-              <span>Every Bengali child starts here: <span lang="bn">অ-তে অজগর</span>, o-te ojogor, &ldquo;o is for python.&rdquo;</span>
-            </figcaption>
-          </figure>
-        </div>
-        <div className="lp-wrap hero-grid">
-          <div className="hero-copy">
-            <p className="lead">I&apos;m Pritam. I teach Bengali online, one to one. This is where my students practice between our lessons, and now you can too.</p>
-            <div className="cta">
-              <BuyLink place="hero" className="btn">Start learning · {price} for 12 months</BuyLink>
-              <a className="btn ghost" href="#try">Try a letter</a>
-            </div>
-            <p className="trust-line">Pay once for a year. No password, just an email link.</p>
-          </div>
-          <Taster />
-        </div>
-      </section>
-
-      {hasAbout && (
-        <section className="lp-wrap about" id="about">
-          <div className="lpx-about">
-            <div className="lpx-about-head">
-              <h2>Between our lessons, my students had <em>nowhere to practice.</em></h2>
-              <p className="lpx-word"><span lang="bn">অভ্যাস</span><span><i>obbhash</i><small>practice; the daily habit of it</small></span></p>
-              {TEACHER.photo && <Image src={TEACHER.photo} alt={`${TEACHER.name}, your Bengali teacher`} width={480} height={560} className="about-photo" />}
-            </div>
-            <div className="lpx-about-body">
-              {TEACHER.story.map((p) => <p key={p} className="about-p">{p}</p>)}
-              <p className="about-sign">{TEACHER.name} <span className="lpx-sign-bn" lang="bn">{TEACHER.nameBn}</span> <small>· {TEACHER.place}</small></p>
-              {TEACHER.stats.length > 0 && (
-                <dl className="stat-row small">{TEACHER.stats.map((s) => <div key={s.label}><dt>{s.label}</dt><dd>{s.value}</dd></div>)}</dl>
-              )}
-              {TEACHER.worksheet && <Image src={TEACHER.worksheet} alt="A class worksheet" width={640} height={420} className="about-worksheet" />}
-              {TEACHER.videoSrc && (
-                <video className="about-video" controls playsInline preload="none" poster={TEACHER.videoPoster}>
-                  <source src={TEACHER.videoSrc} />
-                  {TEACHER.captionsSrc && <track kind="captions" src={TEACHER.captionsSrc} srcLang="en" label="English" default />}
-                </video>
-              )}
-              {TEACHER.liveLessonsUrl && <p><a className="quiet-link" href={TEACHER.liveLessonsUrl}>Want live lessons too? I teach one to one online.</a></p>}
-            </div>
+          <p className="cr-fine-dark">Pay once for a year. No password, just an email link.</p>
+          <div className="cr-hero-grid">
+            <figure className="cr-first">
+              <span className="cr-glyph" lang="bn">অ</span>
+              <figcaption>
+                <b>The first letter</b>
+                <span>Every Bengali child starts here: <span lang="bn">অ-তে অজগর</span>, o-te ojogor, &ldquo;o is for python.&rdquo;</span>
+              </figcaption>
+            </figure>
+            <Taster />
           </div>
         </section>
-      )}
 
-      {hasProof && (
-        <section className="lp-wrap proof">
-          {proofQuotes.length > 0 && (
-            <div className="quote-row">
-              {proofQuotes.map((q) => (
-                <figure key={q.name + q.text} className="quote">
-                  <blockquote>“{q.text}”</blockquote>
-                  <figcaption>
-                    {q.photo && <Image src={q.photo} alt="" width={40} height={40} className="quote-photo" />}
-                    <span><b>{q.name}</b>, {q.city}<small>{{ heritage: "Heritage learner", partner: "Learning for a partner", devotee: "Devotional reader", general: "Learner" }[q.kind]}</small></span>
-                  </figcaption>
+        <section className="cr-sec cr-wrap" id="learn">
+          <div className="cr-head" data-reveal>
+            <h2>Four courses, in the order I teach them.</h2>
+            <p>Each one builds on the last. Reading comes first, because everything else is easier once the letters are yours.</p>
+          </div>
+          <div className="cr-courses">
+            {COURSES.map((f, i) => (
+              <article key={f.title} className="cr-course" data-seg={f.seg} data-reveal>
+                <div className="cr-course-top">
+                  <IconTile name={f.icon} size={36} />
+                  <span className="cr-course-n">Course {["one", "two", "three", "four"][i]}</span>
+                </div>
+                <p className="cr-bnword" lang="bn">{f.bn}</p>
+                <p className="cr-ro"><i>{f.ro}</i></p>
+                <h3>{f.title}</h3>
+                <p className="cr-outcome">{f.outcome}</p>
+                <p>{f.body}</p>
+                {f.seg === "reading" && <div className="cr-vowels"><VowelStrip /></div>}
+              </article>
+            ))}
+          </div>
+          <p className="cr-note"><span lang="bn">ভক্তি</span> <i>bhokti</i> · devotion. Alongside the four courses, a separate <b>devotional track</b>: mantras, bhajans and sādhu-saṅga passages, set for reading in the original once you know the letters.</p>
+        </section>
+
+        <section className="cr-sec cr-wrap" id="practice">
+          <div className="cr-head" data-reveal>
+            <h2>The app, exactly as my students use it.</h2>
+            <p>Real screens, nothing mocked up.</p>
+          </div>
+          <div className="cr-stack">
+            {shots.map((sh, i) => (
+              <article key={sh.id} className={"cr-panel cr-show" + (i % 2 ? " rev" : "")} data-tint={sh.id} data-reveal>
+                <div className="cr-show-text">
+                  <p className="cr-tag"><span lang="bn">{sh.bn}</span> <i>{sh.ro}</i> · {sh.gloss}</p>
+                  <h3>{sh.title}</h3>
+                  <p>{sh.text}</p>
+                  {"notes" in sh && sh.notes && <ul className="cr-notes">{sh.notes.map((n) => <li key={n}>{n}</li>)}</ul>}
+                </div>
+                <figure className="cr-shot">
+                  <Image className="d" src={`/landing/shots/${sh.id}-1440.webp`} width={1440} height={900} sizes="(max-width: 900px) 100vw, 640px" alt={sh.alt} />
+                  <Image className="m" src={`/landing/shots/${sh.id}-390.webp`} width={780} height={1688} sizes="300px" alt={sh.alt} />
                 </figure>
-              ))}
-            </div>
-          )}
-          {TEACHER.stats.length > 0 && (
-            <dl className="stat-row">
-              {TEACHER.stats.map((s) => <div key={s.label}><dt>{s.label}</dt><dd>{s.value}</dd></div>)}
-            </dl>
-          )}
-        </section>
-      )}
+              </article>
+            ))}
+          </div>
 
-      <div className="lp-wrap">
-        <section className="land-section lpx-aud">
-          <h2>Three kinds of student, one way of learning.</h2>
-          <div className="lpx-aud-list">
+          <div className="cr-duo">
+            <article className="cr-panel" data-tint="path" data-reveal>
+              <p className="cr-tag"><span lang="bn">পথ</span> <i>poth</i> · path</p>
+              <h3>Pick your reason. Get a path.</h3>
+              <p>Learning for family, for devotion, for work or for a trip? Choose a goal and My path lines up the lessons that matter for it, in order, with a line on why each one is there. Already read the script? Skip that stage.</p>
+              <ul className="cr-goals">{GOALS.map((g) => <li key={g.id}>{g.title}</li>)}</ul>
+            </article>
+            <article className="cr-panel" data-tint="writing" data-reveal>
+              <p className="cr-tag"><span lang="bn">লেখা</span> <i>lekha</i> · writing</p>
+              <h3>Write the letters yourself.</h3>
+              <p>Trace each letter, vowel sign and numeral on the screen with your finger or a mouse, until the shapes feel familiar. Reading gets easier once your hand knows the letters too.</p>
+              <p className="cr-bigletters" lang="bn" aria-hidden="true"><span>ক</span><span>কি</span><span>৫</span></p>
+            </article>
+          </div>
+
+          <h3 className="cr-sub" data-reveal>Also in the box</h3>
+          <div className="cr-also">
+            {alsoIn.map((a) => (
+              <div key={a.title} className="cr-card" data-reveal>
+                <p className="cr-tag"><span lang="bn">{a.bn}</span> <i>{a.ro}</i>{"gloss" in a && a.gloss ? ` · ${a.gloss}` : ""}</p>
+                <h4>{a.title}</h4>
+                <p>{a.text}</p>
+              </div>
+            ))}
+            {POINTS.map((p) => (
+              <div key={p.title} className="cr-card" data-reveal>
+                <p className="cr-tag"><span lang="bn">{p.bn}</span> <i>{p.ro}</i> · {p.gloss}</p>
+                <h4>{p.title}</h4>
+                <p>{p.body}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="cr-sec cr-wrap cr-aud">
+          <div className="cr-head" data-reveal>
+            <h2>Three kinds of student, one way of learning.</h2>
+          </div>
+          <div className="cr-aud-grid">
             {AUDIENCE.map((a) => {
               const q = quoteFor(a.kind);
               return (
-                <article key={a.kind} className="lpx-aud-row">
-                  <p className="lpx-word v"><span lang="bn">{a.bn}</span><span><i>{a.ro}</i><small>· {a.gloss}</small></span></p>
-                  <div><p className="lpx-kicker">{a.tag}</p><p className="lpx-serif">{a.lead}</p></div>
-                  <div>
-                    <p className="lpx-aud-body">{a.body}</p>
-                    {q && <blockquote className="aud-quote">“{q.text}”<cite>{q.name}, {q.city}</cite></blockquote>}
-                  </div>
+                <article key={a.kind} className="cr-panel cr-aud-card" data-tint={a.kind} data-reveal>
+                  <p className="cr-bigword" lang="bn">{a.bn}</p>
+                  <p className="cr-ro"><i>{a.ro}</i> · {a.gloss}</p>
+                  <p className="cr-kicker">{a.tag}</p>
+                  <p className="cr-serif">{a.lead}</p>
+                  <p>{a.body}</p>
+                  {q && <blockquote className="cr-quote">“{q.text}”<cite>{q.name}, {q.city}</cite></blockquote>}
                 </article>
               );
             })}
           </div>
         </section>
 
-        <section className="land-section" id="practice">
-          <h2 className="h-xl">The app, exactly as my students use it.</h2>
-          <p className="lpx-sub">Real screens, nothing mocked up.</p>
-          <div className="shows">
-            {shots.map((sh) => (
-              <article key={sh.id} className="show">
-                <figure className="shot">
-                  <Image className="shot-d" src={`/landing/shots/${sh.id}-1440.webp`} width={1440} height={900} sizes="(max-width: 900px) 100vw, 720px" alt={sh.alt} />
-                  <Image className="shot-m" src={`/landing/shots/${sh.id}-390.webp`} width={780} height={1688} sizes="320px" alt={sh.alt} />
-                </figure>
-                <div className="show-text" data-seg={"seg" in sh ? sh.seg : undefined}>
-                  <p className="lpx-tag"><span lang="bn">{sh.bn}</span> <i>{sh.ro}</i> · {sh.gloss}</p>
-                  <h3>{sh.title}</h3>
-                  <p>{sh.text}</p>
-                  {"notes" in sh && sh.notes && <ol className="lpx-notes">{sh.notes.map((n) => <li key={n}>{n}</li>)}</ol>}
-                </div>
-              </article>
-            ))}
-          </div>
-          <h3 className="also-h">Also in the box</h3>
-          <dl className="also">
-            {alsoIn.map((a) => <div key={a.title}><dt>{a.title} <span className="lpx-tag-inline"><span lang="bn">{a.bn}</span> <i>{a.ro}</i>{"gloss" in a && a.gloss ? ` · ${a.gloss}` : ""}</span></dt><dd>{a.text}</dd></div>)}
-          </dl>
-          <ul className="points">
-            {POINTS.map((p) => (
-              <li key={p.title}>
-                <span className="lpx-pn" lang="bn">{p.n}</span>
-                <b>{p.title}</b>
-                <span className="lpx-pb">{p.body}</span>
-                <span className="lpx-ptag"><span lang="bn">{p.bn}</span> <i>{p.ro}</i> · {p.gloss}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="land-section" id="learn">
-          <h2>Four courses, in the order I teach them.</h2>
-          <p className="lpx-sub">Each one builds on the last. Reading comes first, because everything else is easier once the letters are yours.</p>
-          <div className="feature-grid">
-            {COURSES.map((f, i) => (
-              <article key={f.title} className="feature" data-seg={f.seg}>
-                <span className="lpx-course-n">Course {["one", "two", "three", "four"][i]}</span>
-                <span className="course-bn" lang="bn">{f.bn}</span>
-                <span className="lpx-course-ro"><i>{f.ro}</i></span>
-                <h3><IconTile name={f.icon} size={34} />{f.title}</h3>
-                <p className="outcome">{f.outcome}</p>
-                <p>{f.body}</p>
-                {f.seg === "reading" && <VowelStrip />}
-              </article>
-            ))}
-          </div>
-          <p className="muted land-note"><span lang="bn" className="lpx-dev-bn">ভক্তি</span> <i>bhokti</i> · devotion. Alongside the four courses, a separate <b>devotional track</b>: mantras, bhajans and sādhu-saṅga passages, set for reading in the original once you know the letters.</p>
-        </section>
-
-        <section className="land-section" id="pricing">
-          <div className="offer">
-            <div>
-              <h2>One price. Twelve months. Nothing renews.</h2>
-              <p className="lead">Most language apps charge $9 to $20 a month and renew automatically. Here you pay once. When the year is over, nothing happens unless you choose to come back.</p>
-              <p className="lead compare">New activities are added during your year, and if you renew early the 12 months are added on. Know someone who would like it? Every student gets a link that adds 3 months to their plan for each friend who joins.</p>
-              <p className="lpx-word on-night"><span lang="bn">এক বছর</span><span><i>ek bochhor</i><small>one year</small></span></p>
+        {hasAbout && (
+          <section className="cr-sec cr-wrap" id="about">
+            <div className="cr-panel cr-about" data-tint="about" data-reveal>
+              <div>
+                <h2>Between our lessons, my students had <em>nowhere to practice.</em></h2>
+                <p className="cr-word"><span lang="bn">অভ্যাস</span><span><i>obbhash</i><small>practice; the daily habit of it</small></span></p>
+                {TEACHER.photo && <Image src={TEACHER.photo} alt={`${TEACHER.name}, your Bengali teacher`} width={480} height={560} className="cr-photo" />}
+              </div>
+              <div className="cr-story">
+                {TEACHER.story.map((p) => <p key={p}>{p}</p>)}
+                <p className="cr-sign">{TEACHER.name} <span lang="bn">{TEACHER.nameBn}</span> <small>· {TEACHER.place}</small></p>
+                {TEACHER.stats.length > 0 && (
+                  <dl className="cr-stats">{TEACHER.stats.map((s) => <div key={s.label}><dt>{s.label}</dt><dd>{s.value}</dd></div>)}</dl>
+                )}
+                {TEACHER.worksheet && <Image src={TEACHER.worksheet} alt="A class worksheet" width={640} height={420} className="cr-photo" />}
+                {TEACHER.videoSrc && (
+                  <video className="cr-video" controls playsInline preload="none" poster={TEACHER.videoPoster}>
+                    <source src={TEACHER.videoSrc} />
+                    {TEACHER.captionsSrc && <track kind="captions" src={TEACHER.captionsSrc} srcLang="en" label="English" default />}
+                  </video>
+                )}
+                {TEACHER.liveLessonsUrl && <p><a href={TEACHER.liveLessonsUrl}>Want live lessons too? I teach one to one online.</a></p>}
+              </div>
             </div>
-            <div className="offer-card">
-              <div className="price">{price} <small>one-time · about {perMonth} a month</small></div>
-              <ul className="ticks">
+          </section>
+        )}
+
+        {hasProof && (
+          <section className="cr-sec cr-wrap">
+            {proofQuotes.length > 0 && (
+              <div className="cr-aud-grid">
+                {proofQuotes.map((q) => (
+                  <figure key={q.name + q.text} className="cr-panel cr-aud-card" data-tint={q.kind === "general" ? "about" : q.kind}>
+                    <blockquote className="cr-quote big">“{q.text}”</blockquote>
+                    <figcaption>
+                      {q.photo && <Image src={q.photo} alt="" width={40} height={40} className="cr-qphoto" />}
+                      <b>{q.name}</b>, {q.city}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            )}
+            {TEACHER.stats.length > 0 && (
+              <dl className="cr-stats">{TEACHER.stats.map((s) => <div key={s.label}><dt>{s.label}</dt><dd>{s.value}</dd></div>)}</dl>
+            )}
+          </section>
+        )}
+
+        <section className="cr-sec cr-wrap" id="pricing">
+          <div className="cr-head" data-reveal>
+            <h2>One price. Twelve months. Nothing renews.</h2>
+          </div>
+          <div className="cr-price-grid" data-reveal>
+            <div className="cr-price-dark">
+              <p className="cr-chip">Pay once, learn for a year</p>
+              <p className="cr-price">{price} <small>one-time · about {perMonth} a month</small></p>
+              <p>Most language apps charge $9 to $20 a month and renew automatically. Here you pay once. When the year is over, nothing happens unless you choose to come back.</p>
+              <p>New activities are added during your year, and if you renew early the 12 months are added on. Know someone who would like it? Every student gets a link that adds 3 months to their plan for each friend who joins.</p>
+              <BuyLink place="pricing" className="cr-btn on-dark">Get 12 months · {price}</BuyLink>
+              <p className="cr-promise"><b>{BUSINESS.refundDays}-day full refund.</b> If it isn&apos;t right for you, write to me within {BUSINESS.refundDays} days and I&apos;ll refund every rupee or cent.</p>
+              <p className="cr-fine-dark">Secure checkout by Razorpay · <Link href="/refunds">Refund policy</Link> · Visa, Mastercard, Amex</p>
+            </div>
+            <div className="cr-price-light">
+              <h3>What&apos;s included</h3>
+              <ul className="cr-ticks">
                 <li>All four courses: Reading, Speaking, Vocabulary, Grammar</li>
+                <li>Writing practice and My path, a plan for your goal</li>
                 <li>The devotional track</li>
                 <li>Audio for every letter, number and vocabulary word</li>
                 <li>Flashcards, role plays, worksheets and timed exams</li>
@@ -291,21 +324,17 @@ export default async function Home() {
                 <li>{india ? "Pay by UPI or card, in rupees" : "Pay by card in US dollars; students in India pay in rupees by UPI"}</li>
                 <li>No subscription, nothing renews by itself</li>
               </ul>
-              <BuyLink place="pricing" className="btn">Get 12 months · {price}</BuyLink>
-              <p className="promise"><b>{BUSINESS.refundDays}-day full refund.</b> If it isn&apos;t right for you, write to me within {BUSINESS.refundDays} days and I&apos;ll refund every rupee or cent.</p>
-              <p className="fine">Secure checkout by Razorpay · <Link href="/refunds">Refund policy</Link></p>
-              <p className="cards"><span>Visa</span><span>Mastercard</span><span>Amex</span></p>
             </div>
           </div>
         </section>
 
-        <section className="land-section faq-section" id="faq">
-          <div className="lpx-faq-side">
-            <h2 className="h-sm">What people ask me first.</h2>
-            <p className="lpx-word"><span lang="bn">প্রশ্ন</span><span><i>proshno</i><small>question</small></span></p>
-            <p className="lpx-ask">Something not covered here? <a href={`mailto:${BUSINESS.email}`}>Write to me</a> and I&apos;ll answer myself.</p>
+        <section className="cr-sec cr-wrap cr-faq-wrap" id="faq">
+          <div className="cr-faq-side" data-reveal>
+            <h2>What people ask me first.</h2>
+            <p className="cr-word"><span lang="bn">প্রশ্ন</span><span><i>proshno</i><small>question</small></span></p>
+            <p>Something not covered here? <a href={`mailto:${BUSINESS.email}`}>Write to me</a> and I&apos;ll answer myself.</p>
           </div>
-          <div className="faq">
+          <div className="cr-faq">
             {FAQ.map((f) => (
               <details key={f.q}>
                 <summary>{f.q}</summary>
@@ -316,24 +345,21 @@ export default async function Home() {
             ))}
           </div>
         </section>
-      </div>
 
-      <section className="band final-band">
-        <div className="lp-wrap final">
+        <section className="cr-final">
           <AssembleSentence text="আমি বাংলা শিখছি।" roman="ami bangla shikhchhi" english="I am learning Bengali." />
-          <h2>Ready to read your first Bengali sentence?</h2>
-          <p className="lead">Start today with the alphabet. Ten minutes a day is enough.</p>
-          <div className="cta">
-            <BuyLink place="final" className="btn">Start learning · {price}</BuyLink>
-            <Link className="btn ghost" href="/login">Student sign in</Link>
+          <h2><em>Ready to read your first Bengali sentence?</em></h2>
+          <p className="cr-lead">Start today with the alphabet. Ten minutes a day is enough.</p>
+          <div className="cr-cta">
+            <BuyLink place="final" className="cr-btn on-dark">Start learning · {price}</BuyLink>
+            <Link className="cr-btn ghost-dark" href="/login">Student sign in</Link>
           </div>
-        </div>
-      </section>
+        </section>
       </main>
 
-      <div className="lp-wrap">
+      <div className="cr-foot">
         <SiteFooter />
-        <p className="lpx-made">Made and taught by Pritam, Kolkata, India. <span className="lpx-thanks"><span lang="bn">ধন্যবাদ</span> <i>dhonnobad</i> · thank you</span></p>
+        <p className="cr-made">Made and taught by Pritam, Kolkata, India. <span><span lang="bn">ধন্যবাদ</span> <i>dhonnobad</i> · thank you</span></p>
       </div>
       <PricingSeen />
       <StickyCta label={`Start learning · ${price}`} />
