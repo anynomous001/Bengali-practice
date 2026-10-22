@@ -1057,7 +1057,7 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
 .steps-pics li { display: grid; justify-items: center; gap: 8px; }
 .steps-pics svg { width: 132px; height: 132px; background: linear-gradient(180deg, var(--surface), color-mix(in srgb, var(--primary) 5%, var(--surface))); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); }
 .steps-pics li > span { padding: 3px 12px; border-radius: 999px; background: color-mix(in srgb, var(--primary) 12%, var(--surface)); color: var(--primary); font-size: .78rem; font-weight: 700; letter-spacing: .02em; }
-.steps-pics path { fill: none; stroke: currentColor; stroke-width: 17; stroke-linecap: round; stroke-linejoin: round; }
+.steps-pics path { fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; }
 .steps-pics circle { fill: currentColor; }
 .steps-pics .sp-old { color: var(--ink); opacity: .82; }
 .steps-pics .sp-new { color: var(--primary); }

@@ -1,7 +1,8 @@
 // Step pictures for the vowels (swarabarna): each step is what has been written so far, so a student sees the letter
 // grow piece by piece. Coordinates are pad units (0 to 400), traced from the letter itself so they line up with the pad.
 // Main shapes build from the top down; the small flicks come last. Drawn by the app from this data, not photographs.
-export type StepPic = { strokes: [number, number][][]; dots: [number, number, number][] };
+/** One step: the lines and round dots to add. "w" is the line thickness in pad units (17 when left out). */
+export type StepPic = { strokes: [number, number][][]; dots: [number, number, number][]; w?: number };
 
 export const VOWEL_STEPS: Record<string, StepPic[]> = {
  "অ": [

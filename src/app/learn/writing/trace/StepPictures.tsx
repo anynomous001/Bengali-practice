@@ -34,7 +34,7 @@ export default function StepPictures({ steps, label }: { steps: StepPic[]; label
         <li key={k}>
           <svg viewBox={`${r1(vx)} ${r1(vy)} ${r1(side)} ${r1(side)}`} role="img" aria-label={`Step ${k + 1} of ${steps.length}`} focusable="false">
             {steps.slice(0, k + 1).map((s, j) => (
-              <g key={j} className={j === k ? "sp-new" : "sp-old"}>
+              <g key={j} className={j === k ? "sp-new" : "sp-old"} strokeWidth={s.w ?? 17}>
                 {s.strokes.map((st, i) => <path key={i} d={smooth(st)} />)}
                 {s.dots.map(([x, y, r], i) => <circle key={i} cx={x} cy={y} r={r} />)}
               </g>

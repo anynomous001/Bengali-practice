@@ -5,6 +5,7 @@ import { recordWriting } from "../../../actions";
 import { useRoman } from "../../Roman";
 import { VOWEL_STEPS } from "@/data/vowel-steps";
 import { CONSONANT_STEPS } from "@/data/consonant-steps";
+import { NUMERAL_STEPS } from "@/data/numeral-steps";
 import StepPictures from "./StepPictures";
 
 const SIZE = 400;
@@ -67,7 +68,7 @@ export default function Trace({
   const [tool, setTool] = useState<"pen" | "eraser">("pen");
   const [inked, setInked] = useState(false);
   const item = ITEMS.find((l) => l.id === sel)!;
-  const steps = VOWEL_STEPS[item.id] ?? CONSONANT_STEPS[item.id];
+  const steps = VOWEL_STEPS[item.id] ?? CONSONANT_STEPS[item.id] ?? NUMERAL_STEPS[item.id];
 
   // Both canvases are sized for the device pixel ratio so strokes stay sharp.
   useEffect(() => {
