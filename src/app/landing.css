@@ -83,7 +83,8 @@
 .cr-course p:not(.cr-bnword):not(.cr-ro):not(.cr-outcome) { color: var(--ink-2); }
 .cr-course.wide { grid-column: 1 / -1; }
 .cr-course .cr-bigletters { margin-top: 12px; }
-.cr-vowels { margin-top: 12px; padding: 14px 16px; border-radius: 18px; background: var(--surface); display: inline-block; align-self: flex-start; }
+.cr-vowels { margin-top: 12px; padding: 12px 20px 14px; border-radius: 18px; background: var(--surface); container-type: inline-size; align-self: stretch; }
+.cr-vowels .vstrip { margin-top: 0; padding-top: 0; border-top: 0; min-height: 3.4rem; }
 .cr-note { max-width: 760px; margin: 28px auto 0; text-align: center; color: var(--ink-2); }
 
 /* panels */
