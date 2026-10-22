@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import Icon, { type IconName } from "./Icon";
+import Icon, { IconTile, type IconName } from "./Icon";
 
 type Item = { href: string; label: string; icon: IconName };
 
@@ -34,7 +34,7 @@ export default function MobileMenu({ items, controls, footer }: { items: Item[];
         <nav aria-label="More">
           {items.map((it) => (
             <Link key={it.href} href={it.href} className="mm-link" aria-current={path === it.href ? "page" : undefined} onClick={() => setOpen(false)}>
-              <Icon name={it.icon} size={20} />{it.label}
+              <IconTile name={it.icon} size={30} />{it.label}
             </Link>
           ))}
         </nav>

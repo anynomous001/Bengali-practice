@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 import { headers } from "next/headers";
 import { getUser } from "@/lib/auth";
 import { defaultCurrency, priceInr, priceUsd } from "@/lib/pricing";
-import Icon from "./learn/Icon";
+import { IconTile } from "./learn/Icon";
 import { SiteFooter } from "./legal/LegalPage";
 import Taster from "./Taster";
 import StickyCta from "./StickyCta";
@@ -261,7 +261,7 @@ export default async function Home() {
                 <span className="lpx-course-n">Course {["one", "two", "three", "four"][i]}</span>
                 <span className="course-bn" lang="bn">{f.bn}</span>
                 <span className="lpx-course-ro"><i>{f.ro}</i></span>
-                <h3><span className="seg-icon"><Icon name={f.icon} size={20} /></span>{f.title}</h3>
+                <h3><IconTile name={f.icon} size={34} />{f.title}</h3>
                 <p className="outcome">{f.outcome}</p>
                 <p>{f.body}</p>
                 {f.seg === "reading" && <VowelStrip />}

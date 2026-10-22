@@ -2,7 +2,7 @@ import Link from "next/link";
 import { requireAccess } from "@/lib/access";
 import { loadLessonProgress } from "@/lib/progress";
 import { COURSES, allLessons, courseStats } from "@/data/curriculum";
-import Icon from "./Icon";
+import Icon, { IconTile } from "./Icon";
 import ProgressBar from "./ProgressBar";
 import StreakCard from "./StreakCard";
 import { loadChosen, buildPath, fmtMinutes } from "@/lib/path";
@@ -105,7 +105,7 @@ export default async function Dashboard() {
         {rows.map(({ c, s }) => (
           <article key={c.id} className="course-card" data-seg={c.id}>
             <Link href={`/learn/${c.id}`} className="seg-head">
-              <span className="seg-icon"><Icon name={c.id} size={22} /></span>
+              <IconTile name={c.id} size={46} />
               <span className="seg-title"><b>{c.title}</b><span lang="bn">{c.bn}</span></span>
             </Link>
             <p>{c.blurb}</p>

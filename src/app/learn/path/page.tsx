@@ -3,7 +3,7 @@ import { requireAccess } from "@/lib/access";
 import { loadLessonProgress } from "@/lib/progress";
 import { loadChosen, buildPath, fmtMinutes } from "@/lib/path";
 import { GOALS, READS } from "@/data/paths";
-import Icon from "../Icon";
+import Icon, { IconTile } from "../Icon";
 import ProgressBar from "../ProgressBar";
 import { choosePath } from "./actions";
 
@@ -16,7 +16,7 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
     return (
       <main className="wide">
         <header className="page-head">
-          <span className="page-icon"><Icon name="path" size={26} /></span>
+          <IconTile name="path" size={60} />
           <div>
             <p className="eyebrow">My path</p>
             <h1>What do you want to get better at?</h1>
@@ -53,7 +53,7 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
   return (
     <main className="wide">
       <header className="page-head">
-        <span className="page-icon"><Icon name="path" size={26} /></span>
+        <IconTile name="path" size={60} />
         <div>
           <p className="eyebrow">My path</p>
           <h1>{chosen.goal.title}</h1>

@@ -53,3 +53,18 @@ export default function Icon({ name, size = 20, weight }: { name: IconName; size
   const w: Weight = weight ?? (name === "done" || name === "play" ? "fill" : COURSE.has(name) ? "duotone" : "regular");
   return <Cmp size={size} weight={w} aria-hidden focusable="false" />;
 }
+
+/** The colour of the tile behind an icon, by icon name. Each section of the app has its own colour. */
+const TONES: Partial<Record<IconName, string>> = {
+  home: "home", path: "path", reading: "reading", speaking: "speaking", vocabulary: "vocabulary", grammar: "grammar", writing: "writing",
+  trophy: "progress", medal: "leader", gift: "gift", feedback: "chat", shield: "slate", logout: "slate", flame: "flame", target: "leader", lock: "slate",
+};
+
+/** A section icon as a rounded colour tile with a solid white glyph, like an app icon. Decorative: the label next to it names it. */
+export function IconTile({ name, size = 32, tone, muted }: { name: IconName; size?: number; tone?: string; muted?: boolean }) {
+  return (
+    <span className={"itile t-" + (muted ? "muted" : tone ?? TONES[name] ?? "slate")} style={{ width: size, height: size, borderRadius: Math.round(size * 0.28) }} aria-hidden>
+      <Icon name={name} size={Math.round(size * 0.56)} weight="fill" />
+    </span>
+  );
+}

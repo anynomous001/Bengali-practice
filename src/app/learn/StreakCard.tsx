@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Stats } from "@/lib/activity";
-import Icon from "./Icon";
+import Icon, { IconTile } from "./Icon";
 
 /** A circle that fills as today's points reach the daily goal. */
 export function GoalRing({ value, goal, size = 76 }: { value: number; goal: number; size?: number }) {
@@ -22,7 +22,7 @@ export default function StreakCard({ stats, next }: { stats: Stats; next: string
   return (
     <section className="streak-card" aria-label="Daily practice">
       <div className="sc-streak">
-        <span className={"sc-flame" + (stats.practisedToday ? " on" : "")}><Icon name="flame" size={30} weight="fill" /></span>
+        <IconTile name="flame" size={52} muted={!stats.practisedToday} />
         <div>
           <b>{stats.current} {stats.current === 1 ? "day" : "days"}</b>
           <small>{stats.practisedToday ? "Practised today" : stats.current ? "Practise today to keep it going" : "Start your streak today"}</small>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { requireAccess } from "@/lib/access";
 import { getSettings, loadStats, markMilestonesSeen, MILESTONES, syncMilestones } from "@/lib/activity";
 import { addDays, weekStart } from "@/lib/streak";
-import Icon from "../Icon";
+import Icon, { IconTile } from "../Icon";
 import { GoalRing } from "../StreakCard";
 import SettingsForm from "./SettingsForm";
 
@@ -29,11 +29,11 @@ export default async function ProgressPage() {
       </header>
 
       <section className="pg-top">
-        <div className="pg-stat"><span className="sc-flame on"><Icon name="flame" size={28} weight="fill" /></span><b>{stats.current}</b><small>day streak</small></div>
-        <div className="pg-stat"><Icon name="trophy" size={28} /><b>{stats.longest}</b><small>longest streak</small></div>
+        <div className="pg-stat"><IconTile name="flame" size={46} /><b>{stats.current}</b><small>day streak</small></div>
+        <div className="pg-stat"><IconTile name="trophy" size={46} /><b>{stats.longest}</b><small>longest streak</small></div>
         <div className="pg-stat"><GoalRing value={stats.pointsToday} goal={stats.goal} size={64} /><b>{stats.pointsToday} / {stats.goal}</b><small>points today</small></div>
-        <div className="pg-stat"><Icon name="target" size={28} /><b>{stats.weekPoints}</b><small>points this week</small></div>
-        <div className="pg-stat"><Icon name="check" size={28} /><b>{stats.totalPoints}</b><small>points in total</small></div>
+        <div className="pg-stat"><IconTile name="target" size={46} /><b>{stats.weekPoints}</b><small>points this week</small></div>
+        <div className="pg-stat"><IconTile name="check" tone="reading" size={46} /><b>{stats.totalPoints}</b><small>points in total</small></div>
       </section>
       <p className="muted">A day counts when you finish a lesson, a quiz, a role play or an exam, or review ten flashcards. If you miss one day in a week, your streak is kept{stats.freezeAvailable ? " (this week's is still available)" : " (this week's has been used)"}.</p>
 
@@ -54,7 +54,7 @@ export default async function ProgressPage() {
           <ul className="ms-list">
             {MILESTONES.filter((m) => m.group === g).map((m) => (
               <li key={m.key} className={earned.has(m.key) ? "got" : "locked"}>
-                <Icon name={earned.has(m.key) ? "trophy" : "lock"} size={20} weight={earned.has(m.key) ? "fill" : "regular"} />
+                <IconTile name={earned.has(m.key) ? "trophy" : "lock"} size={34} muted={!earned.has(m.key)} />
                 <span><b>{m.title}</b><small>{m.text}</small></span>
               </li>
             ))}
@@ -62,7 +62,7 @@ export default async function ProgressPage() {
         </section>
       ))}
 
-      <Link href="/learn/leaderboard" className="card-static lb-link"><Icon name="medal" size={22} /><span><b>Class leaderboard</b><small>See how your points compare this week, this month and all time.</small></span><Icon name="next" size={18} /></Link>
+      <Link href="/learn/leaderboard" className="card-static lb-link"><IconTile name="medal" size={40} /><span><b>Class leaderboard</b><small>See how your points compare this week, this month and all time.</small></span><Icon name="next" size={18} /></Link>
 
       <h2 className="section-title">Settings</h2>
       <SettingsForm settings={settings} />

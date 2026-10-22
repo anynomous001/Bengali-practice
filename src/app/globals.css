@@ -77,7 +77,7 @@ p { margin:0 0 12px; }
 .nav-item:hover { background:var(--side-hover); color:var(--side-ink); }
 .nav-item[aria-current="page"] { background:var(--side-active); color:var(--side-ink); }
 .nav-item[aria-current="page"]::before { content:""; position:absolute; left:-16px; top:10px; bottom:10px; width:4px; border-radius:0 4px 4px 0; background:var(--seg, var(--gold)); }
-.nav-item[data-seg] svg { color:var(--seg); }
+.nav-item .itile { flex:none; }
 .nav-bn { margin-left:auto; font:500 .85rem var(--font-bn-serif); opacity:.7; }
 .side-foot { margin-top:auto; display:flex; flex-direction:column; gap:12px; padding:16px 10px 0; border-top:1px solid var(--side-line); }
 .side-foot .toolbar { margin:0; justify-content:space-between; }
@@ -1262,3 +1262,31 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
 .pth-stage-head { align-items: flex-start; } .pth-stage-text { flex: 1; min-width: 0; }
 .pth-stage-time { flex: none; color: var(--ink-2); font-weight: 600; white-space: nowrap; padding-top: 6px; }
 .pth-stage.done .pth-stage-time { color: var(--ok); }
+
+/* ---------- icon tiles: a coloured rounded tile with a solid white glyph, one colour per section ---------- */
+.itile { flex: none; display: inline-grid; place-items: center; color: #fff; background: linear-gradient(150deg, var(--t1), var(--t2)); box-shadow: inset 0 1px 0 rgba(255,255,255,.32), inset 0 -1px 0 rgba(0,0,0,.12), 0 1px 2px rgba(15,21,56,.22), 0 6px 12px -7px var(--t2); }
+.itile svg { filter: drop-shadow(0 1px 0 rgba(0,0,0,.14)); }
+.t-home { --t1: #7e8af6; --t2: #3a49d0; }
+.t-path { --t1: #35cfc9; --t2: #0b8e9d; }
+.t-reading { --t1: #3ccb8f; --t2: #0d8a62; }
+.t-speaking { --t1: #ffab57; --t2: #e0600e; }
+.t-vocabulary { --t1: #5fb0ff; --t2: #1d6dd0; }
+.t-grammar { --t1: #dc72d6; --t2: #a03a99; }
+.t-writing { --t1: #a58cf8; --t2: #6144db; }
+.t-progress { --t1: #ffd262; --t2: #de9500; }
+.t-leader { --t1: #ff8089; --t2: #d93a54; }
+.t-gift { --t1: #f98abf; --t2: #cd3d85; }
+.t-chat { --t1: #55caf4; --t2: #1185c4; }
+.t-flame { --t1: #ff9c4d; --t2: #e43d17; }
+.t-slate { --t1: #8792ae; --t2: #4b5571; }
+.t-muted { --t1: light-dark(#c9cfdf, #3a4366); --t2: light-dark(#a9b1c7, #2b3354); color: light-dark(#fff, #8d97b8); box-shadow: none; }
+.nav-item .itile, .tab .itile, .mm-link .itile { transition: transform .15s ease; }
+.nav-item:hover .itile, .mm-link:hover .itile { transform: translateY(-1px); }
+.tab { gap: 4px; }
+.mm-link .itile { margin-right: 2px; }
+.mm-footer .mm-link .itile { display: none; }
+.feature h3 .itile { margin-right: 2px; }
+.pg-stat .itile { margin-bottom: 4px; }
+.lb-link .itile { flex: none; }
+.ms-list li .itile { flex: none; }
+.feature h3 span.itile { margin-left: 0; color: #fff; font: inherit; }

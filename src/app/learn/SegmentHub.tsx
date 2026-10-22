@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { requireAccess } from "@/lib/access";
 import { SEGMENTS, type Segment } from "@/data/segments";
-import Icon from "./Icon";
+import Icon, { IconTile } from "./Icon";
 
 export default async function SegmentHub({ segment }: { segment: Segment }) {
   await requireAccess();
@@ -9,7 +9,7 @@ export default async function SegmentHub({ segment }: { segment: Segment }) {
   return (
     <main data-seg={segment} className="wide">
       <header className="page-head">
-        <span className="page-icon"><Icon name={segment} size={26} /></span>
+        <IconTile name={segment} size={60} />
         <div>
           <p className="eyebrow" lang="bn">{s.bn}</p>
           <h1>{s.title}</h1>

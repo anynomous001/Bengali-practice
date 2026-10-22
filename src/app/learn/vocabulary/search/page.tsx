@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { requireAccess } from "@/lib/access";
 import { VOCAB, wordCount } from "@/data/vocabulary";
-import Icon from "../../Icon";
+import Icon, { IconTile } from "../../Icon";
 import WordRow from "../../WordRow";
 
 const MAX = 120;
@@ -22,7 +22,7 @@ export default async function WordFinderPage({ searchParams }: { searchParams: P
     <main data-seg="vocabulary" className="wide vocab-home">
       <Link href="/learn/vocabulary" className="back"><Icon name="prev" size={16} />Vocabulary</Link>
       <header className="page-head">
-        <span className="page-icon"><Icon name="list" size={26} /></span>
+        <IconTile name="list" tone="vocabulary" size={60} />
         <div>
           <h1>Word finder</h1>
           <p className="lede">Search all {total} words by Bengali, romanized or English.</p>
