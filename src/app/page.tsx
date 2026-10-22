@@ -66,7 +66,7 @@ const POINTS = [
 
 const FAQ = [
   { q: "Do I need to know any Bengali already?", a: "No. The Reading course starts with the alphabet and the vowel signs. If you already speak a little, you can go straight to any course." },
-  { q: "Is this live tutoring?", a: "No. It is self-paced practice you can use any time, on your own. Live lessons with me are separate and optional." },
+  { q: "Is this live tutoring?", a: "No. It is self-paced practice you can use any time, on your own. Live lessons with me are separate and optional, and you can book them on Preply." },
   { q: "How much time does it take?", a: "Lessons are short. Ten minutes a day is enough to make steady progress." },
   { q: "Can I turn the romanized English off?", a: "Yes, at any time. Most students keep it on for the first weeks and switch it off once they can read." },
   { q: "Can I practice writing?", a: "Yes. The Writing course has you trace letters, vowel signs and numerals on the screen with your finger or a mouse, then build words and sentences from their pieces." },
@@ -311,6 +311,54 @@ export default async function Home() {
             </div>
           </section>
         )}
+
+        <section className="cr-sec cr-wrap" id="live">
+          <div className="cr-head" data-reveal>
+            <h2>Two ways to learn with me.</h2>
+            <p>Practice on your own here, or learn live with me on Preply. Many students do both.</p>
+          </div>
+          <div className="cr-ways">
+            <article className="cr-panel cr-way" data-tint="about" data-reveal>
+              <p className="cr-tag"><span lang="bn">নিজে</span> <i>nije</i> · by yourself</p>
+              <h3>On your own, on this platform</h3>
+              <p>For learning at your own pace, any time of day, between or instead of live lessons.</p>
+              <ul className="cr-ticks">
+                <li>Ten minutes a day is enough</li>
+                <li>Five courses, a path for your goal, and audio for every word</li>
+                <li>One price for 12 months, nothing renews</li>
+              </ul>
+              <a className="cr-btn" href="#pricing">See pricing</a>
+            </article>
+            <article className="cr-way cr-way-live" data-reveal>
+              <div className="cr-way-top">
+                {TEACHER.photo
+                  ? <Image src={TEACHER.photo} alt={`${TEACHER.name}, your Bengali teacher`} width={120} height={120} className="cr-way-photo" />
+                  : <span className="cr-way-bn" lang="bn" aria-hidden="true">{TEACHER.nameBn}</span>}
+                <div>
+                  <p className="cr-tag"><span lang="bn">সামনাসামনি</span> <i>samnasamni</i> · face to face</p>
+                  <h3>Live with me, one to one</h3>
+                </div>
+              </div>
+              <p>If you want a real, hands-on experience, book me on Preply. Lessons are conversation first from the very first one. I explain in English or Hindi and move into Bengali as you grow, and I tailor each lesson to your goal: family, heritage, travel, business or reading in the original.</p>
+              <ul className="cr-facts">
+                <li><b>5.0</b> from 3 reviews</li>
+                <li><b>55</b> lessons taught</li>
+                <li><b>6 years</b> teaching Bengali</li>
+                <li>Preply certified tutor</li>
+              </ul>
+              <figure className="cr-say">
+                <blockquote>“Great teacher, very knowledgeable about tough grammatical concepts, he has been very patient with me and encourages progress over perfection.”</blockquote>
+                <figcaption>Neel, on Preply</figcaption>
+              </figure>
+              <figure className="cr-say">
+                <blockquote>“Pritam is patient and kind. He prepares a variety of engaging and unique activities for his lessons.”</blockquote>
+                <figcaption>Brian, on Preply</figcaption>
+              </figure>
+              <a className="cr-btn on-dark" href={TEACHER.liveLessonsUrl} target="_blank" rel="noopener">Book me on Preply</a>
+              <p className="cr-fine-dark">Lessons start at $8 for 50 minutes. See my calendar and current rates on my Preply profile.</p>
+            </article>
+          </div>
+        </section>
 
         {hasProof && (
           <section className="cr-sec cr-wrap">

@@ -20,7 +20,7 @@
 .cr em { font-style: italic; }
 :where(.cr) p { margin: 0; }
 .cr [lang="bn"] { font-family: var(--font-bn-serif); letter-spacing: 0; }
-.cr a { color: inherit; }
+:where(.cr) a { color: inherit; }
 .cr-wrap { max-width: 1240px; margin-inline: auto; padding-inline: var(--cr-gap); }
 .cr-sec { margin-top: var(--cr-sec); scroll-margin-top: 84px; }
 .cr-head { max-width: 760px; margin: 0 auto 40px; text-align: center; }
@@ -241,3 +241,24 @@ html.motion-ok .cr [data-reveal] { transition: opacity .6s ease, transform .6s e
   .cr { padding-bottom: 72px; }
 }
 @media (prefers-reduced-motion: reduce) { .cr [data-reveal], .cr-btn { transition: none !important; animation: none !important; } }
+
+/* two ways to learn: this platform, or live on Preply */
+.cr-ways { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: var(--cr-gap); align-items: stretch; }
+.cr-way { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.cr-way > p:not(.cr-tag) { color: var(--ink-2); }
+.cr-way .cr-ticks { width: 100%; margin-bottom: 8px; }
+.cr-way .cr-btn { margin-top: auto; }
+.cr-way-live { padding: clamp(26px, 4.4vw, 56px); border-radius: var(--cr-r); background: var(--night); color: var(--night-ink); }
+.cr-way-live > p:not(.cr-tag):not(.cr-fine-dark) { color: var(--night-mute); }
+.cr-way-live .cr-tag { color: var(--night-mute); margin-bottom: 8px; } .cr-way-live .cr-tag [lang="bn"] { color: var(--chalk); }
+.cr-way-live h3 { color: #fff; }
+.cr-way-top { display: flex; align-items: center; gap: 18px; }
+.cr-way-photo { border-radius: 50%; object-fit: cover; width: 96px; height: 96px; border: 2px solid rgba(255,255,255,.2); flex: none; }
+.cr-way-bn { flex: none; font-size: 2.6rem; line-height: 1; font-weight: 600; color: var(--chalk); }
+.cr-facts { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.cr-facts li { padding: 8px 16px; border-radius: 999px; border: 1px solid var(--night-line); font-size: .9rem; color: var(--night-mute); } .cr-facts b { color: #fff; }
+.cr-say { margin: 0; padding: 16px 18px; border-radius: 18px; background: rgba(255,255,255,.05); }
+.cr-say blockquote { margin: 0; font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; line-height: 1.35; color: var(--night-ink); }
+.cr-say figcaption { margin-top: 8px; font-size: .85rem; color: var(--night-mute); }
+@media (max-width: 1000px) { .cr-ways { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .cr-way .cr-btn { width: 100%; } }

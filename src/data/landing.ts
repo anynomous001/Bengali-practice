@@ -32,6 +32,7 @@ export const TEACHER: {
   name: "Pritam",
   nameBn: "প্রীতম",
   place: "Kolkata",
+  liveLessonsUrl: "https://preply.in/PRITAM6EN35993949102",
   stats: [],
   story: [
     "I teach Bengali online, one to one, from Kolkata. Most of my students live in the USA. Some grew up hearing Bengali at the dinner table, some married into a Bengali family, and some want to read the bhajans they sing.",
