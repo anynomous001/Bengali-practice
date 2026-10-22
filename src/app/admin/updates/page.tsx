@@ -13,17 +13,19 @@ export const maxDuration = 60;
 
 // A starting point. Edit any of it in the page before sending.
 const TEMPLATE: Template = {
-  subject: "What's new on Bengali Practice",
-  heading: "New things to try this week",
-  intro: "Hello! I added a few things since you last visited. Here is a quick look.",
+  subject: "{name}, set your goal and get a path made for you",
+  heading: "Now you can set your goal on Bengali Practice!",
+  intro: "Hi {name}! Bengali Practice just got its biggest update yet. You can now learn to write Bengali, step by step, and your practice can follow the goal you care about most.",
   bullets: [
-    "Step-by-step pictures that show how to write each vowel, consonant and number",
-    "Grammar lessons with more examples and short exercises",
-    "A new Writing course with tracing practice",
-    "Light and dark mode, so it is easier on your eyes",
-  ].join("\n"),
-  closing: "Reply to this email if something is unclear or you would like a topic added. I read every message.",
-  buttonLabel: "Check it out",
+    "Brand new Writing course: a full course just for writing Bengali, with exercises for every vowel, consonant and number",
+    "Tracing practice: trace each letter right on your screen, with a guide to follow",
+    "Step-by-step pictures: see exactly how to build each letter, one stroke at a time",
+    "Goals: tell us why you are learning, such as talking with family, travel or work",
+    "A path made for your goal: pick a goal and we suggest what to practice next",
+    "Light and dark mode: switch with one tap",
+].join("\n"),
+  closing: "This is just the start. More is on the way, and I would love to hear what you want next. Reply to this email with any idea or question.",
+  buttonLabel: "Start writing",
 };
 
 export default async function UpdatesPage({ searchParams }: { searchParams: Promise<{ notice?: string }> }) {

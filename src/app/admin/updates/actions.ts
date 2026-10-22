@@ -25,7 +25,15 @@ function draftFrom(fd: FormData): UpdateDraft {
   };
 }
 
-async function mailFor(d: UpdateDraft, email: string) {
+/** Fills {name} with the student's first name, or "there" when they have not set one. */
+function personalize(d: UpdateDraft, name: string | null): UpdateDraft {
+  const first = (name ?? "").trim().split(/\s+/)[0] || "there";
+  const f = (t: string) => t.replace(/\{name\}/gi, first);
+  return { ...d, subject: f(d.subject), heading: f(d.heading), intro: f(d.intro), bullets: d.bullets.map(f), closing: f(d.closing) };
+}
+
+async function mailFor(draft: UpdateDraft, email: string, name: string | null) {
+  const d = personalize(draft, name);
   const base = await appBase();
   const unsub = `${base}/unsubscribe?t=${encodeURIComponent(await unsubscribeToken(email))}`;
   return { to: email, subject: d.subject, mail: updateMail(d, `${base}/learn`, unsub), unsubscribe: unsub };
@@ -34,7 +42,7 @@ async function mailFor(d: UpdateDraft, email: string) {
 /** The email exactly as students will see it, for the preview pane. */
 export async function previewHtml(fd: FormData): Promise<string> {
   await admin();
-  return renderMail(updateMail(draftFrom(fd), `${await appBase()}/learn`, `${await appBase()}/unsubscribe`)).html;
+  return renderMail(updateMail(personalize(draftFrom(fd), "Asha"), `${await appBase()}/learn`, `${await appBase()}/unsubscribe`)).html;
 }
 
 export type SendResult = { ok: boolean; message: string };
@@ -45,7 +53,8 @@ export async function sendTest(fd: FormData): Promise<SendResult> {
   const d = draftFrom(fd);
   if (!d.subject || !d.heading) return { ok: false, message: "Add a subject and a heading first." };
   try {
-    await sendBatch([await mailFor(d, user.email)]);
+    const me = await query<{ display_name: string | null }>("SELECT display_name FROM student_settings WHERE email = $1", [user.email]);
+    await sendBatch([await mailFor(d, user.email, me[0]?.display_name ?? null)]);
   } catch (e) {
     return { ok: false, message: `The test did not send: ${(e as Error).message}` };
   }
@@ -68,8 +77,8 @@ export async function sendToStudents(fd: FormData): Promise<SendResult> {
   if (!d.subject || !d.heading) return { ok: false, message: "Add a subject and a heading first." };
   if (fd.get("confirm") !== "on") return { ok: false, message: "Tick the box to confirm you want to send this." };
 
-  const list = await query<{ email: string }>(
-    `SELECT s.email FROM students s LEFT JOIN student_settings t ON t.email = s.email
+  const list = await query<{ email: string; display_name: string | null }>(
+    `SELECT s.email, t.display_name FROM students s LEFT JOIN student_settings t ON t.email = s.email
      WHERE COALESCE(t.news, true) ${audience === "all" ? "" : "AND s.access_expires_at > now()"} ORDER BY s.email`,
   );
   let sent = 0;
@@ -77,7 +86,7 @@ export async function sendToStudents(fd: FormData): Promise<SendResult> {
   for (let i = 0; i < list.length; i += 100) {
     const chunk = list.slice(i, i + 100);
     try {
-      sent += await sendBatch(await Promise.all(chunk.map((r) => mailFor(d, r.email))));
+      sent += await sendBatch(await Promise.all(chunk.map((r) => mailFor(d, r.email, r.display_name))));
     } catch (e) {
       console.error("[updates] batch failed", e);
       failed += chunk.length;

@@ -21,6 +21,7 @@ export default function Composer({ template, counts }: { template: Template; cou
       <form ref={form} className="upd-form" onSubmit={(e) => e.preventDefault()}>
         <label>Subject line<input name="subject" defaultValue={template.subject} maxLength={150} required /></label>
         <label>Heading in the email<input name="heading" defaultValue={template.heading} maxLength={150} required /></label>
+        <p className="muted upd-tip">Type {"{name}"} anywhere to use the student's first name. If they have not set a name, it becomes "there". The preview uses "Asha".</p>
         <label>Opening<textarea name="intro" defaultValue={template.intro} rows={3} maxLength={800} /></label>
         <label>What is new (one per line)<textarea name="bullets" defaultValue={template.bullets} rows={8} maxLength={4000} /></label>
         <label>Closing<textarea name="closing" defaultValue={template.closing} rows={2} maxLength={800} /></label>
