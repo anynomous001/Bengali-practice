@@ -99,6 +99,22 @@ async function main() {
       await shot("grammar", async () => { await page.evaluate(() => document.getElementById("sec-practice")?.scrollIntoView()); });
       await page.goto(`${BASE}/learn/grammar/exam`);
       await shot("exam", async () => { await page.getByRole("button", { name: /start the exam/i }).click({ timeout: 5000 }).catch(() => undefined); await page.waitForTimeout(1500); });
+      await page.goto(`${BASE}/learn/writing/trace`);
+      await shot("writing", async () => {
+        // a few pen strokes over the guide letter, as if mid-practice
+        const box = await page.locator("canvas.draw").boundingBox();
+        if (!box) return;
+        const at = (fx: number, fy: number) => [box.x + box.width * fx, box.y + box.height * fy] as const;
+        const stroke = async (pts: (readonly [number, number])[]) => {
+          await page.mouse.move(...pts[0]);
+          await page.mouse.down();
+          for (const q of pts.slice(1)) await page.mouse.move(...q, { steps: 6 });
+          await page.mouse.up();
+        };
+        await stroke([at(0.24, 0.27), at(0.5, 0.265), at(0.78, 0.27)]); // the headline bar
+        await stroke([at(0.78, 0.27), at(0.775, 0.42), at(0.78, 0.58)]); // the stem
+        await stroke([at(0.56, 0.4), at(0.46, 0.33), at(0.37, 0.4), at(0.4, 0.5), at(0.5, 0.52), at(0.57, 0.46)]); // the bowl
+      });
       await ctx.close();
     }
     await browser.close();
