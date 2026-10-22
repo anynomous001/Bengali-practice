@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { cookies } from "next/headers";
 import { Newsreader, Noto_Sans_Bengali, Noto_Serif_Bengali, Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
+import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, SITE_TITLE, SITE_URL, SOCIAL_DESCRIPTION } from "@/lib/site";
 import GoogleAnalytics from "./GoogleAnalytics";
 import "./globals.css";
 
@@ -22,8 +21,8 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
   // Search Console and Bing Webmaster Tools verification: set these two variables in Vercel, no code change needed.
   verification: { google: process.env.GOOGLE_SITE_VERIFICATION || undefined, other: process.env.BING_SITE_VERIFICATION ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION } : undefined },
-  openGraph: { siteName: SITE_NAME, type: "website", url: "/", title: SITE_TITLE, description: SITE_DESCRIPTION, locale: "en_US" },
-  twitter: { card: "summary_large_image", title: SITE_TITLE, description: SITE_DESCRIPTION },
+  openGraph: { siteName: SITE_NAME, type: "website", url: "/", title: SITE_TITLE, description: SOCIAL_DESCRIPTION, locale: "en_US" },
+  twitter: { card: "summary_large_image", title: SITE_TITLE, description: SOCIAL_DESCRIPTION },
 };
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: [{ media: "(prefers-color-scheme: light)", color: "#f3f5fa" }, { media: "(prefers-color-scheme: dark)", color: "#0a0e1f" }] };
 
@@ -34,16 +33,17 @@ const serif = Newsreader({ subsets: ["latin"], style: ["normal", "italic"], disp
 const bnSans = Noto_Sans_Bengali({ subsets: ["bengali"], weight: ["400", "500", "600", "700"], display: "swap", variable: "--f-bn", preload: false });
 const bnSerif = Noto_Serif_Bengali({ subsets: ["bengali"], weight: ["400", "500", "600", "700"], display: "swap", variable: "--f-bn-serif", preload: false });
 
+// The saved light/dark choice (a cookie) is applied before the first paint. Reading it here, not on the server, keeps pages static.
+const THEME = `(function(){try{var m=document.cookie.match(/(?:^|; )bp_theme=(light|dark)/);if(m)document.documentElement.setAttribute("data-theme",m[1])}catch(e){}})();`;
+
 const MOTION_OK = `(function(){try{var d=document.documentElement;if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)return;var seen=false;try{seen=!!sessionStorage.getItem("bp_lp_motion")}catch(e){}if(!seen)d.classList.add("motion-ok")}catch(e){}})();`;
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const t = (await cookies()).get("bp_theme")?.value;
-  const theme = t === "light" || t === "dark" ? t : undefined; // otherwise follow the system
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme={theme} className={`${ui.variable} ${serif.variable} ${bnSans.variable} ${bnSerif.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${ui.variable} ${serif.variable} ${bnSans.variable} ${bnSerif.variable}`} suppressHydrationWarning>
       <head>
         {/* Animated parts of the home page start hidden only when this class is set. Without it, or without JavaScript, every page shows its finished state. */}
-        <script dangerouslySetInnerHTML={{ __html: MOTION_OK }} />
+        <script dangerouslySetInnerHTML={{ __html: THEME + MOTION_OK }} />
       </head>
       <body suppressHydrationWarning>
         {children}

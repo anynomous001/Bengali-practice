@@ -4,14 +4,15 @@ import { GROUPS, LETTERS } from "@/data/letters";
 import { OG_IMAGES, SITE_NAME } from "@/lib/site";
 import { Crumbs, GuideCta } from "../GuideBits";
 
-const TITLE = "Bengali Alphabet (বর্ণমালা): All Letters with Pronunciation";
+const TITLE = "Bengali Alphabet with Pronunciation";
+const SHORT = "Every Bengali letter with pronunciation, example words and tips. A free chart for beginners.";
 const DESC = "The complete Bengali alphabet with romanization, example words and pronunciation tips for every vowel and consonant. A free chart for beginners.";
 export const metadata: Metadata = {
   title: { absolute: `${TITLE} | ${SITE_NAME}` },
   description: DESC,
   alternates: { canonical: "/bengali-alphabet" },
-  openGraph: { type: "article", url: "/bengali-alphabet", title: TITLE, description: DESC, images: OG_IMAGES },
-  twitter: { card: "summary_large_image", title: TITLE, description: DESC, images: ["/twitter-image"] },
+  openGraph: { type: "article", url: "/bengali-alphabet", title: TITLE, description: SHORT, images: OG_IMAGES },
+  twitter: { card: "summary_large_image", title: TITLE, description: SHORT, images: ["/twitter-image"] },
 };
 
 const KAR = [["া", "kaa", "কা"], ["ি", "ki", "কি"], ["ী", "kee", "কী"], ["ু", "ku", "কু"], ["ূ", "koo", "কূ"], ["ে", "ke", "কে"], ["ৈ", "koi", "কৈ"], ["ো", "ko", "কো"], ["ৌ", "kou", "কৌ"]];

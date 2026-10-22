@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
+import { SHAPED } from "@/lib/glyphs";
 
 export const alt = "Bengali Practice: learn to read, speak and write Bengali online";
 export const size = { width: 1200, height: 630 };
@@ -8,6 +9,20 @@ export const contentType = "image/png";
 
 // Subsets of the fonts, kept next to this file, so the image never depends on a network fetch at build time.
 const font = async (name: string) => { const b = await readFile(join(process.cwd(), "src/app/fonts", name)); return b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength) as ArrayBuffer; };
+
+/** A Bengali letter drawn from HarfBuzz-shaped outlines, so a vowel sign such as the i of কি sits on the correct side. */
+function Shaped({ text, px, color }: { text: string; px: number; color: string }) {
+  const s = SHAPED[text];
+  if (!s) return <span style={{ fontFamily: "Noto Serif Bengali", fontSize: px, display: "flex" }}>{text}</span>;
+  const k = px / s.upem, pad = 20, top = s.yTop + pad, bottom = s.yBottom - pad, w = s.width + 2 * pad, h = top - bottom;
+  return (
+    <svg width={Math.round(w * k)} height={Math.round(h * k)} viewBox={`${-pad} ${-top} ${w} ${h}`}>
+      <g transform="scale(1,-1)" fill={color}>
+        {s.glyphs.filter((g) => g.d).map((g, i) => <path key={i} d={g.d} transform={`translate(${g.x} ${g.y})`} />)}
+      </g>
+    </svg>
+  );
+}
 
 const TILES: { ch: string; bg: string; rot: number }[] = [
   { ch: "ক", bg: "#6fe0d4", rot: -7 },
@@ -30,18 +45,17 @@ export default async function Image() {
           <div style={{ display: "flex", alignItems: "center", fontFamily: "Inter", fontWeight: 500, fontSize: 26, color: "#a3acd0" }}>
             <span style={{ fontFamily: "Noto Serif Bengali", fontSize: 40, color: "#ffe0a0", marginRight: 14, display: "flex" }}>বাংলা</span> Bengali Practice
           </div>
-          <div style={{ fontFamily: "Inter", fontWeight: 700, fontSize: 86, lineHeight: 1.04, color: "#ffffff", marginTop: 26, display: "flex", flexDirection: "column" }}>
+          <div style={{ fontFamily: "Inter", fontWeight: 700, fontSize: 86, lineHeight: 1.04, color: "#ffffff", marginTop: 20, display: "flex", flexDirection: "column" }}>
             <span style={{ display: "flex" }}>Learn Bengali</span>
             <span style={{ display: "flex", color: "#ffe0a0" }}>online.</span>
           </div>
-          <div style={{ fontFamily: "Inter", fontWeight: 500, fontSize: 30, lineHeight: 1.35, color: "#c9cfe8", marginTop: 26, display: "flex" }}>
+          <div style={{ fontFamily: "Inter", fontWeight: 500, fontSize: 30, lineHeight: 1.35, color: "#c9cfe8", marginTop: 20, display: "flex" }}>
             Read, speak and write Bengali with short daily lessons from a Kolkata teacher.
           </div>
-          <div style={{ display: "flex", marginTop: 34, fontFamily: "Inter", fontWeight: 700, fontSize: 24, color: "#0f1538" }}>
-            {["Reading", "Speaking", "Writing", "Grammar"].map((t) => (
-              <span key={t} style={{ display: "flex", background: "#ffffff", borderRadius: 999, padding: "9px 20px", marginRight: 12 }}>{t}</span>
-            ))}
+          <div style={{ display: "flex", alignItems: "center", marginTop: 30 }}>
+            <span style={{ display: "flex", whiteSpace: "nowrap", background: "#ffe0a0", color: "#0f1538", borderRadius: 999, padding: "14px 30px", fontFamily: "Inter", fontWeight: 700, fontSize: 28 }}>Try a letter free →</span>
           </div>
+          <div style={{ display: "flex", marginTop: 16, fontFamily: "Inter", fontWeight: 500, fontSize: 24, color: "#a3acd0" }}>bengali-practice.gencore.co.in</div>
         </div>
         <div style={{ display: "flex", flexWrap: "wrap", width: 400, justifyContent: "center" }}>
           {TILES.map((t) => (
@@ -52,7 +66,7 @@ export default async function Image() {
                 fontFamily: "Noto Serif Bengali", fontSize: 104, transform: `rotate(${t.rot}deg)`, boxShadow: "0 24px 40px rgba(0,0,0,.45)",
               }}
             >
-              {t.ch}
+              <Shaped text={t.ch} px={104} color="#0f1538" />
             </div>
           ))}
         </div>

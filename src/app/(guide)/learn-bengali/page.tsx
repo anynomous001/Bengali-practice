@@ -4,14 +4,15 @@ import JsonLd from "../../JsonLd";
 import { OG_IMAGES, PREPLY_URL, SITE_NAME, SITE_URL } from "@/lib/site";
 import { Crumbs, GuideCta } from "../GuideBits";
 
-const TITLE = "How to Learn Bengali: A Step-by-Step Guide for Beginners";
-const DESC = "A practical guide to learning Bengali from zero: the alphabet, vowel signs, numbers, vocabulary, grammar and speaking, with a simple daily routine. By a Kolkata teacher.";
+const TITLE = "How to Learn Bengali from Zero";
+const SHORT = "A step-by-step plan to learn Bengali from zero, from the alphabet to speaking, by a Kolkata teacher.";
+const DESC = "A practical plan to learn Bengali from zero: alphabet, vowel signs, numbers, vocabulary, grammar and speaking, plus a daily routine.";
 export const metadata: Metadata = {
   title: { absolute: `${TITLE} | ${SITE_NAME}` },
   description: DESC,
   alternates: { canonical: "/learn-bengali" },
-  openGraph: { type: "article", url: "/learn-bengali", title: TITLE, description: DESC, images: OG_IMAGES },
-  twitter: { card: "summary_large_image", title: TITLE, description: DESC, images: ["/twitter-image"] },
+  openGraph: { type: "article", url: "/learn-bengali", title: TITLE, description: SHORT, images: OG_IMAGES },
+  twitter: { card: "summary_large_image", title: TITLE, description: SHORT, images: ["/twitter-image"] },
 };
 
 const FAQ = [

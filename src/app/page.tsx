@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 import JsonLd from "./JsonLd";
 import { inter } from "./inter";
-import { OG_IMAGES, PREPLY_URL, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
+import { OG_IMAGES, PREPLY_URL, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL, SOCIAL_DESCRIPTION } from "@/lib/site";
 import "./landing.css";
 import type { CSSProperties } from "react";
 import Image from "next/image";
 import Logo from "./Logo";
 import Link from "next/link";
-import { redirect } from "next/navigation";
-import { cookies, headers } from "next/headers";
-import { getUser } from "@/lib/auth";
-import { defaultCurrency, priceInr, priceUsd } from "@/lib/pricing";
+import { priceInr, priceUsd } from "@/lib/pricing";
+import { IndiaText, Price } from "./Price";
 import { IconTile } from "./learn/Icon";
 import { SiteFooter } from "./legal/LegalPage";
 import Taster from "./Taster";
@@ -39,7 +37,7 @@ export const metadata: Metadata = {
   title: { absolute: SITE_TITLE },
   description: SITE_DESCRIPTION,
   alternates: { canonical: "/" },
-  openGraph: { type: "website", url: "/", siteName: SITE_NAME, title: SITE_TITLE, description: SITE_DESCRIPTION, images: OG_IMAGES },
+  openGraph: { type: "website", url: "/", siteName: SITE_NAME, title: SITE_TITLE, description: SOCIAL_DESCRIPTION, images: OG_IMAGES },
 };
 
 const VOCAB_WORDS = VOCAB.reduce((n, t) => n + t.sections.reduce((m, s) => m + s.words.length, 0), 0);
@@ -91,15 +89,12 @@ const FAQ = [
   { q: "Who is behind this?", a: `I am Pritam, an online Bengali teacher. I teach one to one, mostly learners in the US, and I built this because my students needed somewhere to practice between lessons. You can write to ${BUSINESS.email} with any question.` },
 ];
 
+// Built once and refreshed every six hours (the rupee price follows the exchange rate). Signed-in visitors are sent on by src/proxy.ts.
+export const revalidate = 21600;
+
 export default async function Home() {
-  if (await getUser()) redirect("/learn");
   const usd = priceUsd();
-  const [inr, h, jar] = await Promise.all([priceInr(), headers(), cookies()]);
-  const savedTheme = jar.get("bp_theme")?.value;
-  const theme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : "system";
-  const india = defaultCurrency(h.get("x-vercel-ip-country")) === "INR";
-  const price = india ? `₹${inr.amount.toLocaleString("en-IN")}` : `$${usd}`;
-  const perMonth = india ? `₹${Math.round(inr.amount / 12 / 10) * 10}` : `$${(usd / 12).toFixed(2)}`;
+  const inr = (await priceInr()).amount;
   const quoteFor = (kind: Quote["kind"]) => QUOTES.find((q) => q.kind === kind);
   const proofQuotes = QUOTES.slice(0, 3);
   const hasProof = proofQuotes.length > 0 || TEACHER.stats.length > 0;
@@ -164,7 +159,7 @@ export default async function Home() {
             <a href="#faq">FAQ</a>
           </nav>
           <div className="cr-pill-end">
-            <ThemeSwitch initial={theme} />
+            <ThemeSwitch />
             <Link href="/login" className="cr-signin">Sign in</Link>
             <BuyLink place="nav" className="cr-btn sm">Get access</BuyLink>
           </div>
@@ -183,7 +178,7 @@ export default async function Home() {
           <h1>Read, speak and write Bengali, <em>one short lesson a day.</em></h1>
           <p className="cr-lead">I&apos;m Pritam. I teach Bengali online, one to one. This is where my students practice between our lessons, and now you can too.</p>
           <div className="cr-cta">
-            <BuyLink place="hero" className="cr-btn on-dark">Start learning · {price} for 12 months</BuyLink>
+            <BuyLink place="hero" className="cr-btn on-dark">Start learning · <Price usd={usd} inr={inr} /> for 12 months</BuyLink>
             <a className="cr-btn ghost-dark" href="#try">Try a letter</a>
           </div>
           <p className="cr-fine-dark">Pay once for a year. No password, just an email link.</p>
@@ -413,10 +408,10 @@ export default async function Home() {
           <div className="cr-price-grid" data-reveal>
             <div className="cr-price-dark">
               <p className="cr-chip">Pay once, learn for a year</p>
-              <p className="cr-price">{price} <small>one-time · about {perMonth} a month</small></p>
+              <p className="cr-price"><Price usd={usd} inr={inr} /> <small>one-time · about <Price usd={usd} inr={inr} per /> a month</small></p>
               <p>Most language apps charge $9 to $20 a month and renew automatically. Here you pay once. When the year is over, nothing happens unless you choose to come back.</p>
               <p>New activities are added during your year, and if you renew early the 12 months are added on. Know someone who would like it? Every student gets a link that adds 3 months to their plan for each friend who joins.</p>
-              <BuyLink place="pricing" className="cr-btn on-dark">Get 12 months · {price}</BuyLink>
+              <BuyLink place="pricing" className="cr-btn on-dark">Get 12 months · <Price usd={usd} inr={inr} /></BuyLink>
               <p className="cr-promise"><b>{BUSINESS.refundDays}-day full refund.</b> If it isn&apos;t right for you, write to me within {BUSINESS.refundDays} days and I&apos;ll refund every rupee or cent.</p>
               <p className="cr-fine-dark">Secure checkout by Razorpay · <Link href="/refunds">Refund policy</Link> · Visa, Mastercard, Amex</p>
             </div>
@@ -430,7 +425,7 @@ export default async function Home() {
                 <li>Flashcards, role plays, worksheets and timed exams</li>
                 <li>Streaks, goals and the class leaderboard, with your progress saved</li>
                 <li>You get a sign-in link by email; no password</li>
-                <li>{india ? "Pay by UPI or card, in rupees" : "Pay by card in US dollars; students in India pay in rupees by UPI"}</li>
+                <li><IndiaText india="Pay by UPI or card, in rupees" other="Pay by card in US dollars; students in India pay in rupees by UPI" /></li>
                 <li>No subscription, nothing renews by itself</li>
               </ul>
             </div>
@@ -460,7 +455,7 @@ export default async function Home() {
           <h2><em>Ready to read your first Bengali sentence?</em></h2>
           <p className="cr-lead">Start today with the alphabet. Ten minutes a day is enough.</p>
           <div className="cr-cta">
-            <BuyLink place="final" className="cr-btn on-dark">Start learning · {price}</BuyLink>
+            <BuyLink place="final" className="cr-btn on-dark">Start learning · <Price usd={usd} inr={inr} /></BuyLink>
             <Link className="cr-btn ghost-dark" href="/login">Student sign in</Link>
           </div>
         </section>
@@ -472,7 +467,7 @@ export default async function Home() {
         <p className="cr-made">Made and taught by Pritam, Kolkata, India. <span><span lang="bn">ধন্যবাদ</span> <i>dhonnobad</i> · thank you</span></p>
       </div>
       <PricingSeen />
-      <StickyCta label={`Start learning · ${price}`} />
+      <StickyCta usd={usd} inr={inr} />
     </div>
   );
 }

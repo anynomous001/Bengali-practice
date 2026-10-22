@@ -6,11 +6,12 @@ import Icon from "./learn/Icon";
 type Mode = "light" | "dark";
 
 /** A sun/moon button for the landing nav. It uses the same bp_theme cookie as the app, so the choice carries over. */
-export default function ThemeSwitch({ initial }: { initial: Mode | "system" }) {
-  const [mode, setMode] = useState<Mode>(initial === "dark" ? "dark" : "light");
+export default function ThemeSwitch() {
+  const [mode, setMode] = useState<Mode>("light");
   useEffect(() => {
-    if (initial === "system") setMode(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-  }, [initial]);
+    const set = document.documentElement.getAttribute("data-theme");
+    setMode(set === "dark" || set === "light" ? set : window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  }, []);
   const flip = () => {
     const next: Mode = mode === "dark" ? "light" : "dark";
     setMode(next);

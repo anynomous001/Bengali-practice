@@ -2,7 +2,9 @@
 export const SITE_URL = (process.env.APP_URL || "https://bengali-practice.gencore.co.in").replace(/\/$/, "");
 export const SITE_NAME = "Bengali Practice";
 export const SITE_TITLE = "Learn Bengali Online | Bengali Practice by a Kolkata Teacher";
-export const SITE_DESCRIPTION = "Learn to read, speak and write Bengali with short daily lessons: alphabet, vocabulary, grammar, role plays and flashcards, built by an online Bengali teacher from Kolkata. One payment, no subscription.";
+export const SITE_DESCRIPTION = "Learn to read, speak and write Bengali with short daily lessons from a Kolkata teacher: alphabet, vocabulary, grammar and role plays.";
+/** A shorter line for share cards, where about 120 characters fit before the preview is cut. */
+export const SOCIAL_DESCRIPTION = "Read, speak and write Bengali with short daily lessons from a Kolkata teacher. Try a letter free.";
 export const SITE_KEYWORDS = [
   "learn Bengali", "learn Bengali online", "Bengali practice", "Bengali learning", "Bengali lessons", "Bengali for beginners",
   "Bengali alphabet", "Bengali vocabulary", "Bengali grammar", "learn Bengali script", "Bengali language course", "Bangla learning",

@@ -4,14 +4,15 @@ import { BIG_NUMBERS, NUMBER_CHART, PRICE_PHRASES } from "@/data/numbers";
 import { OG_IMAGES, SITE_NAME } from "@/lib/site";
 import { Crumbs, GuideCta } from "../GuideBits";
 
-const TITLE = "Bengali Numbers 1 to 100 (সংখ্যা) with Pronunciation";
+const TITLE = "Bengali Numbers 1 to 100";
+const SHORT = "Bengali numbers 0 to 100 in Bengali script with pronunciation, plus lakh, crore and shopping phrases.";
 const DESC = "Bengali numerals ০ to ৯ and every number from 0 to 100 in Bengali script with romanization, plus thousand, lakh and crore and phrases for shopping.";
 export const metadata: Metadata = {
   title: { absolute: `${TITLE} | ${SITE_NAME}` },
   description: DESC,
   alternates: { canonical: "/bengali-numbers" },
-  openGraph: { type: "article", url: "/bengali-numbers", title: TITLE, description: DESC, images: OG_IMAGES },
-  twitter: { card: "summary_large_image", title: TITLE, description: DESC, images: ["/twitter-image"] },
+  openGraph: { type: "article", url: "/bengali-numbers", title: TITLE, description: SHORT, images: OG_IMAGES },
+  twitter: { card: "summary_large_image", title: TITLE, description: SHORT, images: ["/twitter-image"] },
 };
 
 export default function BengaliNumbers() {
