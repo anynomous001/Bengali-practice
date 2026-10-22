@@ -1053,10 +1053,11 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
 /* writing: step pictures */
 .steps-h { margin: 22px 0 4px; font-size: 1.15rem; text-align: center; }
 .steps-note { max-width: 440px; margin: 0 auto 12px; text-align: center; font-size: .92rem; }
-.steps-pics { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; list-style: none; margin: 8px 0 18px; padding: 0; }
-.steps-pics li { display: grid; justify-items: center; gap: 4px; font-size: .82rem; color: var(--ink-2); font-weight: 600; }
-.steps-pics svg { width: 132px; height: 132px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
-.steps-pics path { fill: none; stroke: currentColor; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
+.steps-pics { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; list-style: none; margin: 10px 0 20px; padding: 0; }
+.steps-pics li { display: grid; justify-items: center; gap: 8px; }
+.steps-pics svg { width: 132px; height: 132px; background: linear-gradient(180deg, var(--surface), color-mix(in srgb, var(--primary) 5%, var(--surface))); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); }
+.steps-pics li > span { padding: 3px 12px; border-radius: 999px; background: color-mix(in srgb, var(--primary) 12%, var(--surface)); color: var(--primary); font-size: .78rem; font-weight: 700; letter-spacing: .02em; }
+.steps-pics path { fill: none; stroke: currentColor; stroke-width: 17; stroke-linecap: round; stroke-linejoin: round; }
 .steps-pics circle { fill: currentColor; }
-.steps-pics .sp-old { color: var(--ink); }
-.steps-pics .sp-new { color: var(--alta); }
+.steps-pics .sp-old { color: var(--ink); opacity: .82; }
+.steps-pics .sp-new { color: var(--primary); }
