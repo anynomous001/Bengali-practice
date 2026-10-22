@@ -50,6 +50,8 @@
 .cr-pill nav a { padding: 8px 14px; border-radius: 999px; text-decoration: none; font-size: .92rem; font-weight: 500; color: var(--ink-2); }
 .cr-pill nav a:hover { background: var(--surface-2); color: var(--ink); }
 .cr-pill-end { display: flex; align-items: center; gap: 6px; }
+.cr-theme { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; transition: background .15s; }
+.cr-theme:hover { background: var(--surface-2); }
 .cr-signin { padding: 8px 14px; border-radius: 999px; text-decoration: none; font-size: .92rem; font-weight: 500; }
 .cr-signin:hover { background: var(--surface-2); }
 
@@ -84,6 +86,7 @@
 .cr-course.wide { grid-column: 1 / -1; }
 .cr-course .cr-bigletters { margin-top: 12px; }
 .cr-vowels { margin-top: 12px; padding: 12px 20px 14px; border-radius: 18px; background: var(--surface); container-type: inline-size; align-self: stretch; }
+.cr-vowels .vstrip.cycling { font-size: 3.4rem; min-height: 5rem; }
 .cr-vowels .vstrip { margin-top: 0; padding-top: 0; border-top: 0; min-height: 3.4rem; }
 .cr-note { max-width: 760px; margin: 28px auto 0; text-align: center; color: var(--ink-2); }
 

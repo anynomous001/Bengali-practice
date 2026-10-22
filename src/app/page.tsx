@@ -6,7 +6,7 @@ import Image from "next/image";
 import Logo from "./Logo";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { headers } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { getUser } from "@/lib/auth";
 import { defaultCurrency, priceInr, priceUsd } from "@/lib/pricing";
 import { IconTile } from "./learn/Icon";
@@ -17,6 +17,7 @@ import BuyLink from "./BuyLink";
 import PricingSeen from "./PricingSeen";
 import LandingMotion from "./LandingMotion";
 import ScrollFx from "./ScrollFx";
+import ThemeSwitch from "./ThemeSwitch";
 import AssembleSentence from "./AssembleSentence";
 import VowelStrip from "./VowelStrip";
 import { BUSINESS } from "@/data/business";
@@ -88,7 +89,9 @@ const FAQ = [
 export default async function Home() {
   if (await getUser()) redirect("/learn");
   const usd = priceUsd();
-  const [inr, h] = await Promise.all([priceInr(), headers()]);
+  const [inr, h, jar] = await Promise.all([priceInr(), headers(), cookies()]);
+  const savedTheme = jar.get("bp_theme")?.value;
+  const theme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : "system";
   const india = defaultCurrency(h.get("x-vercel-ip-country")) === "INR";
   const price = india ? `₹${inr.amount.toLocaleString("en-IN")}` : `$${usd}`;
   const perMonth = india ? `₹${Math.round(inr.amount / 12 / 10) * 10}` : `$${(usd / 12).toFixed(2)}`;
@@ -136,6 +139,7 @@ export default async function Home() {
             <a href="#faq">FAQ</a>
           </nav>
           <div className="cr-pill-end">
+            <ThemeSwitch initial={theme} />
             <Link href="/login" className="cr-signin">Sign in</Link>
             <BuyLink place="nav" className="cr-btn sm">Get access</BuyLink>
           </div>
