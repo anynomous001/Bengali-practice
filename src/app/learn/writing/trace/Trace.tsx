@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { recordWriting } from "../../../actions";
 import { useRoman } from "../../Roman";
 import { VOWEL_STEPS } from "@/data/vowel-steps";
+import { CONSONANT_STEPS } from "@/data/consonant-steps";
 import StepPictures from "./StepPictures";
 
 const SIZE = 400;
@@ -66,6 +67,7 @@ export default function Trace({
   const [tool, setTool] = useState<"pen" | "eraser">("pen");
   const [inked, setInked] = useState(false);
   const item = ITEMS.find((l) => l.id === sel)!;
+  const steps = VOWEL_STEPS[item.id] ?? CONSONANT_STEPS[item.id];
 
   // Both canvases are sized for the device pixel ratio so strokes stay sharp.
   useEffect(() => {
@@ -173,11 +175,11 @@ export default function Trace({
         <button type="button" className="btn ghost small" onClick={clear} disabled={!inked}>Clear</button>
         <button type="button" className="btn ghost small" onClick={() => setGuide((g) => !g)}>{guide ? "Hide letter" : "Show letter"}</button>
       </div>
-      {VOWEL_STEPS[item.id] && (
+      {steps && (
         <section>
           <h2 className="steps-h">How to write it</h2>
           <p className="muted steps-note">Draw the main shapes from the top down. The little flicks come last, drawn from the bottom up. The new part in each step is in color.</p>
-          <StepPictures steps={VOWEL_STEPS[item.id]} label={item.guide} />
+          <StepPictures steps={steps} label={item.guide} />
         </section>
       )}
       <button className="btn trace-done" onClick={done}>I&apos;m done · next {noun.toLowerCase()}</button>
