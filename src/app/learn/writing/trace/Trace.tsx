@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { recordWriting } from "../../../actions";
 import { useRoman } from "../../Roman";
+import { VOWEL_STEPS } from "@/data/vowel-steps";
+import StepPictures from "./StepPictures";
 
 const SIZE = 400;
 const PEN = 9;
@@ -171,6 +173,13 @@ export default function Trace({
         <button type="button" className="btn ghost small" onClick={clear} disabled={!inked}>Clear</button>
         <button type="button" className="btn ghost small" onClick={() => setGuide((g) => !g)}>{guide ? "Hide letter" : "Show letter"}</button>
       </div>
+      {VOWEL_STEPS[item.id] && (
+        <section>
+          <h2 className="steps-h">How to write it</h2>
+          <p className="muted steps-note">Draw the main shapes from the top down. The little flicks come last, drawn from the bottom up. The new part in each step is in color.</p>
+          <StepPictures steps={VOWEL_STEPS[item.id]} label={item.guide} />
+        </section>
+      )}
       <button className="btn trace-done" onClick={done}>I&apos;m done · next {noun.toLowerCase()}</button>
       {GROUPS.map((g) => (
         <section key={g.id}>
