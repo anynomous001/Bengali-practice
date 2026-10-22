@@ -1,4 +1,15 @@
-/** The public address of the site, used for sharing cards, the sitemap and robots.txt. */
+/** The public address of the site, used for sharing cards, the sitemap, robots.txt and structured data. */
 export const SITE_URL = (process.env.APP_URL || "https://bengali-practice.gencore.co.in").replace(/\/$/, "");
-export const SITE_TITLE = "Bengali Practice: Learn Bengali online";
-export const SITE_DESCRIPTION = "Bengali practice built by an online Bengali teacher: reading, speaking, vocabulary and grammar drills in one place. One payment for 12 months, no subscription.";
+export const SITE_NAME = "Bengali Practice";
+export const SITE_TITLE = "Learn Bengali Online | Bengali Practice by a Kolkata Teacher";
+export const SITE_DESCRIPTION = "Learn to read, speak and write Bengali with short daily lessons: alphabet, vocabulary, grammar, role plays and flashcards, built by an online Bengali teacher from Kolkata. One payment, no subscription.";
+export const SITE_KEYWORDS = [
+  "learn Bengali", "learn Bengali online", "Bengali practice", "Bengali learning", "Bengali lessons", "Bengali for beginners",
+  "Bengali alphabet", "Bengali vocabulary", "Bengali grammar", "learn Bengali script", "Bengali language course", "Bangla learning",
+  "learn Bangla online", "Bengali flashcards", "Bengali tutor", "Kolkata Bengali",
+];
+export const PREPLY_URL = "https://preply.in/PRITAM6EN35993949102";
+/** When the public content last changed in a way worth telling search engines. */
+export const CONTENT_UPDATED = "2026-10-22";
+/** The share card, attached explicitly to pages that set their own openGraph block (Next only inherits it otherwise). */
+export const OG_IMAGES = [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Bengali Practice: learn to read, speak and write Bengali online" }];

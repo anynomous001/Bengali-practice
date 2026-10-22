@@ -1,6 +1,6 @@
 "use client";
 
-import { track } from "@vercel/analytics";
+import { track } from "@/lib/analytics";
 import { useEffect } from "react";
 
 /** Records, once per page view, that the pricing section scrolled into view. */

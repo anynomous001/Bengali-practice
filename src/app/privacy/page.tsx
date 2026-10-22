@@ -16,11 +16,13 @@ export default function Privacy() {
         <li><b>Technical data.</b> Our hosting provider may log standard request information, such as IP address and browser type, for security and reliability.</li>
       </ul>
       <h2>Cookies</h2>
-      <p>We use a small number of cookies that the service needs to work: one to keep you signed in, and two to remember your light or dark theme and your romanization setting. We do not use advertising or tracking cookies.</p>
+      <p>We use a small number of cookies that the service needs to work: one to keep you signed in, and two to remember your light or dark theme and your romanization setting. We do not use advertising cookies.</p>
+      <h2>Analytics</h2>
+      <p>We use Vercel Analytics, which does not use cookies, and Google Analytics 4 to see which pages are visited and how people find the site. We configure Google Analytics without advertising features or ad personalization, and we send it page addresses without anything after the “?”, never your email address or sign-in links. If you are in the European Union, the United Kingdom, Switzerland, Iceland, Liechtenstein or Norway, Google Analytics stores nothing on your device unless you choose “Allow” in the notice we show. You can change your mind by clearing this site’s data in your browser. You can also use Google’s opt-out add-on or turn on Do Not Track in your browser.</p>
       <h2>How we use it</h2>
       <p>To run the service, show your progress, send sign-in and purchase emails, prevent misuse, and answer your questions. We do not sell your data and we do not use it for advertising.</p>
       <h2>Who we share it with</h2>
-      <p>Only with services that help us run {BUSINESS.product}: Razorpay (payments), our email delivery provider (sign-in and purchase emails) and our hosting and database providers. They process data on our behalf. We may also share information if the law requires it.</p>
+      <p>Only with services that help us run {BUSINESS.product}: Razorpay (payments), our email delivery provider (sign-in and purchase emails) and our hosting and database providers, and Google (analytics). They process data on our behalf. We may also share information if the law requires it.</p>
       <h2>How long we keep it</h2>
       <p>We keep your account and progress while you have an account and for a reasonable period after your access ends, so you can renew and carry on. Payment records are kept as long as accounting law requires.</p>
       <h2>Your choices</h2>

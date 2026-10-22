@@ -264,3 +264,5 @@ html.motion-ok .cr [data-reveal] { transition: opacity .6s ease, transform .6s e
 .cr-say figcaption { margin-top: 8px; font-size: .85rem; color: var(--night-mute); }
 @media (max-width: 1000px) { .cr-ways { grid-template-columns: 1fr; } .cr-plus { justify-self: center; margin: -4px 0; } }
 @media (max-width: 700px) { .cr-way .cr-btn { width: 100%; } }
+
+.cr-guides { display: flex; flex-wrap: wrap; gap: 6px 22px; padding: 10px 0 16px; font-size: .92rem; } .cr .cr-guides a, .cr .cr-made a { color: var(--night-mute); text-underline-offset: 3px; } .cr .cr-guides a:hover { color: #fff; }

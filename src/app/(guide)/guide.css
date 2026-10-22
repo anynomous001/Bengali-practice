@@ -1,0 +1,38 @@
+/* free guide pages */
+.gd { max-width: 920px; margin: 0 auto; padding: clamp(40px, 7vw, 72px) var(--cr-gap) 0; }
+.gd h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; }
+.gd .gd-lead { margin-top: 18px; font-size: 1.2rem; color: var(--ink-2); max-width: 62ch; }
+.gd h2 { font-size: clamp(1.7rem, 3.2vw, 2.4rem); margin: clamp(40px, 6vw, 64px) 0 14px; }
+.gd h3 { font-size: 1.5rem; margin: 28px 0 8px; }
+.gd p { margin: 0 0 16px; color: var(--ink-2); font-size: 1.05rem; line-height: 1.65; max-width: 68ch; }
+.gd ul, .gd ol { color: var(--ink-2); font-size: 1.05rem; line-height: 1.65; padding-left: 22px; max-width: 68ch; }
+.gd li { margin-bottom: 8px; } .gd li b, .gd p b { color: var(--ink); }
+.gd a:not(.cr-btn) { color: var(--primary); text-underline-offset: 3px; }
+.gd-crumbs { font-size: .85rem; color: var(--ink-2); margin-bottom: 18px; } .gd-crumbs a { color: var(--ink-2) !important; }
+.gd-cta { margin-top: clamp(44px, 6vw, 72px); padding: clamp(26px, 4vw, 48px); border-radius: var(--cr-r); background: var(--night); color: var(--night-ink); text-align: center; }
+.gd-cta h2 { margin: 0 0 12px; color: #fff; } .gd-cta p { margin: 0 auto 22px; color: var(--night-mute); }
+.gd-cta .cr-cta { margin-top: 0; }
+.gd-end { margin-bottom: clamp(48px, 7vw, 80px); }
+/* letter cards */
+.gd-letters { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; margin: 18px 0 8px; padding: 0; list-style: none; max-width: none; }
+.gd-letters li { margin: 0; padding: 16px; border-radius: 20px; background: var(--surface); border: 1px solid var(--line); display: grid; gap: 4px; }
+.gd-letters .ch { font-family: var(--font-bn-serif); font-size: 3rem; line-height: 1.1; color: var(--primary); font-weight: 600; }
+.gd-letters .rom { font-weight: 700; color: var(--ink); } .gd-letters .ex { font-size: .92rem; color: var(--ink-2); line-height: 1.4; }
+.gd-letters .ex [lang="bn"] { color: var(--ink); }
+/* number table */
+.gd-table { width: 100%; border-collapse: collapse; margin: 12px 0 8px; font-size: 1rem; }
+.gd-table th, .gd-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); }
+.gd-table th { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-2); }
+.gd-table td:first-child { font-variant-numeric: tabular-nums; color: var(--ink-2); } .gd-table [lang="bn"] { font-size: 1.25rem; color: var(--ink); }
+.gd-numgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin: 12px 0; padding: 0; list-style: none; max-width: none; }
+.gd-numgrid li { margin: 0; padding: 10px 14px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.gd-numgrid .n { font-family: var(--font-bn-serif); font-size: 1.5rem; color: var(--primary); font-weight: 600; min-width: 2.4ch; } .gd-numgrid .w { font-size: .95rem; color: var(--ink-2); } .gd-numgrid .w b { color: var(--ink); }
+.gd-note { padding: 16px 20px; border-radius: 18px; background: color-mix(in srgb, var(--primary) 9%, var(--surface)); border: 1px solid color-mix(in srgb, var(--primary) 16%, transparent); }
+.gd-note p { margin: 0; }
+.gd details { border-top: 1px solid var(--line-2); } .gd details:last-of-type { border-bottom: 1px solid var(--line-2); }
+.gd summary { cursor: pointer; padding: 18px 0; font-family: var(--font-serif); font-size: 1.3rem; letter-spacing: -.02em; }
+.gd details p { padding-bottom: 14px; }
+
+.gd ul.gd-letters, .gd ul.gd-numgrid { padding-left: 0; }
+.gd .gd-numgrid li { display: grid; grid-template-columns: 2.6ch 1fr; align-items: center; gap: 10px; flex-wrap: nowrap; }
+.gd .gd-numgrid .w { line-height: 1.3; }

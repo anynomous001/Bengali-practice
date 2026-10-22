@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import JsonLd from "./JsonLd";
+import { inter } from "./inter";
+import { OG_IMAGES, PREPLY_URL, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
 import "./landing.css";
 import type { CSSProperties } from "react";
 import Image from "next/image";
@@ -33,9 +35,12 @@ import { DEV_STORIES } from "@/data/devotional-stories";
 import { DEV_TOPICS } from "@/data/devotional";
 import { TOPICS } from "@/data/impromptu";
 
-const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--f-inter" });
-
-export const metadata: Metadata = { alternates: { canonical: "/" } };
+export const metadata: Metadata = {
+  title: { absolute: SITE_TITLE },
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: { type: "website", url: "/", siteName: SITE_NAME, title: SITE_TITLE, description: SITE_DESCRIPTION, images: OG_IMAGES },
+};
 
 const VOCAB_WORDS = VOCAB.reduce((n, t) => n + t.sections.reduce((m, s) => m + s.words.length, 0), 0);
 const VOCAB_ROUND = Math.round(VOCAB_WORDS / 100) * 100;
@@ -100,6 +105,25 @@ export default async function Home() {
   const hasProof = proofQuotes.length > 0 || TEACHER.stats.length > 0;
   const hasAbout = TEACHER.story.length > 0;
 
+  const refundAnswer = `Not for you? Email ${BUSINESS.email} within ${BUSINESS.refundDays} days of paying for a full refund. If anything goes wrong with a payment, write to us and we will sort it out.`;
+  const org = { "@type": "EducationalOrganization", "@id": `${SITE_URL}/#org`, name: SITE_NAME, url: SITE_URL, logo: `${SITE_URL}/logo.png`, email: BUSINESS.email, founder: { "@id": `${SITE_URL}/#pritam` }, sameAs: [PREPLY_URL], address: { "@type": "PostalAddress", addressLocality: "Kolkata", addressRegion: "West Bengal", addressCountry: "IN" } };
+  const graph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      org,
+      { "@type": "WebSite", "@id": `${SITE_URL}/#site`, url: SITE_URL, name: SITE_NAME, description: SITE_DESCRIPTION, inLanguage: "en", publisher: { "@id": `${SITE_URL}/#org` } },
+      { "@type": "Person", "@id": `${SITE_URL}/#pritam`, name: TEACHER.name, jobTitle: "Online Bengali teacher", image: `${SITE_URL}/landing/pritam.jpg`, homeLocation: { "@type": "Place", name: "Kolkata, India" }, knowsLanguage: ["bn", "en", "hi"], sameAs: [PREPLY_URL], worksFor: { "@id": `${SITE_URL}/#org` } },
+      {
+        "@type": "Course", "@id": `${SITE_URL}/#course`, name: "Bengali Practice: read, speak and write Bengali", url: SITE_URL, inLanguage: "en",
+        description: "Short daily lessons in the Bengali alphabet, vocabulary, grammar, speaking role plays and writing, with audio, flashcards and timed exams, for beginners and heritage learners.",
+        teaches: "Reading, speaking and writing Bengali", educationalLevel: "Beginner", provider: { "@id": `${SITE_URL}/#org` }, instructor: { "@id": `${SITE_URL}/#pritam` },
+        hasCourseInstance: { "@type": "CourseInstance", courseMode: "online", courseWorkload: "PT10M", instructor: { "@id": `${SITE_URL}/#pritam` } },
+        offers: { "@type": "Offer", category: "Paid", price: usd, priceCurrency: "USD", url: `${SITE_URL}/buy`, availability: "https://schema.org/InStock" },
+      },
+      { "@type": "FAQPage", mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a === "REFUND" ? refundAnswer : f.a } })) },
+    ],
+  };
+
   const shots = [
     { id: "home", bn: "আজ", ro: "aj", gloss: "today", title: "A home page that knows where you left off", text: "Your streak, today's goal and the next lesson, in one place.", notes: ["Your streak", "Today's goal", "The next lesson, one tap away"], alt: "The learner home page showing a streak and the next lesson" },
     { id: "flashcard", seg: "vocabulary", bn: "শব্দ", ro: "shobdo", gloss: "word", title: `Flashcards for about ${VOCAB_ROUND} words`, text: `${VOCAB.length} topics. Each word comes back just before you would forget it.`, alt: "A vocabulary flashcard" },
@@ -122,6 +146,7 @@ export default async function Home() {
 
   return (
     <div className={`cr ${inter.variable}`}>
+      <JsonLd data={graph} />
       <LandingMotion />
       <ScrollFx />
 
@@ -443,6 +468,7 @@ export default async function Home() {
 
       <div className="cr-foot">
         <SiteFooter />
+        <nav className="cr-guides" aria-label="Free guides"><Link href="/learn-bengali">How to learn Bengali</Link><Link href="/bengali-alphabet">Bengali alphabet</Link><Link href="/bengali-numbers">Bengali numbers 1 to 100</Link></nav>
         <p className="cr-made">Made and taught by Pritam, Kolkata, India. <span><span lang="bn">ধন্যবাদ</span> <i>dhonnobad</i> · thank you</span></p>
       </div>
       <PricingSeen />

@@ -1,6 +1,6 @@
 "use client";
 
-import { track } from "@vercel/analytics";
+import { track } from "@/lib/analytics";
 import { useEffect, useRef, useState } from "react";
 import BuyLink from "./BuyLink";
 import BnPath, { type Phase } from "./BnPath";

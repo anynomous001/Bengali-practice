@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getUser } from "@/lib/auth";
 import { headers } from "next/headers";
@@ -6,6 +7,8 @@ import { codeIsValid } from "@/lib/referrals";
 import { BUSINESS } from "@/data/business";
 import AuthFrame from "../AuthFrame";
 import BuyForm from "./BuyForm";
+
+export const metadata: Metadata = { title: "Get access", robots: { index: false, follow: true } };
 
 export default async function BuyPage({ searchParams }: { searchParams: Promise<{ ref?: string }> }) {
   const { ref } = await searchParams;

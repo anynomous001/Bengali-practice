@@ -1,6 +1,6 @@
 "use client";
 
-import { track } from "@vercel/analytics";
+import { track } from "@/lib/analytics";
 import { useState } from "react";
 
 type RzResponse = { razorpay_order_id: string; razorpay_payment_id: string; razorpay_signature: string };
