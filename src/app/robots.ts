@@ -10,6 +10,5 @@ export default function robots(): MetadataRoute.Robots {
       disallow: ["/learn/", "/learn$", "/admin", "/api", "/login", "/buy", "/access-ended"],
     }],
     sitemap: `${SITE_URL}/sitemap.xml`,
-    host: SITE_URL,
   };
 }
