@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   formatDetection: { telephone: false, email: false, address: false },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
-  // Search Console and Bing Webmaster Tools verification: set these two variables in Vercel, no code change needed.
-  verification: { google: process.env.GOOGLE_SITE_VERIFICATION || undefined, other: process.env.BING_SITE_VERIFICATION ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION } : undefined },
+  // Google is verified by the file in /public (googlef0b303cdc147d006.html). Bing: the meta tag below (a public code), also served as /BingSiteAuth.xml. The variables override them.
+  verification: { google: process.env.GOOGLE_SITE_VERIFICATION || undefined, other: { "msvalidate.01": process.env.BING_SITE_VERIFICATION || "7C620522AFF244AA605C440D50D104D3" } },
   openGraph: { siteName: SITE_NAME, type: "website", url: "/", title: SITE_TITLE, description: SOCIAL_DESCRIPTION, locale: "en_US" },
   twitter: { card: "summary_large_image", site: TWITTER_SITE, title: SITE_TITLE, description: SOCIAL_DESCRIPTION },
   icons: {
