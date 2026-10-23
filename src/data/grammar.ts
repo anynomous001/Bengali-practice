@@ -416,11 +416,11 @@ export const GRAMMAR: GrammarTopic[] = [
      },
      {
       "t": "h",
-      "text": "Two verbs, five persons"
+      "text": "One verb, five persons"
      },
      {
       "t": "p",
-      "text": "Here are the two most useful verbs, 'to be' (আছা) and 'to do' (করা), in the simple present. Look at the last column: it is the same ending on both verbs, and it is the ending you will meet on almost every verb. Learn it once and you can use it everywhere."
+      "text": "Here is the verb 'to do' (করা) in the simple present, with one pronoun for each person. Look at the last column: the ending is what changes, and it is the ending you will meet on almost every verb. Learn it once and you can use it everywhere."
      },
      {
       "t": "table",
@@ -428,7 +428,6 @@ export const GRAMMAR: GrammarTopic[] = [
       "head": [
        "Person",
        "Pronoun",
-       "to be (আছা)",
        "to do (করা)",
        "Ending"
       ],
@@ -438,10 +437,6 @@ export const GRAMMAR: GrammarTopic[] = [
         {
          "bn": "আমি",
          "ro": "ami"
-        },
-        {
-         "bn": "আছি",
-         "ro": "achhi"
         },
         {
          "bn": "করি",
@@ -459,10 +454,6 @@ export const GRAMMAR: GrammarTopic[] = [
          "ro": "tui"
         },
         {
-         "bn": "আছিস",
-         "ro": "achhis"
-        },
-        {
          "bn": "করিস",
          "ro": "koris"
         },
@@ -476,10 +467,6 @@ export const GRAMMAR: GrammarTopic[] = [
         {
          "bn": "তুমি",
          "ro": "tumi"
-        },
-        {
-         "bn": "আছ",
-         "ro": "achho"
         },
         {
          "bn": "করো",
@@ -497,10 +484,6 @@ export const GRAMMAR: GrammarTopic[] = [
          "ro": "apni / tini"
         },
         {
-         "bn": "আছেন",
-         "ro": "achhen"
-        },
-        {
          "bn": "করেন",
          "ro": "koren"
         },
@@ -514,10 +497,6 @@ export const GRAMMAR: GrammarTopic[] = [
         {
          "bn": "সে",
          "ro": "she"
-        },
-        {
-         "bn": "আছে",
-         "ro": "achhe"
         },
         {
          "bn": "করে",
@@ -2603,56 +2582,6 @@ export const GRAMMAR: GrammarTopic[] = [
     ],
     "answer": 0,
     "why": "তুমি takes -ও: খাও."
-   },
-   {
-    "kind": "fill",
-    "inst": "Choose the form of আছা that goes with the pronoun.",
-    "q": "Which word fills the blank?",
-    "sentence": {
-     "bn": "আপনি কেমন ___?",
-     "ro": "apni kemon ___?"
-    },
-    "options": [
-     {
-      "bn": "আছেন",
-      "ro": "achhen"
-     },
-     {
-      "bn": "আছ",
-      "ro": "achho"
-     },
-     {
-      "bn": "আছে",
-      "ro": "achhe"
-     }
-    ],
-    "answer": 0,
-    "why": "'To be' with আপনি is আছেন."
-   },
-   {
-    "kind": "fill",
-    "inst": "Choose the form of আছা that goes with the pronoun.",
-    "q": "Which word fills the blank?",
-    "sentence": {
-     "bn": "সে ভালো ___।",
-     "ro": "she bhalo ___."
-    },
-    "options": [
-     {
-      "bn": "আছে",
-      "ro": "achhe"
-     },
-     {
-      "bn": "আছি",
-      "ro": "achhi"
-     },
-     {
-      "bn": "আছেন",
-      "ro": "achhen"
-     }
-    ],
-    "answer": 0,
-    "why": "'To be' with সে is আছে."
    },
    {
     "kind": "pick",

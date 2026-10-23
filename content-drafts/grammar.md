@@ -112,15 +112,15 @@ English changes the verb for number sometimes ('he goes', 'they go'). Bengali do
 
 In English the verb mostly stays the same ('I go', 'you go', 'we go'). In Bengali the verb changes its ending for every person. The first part of the verb (the root) stays, and the ending tells you who is doing the action. That is why Bengali speakers often leave the pronoun out: the ending already says it.
 
-Here are the two most useful verbs, 'to be' (আছা) and 'to do' (করা), in the simple present. Look at the last column: it is the same ending on both verbs, and it is the ending you will meet on almost every verb. Learn it once and you can use it everywhere.
+Here is the verb 'to do' (করা) in the simple present, with one pronoun for each person. Look at the last column: the ending is what changes, and it is the ending you will meet on almost every verb. Learn it once and you can use it everywhere.
 
-| Person | Pronoun | to be (আছা) | to do (করা) | Ending |
-|---|---|---|---|---|
-| I | আমি _(ami)_ | আছি _(achhi)_ | করি _(kori)_ | ◌ি _(-i)_ |
-| you (very familiar) | তুই _(tui)_ | আছিস _(achhis)_ | করিস _(koris)_ | ◌িস _(-is)_ |
-| you (familiar) | তুমি _(tumi)_ | আছ _(achho)_ | করো _(koro)_ | ◌ো _(-o)_ |
-| you, he or she (respectful) | আপনি / তিনি _(apni / tini)_ | আছেন _(achhen)_ | করেন _(koren)_ | ◌েন _(-en)_ |
-| he, she, it | সে _(she)_ | আছে _(achhe)_ | করে _(kore)_ | ◌ে _(-e)_ |
+| Person | Pronoun | to do (করা) | Ending |
+|---|---|---|---|
+| I | আমি _(ami)_ | করি _(kori)_ | ◌ি _(-i)_ |
+| you (very familiar) | তুই _(tui)_ | করিস _(koris)_ | ◌িস _(-is)_ |
+| you (familiar) | তুমি _(tumi)_ | করো _(koro)_ | ◌ো _(-o)_ |
+| you, he or she (respectful) | আপনি / তিনি _(apni / tini)_ | করেন _(koren)_ | ◌েন _(-en)_ |
+| he, she, it | সে _(she)_ | করে _(kore)_ | ◌ে _(-e)_ |
 
 > **Note:** Two pronouns share one ending. আপনি (you, respectful) and তিনি (he or she, respectful) both take the ending in যান and করেন. Respected people named by a noun, such as মা or শিক্ষক, take it too.
 
@@ -473,22 +473,12 @@ Because the verb ending already shows the person, Bengali very often leaves the 
    - B) খান _(khan)_
    - C) খাই _(khai)_
    - _Why:_ তুমি takes -ও: খাও.
-28. Which word fills the blank? **আপনি কেমন ___?**
-   - A) আছেন _(achhen)_  ✔
-   - B) আছ _(achho)_
-   - C) আছে _(achhe)_
-   - _Why:_ 'To be' with আপনি is আছেন.
-29. Which word fills the blank? **সে ভালো ___।**
-   - A) আছে _(achhe)_  ✔
-   - B) আছি _(achhi)_
-   - C) আছেন _(achhen)_
-   - _Why:_ 'To be' with সে is আছে.
-30. Which verb is correct for 'I am doing'?
+28. Which verb is correct for 'I am doing'?
    - A) করছি _(korchhi)_  ✔
    - B) করছে _(korchhe)_
    - C) করছেন _(korchhen)_
    - _Why:_ The present continuous ending for আমি is -ছি: করছি.
-31. Which sentence is correct?
+29. Which sentence is correct?
    - A) আমরা বাজারে যাই। _(amra bajare jai.)_  ✔
    - B) আমরা বাজারে যায়। _(amra bajare jay.)_
    - C) আমরা বাজারে যান। _(amra bajare jan.)_
