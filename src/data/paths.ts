@@ -228,6 +228,57 @@ export const GOALS: PathGoal[] = [
     note: "This path is shorter than it should be. Workplace role plays, such as a call with a client, are still to come.",
   },
   {
+    id: "clinical",
+    tag: "Clinical",
+    title: "Speech and health care work",
+    bn: "চিকিৎসা",
+    bnRoman: "chikitsha",
+    blurb: "Talk with Bengali-speaking families and children: ask about history, give simple instructions and explain home practice.",
+    who: "For speech therapists, nurses, teachers and others who work with Bengali-speaking clients and their families.",
+    stages: [
+      SCRIPT,
+      {
+        title: "Polite basics",
+        blurb: "Greet people properly, and ask clear questions.",
+        steps: [
+          { id: "vocabulary/greetings", why: "Greetings and polite words for any first meeting." },
+          { id: "grammar/purush", why: "আপনি for parents and other adults, তুমি for children, and how the verb changes." },
+          { id: "vocabulary/questions", why: "Ask who, what, where, when and how much." },
+          { id: "vocabulary/people", why: "People and jobs: family members, teachers, doctors and therapists." },
+        ],
+      },
+      {
+        title: "The mouth, voice and hearing",
+        blurb: "The words for the parts of the mouth, for voice and sound, and for hearing.",
+        steps: [
+          { id: "vocabulary/body", why: "The body, and how to say what hurts." },
+          { id: "vocabulary/mouth-voice", why: "Mouth, throat, voice, sound and hearing: the words of your work." },
+          { id: "vocabulary/speech-language", why: "Speech, language, how speech sounds and how a child develops." },
+        ],
+      },
+      {
+        title: "Giving instructions",
+        blurb: "Short commands for a child, and polite requests for a parent.",
+        steps: [
+          { id: "vocabulary/verbs", why: "The common verbs behind most instructions." },
+          { id: "grammar/kriya", why: "Commands for a child and polite requests for an adult." },
+          { id: "vocabulary/therapy-practice", why: "Sessions, home practice, praise and next steps." },
+        ],
+      },
+      {
+        title: "With a child and a family",
+        blurb: "Three role plays for the conversations you will have: the first interview, a session with a child and explaining home practice.",
+        steps: [
+          { id: "speaking/roleplay-clinical-intake", why: "Greet a parent, ask about the child's speech and hearing, and listen to their worries." },
+          { id: "speaking/roleplay-clinical-session", why: "Get a child's attention, give mouth and sound exercises, and praise the effort." },
+          { id: "speaking/roleplay-clinical-home", why: "Say how the session went, give home exercises and agree the next visit." },
+          { id: "speaking/roleplay-phone", why: "Call a family to confirm an appointment." },
+        ],
+      },
+    ],
+    note: "Written for this path and still to be reviewed by your teacher. Phonetic symbols (IPA) and longer listening practice are still to come.",
+  },
+  {
     id: "passion",
     tag: "Curiosity",
     title: "Learn it for the love of it",

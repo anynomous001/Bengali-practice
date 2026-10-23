@@ -265,3 +265,7 @@ The list is of search results I read as summaries; I did not verify the claims i
 - Devotional: [ISKCON News: BRC Bengali course](https://iskconnews.org/brc-launches-bengali-language-course-through-srila-prabhupadas-alma-mater/)
 - Children and heritage apps: [Barnoparichay](https://apps.apple.com/us/app/id790653187), [BALA Bornomala](https://apps.apple.com/app/id1668889490)
 - Browser speech recognition support (general, not Bengali): [TestMu browser support guide](https://www.testmuai.com/learning-hub/speech-recognition-api-browser-support/), [AssemblyAI guide](https://www.assemblyai.com/blog/speech-recognition-javascript-web-speech-api)
+
+## Update, 23 October 2026: clinical Bengali added
+
+A new goal, **Speech and health care work**, was added after a student (a speech-language pathologist with in-laws in Kolkata) came through Preply. It has 3 new vocabulary topics (96 words, 28 phrases) and 3 role plays (the first interview with a parent, working with a child, explaining home practice). The Bengali is a draft and needs the teacher's review. Still missing for this student: IPA on the alphabet, minimal-pair listening, longer listening practice with Kolkata speakers, and clips of real voices.

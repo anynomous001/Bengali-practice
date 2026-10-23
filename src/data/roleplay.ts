@@ -2,6 +2,7 @@
 // Only import this from server code (pages/actions) so the text is never in the public JS bundle.
 
 import { FAMILY_SCENARIOS } from "./roleplay-family";
+import { CLINICAL_SCENARIOS } from "./roleplay-clinical";
 
 export type L = [bn: string, ro: string, en: string];
 export type RWord = L;
@@ -615,6 +616,7 @@ export const SCENARIOS: Scenario[] = [
     ],
   },
   ...FAMILY_SCENARIOS,
+  ...CLINICAL_SCENARIOS,
 ];
 
 export const getScenario = (id: string) => SCENARIOS.find((s) => s.id === id);
