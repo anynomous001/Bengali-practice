@@ -1120,3 +1120,17 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
 .tile .ch { color:var(--primary); font-weight:600; font-size:2.2rem; }
 .tile .rom { font-size:.8rem; font-weight:700; color:var(--ink); }
 .tile.current .ch { color:var(--primary); }
+
+/* Progress and leaderboard: the same card look as the guides */
+.progress-page .section-title { font:500 1.7rem/1.2 var(--font-serif); letter-spacing:-.02em; }
+.ms-group h3 { font:500 1.3rem/1.25 var(--font-serif); }
+.pg-stat { border-radius:20px; }
+.pg-stat b { font-family:var(--font-serif); font-weight:500; font-size:2rem; letter-spacing:-.02em; }
+.ms-list li { border-radius:18px; }
+.lb-link { border-radius:20px; }
+.board li { border-radius:18px; padding:12px 16px; }
+.board .rank { font:500 1.4rem/1 var(--font-serif); }
+.board .who { font-weight:600; }
+.board li > span:last-child { font:500 1.5rem/1 var(--font-serif); }
+.lb-tabs { border-radius:999px; } .lb-tabs a { border-radius:999px; }
+.settings-form { border-radius:20px; }
