@@ -87,33 +87,28 @@ function Learn({ progress }: { progress: Progress }) {
   }, []);
   const place = sel ? PLACES.find((p) => p.id === sel.place) : null;
   const tile = (l: Letter) => (
-    <button key={l.ch} className={"tile" + (mastered(progress, l.ch) ? " done" : "")} onClick={() => setSel(l)}>
-      <span className="ch">{l.ch}</span>
-      {roman && <span className="rom">{l.rom.split(" (")[0]}</span>}
-    </button>
+    <div key={l.ch} className={"lcard" + (mastered(progress, l.ch) ? " done" : "") + (sel?.ch === l.ch ? " current" : "")}>
+      <button type="button" className="lcard-main" onClick={() => { setSel(l); speak(l.ch); }} aria-label={`${l.ch}, ${l.rom}. Hear it and see more.`}>
+        <span className="ch" lang="bn">{l.ch}</span>
+        {roman && <span className="rom">{l.rom}</span>}
+      </button>
+      {l.word && <span className="ex"><span lang="bn">{l.word}</span>{roman && ` (${l.wrom})`}: {l.wmean}</span>}
+      {l.tip && <span className="ex tip"><b>Trick: </b><TipText text={l.tip} /></span>}
+      <div className="lcard-btns">
+        <button type="button" onClick={() => speak(l.ch)}><Icon name="sound" size={14} /> Letter</button>
+        {l.word && <button type="button" onClick={() => speak(l.word!)}><Icon name="sound" size={14} /> Word</button>}
+      </div>
+    </div>
   );
   return (
     <>
       {sel && (
-        <section className="detail">
-          <div className="big">{sel.ch}</div>
+        <section className="detail more">
           <div>
-            {roman && <p className="sound">Sounds like: <b>{sel.rom}</b></p>}
-            {sel.word && <p><span className="word">{sel.word}</span>{roman && ` (${sel.wrom})`}<span className="gloss"> – {sel.wmean}</span></p>}
-            <button className="btn" onClick={() => speak(sel.ch)}><Icon name="sound" size={18} /> Letter</button>
-            {sel.word && <button className="btn" onClick={() => speak(sel.word!)}><Icon name="sound" size={18} /> Word</button>}
-            {place && (
-              <p className="place-line">Made in the <b lang="bn">{place.bn}</b> place: {place.en}</p>
-            )}
+            <p className="sound"><b lang="bn" className="more-ch">{sel.ch}</b>{roman && <> sounds like <b>{sel.rom}</b></>}</p>
+            {place && <p className="place-line">Made in the <b lang="bn">{place.bn}</b> place: {place.en}. {place.how}</p>}
+            {sel.vs && <p className="trick-vs">Do not mix it up with <TipText text={sel.vs} />.</p>}
             <LetterFeedback key={sel.ch} letter={sel.ch} />
-            {sel.tip && (
-              <div className="trick">
-                <b>Trick for saying it</b>
-                <p><TipText text={sel.tip} /></p>
-                {sel.vs && <p className="trick-vs">Do not mix it up with <TipText text={sel.vs} />.</p>}
-                {place && <p className="trick-vs">{place.how}</p>}
-              </div>
-            )}
           </div>
         </section>
       )}
@@ -124,7 +119,7 @@ function Learn({ progress }: { progress: Progress }) {
       {view === "order" && GROUPS.map((g) => (
         <section key={g.id} id={`sec-${g.id}`} className="anchor">
           <h2>{g.title}</h2>
-          <div className="grid">{LETTERS.filter((l) => l.group === g.id).map(tile)}</div>
+          <div className="lgrid">{LETTERS.filter((l) => l.group === g.id).map(tile)}</div>
         </section>
       ))}
       {view === "place" && PLACES.map((p) => {
@@ -134,7 +129,7 @@ function Learn({ progress }: { progress: Progress }) {
           <section key={p.id} className="anchor">
             <h2><span lang="bn">{p.bn}</span> <span className="place-en">{p.en}</span></h2>
             <p className="place-how">{p.how}</p>
-            <div className="grid">{ls.map(tile)}</div>
+            <div className="lgrid">{ls.map(tile)}</div>
           </section>
         );
       })}

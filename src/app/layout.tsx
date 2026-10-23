@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Newsreader, Noto_Sans_Bengali, Noto_Serif_Bengali, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Newsreader, Noto_Sans_Bengali, Noto_Serif_Bengali } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, SITE_TITLE, SITE_URL, SOCIAL_DESCRIPTION, TWITTER_SITE } from "@/lib/site";
 import GoogleAnalytics from "./GoogleAnalytics";
@@ -32,7 +32,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: [{ media: "(prefers-color-scheme: light)", color: "#f3f5fa" }, { media: "(prefers-color-scheme: dark)", color: "#0a0e1f" }] };
 
 // Fonts are downloaded at build time and served from this site, so the page never waits on a font stylesheet from another host.
-const ui = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], style: ["normal", "italic"], display: "swap", variable: "--f-ui" });
+// The same Inter and Newsreader pair as the home page and free guides, so the lessons look like the rest of the site.
+const ui = Inter({ subsets: ["latin"], display: "swap", variable: "--f-ui" });
 // A Latin serif for the landing page headings, chosen to sit beside Noto Serif Bengali.
 const serif = Newsreader({ subsets: ["latin"], style: ["normal", "italic"], display: "swap", variable: "--f-serif" });
 const bnSans = Noto_Sans_Bengali({ subsets: ["bengali"], weight: ["400", "500", "600", "700"], display: "swap", variable: "--f-bn", preload: false });

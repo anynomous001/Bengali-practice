@@ -49,7 +49,7 @@ export default function NumbersLesson({ data }: { data: NumbersData }) {
                 <button key={n.value} type="button" className="ntile" onClick={() => speak(n.word)} aria-label={`${n.value}: ${n.word}`}>
                   <span className="nnum" lang="bn">{n.numeral}</span>
                   <span className="nword" lang="bn">{n.word}</span>
-                  {roman && <span className="nrom">{n.wrom}</span>}
+                  {roman && <span className="nrom">{n.wrom} ({n.value})</span>}
                 </button>
               ))}
             </div>
