@@ -1114,3 +1114,9 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
 .g-ex-bn { font-size:1.45rem; font-weight:600; color:var(--seg, var(--primary)); }
 .g-rule { border-radius:20px; }
 .g-rule-title { font:500 1.3rem/1.25 var(--font-serif); letter-spacing:-.01em; }
+
+/* Letter pickers on the writing pages: the same card look as the guides */
+.tile { border-radius:18px; padding:12px 6px 10px; }
+.tile .ch { color:var(--primary); font-weight:600; font-size:2.2rem; }
+.tile .rom { font-size:.8rem; font-weight:700; color:var(--ink); }
+.tile.current .ch { color:var(--primary); }
