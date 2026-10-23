@@ -55,10 +55,12 @@ const COURSES = [
   { seg: "writing", icon: "writing", bn: "লেখা", ro: "lekha", title: "Writing", outcome: "Write the script by hand.", body: "Trace letters, vowel signs and numerals on the screen with your finger or a mouse, then build words and sentences piece by piece." },
 ] as const;
 
-const AUDIENCE: { kind: Quote["kind"]; bn: string; ro: string; gloss: string; tag: string; lead: string; body: string }[] = [
+const AUDIENCE: { kind: Quote["kind"] | "passion" | "professional"; bn: string; ro: string; gloss: string; tag: string; lead: string; body: string }[] = [
   { kind: "heritage", bn: "শিকড়", ro: "shikor", gloss: "roots", tag: "Heritage learners", lead: "You grew up hearing it. Now you want to read it.", body: "Many of my heritage students understand far more than they can say, and can't read a word. We start with the alphabet you've heard all your life and build towards reading your family's messages and answering back." },
   { kind: "partner", bn: "আত্মীয়", ro: "attiyo", gloss: "family, kin", tag: "Partners and in-laws", lead: "You married into a Bengali family and want to join the conversation.", body: "You start from zero, and that is fine. Short daily lessons, romanized English you can switch off when you're ready, and role plays for the moments that matter: the dinner table, the phone call, the trip to Kolkata." },
   { kind: "devotee", bn: "ভক্তি", ro: "bhokti", gloss: "devotion", tag: "Devotees", lead: "You want to read the bhajans and mantras in the original.", body: "Learn the script first, then read real mantras, bhajans and sādhu-saṅga passages letter by letter. The letters and words have audio, so you can check how they sound as you go." },
+  { kind: "professional", bn: "কাজ", ro: "kaj", gloss: "work", tag: "Professionals", lead: "You work with Bengali-speaking clients or colleagues.", body: "Greet people properly, use the polite আপনি, understand numbers, prices and times, and take a phone call with confidence. Your path stays with the Bengali you need at work, so you do not spend time on what you will not use." },
+  { kind: "passion", bn: "ভালোবাসা", ro: "bhalobasha", gloss: "love", tag: "Language lovers", lead: "You simply love languages, and Bengali is the one you want next.", body: "No deadline and no exam. You are here because Bengali is a beautiful language and you want to know it. Start with the script, then collect words, stories and the way the grammar fits together, a little each day." },
 ];
 
 const POINTS = [
@@ -97,7 +99,7 @@ export const revalidate = 21600;
 export default async function Home() {
   const usd = priceUsd();
   const inr = (await priceInr()).amount;
-  const quoteFor = (kind: Quote["kind"]) => QUOTES.find((q) => q.kind === kind);
+  const quoteFor = (kind: string) => QUOTES.find((q) => q.kind === kind);
   const proofQuotes = QUOTES.slice(0, 3);
   const hasProof = proofQuotes.length > 0 || TEACHER.stats.length > 0;
   const hasAbout = TEACHER.story.length > 0;
@@ -287,9 +289,9 @@ export default async function Home() {
 
         <section className="cr-sec cr-wrap cr-aud">
           <div className="cr-head" data-reveal>
-            <h2>Three kinds of student, one way of learning.</h2>
+            <h2>Whatever your reason, one way of learning.</h2>
           </div>
-          <div className="cr-aud-grid">
+          <div className="cr-aud-grid cr-aud-five">
             {AUDIENCE.map((a) => {
               const q = quoteFor(a.kind);
               return (

@@ -5,7 +5,7 @@ import { COURSES, allLessons, courseStats } from "@/data/curriculum";
 import Icon, { IconTile } from "./Icon";
 import ProgressBar from "./ProgressBar";
 import StreakCard from "./StreakCard";
-import { loadChosen, buildPath, fmtMinutes } from "@/lib/path";
+import { loadChosen, buildPath, fmtMinutes, pathTitle } from "@/lib/path";
 import { loadStats, markMilestonesSeen, MILESTONES, syncMilestones } from "@/lib/activity";
 
 export default async function Dashboard() {
@@ -18,7 +18,7 @@ export default async function Dashboard() {
   const freshMilestones = MILESTONES.filter((m) => fresh.includes(m.key));
 
   const chosen = await loadChosen(user.email);
-  const myPath = chosen ? buildPath(chosen.goal, chosen.reads, done) : null;
+  const myPath = chosen ? buildPath(chosen.goals, chosen.reads, done) : null;
 
   const daysLeft = user.expiresAt ? Math.ceil((user.expiresAt.getTime() - Date.now()) / 86_400_000) : Infinity;
   const rows = COURSES.map((c) => ({ c, s: courseStats(c, done) }));
@@ -73,7 +73,7 @@ export default async function Dashboard() {
         <section className="pth-card">
           <div>
             <p className="eyebrow">My path</p>
-            <h2>{chosen.goal.title}</h2>
+            <h2>{pathTitle(chosen.goals)}</h2>
             <ProgressBar value={myPath.done} max={myPath.total} label="Path progress" />
             <p className="muted">{myPath.done} of {myPath.total} steps{myPath.minutesLeft > 0 ? ` · about ${fmtMinutes(myPath.minutesLeft)} left` : ""}</p>
           </div>
@@ -92,7 +92,7 @@ export default async function Dashboard() {
           <div>
             <p className="eyebrow">My path</p>
             <h2>Not sure where to start?</h2>
-            <p className="muted">Pick a goal, such as talking with family or reading, and get a path through the lessons.</p>
+            <p className="muted">Pick one or more goals, such as talking with family or work, and get a path through the lessons.</p>
           </div>
           <Link href="/learn/path" className="btn">Choose my path</Link>
         </section>

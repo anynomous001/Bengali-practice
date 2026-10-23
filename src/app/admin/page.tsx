@@ -43,7 +43,7 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
     "SELECT email, rating, comment, updated_at FROM reviews ORDER BY updated_at DESC LIMIT 100",
   );
   const avgRating = reviews.length ? reviews.reduce((a, r) => a + r.rating, 0) / reviews.length : 0;
-  const goalCounts = new Map((await query<{ goal: string; n: number }>("SELECT goal, COUNT(*)::int AS n FROM student_path GROUP BY goal")).map((r) => [r.goal, r.n]));
+  const goalCounts = new Map((await query<{ goal: string; n: number }>("SELECT goal, COUNT(*)::int AS n FROM student_goals GROUP BY goal")).map((r) => [r.goal, r.n]));
   const goalsChosen = [...goalCounts.values()].reduce((a, b) => a + b, 0);
   const referrals = await query<{ referee_email: string; referrer_email: string; reversed: boolean; created_at: Date }>(
     "SELECT referee_email, referrer_email, reversed, created_at FROM referrals ORDER BY created_at DESC LIMIT 50",
@@ -98,7 +98,7 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
                   <li key={g.id}><span>{g.title}</span><span className="muted">{n} {n === 1 ? "student" : "students"}</span></li>
                 ))}
               </ul>
-            ) : <p className="muted">No student has picked a goal yet. They choose one on the My path page.</p>}
+            ) : <p className="muted">No student has picked a goal yet. They choose on the My path page, and can pick more than one.</p>}
           </section>
 
           <section className="adm-card">

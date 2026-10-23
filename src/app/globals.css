@@ -1145,3 +1145,14 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
 .hero-card { border-radius:28px; }
 .section-title { font:500 1.7rem/1.2 var(--font-serif); letter-spacing:-.02em; }
 .streak-card b, .sc-week b { font-family:var(--font-serif); font-weight:500; }
+
+/* My path: choosing several goals, and tags on a combined path */
+.pth-goal { position:relative; cursor:pointer; }
+.pth-goal input { position:absolute; top:16px; right:16px; width:20px; height:20px; accent-color:var(--primary); }
+.pth-goal:has(input:checked) { border-color:var(--primary); background:color-mix(in srgb, var(--primary) 7%, var(--surface)); box-shadow:0 0 0 2px color-mix(in srgb, var(--primary) 30%, transparent); }
+.pth-goal .pth-pick { display:none; color:var(--primary); font-weight:700; }
+.pth-goal:has(input:checked) .pth-pick { display:block; }
+.pth-goal:has(input:focus-visible) { outline:2px solid var(--primary); outline-offset:2px; }
+.pth-tags { display:inline-flex; gap:6px; margin-left:10px; vertical-align:middle; flex-wrap:wrap; }
+.pth-tag { display:inline-block; margin-left:8px; padding:2px 9px; border-radius:999px; background:color-mix(in srgb, var(--primary) 12%, var(--surface-2)); color:var(--primary); font:700 .72rem/1.5 var(--font-ui); letter-spacing:.02em; vertical-align:middle; }
+.pth-tags .pth-tag { margin-left:0; }

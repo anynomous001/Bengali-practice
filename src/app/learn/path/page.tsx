@@ -1,15 +1,15 @@
 import Link from "next/link";
 import { requireAccess } from "@/lib/access";
 import { loadLessonProgress } from "@/lib/progress";
-import { loadChosen, buildPath, fmtMinutes } from "@/lib/path";
+import { loadChosen, buildPath, fmtMinutes, pathBlurb, pathTitle } from "@/lib/path";
 import { GOALS, READS } from "@/data/paths";
 import Icon, { IconTile } from "../Icon";
 import ProgressBar from "../ProgressBar";
 import { choosePath } from "./actions";
 
-export default async function PathPage({ searchParams }: { searchParams: Promise<{ change?: string }> }) {
+export default async function PathPage({ searchParams }: { searchParams: Promise<{ change?: string; need?: string }> }) {
   const user = await requireAccess();
-  const { change } = await searchParams;
+  const { change, need } = await searchParams;
   const chosen = await loadChosen(user.email);
 
   if (!chosen || change) {
@@ -20,7 +20,7 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
           <div>
             <p className="eyebrow">My path</p>
             <h1>What do you want to get better at?</h1>
-            <p className="lede">Pick a goal and you get a path through the lessons, in the order that helps most. You can change it any time.</p>
+            <p className="lede">Pick one goal or several. You get a path through the lessons, in the order that helps most. With more than one goal, we combine them into one path and tag each lesson, so you can see what it is for. You can change it any time.</p>
           </div>
         </header>
         <form action={choosePath} className="pth-form">
@@ -33,15 +33,18 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
           </fieldset>
           <div className="pth-goals">
             {GOALS.map((g) => (
-              <button key={g.id} name="goal" value={g.id} className={"pth-goal" + (chosen?.goal.id === g.id ? " current" : "")}>
+              <label key={g.id} className="pth-goal">
+                <input type="checkbox" name="goal" value={g.id} defaultChecked={chosen?.goals.some((x) => x.id === g.id)} />
                 <span className="pth-bn" lang="bn">{g.bn}</span>
                 <b>{g.title}</b>
                 <span>{g.blurb}</span>
                 <small>{g.who}</small>
-                {chosen?.goal.id === g.id && <small className="pth-now">Your current path</small>}
-              </button>
+                <small className="pth-pick">Selected</small>
+              </label>
             ))}
           </div>
+          {need && <p className="msg bad" role="status">Pick at least one goal.</p>}
+          <p><button className="btn">Make my path</button> <span className="muted">You can pick up to four.</span></p>
         </form>
         {chosen && <p><Link href="/learn/path" className="back"><Icon name="prev" size={16} />Back to my path</Link></p>}
       </main>
@@ -49,15 +52,15 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
   }
 
   const { done } = await loadLessonProgress();
-  const path = buildPath(chosen.goal, chosen.reads, done);
+  const path = buildPath(chosen.goals, chosen.reads, done);
   return (
     <main className="wide">
       <header className="page-head">
         <IconTile name="path" size={60} />
         <div>
           <p className="eyebrow">My path</p>
-          <h1>{chosen.goal.title}</h1>
-          <p className="lede">{chosen.goal.blurb}</p>
+          <h1>{pathTitle(chosen.goals)}</h1>
+          <p className="lede">{pathBlurb(chosen.goals)}</p>
         </div>
       </header>
 
@@ -86,7 +89,7 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
               <div className="pth-stage-head">
                 <span className="pth-n">{s.skipped ? "–" : left === 0 ? <Icon name="check" size={16} /> : i + 1}</span>
                 <div className="pth-stage-text">
-                  <h2>{s.title}</h2>
+                  <h2>{s.title}{s.tags.length > 0 && <span className="pth-tags">{s.tags.map((t) => <span key={t} className="pth-tag">{t}</span>)}</span>}</h2>
                   <p className="muted">{s.skipped ? "Skipped, because you can already read Bengali letters." : s.blurb}</p>
                 </div>
                 {!s.skipped && <small className="pth-stage-time">{left === 0 ? "Done" : fmtMinutes(s.minutesLeft)}</small>}
@@ -97,7 +100,7 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
                     <li key={x.lesson.id} className={x.done ? "done" : path.next?.lesson.id === x.lesson.id ? "next" : ""}>
                       <Link href={x.lesson.href}>
                         <span className="pth-tick">{x.done ? <Icon name="check" size={14} /> : null}</span>
-                        <span className="pth-text"><b>{x.lesson.title}</b><span className="muted">{x.why}</span></span>
+                        <span className="pth-text"><b>{x.lesson.title}{x.tags.map((t) => <span key={t} className="pth-tag">{t}</span>)}</b><span className="muted">{x.why}</span></span>
                         <small className="pth-kind">{x.course} · {x.lesson.kind} · {fmtMinutes(x.minutes)}</small>
                       </Link>
                     </li>
@@ -109,7 +112,7 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
         })}
       </ol>
 
-      {chosen.goal.note && <p className="muted pth-note">{chosen.goal.note}</p>}
+      {chosen.goals.filter((g) => g.note).map((g) => <p key={g.id} className="muted pth-note">{chosen.goals.length > 1 ? `${g.tag}: ` : ""}{g.note}</p>)}
       <p><Link href="/learn/path?change=1" className="btn ghost small">Change my path</Link></p>
     </main>
   );

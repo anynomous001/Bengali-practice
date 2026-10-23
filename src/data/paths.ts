@@ -12,6 +12,8 @@ export type PathStage = {
 };
 export type PathGoal = {
   id: string;
+  /** A short label shown on lessons when a student has more than one goal. */
+  tag: string;
   title: string;
   /** A Bengali word that stands for the goal, shown big on its card. */
   bn: string;
@@ -37,6 +39,7 @@ const SCRIPT: PathStage = {
 export const GOALS: PathGoal[] = [
   {
     id: "family",
+    tag: "Family",
     title: "Talk with my family",
     bn: "পরিবার",
     bnRoman: "poribar",
@@ -100,6 +103,7 @@ export const GOALS: PathGoal[] = [
   },
   {
     id: "devotional",
+    tag: "Devotional",
     title: "Devotional communication",
     bn: "ভক্তি",
     bnRoman: "bhokti",
@@ -172,11 +176,12 @@ export const GOALS: PathGoal[] = [
   },
   {
     id: "professional",
+    tag: "Work",
     title: "Professional communication",
     bn: "কাজ",
     bnRoman: "kaj",
     blurb: "Be polite and clear at work: greetings, jobs, numbers, time and plans.",
-    who: "For people who want to speak Bengali with colleagues, clients or partners.",
+    who: "For professionals who work with Bengali-speaking clients, colleagues or partners.",
     stages: [
       SCRIPT,
       {
@@ -223,7 +228,64 @@ export const GOALS: PathGoal[] = [
     note: "This path is shorter than it should be. Workplace role plays, such as a call with a client, are still to come.",
   },
   {
+    id: "passion",
+    tag: "Curiosity",
+    title: "Learn it for the love of it",
+    bn: "ভালোবাসা",
+    bnRoman: "bhalobasha",
+    blurb: "A well-rounded start: the script, everyday words, how sentences work and a few stories.",
+    who: "For anyone who simply loves languages and wants to learn Bengali for its own sake.",
+    stages: [
+      SCRIPT,
+      {
+        title: "First words",
+        blurb: "Greetings, sounds and numbers: the small things that make it feel real.",
+        steps: [
+          { id: "speaking/sounds", why: "Hear the sounds, so you can tell similar letters apart." },
+          { id: "vocabulary/greetings", why: "Say hello and be polite from day one." },
+          { id: "reading/numbers", why: "Numbers, days and months." },
+        ],
+      },
+      {
+        title: "Words you will enjoy",
+        blurb: "Food, festivals and the words people use to describe things.",
+        steps: [
+          { id: "vocabulary/food", why: "Bengali food is a good reason to learn the language." },
+          { id: "vocabulary/festivals", why: "Festivals, and how people wish each other well." },
+          { id: "vocabulary/describing", why: "Describe people, food and things." },
+        ],
+      },
+      {
+        title: "How the language works",
+        blurb: "Enough grammar to see the pattern, and then to build sentences of your own.",
+        steps: [
+          { id: "grammar/purush", why: "Three levels of 'you', and why Bengali has them." },
+          { id: "grammar/kriya", why: "How verbs are built and how they change." },
+          { id: "grammar/tense-present", why: "Say what you do and what you are doing." },
+        ],
+      },
+      {
+        title: "Stories",
+        blurb: "Read your first fables, easiest first.",
+        steps: [
+          { id: "reading/story-thirsty-crow", why: "The shortest story, with simple words." },
+          { id: "reading/story-fox-grapes", why: "Another short fable." },
+          { id: "reading/story-hare-tortoise", why: "A little longer: your first real story." },
+        ],
+      },
+      {
+        title: "Keep it fresh",
+        blurb: "Spaced repetition and a little speaking, a few minutes a day.",
+        steps: [
+          { id: "vocabulary/flashcards", why: "Words you miss come back sooner." },
+          { id: "speaking/impromptu", why: "Say a few sentences against a timer." },
+        ],
+      },
+    ],
+  },
+  {
     id: "travel",
+    tag: "Travel",
     title: "Travel and the market",
     bn: "ভ্রমণ",
     bnRoman: "bhromon",
@@ -273,6 +335,7 @@ export const GOALS: PathGoal[] = [
   },
   {
     id: "speaking",
+    tag: "Speaking",
     title: "Speak Bengali",
     bn: "বলা",
     bnRoman: "bola",
@@ -321,6 +384,7 @@ export const GOALS: PathGoal[] = [
   },
   {
     id: "reading",
+    tag: "Reading",
     title: "Read Bengali",
     bn: "পড়া",
     bnRoman: "pora",
@@ -355,6 +419,7 @@ export const GOALS: PathGoal[] = [
   },
   {
     id: "grammar",
+    tag: "Grammar",
     title: "Speak and write correctly",
     bn: "ব্যাকরণ",
     bnRoman: "bakoron",

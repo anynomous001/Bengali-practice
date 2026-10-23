@@ -181,6 +181,13 @@ const SCHEMA = `
       reads text NOT NULL DEFAULT 'no',
       updated_at timestamptz NOT NULL DEFAULT now()
     );
+    CREATE TABLE IF NOT EXISTS student_goals (
+      email text NOT NULL,
+      goal text NOT NULL,
+      position int NOT NULL DEFAULT 0,
+      PRIMARY KEY (email, goal)
+    );
+    INSERT INTO student_goals (email, goal) SELECT email, goal FROM student_path ON CONFLICT DO NOTHING;
     CREATE TABLE IF NOT EXISTS flashcards (
       email text NOT NULL,
       card_id text NOT NULL,

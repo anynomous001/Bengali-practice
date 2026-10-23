@@ -94,6 +94,7 @@
 .cr-panel { --t: var(--primary); padding: clamp(26px, 4.4vw, 56px); border-radius: var(--cr-r); background: color-mix(in srgb, var(--t) 11%, var(--surface)); border: 1px solid color-mix(in srgb, var(--t) 16%, transparent); }
 .cr-panel[data-tint="flashcard"] { --t: var(--vocab); } .cr-panel[data-tint="roleplay"] { --t: var(--speak); } .cr-panel[data-tint="grammar"] { --t: var(--gram); }
 .cr-panel[data-tint="exam"], .cr-panel[data-tint="devotee"] { --t: var(--gold); } .cr-panel[data-tint="writing"] { --t: var(--write); } .cr-panel[data-tint="path"] { --t: var(--alta); } .cr-panel[data-tint="progress"] { --t: var(--ok); }
+.cr-panel[data-tint="professional"] { --t: var(--vocab); } .cr-panel[data-tint="passion"] { --t: var(--write); }
 .cr-panel[data-tint="heritage"] { --t: var(--read); } .cr-panel[data-tint="partner"] { --t: var(--gram); }
 .cr-stack { display: grid; gap: var(--cr-gap); }
 .cr-tag { font-size: .85rem; font-weight: 500; color: var(--ink-2); margin-bottom: 14px; }
@@ -124,6 +125,7 @@
 
 /* audiences */
 .cr-aud-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--cr-gap); }
+.cr-aud-grid.cr-aud-five { grid-template-columns: repeat(6, minmax(0, 1fr)); } .cr-aud-five > :nth-child(-n+3) { grid-column: span 2; } .cr-aud-five > :nth-child(n+4) { grid-column: span 3; }
 .cr-aud-card { padding: clamp(24px, 3vw, 40px); display: flex; flex-direction: column; gap: 10px; }
 .cr-bigword { font-size: clamp(3.6rem, 6.4vw, 5.4rem); line-height: 1.1; font-weight: 600; color: var(--t); }
 .cr-aud-card .cr-ro { margin: -4px 0 10px; }
@@ -223,7 +225,7 @@ html.motion-ok .cr [data-reveal] { transition: opacity .6s ease, transform .6s e
   .cr-why { grid-template-columns: 1fr; } .cr-why-side { position: static; }
   .cr-pill nav { display: none; }
   .cr-also { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .cr-aud-grid { grid-template-columns: 1fr; }
+  .cr-aud-grid, .cr-aud-grid.cr-aud-five { grid-template-columns: 1fr; } .cr-aud-five > * { grid-column: auto !important; }
   .cr-show, .cr-about, .cr-price-grid, .cr-faq-wrap, .cr-duo, .cr-courses { grid-template-columns: 1fr; }
   .cr-show.rev .cr-show-text { order: 0; }
   .cr-faq-side { position: static; }
