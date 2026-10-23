@@ -1134,3 +1134,14 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
 .board li > span:last-child { font:500 1.5rem/1 var(--font-serif); }
 .lb-tabs { border-radius:999px; } .lb-tabs a { border-radius:999px; }
 .settings-form { border-radius:20px; }
+
+/* Home and My path: the same card look as the guides */
+.course-card, .pth-card, .pth-goal, .pth-stage, .streak-card, .pth-top { border-radius:20px; }
+.seg-title b { font:500 1.6rem/1.15 var(--font-serif); letter-spacing:-.015em; }
+.pth-goal .pth-bn { font-family:var(--font-bn-serif); font-size:2.2rem; font-weight:600; color:var(--primary); }
+.pth-goal b, .pth-stage-text b, .pth-card h2, .pth-card h3 { font-family:var(--font-serif); font-weight:500; letter-spacing:-.01em; }
+.pth-goal b { font-size:1.35rem; }
+.pth-card h2, .pth-card h3 { font-size:1.4rem; }
+.hero-card { border-radius:28px; }
+.section-title { font:500 1.7rem/1.2 var(--font-serif); letter-spacing:-.02em; }
+.streak-card b, .sc-week b { font-family:var(--font-serif); font-weight:500; }
