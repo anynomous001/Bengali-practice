@@ -407,6 +407,593 @@ export const GRAMMAR: GrammarTopic[] = [
     ]
    },
    {
+    "id": "endings",
+    "title": "How the person changes the verb",
+    "blocks": [
+     {
+      "t": "p",
+      "text": "In English the verb mostly stays the same ('I go', 'you go', 'we go'). In Bengali the verb changes its ending for every person. The first part of the verb (the root) stays, and the ending tells you who is doing the action. That is why Bengali speakers often leave the pronoun out: the ending already says it."
+     },
+     {
+      "t": "h",
+      "text": "Two verbs, five persons"
+     },
+     {
+      "t": "p",
+      "text": "Here are the two most useful verbs, 'to be' (আছা) and 'to do' (করা), in the simple present. Look at the last column: it is the same ending on both verbs, and it is the ending you will meet on almost every verb. Learn it once and you can use it everywhere."
+     },
+     {
+      "t": "table",
+      "title": null,
+      "head": [
+       "Person",
+       "Pronoun",
+       "to be (আছা)",
+       "to do (করা)",
+       "Ending"
+      ],
+      "rows": [
+       [
+        "I",
+        {
+         "bn": "আমি",
+         "ro": "ami"
+        },
+        {
+         "bn": "আছি",
+         "ro": "achhi"
+        },
+        {
+         "bn": "করি",
+         "ro": "kori"
+        },
+        {
+         "bn": "◌ি",
+         "ro": "-i"
+        }
+       ],
+       [
+        "you (very familiar)",
+        {
+         "bn": "তুই",
+         "ro": "tui"
+        },
+        {
+         "bn": "আছিস",
+         "ro": "achhis"
+        },
+        {
+         "bn": "করিস",
+         "ro": "koris"
+        },
+        {
+         "bn": "◌িস",
+         "ro": "-is"
+        }
+       ],
+       [
+        "you (familiar)",
+        {
+         "bn": "তুমি",
+         "ro": "tumi"
+        },
+        {
+         "bn": "আছ",
+         "ro": "achho"
+        },
+        {
+         "bn": "করো",
+         "ro": "koro"
+        },
+        {
+         "bn": "◌ো",
+         "ro": "-o"
+        }
+       ],
+       [
+        "you, he or she (respectful)",
+        {
+         "bn": "আপনি / তিনি",
+         "ro": "apni / tini"
+        },
+        {
+         "bn": "আছেন",
+         "ro": "achhen"
+        },
+        {
+         "bn": "করেন",
+         "ro": "koren"
+        },
+        {
+         "bn": "◌েন",
+         "ro": "-en"
+        }
+       ],
+       [
+        "he, she, it",
+        {
+         "bn": "সে",
+         "ro": "she"
+        },
+        {
+         "bn": "আছে",
+         "ro": "achhe"
+        },
+        {
+         "bn": "করে",
+         "ro": "kore"
+        },
+        {
+         "bn": "◌ে",
+         "ro": "-e"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "note",
+      "text": "Two pronouns share one ending. আপনি (you, respectful) and তিনি (he or she, respectful) both take the ending in যান and করেন. Respected people named by a noun, such as মা or শিক্ষক, take it too."
+     },
+     {
+      "t": "h",
+      "text": "The same five endings, in every tense"
+     },
+     {
+      "t": "p",
+      "text": "Each tense has its own set of five endings, one for each person. They always come in this order: আমি, তুই, তুমি, আপনি / তিনি, সে. Notice the pattern in the simple present: তুই ends in an s sound (যাস), আপনি / তিনি end in an n sound (যান), and সে is the shortest (যায়)."
+     },
+     {
+      "t": "table",
+      "title": "Verb endings by tense and person",
+      "head": [
+       "Tense",
+       "আমি",
+       "তুই",
+       "তুমি",
+       "আপনি / তিনি",
+       "সে"
+      ],
+      "rows": [
+       [
+        "Simple present",
+        {
+         "bn": "◌ি",
+         "ro": "-i"
+        },
+        {
+         "bn": "◌িস",
+         "ro": "-is"
+        },
+        {
+         "bn": "◌ো",
+         "ro": "-o"
+        },
+        {
+         "bn": "◌েন",
+         "ro": "-en"
+        },
+        {
+         "bn": "◌ে",
+         "ro": "-e"
+        }
+       ],
+       [
+        "Present continuous",
+        {
+         "bn": "-ছি",
+         "ro": "-chhi"
+        },
+        {
+         "bn": "-ছিস",
+         "ro": "-chhis"
+        },
+        {
+         "bn": "-ছ",
+         "ro": "-chho"
+        },
+        {
+         "bn": "-ছেন",
+         "ro": "-chhen"
+        },
+        {
+         "bn": "-ছে",
+         "ro": "-chhe"
+        }
+       ],
+       [
+        "Present perfect",
+        {
+         "bn": "◌েছি",
+         "ro": "-echhi"
+        },
+        {
+         "bn": "◌েছিস",
+         "ro": "-echhis"
+        },
+        {
+         "bn": "◌েছ",
+         "ro": "-echho"
+        },
+        {
+         "bn": "◌েছেন",
+         "ro": "-echhen"
+        },
+        {
+         "bn": "◌েছে",
+         "ro": "-echhe"
+        }
+       ],
+       [
+        "Simple past",
+        {
+         "bn": "-লাম",
+         "ro": "-lam"
+        },
+        {
+         "bn": "-লি",
+         "ro": "-li"
+        },
+        {
+         "bn": "-লে",
+         "ro": "-le"
+        },
+        {
+         "bn": "-লেন",
+         "ro": "-len"
+        },
+        {
+         "bn": "-ল",
+         "ro": "-lo"
+        }
+       ],
+       [
+        "Past continuous",
+        {
+         "bn": "-ছিলাম",
+         "ro": "-chhilam"
+        },
+        {
+         "bn": "-ছিলি",
+         "ro": "-chhili"
+        },
+        {
+         "bn": "-ছিলে",
+         "ro": "-chhile"
+        },
+        {
+         "bn": "-ছিলেন",
+         "ro": "-chhilen"
+        },
+        {
+         "bn": "-ছিল",
+         "ro": "-chhilo"
+        }
+       ],
+       [
+        "Past perfect",
+        {
+         "bn": "◌েছিলাম",
+         "ro": "-echhilam"
+        },
+        {
+         "bn": "◌েছিলি",
+         "ro": "-echhili"
+        },
+        {
+         "bn": "◌েছিলে",
+         "ro": "-echhile"
+        },
+        {
+         "bn": "◌েছিলেন",
+         "ro": "-echhilen"
+        },
+        {
+         "bn": "◌েছিল",
+         "ro": "-echhilo"
+        }
+       ],
+       [
+        "Past habitual",
+        {
+         "bn": "-তাম",
+         "ro": "-tam"
+        },
+        {
+         "bn": "-তিস",
+         "ro": "-tis"
+        },
+        {
+         "bn": "-তে",
+         "ro": "-te"
+        },
+        {
+         "bn": "-তেন",
+         "ro": "-ten"
+        },
+        {
+         "bn": "-ত",
+         "ro": "-to"
+        }
+       ],
+       [
+        "Simple future",
+        {
+         "bn": "-ব",
+         "ro": "-bo"
+        },
+        {
+         "bn": "-বি",
+         "ro": "-bi"
+        },
+        {
+         "bn": "-বে",
+         "ro": "-be"
+        },
+        {
+         "bn": "-বেন",
+         "ro": "-ben"
+        },
+        {
+         "bn": "-বে",
+         "ro": "-be"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "h",
+      "text": "One verb through all the persons"
+     },
+     {
+      "t": "p",
+      "text": "Here is করা (to do) in five common tenses, so you can see the root কর stay still while the ending moves."
+     },
+     {
+      "t": "table",
+      "title": "করা (kora), to do",
+      "head": [
+       "Tense",
+       "আমি",
+       "তুই",
+       "তুমি",
+       "আপনি / তিনি",
+       "সে"
+      ],
+      "rows": [
+       [
+        "Simple present",
+        {
+         "bn": "করি",
+         "ro": "kori"
+        },
+        {
+         "bn": "করিস",
+         "ro": "koris"
+        },
+        {
+         "bn": "করো",
+         "ro": "koro"
+        },
+        {
+         "bn": "করেন",
+         "ro": "koren"
+        },
+        {
+         "bn": "করে",
+         "ro": "kore"
+        }
+       ],
+       [
+        "Present continuous",
+        {
+         "bn": "করছি",
+         "ro": "korchhi"
+        },
+        {
+         "bn": "করছিস",
+         "ro": "korchhis"
+        },
+        {
+         "bn": "করছ",
+         "ro": "korchho"
+        },
+        {
+         "bn": "করছেন",
+         "ro": "korchhen"
+        },
+        {
+         "bn": "করছে",
+         "ro": "korchhe"
+        }
+       ],
+       [
+        "Simple past",
+        {
+         "bn": "করলাম",
+         "ro": "korlam"
+        },
+        {
+         "bn": "করলি",
+         "ro": "korli"
+        },
+        {
+         "bn": "করলে",
+         "ro": "korle"
+        },
+        {
+         "bn": "করলেন",
+         "ro": "korlen"
+        },
+        {
+         "bn": "করল",
+         "ro": "korlo"
+        }
+       ],
+       [
+        "Past habitual",
+        {
+         "bn": "করতাম",
+         "ro": "kortam"
+        },
+        {
+         "bn": "করতিস",
+         "ro": "kortis"
+        },
+        {
+         "bn": "করতে",
+         "ro": "korte"
+        },
+        {
+         "bn": "করতেন",
+         "ro": "korten"
+        },
+        {
+         "bn": "করত",
+         "ro": "korto"
+        }
+       ],
+       [
+        "Simple future",
+        {
+         "bn": "করব",
+         "ro": "korbo"
+        },
+        {
+         "bn": "করবি",
+         "ro": "korbi"
+        },
+        {
+         "bn": "করবে",
+         "ro": "korbe"
+        },
+        {
+         "bn": "করবেন",
+         "ro": "korben"
+        },
+        {
+         "bn": "করবে",
+         "ro": "korbe"
+        }
+       ]
+      ]
+     },
+     {
+      "t": "h",
+      "text": "Hear the person in the ending"
+     },
+     {
+      "t": "p",
+      "text": "Because the ending names the person, a short sentence with no pronoun is still complete. Cover the English and say who is doing each action."
+     },
+     {
+      "t": "ex",
+      "title": "Say who is doing it",
+      "items": [
+       [
+        "বাজারে যাই।",
+        "bajare jai.",
+        "I go to the market. (-ই: আমি)"
+       ],
+       [
+        "বাজারে যাস।",
+        "bajare jas.",
+        "You go to the market. (-স: তুই)"
+       ],
+       [
+        "বাজারে যাও।",
+        "bajare jao.",
+        "You go to the market. (-ও: তুমি)"
+       ],
+       [
+        "বাজারে যান।",
+        "bajare jan.",
+        "You go, or he or she goes, to the market. (-ন: আপনি or তিনি)"
+       ],
+       [
+        "বাজারে যায়।",
+        "bajare jay.",
+        "He or she goes to the market. (-য়: সে)"
+       ],
+       [
+        "ভাত খাচ্ছি।",
+        "bhat khachchhi.",
+        "I am eating rice. (-ছি: আমি)"
+       ],
+       [
+        "ভাত খাচ্ছ।",
+        "bhat khachchho.",
+        "You are eating rice. (-ছ: তুমি)"
+       ],
+       [
+        "ভাত খাচ্ছেন।",
+        "bhat khachchhen.",
+        "You (respectful) are eating rice. (-ছেন: আপনি)"
+       ],
+       [
+        "ভাত খাচ্ছে।",
+        "bhat khachchhe.",
+        "He or she is eating rice. (-ছে: সে)"
+       ],
+       [
+        "কাল যাব।",
+        "kal jabo.",
+        "I will go tomorrow. (-ব: আমি)"
+       ],
+       [
+        "কাল যাবে।",
+        "kal jabe.",
+        "You (familiar) will go tomorrow, or he or she will go. (-বে: তুমি or সে)"
+       ],
+       [
+        "কাল যাবেন।",
+        "kal jaben.",
+        "You (respectful) will go tomorrow. (-বেন: আপনি)"
+       ]
+      ]
+     },
+     {
+      "t": "list",
+      "title": "What to remember",
+      "ordered": false,
+      "items": [
+       "The root of the verb does not change. Only the ending does.",
+       "Every person has its own ending, in every tense. Learn the five endings of the simple present first, through one verb: যাই, যাস, যাও, যান, যায়.",
+       "The ending for আপনি is the same as for তিনি (যান), so use it for anyone you wish to honour.",
+       "A plural pronoun takes the same ending as its singular: আমি যাই and আমরা যাই, সে যায় and তারা যায়.",
+       "In the future tense সে and তুমি share one ending (যাবে). Context, or the pronoun, tells you which one is meant.",
+       "If you are unsure which ending to use, look at the pronoun first. The person decides the ending."
+      ]
+     },
+     {
+      "t": "mistakes",
+      "title": "Match the ending to the person",
+      "items": [
+       [
+        "আমি যায়।",
+        "ami jay.",
+        "আমি যাই।",
+        "ami jai.",
+        "আমি takes -ই. যায় is for সে."
+       ],
+       [
+        "সে যাই।",
+        "she jai.",
+        "সে যায়।",
+        "she jay.",
+        "সে takes -য়. যাই is for আমি."
+       ],
+       [
+        "আপনি যাও।",
+        "apni jao.",
+        "আপনি যান।",
+        "apni jan.",
+        "আপনি takes the ending in যান. যাও is for তুমি."
+       ]
+      ]
+     }
+    ]
+   },
+   {
     "id": "levels",
     "title": "Three levels of 'you'",
     "blocks": [
@@ -1922,6 +2509,194 @@ export const GRAMMAR: GrammarTopic[] = [
     ],
     "answer": 0,
     "why": "The receiver of the action takes the object form আমাকে."
+   },
+   {
+    "kind": "pick",
+    "inst": "Choose the verb form that goes with the pronoun.",
+    "q": "Which verb form goes with আমি (I) in the simple present?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "যাই",
+      "ro": "jai"
+     },
+     {
+      "bn": "যায়",
+      "ro": "jay"
+     },
+     {
+      "bn": "যান",
+      "ro": "jan"
+     }
+    ],
+    "answer": 0,
+    "why": "আমি takes the -ই ending: আমি যাই."
+   },
+   {
+    "kind": "pick",
+    "inst": "Choose the pair of pronouns that matches the verb form.",
+    "q": "Which two pronouns both take the verb form যান?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "আপনি and তিনি",
+      "ro": "apni and tini"
+     },
+     {
+      "bn": "তুমি and সে",
+      "ro": "tumi and she"
+     },
+     {
+      "bn": "আমি and তুই",
+      "ro": "ami and tui"
+     }
+    ],
+    "answer": 0,
+    "why": "আপনি and তিনি are the respectful pair, and both take যান."
+   },
+   {
+    "kind": "fill",
+    "inst": "Choose the verb ending that goes with the pronoun.",
+    "q": "Which word fills the blank?",
+    "sentence": {
+     "bn": "আমি বাজারে ___।",
+     "ro": "ami bajare ___."
+    },
+    "options": [
+     {
+      "bn": "যাই",
+      "ro": "jai"
+     },
+     {
+      "bn": "যায়",
+      "ro": "jay"
+     },
+     {
+      "bn": "যান",
+      "ro": "jan"
+     }
+    ],
+    "answer": 0,
+    "why": "আমি takes -ই: যাই."
+   },
+   {
+    "kind": "fill",
+    "inst": "Choose the verb ending that goes with the pronoun.",
+    "q": "Which word fills the blank?",
+    "sentence": {
+     "bn": "তুমি ভাত ___।",
+     "ro": "tumi bhat ___."
+    },
+    "options": [
+     {
+      "bn": "খাও",
+      "ro": "khao"
+     },
+     {
+      "bn": "খান",
+      "ro": "khan"
+     },
+     {
+      "bn": "খাই",
+      "ro": "khai"
+     }
+    ],
+    "answer": 0,
+    "why": "তুমি takes -ও: খাও."
+   },
+   {
+    "kind": "fill",
+    "inst": "Choose the form of আছা that goes with the pronoun.",
+    "q": "Which word fills the blank?",
+    "sentence": {
+     "bn": "আপনি কেমন ___?",
+     "ro": "apni kemon ___?"
+    },
+    "options": [
+     {
+      "bn": "আছেন",
+      "ro": "achhen"
+     },
+     {
+      "bn": "আছ",
+      "ro": "achho"
+     },
+     {
+      "bn": "আছে",
+      "ro": "achhe"
+     }
+    ],
+    "answer": 0,
+    "why": "'To be' with আপনি is আছেন."
+   },
+   {
+    "kind": "fill",
+    "inst": "Choose the form of আছা that goes with the pronoun.",
+    "q": "Which word fills the blank?",
+    "sentence": {
+     "bn": "সে ভালো ___।",
+     "ro": "she bhalo ___."
+    },
+    "options": [
+     {
+      "bn": "আছে",
+      "ro": "achhe"
+     },
+     {
+      "bn": "আছি",
+      "ro": "achhi"
+     },
+     {
+      "bn": "আছেন",
+      "ro": "achhen"
+     }
+    ],
+    "answer": 0,
+    "why": "'To be' with সে is আছে."
+   },
+   {
+    "kind": "pick",
+    "inst": "Choose the verb that matches the English.",
+    "q": "Which verb is correct for 'I am doing'?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "করছি",
+      "ro": "korchhi"
+     },
+     {
+      "bn": "করছে",
+      "ro": "korchhe"
+     },
+     {
+      "bn": "করছেন",
+      "ro": "korchhen"
+     }
+    ],
+    "answer": 0,
+    "why": "The present continuous ending for আমি is -ছি: করছি."
+   },
+   {
+    "kind": "spot",
+    "inst": "Only one sentence uses the right verb ending for the pronoun. Choose it.",
+    "q": "Which sentence is correct?",
+    "sentence": null,
+    "options": [
+     {
+      "bn": "আমরা বাজারে যাই।",
+      "ro": "amra bajare jai."
+     },
+     {
+      "bn": "আমরা বাজারে যায়।",
+      "ro": "amra bajare jay."
+     },
+     {
+      "bn": "আমরা বাজারে যান।",
+      "ro": "amra bajare jan."
+     }
+    ],
+    "answer": 0,
+    "why": "আমরা takes the same ending as আমি: যাই."
    }
   ]
  },

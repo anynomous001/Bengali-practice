@@ -31,6 +31,58 @@ TOPICS = [finish(dict(id="purush", title=("পুরুষ", "Purush", "Person &
    ], "Six verbs, present tense, by person"),
   ]),
 
+  dict(id="endings", title="How the person changes the verb", blocks=[
+   P("In English the verb mostly stays the same ('I go', 'you go', 'we go'). In Bengali the verb changes its ending for every person. The first part of the verb (the root) stays, and the ending tells you who is doing the action. That is why Bengali speakers often leave the pronoun out: the ending already says it."),
+   H("Two verbs, five persons"),
+   P("Here are the two most useful verbs, 'to be' (আছা) and 'to do' (করা), in the simple present. Look at the last column: it is the same ending on both verbs, and it is the ending you will meet on almost every verb. Learn it once and you can use it everywhere."),
+   TABLE(["Person", "Pronoun", "to be (আছা)", "to do (করা)", "Ending"], [
+     ["I", c("আমি","ami"), c("আছি","achhi"), c("করি","kori"), c("◌ি","-i")],
+     ["you (very familiar)", c("তুই","tui"), c("আছিস","achhis"), c("করিস","koris"), c("◌িস","-is")],
+     ["you (familiar)", c("তুমি","tumi"), c("আছ","achho"), c("করো","koro"), c("◌ো","-o")],
+     ["you, he or she (respectful)", c("আপনি / তিনি","apni / tini"), c("আছেন","achhen"), c("করেন","koren"), c("◌েন","-en")],
+     ["he, she, it", c("সে","she"), c("আছে","achhe"), c("করে","kore"), c("◌ে","-e")],
+   ]),
+   NOTE("Two pronouns share one ending. আপনি (you, respectful) and তিনি (he or she, respectful) both take the ending in যান and করেন. Respected people named by a noun, such as মা or শিক্ষক, take it too."),
+   H("The same five endings, in every tense"),
+   P("Each tense has its own set of five endings, one for each person. They always come in this order: আমি, তুই, তুমি, আপনি / তিনি, সে. Notice the pattern in the simple present: তুই ends in an s sound (যাস), আপনি / তিনি end in an n sound (যান), and সে is the shortest (যায়)."),
+   TABLE(["Tense", "আমি", "তুই", "তুমি", "আপনি / তিনি", "সে"],
+     [[en] + [c(("◌" if e[0][0] in "ািীুূৃেৈোৌ" else "-") + e[0], "-" + e[1]) for e in ENDINGS[tid]] for tid, bn, ro, en in TENSES if tid in ENDINGS], "Verb endings by tense and person"),
+   H("One verb through all the persons"),
+   P("Here is করা (to do) in five common tenses, so you can see the root কর stay still while the ending moves."),
+   TABLE(["Tense", "আমি", "তুই", "তুমি", "আপনি / তিনি", "সে"], [
+     [en] + VERBS["kora"]["f"][tid] for tid, bn, ro, en in TENSES if tid in ("pres", "cont", "past", "habit", "fut")
+   ], "করা (kora), to do"),
+   H("Hear the person in the ending"),
+   P("Because the ending names the person, a short sentence with no pronoun is still complete. Cover the English and say who is doing each action."),
+   EXS([
+     ("বাজারে যাই।","bajare jai.","I go to the market. (-ই: আমি)"),
+     ("বাজারে যাস।","bajare jas.","You go to the market. (-স: তুই)"),
+     ("বাজারে যাও।","bajare jao.","You go to the market. (-ও: তুমি)"),
+     ("বাজারে যান।","bajare jan.","You go, or he or she goes, to the market. (-ন: আপনি or তিনি)"),
+     ("বাজারে যায়।","bajare jay.","He or she goes to the market. (-য়: সে)"),
+     ("ভাত খাচ্ছি।","bhat khachchhi.","I am eating rice. (-ছি: আমি)"),
+     ("ভাত খাচ্ছ।","bhat khachchho.","You are eating rice. (-ছ: তুমি)"),
+     ("ভাত খাচ্ছেন।","bhat khachchhen.","You (respectful) are eating rice. (-ছেন: আপনি)"),
+     ("ভাত খাচ্ছে।","bhat khachchhe.","He or she is eating rice. (-ছে: সে)"),
+     ("কাল যাব।","kal jabo.","I will go tomorrow. (-ব: আমি)"),
+     ("কাল যাবে।","kal jabe.","You (familiar) will go tomorrow, or he or she will go. (-বে: তুমি or সে)"),
+     ("কাল যাবেন।","kal jaben.","You (respectful) will go tomorrow. (-বেন: আপনি)"),
+   ], "Say who is doing it"),
+   LIST([
+     "The root of the verb does not change. Only the ending does.",
+     "Every person has its own ending, in every tense. Learn the five endings of the simple present first, through one verb: যাই, যাস, যাও, যান, যায়.",
+     "The ending for আপনি is the same as for তিনি (যান), so use it for anyone you wish to honour.",
+     "A plural pronoun takes the same ending as its singular: আমি যাই and আমরা যাই, সে যায় and তারা যায়.",
+     "In the future tense সে and তুমি share one ending (যাবে). Context, or the pronoun, tells you which one is meant.",
+     "If you are unsure which ending to use, look at the pronoun first. The person decides the ending.",
+   ], title="What to remember"),
+   MISTAKES([
+     (("আমি যায়।","ami jay."), ("আমি যাই।","ami jai."), "আমি takes -ই. যায় is for সে."),
+     (("সে যাই।","she jai."), ("সে যায়।","she jay."), "সে takes -য়. যাই is for আমি."),
+     (("আপনি যাও।","apni jao."), ("আপনি যান।","apni jan."), "আপনি takes the ending in যান. যাও is for তুমি."),
+   ], title="Match the ending to the person"),
+  ]),
+
   dict(id="levels", title="Three levels of 'you'", blocks=[
    P("English has one word, 'you'. Bengali has three: তুই, তুমি and আপনি. They are not different words for different numbers, they are different levels of respect, and each one needs its own verb ending. Choosing the right level is the most important social skill in Bengali, because the wrong choice can sound rude or can sound cold."),
    TABLE(["Pronoun", "Level", "Used with", "Verb ending (present)"], [
@@ -198,4 +250,12 @@ TOPICS = [finish(dict(id="purush", title=("পুরুষ", "Purush", "Person &
   MEAN("I will do it myself.", O(("আমি নিজে করব।","ami nije korbo."),("আমি নিজের করব।","ami nijer korbo."),("আমি নিজে করি।","ami nije kori.")), 0, "নিজে = by oneself; করব = I will do.", inst="Choose the Bengali sentence that means the same as the English sentence."),
   SPOT(O(("আপনি কোথায় যাচ্ছেন?","apni kothay jachchhen?"),("আপনি কোথায় যাচ্ছ?","apni kothay jachchho?"),("আপনি কোথায় যাচ্ছিস?","apni kothay jachchhis?")), 0, "আপনি goes with -েন.", inst="Only one sentence uses the right verb ending for the pronoun. Choose it."),
   SPOT(O(("সে আমাকে দেখল।","she amake dekhlo."),("সে আমি দেখল।","she ami dekhlo."),("সে আমার দেখল।","she amar dekhlo.")), 0, "The receiver of the action takes the object form আমাকে.", inst="Only one sentence uses the right pronoun form. Choose it."),
+  PICK("Which verb form goes with আমি (I) in the simple present?", O(("যাই","jai"),("যায়","jay"),("যান","jan")), 0, "আমি takes the -ই ending: আমি যাই.", inst="Choose the verb form that goes with the pronoun."),
+  PICK("Which two pronouns both take the verb form যান?", O(("আপনি and তিনি","apni and tini"),("তুমি and সে","tumi and she"),("আমি and তুই","ami and tui")), 0, "আপনি and তিনি are the respectful pair, and both take যান.", inst="Choose the pair of pronouns that matches the verb form."),
+  FILL("আমি বাজারে ___।","ami bajare ___.", O(("যাই","jai"),("যায়","jay"),("যান","jan")), 0, "আমি takes -ই: যাই.", inst="Choose the verb ending that goes with the pronoun."),
+  FILL("তুমি ভাত ___।","tumi bhat ___.", O(("খাও","khao"),("খান","khan"),("খাই","khai")), 0, "তুমি takes -ও: খাও.", inst="Choose the verb ending that goes with the pronoun."),
+  FILL("আপনি কেমন ___?","apni kemon ___?", O(("আছেন","achhen"),("আছ","achho"),("আছে","achhe")), 0, "'To be' with আপনি is আছেন.", inst="Choose the form of আছা that goes with the pronoun."),
+  FILL("সে ভালো ___।","she bhalo ___.", O(("আছে","achhe"),("আছি","achhi"),("আছেন","achhen")), 0, "'To be' with সে is আছে.", inst="Choose the form of আছা that goes with the pronoun."),
+  PICK("Which verb is correct for 'I am doing'?", O(("করছি","korchhi"),("করছে","korchhe"),("করছেন","korchhen")), 0, "The present continuous ending for আমি is -ছি: করছি.", inst="Choose the verb that matches the English."),
+  SPOT(O(("আমরা বাজারে যাই।","amra bajare jai."),("আমরা বাজারে যায়।","amra bajare jay."),("আমরা বাজারে যান।","amra bajare jan.")), 0, "আমরা takes the same ending as আমি: যাই.", inst="Only one sentence uses the right verb ending for the pronoun. Choose it."),
  ]))]

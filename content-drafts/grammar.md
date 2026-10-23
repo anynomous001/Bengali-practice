@@ -56,55 +56,192 @@ This is the material behind the new **Grammar** section: seven topics, 29 lesson
 
 # পুরুষ · Purush · Person & pronouns
 
-_Who is speaking, who is spoken to, who is spoken about, and the three levels of 'you'._
+_Who is speaking, who is spoken to, who is spoken about: the three persons, the three levels of 'you', and every pronoun form._
 
 ## The three persons
 
-পুরুষ (purush) tells us who a sentence is about: the speaker, the person spoken to, or someone else. Bengali pronouns and verbs both change with the person.
+পুরুষ (purush) means 'person' in the grammatical sense. Every sentence has a doer, and the doer is always one of three kinds: the person who is speaking, the person who is being spoken to, or somebody or something else who is being spoken about. Bengali verbs change their ending to match this person, so the very first thing to learn is which person you are talking about.
 
-| Person | Meaning | Singular | Plural |
+| Person | Who it is | Singular | Plural |
 |---|---|---|---|
 | উত্তম পুরুষ _(uttom purush)_ | 1st person: the speaker | আমি _(ami)_ | আমরা _(amra)_ |
-| মধ্যম পুরুষ _(moddhom purush)_ | 2nd person: the person spoken to | তুই / তুমি / আপনি _(tui / tumi / apni)_ | তোরা / তোমরা / আপনারা _(tora / tomra / apnara)_ |
-| নাম পুরুষ _(nam purush)_ | 3rd person: the person spoken about | সে / তিনি _(she / tini)_ | তারা / তাঁরা _(tara / tanra)_ |
+| মধ্যম পুরুষ _(moddhom purush)_ | 2nd person: the one spoken to | তুই / তুমি / আপনি _(tui / tumi / apni)_ | তোরা / তোমরা / আপনারা _(tora / tomra / apnara)_ |
+| নাম পুরুষ _(nam purush)_ | 3rd person: the one spoken about | সে / তিনি _(she / tini)_ | তারা / তাঁরা _(tara / tanra)_ |
 
-> **Note:** Some books call the third person প্রথম পুরুষ (the first, in the Sanskrit order). Ask your teacher which labels your class uses. Bengali has no grammatical gender: সে means both 'he' and 'she'.
+> **Note:** Some books call the third person প্রথম পুরুষ (first person, counting in the Sanskrit order). Ask your teacher which labels your class uses.
 
-**The verb changes with the person**
+Look at one action, 'goes to school', with each person. Only the pronoun and the verb ending change: the rest of the sentence stays the same.
+
+**One action, three persons**
 
 - আমি স্কুলে যাই। _(ami skule jai.)_: I go to school.
 - তুমি স্কুলে যাও। _(tumi skule jao.)_: You go to school.
 - সে স্কুলে যায়। _(she skule jay.)_: He / she goes to school.
+- আমি ভাত খাই। _(ami bhat khai.)_: I eat rice.
+- তুমি ভাত খাও। _(tumi bhat khao.)_: You eat rice.
+- সে ভাত খায়। _(she bhat khay.)_: He / she eats rice.
+- আমি বই পড়ি। _(ami boi pori.)_: I read a book.
+- তুমি বই পড়ো। _(tumi boi poro.)_: You read a book.
+- সে বই পড়ে। _(she boi pore.)_: He / she reads a book.
+
+English changes the verb for number sometimes ('he goes', 'they go'). Bengali does not. The pronoun already carries the number (আমি or আমরা, সে or তারা); the verb stays exactly the same as in the singular. So সে যায় (he goes) and তারা যায় (they go) use the same verb form, and so do আমি যাই and আমরা যাই.
+
+**Singular and plural take the same verb**
+
+- আমি স্কুলে যাই। _(ami skule jai.)_: I go to school.
+- আমরা স্কুলে যাই। _(amra skule jai.)_: We go to school.
+- তুমি বাজারে যাও। _(tumi bajare jao.)_: You go to the market.
+- তোমরা বাজারে যাও। _(tomra bajare jao.)_: You (all) go to the market.
+- আপনি অফিসে যান। _(apni ofise jan.)_: You (respectful) go to the office.
+- আপনারা অফিসে যান। _(apnara ofise jan.)_: You all (respectful) go to the office.
+- সে পার্কে যায়। _(she parke jay.)_: He / she goes to the park.
+- তারা পার্কে যায়। _(tara parke jay.)_: They go to the park.
+
+**Six verbs, present tense, by person**
+
+| Verb | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| করা (to do) _(kora)_ | করি _(kori)_ | করিস _(koris)_ | করো _(koro)_ | করেন _(koren)_ | করে _(kore)_ |
+| খাওয়া (to eat) _(khaoya)_ | খাই _(khai)_ | খাস _(khas)_ | খাও _(khao)_ | খান _(khan)_ | খায় _(khay)_ |
+| যাওয়া (to go) _(jaoya)_ | যাই _(jai)_ | যাস _(jas)_ | যাও _(jao)_ | যান _(jan)_ | যায় _(jay)_ |
+| আসা (to come) _(asha)_ | আসি _(ashi)_ | আসিস _(ashis)_ | আসো _(asho)_ | আসেন _(ashen)_ | আসে _(ashe)_ |
+| পড়া (to read / study) _(pora)_ | পড়ি _(pori)_ | পড়িস _(poris)_ | পড়ো _(poro)_ | পড়েন _(poren)_ | পড়ে _(pore)_ |
+| লেখা (to write) _(lekha)_ | লিখি _(likhi)_ | লিখিস _(likhis)_ | লেখো _(lekho)_ | লেখেন _(lekhen)_ | লেখে _(lekhe)_ |
+
+## How the person changes the verb
+
+In English the verb mostly stays the same ('I go', 'you go', 'we go'). In Bengali the verb changes its ending for every person. The first part of the verb (the root) stays, and the ending tells you who is doing the action. That is why Bengali speakers often leave the pronoun out: the ending already says it.
+
+Here are the two most useful verbs, 'to be' (আছা) and 'to do' (করা), in the simple present. Look at the last column: it is the same ending on both verbs, and it is the ending you will meet on almost every verb. Learn it once and you can use it everywhere.
+
+| Person | Pronoun | to be (আছা) | to do (করা) | Ending |
+|---|---|---|---|---|
+| I | আমি _(ami)_ | আছি _(achhi)_ | করি _(kori)_ | ◌ি _(-i)_ |
+| you (very familiar) | তুই _(tui)_ | আছিস _(achhis)_ | করিস _(koris)_ | ◌িস _(-is)_ |
+| you (familiar) | তুমি _(tumi)_ | আছ _(achho)_ | করো _(koro)_ | ◌ো _(-o)_ |
+| you, he or she (respectful) | আপনি / তিনি _(apni / tini)_ | আছেন _(achhen)_ | করেন _(koren)_ | ◌েন _(-en)_ |
+| he, she, it | সে _(she)_ | আছে _(achhe)_ | করে _(kore)_ | ◌ে _(-e)_ |
+
+> **Note:** Two pronouns share one ending. আপনি (you, respectful) and তিনি (he or she, respectful) both take the ending in যান and করেন. Respected people named by a noun, such as মা or শিক্ষক, take it too.
+
+Each tense has its own set of five endings, one for each person. They always come in this order: আমি, তুই, তুমি, আপনি / তিনি, সে. Notice the pattern in the simple present: তুই ends in an s sound (যাস), আপনি / তিনি end in an n sound (যান), and সে is the shortest (যায়).
+
+**Verb endings by tense and person**
+
+| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| Simple present | ◌ি _(-i)_ | ◌িস _(-is)_ | ◌ো _(-o)_ | ◌েন _(-en)_ | ◌ে _(-e)_ |
+| Present continuous | -ছি _(-chhi)_ | -ছিস _(-chhis)_ | -ছ _(-chho)_ | -ছেন _(-chhen)_ | -ছে _(-chhe)_ |
+| Present perfect | ◌েছি _(-echhi)_ | ◌েছিস _(-echhis)_ | ◌েছ _(-echho)_ | ◌েছেন _(-echhen)_ | ◌েছে _(-echhe)_ |
+| Simple past | -লাম _(-lam)_ | -লি _(-li)_ | -লে _(-le)_ | -লেন _(-len)_ | -ল _(-lo)_ |
+| Past continuous | -ছিলাম _(-chhilam)_ | -ছিলি _(-chhili)_ | -ছিলে _(-chhile)_ | -ছিলেন _(-chhilen)_ | -ছিল _(-chhilo)_ |
+| Past perfect | ◌েছিলাম _(-echhilam)_ | ◌েছিলি _(-echhili)_ | ◌েছিলে _(-echhile)_ | ◌েছিলেন _(-echhilen)_ | ◌েছিল _(-echhilo)_ |
+| Past habitual | -তাম _(-tam)_ | -তিস _(-tis)_ | -তে _(-te)_ | -তেন _(-ten)_ | -ত _(-to)_ |
+| Simple future | -ব _(-bo)_ | -বি _(-bi)_ | -বে _(-be)_ | -বেন _(-ben)_ | -বে _(-be)_ |
+
+Here is করা (to do) in five common tenses, so you can see the root কর stay still while the ending moves.
+
+**করা (kora), to do**
+
+| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| Simple present | করি _(kori)_ | করিস _(koris)_ | করো _(koro)_ | করেন _(koren)_ | করে _(kore)_ |
+| Present continuous | করছি _(korchhi)_ | করছিস _(korchhis)_ | করছ _(korchho)_ | করছেন _(korchhen)_ | করছে _(korchhe)_ |
+| Simple past | করলাম _(korlam)_ | করলি _(korli)_ | করলে _(korle)_ | করলেন _(korlen)_ | করল _(korlo)_ |
+| Past habitual | করতাম _(kortam)_ | করতিস _(kortis)_ | করতে _(korte)_ | করতেন _(korten)_ | করত _(korto)_ |
+| Simple future | করব _(korbo)_ | করবি _(korbi)_ | করবে _(korbe)_ | করবেন _(korben)_ | করবে _(korbe)_ |
+
+Because the ending names the person, a short sentence with no pronoun is still complete. Cover the English and say who is doing each action.
+
+**Say who is doing it**
+
+- বাজারে যাই। _(bajare jai.)_: I go to the market. (-ই: আমি)
+- বাজারে যাস। _(bajare jas.)_: You go to the market. (-স: তুই)
+- বাজারে যাও। _(bajare jao.)_: You go to the market. (-ও: তুমি)
+- বাজারে যান। _(bajare jan.)_: You go, or he or she goes, to the market. (-ন: আপনি or তিনি)
+- বাজারে যায়। _(bajare jay.)_: He or she goes to the market. (-য়: সে)
+- ভাত খাচ্ছি। _(bhat khachchhi.)_: I am eating rice. (-ছি: আমি)
+- ভাত খাচ্ছ। _(bhat khachchho.)_: You are eating rice. (-ছ: তুমি)
+- ভাত খাচ্ছেন। _(bhat khachchhen.)_: You (respectful) are eating rice. (-ছেন: আপনি)
+- ভাত খাচ্ছে। _(bhat khachchhe.)_: He or she is eating rice. (-ছে: সে)
+- কাল যাব। _(kal jabo.)_: I will go tomorrow. (-ব: আমি)
+- কাল যাবে। _(kal jabe.)_: You (familiar) will go tomorrow, or he or she will go. (-বে: তুমি or সে)
+- কাল যাবেন। _(kal jaben.)_: You (respectful) will go tomorrow. (-বেন: আপনি)
 
 ## Three levels of 'you'
 
-Bengali has three words for 'you', and the verb ending changes with each. Choosing the right level shows respect.
+English has one word, 'you'. Bengali has three: তুই, তুমি and আপনি. They are not different words for different numbers, they are different levels of respect, and each one needs its own verb ending. Choosing the right level is the most important social skill in Bengali, because the wrong choice can sound rude or can sound cold.
 
-| Pronoun | Level | Used for | Example |
+| Pronoun | Level | Used with | Verb ending (present) |
 |---|---|---|---|
-| তুই _(tui)_ | Very familiar | Close friends, small children, people younger than you. Rude if used wrongly. | তুই কোথায় যাচ্ছিস? _(tui kothay jachchhis?)_ |
-| তুমি _(tumi)_ | Familiar | Friends, peers, younger relatives, people you know well. | তুমি কোথায় যাচ্ছ? _(tumi kothay jachchho?)_ |
-| আপনি _(apni)_ | Respectful | Elders, teachers, strangers, officials, polite situations. | আপনি কোথায় যাচ্ছেন? _(apni kothay jachchhen?)_ |
+| তুই _(tui)_ | Very familiar | Very close friends, small children, younger siblings; also used in anger or contempt | -িস: তুই যাস _(-is: tui jas)_ |
+| তুমি _(tumi)_ | Familiar | Friends, people of your own age, younger relatives, students (said by teachers), often parents too | -ো / -ও: তুমি যাও _(-o / -o: tumi jao)_ |
+| আপনি _(apni)_ | Respectful | Elders, teachers, strangers, officials, customers, anyone you wish to honour | -েন: আপনি যান _(-en: apni jan)_ |
 
-> **Note:** When unsure, use আপনি. It is never wrong. Move to তুমি when the other person invites you to.
+**Where, what, have you eaten**
 
-## He, she, they
+- তুই কোথায় যাচ্ছিস? _(tui kothay jachchhis?)_: Where are you going? (very familiar)
+- তুমি কোথায় যাচ্ছ? _(tumi kothay jachchho?)_: Where are you going? (familiar)
+- আপনি কোথায় যাচ্ছেন? _(apni kothay jachchhen?)_: Where are you going? (respectful)
+- তোর নাম কী? _(tor nam ki?)_: What is your name? (very familiar)
+- তোমার নাম কী? _(tomar nam ki?)_: What is your name? (familiar)
+- আপনার নাম কী? _(apnar nam ki?)_: What is your name? (respectful)
+- তুই ভাত খেয়েছিস? _(tui bhat kheyechhis?)_: Have you eaten? (very familiar)
+- তুমি ভাত খেয়েছ? _(tumi bhat kheyechho?)_: Have you eaten? (familiar)
+- আপনি ভাত খেয়েছেন? _(apni bhat kheyechhen?)_: Have you eaten? (respectful)
 
-The third person also has an ordinary and a respectful form. The respectful form takes the same verb ending as আপনি. Words for 'this person' and 'that person' show near and far.
+**Come here, be quiet**
 
-|  | Ordinary | Respectful | Example |
-|---|---|---|---|
-| He / she (the person spoken about) | সে _(she)_ | তিনি _(tini)_ | তিনি স্কুলে যান। _(tini skule jan.)_ |
-| This person (near) | এ _(e)_ | ইনি _(ini)_ | ইনি আমার শিক্ষক। _(ini amar shikkhok.)_ |
-| That person (far) | ও _(o)_ | উনি _(uni)_ | উনি আমার মা। _(uni amar ma.)_ |
+- তুই এখানে আয়। _(tui ekhane ay.)_: Come here. (very familiar)
+- তুমি এখানে এসো। _(tumi ekhane esho.)_: Come here. (familiar)
+- আপনি এখানে আসুন। _(apni ekhane ashun.)_: Please come here. (respectful)
+- তুই চুপ কর। _(tui chup kor.)_: Be quiet. (very familiar)
+- তুমি চুপ করো। _(tumi chup koro.)_: Be quiet. (familiar)
+- আপনি চুপ করুন। _(apni chup korun.)_: Please be quiet. (respectful)
+
+## He, she, it, they: the third person
+
+The third person is everyone and everything that is not the speaker and not the listener. Like 'you', the third person has an ordinary form and a respectful form. The respectful form takes the same verb ending as আপনি.
+
+|  | Ordinary | Respectful | Plural (ordinary) | Plural (respectful) |
+|---|---|---|---|---|
+| He / she / it, spoken about | সে _(she)_ | তিনি _(tini)_ | তারা _(tara)_ | তাঁরা _(tanra)_ |
+| This one, here (near) | এ _(e)_ | ইনি _(ini)_ | এরা _(era)_ | এঁরা _(enra)_ |
+| That one, there (far) | ও _(o)_ | উনি _(uni)_ | ওরা _(ora)_ | ওঁরা _(onra)_ |
+
+**Pairs: ordinary and respectful**
 
 - সে স্কুলে যায়। _(she skule jay.)_: He / she goes to school. (ordinary)
 - তিনি স্কুলে যান। _(tini skule jan.)_: He / she goes to school. (respectful)
-- ওরা স্কুলে যায়। _(ora skule jay.)_: They go to school.
+- এ ভাত খায়। _(e bhat khay.)_: This one eats rice.
+- ইনি ভাত খান। _(ini bhat khan.)_: This person (respected) eats rice.
+- ও গান শোনে। _(o gan shone.)_: That one listens to a song.
+- উনি গান শোনেন। _(uni gan shonen.)_: That person (respected) listens to a song.
+- তারা বাজারে যায়। _(tara bajare jay.)_: They go to the market.
+- তাঁরা বাজারে যান। _(tanra bajare jan.)_: They (respected) go to the market.
+- এরা খেলে। _(era khele.)_: These ones play.
+- ওরা বই পড়ে। _(ora boi pore.)_: Those ones read a book.
 
-## Pronoun forms
+When the doer is a noun instead of a pronoun, the same rule applies. Respected people (parents, teachers, doctors, elders) take the respectful verb ending, as if you had said তিনি. Friends, children, animals and objects take the ordinary ending, as if you had said সে.
 
-Pronouns change form for the object (who receives the action) and for possession. The possessive ends in -র; the object ends in -কে. In the plural, one form (-দের) does both jobs.
+**Respected people and others**
+
+- মা ভাত খান। _(ma bhat khan.)_: Mother eats rice.
+- বাবা অফিসে যান। _(baba ofise jan.)_: Father goes to the office.
+- শিক্ষক বাংলা বলেন। _(shikkhok bangla bolen.)_: The teacher speaks Bengali.
+- ডাক্তার হাসপাতালে থাকেন। _(daktar haspatale thaken.)_: The doctor stays at the hospital.
+- ঠাকুমা গল্প বলেন। _(thakuma golpo bolen.)_: Grandmother tells a story.
+- বন্ধু স্কুলে যায়। _(bondhu skule jay.)_: The friend goes to school.
+- কুকুর বাড়িতে থাকে। _(kukur barite thake.)_: The dog stays at home.
+- বিড়াল দুধ খায়। _(biral dudh khay.)_: The cat drinks milk.
+- রাহুল খেলে। _(rahul khele.)_: Rahul plays.
+- অনিতা বই পড়ে। _(anita boi pore.)_: Anita reads a book.
+
+> **Note:** It is a matter of respect, not of age alone. Calling a younger doctor or a teacher by the respectful form is correct. In a close family, some people use the ordinary form for an older brother or sister. Follow what your own family does.
+
+## Pronoun forms: subject, object, possessive
+
+A pronoun changes its shape depending on the job it does in the sentence. As the doer (subject) it is আমি, তুমি, সে. As the receiver of the action (object) it takes -কে: আমাকে, তোমাকে, তাকে. To show ownership (possessive) it takes -র: আমার, তোমার, তার. In the plural, one form ending in -দের does both the object and the possessive job.
 
 | Pronoun | Subject | Object (-কে) | Possessive (-র) |
 |---|---|---|---|
@@ -114,232 +251,800 @@ Pronouns change form for the object (who receives the action) and for possession
 | you (respectful) | আপনি _(apni)_ | আপনাকে _(apnake)_ | আপনার _(apnar)_ |
 | he / she | সে _(she)_ | তাকে _(take)_ | তার _(tar)_ |
 | he / she (respectful) | তিনি _(tini)_ | তাঁকে _(tanke)_ | তাঁর _(tanr)_ |
+| this one | এ _(e)_ | একে _(eke)_ | এর _(er)_ |
+| that one | ও _(o)_ | ওকে _(oke)_ | ওর _(or)_ |
 | we | আমরা _(amra)_ | আমাদের _(amader)_ | আমাদের _(amader)_ |
 | you all (familiar) | তোমরা _(tomra)_ | তোমাদের _(tomader)_ | তোমাদের _(tomader)_ |
 | you all (respectful) | আপনারা _(apnara)_ | আপনাদের _(apnader)_ | আপনাদের _(apnader)_ |
 | they | তারা _(tara)_ | তাদের _(tader)_ | তাদের _(tader)_ |
 | they (respectful) | তাঁরা _(tanra)_ | তাঁদের _(tander)_ | তাঁদের _(tander)_ |
 
+**Object forms in use**
+
 - সে আমাকে দেখল। _(she amake dekhlo.)_: He / she saw me.
-- এটা আমার বই। _(eta amar boi.)_: This is my book.
 - আমি তোমাকে ডাকলাম। _(ami tomake daklam.)_: I called you.
-- এটা তোমাদের ঘর। _(eta tomader ghor.)_: This is your (pl.) room.
+- মা আমাকে ভাত দিলেন। _(ma amake bhat dilen.)_: Mother gave me rice.
+- আমি তাকে চিনি। _(ami take chini.)_: I know him / her.
+- শিক্ষক আমাদের গল্প বললেন। _(shikkhok amader golpo bollen.)_: The teacher told us a story.
+- তারা আমাকে চিঠি লিখল। _(tara amake chithi likhlo.)_: They wrote me a letter.
+- আমি আপনাকে সাহায্য করব। _(ami apnake shahajyo korbo.)_: I will help you.
+- বাবা তোমাকে ডাকছেন। _(baba tomake dakchhen.)_: Father is calling you.
+
+**Possessive forms in use**
+
+- এটা আমার বই। _(eta amar boi.)_: This is my book.
+- এটা তোমার ঘর। _(eta tomar ghor.)_: This is your room.
+- ওটা আপনার গাড়ি। _(ota apnar gari.)_: That is your car.
+- এটা তার চিঠি। _(eta tar chithi.)_: This is his / her letter.
+- এটা আমাদের বাড়ি। _(eta amader bari.)_: This is our house.
+- ওটা ওদের স্কুল। _(ota oder skul.)_: That is their school.
+- তোমার নাম কী? _(tomar nam ki?)_: What is your name?
+- আপনার মা কেমন আছেন? _(apnar ma kemon achhen?)_: How is your mother?
+
+## This, that, which and who
+
+Pointing words go in front of a noun. Bengali has two for 'that': one for something you can see or point at (ওই), and one for something already mentioned (সেই). The question word 'which' is কোন, and the relative word 'who / which' is যে.
+
+| Word | Meaning | Example |
+|---|---|---|
+| এই _(ei)_ | this (near me) | এই বইটা _(ei boita)_ |
+| ওই _(oi)_ | that (over there, visible) | ওই বাড়িটা _(oi barita)_ |
+| সেই _(shei)_ | that (already mentioned, known) | সেই লোকটা _(shei lokta)_ |
+| কোন _(kon)_ | which | কোন বইটা? _(kon boita?)_ |
+| যে _(je)_ | who / which / that (joins two parts) | যে আসবে সে খাবে _(je ashbe she khabe)_ |
+
+**Pointing words in use**
+
+- এই বইটা আমার। _(ei boita amar.)_: This book is mine.
+- ওই বাড়িটা অনেক বড়। _(oi barita onek boro.)_: That house is very big.
+- সেই লোকটা কোথায় গেল? _(shei lokta kothay gelo?)_: Where did that man go?
+- কোন বইটা তোমার? _(kon boita tomar?)_: Which book is yours?
+- এই ফুলটা সুন্দর। _(ei phulta shundor.)_: This flower is beautiful.
+- ওই পাখিটা কী? _(oi pakhita ki?)_: What is that bird?
+- যে আসবে সে খাবে। _(je ashbe she khabe.)_: Whoever comes will eat.
+- যে পড়ে সে শেখে। _(je pore she shekhe.)_: The one who studies learns.
+
+> **Note:** The little endings -টা and -টি after the noun (বইটা, বাড়িটা) mean 'the'. They are explained in the lesson on number and counting.
+
+## Myself, yourself: নিজে and নিজের
+
+নিজে means 'by oneself, in person'. It stresses that the doer did it alone. নিজের means 'one's own'. Both can be added to any person.
+
+**Doing it yourself**
+
+- আমি নিজে করব। _(ami nije korbo.)_: I will do it myself.
+- তুমি নিজে দেখো। _(tumi nije dekho.)_: See for yourself.
+- সে নিজে এসেছে। _(she nije eshechhe.)_: He / she came in person.
+- আমি নিজের কাজ নিজে করি। _(ami nijer kaj nije kori.)_: I do my own work myself.
+- এটা আমার নিজের বই। _(eta amar nijer boi.)_: This is my own book.
+- তিনি নিজে রান্না করেন। _(tini nije ranna koren.)_: He / she cooks by himself / herself.
+- আমরা নিজেরাই যাব। _(amra nijerai jabo.)_: We will go ourselves.
+- তুমি নিজের ঘর পরিষ্কার করো। _(tumi nijer ghor poriskar koro.)_: Clean your own room.
+
+## Leaving the pronoun out
+
+Because the verb ending already shows the person, Bengali very often leaves the pronoun out when it is clear who is meant. You will hear this constantly in speech. Keep the pronoun when you want to stress who is doing it, or when it would otherwise be unclear.
+
+**No pronoun needed**
+
+- কোথায় যাচ্ছ? _(kothay jachchho?)_: (Where are you going?)  The verb -ছ shows 'you' (তুমি).
+- ভাত খাচ্ছি। _(bhat khachchhi.)_: (I am eating rice.)  The verb -ছি shows 'I'.
+- বাজারে যাব। _(bajare jabo.)_: (I will go to the market.)  The ending -ব shows 'I'.
+- কী করছেন? _(ki korchhen?)_: (What are you doing?)  The ending -ছেন shows আপনি.
+- কাল আসব। _(kal ashbo.)_: (I will come tomorrow.)
+- চা খাবে? _(cha khabe?)_: (Will you have tea?)  The ending -বে with a question shows তুমি.
+
+> **Note:** The ending -বে is the same for তুমি and সে (খাবে). When no pronoun is given, context tells you which one is meant.
 
 ## Practice questions
 
-1. Which word do you use to address your teacher respectfully?
+1. Which person is 'the one spoken to'?
+   - A) 1st person (উত্তম পুরুষ)
+   - B) 2nd person (মধ্যম পুরুষ)  ✔
+   - C) 3rd person (নাম পুরুষ)
+   - _Why:_ The person spoken to is the 2nd person: you.
+2. Which pronoun is the respectful 'you'?
    - A) তুই _(tui)_
    - B) তুমি _(tumi)_
    - C) আপনি _(apni)_  ✔
    - _Why:_ আপনি is the respectful 'you'.
-2. Choose the pronoun that fits the verb. **___ কোথায় যাচ্ছ?**
-   - A) তুই _(tui)_
-   - B) তুমি _(tumi)_  ✔
+3. Which pronoun is the very familiar 'you'?
+   - A) তুই _(tui)_  ✔
+   - B) তুমি _(tumi)_
    - C) আপনি _(apni)_
-   - _Why:_ যাচ্ছ is the তুমি form of the verb.
-3. Choose the right verb. **আপনি কোথায় ___?**
-   - A) যাচ্ছ _(jachchho)_
-   - B) যাচ্ছেন _(jachchhen)_  ✔
+   - _Why:_ তুই is used with very close people.
+4. Which word fills the blank? **তুমি কোথায় ___?**
+   - A) যাচ্ছ _(jachchho)_  ✔
+   - B) যাচ্ছেন _(jachchhen)_
    - C) যাচ্ছিস _(jachchhis)_
-   - _Why:_ আপনি takes the -েন ending: যাচ্ছেন.
-4. Which word means 'my'? **এটা ___ বই।**
+   - _Why:_ তুমি takes -ছ: যাচ্ছ.
+5. Which word fills the blank? **আপনি কোথায় ___?**
+   - A) যাচ্ছেন _(jachchhen)_  ✔
+   - B) যাচ্ছ _(jachchho)_
+   - C) যাচ্ছিস _(jachchhis)_
+   - _Why:_ আপনি takes -েন: যাচ্ছেন.
+6. Which word fills the blank? **তুই কোথায় ___?**
+   - A) যাচ্ছিস _(jachchhis)_  ✔
+   - B) যাচ্ছ _(jachchho)_
+   - C) যাচ্ছেন _(jachchhen)_
+   - _Why:_ তুই takes -িস: যাচ্ছিস.
+7. Which word fills the blank? **তিনি স্কুলে ___।**
+   - A) যান _(jan)_  ✔
+   - B) যায় _(jay)_
+   - C) যাই _(jai)_
+   - _Why:_ তিনি is respectful, so the verb ends in -েন: যান.
+8. Which word fills the blank? **সে স্কুলে ___।**
+   - A) যায় _(jay)_  ✔
+   - B) যান _(jan)_
+   - C) যাও _(jao)_
+   - _Why:_ সে is ordinary, so the verb is যায়.
+9. Which word fills the blank? **মা ভাত ___।**
+   - A) খান _(khan)_  ✔
+   - B) খায় _(khay)_
+   - C) খাই _(khai)_
+   - _Why:_ A mother takes the respectful verb: খান.
+10. Which word fills the blank? **বন্ধু স্কুলে ___।**
+   - A) যায় _(jay)_  ✔
+   - B) যান _(jan)_
+   - C) যাই _(jai)_
+   - _Why:_ A friend takes the ordinary verb: যায়.
+11. Which word fills the blank? **এটা ___ বই।**
    - A) আমার _(amar)_  ✔
    - B) আমাকে _(amake)_
-   - C) আমরা _(amra)_
-   - _Why:_ -র marks possession: আমার = my.
-5. Choose the form for 'saw him / her'. **আমি ___ দেখলাম।**
-   - A) সে _(she)_
-   - B) তাকে _(take)_  ✔
-   - C) তার _(tar)_
-   - _Why:_ The object form of সে is তাকে.
-6. Which means 'your' (familiar)? **এটা ___ বই।**
-   - A) তোমার _(tomar)_  ✔
-   - B) তোমাকে _(tomake)_
+   - C) আমি _(ami)_
+   - _Why:_ 'My book' needs the possessive: আমার.
+12. Which word fills the blank? **সে ___ দেখল।**
+   - A) আমাকে _(amake)_  ✔
+   - B) আমার _(amar)_
+   - C) আমি _(ami)_
+   - _Why:_ 'Saw me' needs the object form: আমাকে.
+13. Which word fills the blank? **আমি ___ ডাকলাম।**
+   - A) তোমাকে _(tomake)_  ✔
+   - B) তোমার _(tomar)_
    - C) তুমি _(tumi)_
-   - _Why:_ তোমার is the possessive of তুমি.
-7. Which is the respectful 'he / she'?
-   - A) সে _(she)_
-   - B) তিনি _(tini)_  ✔
-   - C) তারা _(tara)_
-   - _Why:_ তিনি is the respectful third person.
-8. What is the plural of তুমি?
+   - _Why:_ 'I called you' needs the object form: তোমাকে.
+14. Which word fills the blank? **এটা ___ বাড়ি।**
+   - A) আমাদের _(amader)_  ✔
+   - B) আমরা _(amra)_
+   - C) আমাকে _(amake)_
+   - _Why:_ 'Our house' needs আমাদের (the plural possessive).
+15. Which means 'they (ordinary)'?
+   - A) তারা _(tara)_  ✔
+   - B) তাঁরা _(tanra)_
+   - C) আমরা _(amra)_
+   - _Why:_ তারা is the ordinary plural; তাঁরা is respectful.
+16. What is the plural of তুমি?
    - A) তোমরা _(tomra)_  ✔
    - B) আমরা _(amra)_
    - C) তারা _(tara)_
    - _Why:_ তুমি becomes তোমরা.
-9. The pronoun সে can mean:
+17. The pronoun সে can mean:
    - A) only 'he'
    - B) only 'she'
    - C) 'he' or 'she'  ✔
    - _Why:_ Bengali pronouns do not show gender.
-10. Choose the right verb. **তিনি স্কুলে ___।**
-   - A) যায় _(jay)_
-   - B) যান _(jan)_  ✔
-   - C) যাই _(jai)_
-   - _Why:_ তিনি (respectful) takes the -েন ending: যান.
+18. Does the Bengali verb change between 'he goes' and 'they go'?
+   - A) Yes, it adds -রা
+   - B) No, it stays the same: যায়  ✔
+   - C) Yes, it becomes যান
+   - _Why:_ Verbs do not change for number: সে যায়, তারা যায়.
+19. Which word do you use for 'that', already mentioned?
+   - A) সেই _(shei)_  ✔
+   - B) ওই _(oi)_
+   - C) এই _(ei)_
+   - _Why:_ সেই points back to something already mentioned.
+20. Which means 'which book'?
+   - A) কোন বই _(kon boi)_  ✔
+   - B) এই বই _(ei boi)_
+   - C) যে বই _(je boi)_
+   - _Why:_ কোন is the question word 'which'.
+21. I will do it myself.
+   - A) আমি নিজে করব। _(ami nije korbo.)_  ✔
+   - B) আমি নিজের করব। _(ami nijer korbo.)_
+   - C) আমি নিজে করি। _(ami nije kori.)_
+   - _Why:_ নিজে = by oneself; করব = I will do.
+22. Which sentence is correct?
+   - A) আপনি কোথায় যাচ্ছেন? _(apni kothay jachchhen?)_  ✔
+   - B) আপনি কোথায় যাচ্ছ? _(apni kothay jachchho?)_
+   - C) আপনি কোথায় যাচ্ছিস? _(apni kothay jachchhis?)_
+   - _Why:_ আপনি goes with -েন.
+23. Which sentence is correct?
+   - A) সে আমাকে দেখল। _(she amake dekhlo.)_  ✔
+   - B) সে আমি দেখল। _(she ami dekhlo.)_
+   - C) সে আমার দেখল। _(she amar dekhlo.)_
+   - _Why:_ The receiver of the action takes the object form আমাকে.
+24. Which verb form goes with আমি (I) in the simple present?
+   - A) যাই _(jai)_  ✔
+   - B) যায় _(jay)_
+   - C) যান _(jan)_
+   - _Why:_ আমি takes the -ই ending: আমি যাই.
+25. Which two pronouns both take the verb form যান?
+   - A) আপনি and তিনি _(apni and tini)_  ✔
+   - B) তুমি and সে _(tumi and she)_
+   - C) আমি and তুই _(ami and tui)_
+   - _Why:_ আপনি and তিনি are the respectful pair, and both take যান.
+26. Which word fills the blank? **আমি বাজারে ___।**
+   - A) যাই _(jai)_  ✔
+   - B) যায় _(jay)_
+   - C) যান _(jan)_
+   - _Why:_ আমি takes -ই: যাই.
+27. Which word fills the blank? **তুমি ভাত ___।**
+   - A) খাও _(khao)_  ✔
+   - B) খান _(khan)_
+   - C) খাই _(khai)_
+   - _Why:_ তুমি takes -ও: খাও.
+28. Which word fills the blank? **আপনি কেমন ___?**
+   - A) আছেন _(achhen)_  ✔
+   - B) আছ _(achho)_
+   - C) আছে _(achhe)_
+   - _Why:_ 'To be' with আপনি is আছেন.
+29. Which word fills the blank? **সে ভালো ___।**
+   - A) আছে _(achhe)_  ✔
+   - B) আছি _(achhi)_
+   - C) আছেন _(achhen)_
+   - _Why:_ 'To be' with সে is আছে.
+30. Which verb is correct for 'I am doing'?
+   - A) করছি _(korchhi)_  ✔
+   - B) করছে _(korchhe)_
+   - C) করছেন _(korchhen)_
+   - _Why:_ The present continuous ending for আমি is -ছি: করছি.
+31. Which sentence is correct?
+   - A) আমরা বাজারে যাই। _(amra bajare jai.)_  ✔
+   - B) আমরা বাজারে যায়। _(amra bajare jay.)_
+   - C) আমরা বাজারে যান। _(amra bajare jan.)_
+   - _Why:_ আমরা takes the same ending as আমি: যাই.
 
 ---
 
 # ক্রিয়া · Kriya · Verbs
 
-_Roots, the three forms of a verb, 'to be' and 'to have', commands, and verbs made with করা._
+_Roots and endings, finite and non-finite verbs, 'to be' and 'to have', commands and polite requests, verbs made with করা, and verbs that make others act._
 
-## Roots
+## Roots and endings
 
-The action word of a sentence is the ক্রিয়া (kriya). Every verb is built from a root (ধাতু, dhatu). We add endings to the root to show the person and time. The dictionary form of a verb is the verbal noun, which ends in -া, like করা.
+The action word of a sentence is the ক্রিয়া (kriya). Every Bengali verb is built from a root, called ধাতু (dhatu). You add an ending to the root, and the ending tells you who is acting (the person) and when (the tense). To use a verb you need three things: the root, the ending, and the person.
 
-| Verb (dictionary form) | Root | Meaning |
+**Nineteen common verbs**
+
+| Verb (dictionary form) | Root | I (present) | You, familiar (present) | Meaning |
+|---|---|---|---|---|
+| করা _(kora)_ | কর _(kor)_ | করি _(kori)_ | করো _(koro)_ | to do |
+| বলা _(bola)_ | বল _(bol)_ | বলি _(boli)_ | বলো _(bolo)_ | to say / tell |
+| দেখা _(dekha)_ | দেখ _(dekh)_ | দেখি _(dekhi)_ | দেখো _(dekho)_ | to see / look |
+| শোনা _(shona)_ | শোন _(shon)_ | শুনি _(shuni)_ | শোনো _(shono)_ | to hear / listen |
+| পড়া _(pora)_ | পড় _(por)_ | পড়ি _(pori)_ | পড়ো _(poro)_ | to read / study |
+| লেখা _(lekha)_ | লিখ _(likh)_ | লিখি _(likhi)_ | লেখো _(lekho)_ | to write |
+| খাওয়া _(khaoya)_ | খা _(kha)_ | খাই _(khai)_ | খাও _(khao)_ | to eat |
+| যাওয়া _(jaoya)_ | যা _(ja)_ | যাই _(jai)_ | যাও _(jao)_ | to go |
+| আসা _(asha)_ | আস _(as)_ | আসি _(ashi)_ | আসো _(asho)_ | to come |
+| দেওয়া _(deoya)_ | দে _(de)_ | দিই _(dii)_ | দাও _(dao)_ | to give |
+| নেওয়া _(neoya)_ | নে _(ne)_ | নিই _(nii)_ | নাও _(nao)_ | to take |
+| থাকা _(thaka)_ | থাক _(thak)_ | থাকি _(thaki)_ | থাকো _(thako)_ | to stay / live |
+| বসা _(bosha)_ | বস _(bosh)_ | বসি _(boshi)_ | বসো _(bosho)_ | to sit |
+| খেলা _(khela)_ | খেল _(khel)_ | খেলি _(kheli)_ | খেলো _(khelo)_ | to play |
+| হাঁটা _(hata)_ | হাঁট _(hat)_ | হাঁটি _(hati)_ | হাঁটো _(hato)_ | to walk |
+| ধরা _(dhora)_ | ধর _(dhor)_ | ধরি _(dhori)_ | ধরো _(dhoro)_ | to hold / catch |
+| রাখা _(rakha)_ | রাখ _(rakh)_ | রাখি _(rakhi)_ | রাখো _(rakho)_ | to put / keep |
+| চলা _(chola)_ | চল _(chol)_ | চলি _(choli)_ | চলো _(cholo)_ | to move / go along |
+| ঘুমানো _(ghumano)_ | ঘুমা _(ghuma)_ | ঘুমাই _(ghumai)_ | ঘুমাও _(ghumao)_ | to sleep |
+
+| Verb | Root | Meaning |
 |---|---|---|
-| করা _(kora)_ | কর _(kor)_ | to do |
-| খাওয়া _(khaoya)_ | খা _(kha)_ | to eat |
-| যাওয়া _(jaoya)_ | যা _(ja)_ | to go |
-| আসা _(asha)_ | আস _(as)_ | to come |
-| দেওয়া _(deoya)_ | দে _(de)_ | to give |
-| নেওয়া _(neoya)_ | নে _(ne)_ | to take |
-| বলা _(bola)_ | বল _(bol)_ | to say |
-| দেখা _(dekha)_ | দেখ _(dekh)_ | to see |
-| শোনা _(shona)_ | শোন _(shon)_ | to hear / listen |
-| পড়া _(pora)_ | পড় _(por)_ | to read / study |
-| লেখা _(lekha)_ | লিখ _(likh)_ | to write |
-| থাকা _(thaka)_ | থাক _(thak)_ | to stay |
-| বসা _(bosha)_ | বস _(bosh)_ | to sit |
-| পাওয়া _(paoya)_ | পা _(pa)_ | to get |
-| হওয়া _(hooya)_ | হ _(ho)_ | to be / become |
-| ওঠা _(otha)_ | ওঠ _(oth)_ | to rise / get up |
+| কেনা _(kena)_ | কিন- / কেন- _(kin- / ken-)_ | to buy |
+| পাওয়া _(paoya)_ | পা- _(pa-)_ | to get |
+| হওয়া _(hooya)_ | হ- _(ho-)_ | to be / become |
+| জানা _(jana)_ | জান- _(jan-)_ | to know |
+| বোঝা _(bojha)_ | বোঝ- / বুঝ- _(bojh- / bujh-)_ | to understand |
+| ভাবা _(bhaba)_ | ভাব- _(bhab-)_ | to think |
+| চাওয়া _(chaoya)_ | চা- _(cha-)_ | to want |
+| ডাকা _(daka)_ | ডাক- _(dak-)_ | to call |
+| খোলা _(khola)_ | খোল- / খুল- _(khol- / khul-)_ | to open |
+| ধোয়া _(dhoya)_ | ধো- / ধু- _(dho- / dhu-)_ | to wash |
+| হাসা _(hasha)_ | হাস- _(has-)_ | to laugh |
+| কাঁদা _(kada)_ | কাঁদ- _(kad-)_ | to cry |
+| গাওয়া _(gaoya)_ | গা- _(ga-)_ | to sing |
+| নাচা _(nacha)_ | নাচ- _(nach-)_ | to dance |
+| ওঠা _(otha)_ | ওঠ- / উঠ- _(oth- / uth-)_ | to get up |
 
-> **Note:** Two roots change: লেখা has the root লিখ- (likh-) in লিখি, and আসা gives এসে, এলাম. Irregular verbs are marked in the tables later.
+> **Note:** Some roots change their vowel when an ending is added: লেখা has the root লিখ- in লিখি (I write) but লেখো in 'you write'; শোনা gives শুনি and শোনো. This is called vowel harmony and you learn it with practice. The verb tables in the Tenses lessons always show the right forms.
 
-## Finite and non-finite
+## Regular and irregular verbs
 
-A finite verb (সমাপিকা ক্রিয়া) ends a sentence and carries the person and time: আমি ভাত খাই। A non-finite verb (অসমাপিকা ক্রিয়া) cannot end a sentence by itself. It does not show the person or time, and it joins the main verb.
+A regular verb keeps its root the same and just takes the endings. করা, বলা, দেখা, পড়া, চলা, থাকা, বসা, খেলা and হাঁটা are regular. An irregular verb changes its root in some tenses. খাওয়া, যাওয়া, দেওয়া, নেওয়া and আসা are the most common irregular verbs, and you must memorise them.
+
+**Regular verbs first, then irregular ones**
+
+| Verb | Present (I) | Past (I) | Future (I) | 'and then' form |
+|---|---|---|---|---|
+| করা (to do) _(kora)_ | করি _(kori)_ | করলাম _(korlam)_ | করব _(korbo)_ | করে _(kore)_ |
+| বলা (to say / tell) _(bola)_ | বলি _(boli)_ | বললাম _(bollam)_ | বলব _(bolbo)_ | বলে _(bole)_ |
+| দেখা (to see / look) _(dekha)_ | দেখি _(dekhi)_ | দেখলাম _(dekhlam)_ | দেখব _(dekhbo)_ | দেখে _(dekhe)_ |
+| পড়া (to read / study) _(pora)_ | পড়ি _(pori)_ | পড়লাম _(porlam)_ | পড়ব _(porbo)_ | পড়ে _(pore)_ |
+| খাওয়া (to eat) _(khaoya)_ | খাই _(khai)_ | খেলাম _(khelam)_ | খাব _(khabo)_ | খেয়ে _(kheye)_ |
+| যাওয়া (to go) _(jaoya)_ | যাই _(jai)_ | গেলাম _(gelam)_ | যাব _(jabo)_ | গিয়ে _(giye)_ |
+| দেওয়া (to give) _(deoya)_ | দিই _(dii)_ | দিলাম _(dilam)_ | দেব _(debo)_ | দিয়ে _(diye)_ |
+| নেওয়া (to take) _(neoya)_ | নিই _(nii)_ | নিলাম _(nilam)_ | নেব _(nebo)_ | নিয়ে _(niye)_ |
+| আসা (to come) _(asha)_ | আসি _(ashi)_ | এলাম _(elam)_ | আসব _(asbo)_ | এসে _(eshe)_ |
+| লেখা (to write) _(lekha)_ | লিখি _(likhi)_ | লিখলাম _(likhlam)_ | লিখব _(likhbo)_ | লিখে _(likhe)_ |
+| শোনা (to hear / listen) _(shona)_ | শুনি _(shuni)_ | শুনলাম _(shunlam)_ | শুনব _(shunbo)_ | শুনে _(shune)_ |
+
+**Regular verbs**
+
+- আমি বই পড়ি। _(ami boi pori.)_: I read a book.
+- তুমি গান শোনো। _(tumi gan shono.)_: You listen to a song.
+- সে কাজ করে। _(she kaj kore.)_: He / she works.
+- আপনি বাংলা বলেন। _(apni bangla bolen.)_: You (respectful) speak Bengali.
+- আমি পার্কে হাঁটি। _(ami parke hati.)_: I walk in the park.
+- তুমি মাঠে খেলো। _(tumi mathe khelo.)_: You play in the field.
+- আমরা বাড়িতে থাকি। _(amra barite thaki.)_: We stay at home.
+- তারা পার্কে বসে। _(tara parke boshe.)_: They sit in the park.
+
+**Irregular verbs**
+
+- আমি ভাত খাই। _(ami bhat khai.)_: I eat rice.
+- তুমি বাজারে যাও। _(tumi bajare jao.)_: You go to the market.
+- সে বাড়িতে আসে। _(she barite ashe.)_: He / she comes home.
+- আমি বই নিই। _(ami boi nii.)_: I take a book.
+- তুমি জল দাও। _(tumi jol dao.)_: You give water.
+- আমরা চিঠি লিখি। _(amra chithi likhi.)_: We write a letter.
+
+## Finite and non-finite verbs
+
+A finite verb (সমাপিকা ক্রিয়া, shomapika kriya) ends a sentence and carries the person and the tense: আমি ভাত খাই। A non-finite verb (অসমাপিকা ক্রিয়া, oshomapika kriya) does not end a sentence by itself. It has no person and no tense of its own, and it hangs on to a finite verb that comes later in the sentence. There are four non-finite forms.
+
+**Four non-finite forms of nineteen common verbs**
 
 | Verb | Root (ধাতু) | -ে / -য়ে (and then) | -তে (to do) | -লে (if) | -া (verbal noun) |
 |---|---|---|---|---|---|
 | করা (to do) _(kora)_ | কর _(kor)_ | করে _(kore)_ | করতে _(korte)_ | করলে _(korle)_ | করা _(kora)_ |
 | বলা (to say / tell) _(bola)_ | বল _(bol)_ | বলে _(bole)_ | বলতে _(bolte)_ | বললে _(bolle)_ | বলা _(bola)_ |
 | দেখা (to see / look) _(dekha)_ | দেখ _(dekh)_ | দেখে _(dekhe)_ | দেখতে _(dekhte)_ | দেখলে _(dekhle)_ | দেখা _(dekha)_ |
+| শোনা (to hear / listen) _(shona)_ | শোন _(shon)_ | শুনে _(shune)_ | শুনতে _(shunte)_ | শুনলে _(shunle)_ | শোনা _(shona)_ |
+| পড়া (to read / study) _(pora)_ | পড় _(por)_ | পড়ে _(pore)_ | পড়তে _(porte)_ | পড়লে _(porle)_ | পড়া _(pora)_ |
+| লেখা (to write) _(lekha)_ | লিখ _(likh)_ | লিখে _(likhe)_ | লিখতে _(likhte)_ | লিখলে _(likhle)_ | লেখা _(lekha)_ |
 | খাওয়া (to eat) _(khaoya)_ | খা _(kha)_ | খেয়ে _(kheye)_ | খেতে _(khete)_ | খেলে _(khele)_ | খাওয়া _(khaoya)_ |
 | যাওয়া (to go) _(jaoya)_ | যা _(ja)_ | গিয়ে _(giye)_ | যেতে _(jete)_ | গেলে _(gele)_ | যাওয়া _(jaoya)_ |
-| দেওয়া (to give) _(deoya)_ | দে _(de)_ | দিয়ে _(diye)_ | দিতে _(dite)_ | দিলে _(dile)_ | দেওয়া _(deoya)_ |
 | আসা (to come) _(asha)_ | আস _(as)_ | এসে _(eshe)_ | আসতে _(aste)_ | এলে _(ele)_ | আসা _(asha)_ |
+| দেওয়া (to give) _(deoya)_ | দে _(de)_ | দিয়ে _(diye)_ | দিতে _(dite)_ | দিলে _(dile)_ | দেওয়া _(deoya)_ |
+| নেওয়া (to take) _(neoya)_ | নে _(ne)_ | নিয়ে _(niye)_ | নিতে _(nite)_ | নিলে _(nile)_ | নেওয়া _(neoya)_ |
+| থাকা (to stay / live) _(thaka)_ | থাক _(thak)_ | থাকে _(thake)_ | থাকতে _(thakte)_ | থাকলে _(thakle)_ | থাকা _(thaka)_ |
+| বসা (to sit) _(bosha)_ | বস _(bosh)_ | বসে _(boshe)_ | বসতে _(boshte)_ | বসলে _(boshle)_ | বসা _(bosha)_ |
+| খেলা (to play) _(khela)_ | খেল _(khel)_ | খেলে _(khele)_ | খেলতে _(khelte)_ | খেললে _(khelle)_ | খেলা _(khela)_ |
+| হাঁটা (to walk) _(hata)_ | হাঁট _(hat)_ | হাঁটে _(hate)_ | হাঁটতে _(hatte)_ | হাঁটলে _(hatle)_ | হাঁটা _(hata)_ |
+| ধরা (to hold / catch) _(dhora)_ | ধর _(dhor)_ | ধরে _(dhore)_ | ধরতে _(dhorte)_ | ধরলে _(dhorle)_ | ধরা _(dhora)_ |
+| রাখা (to put / keep) _(rakha)_ | রাখ _(rakh)_ | রাখে _(rakhe)_ | রাখতে _(rakhte)_ | রাখলে _(rakhle)_ | রাখা _(rakha)_ |
+| চলা (to move / go along) _(chola)_ | চল _(chol)_ | চলে _(chole)_ | চলতে _(cholte)_ | চললে _(cholle)_ | চলা _(chola)_ |
+| ঘুমানো (to sleep) _(ghumano)_ | ঘুমা _(ghuma)_ | ঘুমিয়ে _(ghumiye)_ | ঘুমাতে _(ghumate)_ | ঘুমালে _(ghumale)_ | ঘুমানো _(ghumano)_ |
 
-**How they are used**
+Add -ে (or -য়ে after a vowel) to the root. It joins two actions that happen one after the other. The person and tense are shown only on the last verb.
 
-- ভাত খেয়ে সে স্কুলে গেল। _(bhat kheye she skule gelo.)_: Having eaten rice, he / she went to school. (-ে: and then)
-- আমি স্কুলে যেতে চাই। _(ami skule jete chai.)_: I want to go to school. (-তে: to do)
-- তুমি গেলে আমি যাব। _(tumi gele ami jabo.)_: If you go, I will go. (-লে: if)
-- পড়া ভালো। _(pora bhalo.)_: Reading is good. (-া: verbal noun)
+**-ে: one action after another**
 
-## 'To be' and 'to have'
+- ভাত খেয়ে সে স্কুলে গেল। _(bhat kheye she skule gelo.)_: Having eaten rice, he / she went to school.
+- আমি বাজারে গিয়ে মাছ কিনলাম। _(ami bajare giye mach kinlam.)_: I went to the market and bought fish.
+- তুমি হাত ধুয়ে খাও। _(tumi hat dhuye khao.)_: Wash your hands and eat.
+- সে বই পড়ে ঘুমিয়ে পড়ল। _(she boi pore ghumiye porlo.)_: He / she read a book and fell asleep.
+- মা রান্না করে আমাদের ডাকলেন। _(ma ranna kore amader daklen.)_: Mother cooked and called us.
+- আমি দরজা খুলে ভিতরে গেলাম। _(ami dorja khule bhitore gelam.)_: I opened the door and went inside.
+- আপনি বসে কথা বলুন। _(apni boshe kotha bolun.)_: Please sit and talk.
+- সে হেসে বলল, ঠিক আছে। _(she hese bollo, thik achhe.)_: He / she said with a smile, 'All right.'
 
-In the present tense, Bengali leaves out 'is / am / are' between a noun and what it describes: আমি ছাত্র। (I am a student.) Use আছি… when you mean exist, be present or stay. To say 'have', Bengali says 'of-me there is': আমার একটা বই আছে।
+Add -তে to the root. It means 'in order to do' or 'to do', and it goes with verbs like চাই (want), পারি (can), হবে (must), এসেছি (have come).
 
-|  | আমি | তুই | তুমি | আপনি / তিনি | সে |
-|---|---|---|---|---|---|
-| Present (to be there) | আছি _(achhi)_ | আছিস _(achhis)_ | আছ _(achho)_ | আছেন _(achhen)_ | আছে _(achhe)_ |
-| Past (was there) | ছিলাম _(chhilam)_ | ছিলি _(chhili)_ | ছিলে _(chhile)_ | ছিলেন _(chhilen)_ | ছিল _(chhilo)_ |
+**-তে: to do something**
 
-- আমি ছাত্র। _(ami chhatro.)_: I am a student.
-- সে ভালো। _(she bhalo.)_: He / she is good.
+- আমি স্কুলে যেতে চাই। _(ami skule jete chai.)_: I want to go to school.
+- সে বাজারে মাছ কিনতে গেছে। _(she bajare mach kinte gechhe.)_: He / she has gone to the market to buy fish.
+- আমাকে কাজ করতে হবে। _(amake kaj korte hobe.)_: I have to work.
+- তুমি বাংলা বলতে পারো? _(tumi bangla bolte paro?)_: Can you speak Bengali?
+- আমি গান শুনতে ভালোবাসি। _(ami gan shunte bhalobashi.)_: I love listening to songs.
+- আমি তোমাকে দেখতে এসেছি। _(ami tomake dekhte eshechhi.)_: I have come to see you.
+- সে ভাত খেতে বসল। _(she bhat khete boslo.)_: He / she sat down to eat.
+- আমরা কাল ঘুরতে যাব। _(amra kal ghurte jabo.)_: We will go for a walk tomorrow.
+
+Add -লে to the root. It makes the 'if' part of a sentence. The main part of the sentence comes after it, usually in the future tense.
+
+**-লে: if**
+
+- তুমি এলে আমি খুশি হব। _(tumi ele ami khushi hobo.)_: If you come, I will be happy.
+- বৃষ্টি হলে আমি যাব না। _(brishti hole ami jabo na.)_: If it rains, I will not go.
+- আপনি বললে আমি করব। _(apni bolle ami korbo.)_: If you say so, I will do it.
+- সে পড়লে পাশ করবে। _(she porle pash korbe.)_: If he / she studies, he / she will pass.
+- তুমি ভাত খেলে শক্তি পাবে। _(tumi bhat khele shokti pabe.)_: If you eat rice, you will get strength.
+- আমি জানলে বলতাম। _(ami janle bolotam.)_: If I had known, I would have said so.
+
+The verbal noun names the action, like English 'reading' or 'to read' used as a thing. It can be the subject of a sentence, and it is the dictionary form of the verb.
+
+**-া: the action as a noun**
+
+- পড়া ভালো। _(pora bhalo.)_: Reading is good.
+- বাংলা বলা সহজ নয়। _(bangla bola shohoj noy.)_: Speaking Bengali is not easy.
+- সকালে হাঁটা স্বাস্থ্যের জন্য ভালো। _(shokale hata shasthyer jonyo bhalo.)_: Walking in the morning is good for health.
+- তোমার আসা দরকার। _(tomar asha dorkar.)_: You need to come.
+- আমার বই পড়া শেষ। _(amar boi pora shesh.)_: My reading of the book is finished.
+- খাওয়া হয়ে গেছে? _(khaoya hoye gechhe?)_: Has the eating been done? (Have you eaten?)
+
+## To be: আছি, হই, নই
+
+Bengali has no word for 'am / is / are' in the simple present when you say what someone or something is. You just put the two words together: আমি ছাত্র (I student) means 'I am a student'. But you do need a verb when you say that somebody or something is in a place or exists. That verb is আছে, a form of থাকা. The forms of আছ- cover the present; the past and the future use ছিল and থাকবে.
+
+**To be (location, state, existence)**
+
+| Person | Present (আছে) | Past (ছিল) | Future (থাকবে) |
+|---|---|---|---|
+| আমি _(ami)_ | আছি _(achhi)_ | ছিলাম _(chhilam)_ | থাকব _(thakbo)_ |
+| তুই _(tui)_ | আছিস _(achhis)_ | ছিলি _(chhili)_ | থাকবি _(thakbi)_ |
+| তুমি _(tumi)_ | আছ _(achho)_ | ছিলে _(chhile)_ | থাকবে _(thakbe)_ |
+| আপনি / তিনি _(apni / tini)_ | আছেন _(achhen)_ | ছিলেন _(chhilen)_ | থাকবেন _(thakben)_ |
+| সে _(she)_ | আছে _(achhe)_ | ছিল _(chhilo)_ | থাকবে _(thakbe)_ |
+
+**Place: আছে, ছিল, থাকবে**
+
 - আমি বাড়িতে আছি। _(ami barite achhi.)_: I am at home.
-- আমার একটা বই আছে। _(amar ekta boi achhe.)_: I have a book.
-- আমি তখন বাড়িতে ছিলাম। _(ami tokhon barite chhilam.)_: I was at home then.
+- বইটা টেবিলে আছে। _(boita tebile achhe.)_: The book is on the table.
+- মা রান্নাঘরে আছেন। _(ma rannaghore achhen.)_: Mother is in the kitchen.
+- তুমি কোথায় আছ? _(tumi kothay achho?)_: Where are you?
+- আপনারা কোথায় আছেন? _(apnara kothay achhen?)_: Where are you (all)?
+- সে এখনও অফিসে আছে। _(she ekhono ofise achhe.)_: He / she is still at the office.
+- কাল আমি বাড়িতে ছিলাম। _(kal ami barite chhilam.)_: Yesterday I was at home.
+- তুমি কোথায় ছিলে? _(tumi kothay chhile?)_: Where were you?
+- কাল আমি বাড়িতে থাকব। _(kal ami barite thakbo.)_: Tomorrow I will be at home.
+- আপনি কখন অফিসে থাকবেন? _(apni kokhon ofise thakben?)_: When will you be at the office?
 
-## Commands
+**How are you?**
 
-A command (আদেশ) also changes with the level of 'you'. The তুই form is just the root. তুমি adds -ও / -ো. আপনি adds -ুন.
+- তুমি কেমন আছ? _(tumi kemon achho?)_: How are you? (familiar)
+- আপনি কেমন আছেন? _(apni kemon achhen?)_: How are you? (respectful)
+- আমি ভালো আছি। _(ami bhalo achhi.)_: I am well.
+- সে ভালো আছে। _(she bhalo achhe.)_: He / she is well.
+- আমরা সবাই ভালো আছি। _(amra shobai bhalo achhi.)_: We are all well.
+- তোমার মা কেমন আছেন? _(tomar ma kemon achhen?)_: How is your mother?
 
-| Verb | তুই | তুমি | আপনি |
+When you name an identity or a quality, the present tense has no verb. The negative has its own forms: নই, নও, নন, নয়.
+
+**Identity: 'I am a student'**
+
+| Person | Is (no verb) | Is not |
+|---|---|---|
+| আমি _(ami)_ | আমি ছাত্র _(ami chhatro)_ | আমি ছাত্র নই _(ami chhatro noi)_ |
+| তুমি _(tumi)_ | তুমি ছাত্র _(tumi chhatro)_ | তুমি ছাত্র নও _(tumi chhatro nou)_ |
+| আপনি / তিনি _(apni / tini)_ | আপনি ছাত্র _(apni chhatro)_ | আপনি ছাত্র নন _(apni chhatro non)_ |
+| সে _(she)_ | সে ছাত্র _(she chhatro)_ | সে ছাত্র নয় _(she chhatro noy)_ |
+
+**Identity and quality**
+
+- আমি শিক্ষক। _(ami shikkhok.)_: I am a teacher.
+- তুমি আমার বন্ধু। _(tumi amar bondhu.)_: You are my friend.
+- তিনি ডাক্তার। _(tini daktar.)_: He / she is a doctor.
+- এটা আমার বই। _(eta amar boi.)_: This is my book.
+- আকাশটা নীল। _(akashta nil.)_: The sky is blue.
+- আমি ডাক্তার নই। _(ami daktar noi.)_: I am not a doctor.
+- তুমি ছাত্র নও। _(tumi chhatro nou.)_: You are not a student.
+- সে আমার ভাই নয়। _(she amar bhai noy.)_: He is not my brother.
+- আপনি অচেনা নন। _(apni achena non.)_: You are not a stranger.
+
+## To have: আমার … আছে
+
+Bengali has no verb 'to have'. To say that you have something, you say that it exists for you: 'of me a book is', আমার একটা বই আছে. The owner takes the possessive form (আমার, তোমার, তার…) and the verb is আছে. The negative is নেই ('there is not').
+
+| Time | Positive | Negative |
+|---|---|---|
+| now | আমার একটা ভাই আছে। _(amar ekta bhai achhe.)_ | আমার ভাই নেই। _(amar bhai nei.)_ |
+| before | আমার একটা ভাই ছিল। _(amar ekta bhai chhilo.)_ | আমার ভাই ছিল না। _(amar bhai chhilo na.)_ |
+| later | আমার ছুটি থাকবে। _(amar chhuti thakbe.)_ | আমার ছুটি থাকবে না। _(amar chhuti thakbe na.)_ |
+
+**Having**
+
+- আমার একটা কুকুর আছে। _(amar ekta kukur achhe.)_: I have a dog.
+- তোমার কয়টা ভাই আছে? _(tomar koyta bhai achhe?)_: How many brothers do you have?
+- ওর অনেক বন্ধু আছে। _(or onek bondhu achhe.)_: He / she has many friends.
+- আমাদের একটা বাগান আছে। _(amader ekta bagan achhe.)_: We have a garden.
+- আপনার কাছে কলম আছে? _(apnar kachhe kolom achhe?)_: Do you have a pen?
+- তার জ্বর আছে। _(tar jor achhe.)_: He / she has a fever.
+- আমার সময় নেই। _(amar shomoy nei.)_: I have no time.
+- আমার কাছে টাকা নেই। _(amar kachhe taka nei.)_: I have no money.
+- তার একটা গাড়ি ছিল। _(tar ekta gari chhilo.)_: He / she had a car.
+- কাল আমার ছুটি থাকবে। _(kal amar chhuti thakbe.)_: I will have a holiday tomorrow.
+
+> **Note:** কাছে ('near, with') is often added for things you carry or can use right now: আমার কাছে টাকা আছে means 'I have money on me'. আমার টাকা আছে means 'I have money' in general.
+
+## Commands and requests
+
+A command (অনুজ্ঞা) is the form of the verb you use to tell someone to do something. Like the pronouns, commands come at three levels, and the level you choose decides how polite you are. For তুই you use the bare root; for তুমি you add -ো (or -ও); for আপনি you add -ুন.
+
+**Commands for twelve verbs**
+
+| Verb | তুই (very familiar) | তুমি (familiar) | আপনি (respectful) |
 |---|---|---|---|
 | করা (do) _(kora)_ | কর _(kor)_ | করো _(koro)_ | করুন _(korun)_ |
 | বলা (say) _(bola)_ | বল _(bol)_ | বলো _(bolo)_ | বলুন _(bolun)_ |
 | দেখা (see) _(dekha)_ | দেখ _(dekh)_ | দেখো _(dekho)_ | দেখুন _(dekhun)_ |
+| শোনা (listen) _(shona)_ | শোন _(shon)_ | শোনো _(shono)_ | শুনুন _(shunun)_ |
+| পড়া (read) _(pora)_ | পড় _(por)_ | পড়ো _(poro)_ | পড়ুন _(porun)_ |
+| লেখা (write) _(lekha)_ | লেখ _(lekh)_ | লেখো _(lekho)_ | লিখুন _(likhun)_ |
+| বসা (sit) _(bosha)_ | বস _(bosh)_ | বসো _(bosho)_ | বসুন _(boshun)_ |
+| ওঠা (get up) _(otha)_ | ওঠ _(oth)_ | ওঠো _(otho)_ | উঠুন _(uthun)_ |
 | খাওয়া (eat) _(khaoya)_ | খা _(kha)_ | খাও _(khao)_ | খান _(khan)_ |
 | যাওয়া (go) _(jaoya)_ | যা _(ja)_ | যাও _(jao)_ | যান _(jan)_ |
-| দেওয়া (give) _(deoya)_ | দে _(de)_ | দাও _(dao)_ | দিন _(din)_ |
 | আসা (come) _(asha)_ | আয় _(ay)_ | এসো _(esho)_ | আসুন _(ashun)_ |
+| দেওয়া (give) _(deoya)_ | দে _(de)_ | দাও _(dao)_ | দিন _(din)_ |
+| নেওয়া (take) _(neoya)_ | নে _(ne)_ | নাও _(nao)_ | নিন _(nin)_ |
+| থাকা (stay) _(thaka)_ | থাক _(thak)_ | থাকো _(thako)_ | থাকুন _(thakun)_ |
 
-- এখানে এসো। _(ekhane esho.)_: Come here. (to a friend)
-- দরজা বন্ধ করুন। _(dorja bondho korun.)_: Please close the door. (respectful)
-- আমাকে জল দাও। _(amake jol dao.)_: Give me water. (to a friend)
+**Commands in use**
 
-## Noun + করা / হওয়া
+- এখানে বস। _(ekhane bosh.)_: Sit here. (very familiar)
+- এখানে বসো। _(ekhane bosho.)_: Sit here. (familiar)
+- দয়া করে এখানে বসুন। _(doya kore ekhane boshun.)_: Please sit here. (respectful)
+- আমাকে জল দাও। _(amake jol dao.)_: Give me water. (familiar)
+- আমাকে একটু জল দিন। _(amake ektu jol din.)_: Please give me a little water. (respectful)
+- দরজাটা খুলে দাও। _(dorjata khule dao.)_: Open the door. (familiar)
+- একটু আস্তে বলুন। _(ektu aste bolun.)_: Please speak a little slower. (respectful)
+- আমার কথা শোনো। _(amar kotha shono.)_: Listen to me. (familiar)
+- বইটা পড়ো। _(boita poro.)_: Read the book. (familiar)
+- চিঠিটা লিখুন। _(chithita likhun.)_: Please write the letter. (respectful)
+- তাড়াতাড়ি এসো। _(taratari esho.)_: Come quickly. (familiar)
+- কাল আসুন। _(kal ashun.)_: Please come tomorrow. (respectful)
 
-Many everyday verbs are made from a noun plus করা (do), হওয়া (become) or পাওয়া (get). The first word gives the meaning. Only the second word changes with the person and time.
+To forbid something, put না after the command with the normal তুমি or আপনি form. For তুই use the present form with -স and না. For আপনি you can also use the future form, which is more polite: আপনি করবেন না.
 
-| Verb | Meaning | Example |
+**Negative commands**
+
+- তুই যাস না। _(tui jas na.)_: Don't go. (very familiar)
+- তুমি যেয়ো না। _(tumi jeyo na.)_: Don't go. (familiar)
+- আপনি যাবেন না। _(apni jaben na.)_: Please don't go. (respectful)
+- এটা করো না। _(eta koro na.)_: Don't do this. (familiar)
+- ওখানে বসো না। _(okhane bosho na.)_: Don't sit there. (familiar)
+- দেরি করবেন না। _(deri korben na.)_: Please don't be late. (respectful)
+- ভয় পেয়ো না। _(bhoy peyo na.)_: Don't be afraid. (familiar)
+- চিন্তা করবেন না। _(chinta korben na.)_: Please don't worry. (respectful)
+
+A very polite way to ask for something is to use the future tense with আপনি as a question. It sounds like 'Will you …?'.
+
+**Requests with -বেন**
+
+- একটু জল দেবেন? _(ektu jol deben?)_: Will you give me a little water?
+- এখানে একটু বসবেন? _(ekhane ektu bosben?)_: Will you sit here for a moment?
+- আমাকে একটু সাহায্য করবেন? _(amake ektu shahajyo korben?)_: Will you help me a little?
+- দরজাটা খুলবেন? _(dorjata khulben?)_: Will you open the door?
+- একটু আস্তে বলবেন? _(ektu aste bolben?)_: Will you speak a bit slowly?
+- আপনার নামটা লিখে দেবেন? _(apnar namta likhe deben?)_: Will you write your name for me?
+
+## Verbs made with নাম + করা, হওয়া, পাওয়া
+
+Many Bengali actions are said with a noun plus a helper verb. We do not say 'to work' with one verb. We say কাজ করা, 'to do work'. The helper verb carries the person and the tense; the noun carries the meaning. The helpers you meet most are করা (do), হওয়া (be, become), পাওয়া (get) and লাগা (feel, seem).
+
+**Noun + করা: to do**
+
+| Phrase | Meaning |
+|---|---|
+| কাজ করা _(kaj kora)_ | to work |
+| রান্না করা _(ranna kora)_ | to cook |
+| সাহায্য করা _(shahajyo kora)_ | to help |
+| ফোন করা _(phon kora)_ | to phone |
+| পছন্দ করা _(pochhondo kora)_ | to like |
+| পরিষ্কার করা _(poriskar kora)_ | to clean |
+| স্নান করা _(snan kora)_ | to bathe |
+| চেষ্টা করা _(cheshta kora)_ | to try |
+| চিন্তা করা _(chinta kora)_ | to worry; to think |
+| অপেক্ষা করা _(opekkha kora)_ | to wait |
+| শুরু করা _(shuru kora)_ | to start |
+| শেষ করা _(shesh kora)_ | to finish |
+
+**Feelings: পাওয়া, লাগা, হওয়া**
+
+| Phrase | Meaning |
+|---|---|
+| ভয় পাওয়া _(bhoy paoya)_ | to be afraid |
+| খিদে পাওয়া _(khide paoya)_ | to be hungry |
+| তেষ্টা পাওয়া _(teshta paoya)_ | to be thirsty |
+| ঘুম পাওয়া _(ghum paoya)_ | to feel sleepy |
+| হাসি পাওয়া _(hashi paoya)_ | to feel like laughing |
+| কষ্ট পাওয়া _(koshto paoya)_ | to suffer; to be hurt |
+| ভালো লাগা _(bhalo laga)_ | to like; to feel good |
+| খারাপ লাগা _(kharap laga)_ | to feel bad |
+| শুরু হওয়া _(shuru hooya)_ | to begin (by itself) |
+| শেষ হওয়া _(shesh hooya)_ | to end (by itself) |
+| ঠান্ডা লাগা _(thanda laga)_ | to feel cold |
+| মনে হওয়া _(mone hooya)_ | to seem; to think |
+
+**Doing**
+
+- আমি অফিসে কাজ করি। _(ami ofise kaj kori.)_: I work at an office.
+- মা রান্না করছেন। _(ma ranna korchhen.)_: Mother is cooking.
+- তুমি আমাকে সাহায্য করবে? _(tumi amake shahajyo korbe?)_: Will you help me?
+- আমি তোমাকে ফোন করব। _(ami tomake phon korbo.)_: I will phone you.
+- আমি চা পছন্দ করি। _(ami cha pochhondo kori.)_: I like tea.
+- সে ঘর পরিষ্কার করল। _(she ghor poriskar korlo.)_: He / she cleaned the room.
+- আপনি একটু অপেক্ষা করুন। _(apni ektu opekkha korun.)_: Please wait a little.
+- ক্লাস কখন শুরু হবে? _(klas kokhon shuru hobe?)_: When will the class start?
+
+For feelings, Bengali says the feeling 'comes to' the person. The person takes the possessive form (আমার, তোমার, তার), not the subject form. So 'I am hungry' is আমার খিদে পেয়েছে, literally 'of me hunger has been got'.
+
+**Feeling**
+
+- আমার খিদে পেয়েছে। _(amar khide peyechhe.)_: I am hungry.
+- তোমার তেষ্টা পেয়েছে? _(tomar teshta peyechhe?)_: Are you thirsty?
+- আমার ঘুম পাচ্ছে। _(amar ghum pachchhe.)_: I am feeling sleepy.
+- আমার ভয় করছে। _(amar bhoy korchhe.)_: I am afraid.
+- আমার বাংলা ভালো লাগে। _(amar bangla bhalo lage.)_: I like Bengali.
+- তার খুব কষ্ট হয়েছে। _(tar khub koshto hoyechhe.)_: He / she has suffered a lot.
+- আমার ঠান্ডা লাগছে। _(amar thanda lagchhe.)_: I am feeling cold.
+- আমার মনে হয় সে আসবে। _(amar mone hoy she ashbe.)_: I think he / she will come.
+
+A verb in the -ে form can join a helper verb to add a shade of meaning: finished, completed, for oneself, suddenly. These helpers are common in speech.
+
+| Combination | Adds the idea of | Example |
 |---|---|---|
-| রান্না করা _(ranna kora)_ | to cook | আমি রান্না করি। _(ami ranna kori.)_ |
-| কাজ করা _(kaj kora)_ | to work | সে কাজ করে। _(she kaj kore.)_ |
-| শুরু করা _(shuru kora)_ | to start | আমরা কাজ শুরু করলাম। _(amra kaj shuru korlam.)_ |
-| বন্ধ করা _(bondho kora)_ | to close, to stop | দরজা বন্ধ করো। _(dorja bondho koro.)_ |
-| খুশি হওয়া _(khushi hooya)_ | to be happy | আমি খুশি হলাম। _(ami khushi holam.)_ |
-| ভয় পাওয়া _(bhoy paoya)_ | to be afraid | সে ভয় পেল। _(she bhoy pelo.)_ |
+| -ে ফেলা _(-e phela)_ | finishing; doing completely | সে সব খেয়ে ফেলল। _(she shob kheye phelolo.)_ |
+| -ে দেওয়া _(-e deoya)_ | doing for someone else | দরজাটা খুলে দাও। _(dorjata khule dao.)_ |
+| -ে নেওয়া _(-e neoya)_ | doing for oneself | আমি জল খেয়ে নিলাম। _(ami jol kheye nilam.)_ |
+| -ে ওঠা _(-e otha)_ | doing suddenly | সে হেসে উঠল। _(she hese uthlo.)_ |
+| -ে যাওয়া _(-e jaoya)_ | going on, away | সে চলে গেল। _(she chole gelo.)_ |
+| -ে থাকা _(-e thaka)_ | staying in a state | সে বসে আছে। _(she boshe achhe.)_ |
+
+## Making someone do it: the -ানো verbs
+
+Add -ানো to a verb's root to make it mean 'make someone do it'. This is the causative form (প্রযোজক ক্রিয়া). খাওয়া 'to eat' becomes খাওয়ানো 'to feed'; পড়া 'to read' becomes পড়ানো 'to teach'; দেখা 'to see' becomes দেখানো 'to show'. The one who is made to act takes the ending -কে.
+
+| Basic verb | Causative | Meaning |
+|---|---|---|
+| খাওয়া (to eat) _(khaoya)_ | খাওয়ানো _(khaoano)_ | to feed |
+| পড়া (to read) _(pora)_ | পড়ানো _(porano)_ | to teach |
+| দেখা (to see) _(dekha)_ | দেখানো _(dekhano)_ | to show |
+| শোনা (to hear) _(shona)_ | শোনানো _(shonano)_ | to make hear; to tell / play |
+| শেখা (to learn) _(shekha)_ | শেখানো _(shekhano)_ | to teach |
+| হাঁটা (to walk) _(hata)_ | হাঁটানো _(hatano)_ | to make walk |
+| ঘুমানো (to sleep) _(ghumano)_ | ঘুম পাড়ানো _(ghum parano)_ | to put to sleep |
+| করা (to do) _(kora)_ | করানো _(korano)_ | to get something done |
+
+**Making others act**
+
+- মা শিশুকে ভাত খাওয়ান। _(ma shishuke bhat khaoan.)_: Mother feeds the baby rice.
+- শিক্ষক আমাদের বাংলা পড়ান। _(shikkhok amader bangla poran.)_: The teacher teaches us Bengali.
+- সে আমাকে ছবি দেখাল। _(she amake chhobi dekhalo.)_: He / she showed me a picture.
+- আমি তোমাকে একটা গান শোনাব। _(ami tomake ekta gan shonabo.)_: I will play you a song.
+- দিদি আমাকে সাইকেল চালাতে শেখাল। _(didi amake saikel chalate shekhalo.)_: Elder sister taught me to ride a bicycle.
+- বাবা বাচ্চাদের হাঁটাচ্ছেন। _(baba bachchader hatachchhen.)_: Father is walking the children.
+- আমি জামাটা ইস্ত্রি করালাম। _(ami jamata istri koralam.)_: I got the shirt ironed.
+- সে আমাকে বাংলা শেখায়। _(she amake bangla shekhay.)_: He / she teaches me Bengali.
 
 ## Practice questions
 
-1. What is the root of খাওয়া?
-   - A) খা _(kha)_  ✔
-   - B) খাও _(khao)_
-   - C) খেয়ে _(kheye)_
-   - _Why:_ Remove the endings: the root of খাওয়া is খা.
-2. In this sentence, which word is the non-finite verb? **ভাত খেয়ে সে স্কুলে গেল।**
+1. What is the root of যাওয়া (to go)?
+   - A) যা _(ja)_  ✔
+   - B) যাও _(jao)_
+   - C) যেতে _(jete)_
+   - _Why:_ Take away -ওয়া: যা.
+2. What is the root of করা (to do)?
+   - A) কর _(kor)_  ✔
+   - B) করে _(kore)_
+   - C) করতে _(korte)_
+   - _Why:_ Take away -া: কর.
+3. What is the root of দেওয়া (to give)?
+   - A) দে _(de)_  ✔
+   - B) দিয়ে _(diye)_
+   - C) দেও _(deo)_
+   - _Why:_ Take away -ওয়া: দে.
+4. Which verb is finite (can end a sentence)?
+   - A) খাই _(khai)_  ✔
+   - B) খেয়ে _(kheye)_
+   - C) খেতে _(khete)_
+   - _Why:_ খাই carries the person and tense. খেয়ে and খেতে are non-finite.
+5. Which word fills the blank? **আমি ভাত ___ স্কুলে গেলাম।**
    - A) খেয়ে _(kheye)_  ✔
-   - B) সে _(she)_
-   - C) গেল _(gelo)_
-   - _Why:_ খেয়ে (-ে form) joins the main verb; গেল is the finite verb.
-3. Choose the 'and then' form (-ে) of যাওয়া.
-   - A) গিয়ে _(giye)_  ✔
-   - B) যেতে _(jete)_
-   - C) গেলে _(gele)_
-   - _Why:_ গিয়ে means having gone.
-4. Choose the right form. **আমি স্কুলে ___ চাই।**
+   - B) খেতে _(khete)_
+   - C) খেলে _(khele)_
+   - _Why:_ 'Having eaten, I went': the -ে form.
+6. Which word fills the blank? **আমি স্কুলে ___ চাই।**
    - A) যেতে _(jete)_  ✔
    - B) গিয়ে _(giye)_
    - C) গেলে _(gele)_
-   - _Why:_ 'Want to go' uses the -তে form: যেতে চাই.
-5. Choose the right form ('if you go'). **তুমি ___ আমি যাব।**
-   - A) গেলে _(gele)_  ✔
-   - B) গিয়ে _(giye)_
-   - C) যেতে _(jete)_
-   - _Why:_ The -লে form means 'if': গেলে.
-6. Command to a friend (তুমি): 'Tell me!' **আমাকে ___!**
-   - A) বলো _(bolo)_  ✔
-   - B) বলুন _(bolun)_
-   - C) বল _(bol)_
-   - _Why:_ তুমি commands end in -ও / -ো.
-7. Respectful command: give. **আমাকে জল ___।**
-   - A) দাও _(dao)_
-   - B) দিন _(din)_  ✔
-   - C) দে _(de)_
-   - _Why:_ The আপনি command is দিন.
-8. What is the dictionary form of খায়?
-   - A) খাওয়া _(khaoya)_  ✔
-   - B) খাই _(khai)_
-   - C) খান _(khan)_
-   - _Why:_ The dictionary form is the -া form: খাওয়া.
-9. How do you say 'I have a book'? **আমার একটা বই ___।**
+   - _Why:_ 'Want to go': the -তে form after চাই.
+7. Which word fills the blank? **তুমি ___ আমি খুশি হব।**
+   - A) এলে _(ele)_  ✔
+   - B) এসে _(eshe)_
+   - C) আসতে _(aste)_
+   - _Why:_ 'If you come': the -লে form.
+8. Which word fills the blank? **আমি তোমাকে ___ এসেছি।**
+   - A) দেখতে _(dekhte)_  ✔
+   - B) দেখে _(dekhe)_
+   - C) দেখলে _(dekhle)_
+   - _Why:_ 'Have come to see you': the -তে form.
+9. Which word fills the blank? **আমি বাড়িতে ___।**
+   - A) আছি _(achhi)_  ✔
+   - B) আছ _(achho)_
+   - C) আছেন _(achhen)_
+   - _Why:_ আমি goes with আছি.
+10. Which word fills the blank? **আপনি কেমন ___?**
+   - A) আছেন _(achhen)_  ✔
+   - B) আছ _(achho)_
+   - C) আছি _(achhi)_
+   - _Why:_ আপনি goes with আছেন.
+11. Which word fills the blank? **কাল আমি বাড়িতে ___।**
+   - A) ছিলাম _(chhilam)_  ✔
+   - B) আছি _(achhi)_
+   - C) থাকব _(thakbo)_
+   - _Why:_ 'Yesterday I was at home': the past ছিলাম.
+12. Which word fills the blank? **আমি ছাত্র ___।**
+   - A) নই _(noi)_  ✔
+   - B) নয় _(noy)_
+   - C) নও _(nou)_
+   - _Why:_ 'I am not' is নই.
+13. Which word fills the blank? **সে আমার ভাই ___।**
+   - A) নয় _(noy)_  ✔
+   - B) নই _(noi)_
+   - C) নন _(non)_
+   - _Why:_ 'He is not' is নয়.
+14. Which word fills the blank? **আমার একটা কুকুর ___।**
    - A) আছে _(achhe)_  ✔
    - B) আছি _(achhi)_
-   - C) আছেন _(achhen)_
-   - _Why:_ 'Have' is expressed as 'there is' with আছে.
-10. How do you say 'I am a student'?
+   - C) হয় _(hoy)_
+   - _Why:_ 'I have a dog': আমার … আছে.
+15. How do you say 'I have no time'?
+   - A) আমার সময় নেই। _(amar shomoy nei.)_  ✔
+   - B) আমি সময় নেই। _(ami shomoy nei.)_
+   - C) আমার সময় না আছে। _(amar shomoy na achhe.)_
+   - _Why:_ The owner takes the possessive (আমার) and the verb is নেই.
+16. Which is the command 'Sit here' for তুমি?
+   - A) এখানে বসো। _(ekhane bosho.)_  ✔
+   - B) এখানে বসুন। _(ekhane boshun.)_
+   - C) এখানে বস। _(ekhane bosh.)_
+   - _Why:_ তুমি adds -ো: বসো.
+17. Which is the polite 'Please come' for আপনি?
+   - A) আসুন _(ashun)_  ✔
+   - B) এসো _(esho)_
+   - C) আয় _(ay)_
+   - _Why:_ আপনি adds -ুন: আসুন.
+18. Which is the command 'Eat!' for তুই?
+   - A) খা _(kha)_  ✔
+   - B) খাও _(khao)_
+   - C) খান _(khan)_
+   - _Why:_ For তুই, the command is the bare root: খা.
+19. How do you politely forbid 'Don't worry' to আপনি?
+   - A) চিন্তা করবেন না। _(chinta korben na.)_  ✔
+   - B) চিন্তা কর না। _(chinta kor na.)_
+   - C) চিন্তা করিস না। _(chinta koris na.)_
+   - _Why:_ For আপনি use the future: করবেন না.
+20. Which phrase means 'to be hungry'?
+   - A) খিদে পাওয়া _(khide paoya)_  ✔
+   - B) খিদে করা _(khide kora)_
+   - C) খিদে হওয়া _(khide hooya)_
+   - _Why:_ Hunger is 'got': খিদে পাওয়া.
+21. I am hungry.
+   - A) আমার খিদে পেয়েছে। _(amar khide peyechhe.)_  ✔
+   - B) আমি খিদে পেয়েছি। _(ami khide peyechhi.)_
+   - C) আমার খিদে আছি। _(amar khide achhi.)_
+   - _Why:_ The feeling 'comes to' the person: আমার খিদে পেয়েছে.
+22. Mother feeds the baby rice.
+   - A) মা শিশুকে ভাত খাওয়ান। _(ma shishuke bhat khaoan.)_  ✔
+   - B) মা শিশু ভাত খান। _(ma shishu bhat khan.)_
+   - C) মা ভাত খান। _(ma bhat khan.)_
+   - _Why:_ খাওয়ানো is 'to feed', and the one fed takes -কে.
+23. খাওয়ানো means:
+   - A) to eat
+   - B) to feed (make someone eat)  ✔
+   - C) to be hungry
+   - _Why:_ The -ানো ending makes the verb causative.
+24. Which sentence is correct?
    - A) আমি ছাত্র। _(ami chhatro.)_  ✔
    - B) আমি ছাত্র আছি। _(ami chhatro achhi.)_
-   - C) আমি ছাত্র হয়। _(ami chhatro hoy.)_
-   - _Why:_ No verb is used for 'am' between a noun and a noun.
+   - C) আমি ছাত্র হই আছি। _(ami chhatro hoi achhi.)_
+   - _Why:_ To say what you are, no verb is needed in the present.
 
 ---
 
-# কাল · Kal · Tenses
+# কাল · Kal · Tenses: the big picture
 
-_Present, past and future, and how to build every tense with the right ending for each person._
+_What a tense is, how every Bengali tense is built, the time words that go with each, and how to choose the right one._
 
-## The tenses
+## What is a tense?
 
-কাল (kal) means tense. There are three times: বর্তমান (present), অতীত (past) and ভবিষ্যৎ (future). Each time has kinds: সাধারণ (simple), ঘটমান (continuing), পুরাঘটিত (completed), and for the past also নিত্যবৃত্ত (habitual).
+কাল (kal) means 'time'. A tense tells us when an action happens: now, in the past, or in the future. Bengali has three times (বর্তমান, অতীত, ভবিষ্যৎ), and for each one it has kinds: simple (সাধারণ, a plain fact or habit), continuous (ঘটমান, still going on), and perfect (পুরাঘটিত, finished). The past also has a habitual kind (নিত্যবৃত্ত: 'used to'). That gives nine tenses.
 
-| Tense | English | Example | Meaning |
+**One sentence in all nine tenses**
+
+| Tense | In English | Example | Meaning |
 |---|---|---|---|
 | সাধারণ বর্তমান _(sadharon bortoman)_ | Simple present | আমি ভাত খাই। _(ami bhat khai.)_ | I eat rice. |
 | ঘটমান বর্তমান _(ghotoman bortoman)_ | Present continuous | আমি ভাত খাচ্ছি। _(ami bhat khachchhi.)_ | I am eating rice. |
@@ -347,74 +1052,1152 @@ _Present, past and future, and how to build every tense with the right ending fo
 | সাধারণ অতীত _(sadharon otit)_ | Simple past | আমি ভাত খেলাম। _(ami bhat khelam.)_ | I ate rice. |
 | ঘটমান অতীত _(ghotoman otit)_ | Past continuous | আমি ভাত খাচ্ছিলাম। _(ami bhat khachchhilam.)_ | I was eating rice. |
 | পুরাঘটিত অতীত _(puraghotito otit)_ | Past perfect | আমি ভাত খেয়েছিলাম। _(ami bhat kheyechhilam.)_ | I had eaten rice. |
-| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | Past habitual | আমি রোজ ভাত খেতাম। _(ami roj bhat khetam.)_ | I used to eat rice every day. |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | Past habitual | আমি ভাত খেতাম। _(ami bhat khetam.)_ | I used to eat rice. |
 | সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | Simple future | আমি ভাত খাব। _(ami bhat khabo.)_ | I will eat rice. |
 | ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | Future continuous | আমি ভাত খেতে থাকব। _(ami bhat khete thakbo.)_ | I will be eating rice. |
 
-> **Note:** The future continuous (খেতে থাকব) is a textbook form. In everyday speech people more often use the simple future or say 'I will be doing' with খাচ্ছি.
+> **Note:** Teachers and books use slightly different labels for some tenses. Check the names against your class notes. The forms themselves do not change.
 
-## Endings
+## How a tense is built
 
-Take the root (করা → কর-) and add the ending for the tense and the person. The ending shows the person; the verb does not change for singular or plural (ছেলেটা যায়, ছেলেরা যায়).
+Every tense is built the same way: root + tense sign + person ending. The root carries the meaning. The tense sign tells you when. The person ending tells you who. Once you know the signs, you can build any tense of any regular verb.
 
-**Present endings**
+**The tense signs**
 
-| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
-|---|---|---|---|---|---|
-| সাধারণ বর্তমান _(sadharon bortoman)_ | -ি _(-i)_ | -িস _(-is)_ | -ো _(-o)_ | -েন _(-en)_ | -ে _(-e)_ |
-| ঘটমান বর্তমান _(ghotoman bortoman)_ | -ছি _(-chhi)_ | -ছিস _(-chhis)_ | -ছ _(-chho)_ | -ছেন _(-chhen)_ | -ছে _(-chhe)_ |
-| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | -েছি _(-echhi)_ | -েছিস _(-echhis)_ | -েছ _(-echho)_ | -েছেন _(-echhen)_ | -েছে _(-echhe)_ |
+| Tense | Tense sign | Built from করা (kor-), for আমি | Result |
+|---|---|---|---|
+| সাধারণ বর্তমান _(sadharon bortoman)_ | none | কর + ি | করি _(kori)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | -ছ- | কর + ছ + ি | করছি _(korchhi)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | -েছ- | কর + েছ + ি | করেছি _(korechhi)_ |
+| সাধারণ অতীত _(sadharon otit)_ | -ল- | কর + লাম | করলাম _(korlam)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | -ছিল- | কর + ছিলাম | করছিলাম _(korchhilam)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | -েছিল- | কর + েছিলাম | করেছিলাম _(korechhilam)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | -ত- | কর + তাম | করতাম _(kortam)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | -ব- | কর + ব | করব _(korbo)_ |
 
-**Past endings**
+Notice the pattern. The continuous tenses use -ছ- (করছি) and the perfect tenses add an extra -ে (করেছি). Putting -ছিল- instead of -ছ- moves a tense into the past (করছি → করছিলাম; করেছি → করেছিলাম). The -ল- sign is the plain past, -ত- is the habitual past, and -ব- is the future.
 
-| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
-|---|---|---|---|---|---|
-| সাধারণ অতীত _(sadharon otit)_ | -লাম _(-lam)_ | -লি _(-li)_ | -লে _(-le)_ | -লেন _(-len)_ | -ল _(-lo)_ |
-| ঘটমান অতীত _(ghotoman otit)_ | -ছিলাম _(-chhilam)_ | -ছিলি _(-chhili)_ | -ছিলে _(-chhile)_ | -ছিলেন _(-chhilen)_ | -ছিল _(-chhilo)_ |
-| পুরাঘটিত অতীত _(puraghotito otit)_ | -েছিলাম _(-echhilam)_ | -েছিলি _(-echhili)_ | -েছিলে _(-echhile)_ | -েছিলেন _(-echhilen)_ | -েছিল _(-echhilo)_ |
-| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | -তাম _(-tam)_ | -তিস _(-tis)_ | -তে _(-te)_ | -তেন _(-ten)_ | -ত _(-to)_ |
-
-**Future endings**
+**Person endings added to the root (before the sign shown above)**
 
 | Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
 |---|---|---|---|---|---|
-| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | -ব _(-bo)_ | -বি _(-bi)_ | -বে _(-be)_ | -বেন _(-ben)_ | -বে _(-be)_ |
+| সাধারণ বর্তমান _(sadharon bortoman)_ | ি _(i)_ | িস _(is)_ | ো _(o)_ | েন _(en)_ | ে _(e)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | ছি _(chhi)_ | ছিস _(chhis)_ | ছ _(chho)_ | ছেন _(chhen)_ | ছে _(chhe)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | েছি _(echhi)_ | েছিস _(echhis)_ | েছ _(echho)_ | েছেন _(echhen)_ | েছে _(echhe)_ |
+| সাধারণ অতীত _(sadharon otit)_ | লাম _(lam)_ | লি _(li)_ | লে _(le)_ | লেন _(len)_ | ল _(lo)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | ছিলাম _(chhilam)_ | ছিলি _(chhili)_ | ছিলে _(chhile)_ | ছিলেন _(chhilen)_ | ছিল _(chhilo)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | েছিলাম _(echhilam)_ | েছিলি _(echhili)_ | েছিলে _(echhile)_ | েছিলেন _(echhilen)_ | েছিল _(echhilo)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | তাম _(tam)_ | তিস _(tis)_ | তে _(te)_ | তেন _(ten)_ | ত _(to)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | ব _(bo)_ | বি _(bi)_ | বে _(be)_ | বেন _(ben)_ | বে _(be)_ |
 
-> **Note:** Spelling varies: you may see করছো or করছ, করেছো or করেছ for তুমি. The sounds are the same.
+> **Note:** The endings in the table include the tense sign. For example the continuous endings are -ছি, -ছিস, -ছ, -ছেন, -ছে. Put them after the root and you have a full verb.
 
-## করা in full
+**The 'I' form of three regular verbs**
 
-করা (to do) is regular, so it shows the pattern clearly. Read across a row to see one tense for every person; আপনি and তিনি share the same ending.
+| Tense | করা (do) | বলা (say) | পড়া (read) |
+|---|---|---|---|
+| সাধারণ বর্তমান _(sadharon bortoman)_ | করি _(kori)_ | বলি _(boli)_ | পড়ি _(pori)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | করছি _(korchhi)_ | বলছি _(bolchhi)_ | পড়ছি _(porchhi)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | করেছি _(korechhi)_ | বলেছি _(bolechhi)_ | পড়েছি _(porechhi)_ |
+| সাধারণ অতীত _(sadharon otit)_ | করলাম _(korlam)_ | বললাম _(bollam)_ | পড়লাম _(porlam)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | করছিলাম _(korchhilam)_ | বলছিলাম _(bolchhilam)_ | পড়ছিলাম _(porchhilam)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | করেছিলাম _(korechhilam)_ | বলেছিলাম _(bolechhilam)_ | পড়েছিলাম _(porechhilam)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | করতাম _(kortam)_ | বলতাম _(boltam)_ | পড়তাম _(portam)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | করব _(korbo)_ | বলব _(bolbo)_ | পড়ব _(porbo)_ |
 
-**করা: present**
+## Time words and the tenses they go with
+
+Time words are the quickest clue to the tense. When you hear রোজ (every day) you expect a habit in the simple present. When you hear গতকাল (yesterday) you expect the simple past. Learn each time word together with its tense.
+
+| Time word | Meaning | Goes with |
+|---|---|---|
+| রোজ / প্রতিদিন _(roj / protidin)_ | every day | simple present, habitual past |
+| সবসময় _(shobshomoy)_ | always | simple present |
+| মাঝে মাঝে _(majhe majhe)_ | sometimes | simple present |
+| সাধারণত _(shadharonoto)_ | usually | simple present |
+| এখন _(ekhon)_ | now | present continuous |
+| এইমাত্র _(eimatro)_ | just now | present perfect |
+| এখনও _(ekhono)_ | still, yet | present perfect (with a negative) |
+| ইতিমধ্যে _(itimoddhe)_ | already | present perfect |
+| গতকাল _(gotokal)_ | yesterday | simple past |
+| গত সপ্তাহে _(goto shoptahe)_ | last week | simple past |
+| আগে _(age)_ | before | past, past perfect |
+| তখন _(tokhon)_ | then, at that time | past continuous |
+| ছোটবেলায় _(chhotobelay)_ | in childhood | habitual past |
+| আগেই _(agei)_ | already, before that | past perfect |
+| কাল / আগামীকাল _(kal / agamikal)_ | tomorrow | simple future |
+| পরে _(pore)_ | later | simple future |
+| আগামী সপ্তাহে _(agami shoptahe)_ | next week | simple future |
+
+> **Note:** কাল (kal) means both 'yesterday' and 'tomorrow'. The tense of the verb tells you which: কাল গেলাম (past) is 'yesterday I went'; কাল যাব (future) is 'tomorrow I will go'. To be clear you can say গতকাল (yesterday) or আগামীকাল (tomorrow).
+
+**The same verb with its time word**
+
+- আমি রোজ ভাত খাই। _(ami roj bhat khai.)_: I eat rice every day.
+- আমি এখন ভাত খাচ্ছি। _(ami ekhon bhat khachchhi.)_: I am eating rice now.
+- আমি এইমাত্র ভাত খেয়েছি। _(ami eimatro bhat kheyechhi.)_: I have just eaten rice.
+- আমি গতকাল ভাত খেলাম। _(ami gotokal bhat khelam.)_: I ate rice yesterday.
+- আমি তখন ভাত খাচ্ছিলাম। _(ami tokhon bhat khachchhilam.)_: I was eating rice at that time.
+- আমি আগেই ভাত খেয়েছিলাম। _(ami agei bhat kheyechhilam.)_: I had already eaten rice.
+- আমি ছোটবেলায় রোজ ভাত খেতাম। _(ami chhotobelay roj bhat khetam.)_: I used to eat rice every day in my childhood.
+- আমি কাল ভাত খাব। _(ami kal bhat khabo.)_: I will eat rice tomorrow.
+
+## English tenses and Bengali tenses
+
+Bengali tenses do not match English tenses one for one. Here is how the common English forms are said in Bengali, so you do not translate word for word.
+
+| English | Bengali tense | Example |
+|---|---|---|
+| I eat / I usually eat | সাধারণ বর্তমান _(sadharon bortoman)_ | আমি ভাত খাই। _(ami bhat khai.)_ |
+| I am eating | ঘটমান বর্তমান _(ghotoman bortoman)_ | আমি ভাত খাচ্ছি। _(ami bhat khachchhi.)_ |
+| I have eaten | পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | আমি ভাত খেয়েছি। _(ami bhat kheyechhi.)_ |
+| I have been eating (for two hours) | ঘটমান বর্তমান _(ghotoman bortoman)_ | আমি দুই ঘণ্টা ধরে খাচ্ছি। _(ami dui ghonta dhore khachchhi.)_ |
+| I ate / I did eat | সাধারণ অতীত _(sadharon otit)_ | আমি ভাত খেলাম। _(ami bhat khelam.)_ |
+| I was eating | ঘটমান অতীত _(ghotoman otit)_ | আমি ভাত খাচ্ছিলাম। _(ami bhat khachchhilam.)_ |
+| I had eaten | পুরাঘটিত অতীত _(puraghotito otit)_ | আমি ভাত খেয়েছিলাম। _(ami bhat kheyechhilam.)_ |
+| I used to eat / I would eat (as a habit) | নিত্যবৃত্ত অতীত _(nityobritto otit)_ | আমি ভাত খেতাম। _(ami bhat khetam.)_ |
+| I will eat / I am going to eat | সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | আমি ভাত খাব। _(ami bhat khabo.)_ |
+
+## Negatives and questions in every tense
+
+Making a sentence negative is easy. In most tenses you simply add না after the verb. The past and the present perfect take the ending -নি joined to the verb. Making a question is also easy: add কি, or use a question word, or just raise your voice.
+
+**Negatives**
+
+| Tense | Negative | Example |
+|---|---|---|
+| সাধারণ বর্তমান _(sadharon bortoman)_ | verb + না | আমি ভাত খাই না। _(ami bhat khai na.)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | verb + না | আমি ভাত খাচ্ছি না। _(ami bhat khachchhi na.)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | present form + নি | আমি ভাত খাইনি। _(ami bhat khaini.)_ |
+| সাধারণ অতীত _(sadharon otit)_ | present form + নি | আমি ভাত খাইনি। _(ami bhat khaini.)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | verb + না | আমি ভাত খাচ্ছিলাম না। _(ami bhat khachchhilam na.)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | verb + না | আমি ভাত খেতাম না। _(ami bhat khetam na.)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | verb + না | আমি ভাত খাব না। _(ami bhat khabo na.)_ |
+
+> **Note:** The simple past and the present perfect have the same negative: আমি যাইনি means both 'I did not go' and 'I have not gone'. The time word tells you which.
+
+**Negative sentences**
+
+- আমি ভাত খাই না। _(ami bhat khai na.)_: I do not eat rice.
+- আমি এখন ভাত খাচ্ছি না। _(ami ekhon bhat khachchhi na.)_: I am not eating rice now.
+- আমি ভাত খাইনি। _(ami bhat khaini.)_: I have not eaten rice.
+- তুমি গতকাল স্কুলে যাওনি। _(tumi gotokal skule jaoni.)_: You did not go to school yesterday.
+- সে ভাত খেত না। _(she bhat kheto na.)_: He / she did not use to eat rice.
+- আমরা কাল বাজারে যাব না। _(amra kal bajare jabo na.)_: We will not go to the market tomorrow.
+
+**Questions**
+
+- তুমি ভাত খাও? _(tumi bhat khao?)_: Do you eat rice?
+- তুমি এখন কী করছ? _(tumi ekhon ki korchho?)_: What are you doing now?
+- আপনি কি ভাত খেয়েছেন? _(apni ki bhat kheyechhen?)_: Have you eaten?
+- তুমি গতকাল কোথায় গেলে? _(tumi gotokal kothay gele?)_: Where did you go yesterday?
+- আপনি কখন আসবেন? _(apni kokhon asben?)_: When will you come?
+
+## Practice questions
+
+1. What does কাল mean in the word 'ক্রিয়ার কাল'?
+   - A) place
+   - B) time (tense)  ✔
+   - C) person
+   - _Why:_ কাল means time: it is the grammar word for tense.
+2. Which tense is আমি ভাত খাচ্ছি?
+   - A) Simple present
+   - B) Present continuous  ✔
+   - C) Present perfect
+   - _Why:_ -ছি is the sign of the continuous tense.
+3. Which tense is আমি ভাত খেয়েছি?
+   - A) Simple past
+   - B) Past continuous
+   - C) Present perfect  ✔
+   - _Why:_ -েছি is the sign of the present perfect.
+4. Which tense is আমি ভাত খেতাম?
+   - A) Past habitual  ✔
+   - B) Simple past
+   - C) Future
+   - _Why:_ -তাম is the sign of the habitual past: 'used to eat'.
+5. Which tense is আমি ভাত খাব?
+   - A) Simple present
+   - B) Simple future  ✔
+   - C) Present perfect
+   - _Why:_ -ব is the sign of the future.
+6. Which tense sign marks the continuous tenses?
+   - A) -ছ-  ✔
+   - B) -ল-
+   - C) -ব-
+   - _Why:_ -ছ- (করছি).
+7. Which tense sign marks the simple past?
+   - A) -ল-  ✔
+   - B) -ছ-
+   - C) -ব-
+   - _Why:_ -ল- (করলাম).
+8. Which time word goes with the simple past?
+   - A) গতকাল _(gotokal)_  ✔
+   - B) এখন _(ekhon)_
+   - C) আগামীকাল _(agamikal)_
+   - _Why:_ গতকাল means yesterday.
+9. Which time word goes with the present continuous?
+   - A) এখন _(ekhon)_  ✔
+   - B) গতকাল _(gotokal)_
+   - C) রোজ _(roj)_
+   - _Why:_ এখন means now.
+10. Which time word goes with the simple present (habit)?
+   - A) রোজ _(roj)_  ✔
+   - B) এখন _(ekhon)_
+   - C) কাল _(kal)_
+   - _Why:_ রোজ means every day.
+11. Which word fills the blank? **আমি এখন ভাত ___।**
+   - A) খাচ্ছি _(khachchhi)_  ✔
+   - B) খাই _(khai)_
+   - C) খেলাম _(khelam)_
+   - D) খাব _(khabo)_
+   - _Why:_ এখন (now) goes with the continuous tense: খাচ্ছি.
+12. Which word fills the blank? **আমি রোজ ভাত ___।**
+   - A) খাই _(khai)_  ✔
+   - B) খাচ্ছি _(khachchhi)_
+   - C) খেলাম _(khelam)_
+   - D) খাব _(khabo)_
+   - _Why:_ রোজ (every day) goes with the simple present: খাই.
+13. Which word fills the blank? **আমি গতকাল বাজারে ___।**
+   - A) গেলাম _(gelam)_  ✔
+   - B) যাই _(jai)_
+   - C) যাচ্ছি _(jachchhi)_
+   - D) যাব _(jabo)_
+   - _Why:_ গতকাল (yesterday) goes with the simple past: গেলাম.
+14. Which word fills the blank? **তুমি কাল বাজারে ___।**
+   - A) যাবে _(jabe)_  ✔
+   - B) যাও _(jao)_
+   - C) গেলে _(gele)_
+   - D) যাচ্ছ _(jachchho)_
+   - _Why:_ কাল with a future sign means tomorrow: যাবে.
+15. Which word fills the blank? **সে এইমাত্র ___।**
+   - A) এসেছে _(eshechhe)_  ✔
+   - B) আসে _(ashe)_
+   - C) আসবে _(asbe)_
+   - D) আসত _(asto)_
+   - _Why:_ এইমাত্র (just now) goes with the present perfect: এসেছে.
+16. Which word fills the blank? **আমি তখন ভাত ___।**
+   - A) খাচ্ছিলাম _(khachchhilam)_  ✔
+   - B) খেলাম _(khelam)_
+   - C) খাই _(khai)_
+   - D) খাব _(khabo)_
+   - _Why:_ তখন (at that time) with an action in progress: খাচ্ছিলাম.
+17. I have eaten rice.
+   - A) আমি ভাত খেয়েছি। _(ami bhat kheyechhi.)_  ✔
+   - B) আমি ভাত খেলাম। _(ami bhat khelam.)_
+   - C) আমি ভাত খাচ্ছি। _(ami bhat khachchhi.)_
+   - D) আমি ভাত খাব। _(ami bhat khabo.)_
+   - _Why:_ 'Have eaten' is the present perfect: খেয়েছি.
+18. You will go to the market.
+   - A) তুমি বাজারে যাবে। _(tumi bajare jabe.)_  ✔
+   - B) তুমি বাজারে যাও। _(tumi bajare jao.)_
+   - C) তুমি বাজারে গেলে। _(tumi bajare gele.)_
+   - D) তুমি বাজারে যাচ্ছ। _(tumi bajare jachchho.)_
+   - _Why:_ 'Will go' is the future: যাবে.
+19. I used to eat rice.
+   - A) আমি ভাত খেতাম। _(ami bhat khetam.)_  ✔
+   - B) আমি ভাত খেলাম। _(ami bhat khelam.)_
+   - C) আমি ভাত খাই। _(ami bhat khai.)_
+   - D) আমি ভাত খাব। _(ami bhat khabo.)_
+   - _Why:_ 'Used to' is the habitual past: খেতাম.
+20. How do you say 'I did not go'?
+   - A) আমি যাইনি। _(ami jaini.)_  ✔
+   - B) আমি যাই না। _(ami jai na.)_
+   - C) আমি যাব না। _(ami jabo na.)_
+   - _Why:_ The past negative adds -নি to the present form.
+21. What does কাল mean?
+   - A) only 'yesterday'
+   - B) only 'tomorrow'
+   - C) 'yesterday' or 'tomorrow', the verb tells you which  ✔
+   - _Why:_ কাল is used for both; the tense of the verb decides.
+22. Which sentence is correct?
+   - A) আমি ভাত খাচ্ছি। _(ami bhat khachchhi.)_  ✔
+   - B) আমি আছি ভাত খাচ্ছি। _(ami achhi bhat khachchhi.)_
+   - C) আমি খাচ্ছি আছি ভাত। _(ami khachchhi achhi bhat.)_
+   - _Why:_ খাচ্ছি already means 'am eating'.
+
+---
+
+# বর্তমান কাল · Bortoman kal · The present tenses
+
+_The simple present, the present continuous and the present perfect: when to use each, how to build them, with many examples and the common mistakes._
+
+## Simple present: habits, facts and routines
+
+The simple present (সাধারণ বর্তমান) is the plainest tense. It is the root plus a person ending, with no tense sign. Use it for three things: habits and routines (what you do regularly), general facts (what is always true), and timetables or fixed arrangements.
+
+**Simple present of twelve verbs**
+
+| Verb | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| করা (to do) _(kora)_ | করি _(kori)_ | করিস _(koris)_ | করো _(koro)_ | করেন _(koren)_ | করে _(kore)_ |
+| বলা (to say / tell) _(bola)_ | বলি _(boli)_ | বলিস _(bolis)_ | বলো _(bolo)_ | বলেন _(bolen)_ | বলে _(bole)_ |
+| দেখা (to see / look) _(dekha)_ | দেখি _(dekhi)_ | দেখিস _(dekhis)_ | দেখো _(dekho)_ | দেখেন _(dekhen)_ | দেখে _(dekhe)_ |
+| পড়া (to read / study) _(pora)_ | পড়ি _(pori)_ | পড়িস _(poris)_ | পড়ো _(poro)_ | পড়েন _(poren)_ | পড়ে _(pore)_ |
+| খাওয়া (to eat) _(khaoya)_ | খাই _(khai)_ | খাস _(khas)_ | খাও _(khao)_ | খান _(khan)_ | খায় _(khay)_ |
+| যাওয়া (to go) _(jaoya)_ | যাই _(jai)_ | যাস _(jas)_ | যাও _(jao)_ | যান _(jan)_ | যায় _(jay)_ |
+| আসা (to come) _(asha)_ | আসি _(ashi)_ | আসিস _(ashis)_ | আসো _(asho)_ | আসেন _(ashen)_ | আসে _(ashe)_ |
+| দেওয়া (to give) _(deoya)_ | দিই _(dii)_ | দিস _(dis)_ | দাও _(dao)_ | দেন _(den)_ | দেয় _(dey)_ |
+| নেওয়া (to take) _(neoya)_ | নিই _(nii)_ | নিস _(nis)_ | নাও _(nao)_ | নেন _(nen)_ | নেয় _(ney)_ |
+| লেখা (to write) _(lekha)_ | লিখি _(likhi)_ | লিখিস _(likhis)_ | লেখো _(lekho)_ | লেখেন _(lekhen)_ | লেখে _(lekhe)_ |
+| শোনা (to hear / listen) _(shona)_ | শুনি _(shuni)_ | শুনিস _(shunis)_ | শোনো _(shono)_ | শোনেন _(shonen)_ | শোনে _(shone)_ |
+| থাকা (to stay / live) _(thaka)_ | থাকি _(thaki)_ | থাকিস _(thakis)_ | থাকো _(thako)_ | থাকেন _(thaken)_ | থাকে _(thake)_ |
+
+**Routines**
+
+- আমি রোজ সকালে চা খাই। _(ami roj shokale cha khai.)_: I drink tea every morning.
+- তুমি প্রতিদিন স্কুলে যাও। _(tumi protidin skule jao.)_: You go to school every day.
+- সে রোজ বই পড়ে। _(she roj boi pore.)_: He / she reads a book every day.
+- মা সবসময় ভোরে আসেন। _(ma shobshomoy bhore ashen.)_: Mother always comes early.
+- আমরা প্রতিদিন পার্কে হাঁটি। _(amra protidin parke hati.)_: We walk in the park every day.
+- আমি রোজ বাংলা বলি। _(ami roj bangla boli.)_: I speak Bengali every day.
+- ও রোজ গান শোনে। _(o roj gan shone.)_: He / she listens to a song every day.
+- তুই রোজ কী করিস? _(tui roj ki koris?)_: What do you do every day?
+
+**Things that are always true**
+
+- সূর্য পূর্ব দিকে ওঠে। _(shurjo purbo dike othe.)_: The sun rises in the east.
+- গরু ঘাস খায়। _(goru ghas khay.)_: Cows eat grass.
+- মাছ জলে থাকে। _(mach jole thake.)_: Fish live in water.
+- পাখি আকাশে ওড়ে। _(pakhi akashe ore.)_: Birds fly in the sky.
+- বরফ জলে ভাসে। _(borof jole bhashe.)_: Ice floats on water.
+- বর্ষায় অনেক বৃষ্টি হয়। _(borshay onek brishti hoy.)_: It rains a lot in the monsoon.
+
+**Fixed times**
+
+- ট্রেন সকাল আটটায় ছাড়ে। _(tren shokal atotay chhare.)_: The train leaves at eight in the morning.
+- স্কুল দশটায় শুরু হয়। _(skul doshtay shuru hoy.)_: School starts at ten.
+- দোকান রাত নটায় বন্ধ হয়। _(dokan rat notay bondho hoy.)_: The shop closes at nine at night.
+
+**Not and ?**
+
+- আমি ভাত খাই না। _(ami bhat khai na.)_: I do not eat rice.
+- সে মাছ খায় না। _(she mach khay na.)_: He / she does not eat fish.
+- তুমি রোজ স্কুলে যাও? _(tumi roj skule jao?)_: Do you go to school every day?
+- আপনি কোথায় থাকেন? _(apni kothay thaken?)_: Where do you live?
+- তুমি কি চা খাও? _(tumi ki cha khao?)_: Do you drink tea?
+- আমরা বাজারে যাই না। _(amra bajare jai na.)_: We do not go to the market.
+
+## Present continuous: happening now
+
+The present continuous (ঘটমান বর্তমান) is built with -ছ-: root + ছি / ছিস / ছ / ছেন / ছে. Use it for an action in progress right now, for something temporary around now, and, very commonly, for a plan that is settled for the near future.
+
+**Present continuous of twelve verbs**
+
+| Verb | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| করা (to do) _(kora)_ | করছি _(korchhi)_ | করছিস _(korchhis)_ | করছ _(korchho)_ | করছেন _(korchhen)_ | করছে _(korchhe)_ |
+| বলা (to say / tell) _(bola)_ | বলছি _(bolchhi)_ | বলছিস _(bolchhis)_ | বলছ _(bolchho)_ | বলছেন _(bolchhen)_ | বলছে _(bolchhe)_ |
+| দেখা (to see / look) _(dekha)_ | দেখছি _(dekhchhi)_ | দেখছিস _(dekhchhis)_ | দেখছ _(dekhchho)_ | দেখছেন _(dekhchhen)_ | দেখছে _(dekhchhe)_ |
+| পড়া (to read / study) _(pora)_ | পড়ছি _(porchhi)_ | পড়ছিস _(porchhis)_ | পড়ছ _(porchho)_ | পড়ছেন _(porchhen)_ | পড়ছে _(porchhe)_ |
+| খাওয়া (to eat) _(khaoya)_ | খাচ্ছি _(khachchhi)_ | খাচ্ছিস _(khachchhis)_ | খাচ্ছ _(khachchho)_ | খাচ্ছেন _(khachchhen)_ | খাচ্ছে _(khachchhe)_ |
+| যাওয়া (to go) _(jaoya)_ | যাচ্ছি _(jachchhi)_ | যাচ্ছিস _(jachchhis)_ | যাচ্ছ _(jachchho)_ | যাচ্ছেন _(jachchhen)_ | যাচ্ছে _(jachchhe)_ |
+| আসা (to come) _(asha)_ | আসছি _(aschhi)_ | আসছিস _(aschhis)_ | আসছ _(aschho)_ | আসছেন _(aschhen)_ | আসছে _(aschhe)_ |
+| দেওয়া (to give) _(deoya)_ | দিচ্ছি _(dichchhi)_ | দিচ্ছিস _(dichchhis)_ | দিচ্ছ _(dichchho)_ | দিচ্ছেন _(dichchhen)_ | দিচ্ছে _(dichchhe)_ |
+| নেওয়া (to take) _(neoya)_ | নিচ্ছি _(nichchhi)_ | নিচ্ছিস _(nichchhis)_ | নিচ্ছ _(nichchho)_ | নিচ্ছেন _(nichchhen)_ | নিচ্ছে _(nichchhe)_ |
+| লেখা (to write) _(lekha)_ | লিখছি _(likhchhi)_ | লিখছিস _(likhchhis)_ | লিখছ _(likhchho)_ | লিখছেন _(likhchhen)_ | লিখছে _(likhchhe)_ |
+| শোনা (to hear / listen) _(shona)_ | শুনছি _(shunchhi)_ | শুনছিস _(shunchhis)_ | শুনছ _(shunchho)_ | শুনছেন _(shunchhen)_ | শুনছে _(shunchhe)_ |
+| ঘুমানো (to sleep) _(ghumano)_ | ঘুমাচ্ছি _(ghumachchhi)_ | ঘুমাচ্ছিস _(ghumachchhis)_ | ঘুমাচ্ছ _(ghumachchho)_ | ঘুমাচ্ছেন _(ghumachchhen)_ | ঘুমাচ্ছে _(ghumachchhe)_ |
+
+**Now**
+
+- আমি এখন ভাত খাচ্ছি। _(ami ekhon bhat khachchhi.)_: I am eating rice now.
+- তুমি এখন কী করছ? _(tumi ekhon ki korchho?)_: What are you doing now?
+- সে বই পড়ছে। _(she boi porchhe.)_: He / she is reading a book.
+- মা রান্না করছেন। _(ma ranna korchhen.)_: Mother is cooking.
+- আপনি কোথায় যাচ্ছেন? _(apni kothay jachchhen?)_: Where are you going?
+- আমরা গান শুনছি। _(amra gan shunchhi.)_: We are listening to a song.
+- ওরা মাঠে খেলছে। _(ora mathe khelchhe.)_: They are playing in the field.
+- সে এখন ঘুমাচ্ছে। _(she ekhon ghumachchhe.)_: He / she is sleeping now.
+- বৃষ্টি পড়ছে। _(brishti porchhe.)_: It is raining.
+- আমি বাংলা শিখছি। _(ami bangla shikhchhi.)_: I am learning Bengali.
+
+**These days**
+
+- এই সপ্তাহে আমি কলকাতায় থাকছি। _(ei shoptahe ami kolkatay thakchhi.)_: This week I am staying in Kolkata.
+- সে আজকাল অনেক পড়ছে। _(she ajkal onek porchhe.)_: He / she is studying a lot these days.
+- আমরা এখন নতুন বাড়িতে আছি। _(amra ekhon notun barite achhi.)_: We are in a new house now.
+
+Bengali often uses the present continuous for something you have already decided to do soon. English does the same: 'I am going tomorrow'.
+
+**Plans**
+
+- আমি কাল কলকাতায় যাচ্ছি। _(ami kal kolkatay jachchhi.)_: I am going to Kolkata tomorrow.
+- আমরা আগামীকাল স্কুলে যাচ্ছি। _(amra agamikal skule jachchhi.)_: We are going to school tomorrow.
+- সে কাল আসছে। _(she kal aschhe.)_: He / she is coming tomorrow.
+- আমি আজ রাতে ফোন করছি। _(ami aj rate phon korchhi.)_: I am phoning tonight.
+
+**Not and ?**
+
+- আমি এখন ভাত খাচ্ছি না। _(ami ekhon bhat khachchhi na.)_: I am not eating rice now.
+- সে বই পড়ছে না। _(she boi porchhe na.)_: He / she is not reading a book.
+- তুমি কেন করছ? _(tumi keno korchho?)_: Why are you doing it?
+- আপনি কি গান শুনছেন? _(apni ki gan shunchhen?)_: Are you listening to a song?
+- তুমি কেন কাঁদছ? _(tumi keno kandchho?)_: Why are you crying?
+
+## Present perfect: finished, with a result now
+
+The present perfect (পুরাঘটিত বর্তমান) is built with -েছ-: root + েছি / েছিস / েছ / েছেন / েছে. It is used when an action is finished but is still connected to now: you have eaten (so you are not hungry), you have arrived (so you are here). It is also used for recent events, and for experience.
+
+**Present perfect of twelve verbs**
+
+| Verb | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| করা (to do) _(kora)_ | করেছি _(korechhi)_ | করেছিস _(korechhis)_ | করেছ _(korechho)_ | করেছেন _(korechhen)_ | করেছে _(korechhe)_ |
+| বলা (to say / tell) _(bola)_ | বলেছি _(bolechhi)_ | বলেছিস _(bolechhis)_ | বলেছ _(bolechho)_ | বলেছেন _(bolechhen)_ | বলেছে _(bolechhe)_ |
+| দেখা (to see / look) _(dekha)_ | দেখেছি _(dekhechhi)_ | দেখেছিস _(dekhechhis)_ | দেখেছ _(dekhechho)_ | দেখেছেন _(dekhechhen)_ | দেখেছে _(dekhechhe)_ |
+| পড়া (to read / study) _(pora)_ | পড়েছি _(porechhi)_ | পড়েছিস _(porechhis)_ | পড়েছ _(porechho)_ | পড়েছেন _(porechhen)_ | পড়েছে _(porechhe)_ |
+| খাওয়া (to eat) _(khaoya)_ | খেয়েছি _(kheyechhi)_ | খেয়েছিস _(kheyechhis)_ | খেয়েছ _(kheyechho)_ | খেয়েছেন _(kheyechhen)_ | খেয়েছে _(kheyechhe)_ |
+| যাওয়া (to go) _(jaoya)_ | গিয়েছি _(giyechhi)_ | গিয়েছিস _(giyechhis)_ | গিয়েছ _(giyechho)_ | গিয়েছেন _(giyechhen)_ | গিয়েছে _(giyechhe)_ |
+| আসা (to come) _(asha)_ | এসেছি _(eshechhi)_ | এসেছিস _(eshechhis)_ | এসেছ _(eshechho)_ | এসেছেন _(eshechhen)_ | এসেছে _(eshechhe)_ |
+| দেওয়া (to give) _(deoya)_ | দিয়েছি _(diyechhi)_ | দিয়েছিস _(diyechhis)_ | দিয়েছ _(diyechho)_ | দিয়েছেন _(diyechhen)_ | দিয়েছে _(diyechhe)_ |
+| নেওয়া (to take) _(neoya)_ | নিয়েছি _(niyechhi)_ | নিয়েছিস _(niyechhis)_ | নিয়েছ _(niyechho)_ | নিয়েছেন _(niyechhen)_ | নিয়েছে _(niyechhe)_ |
+| লেখা (to write) _(lekha)_ | লিখেছি _(likhechhi)_ | লিখেছিস _(likhechhis)_ | লিখেছ _(likhechho)_ | লিখেছেন _(likhechhen)_ | লিখেছে _(likhechhe)_ |
+| শোনা (to hear / listen) _(shona)_ | শুনেছি _(shunechhi)_ | শুনেছিস _(shunechhis)_ | শুনেছ _(shunechho)_ | শুনেছেন _(shunechhen)_ | শুনেছে _(shunechhe)_ |
+| ঘুমানো (to sleep) _(ghumano)_ | ঘুমিয়েছি _(ghumiyechhi)_ | ঘুমিয়েছিস _(ghumiyechhis)_ | ঘুমিয়েছ _(ghumiyechho)_ | ঘুমিয়েছেন _(ghumiyechhen)_ | ঘুমিয়েছে _(ghumiyechhe)_ |
+
+**Finished actions**
+
+- আমি ভাত খেয়েছি। _(ami bhat kheyechhi.)_: I have eaten rice.
+- তুমি কি ভাত খেয়েছ? _(tumi ki bhat kheyechho?)_: Have you eaten rice?
+- সে চিঠি লিখেছে। _(she chithi likhechhe.)_: He / she has written a letter.
+- বাবা অফিসে গিয়েছেন। _(baba ofise giyechhen.)_: Father has gone to the office.
+- আমি এইমাত্র এসেছি। _(ami eimatro eshechhi.)_: I have just come.
+- মা রান্না করেছেন। _(ma ranna korechhen.)_: Mother has cooked.
+- আমরা ছবিটা দেখেছি। _(amra chhobita dekhechhi.)_: We have seen the picture.
+- তুমি বই পড়েছ। _(tumi boi porechho.)_: You have read the book.
+- সে গান শুনেছে। _(she gan shunechhe.)_: He / she has listened to the song.
+- আপনি কি কলকাতায় এসেছেন? _(apni ki kolkatay eshechhen?)_: Have you come to Kolkata?
+
+**Ever and never**
+
+- আপনি কি কখনো কলকাতায় এসেছেন? _(apni ki kokhono kolkatay eshechhen?)_: Have you ever come to Kolkata?
+- তুমি কি কখনো ইলিশ খেয়েছ? _(tumi ki kokhono ilish kheyechho?)_: Have you ever eaten hilsa?
+- আমি কখনো সাপ দেখিনি। _(ami kokhono shap dekhini.)_: I have never seen a snake.
+
+A negative present perfect uses the present form with -নি, and the word এখনও (yet / still) usually goes with it.
+
+**Not yet**
+
+- আমি এখনও ভাত খাইনি। _(ami ekhono bhat khaini.)_: I have not eaten rice yet.
+- সে এখনও আসেনি। _(she ekhono asheni.)_: He / she has not come yet.
+- তুমি এখনও বই পড়োনি। _(tumi ekhono boi poroni.)_: You have not read the book yet.
+- আমরা এখনও চিঠি লিখিনি। _(amra ekhono chithi likhini.)_: We have not written the letter yet.
+
+> **Note:** Bengali uses the present perfect more than English does for recent events. 'I came today' is আমি আজ এসেছি, with the perfect. Use the simple past only when the time is clearly over: আমি গতকাল এলাম.
+
+## The three present tenses side by side
+
+The best way to feel the difference is to see one verb in all three present tenses, with the question each one answers.
+
+| Question it answers | Tense | Example | Meaning |
+|---|---|---|---|
+| What do you usually do? | সাধারণ বর্তমান _(sadharon bortoman)_ | আমি ভাত খাই। _(ami bhat khai.)_ | I eat rice (as a habit). |
+| What are you doing right now? | ঘটমান বর্তমান _(ghotoman bortoman)_ | আমি ভাত খাচ্ছি। _(ami bhat khachchhi.)_ | I am eating rice (now). |
+| What have you already done? | পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | আমি ভাত খেয়েছি। _(ami bhat kheyechhi.)_ | I have eaten rice (it is done). |
+
+**Same verb, three meanings**
+
+- আমি রোজ বই পড়ি। _(ami roj boi pori.)_: I read a book every day.
+- আমি এখন বই পড়ছি। _(ami ekhon boi porchhi.)_: I am reading a book now.
+- আমি বই পড়েছি। _(ami boi porechhi.)_: I have read the book.
+- সে রোজ চিঠি লেখে। _(she roj chithi lekhe.)_: He / she writes a letter every day.
+- সে এখন চিঠি লিখছে। _(she ekhon chithi likhchhe.)_: He / she is writing a letter now.
+- সে চিঠি লিখেছে। _(she chithi likhechhe.)_: He / she has written the letter.
+- তুমি রোজ গান শোনো। _(tumi roj gan shono.)_: You listen to a song every day.
+- তুমি এখন গান শুনছ। _(tumi ekhon gan shunchho.)_: You are listening to a song now.
+- তুমি গান শুনেছ। _(tumi gan shunechho.)_: You have listened to the song.
+
+**Short exchanges**
+
+- আমি রোজ সকালে চা খাই। কিন্তু আজ খাইনি। _(ami roj shokale cha khai. kintu aj khaini.)_: I drink tea every morning. But I have not had it today.
+- সে এখন বাড়িতে নেই। সে অফিসে গেছে। _(she ekhon barite nei. she ofise gechhe.)_: He / she is not at home now. He / she has gone to the office.
+- তুমি কী করছ? আমি চিঠি লিখছি। লেখা শেষ হলে পাঠাব। _(tumi ki korchho? ami chithi likhchhi. lekha shesh hole pathabo.)_: What are you doing? I am writing a letter. When I finish writing I will send it.
+
+## Practice questions
+
+1. When do you use the simple present?
+   - A) for habits, facts and routines  ✔
+   - B) for things finished long ago
+   - C) for things that will happen next year
+   - _Why:_ The simple present is for habits and facts.
+2. When do you use the present continuous?
+   - A) for an action in progress now  ✔
+   - B) for a habit
+   - C) for something finished yesterday
+   - _Why:_ -ছ- marks an action in progress.
+3. When do you use the present perfect?
+   - A) for an action finished that matters now  ✔
+   - B) for a habit
+   - C) for a plan
+   - _Why:_ -েছ- marks an action that is finished but has a result now.
+4. Which word fills the blank? **আমি রোজ চা ___।**
+   - A) খাই _(khai)_  ✔
+   - B) খাচ্ছি _(khachchhi)_
+   - C) খেয়েছি _(kheyechhi)_
+   - D) খেলাম _(khelam)_
+   - _Why:_ রোজ → habit → simple present: খাই.
+5. Which word fills the blank? **তুমি এখন বই ___।**
+   - A) পড়ছ _(porchho)_  ✔
+   - B) পড়ো _(poro)_
+   - C) পড়েছ _(porechho)_
+   - D) পড়বে _(porbe)_
+   - _Why:_ এখন → in progress → present continuous: পড়ছ.
+6. Which word fills the blank? **সে এইমাত্র ___।**
+   - A) এসেছে _(eshechhe)_  ✔
+   - B) আসে _(ashe)_
+   - C) আসছে _(aschhe)_
+   - D) এল _(elo)_
+   - _Why:_ এইমাত্র → just done → present perfect: এসেছে.
+7. Which word fills the blank? **আপনি কোথায় ___?**
+   - A) যাচ্ছেন _(jachchhen)_  ✔
+   - B) যান _(jan)_
+   - C) গিয়েছেন _(giyechhen)_
+   - D) গেলেন _(gelen)_
+   - _Why:_ আপনি + continuous: যাচ্ছেন.
+8. Which word fills the blank? **তুমি কি ভাত ___?**
+   - A) খেয়েছ _(kheyechho)_  ✔
+   - B) খাও _(khao)_
+   - C) খাচ্ছ _(khachchho)_
+   - D) খেলে _(khele)_
+   - _Why:_ 'Have you eaten?': খেয়েছ.
+9. Which word fills the blank? **আমরা প্রতিদিন পার্কে ___।**
+   - A) হাঁটি _(hati)_  ✔
+   - B) হাঁটছি _(hatchhi)_
+   - C) হাঁটেছি _(hatechhi)_
+   - D) হাঁটলাম _(hatlam)_
+   - _Why:_ প্রতিদিন → habit → simple present: হাঁটি.
+10. Which word fills the blank? **সে চিঠি ___।**
+   - A) লিখেছে _(likhechhe)_  ✔
+   - B) লেখে _(lekhe)_
+   - C) লিখছে _(likhchhe)_
+   - D) লিখল _(likhlo)_
+   - _Why:_ A finished letter: লিখেছে.
+11. Which word fills the blank? **ও গান ___।**
+   - A) শোনে _(shone)_  ✔
+   - B) শুনছে _(shunchhe)_
+   - C) শুনেছে _(shunechhe)_
+   - D) শুনল _(shunlo)_
+   - _Why:_ ও + simple present: শোনে.
+12. Which word fills the blank? **তুই এখন কী ___?**
+   - A) করছিস _(korchhis)_  ✔
+   - B) করিস _(koris)_
+   - C) করেছিস _(korechhis)_
+   - D) করলি _(korli)_
+   - _Why:_ তুই + continuous: করছিস.
+13. I am eating rice now.
+   - A) আমি এখন ভাত খাচ্ছি। _(ami ekhon bhat khachchhi.)_  ✔
+   - B) আমি এখন ভাত খাই। _(ami ekhon bhat khai.)_
+   - C) আমি এখন ভাত খেয়েছি। _(ami ekhon bhat kheyechhi.)_
+   - D) আমি এখন ভাত খাব। _(ami ekhon bhat khabo.)_
+   - _Why:_ 'Am eating now': খাচ্ছি.
+14. I have not eaten rice yet.
+   - A) আমি এখনও ভাত খাইনি। _(ami ekhono bhat khaini.)_  ✔
+   - B) আমি এখনও ভাত খাই না। _(ami ekhono bhat khai na.)_
+   - C) আমি এখনও ভাত খাচ্ছি না। _(ami ekhono bhat khachchhi na.)_
+   - D) আমি এখনও ভাত খাব না। _(ami ekhono bhat khabo na.)_
+   - _Why:_ 'Have not … yet' uses the -নি form: খাইনি.
+15. He / she reads a book. (habit)
+   - A) সে বই পড়ে। _(she boi pore.)_  ✔
+   - B) সে বই পড়ছে। _(she boi porchhe.)_
+   - C) সে বই পড়েছে। _(she boi porechhe.)_
+   - D) সে বই পড়ল। _(she boi porlo.)_
+   - _Why:_ A plain habit: পড়ে.
+16. How do you say 'I do not eat fish'?
+   - A) আমি মাছ খাই না। _(ami mach khai na.)_  ✔
+   - B) আমি না মাছ খাই। _(ami na mach khai.)_
+   - C) আমি মাছ না খাই। _(ami mach na khai.)_
+   - _Why:_ না comes after the verb.
+17. How do you say 'I have not come yet'?
+   - A) আমি এখনও আসিনি। _(ami ekhono ashini.)_  ✔
+   - B) আমি এখনও আসছি না। _(ami ekhono aschhi na.)_
+   - C) আমি এখনও আসব না। _(ami ekhono asbo na.)_
+   - _Why:_ 'Not yet' = the -নি form with এখনও.
+18. 'আমি কাল কলকাতায় যাচ্ছি' uses the present continuous for:
+   - A) a settled plan for tomorrow  ✔
+   - B) something happening yesterday
+   - C) a general fact
+   - _Why:_ The present continuous can express a settled near-future plan.
+19. Which sentence is correct?
+   - A) সে রোজ বই পড়ে। _(she roj boi pore.)_  ✔
+   - B) সে রোজ বই পড়ছে। _(she roj boi porchhe.)_
+   - C) সে রোজ বই পড়েছে। _(she roj boi porechhe.)_
+   - _Why:_ রোজ (every day) goes with the simple present.
+20. Which sentence is correct?
+   - A) আমি এখন ভাত খাচ্ছি। _(ami ekhon bhat khachchhi.)_  ✔
+   - B) আমি এখন ভাত খাই। _(ami ekhon bhat khai.)_
+   - C) আমি এখন ভাত খাব। _(ami ekhon bhat khabo.)_
+   - _Why:_ এখন (now) goes with the present continuous.
+
+---
+
+# অতীত কাল · Otit kal · The past tenses
+
+_The simple past, the past continuous, the past perfect and the habitual past: what each one says, how to build it, many examples, and how to tell a story in the past._
+
+## Simple past: it happened, and it is over
+
+The simple past (সাধারণ অতীত) is built with -ল-: root + লাম / লি / লে / লেন / ল. Use it for an action that is finished and sits clearly in the past, usually with a time word that is over: yesterday, last week, in 2010, then. Telling a story, you mostly use the simple past.
+
+**Simple past of twelve verbs**
+
+| Verb | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| করা (to do) _(kora)_ | করলাম _(korlam)_ | করলি _(korli)_ | করলে _(korle)_ | করলেন _(korlen)_ | করল _(korlo)_ |
+| বলা (to say / tell) _(bola)_ | বললাম _(bollam)_ | বললি _(bolli)_ | বললে _(bolle)_ | বললেন _(bollen)_ | বলল _(bollo)_ |
+| দেখা (to see / look) _(dekha)_ | দেখলাম _(dekhlam)_ | দেখলি _(dekhli)_ | দেখলে _(dekhle)_ | দেখলেন _(dekhlen)_ | দেখল _(dekhlo)_ |
+| পড়া (to read / study) _(pora)_ | পড়লাম _(porlam)_ | পড়লি _(porli)_ | পড়লে _(porle)_ | পড়লেন _(porlen)_ | পড়ল _(porlo)_ |
+| খাওয়া (to eat) _(khaoya)_ | খেলাম _(khelam)_ | খেলি _(kheli)_ | খেলে _(khele)_ | খেলেন _(khelen)_ | খেল _(khelo)_ |
+| যাওয়া (to go) _(jaoya)_ | গেলাম _(gelam)_ | গেলি _(geli)_ | গেলে _(gele)_ | গেলেন _(gelen)_ | গেল _(gelo)_ |
+| আসা (to come) _(asha)_ | এলাম _(elam)_ | এলি _(eli)_ | এলে _(ele)_ | এলেন _(elen)_ | এল _(elo)_ |
+| দেওয়া (to give) _(deoya)_ | দিলাম _(dilam)_ | দিলি _(dili)_ | দিলে _(dile)_ | দিলেন _(dilen)_ | দিল _(dilo)_ |
+| নেওয়া (to take) _(neoya)_ | নিলাম _(nilam)_ | নিলি _(nili)_ | নিলে _(nile)_ | নিলেন _(nilen)_ | নিল _(nilo)_ |
+| লেখা (to write) _(lekha)_ | লিখলাম _(likhlam)_ | লিখলি _(likhli)_ | লিখলে _(likhle)_ | লিখলেন _(likhlen)_ | লিখল _(likhlo)_ |
+| শোনা (to hear / listen) _(shona)_ | শুনলাম _(shunlam)_ | শুনলি _(shunli)_ | শুনলে _(shunle)_ | শুনলেন _(shunlen)_ | শুনল _(shunlo)_ |
+| থাকা (to stay / live) _(thaka)_ | থাকলাম _(thaklam)_ | থাকলি _(thakli)_ | থাকলে _(thakle)_ | থাকলেন _(thaklen)_ | থাকল _(thaklo)_ |
+
+**Finished actions**
+
+- আমি গতকাল বাজারে গেলাম। _(ami gotokal bajare gelam.)_: I went to the market yesterday.
+- তুমি গতকাল বই পড়লে। _(tumi gotokal boi porle.)_: You read a book yesterday.
+- সে আমাকে চিঠি লিখল। _(she amake chithi likhlo.)_: He / she wrote me a letter.
+- মা গতকাল মাছ রান্না করলেন। _(ma gotokal mach ranna korlen.)_: Mother cooked fish yesterday.
+- আমরা রবিবার সিনেমা দেখলাম। _(amra robibar sinema dekhlam.)_: We saw a film on Sunday.
+- সে গান শুনল। _(she gan shunlo.)_: He / she listened to the song.
+- তারা কলকাতায় এল। _(tara kolkatay elo.)_: They came to Kolkata.
+- বাবা আমাকে একটা বই দিলেন। _(baba amake ekta boi dilen.)_: Father gave me a book.
+- আমি গতকাল সারাদিন ঘুমালাম। _(ami gotokal sharadin ghumalam.)_: I slept all day yesterday.
+- আপনি কী বললেন? _(apni ki bollen?)_: What did you say?
+- তুমি কী খেলে? _(tumi ki khele?)_: What did you eat?
+
+**Negatives and questions**
+
+- আমি গতকাল স্কুলে যাইনি। _(ami gotokal skule jaini.)_: I did not go to school yesterday.
+- সে আমাকে বলেনি। _(she amake boleni.)_: He / she did not tell me.
+- তুমি ভাত খাওনি। _(tumi bhat khaoni.)_: You did not eat rice.
+- আমরা গতকাল আসিনি। _(amra gotokal ashini.)_: We did not come yesterday.
+- আপনি কি গতকাল অফিসে গেলেন? _(apni ki gotokal ofise gelen?)_: Did you go to the office yesterday?
+
+## Past continuous: in progress at that time
+
+The past continuous (ঘটমান অতীত) is built with -ছিল-: root + ছিলাম / ছিলি / ছিলে / ছিলেন / ছিল. It describes an action that was in progress at a moment in the past, or two things going on together in the background, or an action that was interrupted by another.
+
+**Past continuous of twelve verbs**
+
+| Verb | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| করা (to do) _(kora)_ | করছিলাম _(korchhilam)_ | করছিলি _(korchhili)_ | করছিলে _(korchhile)_ | করছিলেন _(korchhilen)_ | করছিল _(korchhilo)_ |
+| বলা (to say / tell) _(bola)_ | বলছিলাম _(bolchhilam)_ | বলছিলি _(bolchhili)_ | বলছিলে _(bolchhile)_ | বলছিলেন _(bolchhilen)_ | বলছিল _(bolchhilo)_ |
+| দেখা (to see / look) _(dekha)_ | দেখছিলাম _(dekhchhilam)_ | দেখছিলি _(dekhchhili)_ | দেখছিলে _(dekhchhile)_ | দেখছিলেন _(dekhchhilen)_ | দেখছিল _(dekhchhilo)_ |
+| পড়া (to read / study) _(pora)_ | পড়ছিলাম _(porchhilam)_ | পড়ছিলি _(porchhili)_ | পড়ছিলে _(porchhile)_ | পড়ছিলেন _(porchhilen)_ | পড়ছিল _(porchhilo)_ |
+| খাওয়া (to eat) _(khaoya)_ | খাচ্ছিলাম _(khachchhilam)_ | খাচ্ছিলি _(khachchhili)_ | খাচ্ছিলে _(khachchhile)_ | খাচ্ছিলেন _(khachchhilen)_ | খাচ্ছিল _(khachchhilo)_ |
+| যাওয়া (to go) _(jaoya)_ | যাচ্ছিলাম _(jachchhilam)_ | যাচ্ছিলি _(jachchhili)_ | যাচ্ছিলে _(jachchhile)_ | যাচ্ছিলেন _(jachchhilen)_ | যাচ্ছিল _(jachchhilo)_ |
+| আসা (to come) _(asha)_ | আসছিলাম _(aschhilam)_ | আসছিলি _(aschhili)_ | আসছিলে _(aschhile)_ | আসছিলেন _(aschhilen)_ | আসছিল _(aschhilo)_ |
+| দেওয়া (to give) _(deoya)_ | দিচ্ছিলাম _(dichchhilam)_ | দিচ্ছিলি _(dichchhili)_ | দিচ্ছিলে _(dichchhile)_ | দিচ্ছিলেন _(dichchhilen)_ | দিচ্ছিল _(dichchhilo)_ |
+| নেওয়া (to take) _(neoya)_ | নিচ্ছিলাম _(nichchhilam)_ | নিচ্ছিলি _(nichchhili)_ | নিচ্ছিলে _(nichchhile)_ | নিচ্ছিলেন _(nichchhilen)_ | নিচ্ছিল _(nichchhilo)_ |
+| লেখা (to write) _(lekha)_ | লিখছিলাম _(likhchhilam)_ | লিখছিলি _(likhchhili)_ | লিখছিলে _(likhchhile)_ | লিখছিলেন _(likhchhilen)_ | লিখছিল _(likhchhilo)_ |
+| শোনা (to hear / listen) _(shona)_ | শুনছিলাম _(shunchhilam)_ | শুনছিলি _(shunchhili)_ | শুনছিলে _(shunchhile)_ | শুনছিলেন _(shunchhilen)_ | শুনছিল _(shunchhilo)_ |
+| থাকা (to stay / live) _(thaka)_ | থাকছিলাম _(thakchhilam)_ | থাকছিলি _(thakchhili)_ | থাকছিলে _(thakchhile)_ | থাকছিলেন _(thakchhilen)_ | থাকছিল _(thakchhilo)_ |
+
+**Then**
+
+- আমি তখন ভাত খাচ্ছিলাম। _(ami tokhon bhat khachchhilam.)_: I was eating rice then.
+- সে তখন বই পড়ছিল। _(she tokhon boi porchhilo.)_: He / she was reading a book then.
+- তুমি তখন কী করছিলে? _(tumi tokhon ki korchhile?)_: What were you doing then?
+- মা তখন রান্না করছিলেন। _(ma tokhon ranna korchhilen.)_: Mother was cooking then.
+- আমরা তখন গান শুনছিলাম। _(amra tokhon gan shunchhilam.)_: We were listening to a song then.
+- আপনি কোথায় যাচ্ছিলেন? _(apni kothay jachchhilen?)_: Where were you going?
+- ওরা তখন মাঠে খেলছিল। _(ora tokhon mathe khelchhilo.)_: They were playing in the field then.
+- তখন বৃষ্টি পড়ছিল। _(tokhon brishti porchhilo.)_: It was raining then.
+- আমি তখন ফোনে কথা বলছিলাম। _(ami tokhon phone kotha bolchhilam.)_: I was talking on the phone then.
+
+Use যখন … তখন … ('when … then …'). The long action takes the past continuous, and the short action that cut across it takes the simple past.
+
+**While and when**
+
+- আমি যখন বাড়ি এলাম তখন সে ঘুমাচ্ছিল। _(ami jokhon bari elam tokhon she ghumachchhilo.)_: When I came home, he / she was sleeping.
+- আমি যখন খাচ্ছিলাম তখন ফোন বাজল। _(ami jokhon khachchhilam tokhon phon bajlo.)_: When I was eating, the phone rang.
+- সে যখন পড়ছিল তখন আলো চলে গেল। _(she jokhon porchhilo tokhon alo chole gelo.)_: While he / she was studying, the lights went out.
+- তুমি যখন এলে আমি রান্না করছিলাম। _(tumi jokhon ele ami ranna korchhilam.)_: When you came, I was cooking.
+
+**Negatives and questions**
+
+- আমি তখন ভাত খাচ্ছিলাম না। _(ami tokhon bhat khachchhilam na.)_: I was not eating rice then.
+- সে তখন ঘুমাচ্ছিল না। _(she tokhon ghumachchhilo na.)_: He / she was not sleeping then.
+- তুমি তখন কি বই পড়ছিলে? _(tumi tokhon ki boi porchhile?)_: Were you reading a book then?
+
+## Past perfect: it had already happened
+
+The past perfect (পুরাঘটিত অতীত) is built with -েছিল-: root + েছিলাম / েছিলি / েছিলে / েছিলেন / েছিল. It says that an action had already finished before another moment in the past. It is also the usual way to say that something happened once, a long time ago, and is not connected to now.
+
+**Past perfect of twelve verbs**
+
+| Verb | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| করা (to do) _(kora)_ | করেছিলাম _(korechhilam)_ | করেছিলি _(korechhili)_ | করেছিলে _(korechhile)_ | করেছিলেন _(korechhilen)_ | করেছিল _(korechhilo)_ |
+| বলা (to say / tell) _(bola)_ | বলেছিলাম _(bolechhilam)_ | বলেছিলি _(bolechhili)_ | বলেছিলে _(bolechhile)_ | বলেছিলেন _(bolechhilen)_ | বলেছিল _(bolechhilo)_ |
+| দেখা (to see / look) _(dekha)_ | দেখেছিলাম _(dekhechhilam)_ | দেখেছিলি _(dekhechhili)_ | দেখেছিলে _(dekhechhile)_ | দেখেছিলেন _(dekhechhilen)_ | দেখেছিল _(dekhechhilo)_ |
+| পড়া (to read / study) _(pora)_ | পড়েছিলাম _(porechhilam)_ | পড়েছিলি _(porechhili)_ | পড়েছিলে _(porechhile)_ | পড়েছিলেন _(porechhilen)_ | পড়েছিল _(porechhilo)_ |
+| খাওয়া (to eat) _(khaoya)_ | খেয়েছিলাম _(kheyechhilam)_ | খেয়েছিলি _(kheyechhili)_ | খেয়েছিলে _(kheyechhile)_ | খেয়েছিলেন _(kheyechhilen)_ | খেয়েছিল _(kheyechhilo)_ |
+| যাওয়া (to go) _(jaoya)_ | গিয়েছিলাম _(giyechhilam)_ | গিয়েছিলি _(giyechhili)_ | গিয়েছিলে _(giyechhile)_ | গিয়েছিলেন _(giyechhilen)_ | গিয়েছিল _(giyechhilo)_ |
+| আসা (to come) _(asha)_ | এসেছিলাম _(eshechhilam)_ | এসেছিলি _(eshechhili)_ | এসেছিলে _(eshechhile)_ | এসেছিলেন _(eshechhilen)_ | এসেছিল _(eshechhilo)_ |
+| দেওয়া (to give) _(deoya)_ | দিয়েছিলাম _(diyechhilam)_ | দিয়েছিলি _(diyechhili)_ | দিয়েছিলে _(diyechhile)_ | দিয়েছিলেন _(diyechhilen)_ | দিয়েছিল _(diyechhilo)_ |
+| নেওয়া (to take) _(neoya)_ | নিয়েছিলাম _(niyechhilam)_ | নিয়েছিলি _(niyechhili)_ | নিয়েছিলে _(niyechhile)_ | নিয়েছিলেন _(niyechhilen)_ | নিয়েছিল _(niyechhilo)_ |
+| লেখা (to write) _(lekha)_ | লিখেছিলাম _(likhechhilam)_ | লিখেছিলি _(likhechhili)_ | লিখেছিলে _(likhechhile)_ | লিখেছিলেন _(likhechhilen)_ | লিখেছিল _(likhechhilo)_ |
+| শোনা (to hear / listen) _(shona)_ | শুনেছিলাম _(shunechhilam)_ | শুনেছিলি _(shunechhili)_ | শুনেছিলে _(shunechhile)_ | শুনেছিলেন _(shunechhilen)_ | শুনেছিল _(shunechhilo)_ |
+| থাকা (to stay / live) _(thaka)_ | থাকেছিলাম _(thakechhilam)_ | থাকেছিলি _(thakechhili)_ | থাকেছিলে _(thakechhile)_ | থাকেছিলেন _(thakechhilen)_ | থাকেছিল _(thakechhilo)_ |
+
+**Earlier than another event**
+
+- আমি যখন পৌঁছলাম, সে তখন চলে গিয়েছিল। _(ami jokhon pouchholam, she tokhon chole giyechhilo.)_: When I arrived, he / she had already left.
+- আমি আগে ভাত খেয়েছিলাম। _(ami age bhat kheyechhilam.)_: I had eaten rice before.
+- সে আগেই বইটা পড়েছিল। _(she agei boita porechhilo.)_: He / she had already read the book.
+- মা আগেই রান্না করেছিলেন। _(ma agei ranna korechhilen.)_: Mother had already cooked.
+- আমরা ছবিটা আগে দেখেছিলাম। _(amra chhobita age dekhechhilam.)_: We had seen the picture before.
+- সে আমাকে বলেছিল যে সে আসবে। _(she amake bolechhilo je she ashbe.)_: He / she had told me that he / she would come.
+
+**A past experience**
+
+- আমি একবার কলকাতায় গিয়েছিলাম। _(ami ekbar kolkatay giyechhilam.)_: I went to Kolkata once.
+- তুমি কি আগে কলকাতায় এসেছিলে? _(tumi ki age kolkatay eshechhile?)_: Had you come to Kolkata before?
+- আপনি কি আগে এখানে এসেছিলেন? _(apni ki age ekhane eshechhilen?)_: Have you been here before?
+- ঠাকুমা ছোটবেলায় এই বাড়িতে থাকেছিলেন। _(thakuma chhotobelay ei barite thakechhilen.)_: Grandmother lived in this house in her childhood.
+
+> **Note:** Do not confuse the past perfect with the present perfect. আমি খেয়েছি (I have eaten) is about now: you are not hungry. আমি খেয়েছিলাম (I had eaten) is about before something else in the past.
+
+## Past habitual: what used to happen
+
+The past habitual (নিত্যবৃত্ত অতীত) is built with -ত-: root + তাম / তিস / তে / তেন / ত. It describes what used to happen again and again in the past, and what would happen every time. It is also used for polite or unreal ideas: 'I would say if I knew'.
+
+**Past habitual of twelve verbs**
+
+| Verb | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| করা (to do) _(kora)_ | করতাম _(kortam)_ | করতিস _(kortis)_ | করতে _(korte)_ | করতেন _(korten)_ | করত _(korto)_ |
+| বলা (to say / tell) _(bola)_ | বলতাম _(boltam)_ | বলতিস _(boltis)_ | বলতে _(bolte)_ | বলতেন _(bolten)_ | বলত _(bolto)_ |
+| দেখা (to see / look) _(dekha)_ | দেখতাম _(dekhtam)_ | দেখতিস _(dekhtis)_ | দেখতে _(dekhte)_ | দেখতেন _(dekhten)_ | দেখত _(dekhto)_ |
+| পড়া (to read / study) _(pora)_ | পড়তাম _(portam)_ | পড়তিস _(portis)_ | পড়তে _(porte)_ | পড়তেন _(porten)_ | পড়ত _(porto)_ |
+| খাওয়া (to eat) _(khaoya)_ | খেতাম _(khetam)_ | খেতিস _(khetis)_ | খেতে _(khete)_ | খেতেন _(kheten)_ | খেত _(kheto)_ |
+| যাওয়া (to go) _(jaoya)_ | যেতাম _(jetam)_ | যেতিস _(jetis)_ | যেতে _(jete)_ | যেতেন _(jeten)_ | যেত _(jeto)_ |
+| আসা (to come) _(asha)_ | আসতাম _(astam)_ | আসতিস _(astis)_ | আসতে _(aste)_ | আসতেন _(asten)_ | আসত _(asto)_ |
+| দেওয়া (to give) _(deoya)_ | দিতাম _(ditam)_ | দিতিস _(ditis)_ | দিতে _(dite)_ | দিতেন _(diten)_ | দিত _(dito)_ |
+| নেওয়া (to take) _(neoya)_ | নিতাম _(nitam)_ | নিতিস _(nitis)_ | নিতে _(nite)_ | নিতেন _(niten)_ | নিত _(nito)_ |
+| লেখা (to write) _(lekha)_ | লিখতাম _(likhtam)_ | লিখতিস _(likhtis)_ | লিখতে _(likhte)_ | লিখতেন _(likhten)_ | লিখত _(likhto)_ |
+| শোনা (to hear / listen) _(shona)_ | শুনতাম _(shuntam)_ | শুনতিস _(shuntis)_ | শুনতে _(shunte)_ | শুনতেন _(shunten)_ | শুনত _(shunto)_ |
+| থাকা (to stay / live) _(thaka)_ | থাকতাম _(thaktam)_ | থাকতিস _(thaktis)_ | থাকতে _(thakte)_ | থাকতেন _(thakten)_ | থাকত _(thakto)_ |
+
+**Used to**
+
+- আমি ছোটবেলায় রোজ মাঠে খেলতাম। _(ami chhotobelay roj mathe kheltam.)_: I used to play in the field every day in my childhood.
+- তুমি রোজ কী খেতে? _(tumi roj ki khete?)_: What did you use to eat every day?
+- সে প্রতিদিন বই পড়ত। _(she protidin boi porto.)_: He / she used to read a book every day.
+- ঠাকুমা আমাদের গল্প বলতেন। _(thakuma amader golpo bolten.)_: Grandmother used to tell us stories.
+- আমরা প্রতি রবিবার বাজারে যেতাম। _(amra proti robibar bajare jetam.)_: We used to go to the market every Sunday.
+- বাবা রোজ সকালে হাঁটতেন। _(baba roj shokale hatten.)_: Father used to walk every morning.
+- আমি তখন প্রতিদিন চা খেতাম না। _(ami tokhon protidin cha khetam na.)_: I did not use to drink tea every day then.
+- আপনি কি আগে এখানে আসতেন? _(apni ki age ekhane asten?)_: Did you use to come here before?
+
+**Unreal ideas**
+
+- আমি জানলে বলতাম। _(ami janle bolotam.)_: If I had known, I would have said so.
+- তুমি এলে আমি খুশি হতাম। _(tumi ele ami khushi hotam.)_: If you had come, I would have been happy.
+- টাকা থাকলে আমি কিনতাম। _(taka thakle ami kintam.)_: If I had money, I would buy it.
+
+## Telling a story: the past tenses together
+
+In a real story the past tenses work together. The simple past moves the story forward. The past continuous paints the background. The past perfect looks back to what had already happened. The habitual says what used to be true. Read the example, and notice which tense each sentence uses.
+
+**One morning**
+
+- গতকাল সকালে আমি ঘুম থেকে উঠলাম। _(gotokal shokale ami ghum theke uthlam.)_: Yesterday morning I woke up.  (simple past: the story moves)
+- মা তখন রান্না করছিলেন। _(ma tokhon ranna korchhilen.)_: Mother was cooking then.  (past continuous: background)
+- বাবা আগেই অফিসে চলে গিয়েছিলেন। _(baba agei ofise chole giyechhilen.)_: Father had already gone to the office.  (past perfect: earlier)
+- আমি মুখ ধুয়ে চা খেলাম। _(ami mukh dhuye cha khelam.)_: I washed my face and drank tea.  (simple past)
+- ছোটবেলায় আমি হেঁটে স্কুলে যেতাম। _(chhotobelay ami hete skule jetam.)_: In my childhood I used to walk to school.  (habitual past)
+- আজ আমি বাসে স্কুলে গেলাম। _(aj ami base skule gelam.)_: Today I went to school by bus.  (simple past)
+
+| Tense | It says | Example |
+|---|---|---|
+| সাধারণ অতীত _(sadharon otit)_ | It happened and is over | আমি ভাত খেলাম। _(ami bhat khelam.)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | It was in progress | আমি ভাত খাচ্ছিলাম। _(ami bhat khachchhilam.)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | It had happened before | আমি ভাত খেয়েছিলাম। _(ami bhat kheyechhilam.)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | It used to happen | আমি ভাত খেতাম। _(ami bhat khetam.)_ |
+
+## Practice questions
+
+1. Which sign marks the simple past?
+   - A) -ল-  ✔
+   - B) -ছিল-
+   - C) -ত-
+   - _Why:_ -ল- (গেলাম, করলাম).
+2. Which sign marks the past continuous?
+   - A) -ছিল-  ✔
+   - B) -েছিল-
+   - C) -ল-
+   - _Why:_ -ছিল- (করছিলাম).
+3. Which sign marks the past perfect?
+   - A) -েছিল-  ✔
+   - B) -ছিল-
+   - C) -ত-
+   - _Why:_ -েছিল- (করেছিলাম).
+4. Which sign marks the past habitual?
+   - A) -ত-  ✔
+   - B) -ল-
+   - C) -ব-
+   - _Why:_ -ত- (করতাম).
+5. Which word fills the blank? **আমি গতকাল বাজারে ___।**
+   - A) গেলাম _(gelam)_  ✔
+   - B) যাচ্ছি _(jachchhi)_
+   - C) যাই _(jai)_
+   - D) যাব _(jabo)_
+   - _Why:_ গতকাল → finished → simple past: গেলাম.
+6. Which word fills the blank? **তুমি গতকাল বই ___।**
+   - A) পড়লে _(porle)_  ✔
+   - B) পড়ো _(poro)_
+   - C) পড়ছিলে _(porchhile)_
+   - D) পড়বে _(porbe)_
+   - _Why:_ A finished action yesterday: পড়লে.
+7. Which word fills the blank? **সে তখন ভাত ___।**
+   - A) খাচ্ছিল _(khachchhilo)_  ✔
+   - B) খেল _(khelo)_
+   - C) খায় _(khay)_
+   - D) খাবে _(khabe)_
+   - _Why:_ In progress then: খাচ্ছিল.
+8. Which word fills the blank? **আমি তখন গান ___।**
+   - A) শুনছিলাম _(shunchhilam)_  ✔
+   - B) শুনলাম _(shunlam)_
+   - C) শুনেছিলাম _(shunechhilam)_
+   - D) শুনব _(shunbo)_
+   - _Why:_ In progress then: শুনছিলাম.
+9. Which word fills the blank? **আমি আগে ভাত ___।**
+   - A) খেয়েছিলাম _(kheyechhilam)_  ✔
+   - B) খেলাম _(khelam)_
+   - C) খাচ্ছিলাম _(khachchhilam)_
+   - D) খেতাম _(khetam)_
+   - _Why:_ Already finished before another event: খেয়েছিলাম.
+10. Which word fills the blank? **সে আগেই বইটা ___।**
+   - A) পড়েছিল _(porechhilo)_  ✔
+   - B) পড়ল _(porlo)_
+   - C) পড়ছিল _(porchhilo)_
+   - D) পড়ে _(pore)_
+   - _Why:_ 'Had already read': পড়েছিল.
+11. Which word fills the blank? **আমি ছোটবেলায় রোজ মাঠে ___।**
+   - A) খেলতাম _(kheltam)_  ✔
+   - B) খেললাম _(khellam)_
+   - C) খেলছিলাম _(khelchhilam)_
+   - D) খেলি _(kheli)_
+   - _Why:_ ছোটবেলায় + every day → used to: খেলতাম.
+12. Which word fills the blank? **ঠাকুমা আমাদের গল্প ___।**
+   - A) বলতেন _(bolten)_  ✔
+   - B) বললেন _(bollen)_
+   - C) বলছিলেন _(bolchhilen)_
+   - D) বলেন _(bolen)_
+   - _Why:_ 'Used to tell': বলতেন.
+13. Which word fills the blank? **তুমি রোজ কী ___?**
+   - A) খেতে _(khete)_  ✔
+   - B) খেলে _(khele)_
+   - C) খাচ্ছিলে _(khachchhile)_
+   - D) খাও _(khao)_
+   - _Why:_ 'What did you use to eat every day?': খেতে.
+14. Which word fills the blank? **আপনি কী ___?**
+   - A) বললেন _(bollen)_  ✔
+   - B) বলেন _(bolen)_
+   - C) বলছেন _(bolchhen)_
+   - D) বলবেন _(bolben)_
+   - _Why:_ A finished action: বললেন.
+15. I went to school yesterday.
+   - A) আমি গতকাল স্কুলে গেলাম। _(ami gotokal skule gelam.)_  ✔
+   - B) আমি গতকাল স্কুলে যাই। _(ami gotokal skule jai.)_
+   - C) আমি গতকাল স্কুলে যাচ্ছি। _(ami gotokal skule jachchhi.)_
+   - D) আমি গতকাল স্কুলে যাব। _(ami gotokal skule jabo.)_
+   - _Why:_ 'Went' (finished): গেলাম.
+16. I was eating rice then.
+   - A) আমি তখন ভাত খাচ্ছিলাম। _(ami tokhon bhat khachchhilam.)_  ✔
+   - B) আমি তখন ভাত খেলাম। _(ami tokhon bhat khelam.)_
+   - C) আমি তখন ভাত খেয়েছিলাম। _(ami tokhon bhat kheyechhilam.)_
+   - D) আমি তখন ভাত খেতাম। _(ami tokhon bhat khetam.)_
+   - _Why:_ 'Was eating' (in progress): খাচ্ছিলাম.
+17. I used to play in the field every day in my childhood.
+   - A) আমি ছোটবেলায় রোজ মাঠে খেলতাম। _(ami chhotobelay roj mathe kheltam.)_  ✔
+   - B) আমি ছোটবেলায় রোজ মাঠে খেললাম। _(ami chhotobelay roj mathe khellam.)_
+   - C) আমি ছোটবেলায় রোজ মাঠে খেলছিলাম। _(ami chhotobelay roj mathe khelchhilam.)_
+   - D) আমি ছোটবেলায় রোজ মাঠে খেলেছিলাম। _(ami chhotobelay roj mathe khelechhilam.)_
+   - _Why:_ 'Used to play': খেলতাম.
+18. You did not read the book yesterday.
+   - A) তুমি গতকাল বই পড়োনি। _(tumi gotokal boi poroni.)_  ✔
+   - B) তুমি গতকাল বই পড়ো না। _(tumi gotokal boi poro na.)_
+   - C) তুমি গতকাল বই পড়ছ না। _(tumi gotokal boi porchho na.)_
+   - D) তুমি গতকাল বই পড়বে না। _(tumi gotokal boi porbe na.)_
+   - _Why:_ Past negative: present form + নি: পড়োনি.
+19. 'When I came, he was sleeping.' Which verb forms?
+   - A) এলাম … ঘুমাচ্ছিল _(elam … ghumachchhilo)_  ✔
+   - B) আসছিলাম … ঘুমাল _(aschhilam … ghumalo)_
+   - C) আসব … ঘুমাচ্ছে _(asbo … ghumachchhe)_
+   - _Why:_ The short action takes the simple past (এলাম), the long action the past continuous (ঘুমাচ্ছিল).
+20. Which tense says 'it had already happened before another moment'?
+   - A) Simple past
+   - B) Past perfect  ✔
+   - C) Past habitual
+   - _Why:_ The past perfect looks back: -েছিল-.
+21. Which tense says 'it used to happen again and again'?
+   - A) Past habitual  ✔
+   - B) Simple past
+   - C) Past continuous
+   - _Why:_ The past habitual: -ত-.
+22. Which sentence is correct?
+   - A) গতকাল আমি বাজারে গেলাম। _(gotokal ami bajare gelam.)_  ✔
+   - B) গতকাল আমি বাজারে যাব। _(gotokal ami bajare jabo.)_
+   - C) গতকাল আমি বাজারে যাই। _(gotokal ami bajare jai.)_
+   - _Why:_ গতকাল (yesterday) needs the past.
+23. Which sentence is correct?
+   - A) সে আগেই চলে গিয়েছিল। _(she agei chole giyechhilo.)_  ✔
+   - B) সে আগেই চলে যাচ্ছিল। _(she agei chole jachchhilo.)_
+   - C) সে আগেই চলে যাব। _(she agei chole jabo.)_
+   - _Why:_ 'Had already left' is the past perfect.
+
+---
+
+# ভবিষ্যৎ কাল · Bhobishyot kal · The future tenses
+
+_The simple future, the future continuous, other ways to talk about what comes next, 'if … then', and 'has been doing for'._
+
+## Simple future: what will happen
+
+The simple future (সাধারণ ভবিষ্যৎ) is built with -ব-: root + ব / বি / বে / বেন / বে. It is used for what will happen, for promises and decisions, for predictions, and for polite requests (with আপনি as a question).
+
+**Simple future of twelve verbs**
+
+| Verb | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| করা (to do) _(kora)_ | করব _(korbo)_ | করবি _(korbi)_ | করবে _(korbe)_ | করবেন _(korben)_ | করবে _(korbe)_ |
+| বলা (to say / tell) _(bola)_ | বলব _(bolbo)_ | বলবি _(bolbi)_ | বলবে _(bolbe)_ | বলবেন _(bolben)_ | বলবে _(bolbe)_ |
+| দেখা (to see / look) _(dekha)_ | দেখব _(dekhbo)_ | দেখবি _(dekhbi)_ | দেখবে _(dekhbe)_ | দেখবেন _(dekhben)_ | দেখবে _(dekhbe)_ |
+| পড়া (to read / study) _(pora)_ | পড়ব _(porbo)_ | পড়বি _(porbi)_ | পড়বে _(porbe)_ | পড়বেন _(porben)_ | পড়বে _(porbe)_ |
+| খাওয়া (to eat) _(khaoya)_ | খাব _(khabo)_ | খাবি _(khabi)_ | খাবে _(khabe)_ | খাবেন _(khaben)_ | খাবে _(khabe)_ |
+| যাওয়া (to go) _(jaoya)_ | যাব _(jabo)_ | যাবি _(jabi)_ | যাবে _(jabe)_ | যাবেন _(jaben)_ | যাবে _(jabe)_ |
+| আসা (to come) _(asha)_ | আসব _(asbo)_ | আসবি _(asbi)_ | আসবে _(asbe)_ | আসবেন _(asben)_ | আসবে _(asbe)_ |
+| দেওয়া (to give) _(deoya)_ | দেব _(debo)_ | দিবি _(dibi)_ | দেবে _(debe)_ | দেবেন _(deben)_ | দেবে _(debe)_ |
+| নেওয়া (to take) _(neoya)_ | নেব _(nebo)_ | নিবি _(nibi)_ | নেবে _(nebe)_ | নেবেন _(neben)_ | নেবে _(nebe)_ |
+| লেখা (to write) _(lekha)_ | লিখব _(likhbo)_ | লিখবি _(likhbi)_ | লিখবে _(likhbe)_ | লিখবেন _(likhben)_ | লিখবে _(likhbe)_ |
+| শোনা (to hear / listen) _(shona)_ | শুনব _(shunbo)_ | শুনবি _(shunbi)_ | শুনবে _(shunbe)_ | শুনবেন _(shunben)_ | শুনবে _(shunbe)_ |
+| থাকা (to stay / live) _(thaka)_ | থাকব _(thakbo)_ | থাকবি _(thakbi)_ | থাকবে _(thakbe)_ | থাকবেন _(thakben)_ | থাকবে _(thakbe)_ |
+
+**Will**
+
+- আমি কাল বাজারে যাব। _(ami kal bajare jabo.)_: I will go to the market tomorrow.
+- তুমি কখন আসবে? _(tumi kokhon asbe?)_: When will you come?
+- সে কাল ফোন করবে। _(she kal phon korbe.)_: He / she will phone tomorrow.
+- মা ভাত রান্না করবেন। _(ma bhat ranna korben.)_: Mother will cook rice.
+- আমরা আগামীকাল সিনেমা দেখব। _(amra agamikal sinema dekhbo.)_: We will see a film tomorrow.
+- আপনি কী খাবেন? _(apni ki khaben?)_: What will you eat?
+- আমি তোমাকে চিঠি লিখব। _(ami tomake chithi likhbo.)_: I will write you a letter.
+- কাল বৃষ্টি হবে। _(kal brishti hobe.)_: It will rain tomorrow.
+- তুমি কি আমাকে সাহায্য করবে? _(tumi ki amake shahajyo korbe?)_: Will you help me?
+
+**Negatives and questions**
+
+- আমি কাল আসব না। _(ami kal asbo na.)_: I will not come tomorrow.
+- সে ভাত খাবে না। _(she bhat khabe na.)_: He / she will not eat rice.
+- তুমি কি যাবে? _(tumi ki jabe?)_: Will you go?
+- আমরা আগামীকাল স্কুলে যাব না। _(amra agamikal skule jabo na.)_: We will not go to school tomorrow.
+
+**Please**
+
+- একটু জল দেবেন? _(ektu jol deben?)_: Will you give me a little water? (polite)
+- আমাকে একটু সাহায্য করবেন? _(amake ektu shahajyo korben?)_: Will you help me a little? (polite)
+- এখানে একটু বসবেন? _(ekhane ektu bosben?)_: Will you sit here a little? (polite)
+
+## Future continuous: will be doing
+
+The future continuous (ঘটমান ভবিষ্যৎ) says what will be in progress at a time in the future. It is built from the -তে form plus থাকব: root + তে থাকব / থাকবি / থাকবে / থাকবেন / থাকবে. It is found in textbooks and in careful writing. In everyday speech people more often use the simple future or say 'I will be doing' with a different word order.
+
+**Will be doing**
+
+- আমি কাল সকালে বই পড়তে থাকব। _(ami kal shokale boi porte thakbo.)_: I will be reading a book tomorrow morning.
+- সে সন্ধ্যায় কাজ করতে থাকবে। _(she shondhyay kaj korte thakbe.)_: He / she will be working in the evening.
+- আমরা ওই সময় বাড়িতে থাকতে থাকব। _(amra oi shomoy barite thakte thakbo.)_: We will be staying at home at that time.
+- তুমি তখন ঘুমাতে থাকবে। _(tumi tokhon ghumate thakbe.)_: You will be sleeping then.
+
+> **Note:** Say 'কাল সকালে আমি বই পড়ব' (I will read a book tomorrow morning) in conversation. Use the continuous form when you want to stress that the action will still be going on.
+
+## Other ways to talk about the future
+
+Bengali has several everyday ways to speak about the future besides the simple future tense.
+
+## If … then
+
+For a possible event in the future, the 'if' part takes the -লে form and the 'then' part takes the future tense: যদি তুমি এসো আমি যাব, or simply তুমি এলে আমি যাব. The word যদি (if) may be added, and তাহলে (then) can start the second part.
+
+**Possible conditions**
+
+- তুমি এলে আমি খুশি হব। _(tumi ele ami khushi hobo.)_: If you come, I will be happy.
+- বৃষ্টি হলে আমরা যাব না। _(brishti hole amra jabo na.)_: If it rains, we will not go.
+- যদি তুমি পড়ো তাহলে পাশ করবে। _(jodi tumi poro tahole pash korbe.)_: If you study, then you will pass.
+- আপনি বললে আমি করে দেব। _(apni bolle ami kore debo.)_: If you ask, I will do it for you.
+- টাকা পেলে আমি বাড়ি কিনব। _(taka pele ami bari kinbo.)_: If I get money, I will buy a house.
+- ঠান্ডা লাগলে জামা পরো। _(thanda lagle jama poro.)_: If you feel cold, put on a shirt.
+- সময় থাকলে আমি আসব। _(shomoy thakle ami ashbo.)_: If I have time, I will come.
+- তুমি না এলে আমি যাব না। _(tumi na ele ami jabo na.)_: If you do not come, I will not go.
+
+## 'Has been doing': for and since
+
+English says 'I have been learning Bengali for two years'. Bengali does not use a special tense for this. It uses the present continuous with ধরে (for) or থেকে (since). The action is still going on, so the verb stays in the continuous.
+
+| Word | Meaning | Used with |
+|---|---|---|
+| ধরে _(dhore)_ | for (a period) | a length of time: দুই বছর ধরে |
+| থেকে _(theke)_ | since | a starting point: সকাল থেকে |
+
+**For and since**
+
+- আমি দুই বছর ধরে বাংলা শিখছি। _(ami dui bochhor dhore bangla shikhchhi.)_: I have been learning Bengali for two years.
+- সে সকাল থেকে কাজ করছে। _(she shokal theke kaj korchhe.)_: He / she has been working since morning.
+- আমরা এক ঘণ্টা ধরে অপেক্ষা করছি। _(amra ek ghonta dhore opekkha korchhi.)_: We have been waiting for an hour.
+- তিন দিন ধরে বৃষ্টি পড়ছে। _(tin din dhore brishti porchhe.)_: It has been raining for three days.
+- আমি পাঁচ বছর ধরে কলকাতায় আছি। _(ami panch bochhor dhore kolkatay achhi.)_: I have been in Kolkata for five years.
+- তুমি কত দিন ধরে বাংলা শিখছ? _(tumi koto din dhore bangla shikhchho?)_: How long have you been learning Bengali?
+- আমি সকাল থেকে কিছু খাইনি। _(ami shokal theke kichhu khaini.)_: I have not eaten anything since morning.
+- সে গতকাল থেকে আসেনি। _(she gotokal theke asheni.)_: He / she has not come since yesterday.
+- আমি তখন দুই ঘণ্টা ধরে পড়ছিলাম। _(ami tokhon dui ghonta dhore porchhilam.)_: I had been reading for two hours then.
+
+> **Note:** The same pattern works in the past: add ছিলাম instead of ছি, as in the last example.
+
+## Practice questions
+
+1. Which sign marks the future?
+   - A) -ব-  ✔
+   - B) -ছ-
+   - C) -ল-
+   - _Why:_ -ব- (করব, যাব).
+2. Which word fills the blank? **আমি কাল বাজারে ___।**
+   - A) যাব _(jabo)_  ✔
+   - B) যাই _(jai)_
+   - C) গেলাম _(gelam)_
+   - D) যাচ্ছি _(jachchhi)_
+   - _Why:_ কাল + future: যাব.
+3. Which word fills the blank? **তুমি কখন ___?**
+   - A) আসবে _(asbe)_  ✔
+   - B) আসো _(asho)_
+   - C) এলে _(ele)_
+   - D) এসেছ _(eshechho)_
+   - _Why:_ A question about the future: আসবে.
+4. Which word fills the blank? **সে কাল ফোন ___।**
+   - A) করবে _(korbe)_  ✔
+   - B) করে _(kore)_
+   - C) করল _(korlo)_
+   - D) করেছে _(korechhe)_
+   - _Why:_ কাল + future: করবে.
+5. Which word fills the blank? **আপনি কী ___?**
+   - A) খাবেন _(khaben)_  ✔
+   - B) খান _(khan)_
+   - C) খেলেন _(khelen)_
+   - D) খাচ্ছেন _(khachchhen)_
+   - _Why:_ A question about what you will eat: খাবেন.
+6. Which word fills the blank? **আমরা আগামীকাল সিনেমা ___।**
+   - A) দেখব _(dekhbo)_  ✔
+   - B) দেখি _(dekhi)_
+   - C) দেখলাম _(dekhlam)_
+   - D) দেখেছি _(dekhechhi)_
+   - _Why:_ আগামীকাল (tomorrow) + future: দেখব.
+7. Which word fills the blank? **আমি তোমাকে চিঠি ___।**
+   - A) লিখব _(likhbo)_  ✔
+   - B) লিখি _(likhi)_
+   - C) লিখলাম _(likhlam)_
+   - D) লিখেছি _(likhechhi)_
+   - _Why:_ 'Will write': লিখব.
+8. I will go to the market tomorrow.
+   - A) আমি কাল বাজারে যাব। _(ami kal bajare jabo.)_  ✔
+   - B) আমি কাল বাজারে গেলাম। _(ami kal bajare gelam.)_
+   - C) আমি কাল বাজারে যাই। _(ami kal bajare jai.)_
+   - D) আমি কাল বাজারে গিয়েছি। _(ami kal bajare giyechhi.)_
+   - _Why:_ 'Will go': যাব.
+9. He / she will not come tomorrow.
+   - A) সে কাল আসবে না। _(she kal asbe na.)_  ✔
+   - B) সে কাল আসে না। _(she kal ashe na.)_
+   - C) সে কাল আসেনি। _(she kal asheni.)_
+   - D) সে কাল আসছে না। _(she kal aschhe na.)_
+   - _Why:_ Future negative: আসবে না.
+10. How do you say 'I want to learn Bengali'?
+   - A) আমি বাংলা শিখতে চাই। _(ami bangla shikhte chai.)_  ✔
+   - B) আমি বাংলা শিখি চাই। _(ami bangla shikhi chai.)_
+   - C) আমি বাংলা শিখলে চাই। _(ami bangla shikhle chai.)_
+   - _Why:_ Wanting uses the -তে form with চাই.
+11. How do you say 'I will have to work tomorrow'?
+   - A) আমাকে কাল কাজ করতে হবে। _(amake kal kaj korte hobe.)_  ✔
+   - B) আমি কাল কাজ করতে হবে। _(ami kal kaj korte hobe.)_
+   - C) আমাকে কাল কাজ করে হবে। _(amake kal kaj kore hobe.)_
+   - _Why:_ 'Have to' is -তে হবে, and the person takes the object form: আমাকে.
+12. How do you say 'I have been learning Bengali for two years'?
+   - A) আমি দুই বছর ধরে বাংলা শিখছি। _(ami dui bochhor dhore bangla shikhchhi.)_  ✔
+   - B) আমি দুই বছর ধরে বাংলা শিখেছি। _(ami dui bochhor dhore bangla shikhechhi.)_
+   - C) আমি দুই বছর থেকে বাংলা শিখব। _(ami dui bochhor theke bangla shikhbo.)_
+   - _Why:_ 'Has been doing' = present continuous with ধরে.
+13. Which word means 'since'?
+   - A) থেকে _(theke)_  ✔
+   - B) ধরে _(dhore)_
+   - C) জন্য _(jonyo)_
+   - _Why:_ থেকে marks a starting point: সকাল থেকে.
+14. Which word fills the blank? **তুমি ___ আমি খুশি হব।**
+   - A) এলে _(ele)_  ✔
+   - B) এসে _(eshe)_
+   - C) আসব _(ashbo)_
+   - _Why:_ The 'if' part takes -লে: এলে.
+15. Which word fills the blank? **বৃষ্টি ___ আমরা যাব না।**
+   - A) হলে _(hole)_  ✔
+   - B) হয় _(hoy)_
+   - C) হবে _(hobe)_
+   - _Why:_ 'If it rains': হলে.
+16. Which word fills the blank? **সে সকাল ___ কাজ করছে।**
+   - A) থেকে _(theke)_  ✔
+   - B) ধরে _(dhore)_
+   - C) জন্য _(jonyo)_
+   - _Why:_ 'Since morning': সকাল থেকে.
+17. Which word fills the blank? **আমরা এক ঘণ্টা ___ অপেক্ষা করছি।**
+   - A) ধরে _(dhore)_  ✔
+   - B) থেকে _(theke)_
+   - C) জন্য _(jonyo)_
+   - _Why:_ 'For an hour': এক ঘণ্টা ধরে.
+18. Which sentence is correct?
+   - A) কাল আমি আসব। _(kal ami ashbo.)_  ✔
+   - B) কাল আমি এসেছি। _(kal ami eshechhi.)_
+   - C) কাল আমি এলাম। _(kal ami elam.)_
+   - _Why:_ For tomorrow, use the future.
+19. Which sentence is correct?
+   - A) আমি কাল কলকাতায় যাচ্ছি। _(ami kal kolkatay jachchhi.)_  ✔
+   - B) আমি কাল কলকাতায় গেলাম। _(ami kal kolkatay gelam.)_
+   - C) আমি কাল কলকাতায় গিয়েছিলাম। _(ami kal kolkatay giyechhilam.)_
+   - _Why:_ A settled plan for tomorrow can use the present continuous.
+
+---
+
+# কাল-তালিকা · Kal-talika · Verb tables: every tense
+
+_Full tables for nineteen common verbs: every tense, every person. Use them to check a form or to learn a verb thoroughly._
+
+## How to use these tables
+
+Each table has the nine tenses in rows and the five person endings in columns: আমি, তুই, তুমি, আপনি / তিনি, সে. For the plural pronouns, use the same form as the singular: আমরা takes the আমি form, তোমরা the তুমি form, আপনারা the আপনি form, তারা the সে form.
+
+> **Note:** Regular verbs follow the pattern in the Tenses lesson, so you can build forms yourself. The irregular verbs খাওয়া, যাওয়া, দেওয়া, নেওয়া, আসা, লেখা, শোনা and ঘুমানো change their root in some tenses, so check them in the table.
+
+## করা, বলা, দেখা, শোনা
+
+Four very common verbs.
+
+**করা (kora), to do**
 
 | Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
 |---|---|---|---|---|---|
 | সাধারণ বর্তমান _(sadharon bortoman)_ | করি _(kori)_ | করিস _(koris)_ | করো _(koro)_ | করেন _(koren)_ | করে _(kore)_ |
 | ঘটমান বর্তমান _(ghotoman bortoman)_ | করছি _(korchhi)_ | করছিস _(korchhis)_ | করছ _(korchho)_ | করছেন _(korchhen)_ | করছে _(korchhe)_ |
 | পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | করেছি _(korechhi)_ | করেছিস _(korechhis)_ | করেছ _(korechho)_ | করেছেন _(korechhen)_ | করেছে _(korechhe)_ |
-
-**করা: past**
-
-| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
-|---|---|---|---|---|---|
 | সাধারণ অতীত _(sadharon otit)_ | করলাম _(korlam)_ | করলি _(korli)_ | করলে _(korle)_ | করলেন _(korlen)_ | করল _(korlo)_ |
 | ঘটমান অতীত _(ghotoman otit)_ | করছিলাম _(korchhilam)_ | করছিলি _(korchhili)_ | করছিলে _(korchhile)_ | করছিলেন _(korchhilen)_ | করছিল _(korchhilo)_ |
 | পুরাঘটিত অতীত _(puraghotito otit)_ | করেছিলাম _(korechhilam)_ | করেছিলি _(korechhili)_ | করেছিলে _(korechhile)_ | করেছিলেন _(korechhilen)_ | করেছিল _(korechhilo)_ |
 | নিত্যবৃত্ত অতীত _(nityobritto otit)_ | করতাম _(kortam)_ | করতিস _(kortis)_ | করতে _(korte)_ | করতেন _(korten)_ | করত _(korto)_ |
-
-**করা: future**
-
-| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
-|---|---|---|---|---|---|
 | সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | করব _(korbo)_ | করবি _(korbi)_ | করবে _(korbe)_ | করবেন _(korben)_ | করবে _(korbe)_ |
 | ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | করতে থাকব _(korte thakbo)_ | করতে থাকবি _(korte thakbi)_ | করতে থাকবে _(korte thakbe)_ | করতে থাকবেন _(korte thakben)_ | করতে থাকবে _(korte thakbe)_ |
 
-## More verbs
-
-Most verbs follow the same endings. A few change the root: খাওয়া, যাওয়া, দেওয়া and আসা change in some tenses. Learn those as they come.
-
-**বলা (bola), to say**
+**বলা (bola), to say / tell**
 
 | Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
 |---|---|---|---|---|---|
@@ -428,7 +2211,7 @@ Most verbs follow the same endings. A few change the root: খাওয়া, �
 | সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | বলব _(bolbo)_ | বলবি _(bolbi)_ | বলবে _(bolbe)_ | বলবেন _(bolben)_ | বলবে _(bolbe)_ |
 | ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | বলতে থাকব _(bolte thakbo)_ | বলতে থাকবি _(bolte thakbi)_ | বলতে থাকবে _(bolte thakbe)_ | বলতে থাকবেন _(bolte thakben)_ | বলতে থাকবে _(bolte thakbe)_ |
 
-**দেখা (dekha), to see**
+**দেখা (dekha), to see / look**
 
 | Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
 |---|---|---|---|---|---|
@@ -441,6 +2224,158 @@ Most verbs follow the same endings. A few change the root: খাওয়া, �
 | নিত্যবৃত্ত অতীত _(nityobritto otit)_ | দেখতাম _(dekhtam)_ | দেখতিস _(dekhtis)_ | দেখতে _(dekhte)_ | দেখতেন _(dekhten)_ | দেখত _(dekhto)_ |
 | সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | দেখব _(dekhbo)_ | দেখবি _(dekhbi)_ | দেখবে _(dekhbe)_ | দেখবেন _(dekhben)_ | দেখবে _(dekhbe)_ |
 | ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | দেখতে থাকব _(dekhte thakbo)_ | দেখতে থাকবি _(dekhte thakbi)_ | দেখতে থাকবে _(dekhte thakbe)_ | দেখতে থাকবেন _(dekhte thakben)_ | দেখতে থাকবে _(dekhte thakbe)_ |
+
+**শোনা (shona), to hear / listen**
+
+| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| সাধারণ বর্তমান _(sadharon bortoman)_ | শুনি _(shuni)_ | শুনিস _(shunis)_ | শোনো _(shono)_ | শোনেন _(shonen)_ | শোনে _(shone)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | শুনছি _(shunchhi)_ | শুনছিস _(shunchhis)_ | শুনছ _(shunchho)_ | শুনছেন _(shunchhen)_ | শুনছে _(shunchhe)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | শুনেছি _(shunechhi)_ | শুনেছিস _(shunechhis)_ | শুনেছ _(shunechho)_ | শুনেছেন _(shunechhen)_ | শুনেছে _(shunechhe)_ |
+| সাধারণ অতীত _(sadharon otit)_ | শুনলাম _(shunlam)_ | শুনলি _(shunli)_ | শুনলে _(shunle)_ | শুনলেন _(shunlen)_ | শুনল _(shunlo)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | শুনছিলাম _(shunchhilam)_ | শুনছিলি _(shunchhili)_ | শুনছিলে _(shunchhile)_ | শুনছিলেন _(shunchhilen)_ | শুনছিল _(shunchhilo)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | শুনেছিলাম _(shunechhilam)_ | শুনেছিলি _(shunechhili)_ | শুনেছিলে _(shunechhile)_ | শুনেছিলেন _(shunechhilen)_ | শুনেছিল _(shunechhilo)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | শুনতাম _(shuntam)_ | শুনতিস _(shuntis)_ | শুনতে _(shunte)_ | শুনতেন _(shunten)_ | শুনত _(shunto)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | শুনব _(shunbo)_ | শুনবি _(shunbi)_ | শুনবে _(shunbe)_ | শুনবেন _(shunben)_ | শুনবে _(shunbe)_ |
+| ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | শুনতে থাকব _(shunte thakbo)_ | শুনতে থাকবি _(shunte thakbi)_ | শুনতে থাকবে _(shunte thakbe)_ | শুনতে থাকবেন _(shunte thakben)_ | শুনতে থাকবে _(shunte thakbe)_ |
+
+## পড়া, লেখা, থাকা, বসা
+
+Verbs for study and for staying.
+
+**পড়া (pora), to read / study**
+
+| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| সাধারণ বর্তমান _(sadharon bortoman)_ | পড়ি _(pori)_ | পড়িস _(poris)_ | পড়ো _(poro)_ | পড়েন _(poren)_ | পড়ে _(pore)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | পড়ছি _(porchhi)_ | পড়ছিস _(porchhis)_ | পড়ছ _(porchho)_ | পড়ছেন _(porchhen)_ | পড়ছে _(porchhe)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | পড়েছি _(porechhi)_ | পড়েছিস _(porechhis)_ | পড়েছ _(porechho)_ | পড়েছেন _(porechhen)_ | পড়েছে _(porechhe)_ |
+| সাধারণ অতীত _(sadharon otit)_ | পড়লাম _(porlam)_ | পড়লি _(porli)_ | পড়লে _(porle)_ | পড়লেন _(porlen)_ | পড়ল _(porlo)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | পড়ছিলাম _(porchhilam)_ | পড়ছিলি _(porchhili)_ | পড়ছিলে _(porchhile)_ | পড়ছিলেন _(porchhilen)_ | পড়ছিল _(porchhilo)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | পড়েছিলাম _(porechhilam)_ | পড়েছিলি _(porechhili)_ | পড়েছিলে _(porechhile)_ | পড়েছিলেন _(porechhilen)_ | পড়েছিল _(porechhilo)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | পড়তাম _(portam)_ | পড়তিস _(portis)_ | পড়তে _(porte)_ | পড়তেন _(porten)_ | পড়ত _(porto)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | পড়ব _(porbo)_ | পড়বি _(porbi)_ | পড়বে _(porbe)_ | পড়বেন _(porben)_ | পড়বে _(porbe)_ |
+| ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | পড়তে থাকব _(porte thakbo)_ | পড়তে থাকবি _(porte thakbi)_ | পড়তে থাকবে _(porte thakbe)_ | পড়তে থাকবেন _(porte thakben)_ | পড়তে থাকবে _(porte thakbe)_ |
+
+**লেখা (lekha), to write**
+
+| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| সাধারণ বর্তমান _(sadharon bortoman)_ | লিখি _(likhi)_ | লিখিস _(likhis)_ | লেখো _(lekho)_ | লেখেন _(lekhen)_ | লেখে _(lekhe)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | লিখছি _(likhchhi)_ | লিখছিস _(likhchhis)_ | লিখছ _(likhchho)_ | লিখছেন _(likhchhen)_ | লিখছে _(likhchhe)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | লিখেছি _(likhechhi)_ | লিখেছিস _(likhechhis)_ | লিখেছ _(likhechho)_ | লিখেছেন _(likhechhen)_ | লিখেছে _(likhechhe)_ |
+| সাধারণ অতীত _(sadharon otit)_ | লিখলাম _(likhlam)_ | লিখলি _(likhli)_ | লিখলে _(likhle)_ | লিখলেন _(likhlen)_ | লিখল _(likhlo)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | লিখছিলাম _(likhchhilam)_ | লিখছিলি _(likhchhili)_ | লিখছিলে _(likhchhile)_ | লিখছিলেন _(likhchhilen)_ | লিখছিল _(likhchhilo)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | লিখেছিলাম _(likhechhilam)_ | লিখেছিলি _(likhechhili)_ | লিখেছিলে _(likhechhile)_ | লিখেছিলেন _(likhechhilen)_ | লিখেছিল _(likhechhilo)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | লিখতাম _(likhtam)_ | লিখতিস _(likhtis)_ | লিখতে _(likhte)_ | লিখতেন _(likhten)_ | লিখত _(likhto)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | লিখব _(likhbo)_ | লিখবি _(likhbi)_ | লিখবে _(likhbe)_ | লিখবেন _(likhben)_ | লিখবে _(likhbe)_ |
+| ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | লিখতে থাকব _(likhte thakbo)_ | লিখতে থাকবি _(likhte thakbi)_ | লিখতে থাকবে _(likhte thakbe)_ | লিখতে থাকবেন _(likhte thakben)_ | লিখতে থাকবে _(likhte thakbe)_ |
+
+**থাকা (thaka), to stay / live**
+
+| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| সাধারণ বর্তমান _(sadharon bortoman)_ | থাকি _(thaki)_ | থাকিস _(thakis)_ | থাকো _(thako)_ | থাকেন _(thaken)_ | থাকে _(thake)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | থাকছি _(thakchhi)_ | থাকছিস _(thakchhis)_ | থাকছ _(thakchho)_ | থাকছেন _(thakchhen)_ | থাকছে _(thakchhe)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | থাকেছি _(thakechhi)_ | থাকেছিস _(thakechhis)_ | থাকেছ _(thakechho)_ | থাকেছেন _(thakechhen)_ | থাকেছে _(thakechhe)_ |
+| সাধারণ অতীত _(sadharon otit)_ | থাকলাম _(thaklam)_ | থাকলি _(thakli)_ | থাকলে _(thakle)_ | থাকলেন _(thaklen)_ | থাকল _(thaklo)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | থাকছিলাম _(thakchhilam)_ | থাকছিলি _(thakchhili)_ | থাকছিলে _(thakchhile)_ | থাকছিলেন _(thakchhilen)_ | থাকছিল _(thakchhilo)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | থাকেছিলাম _(thakechhilam)_ | থাকেছিলি _(thakechhili)_ | থাকেছিলে _(thakechhile)_ | থাকেছিলেন _(thakechhilen)_ | থাকেছিল _(thakechhilo)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | থাকতাম _(thaktam)_ | থাকতিস _(thaktis)_ | থাকতে _(thakte)_ | থাকতেন _(thakten)_ | থাকত _(thakto)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | থাকব _(thakbo)_ | থাকবি _(thakbi)_ | থাকবে _(thakbe)_ | থাকবেন _(thakben)_ | থাকবে _(thakbe)_ |
+| ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | থাকতে থাকব _(thakte thakbo)_ | থাকতে থাকবি _(thakte thakbi)_ | থাকতে থাকবে _(thakte thakbe)_ | থাকতে থাকবেন _(thakte thakben)_ | থাকতে থাকবে _(thakte thakbe)_ |
+
+**বসা (bosha), to sit**
+
+| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| সাধারণ বর্তমান _(sadharon bortoman)_ | বসি _(boshi)_ | বসিস _(boshis)_ | বসো _(bosho)_ | বসেন _(boshen)_ | বসে _(boshe)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | বসছি _(boshchhi)_ | বসছিস _(boshchhis)_ | বসছ _(boshchho)_ | বসছেন _(boshchhen)_ | বসছে _(boshchhe)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | বসেছি _(boshechhi)_ | বসেছিস _(boshechhis)_ | বসেছ _(boshechho)_ | বসেছেন _(boshechhen)_ | বসেছে _(boshechhe)_ |
+| সাধারণ অতীত _(sadharon otit)_ | বসলাম _(boshlam)_ | বসলি _(boshli)_ | বসলে _(boshle)_ | বসলেন _(boshlen)_ | বসল _(boshlo)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | বসছিলাম _(boshchhilam)_ | বসছিলি _(boshchhili)_ | বসছিলে _(boshchhile)_ | বসছিলেন _(boshchhilen)_ | বসছিল _(boshchhilo)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | বসেছিলাম _(boshechhilam)_ | বসেছিলি _(boshechhili)_ | বসেছিলে _(boshechhile)_ | বসেছিলেন _(boshechhilen)_ | বসেছিল _(boshechhilo)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | বসতাম _(boshtam)_ | বসতিস _(boshtis)_ | বসতে _(boshte)_ | বসতেন _(boshten)_ | বসত _(boshto)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | বসব _(boshbo)_ | বসবি _(boshbi)_ | বসবে _(boshbe)_ | বসবেন _(boshben)_ | বসবে _(boshbe)_ |
+| ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | বসতে থাকব _(boshte thakbo)_ | বসতে থাকবি _(boshte thakbi)_ | বসতে থাকবে _(boshte thakbe)_ | বসতে থাকবেন _(boshte thakben)_ | বসতে থাকবে _(boshte thakbe)_ |
+
+## খেলা, হাঁটা, ধরা, রাখা, চলা
+
+Regular verbs for movement and handling.
+
+**খেলা (khela), to play**
+
+| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| সাধারণ বর্তমান _(sadharon bortoman)_ | খেলি _(kheli)_ | খেলিস _(khelis)_ | খেলো _(khelo)_ | খেলেন _(khelen)_ | খেলে _(khele)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | খেলছি _(khelchhi)_ | খেলছিস _(khelchhis)_ | খেলছ _(khelchho)_ | খেলছেন _(khelchhen)_ | খেলছে _(khelchhe)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | খেলেছি _(khelechhi)_ | খেলেছিস _(khelechhis)_ | খেলেছ _(khelechho)_ | খেলেছেন _(khelechhen)_ | খেলেছে _(khelechhe)_ |
+| সাধারণ অতীত _(sadharon otit)_ | খেললাম _(khellam)_ | খেললি _(khelli)_ | খেললে _(khelle)_ | খেললেন _(khellen)_ | খেলল _(khello)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | খেলছিলাম _(khelchhilam)_ | খেলছিলি _(khelchhili)_ | খেলছিলে _(khelchhile)_ | খেলছিলেন _(khelchhilen)_ | খেলছিল _(khelchhilo)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | খেলেছিলাম _(khelechhilam)_ | খেলেছিলি _(khelechhili)_ | খেলেছিলে _(khelechhile)_ | খেলেছিলেন _(khelechhilen)_ | খেলেছিল _(khelechhilo)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | খেলতাম _(kheltam)_ | খেলতিস _(kheltis)_ | খেলতে _(khelte)_ | খেলতেন _(khelten)_ | খেলত _(khelto)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | খেলব _(khelbo)_ | খেলবি _(khelbi)_ | খেলবে _(khelbe)_ | খেলবেন _(khelben)_ | খেলবে _(khelbe)_ |
+| ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | খেলতে থাকব _(khelte thakbo)_ | খেলতে থাকবি _(khelte thakbi)_ | খেলতে থাকবে _(khelte thakbe)_ | খেলতে থাকবেন _(khelte thakben)_ | খেলতে থাকবে _(khelte thakbe)_ |
+
+**হাঁটা (hata), to walk**
+
+| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| সাধারণ বর্তমান _(sadharon bortoman)_ | হাঁটি _(hati)_ | হাঁটিস _(hatis)_ | হাঁটো _(hato)_ | হাঁটেন _(haten)_ | হাঁটে _(hate)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | হাঁটছি _(hatchhi)_ | হাঁটছিস _(hatchhis)_ | হাঁটছ _(hatchho)_ | হাঁটছেন _(hatchhen)_ | হাঁটছে _(hatchhe)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | হাঁটেছি _(hatechhi)_ | হাঁটেছিস _(hatechhis)_ | হাঁটেছ _(hatechho)_ | হাঁটেছেন _(hatechhen)_ | হাঁটেছে _(hatechhe)_ |
+| সাধারণ অতীত _(sadharon otit)_ | হাঁটলাম _(hatlam)_ | হাঁটলি _(hatli)_ | হাঁটলে _(hatle)_ | হাঁটলেন _(hatlen)_ | হাঁটল _(hatlo)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | হাঁটছিলাম _(hatchhilam)_ | হাঁটছিলি _(hatchhili)_ | হাঁটছিলে _(hatchhile)_ | হাঁটছিলেন _(hatchhilen)_ | হাঁটছিল _(hatchhilo)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | হাঁটেছিলাম _(hatechhilam)_ | হাঁটেছিলি _(hatechhili)_ | হাঁটেছিলে _(hatechhile)_ | হাঁটেছিলেন _(hatechhilen)_ | হাঁটেছিল _(hatechhilo)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | হাঁটতাম _(hattam)_ | হাঁটতিস _(hattis)_ | হাঁটতে _(hatte)_ | হাঁটতেন _(hatten)_ | হাঁটত _(hatto)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | হাঁটব _(hatbo)_ | হাঁটবি _(hatbi)_ | হাঁটবে _(hatbe)_ | হাঁটবেন _(hatben)_ | হাঁটবে _(hatbe)_ |
+| ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | হাঁটতে থাকব _(hatte thakbo)_ | হাঁটতে থাকবি _(hatte thakbi)_ | হাঁটতে থাকবে _(hatte thakbe)_ | হাঁটতে থাকবেন _(hatte thakben)_ | হাঁটতে থাকবে _(hatte thakbe)_ |
+
+**ধরা (dhora), to hold / catch**
+
+| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| সাধারণ বর্তমান _(sadharon bortoman)_ | ধরি _(dhori)_ | ধরিস _(dhoris)_ | ধরো _(dhoro)_ | ধরেন _(dhoren)_ | ধরে _(dhore)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | ধরছি _(dhorchhi)_ | ধরছিস _(dhorchhis)_ | ধরছ _(dhorchho)_ | ধরছেন _(dhorchhen)_ | ধরছে _(dhorchhe)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | ধরেছি _(dhorechhi)_ | ধরেছিস _(dhorechhis)_ | ধরেছ _(dhorechho)_ | ধরেছেন _(dhorechhen)_ | ধরেছে _(dhorechhe)_ |
+| সাধারণ অতীত _(sadharon otit)_ | ধরলাম _(dhorlam)_ | ধরলি _(dhorli)_ | ধরলে _(dhorle)_ | ধরলেন _(dhorlen)_ | ধরল _(dhorlo)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | ধরছিলাম _(dhorchhilam)_ | ধরছিলি _(dhorchhili)_ | ধরছিলে _(dhorchhile)_ | ধরছিলেন _(dhorchhilen)_ | ধরছিল _(dhorchhilo)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | ধরেছিলাম _(dhorechhilam)_ | ধরেছিলি _(dhorechhili)_ | ধরেছিলে _(dhorechhile)_ | ধরেছিলেন _(dhorechhilen)_ | ধরেছিল _(dhorechhilo)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | ধরতাম _(dhortam)_ | ধরতিস _(dhortis)_ | ধরতে _(dhorte)_ | ধরতেন _(dhorten)_ | ধরত _(dhorto)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | ধরব _(dhorbo)_ | ধরবি _(dhorbi)_ | ধরবে _(dhorbe)_ | ধরবেন _(dhorben)_ | ধরবে _(dhorbe)_ |
+| ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | ধরতে থাকব _(dhorte thakbo)_ | ধরতে থাকবি _(dhorte thakbi)_ | ধরতে থাকবে _(dhorte thakbe)_ | ধরতে থাকবেন _(dhorte thakben)_ | ধরতে থাকবে _(dhorte thakbe)_ |
+
+**রাখা (rakha), to put / keep**
+
+| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| সাধারণ বর্তমান _(sadharon bortoman)_ | রাখি _(rakhi)_ | রাখিস _(rakhis)_ | রাখো _(rakho)_ | রাখেন _(rakhen)_ | রাখে _(rakhe)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | রাখছি _(rakhchhi)_ | রাখছিস _(rakhchhis)_ | রাখছ _(rakhchho)_ | রাখছেন _(rakhchhen)_ | রাখছে _(rakhchhe)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | রাখেছি _(rakhechhi)_ | রাখেছিস _(rakhechhis)_ | রাখেছ _(rakhechho)_ | রাখেছেন _(rakhechhen)_ | রাখেছে _(rakhechhe)_ |
+| সাধারণ অতীত _(sadharon otit)_ | রাখলাম _(rakhlam)_ | রাখলি _(rakhli)_ | রাখলে _(rakhle)_ | রাখলেন _(rakhlen)_ | রাখল _(rakhlo)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | রাখছিলাম _(rakhchhilam)_ | রাখছিলি _(rakhchhili)_ | রাখছিলে _(rakhchhile)_ | রাখছিলেন _(rakhchhilen)_ | রাখছিল _(rakhchhilo)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | রাখেছিলাম _(rakhechhilam)_ | রাখেছিলি _(rakhechhili)_ | রাখেছিলে _(rakhechhile)_ | রাখেছিলেন _(rakhechhilen)_ | রাখেছিল _(rakhechhilo)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | রাখতাম _(rakhtam)_ | রাখতিস _(rakhtis)_ | রাখতে _(rakhte)_ | রাখতেন _(rakhten)_ | রাখত _(rakhto)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | রাখব _(rakhbo)_ | রাখবি _(rakhbi)_ | রাখবে _(rakhbe)_ | রাখবেন _(rakhben)_ | রাখবে _(rakhbe)_ |
+| ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | রাখতে থাকব _(rakhte thakbo)_ | রাখতে থাকবি _(rakhte thakbi)_ | রাখতে থাকবে _(rakhte thakbe)_ | রাখতে থাকবেন _(rakhte thakben)_ | রাখতে থাকবে _(rakhte thakbe)_ |
+
+**চলা (chola), to move / go along**
+
+| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| সাধারণ বর্তমান _(sadharon bortoman)_ | চলি _(choli)_ | চলিস _(cholis)_ | চলো _(cholo)_ | চলেন _(cholen)_ | চলে _(chole)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | চলছি _(cholchhi)_ | চলছিস _(cholchhis)_ | চলছ _(cholchho)_ | চলছেন _(cholchhen)_ | চলছে _(cholchhe)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | চলেছি _(cholechhi)_ | চলেছিস _(cholechhis)_ | চলেছ _(cholechho)_ | চলেছেন _(cholechhen)_ | চলেছে _(cholechhe)_ |
+| সাধারণ অতীত _(sadharon otit)_ | চললাম _(chollam)_ | চললি _(cholli)_ | চললে _(cholle)_ | চললেন _(chollen)_ | চলল _(chollo)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | চলছিলাম _(cholchhilam)_ | চলছিলি _(cholchhili)_ | চলছিলে _(cholchhile)_ | চলছিলেন _(cholchhilen)_ | চলছিল _(cholchhilo)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | চলেছিলাম _(cholechhilam)_ | চলেছিলি _(cholechhili)_ | চলেছিলে _(cholechhile)_ | চলেছিলেন _(cholechhilen)_ | চলেছিল _(cholechhilo)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | চলতাম _(choltam)_ | চলতিস _(choltis)_ | চলতে _(cholte)_ | চলতেন _(cholten)_ | চলত _(cholto)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | চলব _(cholbo)_ | চলবি _(cholbi)_ | চলবে _(cholbe)_ | চলবেন _(cholben)_ | চলবে _(cholbe)_ |
+| ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | চলতে থাকব _(cholte thakbo)_ | চলতে থাকবি _(cholte thakbi)_ | চলতে থাকবে _(cholte thakbe)_ | চলতে থাকবেন _(cholte thakben)_ | চলতে থাকবে _(cholte thakbe)_ |
+
+## খাওয়া, যাওয়া, আসা
+
+Three irregular verbs you use all day.
 
 **খাওয়া (khaoya), to eat**
 
@@ -470,20 +2405,6 @@ Most verbs follow the same endings. A few change the root: খাওয়া, �
 | সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | যাব _(jabo)_ | যাবি _(jabi)_ | যাবে _(jabe)_ | যাবেন _(jaben)_ | যাবে _(jabe)_ |
 | ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | যেতে থাকব _(jete thakbo)_ | যেতে থাকবি _(jete thakbi)_ | যেতে থাকবে _(jete thakbe)_ | যেতে থাকবেন _(jete thakben)_ | যেতে থাকবে _(jete thakbe)_ |
 
-**দেওয়া (deoya), to give**
-
-| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
-|---|---|---|---|---|---|
-| সাধারণ বর্তমান _(sadharon bortoman)_ | দিই _(dii)_ | দিস _(dis)_ | দাও _(dao)_ | দেন _(den)_ | দেয় _(dey)_ |
-| ঘটমান বর্তমান _(ghotoman bortoman)_ | দিচ্ছি _(dichchhi)_ | দিচ্ছিস _(dichchhis)_ | দিচ্ছ _(dichchho)_ | দিচ্ছেন _(dichchhen)_ | দিচ্ছে _(dichchhe)_ |
-| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | দিয়েছি _(diyechhi)_ | দিয়েছিস _(diyechhis)_ | দিয়েছ _(diyechho)_ | দিয়েছেন _(diyechhen)_ | দিয়েছে _(diyechhe)_ |
-| সাধারণ অতীত _(sadharon otit)_ | দিলাম _(dilam)_ | দিলি _(dili)_ | দিলে _(dile)_ | দিলেন _(dilen)_ | দিল _(dilo)_ |
-| ঘটমান অতীত _(ghotoman otit)_ | দিচ্ছিলাম _(dichchhilam)_ | দিচ্ছিলি _(dichchhili)_ | দিচ্ছিলে _(dichchhile)_ | দিচ্ছিলেন _(dichchhilen)_ | দিচ্ছিল _(dichchhilo)_ |
-| পুরাঘটিত অতীত _(puraghotito otit)_ | দিয়েছিলাম _(diyechhilam)_ | দিয়েছিলি _(diyechhili)_ | দিয়েছিলে _(diyechhile)_ | দিয়েছিলেন _(diyechhilen)_ | দিয়েছিল _(diyechhilo)_ |
-| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | দিতাম _(ditam)_ | দিতিস _(ditis)_ | দিতে _(dite)_ | দিতেন _(diten)_ | দিত _(dito)_ |
-| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | দেব _(debo)_ | দিবি _(dibi)_ | দেবে _(debe)_ | দেবেন _(deben)_ | দেবে _(debe)_ |
-| ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | দিতে থাকব _(dite thakbo)_ | দিতে থাকবি _(dite thakbi)_ | দিতে থাকবে _(dite thakbe)_ | দিতে থাকবেন _(dite thakben)_ | দিতে থাকবে _(dite thakbe)_ |
-
 **আসা (asha), to come**
 
 | Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
@@ -498,593 +2419,2167 @@ Most verbs follow the same endings. A few change the root: খাওয়া, �
 | সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | আসব _(asbo)_ | আসবি _(asbi)_ | আসবে _(asbe)_ | আসবেন _(asben)_ | আসবে _(asbe)_ |
 | ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | আসতে থাকব _(aste thakbo)_ | আসতে থাকবি _(aste thakbi)_ | আসতে থাকবে _(aste thakbe)_ | আসতে থাকবেন _(aste thakben)_ | আসতে থাকবে _(aste thakbe)_ |
 
-> **Note:** যাওয়া changes its root: যা- in the present and future, গি- / গে- for completed and simple past, যে- in the habitual past.
+## দেওয়া, নেওয়া, ঘুমানো
 
-## 'Has been doing' and linking words
+Giving, taking and sleeping.
 
-English has tenses like 'I have been living here for two years' and 'I had been waiting for an hour'. Bengali has no separate form for these. It uses the ordinary present or past continuous and adds a time word: ধরে (for), থেকে (since), আগে (before), যখন … তখন (when … then).
+**দেওয়া (deoya), to give**
 
-| English idea | Bengali pattern | Example |
-|---|---|---|
-| has / have been doing (for a time) | present (or present continuous) + ধরে | আমি দু বছর ধরে এখানে থাকি। _(ami du bochhor dhore ekhane thaki.)_ |
-| has / have been doing (since a time) | present continuous + থেকে | সে সকাল থেকে কাজ করছে। _(she shokal theke kaj korchhe.)_ |
-| had been doing (for a time) | past continuous + ধরে | আমি এক ঘণ্টা ধরে অপেক্ষা করছিলাম। _(ami ek ghonta dhore opekkha korchhilam.)_ |
-| before / after | verbal noun (-া) + র + আগে / পরে | খাওয়ার আগে হাত ধোও। _(khaoyar age hat dhoo.)_ |
-| when … then … | যখন … তখন … | আমি যখন এলাম, তখন সে ঘুমাচ্ছিল। _(ami jokhon elam, tokhon she ghumachchhilo.)_ |
+| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| সাধারণ বর্তমান _(sadharon bortoman)_ | দিই _(dii)_ | দিস _(dis)_ | দাও _(dao)_ | দেন _(den)_ | দেয় _(dey)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | দিচ্ছি _(dichchhi)_ | দিচ্ছিস _(dichchhis)_ | দিচ্ছ _(dichchho)_ | দিচ্ছেন _(dichchhen)_ | দিচ্ছে _(dichchhe)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | দিয়েছি _(diyechhi)_ | দিয়েছিস _(diyechhis)_ | দিয়েছ _(diyechho)_ | দিয়েছেন _(diyechhen)_ | দিয়েছে _(diyechhe)_ |
+| সাধারণ অতীত _(sadharon otit)_ | দিলাম _(dilam)_ | দিলি _(dili)_ | দিলে _(dile)_ | দিলেন _(dilen)_ | দিল _(dilo)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | দিচ্ছিলাম _(dichchhilam)_ | দিচ্ছিলি _(dichchhili)_ | দিচ্ছিলে _(dichchhile)_ | দিচ্ছিলেন _(dichchhilen)_ | দিচ্ছিল _(dichchhilo)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | দিয়েছিলাম _(diyechhilam)_ | দিয়েছিলি _(diyechhili)_ | দিয়েছিলে _(diyechhile)_ | দিয়েছিলেন _(diyechhilen)_ | দিয়েছিল _(diyechhilo)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | দিতাম _(ditam)_ | দিতিস _(ditis)_ | দিতে _(dite)_ | দিতেন _(diten)_ | দিত _(dito)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | দেব _(debo)_ | দিবি _(dibi)_ | দেবে _(debe)_ | দেবেন _(deben)_ | দেবে _(debe)_ |
+| ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | দিতে থাকব _(dite thakbo)_ | দিতে থাকবি _(dite thakbi)_ | দিতে থাকবে _(dite thakbe)_ | দিতে থাকবেন _(dite thakben)_ | দিতে থাকবে _(dite thakbe)_ |
 
-> **Note:** 'Not yet' is এখনও … নি: আমি এখনও খাইনি (I have not eaten yet). 'Already' is ইতিমধ্যে or আগেই: সে ইতিমধ্যে চলে গিয়েছে.
+**নেওয়া (neoya), to take**
 
-## Choosing the tense
+| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| সাধারণ বর্তমান _(sadharon bortoman)_ | নিই _(nii)_ | নিস _(nis)_ | নাও _(nao)_ | নেন _(nen)_ | নেয় _(ney)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | নিচ্ছি _(nichchhi)_ | নিচ্ছিস _(nichchhis)_ | নিচ্ছ _(nichchho)_ | নিচ্ছেন _(nichchhen)_ | নিচ্ছে _(nichchhe)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | নিয়েছি _(niyechhi)_ | নিয়েছিস _(niyechhis)_ | নিয়েছ _(niyechho)_ | নিয়েছেন _(niyechhen)_ | নিয়েছে _(niyechhe)_ |
+| সাধারণ অতীত _(sadharon otit)_ | নিলাম _(nilam)_ | নিলি _(nili)_ | নিলে _(nile)_ | নিলেন _(nilen)_ | নিল _(nilo)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | নিচ্ছিলাম _(nichchhilam)_ | নিচ্ছিলি _(nichchhili)_ | নিচ্ছিলে _(nichchhile)_ | নিচ্ছিলেন _(nichchhilen)_ | নিচ্ছিল _(nichchhilo)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | নিয়েছিলাম _(niyechhilam)_ | নিয়েছিলি _(niyechhili)_ | নিয়েছিলে _(niyechhile)_ | নিয়েছিলেন _(niyechhilen)_ | নিয়েছিল _(niyechhilo)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | নিতাম _(nitam)_ | নিতিস _(nitis)_ | নিতে _(nite)_ | নিতেন _(niten)_ | নিত _(nito)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | নেব _(nebo)_ | নিবি _(nibi)_ | নেবে _(nebe)_ | নেবেন _(neben)_ | নেবে _(nebe)_ |
+| ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | নিতে থাকব _(nite thakbo)_ | নিতে থাকবি _(nite thakbi)_ | নিতে থাকবে _(nite thakbe)_ | নিতে থাকবেন _(nite thakben)_ | নিতে থাকবে _(nite thakbe)_ |
 
-Time words help you choose. রোজ (every day) and সাধারণত (usually) go with the simple present. এখন (now) goes with the continuous. ইতিমধ্যে (already) goes with the perfect. গতকাল (yesterday) goes with the simple past. আগামীকাল (tomorrow) goes with the future.
+**ঘুমানো (ghumano), to sleep**
 
-> **Note:** কাল (kal) means both 'yesterday' and 'tomorrow'. The verb tells you which: কাল আমি গেলাম (yesterday) and কাল আমি যাব (tomorrow). To be clear, say গতকাল (yesterday) or আগামীকাল (tomorrow).
-
-- আমি রোজ সকালে চা খাই। _(ami roj shokale cha khai.)_: I drink tea every morning.
-- আমি এখন পড়ছি। _(ami ekhon porchhi.)_: I am studying now.
-- আমি ইতিমধ্যে খেয়েছি। _(ami itimodhye kheyechhi.)_: I have already eaten.
-- গতকাল আমি বাজারে গেলাম। _(gotokal ami bajare gelam.)_: Yesterday I went to the market.
-- ছোটবেলায় আমি রোজ মাঠে খেলতাম। _(chhotobelay ami roj mathe kheltam.)_: When I was little I used to play in the field every day.
-- আগামীকাল আমি স্কুলে যাব। _(agamikal ami skule jabo.)_: Tomorrow I will go to school.
+| Tense | আমি | তুই | তুমি | আপনি / তিনি | সে |
+|---|---|---|---|---|---|
+| সাধারণ বর্তমান _(sadharon bortoman)_ | ঘুমাই _(ghumai)_ | ঘুমাস _(ghumas)_ | ঘুমাও _(ghumao)_ | ঘুমান _(ghuman)_ | ঘুমায় _(ghumay)_ |
+| ঘটমান বর্তমান _(ghotoman bortoman)_ | ঘুমাচ্ছি _(ghumachchhi)_ | ঘুমাচ্ছিস _(ghumachchhis)_ | ঘুমাচ্ছ _(ghumachchho)_ | ঘুমাচ্ছেন _(ghumachchhen)_ | ঘুমাচ্ছে _(ghumachchhe)_ |
+| পুরাঘটিত বর্তমান _(puraghotito bortoman)_ | ঘুমিয়েছি _(ghumiyechhi)_ | ঘুমিয়েছিস _(ghumiyechhis)_ | ঘুমিয়েছ _(ghumiyechho)_ | ঘুমিয়েছেন _(ghumiyechhen)_ | ঘুমিয়েছে _(ghumiyechhe)_ |
+| সাধারণ অতীত _(sadharon otit)_ | ঘুমালাম _(ghumalam)_ | ঘুমালি _(ghumali)_ | ঘুমালে _(ghumale)_ | ঘুমালেন _(ghumalen)_ | ঘুমাল _(ghumalo)_ |
+| ঘটমান অতীত _(ghotoman otit)_ | ঘুমাচ্ছিলাম _(ghumachchhilam)_ | ঘুমাচ্ছিলি _(ghumachchhili)_ | ঘুমাচ্ছিলে _(ghumachchhile)_ | ঘুমাচ্ছিলেন _(ghumachchhilen)_ | ঘুমাচ্ছিল _(ghumachchhilo)_ |
+| পুরাঘটিত অতীত _(puraghotito otit)_ | ঘুমিয়েছিলাম _(ghumiyechhilam)_ | ঘুমিয়েছিলি _(ghumiyechhili)_ | ঘুমিয়েছিলে _(ghumiyechhile)_ | ঘুমিয়েছিলেন _(ghumiyechhilen)_ | ঘুমিয়েছিল _(ghumiyechhilo)_ |
+| নিত্যবৃত্ত অতীত _(nityobritto otit)_ | ঘুমাতাম _(ghumatam)_ | ঘুমাতিস _(ghumatis)_ | ঘুমাতে _(ghumate)_ | ঘুমাতেন _(ghumaten)_ | ঘুমাত _(ghumato)_ |
+| সাধারণ ভবিষ্যৎ _(sadharon bhobishyot)_ | ঘুমাব _(ghumabo)_ | ঘুমাবি _(ghumabi)_ | ঘুমাবে _(ghumabe)_ | ঘুমাবেন _(ghumaben)_ | ঘুমাবে _(ghumabe)_ |
+| ঘটমান ভবিষ্যৎ _(ghotoman bhobishyot)_ | ঘুমাতে থাকব _(ghumate thakbo)_ | ঘুমাতে থাকবি _(ghumate thakbi)_ | ঘুমাতে থাকবে _(ghumate thakbe)_ | ঘুমাতে থাকবেন _(ghumate thakben)_ | ঘুমাতে থাকবে _(ghumate thakbe)_ |
 
 ## Practice questions
 
-1. Choose the right form. **আমি রোজ ভাত ___।**
-   - A) খাই _(khai)_  ✔
-   - B) খাচ্ছি _(khachchhi)_
-   - C) খেলাম _(khelam)_
-   - _Why:_ A daily habit uses the simple present.
-2. Choose the right form. **আমি এখন ভাত ___।**
-   - A) খাই _(khai)_
-   - B) খাচ্ছি _(khachchhi)_  ✔
-   - C) খেলাম _(khelam)_
-   - _Why:_ এখন (now) needs the present continuous.
-3. Choose the right form. **আমি গতকাল ভাত ___।**
-   - A) খাব _(khabo)_
-   - B) খেলাম _(khelam)_  ✔
-   - C) খাচ্ছি _(khachchhi)_
-   - _Why:_ গতকাল (yesterday) is the past: খেলাম.
-4. Choose the right form. **আমি আগামীকাল স্কুলে ___।**
-   - A) যাব _(jabo)_  ✔
-   - B) গেলাম _(gelam)_
-   - C) যাচ্ছি _(jachchhi)_
-   - _Why:_ আগামীকাল (tomorrow) needs the future: যাব.
-5. Choose the right form for তুমি. **তুমি এখন কী ___?**
-   - A) করছ _(korchho)_  ✔
-   - B) করেছ _(korechho)_
-   - C) করবে _(korbe)_
-   - _Why:_ এখন (now) with তুমি: করছ.
-6. Choose the right form ('I have already eaten'). **আমি ইতিমধ্যে ভাত ___।**
-   - A) খেয়েছি _(kheyechhi)_  ✔
-   - B) খেলাম _(khelam)_
-   - C) খাব _(khabo)_
-   - _Why:_ ইতিমধ্যে (already) goes with the present perfect.
-7. Choose the right form ('used to play'). **ছোটবেলায় আমি রোজ মাঠে ___।**
-   - A) খেলতাম _(kheltam)_  ✔
-   - B) খেললাম _(khellam)_
-   - C) খেলব _(khelbo)_
-   - _Why:_ A past habit uses the -তাম form.
-8. Which tense is আমি খাচ্ছিলাম?
-   - A) সাধারণ অতীত (simple past)
-   - B) ঘটমান অতীত (past continuous)  ✔
-   - C) ঘটমান বর্তমান (present continuous)
-   - _Why:_ -ছিলাম marks the past continuous: I was eating.
-9. Choose the right verb for আপনি (tomorrow). **আপনি আগামীকাল কোথায় ___?**
+1. Which word fills the blank? **আমি গতকাল বই ___।**
+   - A) লিখলাম _(likhlam)_  ✔
+   - B) লিখি _(likhi)_
+   - C) লিখছি _(likhchhi)_
+   - D) লিখব _(likhbo)_
+   - _Why:_ A finished action yesterday: লিখলাম.
+2. Which word fills the blank? **তুমি এখন কী ___?**
+   - A) শুনছ _(shunchho)_  ✔
+   - B) শোনো _(shono)_
+   - C) শুনলে _(shunle)_
+   - D) শুনবে _(shunbe)_
+   - _Why:_ Right now: শুনছ.
+3. Which word fills the blank? **আপনি কাল কলকাতায় ___।**
    - A) যাবেন _(jaben)_  ✔
-   - B) যাবে _(jabe)_
-   - C) যাব _(jabo)_
-   - _Why:_ আপনি takes -বেন in the future.
-10. Choose the right verb for তুই (past). **তুই কী ___?**
-   - A) করলি _(korli)_  ✔
-   - B) করলে _(korle)_
-   - C) করলাম _(korlam)_
-   - _Why:_ তুই takes -লি in the simple past.
-11. In কাল আমি স্কুলে যাব, 'কাল' means:
-   - A) yesterday
-   - B) tomorrow  ✔
-   - _Why:_ The future verb যাব shows that কাল means 'tomorrow'.
-12. Choose the right form ('I was at home'). **আমি তখন বাড়িতে ___।**
-   - A) ছিলাম _(chhilam)_  ✔
-   - B) আছি _(achhi)_
-   - C) থাকব _(thakbo)_
-   - _Why:_ Past of 'to be there': ছিলাম.
+   - B) যান _(jan)_
+   - C) গেলেন _(gelen)_
+   - D) যাচ্ছেন _(jachchhen)_
+   - _Why:_ Tomorrow: যাবেন.
+4. Which word fills the blank? **সে রোজ সকালে চা ___।**
+   - A) খায় _(khay)_  ✔
+   - B) খাচ্ছে _(khachchhe)_
+   - C) খেল _(khelo)_
+   - D) খাবে _(khabe)_
+   - _Why:_ A daily habit: খায়.
+5. Which word fills the blank? **তুই বই ___।**
+   - A) নিয়েছিস _(niyechhis)_  ✔
+   - B) নিস _(nis)_
+   - C) নিচ্ছিস _(nichchhis)_
+   - D) নিবি _(nibi)_
+   - _Why:_ Finished: নিয়েছিস.
+6. Which word fills the blank? **তুমি আমাকে জল ___।**
+   - A) দিলে _(dile)_  ✔
+   - B) দাও _(dao)_
+   - C) দিচ্ছ _(dichchho)_
+   - D) দেবে _(debe)_
+   - _Why:_ A finished action: দিলে.
+7. Which word fills the blank? **আমরা প্রতিদিন পার্কে ___।**
+   - A) হাঁটতাম _(hattam)_  ✔
+   - B) হাঁটি _(hati)_
+   - C) হাঁটলাম _(hatlam)_
+   - D) হাঁটব _(hatbo)_
+   - _Why:_ Used to: হাঁটতাম.
+8. Which word fills the blank? **আমি তখন ___।**
+   - A) ঘুমাচ্ছিলাম _(ghumachchhilam)_  ✔
+   - B) ঘুমালাম _(ghumalam)_
+   - C) ঘুমাই _(ghumai)_
+   - D) ঘুমাব _(ghumabo)_
+   - _Why:_ In progress then: ঘুমাচ্ছিলাম.
+9. Which word fills the blank? **তারা আগামীকাল ___।**
+   - A) আসবে _(asbe)_  ✔
+   - B) আসে _(ashe)_
+   - C) এল _(elo)_
+   - D) এসেছে _(eshechhe)_
+   - _Why:_ Tomorrow: আসবে.
+10. Which word fills the blank? **দাদু গল্প ___।**
+   - A) বলছেন _(bolchhen)_  ✔
+   - B) বলেন _(bolen)_
+   - C) বললেন _(bollen)_
+   - D) বলবেন _(bolben)_
+   - _Why:_ Right now: বলছেন.
+11. Which word fills the blank? **তুই এখন কোথায় ___?**
+   - A) যাচ্ছিস _(jachchhis)_  ✔
+   - B) যাস _(jas)_
+   - C) গেলি _(geli)_
+   - D) যাবি _(jabi)_
+   - _Why:_ Right now with তুই: যাচ্ছিস.
+12. Which word fills the blank? **সে এইমাত্র ___।**
+   - A) এসেছে _(eshechhe)_  ✔
+   - B) আসে _(ashe)_
+   - C) এল _(elo)_
+   - D) আসবে _(asbe)_
+   - _Why:_ Just now: এসেছে.
+13. Which word fills the blank? **তুমি আগে ___।**
+   - A) এসেছিলে _(eshechhile)_  ✔
+   - B) এলে _(ele)_
+   - C) আসো _(asho)_
+   - D) আসবে _(asbe)_
+   - _Why:_ Before that: এসেছিলে.
+14. Which word fills the blank? **আপনি কী ___?**
+   - A) করেন _(koren)_  ✔
+   - B) করছেন _(korchhen)_
+   - C) করলেন _(korlen)_
+   - D) করবেন _(korben)_
+   - _Why:_ What do you do (usually): করেন.
+15. Which word fills the blank? **আমি চিঠি ___।**
+   - A) লিখব _(likhbo)_  ✔
+   - B) লিখি _(likhi)_
+   - C) লিখলাম _(likhlam)_
+   - D) লিখছি _(likhchhi)_
+   - _Why:_ Will write: লিখব.
 
 ---
 
-# কারক · Karak · Case roles
+# কারক · Karak · Karak: the job of each noun
 
-_The job each noun does for the verb: who acts, what is acted on, with what, for whom, from where, where._
+_Every noun in a sentence does a job for the verb. Learn the six jobs (doer, receiver, tool, beneficiary, source, place) and how to find each one by asking the verb a question._
 
-## The six karak
+## What is a karak?
 
-কারক (karak) is the relationship between a noun and the verb. To find a noun's karak, ask the verb a question: Who does it? What is done? With what? To whom? From where? Where or when?
+কারক (karak) is the relationship between a noun or pronoun and the verb of the sentence. The verb is the centre of the sentence, and every noun connected to it does one of six jobs. Learning to see these jobs makes a long sentence easy to read and helps you choose the right ending for each noun.
 
-| Karak | Ask the verb | Marker | Example |
+The easiest way to find a noun's karak is to ask the verb a question. Ask 'Who does it?', 'What is it done to?', 'With what?', 'For whom?', 'From where?', 'Where or when?'. The noun that answers the question is that karak.
+
+| Karak | Job | Question you ask the verb | Example (the karak is underlined in the meaning) |
 |---|---|---|---|
-| কর্তৃকারক _(kortrikarok)_ | Who does it? (কে?) | no ending | রাম বই পড়ে। _(ram boi pore.)_ |
-| কর্মকারক _(kormokarok)_ | What / whom? (কী / কাকে?) | -কে or none | রাম বই পড়ে। _(ram boi pore.)_ |
-| করণকারক _(koronkarok)_ | With what? (কী দিয়ে?) | দিয়ে, দ্বারা | সে কলম দিয়ে লেখে। _(she kolom diye lekhe.)_ |
-| সম্প্রদানকারক _(sompradankarok)_ | To whom is it given? (কাকে?) | -কে, জন্য | গরিবকে ভাত দাও। _(goribke bhat dao.)_ |
-| অপাদানকারক _(opadankarok)_ | From where? (কোথা থেকে?) | থেকে | গাছ থেকে ফল পড়ে। _(gachh theke phol pore.)_ |
-| অধিকরণকারক _(odhikoronkarok)_ | Where / when? (কোথায় / কখন?) | -এ, -তে, -য় | পাখি গাছে বসে। _(pakhi gachhe boshe.)_ |
+| কর্তা _(kortha)_ | the doer | কে? (who does it?) | মা রান্না করেন। _(ma ranna koren.)_ |
+| কর্ম _(korma)_ | what or whom the action is done to | কী? কাকে? (what? whom?) | আমি বই পড়ি। _(ami boi pori.)_ |
+| করণ _(koron)_ | the tool or means | কী দিয়ে? কীসে? (with what?) | আমি কলম দিয়ে লিখি। _(ami kolom diye likhi.)_ |
+| সম্প্রদান _(sampradan)_ | the one given to or for | কাকে? কার জন্য? (to whom? for whom?) | মা শিশুকে দুধ দেন। _(ma shishuke dudh den.)_ |
+| অপাদান _(apadan)_ | the starting point, the source | কোথা থেকে? কার কাছ থেকে? (from where?) | গাছ থেকে পাতা পড়ে। _(gachh theke pata pore.)_ |
+| অধিকরণ _(adhikoron)_ | the place or time | কোথায়? কখন? (where? when?) | আমি বাজারে যাই। _(ami bajare jai.)_ |
 
-## Each karak in a sentence
+> **Note:** Two more relationships appear in sentences but are not counted among the six karaks in most school grammars: সম্বন্ধ (belonging, like 'of') and সম্বোধন (calling someone by name). They are explained in the last section.
 
-**Find the karak by the question**
+Take one sentence with several jobs: রাহুল কলম দিয়ে বন্ধুকে চিঠি লিখল (Rahul wrote a letter to his friend with a pen). Ask the verb লিখল each question in turn.
 
-- রাম ভাত খায়। _(ram bhat khay.)_: Ram eats rice. রাম = কর্তা (who eats?)
-- মা ছেলেকে ডাকলেন। _(ma chheleke daklen.)_: Mother called the boy. ছেলেকে = কর্ম (whom?)
-- সে কলম দিয়ে লেখে। _(she kolom diye lekhe.)_: He / she writes with a pen. কলম দিয়ে = করণ (with what?)
-- গরিবকে ভাত দাও। _(goribke bhat dao.)_: Give rice to the poor person. গরিবকে = সম্প্রদান (to whom?)
-- গাছ থেকে ফল পড়ে। _(gachh theke phol pore.)_: Fruit falls from the tree. গাছ থেকে = অপাদান (from where?)
-- পাখি গাছে বসে। _(pakhi gachhe boshe.)_: The bird sits on the tree. গাছে = অধিকরণ (where?)
-- সকালে আমি স্কুলে যাই। _(shokale ami skule jai.)_: In the morning I go to school. সকালে = অধিকরণ (when?)
-
-> **Note:** -কে is used for both the object (কর্ম) and the one who receives (সম্প্রদান). Meaning decides: ছেলেকে ডাকলেন (called the boy) has the boy as the thing acted on. গরিবকে ভাত দাও has the poor person as the recipient of something given.
-
-## All together
-
-One sentence can carry several karak at once. Each noun answers a different question to the verb.
-
-- রাম ঘরে বসে কলম দিয়ে বন্ধুকে চিঠি লেখে। _(ram ghore boshe kolom diye bondhuke chithi lekhe.)_: Ram, sitting at home, writes a letter to a friend with a pen.
-- সে কলকাতা থেকে এসেছে। _(she kolkata theke eshechhe.)_: He / she has come from Kolkata.
-
-| Word | Karak | Question it answers |
+| Question to the verb 'লিখল' (wrote) | Answer | Karak |
 |---|---|---|
-| রাম _(ram)_ | কর্তা _(korta)_ | Who writes? |
-| ঘরে _(ghore)_ | অধিকরণ _(odhikoron)_ | Where? |
-| কলম দিয়ে _(kolom diye)_ | করণ _(koron)_ | With what? |
-| বন্ধুকে _(bondhuke)_ | সম্প্রদান _(sompradan)_ | To whom? |
-| চিঠি _(chithi)_ | কর্ম _(kormo)_ | What is written? |
+| কে লিখল? (who wrote?) | রাহুল _(rahul)_ | কর্তা _(kortha)_ |
+| কী লিখল? (what did he write?) | চিঠি _(chithi)_ | কর্ম _(korma)_ |
+| কী দিয়ে লিখল? (with what?) | কলম দিয়ে _(kolom diye)_ | করণ _(koron)_ |
+| কাকে লিখল? (to whom?) | বন্ধুকে _(bondhuke)_ | সম্প্রদান _(sampradan)_ |
 
-## Not a karak
+## কর্তা: the doer
 
-Two kinds of word are not counted as a karak because they are not directly linked to the verb.
+The কর্তা (kortha) is the doer, the person or thing that does the action. Ask the verb কে? (who?). In most sentences the কর্তা comes first. It takes no ending in the usual sentence: রাম যায় (Ram goes).
 
-| Name | Job | Example |
-|---|---|---|
-| সম্বন্ধ পদ _(sombondho pod)_ | Shows that something belongs to something or someone. It ends in -র / -এর. | এটা আমার বই। _(eta amar boi.)_ |
-| সম্বোধন পদ _(sombodhon pod)_ | Calls someone. It often has ও, হে, ওগো. | ও রাম, এদিকে এসো। _(o ram, edike esho.)_ |
+**The doer in a sentence**
 
-> **Note:** Some books count the genitive (সম্বন্ধ) as a sixth karak. Most Bengali school grammar treats it as a separate relationship.
+- মা রান্না করেন। _(ma ranna koren.)_: Mother cooks. (কর্তা: মা)
+- বাবা অফিসে যান। _(baba ofise jan.)_: Father goes to the office. (কর্তা: বাবা)
+- শিক্ষক বাংলা বলেন। _(shikkhok bangla bolen.)_: The teacher speaks Bengali. (কর্তা: শিক্ষক)
+- কুকুর ঘেউ ঘেউ করে। _(kukur gheu gheu kore.)_: The dog barks. (কর্তা: কুকুর)
+- আমি বই পড়লাম। _(ami boi porlam.)_: I read a book. (কর্তা: আমি)
+- তারা মাঠে খেলে। _(tara mathe khele.)_: They play in the field. (কর্তা: তারা)
+- ডাক্তার ওষুধ দিলেন। _(daktar oshudh dilen.)_: The doctor gave medicine. (কর্তা: ডাক্তার)
+- ভাই চিঠি লিখবে। _(bhai chithi likhbe.)_: Brother will write a letter. (কর্তা: ভাই)
+- বৃষ্টি পড়ছে। _(brishti porchhe.)_: It is raining. (কর্তা: বৃষ্টি)
+- পাখি গান গায়। _(pakhi gan gay.)_: The bird sings. (কর্তা: পাখি)
+
+Three common shapes of the doer: plain (রাম), with -রা for a group of people (ছেলেরা), and with -ই for emphasis (সে-ই করেছে, 'it was he who did it').
+
+**Plain, plural, emphatic**
+
+- ছেলেরা মাঠে খেলছে। _(chhelera mathe khelchhe.)_: The boys are playing in the field.
+- সে-ই আমাকে ডেকেছিল। _(she-i amake dekechhilo.)_: It was he who called me.
+- শিশুটি হাসছে। _(shishuti haschhe.)_: The baby is laughing.
+
+With verbs of feeling, the one who feels takes the possessive: আমার খিদে পেয়েছে, 'hunger has come to me'. The person is still the doer in meaning, even though the form is আমার.
+
+**Feelings**
+
+- আমার ভয় করছে। _(amar bhoy korchhe.)_: I am afraid.
+- তোমার কী হয়েছে? _(tomar ki hoyechhe?)_: What has happened to you?
+- তার জ্বর হয়েছে। _(tar jor hoyechhe.)_: He / she has a fever.
+
+## কর্ম: what the action is done to
+
+The কর্ম (korma) is the object: what or whom the action is done to. Ask the verb কী? (what?) or কাকে? (whom?). A person or an animal that is a কর্ম usually takes -কে; a thing usually takes no ending.
+
+**Things as the object**
+
+- আমি বই পড়ি। _(ami boi pori.)_: I read a book.
+- সে চিঠি লিখল। _(she chithi likhlo.)_: He / she wrote a letter.
+- তুমি ভাত খাও। _(tumi bhat khao.)_: You eat rice.
+- আমরা গান শুনি। _(amra gan shuni.)_: We listen to a song.
+- মা মাছ ধরেন। _(ma mach dhoren.)_: Mother holds the fish.
+- আমি দরজা দেখলাম। _(ami dorja dekhlam.)_: I saw the door.
+- তারা ছবি দেখে। _(tara chhobi dekhe.)_: They see a picture.
+
+**-কে for people**
+
+- আমি রামকে দেখলাম। _(ami ramke dekhlam.)_: I saw Ram.
+- মা শিশুকে ডাকলেন। _(ma shishuke daklen.)_: Mother called the baby.
+- শিক্ষক ছাত্রদের পড়ান। _(shikkhok chhatroder poran.)_: The teacher teaches the students.
+- আমি কুকুরটাকে দেখলাম। _(ami kukurtake dekhlam.)_: I saw the dog.
+- সে আমাকে ডাকল। _(she amake daklo.)_: He / she called me.
+- আমরা তোমাকে চিনি। _(amra tomake chini.)_: We know you.
+
+**Person and thing**
+
+- বাবা আমাকে একটা বই দিলেন। _(baba amake ekta boi dilen.)_: Father gave me a book.  আমাকে: person; বই: thing.
+- শিক্ষক ছাত্রদের গল্প বললেন। _(shikkhok chhatroder golpo bollen.)_: The teacher told the students a story.
+- মা আমাকে ভাত দিলেন। _(ma amake bhat dilen.)_: Mother gave me rice.
+- সে আমাকে চিঠি লিখল। _(she amake chithi likhlo.)_: He / she wrote me a letter.
+
+> **Note:** A thing can take -কে too, when it is definite and being singled out: আমি বইটাকে ভালোবাসি, 'I love that book'. But the plain thing without -কে is the usual form.
+
+## করণ: the tool or means
+
+The করণ (koron) is the tool, instrument or means by which the action is done. Ask the verb কী দিয়ে? (with what?) or কীসে? The words দিয়ে and দ্বারা show it, and sometimes the ending -এ / -য়.
+
+**With what?**
+
+- আমি কলম দিয়ে লিখি। _(ami kolom diye likhi.)_: I write with a pen.
+- সে ছুরি দিয়ে ফল কাটে। _(she chhuri diye phol kate.)_: He / she cuts fruit with a knife.
+- আমরা চামচ দিয়ে ভাত খাই। _(amra chamoch diye bhat khai.)_: We eat rice with a spoon.
+- আমি হাতে খাই। _(ami hate khai.)_: I eat with my hand.
+- আমরা চোখে দেখি। _(amra chokhe dekhi.)_: We see with our eyes.
+- আমরা কান দিয়ে শুনি। _(amra kan diye shuni.)_: We hear with our ears.
+- সে চাবি দিয়ে তালা খুলল। _(she chabi diye tala khulolo.)_: He / she opened the lock with a key.
+- মা জল দিয়ে হাত ধুলেন। _(ma jol diye hat dhulen.)_: Mother washed her hands with water.
+- সে আগুন দিয়ে রান্না করে। _(she agun diye ranna kore.)_: He / she cooks with fire.
+
+**By what?**
+
+- আমি ট্রেনে যাই। _(ami trene jai.)_: I go by train.
+- সে বাসে করে স্কুলে যায়। _(she base kore skule jay.)_: He / she goes to school by bus.
+- আমরা নৌকায় নদী পার হলাম। _(amra noukay nodi par holam.)_: We crossed the river by boat.
+- আমি হেঁটে যাই। _(ami hete jai.)_: I go on foot.
+
+> **Note:** দিয়ে is also used with people to mean 'through, by means of': আমি তাকে দিয়ে কাজ করালাম, 'I had the work done by him'. It is more advanced; for now learn the tool sense.
+
+## সম্প্রদান: to whom, for whom
+
+The সম্প্রদান (sampradan) is the one to whom something is given freely, or for whom something is done. Ask the verb কাকে? (to whom?) or কার জন্য? (for whom?). The marker is -কে, or জন্য placed after the possessive form.
+
+**Given to, done for**
+
+- আমি গরিবকে খাবার দিলাম। _(ami goribke khabar dilam.)_: I gave food to the poor man.
+- মা শিশুকে দুধ দিলেন। _(ma shishuke dudh dilen.)_: Mother gave milk to the baby.
+- আমি বন্ধুকে একটা উপহার দিলাম। _(ami bondhuke ekta upohar dilam.)_: I gave my friend a gift.
+- বাবা আমার জন্য একটা বই আনলেন। _(baba amar jonyo ekta boi anlen.)_: Father brought a book for me.
+- আমি মায়ের জন্য ফুল কিনলাম। _(ami mayer jonyo phul kinlam.)_: I bought flowers for mother.
+- এটা তোমার জন্য। _(eta tomar jonyo.)_: This is for you.
+- সে গরিবদের দান করে। _(she goribder dan kore.)_: He / she gives to the poor.
+- আমরা স্কুলের জন্য টাকা দিলাম। _(amra skuler jonyo taka dilam.)_: We gave money for the school.
+
+> **Note:** The same word can be কর্ম or সম্প্রদান: in 'আমি রামকে দেখলাম' (I saw Ram), রামকে is the object of seeing (কর্ম). In 'আমি রামকে বই দিলাম' (I gave Ram a book), রামকে is the receiver (সম্প্রদান). Ask the verb: dekha gets 'whom?', dena gets 'to whom?'.
+
+## অপাদান: the starting point
+
+The অপাদান (apadan) is the place or person something comes from, moves away from, or is separated from. Ask the verb কোথা থেকে? (from where?) or কার কাছ থেকে? (from whom?). The marker is থেকে after the noun.
+
+**From where? From whom?**
+
+- আমি বাড়ি থেকে আসছি। _(ami bari theke aschhi.)_: I am coming from home.
+- গাছ থেকে পাতা পড়ে। _(gachh theke pata pore.)_: Leaves fall from the tree.
+- নদী পাহাড় থেকে নেমেছে। _(nodi pahar theke nemechhe.)_: The river comes down from the hills.
+- ট্রেন হাওড়া থেকে ছাড়ে। _(tren haora theke chhare.)_: The train leaves from Howrah.
+- আমি বন্ধুর কাছ থেকে বই নিলাম। _(ami bondhur kachh theke boi nilam.)_: I took a book from a friend.
+- সে মায়ের কাছ থেকে টাকা পেল। _(she mayer kachh theke taka pelo.)_: He / she got money from his / her mother.
+- আমরা কলকাতা থেকে এসেছি। _(amra kolkata theke eshechhi.)_: We have come from Kolkata.
+- সে ঘর থেকে বেরোল। _(she ghor theke berolo.)_: He / she came out of the room.
+- আকাশ থেকে বৃষ্টি পড়ে। _(akash theke brishti pore.)_: Rain falls from the sky.
+
+You also say who you learn from with -র কাছ থেকে, and fear is said with -কে: আমি সাপকে ভয় পাই. Comparison with চেয়ে is covered in the lesson on bibhakti.
+
+**Other uses**
+
+- আমি সাপকে ভয় পাই। _(ami shapke bhoy pai.)_: I am afraid of snakes.
+- আমি শিক্ষকের কাছ থেকে বাংলা শিখি। _(ami shikkhoker kachh theke bangla shikhi.)_: I learn Bengali from the teacher.
+
+## অধিকরণ: the place and the time
+
+The অধিকরণ (adhikoron) tells where or when the action happens. Ask the verb কোথায়? (where?) or কখন? (when?). The usual marker is -এ after a consonant, -তে after a vowel, and -য় after -া.
+
+| Noun ends in | Add | Example | Meaning |
+|---|---|---|---|
+| a consonant | -ে | ঘর → ঘরে _(ghor → ghore)_ | in the room |
+| a vowel sign -ি, -ী, -ু | -তে | বাড়ি → বাড়িতে _(bari → barite)_ | at home |
+| the vowel -া | -য় | রাস্তা → রাস্তায় _(rasta → rastay)_ | on the road |
+| a place name in -া | -য় | কলকাতা → কলকাতায় _(kolkata → kolkatay)_ | in Kolkata |
+
+**Place**
+
+- আমি বাজারে যাই। _(ami bajare jai.)_: I go to the market.
+- সে বাড়িতে থাকে। _(she barite thake.)_: He / she stays at home.
+- আমরা পার্কে হাঁটি। _(amra parke hati.)_: We walk in the park.
+- তুমি রাস্তায় হাঁটো। _(tumi rastay hato.)_: You walk on the road.
+- ওরা মাঠে খেলে। _(ora mathe khele.)_: They play in the field.
+- মা রান্নাঘরে থাকেন। _(ma rannaghore thaken.)_: Mother is in the kitchen.
+- আমি কলকাতায় থাকি। _(ami kolkatay thaki.)_: I live in Kolkata.
+- বই টেবিলে আছে। _(boi tebile achhe.)_: The book is on the table.
+
+**Time**
+
+- আমি সকালে আসি। _(ami shokale ashi.)_: I come in the morning.
+- আমরা রাতে ঘুমাই। _(amra rate ghumai.)_: We sleep at night.
+- সে বিকেলে পার্কে যায়। _(she bikele parke jay.)_: He / she goes to the park in the afternoon.
+- সকালে আমি চা খাই। _(shokale ami cha khai.)_: I drink tea in the morning.
+- সোমবারে স্কুল খোলে। _(shombare skul khole.)_: School opens on Monday.
+- ভোরে পাখি ডাকে। _(bhore pakhi dake.)_: Birds call at dawn.
+- শীতে কলকাতায় ঠান্ডা কম। _(shite kolkatay thanda kom.)_: It is not very cold in Kolkata in winter.
+
+**Condition**
+
+- সে বিপদে পড়েছে। _(she bipode poreche.)_: He / she is in trouble.
+- আমি আনন্দে আছি। _(ami anonde achhi.)_: I am in joy (I am happy).
+- সে রাগে কাঁপছে। _(she rage kapchhe.)_: He / she is shaking with anger.
+
+## Putting it together: reading whole sentences
+
+Now find every karak in a full sentence. Work through the questions one at a time. Each noun gets exactly one job.
+
+**Two sentences analysed**
+
+| Sentence | Word | Karak | Why |
+|---|---|---|---|
+| মা রান্নাঘরে ছুরি দিয়ে সবজি কাটলেন। _(ma rannaghore chhuri diye shobji katlen.)_ | মা _(ma)_ | কর্তা _(kortha)_ | কে কাটলেন? (who cut?) |
+|  | সবজি _(shobji)_ | কর্ম _(korma)_ | কী কাটলেন? (what?) |
+|  | ছুরি দিয়ে _(chhuri diye)_ | করণ _(koron)_ | কী দিয়ে? (with what?) |
+|  | রান্নাঘরে _(rannaghore)_ | অধিকরণ _(adhikoron)_ | কোথায়? (where?) |
+| আমি বন্ধুকে বাড়ি থেকে চিঠি লিখলাম। _(ami bondhuke bari theke chithi likhlam.)_ | আমি _(ami)_ | কর্তা _(kortha)_ | কে লিখল? |
+|  | চিঠি _(chithi)_ | কর্ম _(korma)_ | কী লিখল? |
+|  | বন্ধুকে _(bondhuke)_ | সম্প্রদান _(sampradan)_ | কাকে? (to whom?) |
+|  | বাড়ি থেকে _(bari theke)_ | অপাদান _(apadan)_ | কোথা থেকে? (from where?) |
+
+**More sentences, with the answers**
+
+- শিক্ষক ছাত্রদের বাংলা পড়ান। _(shikkhok chhatroder bangla poran.)_: Teacher: কর্তা. Students: গৌণ কর্ম. Bengali: মুখ্য কর্ম.
+- আমি মায়ের জন্য বাজার থেকে ফল আনলাম। _(ami mayer jonyo bajar theke phol anlam.)_: I: কর্তা. Fruit: কর্ম. For mother: সম্প্রদান. From the market: অপাদান.
+- সে সকালে হাত দিয়ে ভাত খায়। _(she shokale hat diye bhat khay.)_: He / she: কর্তা. Rice: কর্ম. With the hand: করণ. In the morning: অধিকরণ.
+- বাবা অফিস থেকে ট্রেনে বাড়ি ফিরলেন। _(baba ofis theke trene bari phirlen.)_: Father: কর্তা. From the office: অপাদান. By train: করণ. Home: অধিকরণ.
+
+## Not karaks: relation and address
+
+Two more relationships appear in sentences. School grammars usually do not count them among the six, because they do not connect to the verb directly.
 
 ## Practice questions
 
-1. Which karak is রাম? **রাম বই পড়ে।**
-   - A) কর্তা (who does)  ✔
-   - B) কর্ম (what is done)
-   - C) অধিকরণ (where)
-   - _Why:_ রাম does the reading.
-2. Which karak is বই? **রাম বই পড়ে।**
-   - A) কর্তা
-   - B) কর্ম  ✔
-   - C) করণ
-   - _Why:_ বই is what is read, so it is the object.
-3. Which karak is কলম দিয়ে? **সে কলম দিয়ে লেখে।**
-   - A) করণ (with what)  ✔
-   - B) অপাদান
-   - C) সম্প্রদান
-   - _Why:_ It tells with what he / she writes.
-4. Which karak is গাছ থেকে? **গাছ থেকে ফল পড়ে।**
-   - A) অপাদান (from where)  ✔
-   - B) অধিকরণ
-   - C) করণ
-   - _Why:_ থেকে shows the starting place.
-5. Which karak is গাছে? **পাখি গাছে বসে।**
-   - A) অধিকরণ (where)  ✔
-   - B) অপাদান
-   - C) কর্ম
-   - _Why:_ গাছে shows the place.
-6. Which karak is গরিবকে? **গরিবকে ভাত দাও।**
-   - A) সম্প্রদান (to whom)  ✔
-   - B) কর্তা
-   - C) অধিকরণ
-   - _Why:_ The poor person receives the rice.
-7. Which karak is ছেলেকে? **মা ছেলেকে ডাকলেন।**
-   - A) কর্ম (whom)  ✔
-   - B) সম্প্রদান
-   - C) কর্তা
-   - _Why:_ The boy is the one acted on (called).
-8. What is আমার here? **এটা আমার বই।**
-   - A) সম্বন্ধ পদ (belonging)  ✔
-   - B) কর্তা
-   - C) কর্ম
-   - _Why:_ আমার shows belonging and is not a karak.
-9. What is রাম here? **ও রাম, শোনো।**
-   - A) সম্বোধন পদ (calling)  ✔
-   - B) কর্তা
-   - C) করণ
-   - _Why:_ It is used to call someone.
-10. Which karak is সকালে? **সকালে আমি স্কুলে যাই।**
-   - A) অধিকরণ (when)  ✔
-   - B) কর্তা
-   - C) অপাদান
-   - _Why:_ Time words ending in -এ are অধিকরণ (time).
-11. Which question finds the object (কর্ম)?
-   - A) কী বা কাকে? (what / whom)  ✔
-   - B) কে? (who)
-   - C) কোথায়? (where)
-   - _Why:_ Ask 'what / whom is done?'.
-12. Which karak is কলকাতা থেকে? **সে কলকাতা থেকে এসেছে।**
-   - A) অপাদান (from where)  ✔
-   - B) অধিকরণ
-   - C) কর্তা
-   - _Why:_ থেকে shows where it started.
+1. What question finds the কর্তা?
+   - A) কে? _(ke?)_  ✔
+   - B) কী? _(ki?)_
+   - C) কোথায়? _(kothay?)_
+   - _Why:_ কে? (who?) finds the doer.
+2. What question finds the কর্ম?
+   - A) কী? কাকে? _(ki? kake?)_  ✔
+   - B) কে? _(ke?)_
+   - C) কখন? _(kokhon?)_
+   - _Why:_ কী? কাকে? (what? whom?) finds the object.
+3. What question finds the করণ?
+   - A) কী দিয়ে? _(ki diye?)_  ✔
+   - B) কোথা থেকে? _(kotha theke?)_
+   - C) কে? _(ke?)_
+   - _Why:_ কী দিয়ে? (with what?) finds the tool.
+4. What question finds the অপাদান?
+   - A) কোথা থেকে? _(kotha theke?)_  ✔
+   - B) কোথায়? _(kothay?)_
+   - C) কে? _(ke?)_
+   - _Why:_ কোথা থেকে? (from where?) finds the source.
+5. What question finds the অধিকরণ?
+   - A) কোথায়? কখন? _(kothay? kokhon?)_  ✔
+   - B) কে? _(ke?)_
+   - C) কী দিয়ে? _(ki diye?)_
+   - _Why:_ কোথায়? কখন? (where? when?) finds the place or time.
+6. What question finds the সম্প্রদান?
+   - A) কাকে? কার জন্য? _(kake? kar jonyo?)_  ✔
+   - B) কোথায়? _(kothay?)_
+   - C) কী দিয়ে? _(ki diye?)_
+   - _Why:_ কাকে? কার জন্য? (to whom? for whom?) finds the receiver.
+7. In 'মা রান্না করেন', which karak is মা?
+   - A) কর্তা _(kortha)_  ✔
+   - B) কর্ম _(korma)_
+   - C) করণ _(koron)_
+   - _Why:_ মা is the doer.
+8. In 'আমি বই পড়ি', which karak is বই?
+   - A) কর্ম _(korma)_  ✔
+   - B) কর্তা _(kortha)_
+   - C) অধিকরণ _(adhikoron)_
+   - _Why:_ বই is what is read: the object.
+9. In 'আমি কলম দিয়ে লিখি', which karak is কলম দিয়ে?
+   - A) করণ _(koron)_  ✔
+   - B) কর্ম _(korma)_
+   - C) অপাদান _(apadan)_
+   - _Why:_ 'With what?' = কলম দিয়ে: the tool.
+10. In 'আমি বাজারে যাই', which karak is বাজারে?
+   - A) অধিকরণ _(adhikoron)_  ✔
+   - B) কর্তা _(kortha)_
+   - C) কর্ম _(korma)_
+   - _Why:_ 'Where?' = বাজারে: the place.
+11. In 'আমি বাড়ি থেকে আসছি', which karak is বাড়ি থেকে?
+   - A) অপাদান _(apadan)_  ✔
+   - B) অধিকরণ _(adhikoron)_
+   - C) করণ _(koron)_
+   - _Why:_ 'From where?' = বাড়ি থেকে: the source.
+12. In 'মা শিশুকে দুধ দিলেন', which karak is শিশুকে?
+   - A) সম্প্রদান _(sampradan)_  ✔
+   - B) কর্ম _(korma)_
+   - C) কর্তা _(kortha)_
+   - _Why:_ The one given to: the receiver. (দুধ is the object.)
+13. In 'বাবা আমার জন্য বই আনলেন', which karak is আমার জন্য?
+   - A) সম্প্রদান _(sampradan)_  ✔
+   - B) করণ _(koron)_
+   - C) অপাদান _(apadan)_
+   - _Why:_ 'For whom?' = আমার জন্য.
+14. In 'সকালে আমি চা খাই', which karak is সকালে?
+   - A) অধিকরণ _(adhikoron)_  ✔
+   - B) কর্তা _(kortha)_
+   - C) করণ _(koron)_
+   - _Why:_ 'When?' = সকালে: the time.
+15. In 'আমি চা খাই', which karak is চা?
+   - A) কর্ম _(korma)_  ✔
+   - B) কর্তা _(kortha)_
+   - C) করণ _(koron)_
+   - _Why:_ চা is what is drunk: the object.
+16. In 'আমরা ট্রেনে যাই', ট্রেনে is:
+   - A) করণ (by what means) _(koron)_  ✔
+   - B) কর্তা _(kortha)_
+   - C) কর্ম _(korma)_
+   - _Why:_ 'By what means?' = ট্রেনে: করণ.
+17. In 'গাছ থেকে পাতা পড়ে', which karak is পাতা?
+   - A) কর্তা _(kortha)_  ✔
+   - B) কর্ম _(korma)_
+   - C) অপাদান _(apadan)_
+   - _Why:_ Who or what falls? The leaf: the doer.
+18. Which word marks the করণ?
+   - A) দিয়ে _(diye)_  ✔
+   - B) থেকে _(theke)_
+   - C) জন্য _(jonyo)_
+   - _Why:_ দিয়ে marks the tool.
+19. Which word marks the অপাদান?
+   - A) থেকে _(theke)_  ✔
+   - B) দিয়ে _(diye)_
+   - C) জন্য _(jonyo)_
+   - _Why:_ থেকে marks the source.
+20. Which word marks the সম্প্রদান ('for')?
+   - A) জন্য _(jonyo)_  ✔
+   - B) থেকে _(theke)_
+   - C) দিয়ে _(diye)_
+   - _Why:_ জন্য means 'for'.
+21. Which word fills the blank? **আমি রামকে ___ দেখলাম।**
+   - A) বাজারে _(bajare)_  ✔
+   - B) বাজার _(bajar)_
+   - C) বাজারকে _(bajarke)_
+   - _Why:_ 'At the market' is the place: বাজারে.
+22. Which word fills the blank? **সে ___ দিয়ে লিখল।**
+   - A) কলম _(kolom)_  ✔
+   - B) কলমে _(kolome)_
+   - C) কলমের _(kolomer)_
+   - _Why:_ দিয়ে comes straight after the noun: কলম দিয়ে.
+23. Which word fills the blank? **ট্রেন হাওড়া ___ ছাড়ে।**
+   - A) থেকে _(theke)_  ✔
+   - B) দিয়ে _(diye)_
+   - C) জন্য _(jonyo)_
+   - _Why:_ The source needs থেকে.
+24. Which word fills the blank? **এটা মায়ের ___।**
+   - A) জন্য _(jonyo)_  ✔
+   - B) থেকে _(theke)_
+   - C) দিয়ে _(diye)_
+   - _Why:_ 'For mother' needs জন্য.
+25. Which sentence is correct?
+   - A) আমি রামকে দেখলাম। _(ami ramke dekhlam.)_  ✔
+   - B) আমি রাম দেখলাম। _(ami ram dekhlam.)_
+   - C) আমি রামের দেখলাম। _(ami ramer dekhlam.)_
+   - _Why:_ A person as the object takes -কে.
+26. Which sentence is correct?
+   - A) আমি বই পড়ি। _(ami boi pori.)_  ✔
+   - B) আমি বইকে পড়ি। _(ami boike pori.)_
+   - C) আমি বইয়ে পড়ি। _(ami boiye pori.)_
+   - _Why:_ An ordinary thing as the object takes no ending.
 
 ---
 
-# বিভক্তি · Bibhokti · Case endings
+# বিভক্তি · Bibhakti · Bibhakti: case endings and little words
 
-_The seven endings and little words that mark a noun, and how they change with the last sound of the noun._
+_The seven bibhaktis: the endings and small words that go after a noun to show its karak. How each one is formed, when to use it, and what the little words after nouns mean._
 
-## The seven bibhakti
+## What is bibhakti?
 
-বিভক্তি (bibhokti) is the ending or marker added to a noun to show its karak. Karak is the job; bibhakti is the mark. Traditional grammar counts seven bibhakti.
+বিভক্তি (bibhakti) is the ending or small word that is added to a noun or pronoun to show what job it does in the sentence. The job is called the কারক (karak), and the ending that shows it is the বিভক্তি. Karak is the role; bibhakti is how the role is written.
 
-| Bibhakti | Marker | Usually shows | Example |
+Traditional grammar counts seven bibhaktis, named by number: প্রথমা (first), দ্বিতীয়া (second), তৃতীয়া (third), চতুর্থী (fourth), পঞ্চমী (fifth), ষষ্ঠী (sixth), সপ্তমী (seventh). Here they are with the markers each one uses.
+
+| Bibhakti | English name | Usual markers | Shows | Example |
+|---|---|---|---|---|
+| প্রথমা _(prothoma)_ | nominative | no ending (sometimes -রা, -ই) | the doer (কর্তা) | রাম যায়। _(ram jay.)_ |
+| দ্বিতীয়া _(ditiya)_ | objective (accusative) | -কে (for people); none for things | the object (কর্ম) | আমি রামকে দেখলাম। _(ami ramke dekhlam.)_ |
+| তৃতীয়া _(tritiya)_ | instrumental | দিয়ে, দ্বারা, -এ | the tool (করণ) | কলম দিয়ে লিখি। _(kolom diye likhi.)_ |
+| চতুর্থী _(chaturthi)_ | dative | -কে, জন্য | the receiver (সম্প্রদান) | গরিবকে দিলাম। _(goribke dilam.)_ |
+| পঞ্চমী _(ponchomi)_ | ablative | থেকে, হতে, চেয়ে | the source (অপাদান) | বাড়ি থেকে আসি। _(bari theke ashi.)_ |
+| ষষ্ঠী _(shoshthi)_ | genitive | -র, -এর | belonging (সম্বন্ধ) | রামের বই। _(ramer boi.)_ |
+| সপ্তমী _(soptomi)_ | locative | -এ, -তে, -য় | place and time (অধিকরণ) | বাজারে যাই। _(bajare jai.)_ |
+
+> **Note:** The names and the exact grouping differ a little between textbooks. Some books combine the second and fourth, because both use -কে. Follow your teacher's table when it differs from this one.
+
+| Karak (the job) | Bibhakti (the ending) | Question |
+|---|---|---|
+| কর্তা _(kortha)_ | প্রথমা _(prothoma)_ | কে? |
+| কর্ম _(korma)_ | দ্বিতীয়া _(ditiya)_ | কাকে? কী? |
+| করণ _(koron)_ | তৃতীয়া _(tritiya)_ | কী দিয়ে? |
+| সম্প্রদান _(sampradan)_ | চতুর্থী _(chaturthi)_ | কাকে? কার জন্য? |
+| অপাদান _(apadan)_ | পঞ্চমী _(ponchomi)_ | কোথা থেকে? |
+| সম্বন্ধ _(sombondho)_ | ষষ্ঠী _(shoshthi)_ | কার? |
+| অধিকরণ _(adhikoron)_ | সপ্তমী _(soptomi)_ | কোথায়? কখন? |
+
+## How the endings attach to a noun
+
+The ending you add depends on how the noun ends. Learn the three groups: nouns that end in a consonant, nouns that end in a vowel sign (-ি, -ী, -ু, -ে), and nouns that end in -া. A few common words are irregular, and they are listed in the table.
+
+**Endings added to common nouns**
+
+| Noun | Of (-র / -এর) | In / at (-এ / -তে / -য়) | To / for a person (-কে) | From (থেকে) |
+|---|---|---|---|---|
+| ঘর (room) _(ghor)_ | ঘরের _(ghorer)_ | ঘরে _(ghore)_ | - | ঘর থেকে _(ghor theke)_ |
+| বাজার (market) _(bajar)_ | বাজারের _(bajarer)_ | বাজারে _(bajare)_ | - | বাজার থেকে _(bajar theke)_ |
+| স্কুল (school) _(skul)_ | স্কুলের _(skuler)_ | স্কুলে _(skule)_ | - | স্কুল থেকে _(skul theke)_ |
+| জল (water) _(jol)_ | জলের _(joler)_ | জলে _(jole)_ | - | জল থেকে _(jol theke)_ |
+| গাছ (tree) _(gachh)_ | গাছের _(gachher)_ | গাছে _(gachhe)_ | - | গাছ থেকে _(gachh theke)_ |
+| বাড়ি (house) _(bari)_ | বাড়ির _(barir)_ | বাড়িতে _(barite)_ | - | বাড়ি থেকে _(bari theke)_ |
+| নদী (river) _(nodi)_ | নদীর _(nodir)_ | নদীতে _(nodite)_ | - | নদী থেকে _(nodi theke)_ |
+| পাখি (bird) _(pakhi)_ | পাখির _(pakhir)_ | পাখিতে _(pakhite)_ | পাখিকে _(pakhike)_ | পাখি থেকে _(pakhi theke)_ |
+| রাস্তা (road) _(rasta)_ | রাস্তার _(rastar)_ | রাস্তায় _(rastay)_ | - | রাস্তা থেকে _(rasta theke)_ |
+| কলকাতা (Kolkata) _(kolkata)_ | কলকাতার _(kolkatar)_ | কলকাতায় _(kolkatay)_ | - | কলকাতা থেকে _(kolkata theke)_ |
+| টাকা (money) _(taka)_ | টাকার _(takar)_ | টাকায় _(takay)_ | - | টাকা থেকে _(taka theke)_ |
+| বই (book) _(boi)_ | বইয়ের _(boiyer)_ | বইয়ে _(boiye)_ | - | বই থেকে _(boi theke)_ |
+| ছেলে (boy) _(chhele)_ | ছেলের _(chheler)_ | - | ছেলেকে _(chheleke)_ | ছেলের কাছ থেকে _(chheler kachh theke)_ |
+| মেয়ে (girl) _(meye)_ | মেয়ের _(meyer)_ | - | মেয়েকে _(meyeke)_ | মেয়ের কাছ থেকে _(meyer kachh theke)_ |
+| মা (mother) _(ma)_ | মায়ের _(mayer)_ | - | মাকে _(make)_ | মায়ের কাছ থেকে _(mayer kachh theke)_ |
+| বাবা (father) _(baba)_ | বাবার _(babar)_ | - | বাবাকে _(babake)_ | বাবার কাছ থেকে _(babar kachh theke)_ |
+| বন্ধু (friend) _(bondhu)_ | বন্ধুর _(bondhur)_ | - | বন্ধুকে _(bondhuke)_ | বন্ধুর কাছ থেকে _(bondhur kachh theke)_ |
+| শিক্ষক (teacher) _(shikkhok)_ | শিক্ষকের _(shikkhoker)_ | - | শিক্ষককে _(shikkhokke)_ | শিক্ষকের কাছ থেকে _(shikkhoker kachh theke)_ |
+
+> **Note:** Places rarely take -কে (the object ending), and people rarely take the locative -এ / -তে. That is why the table leaves those cells empty.
+
+## প্রথমা: the doer, no ending
+
+The first bibhakti (প্রথমা, nominative) marks the doer (কর্তা). It usually has no ending at all. The doer just stands in front of the verb. You can add -রা to a group of people, -ই for emphasis, or -টা / -টি for 'the'.
+
+**No ending on the doer**
+
+- রাম বাজারে যায়। _(ram bajare jay.)_: Ram goes to the market.
+- ছেলেরা মাঠে খেলছে। _(chhelera mathe khelchhe.)_: The boys are playing in the field.
+- শিক্ষকরা পড়ান। _(shikkhokra poran.)_: Teachers teach.
+- সে-ই এটা করেছে। _(she-i eta korechhe.)_: It was he who did this.
+- বইটা টেবিলে আছে। _(boita tebile achhe.)_: The book is on the table.
+- মেয়েটি গান গাইছে। _(meyeti gan gaichhe.)_: The girl is singing.
+- আমরা সবাই বাংলা শিখছি। _(amra shobai bangla shikhchhi.)_: We are all learning Bengali.
+- পাখিরা আকাশে ওড়ে। _(pakhira akashe ore.)_: Birds fly in the sky.
+
+## দ্বিতীয়া: the object, -কে
+
+The second bibhakti (দ্বিতীয়া, objective) marks the object (কর্ম). People and animals take -কে. Things take no ending, unless you single out one definite thing (বইটাকে).
+
+| Pronoun / noun | Object form |
+|---|---|
+| আমি _(ami)_ | আমাকে _(amake)_ |
+| তুমি _(tumi)_ | তোমাকে _(tomake)_ |
+| আপনি _(apni)_ | আপনাকে _(apnake)_ |
+| সে _(she)_ | তাকে _(take)_ |
+| আমরা _(amra)_ | আমাদের _(amader)_ |
+| তারা _(tara)_ | তাদের _(tader)_ |
+| রাম _(ram)_ | রামকে _(ramke)_ |
+| কে (who) _(ke)_ | কাকে (whom) _(kake)_ |
+
+**-কে for people**
+
+- আমি তোমাকে দেখলাম। _(ami tomake dekhlam.)_: I saw you.
+- মা শিশুকে ডাকলেন। _(ma shishuke daklen.)_: Mother called the baby.
+- তুমি কাকে ডাকছ? _(tumi kake dakchho?)_: Whom are you calling?
+- শিক্ষক ছাত্রদের বকলেন। _(shikkhok chhatroder boklen.)_: The teacher scolded the students.
+- আমি বইটা পড়ি। _(ami boita pori.)_: I read the book.
+- সে কুকুরটাকে খাওয়াল। _(she kukurtake khaoalo.)_: He / she fed the dog.
+- আমরা আপনাকে ভালোবাসি। _(amra apnake bhalobashi.)_: We love you.
+- আমি তাকে চিনি। _(ami take chini.)_: I know him / her.
+- মা আমাকে ডাকছেন। _(ma amake dakchhen.)_: Mother is calling me.
+- আমি এই গানটা শুনছি। _(ami ei ganta shunchhi.)_: I am listening to this song.
+
+## তৃতীয়া: the tool, দিয়ে
+
+The third bibhakti (তৃতীয়া, instrumental) marks the tool or means (করণ). It uses দিয়ে after the noun, or the ending -এ / -য়, or the formal word দ্বারা.
+
+**With what?**
+
+- আমি কলম দিয়ে লিখি। _(ami kolom diye likhi.)_: I write with a pen.
+- সে হাত দিয়ে খায়। _(she hat diye khay.)_: He / she eats with the hand.
+- আমরা চোখে দেখি। _(amra chokhe dekhi.)_: We see with our eyes.
+- মা ছুরি দিয়ে ফল কাটলেন। _(ma chhuri diye phol katlen.)_: Mother cut the fruit with a knife.
+- সে চাবি দিয়ে দরজা খুলল। _(she chabi diye dorja khulolo.)_: He / she opened the door with a key.
+- আমি ট্রেনে যাব। _(ami trene jabo.)_: I will go by train.
+- তিনি কলম দ্বারা লিখলেন। _(tini kolom dwara likhlen.)_: He / she wrote with a pen. (formal)
+- সে সাবান দিয়ে হাত ধুল। _(she saban diye hat dhulo.)_: He / she washed the hands with soap.
+
+## চতুর্থী: the receiver, -কে and জন্য
+
+The fourth bibhakti (চতুর্থী, dative) marks the one to whom something is given or for whom it is done (সম্প্রদান). It uses -কে for the receiver, and জন্য after the possessive for 'for'. In many books it overlaps with the second bibhakti, since both can use -কে.
+
+**To and for**
+
+- আমি বন্ধুকে বই দিলাম। _(ami bondhuke boi dilam.)_: I gave a book to my friend.
+- মা শিশুকে দুধ দিলেন। _(ma shishuke dudh dilen.)_: Mother gave milk to the baby.
+- আমি গরিবকে টাকা দিলাম। _(ami goribke taka dilam.)_: I gave money to the poor man.
+- এটা তোমার জন্য। _(eta tomar jonyo.)_: This is for you.
+- বাবা আমার জন্য জামা আনলেন। _(baba amar jonyo jama anlen.)_: Father brought a shirt for me.
+- আমরা সবার জন্য খাবার রান্না করলাম। _(amra shobar jonyo khabar ranna korlam.)_: We cooked food for everyone.
+- সে মায়ের জন্য ওষুধ কিনল। _(she mayer jonyo oshudh kinlo.)_: He / she bought medicine for his / her mother.
+- কিসের জন্য এসেছ? _(kisher jonyo eshechho?)_: What have you come for?
+
+## পঞ্চমী: the source, থেকে
+
+The fifth bibhakti (পঞ্চমী, ablative) marks the source or the starting point (অপাদান). It uses থেকে after the noun, and also হতে in writing. It marks comparison too, with চেয়ে after the possessive form.
+
+**From**
+
+- আমি বাড়ি থেকে আসছি। _(ami bari theke aschhi.)_: I am coming from home.
+- সে স্কুল থেকে ফিরল। _(she skul theke phirlo.)_: He / she returned from school.
+- গাছ থেকে ফল পড়ল। _(gachh theke phol porlo.)_: A fruit fell from the tree.
+- ট্রেন হাওড়া থেকে ছাড়ে। _(tren haora theke chhare.)_: The train leaves from Howrah.
+- আমি বন্ধুর কাছ থেকে বই পেলাম। _(ami bondhur kachh theke boi pelam.)_: I got a book from a friend.
+- সে আজ সকাল থেকে কাজ করছে। _(she aj shokal theke kaj korchhe.)_: He / she has been working since this morning.
+- কলকাতা থেকে দিল্লি অনেক দূর। _(kolkata theke dilli onek dur.)_: Delhi is very far from Kolkata.
+
+To say 'more than', put the thing compared after the possessive form and then চেয়ে (than). The adjective follows.
+
+**More than**
+
+- রামের চেয়ে শ্যাম লম্বা। _(ramer cheye shyam lomba.)_: Shyam is taller than Ram.
+- আমার চেয়ে সে ভালো গাইতে পারে। _(amar cheye she bhalo gaite pare.)_: He / she can sing better than I.
+- গরমের চেয়ে শীত ভালো। _(gormer cheye shit bhalo.)_: Winter is better than summer.
+- এটা ওটার চেয়ে সস্তা। _(eta otar cheye shosta.)_: This is cheaper than that.
+
+## ষষ্ঠী: belonging, -র and -এর
+
+The sixth bibhakti (ষষ্ঠী, genitive) shows belonging or relation, like English 'of' or '’s'. It ends in -র after a vowel (বাড়ির) and -এর after a consonant (ঘরের). The possessive pronouns (আমার, তোমার, তার) are genitives too. The owner comes before the thing owned.
+
+**Whose?**
+
+- এটা রামের বই। _(eta ramer boi.)_: This is Ram's book.
+- আমার বন্ধুর বাড়ি কলকাতায়। _(amar bondhur bari kolkatay.)_: My friend's house is in Kolkata.
+- গাছের পাতা সবুজ। _(gachher pata shobuj.)_: The tree's leaves are green.
+- মায়ের নাম অনিতা। _(mayer nam anita.)_: Mother's name is Anita.
+- ঘরের দরজা খোলা। _(ghorer dorja khola.)_: The door of the room is open.
+- বইয়ের দাম কত? _(boiyer dam koto?)_: What is the price of the book?
+- আমাদের স্কুলের শিক্ষক ভালো। _(amader skuler shikkhok bhalo.)_: The teachers of our school are good.
+- তার ভাইয়ের নাম রাহুল। _(tar bhaiyer nam rahul.)_: His / her brother's name is Rahul.
+
+**One after another**
+
+- আমার বন্ধুর বাড়ির ছাদ। _(amar bondhur barir chhad.)_: The roof of my friend's house.
+- শিক্ষকের মেয়ের বইয়ের নাম। _(shikkhoker meyer boiyer nam.)_: The name of the teacher's daughter's book.
+
+> **Note:** With the ending -র/-এর, the owner changes and the thing owned stays the same. With আমার, the same form works for 'my' with every noun: আমার বই, আমার ঘর, আমার বন্ধুরা.
+
+## সপ্তমী: place and time, -এ / -তে / -য়
+
+The seventh bibhakti (সপ্তমী, locative) marks the place or the time (অধিকরণ): where something happens or when. The ending is -এ after a consonant, -তে after a vowel, and -য় after -া. It also marks a state or condition.
+
+**Where, when, in what state**
+
+- আমি বাজারে যাই। _(ami bajare jai.)_: I go to the market.
+- সে ঘরে আছে। _(she ghore achhe.)_: He / she is in the room.
+- আমরা বাড়িতে থাকি। _(amra barite thaki.)_: We stay at home.
+- তারা রাস্তায় হাঁটছে। _(tara rastay hatchhe.)_: They are walking on the road.
+- সে কলকাতায় থাকে। _(she kolkatay thake.)_: He / she lives in Kolkata.
+- বই টেবিলে আছে। _(boi tebile achhe.)_: The book is on the table.
+- পাখি গাছে বসে আছে। _(pakhi gachhe boshe achhe.)_: The bird is sitting on the tree.
+- আমি সকালে চা খাই। _(ami shokale cha khai.)_: I drink tea in the morning.
+- সোমবারে স্কুল খোলে। _(shombare skul khole.)_: School opens on Monday.
+- সে বিপদে পড়েছে। _(she bipode poreche.)_: He / she is in trouble.
+
+For more precise places, a possessive noun plus a position word is used: ঘরের ভিতরে (inside the room), টেবিলের উপর (on the table). See the next section.
+
+## Little words after nouns
+
+Where English puts a preposition before the noun ('on the table'), Bengali puts a small word after it ('table on'). These are called অনুসর্গ (onushorgo), postpositions. Some of them take the genitive (-র / -এর) before them. Others follow the plain noun.
+
+**Common postpositions**
+
+| Word | Meaning | Goes after | Example |
 |---|---|---|---|
-| প্রথমা (1st) _(prothoma)_ | no ending | কর্তা (subject) | ছেলে যায়। _(chhele jay.)_ |
-| দ্বিতীয়া (2nd) _(ditiyo)_ | -কে | কর্ম (object) | ছেলেকে ডাকো। _(chheleke dako.)_ |
-| তৃতীয়া (3rd) _(tritiyo)_ | দিয়ে, দ্বারা | করণ (with what) | কলম দিয়ে লেখো। _(kolom diye lekho.)_ |
-| চতুর্থী (4th) _(choturthi)_ | -কে, জন্য | সম্প্রদান (for whom) | তোমার জন্য এনেছি। _(tomar jonyo enechhi.)_ |
-| পঞ্চমী (5th) _(pocchomi)_ | থেকে, হতে | অপাদান (from) | বাড়ি থেকে এসেছি। _(bari theke eshechhi.)_ |
-| ষষ্ঠী (6th) _(shoshthi)_ | -র, -এর | সম্বন্ধ (of) | বাড়ির দরজা _(barir dorja)_ |
-| সপ্তমী (7th) _(soptomi)_ | -এ, -তে, -য় | অধিকরণ (in, at, on) | ঘরে আছি। _(ghore achhi.)_ |
+| উপর / উপরে _(upor / upore)_ | on, above | genitive (-র / -এর) | টেবিলের উপর _(tebiler upor)_ |
+| নিচে _(niche)_ | under, below | genitive | গাছের নিচে _(gachher niche)_ |
+| ভিতরে / মধ্যে _(bhitore / moddhe)_ | in, inside | genitive | ঘরের ভিতরে _(ghorer bhitore)_ |
+| বাইরে _(baire)_ | outside | genitive | বাড়ির বাইরে _(barir baire)_ |
+| সামনে _(samne)_ | in front of | genitive | স্কুলের সামনে _(skuler samne)_ |
+| পিছনে _(pichhone)_ | behind | genitive | বাড়ির পিছনে _(barir pichhone)_ |
+| পাশে _(pashe)_ | beside | genitive | আমার পাশে _(amar pashe)_ |
+| কাছে _(kachhe)_ | near, with | genitive | বাড়ির কাছে _(barir kachhe)_ |
+| সঙ্গে / সাথে _(shonge / shathe)_ | with (together) | genitive | বন্ধুর সঙ্গে _(bondhur shonge)_ |
+| জন্য _(jonyo)_ | for | genitive | মায়ের জন্য _(mayer jonyo)_ |
+| মতো _(moto)_ | like | genitive | তোমার মতো _(tomar moto)_ |
+| চেয়ে _(cheye)_ | than | genitive | আমার চেয়ে _(amar cheye)_ |
+| থেকে _(theke)_ | from, since | plain noun | বাড়ি থেকে _(bari theke)_ |
+| দিয়ে _(diye)_ | with, by, through | plain noun | কলম দিয়ে _(kolom diye)_ |
+| পর্যন্ত _(porjonto)_ | until, as far as | plain noun | সকাল পর্যন্ত _(shokal porjonto)_ |
+| ছাড়া _(chhara)_ | without, except | plain noun | জল ছাড়া _(jol chhara)_ |
+| দিকে _(dike)_ | towards | genitive | স্টেশনের দিকে _(steshoner dike)_ |
 
-> **Note:** The same marker can serve two bibhakti (-কে is both 2nd and 4th). Meaning decides which one you have. Calling a person (ও রাম, হে ঈশ্বর) is the সম্বোধন, listed outside the seven.
+**In sentences**
 
-## Belonging: -র and -এর
+- বইটা টেবিলের উপর আছে। _(boita tebiler upor achhe.)_: The book is on the table.
+- বিড়াল গাছের নিচে বসে আছে। _(biral gachher niche boshe achhe.)_: The cat is sitting under the tree.
+- সে ঘরের ভিতরে আছে। _(she ghorer bhitore achhe.)_: He / she is inside the room.
+- আমি বন্ধুর সঙ্গে সিনেমা দেখলাম। _(ami bondhur shonge sinema dekhlam.)_: I saw a film with a friend.
+- স্কুলের সামনে একটা দোকান আছে। _(skuler samne ekta dokan achhe.)_: There is a shop in front of the school.
+- আমি সকাল পর্যন্ত পড়লাম। _(ami shokal porjonto porlam.)_: I studied until morning.
+- জল ছাড়া মানুষ বাঁচে না। _(jol chhara manush banche na.)_: People cannot live without water.
+- সে ছাতা ছাড়া বেরোল। _(she chhata chhara berolo.)_: He / she went out without an umbrella.
+- তুমি স্টেশনের দিকে যাও। _(tumi steshoner dike jao.)_: Go towards the station.
+- তার মতো গান কেউ গাইতে পারে না। _(tar moto gan keu gaite pare na.)_: Nobody can sing like him / her.
 
-To say 'of' or 'belonging to', add -র after a vowel sound and -এর after a consonant.
+## Bibhakti with plurals
 
-| Noun | Ends in | Of the noun |
+The plural endings and the case endings can be combined. The plural -রা marks the doer. The ending -দের covers both the object and 'of' for people: ছেলেদের means 'the boys' (object) and 'of the boys' (genitive). For things, add -গুলো first and then the case ending: বইগুলোর (of the books), বইগুলোতে (in the books).
+
+| Case | Singular | Plural |
 |---|---|---|
-| ছেলে (boy) _(chhele)_ | vowel | ছেলের _(chheler)_ |
-| বাড়ি (house) _(bari)_ | vowel | বাড়ির _(barir)_ |
-| নদী (river) _(nodi)_ | vowel | নদীর _(nodir)_ |
-| বন্ধু (friend) _(bondhu)_ | vowel | বন্ধুর _(bondhur)_ |
-| মা (mother) _(ma)_ | vowel -া | মায়ের (also মার) _(mayer (also mar))_ |
-| ঘর (room) _(ghor)_ | consonant | ঘরের _(ghorer)_ |
-| গাছ (tree) _(gachh)_ | consonant | গাছের _(gachher)_ |
-| স্কুল (school) _(skul)_ | consonant | স্কুলের _(skuler)_ |
-| কলম (pen) _(kolom)_ | consonant | কলমের _(kolomer)_ |
+| Doer (প্রথমা) | ছেলে _(chhele)_ | ছেলেরা _(chhelera)_ |
+| Object (দ্বিতীয়া) | ছেলেকে _(chheleke)_ | ছেলেদের _(chheleder)_ |
+| Of (ষষ্ঠী) | ছেলের _(chheler)_ | ছেলেদের _(chheleder)_ |
+| Doer (things) | বই _(boi)_ | বইগুলো _(boigulo)_ |
+| Of (things) | বইয়ের _(boiyer)_ | বইগুলোর _(boigulor)_ |
+| In (things) | বইয়ে _(boiye)_ | বইগুলোতে _(boigulote)_ |
 
-- এটা ছেলের বই। _(eta chheler boi.)_: This is the boy's book.
-- এটা বাড়ির দরজা। _(eta barir dorja.)_: This is the door of the house.
-- এটা গাছের ডাল। _(eta gachher dal.)_: This is a branch of the tree.
+**Plurals and endings**
 
-## Place: -এ, -তে, -য়
-
-To say 'in', 'at' or 'on' a place or time, add -এ after a consonant, -তে after the vowels -ি and -ী / -ু, and -য় after -া.
-
-| Noun | Ends in | In / at the noun |
-|---|---|---|
-| ঘর (room) _(ghor)_ | consonant | ঘরে _(ghore)_ |
-| স্কুল (school) _(skul)_ | consonant | স্কুলে _(skule)_ |
-| বাজার (market) _(bajar)_ | consonant | বাজারে _(bajare)_ |
-| মাঠ (field) _(math)_ | consonant | মাঠে _(mathe)_ |
-| বাড়ি (house) _(bari)_ | vowel -ি | বাড়িতে _(barite)_ |
-| নদী (river) _(nodi)_ | vowel -ী | নদীতে _(nodite)_ |
-| ঢাকা (Dhaka) _(dhaka)_ | -া | ঢাকায় _(dhakay)_ |
-| কলকাতা (Kolkata) _(kolkata)_ | -া | কলকাতায় _(kolkatay)_ |
-| রাস্তা (road) _(rasta)_ | -া | রাস্তায় _(rastay)_ |
-
-- আমি বাড়িতে আছি। _(ami barite achhi.)_: I am at home.
-- সে স্কুলে পড়ে। _(she skule pore.)_: He / she studies at school.
-- আমরা কলকাতায় থাকি। _(amra kolkatay thaki.)_: We live in Kolkata.
-
-## Objects: -কে or nothing
-
-Add -কে to a noun that names a person or an animal when it is the object: মাকে, বন্ধুকে, কুকুরকে. A thing you do something to usually takes no ending: আমি বই পড়ি, আমি ভাত খাই.
-
-- আমি মাকে ডাকলাম। _(ami make daklam.)_: I called mother.
-- সে বন্ধুকে চিঠি লিখল। _(she bondhuke chithi likhlo.)_: He / she wrote a letter to a friend.
-- আমি বই পড়ি। _(ami boi pori.)_: I read a book. (no ending on বই)
-
-## Little words after the noun
-
-Bengali often uses small words after a noun instead of an ending. They are called অনুসর্গ (onushorgo), postpositions. Words like জন্য, সঙ্গে, মধ্যে, কাছে usually follow the -র form of the noun. থেকে, দিয়ে and পর্যন্ত follow the plain noun.
-
-| Word | Meaning | Example |
-|---|---|---|
-| জন্য _(jonyo)_ | for | তোমার জন্য _(tomar jonyo)_ |
-| সঙ্গে _(songe)_ | with (a person) | বন্ধুর সঙ্গে _(bondhur songe)_ |
-| মধ্যে _(moddhe)_ | inside, among | ঘরের মধ্যে _(ghorer moddhe)_ |
-| কাছে _(kachhe)_ | near, with (someone) | আমার কাছে _(amar kachhe)_ |
-| থেকে _(theke)_ | from, since | স্কুল থেকে _(skul theke)_ |
-| দিয়ে _(diye)_ | with, by means of | কলম দিয়ে _(kolom diye)_ |
-| পর্যন্ত _(porjonto)_ | up to, until | সকাল পর্যন্ত _(shokal porjonto)_ |
+- ছেলেরা মাঠে খেলছে। _(chhelera mathe khelchhe.)_: The boys are playing in the field.
+- শিক্ষক ছেলেদের পড়ান। _(shikkhok chheleder poran.)_: The teacher teaches the boys.
+- ছেলেদের বই টেবিলে আছে। _(chheleder boi tebile achhe.)_: The boys' books are on the table.
+- বইগুলোর দাম বেশি। _(boigulor dam beshi.)_: The price of the books is high.
+- আমরা মেয়েদের গান শুনলাম। _(amra meyeder gan shunlam.)_: We listened to the girls' song.
 
 ## Practice questions
 
-1. Choose 'of the room'. **এটা ___ দরজা।**
-   - A) ঘরের _(ghorer)_  ✔
-   - B) ঘরে _(ghore)_
-   - C) ঘরকে _(ghorke)_
-   - _Why:_ -এর marks belonging after a consonant.
-2. Choose 'of the house'. **এটা ___ দরজা।**
+1. Which bibhakti shows the doer?
+   - A) প্রথমা _(prothoma)_  ✔
+   - B) দ্বিতীয়া _(ditiya)_
+   - C) সপ্তমী _(soptomi)_
+   - _Why:_ প্রথমা (nominative) marks the doer.
+2. Which bibhakti shows place and time?
+   - A) সপ্তমী _(soptomi)_  ✔
+   - B) ষষ্ঠী _(shoshthi)_
+   - C) তৃতীয়া _(tritiya)_
+   - _Why:_ সপ্তমী (locative): -এ / -তে / -য়.
+3. Which bibhakti shows belonging ('of')?
+   - A) ষষ্ঠী _(shoshthi)_  ✔
+   - B) পঞ্চমী _(ponchomi)_
+   - C) চতুর্থী _(chaturthi)_
+   - _Why:_ ষষ্ঠী (genitive): -র / -এর.
+4. Which bibhakti shows the source ('from')?
+   - A) পঞ্চমী _(ponchomi)_  ✔
+   - B) ষষ্ঠী _(shoshthi)_
+   - C) সপ্তমী _(soptomi)_
+   - _Why:_ পঞ্চমী (ablative): থেকে.
+5. Which bibhakti shows the tool ('with')?
+   - A) তৃতীয়া _(tritiya)_  ✔
+   - B) দ্বিতীয়া _(ditiya)_
+   - C) চতুর্থী _(chaturthi)_
+   - _Why:_ তৃতীয়া (instrumental): দিয়ে.
+6. Which bibhakti shows the object?
+   - A) দ্বিতীয়া _(ditiya)_  ✔
+   - B) প্রথমা _(prothoma)_
+   - C) ষষ্ঠী _(shoshthi)_
+   - _Why:_ দ্বিতীয়া (objective): -কে.
+7. Which bibhakti is used in 'আমি বাজারে যাই' for বাজারে?
+   - A) সপ্তমী _(soptomi)_  ✔
+   - B) প্রথমা _(prothoma)_
+   - C) ষষ্ঠী _(shoshthi)_
+   - _Why:_ বাজারে is the place: সপ্তমী.
+8. Which bibhakti is 'রামের' in 'রামের বই'?
+   - A) ষষ্ঠী _(shoshthi)_  ✔
+   - B) সপ্তমী _(soptomi)_
+   - C) পঞ্চমী _(ponchomi)_
+   - _Why:_ -এর marks belonging: ষষ্ঠী.
+9. Which bibhakti is 'বাড়ি থেকে'?
+   - A) পঞ্চমী _(ponchomi)_  ✔
+   - B) সপ্তমী _(soptomi)_
+   - C) তৃতীয়া _(tritiya)_
+   - _Why:_ থেকে marks the source: পঞ্চমী.
+10. Which bibhakti is 'কলম দিয়ে'?
+   - A) তৃতীয়া _(tritiya)_  ✔
+   - B) পঞ্চমী _(ponchomi)_
+   - C) সপ্তমী _(soptomi)_
+   - _Why:_ দিয়ে marks the tool: তৃতীয়া.
+11. Which word fills the blank? **এটা ___ বই।**
+   - A) রামের _(ramer)_  ✔
+   - B) রামকে _(ramke)_
+   - C) রামে _(rame)_
+   - _Why:_ 'Ram's book' needs the genitive: রামের.
+12. Which word fills the blank? **আমি ___ দেখলাম।**
+   - A) রামকে _(ramke)_  ✔
+   - B) রামের _(ramer)_
+   - C) রামে _(rame)_
+   - _Why:_ A person as the object takes -কে.
+13. Which word fills the blank? **আমরা ___ থাকি।**
+   - A) বাড়িতে _(barite)_  ✔
+   - B) বাড়িকে _(barike)_
+   - C) বাড়িতে থেকে _(barite theke)_
+   - _Why:_ 'At home' needs the locative: বাড়িতে.
+14. Which word fills the blank? **সে ___ থাকে।**
+   - A) কলকাতায় _(kolkatay)_  ✔
+   - B) কলকাতাতে _(kolkatate)_
+   - C) কলকাতাকে _(kolkatake)_
+   - _Why:_ After -া the locative is -য়: কলকাতায়.
+15. Which word fills the blank? **এটা মায়ের ___।**
+   - A) জন্য _(jonyo)_  ✔
+   - B) থেকে _(theke)_
+   - C) দিয়ে _(diye)_
+   - _Why:_ 'For mother': মায়ের জন্য.
+16. Which word fills the blank? **আমি বাড়ি ___ আসছি।**
+   - A) থেকে _(theke)_  ✔
+   - B) জন্য _(jonyo)_
+   - C) সঙ্গে _(shonge)_
+   - _Why:_ 'From home': বাড়ি থেকে.
+17. Which word fills the blank? **আমি কলম ___ লিখি।**
+   - A) দিয়ে _(diye)_  ✔
+   - B) থেকে _(theke)_
+   - C) জন্য _(jonyo)_
+   - _Why:_ 'With a pen': কলম দিয়ে.
+18. Which word fills the blank? **বইটা টেবিলের ___ আছে।**
+   - A) উপর _(upor)_  ✔
+   - B) থেকে _(theke)_
+   - C) দিয়ে _(diye)_
+   - _Why:_ 'On the table': টেবিলের উপর.
+19. Which word fills the blank? **সে বন্ধুর ___ গেল।**
+   - A) সঙ্গে _(shonge)_  ✔
+   - B) থেকে _(theke)_
+   - C) দিয়ে _(diye)_
+   - _Why:_ 'With a friend': বন্ধুর সঙ্গে.
+20. Which word fills the blank? **___ চেয়ে শ্যাম লম্বা।**
+   - A) রামের _(ramer)_  ✔
+   - B) রাম _(ram)_
+   - C) রামকে _(ramke)_
+   - _Why:_ 'Than Ram': রামের চেয়ে.
+21. What is the 'of' form of বাড়ি (house)?
    - A) বাড়ির _(barir)_  ✔
    - B) বাড়িতে _(barite)_
    - C) বাড়িকে _(barike)_
-   - _Why:_ -র marks belonging after a vowel.
-3. Choose 'of mother'. **এটা ___ শাড়ি।**
-   - A) মায়ের _(mayer)_  ✔
-   - B) মাকে _(make)_
-   - C) মাতে _(mate)_
-   - _Why:_ মা takes -য়ের in the genitive.
-4. Choose 'in the room'. **আমি ___ আছি।**
-   - A) ঘরে _(ghore)_  ✔
-   - B) ঘরের _(ghorer)_
-   - C) ঘরতে _(ghorte)_
-   - _Why:_ -এ shows place after a consonant.
-5. Choose 'at home'. **আমি ___ আছি।**
-   - A) বাড়িতে _(barite)_  ✔
-   - B) বাড়ির _(barir)_
-   - C) বাড়িয় _(bariy)_
-   - _Why:_ After -ি, the place ending is -তে.
-6. Choose 'in Dhaka'. **আমি ___ থাকি।**
-   - A) ঢাকায় _(dhakay)_  ✔
-   - B) ঢাকাতে _(dhakate)_
-   - C) ঢাকার _(dhakar)_
-   - _Why:_ After -া, use -য়: ঢাকায়.
-7. Choose the right form. **আমি ___ ডাকলাম।**
-   - A) মাকে _(make)_  ✔
-   - B) মা _(ma)_
-   - C) মায়ের _(mayer)_
-   - _Why:_ A person who is the object takes -কে.
-8. Choose the natural form. **আমি ___ পড়ি।**
-   - A) বই _(boi)_  ✔
-   - B) বইকে _(boike)_
-   - C) বইয়ের _(boier)_
-   - _Why:_ A thing that is read usually takes no ending.
-9. Choose the right form. **___ সঙ্গে যাব।**
-   - A) বন্ধুর _(bondhur)_  ✔
-   - B) বন্ধু _(bondhu)_
-   - C) বন্ধুকে _(bondhuke)_
-   - _Why:_ সঙ্গে follows the -র form.
-10. Choose the right word. **স্কুল ___ এসেছি।**
-   - A) থেকে _(theke)_  ✔
-   - B) জন্য _(jonyo)_
-   - C) দিয়ে _(diye)_
-   - _Why:_ থেকে means 'from'.
-11. Choose the right word. **কলম ___ লিখি।**
-   - A) দিয়ে _(diye)_  ✔
-   - B) থেকে _(theke)_
-   - C) পর্যন্ত _(porjonto)_
-   - _Why:_ দিয়ে means 'with, by means of'.
-12. -কে is the ending of which bibhakti (the object)?
-   - A) দ্বিতীয়া (2nd)  ✔
-   - B) ষষ্ঠী (6th)
-   - C) সপ্তমী (7th)
-   - _Why:_ -কে marks the object, the second bibhakti.
-13. Which bibhakti shows belonging (-র / -এর)?
-   - A) ষষ্ঠী (6th)  ✔
-   - B) প্রথমা (1st)
-   - C) পঞ্চমী (5th)
-   - _Why:_ Belonging is the sixth bibhakti.
+   - _Why:_ After a vowel sign, 'of' is -র: বাড়ির. (বাড়িতে is 'in', বাড়িকে is the object.)
+22. What is the 'of' form of ঘর (room)?
+   - A) ঘরের _(ghorer)_  ✔
+   - B) ঘরে _(ghore)_
+   - C) ঘরকে _(ghorke)_
+   - _Why:_ After a consonant, 'of' is -এর: ঘরের.
+23. What is the 'in' form of রাস্তা (road)?
+   - A) রাস্তায় _(rastay)_  ✔
+   - B) রাস্তার _(rastar)_
+   - C) রাস্তাকে _(rastake)_
+   - _Why:_ After -া, 'in' is -য়: রাস্তায়. (রাস্তার is 'of'.)
+24. What is the 'of' form of বই (book)?
+   - A) বইয়ের _(boiyer)_  ✔
+   - B) বইয়ে _(boiye)_
+   - C) বইকে _(boike)_
+   - _Why:_ After the vowel ই, 'of' is -য়ের: বইয়ের.
+25. Which sentence is correct?
+   - A) টেবিলের উপর _(tebiler upor)_  ✔
+   - B) টেবিল উপর _(tebil upor)_
+   - C) টেবিলকে উপর _(tebilke upor)_
+   - _Why:_ উপর needs the genitive: টেবিলের উপর.
+26. Which sentence is correct?
+   - A) বাড়ি থেকে _(bari theke)_  ✔
+   - B) বাড়ির থেকে _(barir theke)_
+   - C) বাড়িকে থেকে _(barike theke)_
+   - _Why:_ থেকে follows the plain noun.
 
 ---
 
-# বচন · Bochon · Number & counting words
+# বচন · Bochon · Number: one, many and counting
 
-_One or many: plural endings, and the little words used when counting people and things._
+_Singular and plural: how to say 'a', 'the' and 'some', how to make plurals for people and for things, and how to count with the right counting word._
 
-## One and many
+## The board summary: four rules
 
-বচন (bochon) is number: একবচন (one) and বহুবচন (many). Bengali often leaves the plural out when the meaning is clear. The verb does not change for number: ছেলেটা স্কুলে যায়, ছেলেরা স্কুলে যায়।
+Bengali has two numbers. একবচন (ekbochon) is singular and বহুবচন (bohubochon) is plural. Four rules are enough for a first lesson.
 
-| Ending | Used for | Example | Plural |
+**Making the plural**
+
+| Rule | Singular | Plural |
+|---|---|---|
+| People: add -রা / -ra | ছেলে _(chhele)_ | ছেলেরা _(chhelera)_ |
+|  | মেয়ে _(meye)_ | মেয়েরা _(meyera)_ |
+|  | বন্ধু _(bondhu)_ | বন্ধুরা _(bondhura)_ |
+| Things and animals: add -গুলো / -gulo | বই _(boi)_ | বইগুলো _(boigulo)_ |
+|  | গাছ _(gachh)_ | গাছগুলো _(gachhgulo)_ |
+| Pronouns change completely | আমি _(ami)_ | আমরা _(amra)_ |
+|  | তুমি _(tumi)_ | তোমরা _(tomra)_ |
+|  | আপনি _(apni)_ | আপনারা _(apnara)_ |
+|  | সে _(se)_ | তারা _(tara)_ |
+
+## One or many: singular and plural
+
+বচন (bochon) means 'number': one or many. Singular is একবচন (ek-bochon, 'one-number') and plural is বহুবচন (bohu-bochon, 'many-number'). Bengali treats number more lightly than English. A plain noun can mean one or many, and the plural ending is used only when you need to be clear. The verb never changes for number.
+
+|  | Singular (একবচন) | Plural (বহুবচন) |
+|---|---|---|
+| a plain noun | বই _(boi)_ | বই (many) / বইগুলো _(boi / boigulo)_ |
+| with a count | একটা বই _(ekta boi)_ | তিনটে বই _(tinte boi)_ |
+| 'the' (definite) | বইটা _(boita)_ | বইগুলো _(boigulo)_ |
+| people | ছেলেটি _(chheleti)_ | ছেলেরা _(chhelera)_ |
+
+**One and many**
+
+- আমার একটা বই আছে। _(amar ekta boi achhe.)_: I have a book. (one)
+- আমার অনেক বই আছে। _(amar onek boi achhe.)_: I have many books. (a plain noun after 'many')
+- বইটা টেবিলে আছে। _(boita tebile achhe.)_: The book is on the table. (one, known)
+- বইগুলো টেবিলে আছে। _(boigulo tebile achhe.)_: The books are on the table. (many, known)
+- ছেলেটি পড়ছে। _(chheleti porchhe.)_: The boy is studying. (one)
+- ছেলেরা পড়ছে। _(chhelera porchhe.)_: The boys are studying. (many)
+- আমি আম খাই। _(ami am khai.)_: I eat mangoes. (in general)
+- আমি একটা আম খেলাম। _(ami ekta am khelam.)_: I ate a mango. (one)
+
+> **Note:** The verb stays the same: ছেলেটি পড়ছে (one boy is studying) and ছেলেরা পড়ছে (the boys are studying) both use পড়ছে. Only the noun, and the pronoun, show number: আমি → আমরা, সে → তারা.
+
+## Singular: 'a' and 'the'
+
+Bengali has no separate words for 'a' and 'the'. Instead it uses small endings on the noun, together with one (এক). A plain noun is general: বই (a book, books). To say 'one book' use একটা বই or একটি বই. To say 'the book' add -টা (spoken) or -টি (written, formal) to the noun: বইটা, বইটি.
+
+| Idea | How | Example | Meaning |
 |---|---|---|---|
-| -রা | people and living beings | ছেলে (boy) _(chhele)_ | ছেলেরা _(chhelera)_ |
-| -রা | people and living beings | মেয়ে (girl) _(meye)_ | মেয়েরা _(meyera)_ |
-| -গুলো / -গুলি | things, or particular animals | বই (book) _(boi)_ | বইগুলো _(boigulo)_ |
-| -গুলো / -গুলি | things, or particular animals | গাছ (tree) _(gachh)_ | গাছগুলো _(gachhgulo)_ |
-| -দের | object / belonging of people | ছেলে (boy) _(chhele)_ | ছেলেদের _(chheleder)_ |
+| general (a / any) | the plain noun | আমি বই পড়ি। _(ami boi pori.)_ | I read books / a book (in general) |
+| one, a certain | একটা / একটি + noun | আমি একটা বই পড়ি। _(ami ekta boi pori.)_ | I read a (one) book |
+| the (definite) | noun + -টা / -টি | আমি বইটা পড়ি। _(ami boita pori.)_ | I read the book |
+| this particular | এই + noun + -টা | এই বইটা ভালো। _(ei boita bhalo.)_ | This book is good |
 
-> **Note:** Words like সব (all), অনেক (many) and numbers already say 'many', so the noun stays plain: অনেক ছেলে, সব বই, দুটো বই.
+**Which ending?**
+
+| Ending | Use | Example |
+|---|---|---|
+| -টা _(-ta)_ | ordinary, spoken Bengali: the most common | বইটা, ছেলেটা _(boita, chheleta)_ |
+| -টি _(-ti)_ | writing, polite speech, small or dear things and people | বইটি, মেয়েটি _(boiti, meyeti)_ |
+| -খানা _(-khana)_ | flat things: books, cloth, letters | বইখানা, চিঠিখানা _(boikhana, chithikhana)_ |
+| -টুকু _(-tuku)_ | a small amount of something you cannot count | জলটুকু, দুধটুকু _(joltuku, dudhtuku)_ |
+
+**Definite nouns**
+
+- বইটা কোথায়? _(boita kothay?)_: Where is the book?
+- মেয়েটি গান গাইছে। _(meyeti gan gaichhe.)_: The girl is singing.
+- ঘরটা অনেক বড়। _(ghorta onek boro.)_: The room is very big.
+- কুকুরটা ঘুমাচ্ছে। _(kukurta ghumachchhe.)_: The dog is sleeping.
+- চিঠিখানা কে লিখেছে? _(chithikhana ke likhechhe?)_: Who wrote the letter?
+- জলটুকু খেয়ে নাও। _(joltuku kheye nao.)_: Drink up the little water.
+- এই ছেলেটা আমার ভাই। _(ei chheleta amar bhai.)_: This boy is my brother.
+- ওই বাড়িটা আমাদের। _(oi barita amader.)_: That house is ours.
+
+**One or a**
+
+- আমার একটা ভাই আছে। _(amar ekta bhai achhe.)_: I have a brother.
+- আমি একটা আম কিনলাম। _(ami ekta am kinlam.)_: I bought a mango.
+- সে একটি গান গাইল। _(she ekti gan gailo.)_: He / she sang a song.
+- একজন মানুষ এল। _(ekjon manush elo.)_: A person came.
+- আমাকে একটা কলম দাও। _(amake ekta kolom dao.)_: Give me a pen.
+- এক কাপ চা দিন। _(ek kap cha din.)_: Please give me a cup of tea.
+
+## Plural: -রা, -গুলো, -দের
+
+Bengali has several plural endings, and the choice depends on whether the noun is a person or a thing. For people use -রা (or -েরা after some words). For things and animals use -গুলো (or the literary -গুলি). In writing you also meet -সমূহ, -বৃন্দ and -গণ for formal groups.
+
+| Ending | Used with | Example | Meaning |
+|---|---|---|---|
+| -রা / -েরা _(-ra / -era)_ | people (the doer) | ছেলেরা, শিক্ষকরা, মানুষেরা _(chhelera, shikkhokra, manushera)_ | boys, teachers, people |
+| -দের _(-der)_ | people (object and 'of') | ছেলেদের, শিক্ষকদের _(chheleder, shikkhokder)_ | the boys, of the boys |
+| -গুলো _(-gulo)_ | things and animals | বইগুলো, কুকুরগুলো _(boigulo, kukurgulo)_ | the books, the dogs |
+| -গুলি _(-guli)_ | things (written) | বইগুলি, ছবিগুলি _(boiguli, chhobiguli)_ | the books, the pictures |
+| -সমূহ _(-shomuho)_ | formal groups of things | গ্রন্থসমূহ _(grontho-shomuho)_ | (the) works, volumes |
+| -বৃন্দ / -গণ _(-brindo / -gon)_ | formal groups of people | শিক্ষকবৃন্দ, ভক্তগণ _(shikkhokbrindo, bhoktogon)_ | the teachers, the devotees |
+
+**-রা and -দের**
 
 - ছেলেরা মাঠে খেলছে। _(chhelera mathe khelchhe.)_: The boys are playing in the field.
-- বইগুলো টেবিলে আছে। _(boigulo tebile achhe.)_: The books are on the table.
+- মেয়েরা গান গাইছে। _(meyera gan gaichhe.)_: The girls are singing.
+- শিক্ষকরা ক্লাসে আছেন। _(shikkhokra klase achhen.)_: The teachers are in class.
+- বন্ধুরা এসেছে। _(bondhura eshechhe.)_: The friends have come.
+- ডাক্তাররা হাসপাতালে কাজ করেন। _(daktarra haspatale kaj koren.)_: Doctors work in the hospital.
 - আমি ছেলেদের ডাকলাম। _(ami chheleder daklam.)_: I called the boys.
+- ছাত্রদের বই কোথায়? _(chhatroder boi kothay?)_: Where are the students' books?
+- মানুষেরা বাজারে যায়। _(manushera bajare jay.)_: People go to the market.
 
-## Counting words
+**-গুলো**
 
-When you count, Bengali adds a small word after the number: -টা / -টি for things, -জন for people. The noun itself does not take a plural ending.
+- বইগুলো টেবিলে আছে। _(boigulo tebile achhe.)_: The books are on the table.
+- পাখিগুলো গাছে বসে আছে। _(pakhigulo gachhe boshe achhe.)_: The birds are sitting on the tree.
+- কুকুরগুলো ঘুমাচ্ছে। _(kukurgulo ghumachchhe.)_: The dogs are sleeping.
+- আমগুলো খুব মিষ্টি। _(amgulo khub mishti.)_: The mangoes are very sweet.
+- ছবিগুলো সুন্দর। _(chhobigulo shundor.)_: The pictures are beautiful.
+- ফুলগুলো তুলে নাও। _(phulgulo tule nao.)_: Pick the flowers.
+- জামাগুলো ধুতে হবে। _(jamagulo dhute hobe.)_: The shirts have to be washed.
+- এই গাছগুলো আমার। _(ei gachhgulo amar.)_: These trees are mine.
 
-| Number | Things | People |
+**Things and animals: -টা and -গুলো**
+
+| Meaning | Singular (the) | Plural (the) |
 |---|---|---|
-| 1 | একটা _(ekta)_ | একজন _(ekjon)_ |
-| 2 | দুটো _(duto)_ | দুজন _(dujon)_ |
-| 3 | তিনটে _(tinte)_ | তিনজন _(tinjon)_ |
-| 4 | চারটে _(charte)_ | চারজন _(charjon)_ |
-| 5 | পাঁচটা _(panchta)_ | পাঁচজন _(panchjon)_ |
+| book | বইটা _(boita)_ | বইগুলো _(boigulo)_ |
+| notebook | খাতাটা _(khatata)_ | খাতাগুলো _(khatagulo)_ |
+| tree | গাছটা _(gachhta)_ | গাছগুলো _(gachhgulo)_ |
+| bird | পাখিটা _(pakhita)_ | পাখিগুলো _(pakhigulo)_ |
+| dog | কুকুরটা _(kukurta)_ | কুকুরগুলো _(kukurgulo)_ |
+| mango | আমটা _(amta)_ | আমগুলো _(amgulo)_ |
+| room | ঘরটা _(ghorta)_ | ঘরগুলো _(ghorgulo)_ |
+| flower | ফুলটা _(phulta)_ | ফুলগুলো _(phulgulo)_ |
+| shirt | জামাটা _(jamata)_ | জামাগুলো _(jamagulo)_ |
+| picture | ছবিটা _(chhobita)_ | ছবিগুলো _(chhobigulo)_ |
+| chair | চেয়ারটা _(cheyarta)_ | চেয়ারগুলো _(cheyargulo)_ |
+| pen | কলমটা _(kolomta)_ | কলমগুলো _(kolomgulo)_ |
+| house | বাড়িটা _(barita)_ | বাড়িগুলো _(barigulo)_ |
+| river | নদীটা _(nodita)_ | নদীগুলো _(nodigulo)_ |
+| road | রাস্তাটা _(rastata)_ | রাস্তাগুলো _(rastagulo)_ |
+| table | টেবিলটা _(tebilta)_ | টেবিলগুলো _(tebilgulo)_ |
 
-- আমার দুটো বই আছে। _(amar duto boi achhe.)_: I have two books.
+**People: -টি and -রা**
+
+| Meaning | Plain | Singular (the) | Plural |
+|---|---|---|---|
+| boy | ছেলে _(chhele)_ | ছেলেটি _(chheleti)_ | ছেলেরা _(chhelera)_ |
+| girl | মেয়ে _(meye)_ | মেয়েটি _(meyeti)_ | মেয়েরা _(meyera)_ |
+| friend | বন্ধু _(bondhu)_ | বন্ধুটি _(bondhuti)_ | বন্ধুরা _(bondhura)_ |
+| teacher | শিক্ষক _(shikkhok)_ | শিক্ষকটি _(shikkhokti)_ | শিক্ষকরা _(shikkhokra)_ |
+| doctor | ডাক্তার _(daktar)_ | ডাক্তারটি _(daktarti)_ | ডাক্তাররা _(daktarra)_ |
+| student | ছাত্র _(chhatro)_ | ছাত্রটি _(chhatroti)_ | ছাত্ররা _(chhatrora)_ |
+| person | মানুষ _(manush)_ | মানুষটি _(manushti)_ | মানুষেরা _(manushera)_ |
+| child | শিশু _(shishu)_ | শিশুটি _(shishuti)_ | শিশুরা _(shishura)_ |
+
+## Counting: numbers with counting words
+
+When you count things, Bengali puts a counting word (a classifier) after the number: দুটো বই 'two-ish book', পাঁচজন ছাত্র 'five-person student'. Use -টা (or -টি) for things and animals, and -জন for people. After a number the noun stays singular: it never takes -গুলো.
+
+**Numbers one to ten**
+
+| Number | For things (-টা) | For people (-জন) |
+|---|---|---|
+| ১ · এক _(1 · ek)_ | একটা _(ekta)_ | একজন _(ekjon)_ |
+| ২ · দুই _(2 · dui)_ | দুটো _(duto)_ | দুজন _(dujon)_ |
+| ৩ · তিন _(3 · tin)_ | তিনটে _(tinte)_ | তিনজন _(tinjon)_ |
+| ৪ · চার _(4 · char)_ | চারটে _(charte)_ | চারজন _(charjon)_ |
+| ৫ · পাঁচ _(5 · panch)_ | পাঁচটা _(panchta)_ | পাঁচজন _(panchjon)_ |
+| ৬ · ছয় _(6 · chhoy)_ | ছটা _(chhota)_ | ছয়জন _(chhoyjon)_ |
+| ৭ · সাত _(7 · shat)_ | সাতটা _(shatta)_ | সাতজন _(shatjon)_ |
+| ৮ · আট _(8 · aat)_ | আটটা _(atta)_ | আটজন _(atjon)_ |
+| ৯ · নয় _(9 · noy)_ | নটা _(nota)_ | নয়জন _(noyjon)_ |
+| ১০ · দশ _(10 · dosh)_ | দশটা _(doshta)_ | দশজন _(doshjon)_ |
+
+**-টা**
+
+- আমার তিনটে বই আছে। _(amar tinte boi achhe.)_: I have three books.
+- দুটো আম দিন। _(duto am din.)_: Please give two mangoes.
+- টেবিলে চারটে চেয়ার আছে। _(tebile charte cheyar achhe.)_: There are four chairs at the table.
+- আমি পাঁচটা ছবি এঁকেছি। _(ami panchta chhobi ekechhi.)_: I have drawn five pictures.
+- গাছে দশটা পাখি বসে আছে। _(gachhe doshta pakhi boshe achhe.)_: Ten birds are sitting on the tree.
+- আমি সাতটা কলা কিনলাম। _(ami shatta kola kinlam.)_: I bought seven bananas.
+- ঘরে ছটা জানালা আছে। _(ghore chhota janala achhe.)_: The room has six windows.
+- আমি একটা কলম কিনলাম। _(ami ekta kolom kinlam.)_: I bought one pen.
+
+**-জন**
+
 - ক্লাসে পাঁচজন ছাত্র আছে। _(klase panchjon chhatro achhe.)_: There are five students in the class.
-- আমি একটা কলম কিনলাম। _(ami ekta kolom kinlam.)_: I bought a pen.
+- আমরা চারজন বন্ধু। _(amra charjon bondhu.)_: We are four friends.
+- তিনজন শিক্ষক এসেছেন। _(tinjon shikkhok eshechhen.)_: Three teachers have come.
+- আমার দুজন ভাই আছে। _(amar dujon bhai achhe.)_: I have two brothers.
+- দশজন মানুষ এল। _(doshjon manush elo.)_: Ten people came.
+- আপনারা কজন? _(apnara kojon?)_: How many of you are there?
+- একজন ডাক্তার ডাকো। _(ekjon daktar dako.)_: Call a doctor.
+- ছয়জন ছেলে খেলছে। _(chhoyjon chhele khelchhe.)_: Six boys are playing.
 
-> **Note:** -টি is the more formal form of -টা: একটি বই. Do not add -গুলো after a number: say দুটো বই, not দুটো বইগুলো.
+For quantities of food and drink, use the measure word the way English does: a cup of tea, a kilo of potatoes. There is no counting word, because the measure is the counting word.
 
-## 'A' and 'the'
+**Measures**
 
-Bengali has no word for 'a' or 'the'. Instead: a plain noun is general, a number + -টা means 'one', and the noun + -টা means 'the particular one'.
+- এক কাপ চা দিন। _(ek kap cha din.)_: Please give one cup of tea.
+- দুই গ্লাস জল আনো। _(dui glas jol ano.)_: Bring two glasses of water.
+- আমি এক কিলো আলু কিনলাম। _(ami ek kilo alu kinlam.)_: I bought a kilo of potatoes.
+- আমাকে এক ডজন কলা দিন। _(amake ek dojon kola din.)_: Give me a dozen bananas.
+- এক টুকরো রুটি খাও। _(ek tukro ruti khao.)_: Eat a piece of bread.
+- আমি এক প্লেট ভাত খেলাম। _(ami ek plet bhat khelam.)_: I ate a plate of rice.
+- দুই লিটার দুধ লাগবে। _(dui litar dudh lagbe.)_: We will need two litres of milk.
 
-| Form | Meaning | Example |
+## A, the and some: the same noun four ways
+
+Put together everything about singular and plural, and you can say four different things about one noun. Compare them side by side.
+
+| Idea | Bengali | Meaning |
 |---|---|---|
-| বই _(boi)_ | book, books (general) | আমি বই পড়ি। _(ami boi pori.)_ |
-| একটা বই _(ekta boi)_ | a book, one book | আমি একটা বই কিনেছি। _(ami ekta boi kinechhi.)_ |
-| বইটা _(boita)_ | the book (that one) | বইটা ভালো। _(boita bhalo.)_ |
-| বইগুলো _(boigulo)_ | the books (those) | বইগুলো ভালো। _(boigulo bhalo.)_ |
+| in general | আমি বই কিনি। _(ami boi kini.)_ | I buy books. |
+| one | আমি একটা বই কিনলাম। _(ami ekta boi kinlam.)_ | I bought a book. |
+| the one | আমি বইটা কিনলাম। _(ami boita kinlam.)_ | I bought the book. |
+| a counted number | আমি তিনটে বই কিনলাম। _(ami tinte boi kinlam.)_ | I bought three books. |
+| the many | আমি বইগুলো কিনলাম। _(ami boigulo kinlam.)_ | I bought the books. |
+
+Words like অনেক (many, much), কিছু (some), সব (all), কয়েকটা (a few), একটু (a little) stand in front of a plain noun with no plural ending.
+
+**Quantity words**
+
+- আমার অনেক বন্ধু আছে। _(amar onek bondhu achhe.)_: I have many friends.
+- কিছু লোক এসেছে। _(kichhu lok eshechhe.)_: Some people have come.
+- সব ছাত্র উপস্থিত। _(shob chhatro uposthit.)_: All students are present.
+- কয়েকটা বই দাও। _(koyekta boi dao.)_: Give me a few books.
+- একটু জল দিন। _(ektu jol din.)_: Please give me a little water.
+- আমার কোনো ভাই নেই। _(amar kono bhai nei.)_: I have no brother.
+- প্রত্যেক ছেলে একটা করে বই পেল। _(protyek chhele ekta kore boi pelo.)_: Each boy got one book.
+- বেশি লোক আসেনি। _(beshi lok asheni.)_: Not many people came.
+
+## Number in pronouns and verbs
+
+Only the pronoun shows number in Bengali, never the verb. Each singular pronoun has a plural partner: আমি → আমরা, তুমি → তোমরা, আপনি → আপনারা, সে → তারা. The verb after the plural pronoun is exactly the same as the one after the singular.
+
+| Singular | Plural | Verb (present of যাওয়া) |
+|---|---|---|
+| আমি _(ami)_ | আমরা _(amra)_ | যাই _(jai)_ |
+| তুমি _(tumi)_ | তোমরা _(tomra)_ | যাও _(jao)_ |
+| আপনি _(apni)_ | আপনারা _(apnara)_ | যান _(jan)_ |
+| সে _(she)_ | তারা _(tara)_ | যায় _(jay)_ |
+| তুই _(tui)_ | তোরা _(tora)_ | যাস _(jas)_ |
+
+**Pronoun plurals**
+
+- আমরা বাজারে যাই। _(amra bajare jai.)_: We go to the market.
+- তোমরা কোথায় যাও? _(tomra kothay jao?)_: Where do you (all) go?
+- আপনারা কখন আসবেন? _(apnara kokhon ashben?)_: When will you (all) come?
+- তারা স্কুলে পড়ে। _(tara skule pore.)_: They study at school.
+- তোরা কী খাচ্ছিস? _(tora ki khachchhis?)_: What are you (all) eating?
 
 ## Practice questions
 
-1. What is the plural of ছেলে (people)?
+1. What is the Bengali word for 'singular'?
+   - A) একবচন _(ek-bochon)_  ✔
+   - B) বহুবচন _(bohu-bochon)_
+   - C) বচন _(bochon)_
+   - _Why:_ একবচন means 'one-number': singular.
+2. What is the Bengali word for 'plural'?
+   - A) বহুবচন _(bohu-bochon)_  ✔
+   - B) একবচন _(ek-bochon)_
+   - C) পুরুষ _(purush)_
+   - _Why:_ বহুবচন means 'many-number': plural.
+3. Does the verb change between 'the boy is studying' and 'the boys are studying'?
+   - A) Yes, it changes
+   - B) No, it stays the same: পড়ছে  ✔
+   - C) Yes, it adds -রা
+   - _Why:_ The verb never changes for number.
+4. Which word fills the blank? **___ কোথায়? (the book)**
+   - A) বইটা _(boita)_  ✔
+   - B) বইগুলো _(boigulo)_
+   - C) বইরা _(boira)_
+   - _Why:_ One known book: বইটা.
+5. Which word fills the blank? **___ টেবিলে আছে। (the books)**
+   - A) বইগুলো _(boigulo)_  ✔
+   - B) বইটা _(boita)_
+   - C) বইরা _(boira)_
+   - _Why:_ Many known things: -গুলো.
+6. Which word fills the blank? **___ মাঠে খেলছে। (the boys)**
+   - A) ছেলেরা _(chhelera)_  ✔
+   - B) ছেলেগুলো _(chhelegulo)_
+   - C) ছেলেটি _(chheleti)_
+   - _Why:_ People take -রা.
+7. Which word fills the blank? **___ গান গাইছে। (the girl)**
+   - A) মেয়েটি _(meyeti)_  ✔
+   - B) মেয়েরা _(meyera)_
+   - C) মেয়েগুলো _(meyegulo)_
+   - _Why:_ One known girl: -টি.
+8. Which word fills the blank? **আমার ___ বই আছে। (three)**
+   - A) তিনটে _(tinte)_  ✔
+   - B) তিনজন _(tinjon)_
+   - C) তিনগুলো _(tingulo)_
+   - _Why:_ Things are counted with -টা: তিনটে.
+9. Which word fills the blank? **ক্লাসে ___ ছাত্র আছে। (five)**
+   - A) পাঁচজন _(panchjon)_  ✔
+   - B) পাঁচটা _(panchta)_
+   - C) পাঁচগুলো _(panchgulo)_
+   - _Why:_ People are counted with -জন: পাঁচজন.
+10. Which word fills the blank? **আমার ___ ভাই আছে। (two)**
+   - A) দুজন _(dujon)_  ✔
+   - B) দুটো _(duto)_
+   - C) দুগুলো _(dugulo)_
+   - _Why:_ Brothers are people: দুজন.
+11. Which word fills the blank? **দুটো ___ দিন। (mangoes)**
+   - A) আম _(am)_  ✔
+   - B) আমগুলো _(amgulo)_
+   - C) আমেরা _(amera)_
+   - _Why:_ After a number the noun stays singular: আম.
+12. Which word fills the blank? **পাখি ___ গাছে বসে আছে। (the birds)**
+   - A) গুলো _(gulo)_  ✔
+   - B) রা _(ra)_
+   - C) জন _(jon)_
+   - _Why:_ Birds take -গুলো.
+13. Which is the plural of ছেলে (boy)?
    - A) ছেলেরা _(chhelera)_  ✔
    - B) ছেলেগুলো _(chhelegulo)_
    - C) ছেলেটা _(chheleta)_
-   - _Why:_ People take -রা: ছেলেরা.
-2. Choose 'those books'.
+   - _Why:_ People take -রা.
+14. Which is the plural of বই (book)?
    - A) বইগুলো _(boigulo)_  ✔
    - B) বইরা _(boira)_
-   - C) বইটা _(boita)_
+   - C) বইজন _(boijon)_
    - _Why:_ Things take -গুলো.
-3. How do you say 'three boys'?
-   - A) তিনজন ছেলে _(tinjon chhele)_  ✔
-   - B) তিনটে ছেলে _(tinte chhele)_
-   - C) তিন ছেলেরা _(tin chhelera)_
-   - _Why:_ Use -জন when counting people; no plural ending.
-4. How do you say 'two books'?
+15. Which is the plural of শিক্ষক (teacher)?
+   - A) শিক্ষকরা _(shikkhokra)_  ✔
+   - B) শিক্ষকগুলো _(shikkhokgulo)_
+   - C) শিক্ষকটা _(shikkhokta)_
+   - _Why:_ People take -রা.
+16. Which counting word is used for people?
+   - A) -জন _(-jon)_  ✔
+   - B) -টা _(-ta)_
+   - C) -খানা _(-khana)_
+   - _Why:_ -জন counts people.
+17. Which means 'two books'?
    - A) দুটো বই _(duto boi)_  ✔
    - B) দুজন বই _(dujon boi)_
    - C) দুটো বইগুলো _(duto boigulo)_
-   - _Why:_ Use -টো (things) after two, and no plural ending.
-5. How do you say 'the book'?
-   - A) বইটা _(boita)_  ✔
-   - B) বইরা _(boira)_
-   - C) একজন বই _(ekjon boi)_
-   - _Why:_ Noun + -টা means 'the particular one'.
-6. Choose the right verb. **ছেলেটা স্কুলে যায়। ছেলেরা স্কুলে ___।**
-   - A) যায় _(jay)_  ✔
-   - B) যায়েন _(jayen)_
-   - C) যাই _(jai)_
-   - _Why:_ The verb stays the same for one or many.
-7. Choose the right number word. **আমার ___ কলম আছে।**
-   - A) দুটো _(duto)_  ✔
-   - B) দুজন _(dujon)_
-   - C) দুগুলো _(dugulo)_
-   - _Why:_ Pens are things: দুটো.
-8. Choose 'of the boys / the boys (object)'.
-   - A) ছেলেদের _(chheleder)_  ✔
-   - B) ছেলেরা _(chhelera)_
-   - C) ছেলের _(chheler)_
-   - _Why:_ -দের is the plural for object and belonging.
-9. How do you say 'five students'?
-   - A) পাঁচজন ছাত্র _(panchjon chhatro)_  ✔
-   - B) পাঁচটা ছাত্র _(panchta chhatro)_
-   - C) পাঁচগুলো ছাত্র _(panchgulo chhatro)_
-   - _Why:_ People: -জন.
-10. Which counting word is for people?
-   - A) -টা
-   - B) -জন  ✔
-   - C) -গুলো
-   - _Why:_ -জন is for people.
+   - _Why:_ -টা for things, and the noun stays singular.
+18. Which means 'three students'?
+   - A) তিনজন ছাত্র _(tinjon chhatro)_  ✔
+   - B) তিনটে ছাত্র _(tinte chhatro)_
+   - C) তিন ছাত্রগুলো _(tin chhatrogulo)_
+   - _Why:_ -জন for people, noun singular.
+19. What does বইটা mean?
+   - A) a book
+   - B) the book  ✔
+   - C) books
+   - _Why:_ -টা after a noun means 'the'.
+20. What does একটা বই mean?
+   - A) a (one) book  ✔
+   - B) the book
+   - C) the books
+   - _Why:_ একটা is 'one, a'.
+21. What is the plural of আমি?
+   - A) আমরা _(amra)_  ✔
+   - B) আমি-রা _(ami-ra)_
+   - C) আমাদের _(amader)_
+   - _Why:_ আমি → আমরা.
+22. What is the plural of আপনি?
+   - A) আপনারা _(apnara)_  ✔
+   - B) আপনিরা _(apnira)_
+   - C) তোমরা _(tomra)_
+   - _Why:_ আপনি → আপনারা.
+23. I bought three books.
+   - A) আমি তিনটে বই কিনলাম। _(ami tinte boi kinlam.)_  ✔
+   - B) আমি তিনটে বইগুলো কিনলাম। _(ami tinte boigulo kinlam.)_
+   - C) আমি তিনজন বই কিনলাম। _(ami tinjon boi kinlam.)_
+   - _Why:_ Counting things: -টা, singular noun.
+24. There are five students in the class.
+   - A) ক্লাসে পাঁচজন ছাত্র আছে। _(klase panchjon chhatro achhe.)_  ✔
+   - B) ক্লাসে পাঁচটা ছাত্র আছে। _(klase panchta chhatro achhe.)_
+   - C) ক্লাসে পাঁচ ছাত্ররা আছে। _(klase panch chhatrora achhe.)_
+   - _Why:_ People are counted with -জন.
+25. Which sentence is correct?
+   - A) আমার দুটো বই আছে। _(amar duto boi achhe.)_  ✔
+   - B) আমার দুটো বইগুলো আছে। _(amar duto boigulo achhe.)_
+   - C) আমার দুজন বই আছে। _(amar dujon boi achhe.)_
+   - _Why:_ A counted noun stays singular, and things take -টা.
+26. Which sentence is correct?
+   - A) ছেলেরা খেলছে। _(chhelera khelchhe.)_  ✔
+   - B) ছেলেরা খেলছেন। _(chhelera khelchhen.)_
+   - C) ছেলেরা খেলছি। _(chhelera khelchhi.)_
+   - _Why:_ ছেলেরা is ordinary third person: খেলছে.
 
 ---
 
-# নিষেধ ও প্রশ্ন · Nishedh o Proshno · Saying no, and asking
+# লিঙ্গ · Ling · Gender: he, she and it
 
-_Negative sentences, 'is not', 'there is none', and the question words you need every day._
+_Gender in Bengali lives only in some nouns. Learn the pairs, the two common endings, and the big surprise: he and she, verbs and adjectives do not change._
 
-## Saying no
+## Gender lives in the words
 
-To make a sentence negative, put না after the verb for the present and the future. For the past, add -নি to the verb.
+লিঙ্গ (ling) means 'gender'. Bengali has three kinds. পুংলিঙ্গ (pumlingo) is masculine, স্ত্রীলিঙ্গ (strilingo) is feminine, and ক্লীবলিঙ্গ (klibolingo) is neuter, for things with no gender. You only need to remember the three terms once: the important thing is how gender behaves.
 
-|  | Positive | Negative |
+In Bengali, gender shows only in the words themselves. A few nouns have a masculine and a feminine form, like ছেলে (boy) and মেয়ে (girl). Everything else in the sentence stays the same. This is much simpler than languages where verbs and adjectives change for gender.
+
+**The three genders**
+
+| Name | Meaning | Examples |
 |---|---|---|
-| Present | আমি যাই। _(ami jai.)_ | আমি যাই না। _(ami jai na.)_ |
-| Present | সে ভাত খায়। _(she bhat khay.)_ | সে ভাত খায় না। _(she bhat khay na.)_ |
-| Future | আমি যাব। _(ami jabo.)_ | আমি যাব না। _(ami jabo na.)_ |
-| Past (-নি) | আমি গিয়েছি। _(ami giyechhi.)_ | আমি যাইনি। _(ami jaini.)_ |
-| Past (-নি) | সে খেয়েছে। _(she kheyechhe.)_ | সে খায়নি। _(she khayni.)_ |
+| পুংলিঙ্গ _(pumlingo)_ | masculine | ছেলে, বাবা, ছাত্র _(chhele, baba, chhatro)_ |
+| স্ত্রীলিঙ্গ _(strilingo)_ | feminine | মেয়ে, মা, ছাত্রী _(meye, ma, chhatri)_ |
+| ক্লীবলিঙ্গ _(klibolingo)_ | neuter: no gender | বই, টেবিল, গাছ _(boi, tebil, gachh)_ |
 
-The -নি form is built on the present form of the verb for each person:
+## Masculine and feminine pairs
 
-| Verb | আমি | তুমি | আপনি |
+Many words for people come in pairs. Learn them together.
+
+**Masculine (পুংলিঙ্গ) and feminine (স্ত্রীলিঙ্গ)**
+
+| Masculine | Meaning | Feminine | Meaning |
 |---|---|---|---|
-| করা _(kora)_ | করিনি _(korini)_ | করোনি _(koroni)_ | করেননি _(korenni)_ |
-| খাওয়া _(khaoya)_ | খাইনি _(khaini)_ | খাওনি _(khaoni)_ | খাননি _(khanni)_ |
-| যাওয়া _(jaoya)_ | যাইনি _(jaini)_ | যাওনি _(jaoni)_ | যাননি _(janni)_ |
+| ছেলে _(chhele)_ | boy | মেয়ে _(meye)_ | girl |
+| ভাই _(bhai)_ | brother | বোন _(bon)_ | sister |
+| বাবা _(baba)_ | father | মা _(ma)_ | mother |
+| দাদা _(dada)_ | elder brother | দিদি _(didi)_ | elder sister |
+| ঠাকুরদা _(thakurda)_ | grandfather | ঠাকুমা _(thakuma)_ | grandmother |
+| কাকা _(kaka)_ | uncle (father's brother) | কাকিমা _(kakima)_ | aunt (his wife) |
+| মামা _(mama)_ | uncle (mother's brother) | মামি _(mami)_ | aunt (his wife) |
+| রাজা _(raja)_ | king | রানি _(rani)_ | queen |
+| ছাত্র _(chhatro)_ | male student | ছাত্রী _(chhatri)_ | female student |
+| শিক্ষক _(shikkhok)_ | male teacher | শিক্ষিকা _(shikkhika)_ | female teacher |
+| লেখক _(lekhok)_ | male writer | লেখিকা _(lekhika)_ | female writer |
+| গায়ক _(gayok)_ | male singer | গায়িকা _(gayika)_ | female singer |
+| নায়ক _(nayok)_ | hero, actor | নায়িকা _(nayika)_ | heroine, actress |
+| বালক _(balok)_ | boy | বালিকা _(balika)_ | girl |
 
-> **Note:** In a command, না comes after the verb too: যেও না (don't go), করো না (don't do).
+**Pairs in use**
 
-## 'Is not' and 'there is none'
+- আমার ভাই ডাক্তার। _(amar bhai daktar.)_: My brother is a doctor.
+- আমার বোন ডাক্তার। _(amar bon daktar.)_: My sister is a doctor.
+- আমার বাবা শিক্ষক। _(amar baba shikkhok.)_: My father is a teacher.
+- আমার মা শিক্ষিকা। _(amar ma shikkhika.)_: My mother is a teacher.
+- রাহুল একজন ছাত্র। _(rahul ekjon chhatro.)_: Rahul is a student.
+- রিনা একজন ছাত্রী। _(rina ekjon chhatri.)_: Rina is a student.
+- তিনি একজন লেখিকা। _(tini ekjon lekhika.)_: She is a writer.
+- তিনি একজন গায়ক। _(tini ekjon gayok.)_: He is a singer.
 
-To say 'am / is / are not' between two nouns, use নই, নও, নন, নয়. To say something does not exist or you do not have it, use নেই.
+## Two endings that make the feminine
 
-|  | আমি | তুই / তুমি | আপনি / তিনি | সে |
-|---|---|---|---|---|
-| is not | নই _(noi)_ | নস / নও _(nos / nou)_ | নন _(non)_ | নয় _(noy)_ |
+Many pairs follow a pattern. Some feminine words are made by changing the ending of the masculine word. Others are separate words, so learn them one by one.
 
-- আমি ডাক্তার নই। _(ami daktar noi.)_: I am not a doctor.
-- তুমি ছাত্র নও। _(tumi chhatro nou.)_: You are not a student.
-- সে শিক্ষক নয়। _(she shikkhok noy.)_: He / she is not a teacher.
-- আমার কাছে টাকা নেই। _(amar kachhe taka nei.)_: I have no money.
-- বাড়িতে কেউ নেই। _(barite keu nei.)_: There is nobody at home.
+**How the feminine is made**
 
-## Asking questions
-
-Question words usually come just before the verb. For a yes / no question, add কি (or কী) to the sentence, or just raise your voice at the end.
-
-| Question word | Meaning | Example |
+| Pattern | Masculine | Feminine |
 |---|---|---|
-| কে _(ke)_ | who | ও কে? _(o ke?)_ |
-| কী _(ki)_ | what | তুমি কী খাচ্ছ? _(tumi ki khachchho?)_ |
-| কোথায় _(kothay)_ | where | তুমি কোথায় যাচ্ছ? _(tumi kothay jachchho?)_ |
-| কখন _(kokhon)_ | when | তুমি কখন আসবে? _(tumi kokhon asbe?)_ |
-| কেন _(keno)_ | why | তুমি কেন কাঁদছ? _(tumi keno kadchho?)_ |
-| কীভাবে _(kibhabe)_ | how | এটা কীভাবে করব? _(eta kibhabe korbo?)_ |
-| কত _(koto)_ | how much / how many | এটা কত টাকা? _(eta koto taka?)_ |
-| কোন _(kon)_ | which | কোন বইটা? _(kon boita?)_ |
-| কার _(kar)_ | whose | এটা কার বই? _(eta kar boi?)_ |
-| কাকে _(kake)_ | whom | তুমি কাকে ডাকছ? _(tumi kake dakchho?)_ |
+| -ক becomes -িকা | শিক্ষক _(shikkhok)_ | শিক্ষিকা _(shikkhika)_ |
+|  | লেখক _(lekhok)_ | লেখিকা _(lekhika)_ |
+|  | গায়ক _(gayok)_ | গায়িকা _(gayika)_ |
+|  | নায়ক _(nayok)_ | নায়িকা _(nayika)_ |
+|  | বালক _(balok)_ | বালিকা _(balika)_ |
+| -ত্র becomes -ত্রী | ছাত্র _(chhatro)_ | ছাত্রী _(chhatri)_ |
+| a different word | ছেলে _(chhele)_ | মেয়ে _(meye)_ |
+|  | ভাই _(bhai)_ | বোন _(bon)_ |
+|  | বাবা _(baba)_ | মা _(ma)_ |
 
-- তুমি কি যাবে? _(tumi ki jabe?)_: Will you go? (yes / no)
-- আপনি কি বাংলা বলতে পারেন? _(apni ki bangla bolte paren?)_: Can you speak Bengali?
-- তোমার নাম কী? _(tomar nam ki?)_: What is your name?
+> **Note:** Many people today use the masculine form for both, for example শিক্ষক for any teacher. The feminine forms are still correct and you will hear and read them often.
 
-> **Note:** Word order is subject, object, verb (SOV): আমি ভাত খাই, 'I rice eat'. The verb comes last.
+## What does not change
+
+This is the good news. In Bengali the pronoun সে, the verb and the adjective stay the same for men and women.
+
+**Gender and the rest of the sentence**
+
+| Part of the sentence | Does it change for gender? | Example |
+|---|---|---|
+| pronoun সে / তিনি | No: one word for he and she | সে স্কুলে যায়। _(she skule jay.)_ |
+| verb | No | ছেলেটি পড়ছে। মেয়েটি পড়ছে। _(chheleti porchhe. meyeti porchhe.)_ |
+| adjective | No | ছেলেটি ভালো। মেয়েটি ভালো। _(chheleti bhalo. meyeti bhalo.)_ |
+
+**Same word, same verb**
+
+- সে স্কুলে যায়। _(she skule jay.)_: He goes to school. / She goes to school.
+- তিনি আমার শিক্ষক। _(tini amar shikkhok.)_: He is my teacher. (tini is respectful: he or she)
+- ছেলেটি খুব ভালো। _(chheleti khub bhalo.)_: The boy is very good.
+- মেয়েটি খুব ভালো। _(meyeti khub bhalo.)_: The girl is very good.
+- মেয়েটি গান গাইছে। _(meyeti gan gaichhe.)_: The girl is singing.
+- ছেলেটি গান গাইছে। _(chheleti gan gaichhe.)_: The boy is singing.
+- সে বাজারে গেল। _(she bajare gelo.)_: He went to the market. / She went to the market.
+
+## Common and neuter words
+
+Some words are for both men and women: ডাক্তার (daktar, doctor) is used for a male or a female doctor, and so are বন্ধু (friend), মানুষ (person) and শিশু (child). Things such as বই (book), টেবিল (table) and গাছ (tree) are neuter: they take no gender at all.
+
+**Common and neuter**
+
+- আমার বন্ধু ডাক্তার। _(amar bondhu daktar.)_: My friend is a doctor. (a man or a woman)
+- ডাক্তার এসেছেন। _(daktar eshechhen.)_: The doctor has come. (a man or a woman)
+- বইটা টেবিলে আছে। _(boita tebile achhe.)_: The book is on the table.
+- গাছটা অনেক বড়। _(gachhta onek boro.)_: The tree is very big.
+- শিশুটি ঘুমোচ্ছে। _(shishuti ghumochchhe.)_: The child is sleeping.
 
 ## Practice questions
 
-1. Make this negative. **আমি ভাত খাই।**
-   - A) আমি ভাত খাই না। _(ami bhat khai na.)_  ✔
-   - B) আমি ভাত না খাই। _(ami bhat na khai.)_
-   - C) আমি না ভাত খাই। _(ami na bhat khai.)_
+1. What is the Bengali word for 'masculine'?
+   - A) পুংলিঙ্গ _(pumlingo)_  ✔
+   - B) স্ত্রীলিঙ্গ _(strilingo)_
+   - C) ক্লীবলিঙ্গ _(klibolingo)_
+   - _Why:_ পুংলিঙ্গ is masculine.
+2. What is the Bengali word for 'feminine'?
+   - A) স্ত্রীলিঙ্গ _(strilingo)_  ✔
+   - B) পুংলিঙ্গ _(pumlingo)_
+   - C) ক্লীবলিঙ্গ _(klibolingo)_
+   - _Why:_ স্ত্রীলিঙ্গ is feminine.
+3. What is the Bengali word for 'neuter'?
+   - A) ক্লীবলিঙ্গ _(klibolingo)_  ✔
+   - B) পুংলিঙ্গ _(pumlingo)_
+   - C) স্ত্রীলিঙ্গ _(strilingo)_
+   - _Why:_ ক্লীবলিঙ্গ is neuter.
+4. Which is the feminine of ছাত্র (male student)?
+   - A) ছাত্রী _(chhatri)_  ✔
+   - B) ছাত্রিকা _(chhatrika)_
+   - C) ছাত্রা _(chhatra)_
+   - _Why:_ -ত্র becomes -ত্রী: ছাত্রী.
+5. Which is the feminine of শিক্ষক (male teacher)?
+   - A) শিক্ষিকা _(shikkhika)_  ✔
+   - B) শিক্ষকী _(shikkhoki)_
+   - C) শিক্ষকা _(shikkhoka)_
+   - _Why:_ -ক becomes -িকা: শিক্ষিকা.
+6. Which means 'sister'?
+   - A) বোন _(bon)_  ✔
+   - B) ভাই _(bhai)_
+   - C) ছেলে _(chhele)_
+   - _Why:_ বোন is the sister, the partner of ভাই.
+7. Which means 'girl'?
+   - A) মেয়ে _(meye)_  ✔
+   - B) ছেলে _(chhele)_
+   - C) বাবা _(baba)_
+   - _Why:_ মেয়ে is the girl, the partner of ছেলে.
+8. Which one is a neuter word?
+   - A) বই _(boi)_  ✔
+   - B) ছাত্রী _(chhatri)_
+   - C) বাবা _(baba)_
+   - _Why:_ বই, a thing, has no gender.
+9. Which word can be used for both a man and a woman?
+   - A) ডাক্তার _(daktar)_  ✔
+   - B) ছাত্রী _(chhatri)_
+   - C) ছেলে _(chhele)_
+   - _Why:_ ডাক্তার works for any doctor.
+10. Does the verb change between 'the boy is singing' and 'the girl is singing'?
+   - A) No, it stays the same  ✔
+   - B) Yes, it takes a feminine ending
+   - C) Yes, it adds -রা
+   - _Why:_ Bengali verbs do not change for gender.
+11. What does সে mean?
+   - A) only 'he'
+   - B) only 'she'
+   - C) 'he' or 'she'  ✔
+   - _Why:_ সে is one word for both he and she.
+12. Which word fills the blank? **রিনা একজন ___। (female student)**
+   - A) ছাত্রী _(chhatri)_  ✔
+   - B) ছাত্র _(chhatro)_
+   - C) ছাত্রিকা _(chhatrika)_
+   - _Why:_ A female student: ছাত্রী.
+13. Which word fills the blank? **আমার মা ___। (a teacher)**
+   - A) শিক্ষিকা _(shikkhika)_  ✔
+   - B) শিক্ষক _(shikkhok)_
+   - C) শিক্ষকা _(shikkhoka)_
+   - _Why:_ For a woman teacher: শিক্ষিকা.
+14. Which word fills the blank? **আমার ভাই ___। (a doctor)**
+   - A) ডাক্তার _(daktar)_  ✔
+   - B) ডাক্তারী _(daktari)_
+   - C) ডাক্তারিকা _(daktarika)_
+   - _Why:_ ডাক্তার is used for both.
+15. Which sentence is correct?
+   - A) মেয়েটি ভালো। _(meyeti bhalo.)_  ✔
+   - B) মেয়েটি ভালি। _(meyeti bhali.)_
+   - C) মেয়েটি ভালা। _(meyeti bhala.)_
+   - _Why:_ The adjective ভালো does not change for gender.
+16. My sister is a teacher.
+   - A) আমার বোন শিক্ষিকা। _(amar bon shikkhika.)_  ✔
+   - B) আমার ভাই শিক্ষিকা। _(amar bhai shikkhika.)_
+   - C) আমার মা শিক্ষক। _(amar ma shikkhok.)_
+   - _Why:_ বোন (sister) with শিক্ষিকা (female teacher).
+17. My brother is a doctor.
+   - A) আমার ভাই ডাক্তার। _(amar bhai daktar.)_  ✔
+   - B) আমার বোন ডাক্তার। _(amar bon daktar.)_
+   - C) আমার বাবা ডাক্তার। _(amar baba daktar.)_
+   - _Why:_ ভাই is brother, ডাক্তার is doctor.
+
+---
+
+# নিষেধ ও প্রশ্ন · Nishedh o proshno · Saying no, and asking
+
+_Negatives (না, নি, নয়, নেই), yes/no questions, every question word, and how to answer._
+
+## Saying no: না and নি
+
+To make a verb negative, Bengali adds a small word after it. In most tenses the word is না. In the simple past and the present perfect it is the ending -নি, joined to the verb. The verb itself keeps its person ending, so you can still tell who is acting.
+
+**Negative in every tense**
+
+| Tense | Positive | Negative | Meaning |
+|---|---|---|---|
+| simple present _(pres)_ | আমি খাই। _(ami khai.)_ | আমি খাই না। _(ami khai na.)_ | I do not eat. |
+| present continuous _(cont)_ | আমি খাচ্ছি। _(ami khachchhi.)_ | আমি খাচ্ছি না। _(ami khachchhi na.)_ | I am not eating. |
+| present perfect _(perf)_ | আমি খেয়েছি। _(ami kheyechhi.)_ | আমি খাইনি। _(ami khaini.)_ | I have not eaten. |
+| simple past _(past)_ | আমি খেলাম। _(ami khelam.)_ | আমি খাইনি। _(ami khaini.)_ | I did not eat. |
+| past continuous _(pastcont)_ | আমি খাচ্ছিলাম। _(ami khachchhilam.)_ | আমি খাচ্ছিলাম না। _(ami khachchhilam na.)_ | I was not eating. |
+| past habitual _(habit)_ | আমি খেতাম। _(ami khetam.)_ | আমি খেতাম না। _(ami khetam na.)_ | I did not use to eat. |
+| simple future _(fut)_ | আমি খাব। _(ami khabo.)_ | আমি খাব না। _(ami khabo na.)_ | I will not eat. |
+
+**যাওয়া (to go), negative**
+
+| Person | Present | Past (and perfect) | Future |
+|---|---|---|---|
+| আমি _(ami)_ | যাই না _(jai na)_ | যাইনি _(jaini)_ | যাব না _(jabo na)_ |
+| তুই _(tui)_ | যাস না _(jas na)_ | যাসনি _(jasni)_ | যাবি না _(jabi na)_ |
+| তুমি _(tumi)_ | যাও না _(jao na)_ | যাওনি _(jaoni)_ | যাবে না _(jabe na)_ |
+| আপনি / তিনি _(apni / tini)_ | যান না _(jan na)_ | যাননি _(janni)_ | যাবেন না _(jaben na)_ |
+| সে _(she)_ | যায় না _(jay na)_ | যায়নি _(jayni)_ | যাবে না _(jabe na)_ |
+
+**না and নি**
+
+- আমি ভাত খাই না। _(ami bhat khai na.)_: I do not eat rice.
+- সে মাছ খায় না। _(she mach khay na.)_: He / she does not eat fish.
+- তুমি রোজ স্কুলে যাও না। _(tumi roj skule jao na.)_: You do not go to school every day.
+- আমি এখন ভাত খাচ্ছি না। _(ami ekhon bhat khachchhi na.)_: I am not eating rice now.
+- সে বই পড়ছে না। _(she boi porchhe na.)_: He / she is not reading a book.
+- আমি ভাত খাইনি। _(ami bhat khaini.)_: I have not eaten rice.
+- আমরা গতকাল স্কুলে যাইনি। _(amra gotokal skule jaini.)_: We did not go to school yesterday.
+- তুমি আমাকে বলোনি। _(tumi amake boloni.)_: You did not tell me.
+- আমি তখন ভাত খাচ্ছিলাম না। _(ami tokhon bhat khachchhilam na.)_: I was not eating rice then.
+- সে প্রতিদিন চা খেত না। _(she protidin cha kheto na.)_: He / she did not use to drink tea every day.
+- আমি কাল আসব না। _(ami kal asbo na.)_: I will not come tomorrow.
+- তারা আগামীকাল যাবে না। _(tara agamikal jabe na.)_: They will not go tomorrow.
+- তুই ভাত খাস না। _(tui bhat khas na.)_: You do not eat rice. (very familiar)
+- আপনি বাংলা বলেন না। _(apni bangla bolen na.)_: You do not speak Bengali. (respectful)
+
+**Do not …**
+
+- এটা করো না। _(eta koro na.)_: Do not do this.
+- ওখানে যেয়ো না। _(okhane jeyo na.)_: Do not go there.
+- দেরি করবেন না। _(deri korben na.)_: Please do not be late.
+- ভয় পেয়ো না। _(bhoy peyo na.)_: Do not be afraid.
+- চিন্তা করিস না। _(chinta koris na.)_: Do not worry. (very familiar)
+
+## Four ways to say 'not': না, নি, নয়, নেই
+
+Bengali has four everyday words for 'not', and each does a different job. Choosing the right one is mostly a matter of what kind of sentence you have.
+
+| Word | Used for | Example | Meaning |
+|---|---|---|---|
+| না _(na)_ | verbs in most tenses | আমি যাই না। _(ami jai na.)_ | I do not go. |
+| -নি _(-ni)_ | verbs in the simple past and perfect | আমি যাইনি। _(ami jaini.)_ | I did not go / have not gone. |
+| নয় / নই / নও / নন _(noy / noi / nou / non)_ | 'is not': identity or quality, no verb | সে ডাক্তার নয়। _(she daktar noy.)_ | He / she is not a doctor. |
+| নেই _(nei)_ | 'there is not', 'does not have' | আমার সময় নেই। _(amar shomoy nei.)_ | I have no time. |
+
+| Person | Is not | Example |
+|---|---|---|
+| আমি _(ami)_ | নই _(noi)_ | আমি ছাত্র নই। _(ami chhatro noi.)_ |
+| তুমি _(tumi)_ | নও _(nou)_ | তুমি ছাত্র নও। _(tumi chhatro nou.)_ |
+| আপনি / তিনি _(apni / tini)_ | নন _(non)_ | আপনি ছাত্র নন। _(apni chhatro non.)_ |
+| সে / এটা _(she / eta)_ | নয় _(noy)_ | এটা ভালো নয়। _(eta bhalo noy.)_ |
+
+**Not: identity and quality**
+
+- আমি ডাক্তার নই। _(ami daktar noi.)_: I am not a doctor.
+- তুমি ছাত্র নও। _(tumi chhatro nou.)_: You are not a student.
+- তিনি শিক্ষক নন। _(tini shikkhok non.)_: He / she is not a teacher.
+- এটা আমার বই নয়। _(eta amar boi noy.)_: This is not my book.
+- আকাশটা নীল নয়। _(akashta nil noy.)_: The sky is not blue.
+- সে আমার ভাই নয়। _(she amar bhai noy.)_: He is not my brother.
+
+**There is none**
+
+- বাড়িতে কেউ নেই। _(barite keu nei.)_: There is nobody at home.
+- আমার সময় নেই। _(amar shomoy nei.)_: I have no time.
+- আমার কাছে টাকা নেই। _(amar kachhe taka nei.)_: I have no money.
+- ঘরে জল নেই। _(ghore jol nei.)_: There is no water in the house.
+- আমার ভাই নেই। _(amar bhai nei.)_: I have no brother.
+- এখানে কোনো সমস্যা নেই। _(ekhane kono shomoshsha nei.)_: There is no problem here.
+- কোনো উপায় নেই। _(kono upay nei.)_: There is no way.
+- কাল আমার কাজ থাকবে না। _(kal amar kaj thakbe na.)_: I will have no work tomorrow.
+
+> **Note:** নেই covers the present only. In the past and the future, the negative of আছে is ছিল না and থাকবে না.
+
+## Nobody, nothing, nowhere, never
+
+Bengali builds words like 'nobody', 'nothing', 'nowhere' and 'never' from a question word plus a small word, and then makes the verb negative as well. Two negatives do not cancel each other. They agree.
+
+| Question word | Meaning | Negative partner | Meaning |
+|---|---|---|---|
+| কে _(ke)_ | who | কেউ _(keu)_ | nobody |
+| কী _(ki)_ | what | কিছু _(kichhu)_ | nothing |
+| কোথায় _(kothay)_ | where | কোথাও _(kothao)_ | nowhere |
+| কখন _(kokhon)_ | when | কখনো _(kokhono)_ | never |
+| কোন _(kon)_ | which | কোনো _(kono)_ | no, any |
+
+**Double negatives agree**
+
+- কেউ আসেনি। _(keu asheni.)_: Nobody came.
+- আমি কিছু খাইনি। _(ami kichhu khaini.)_: I have not eaten anything.
+- আমি কোথাও যাব না। _(ami kothao jabo na.)_: I will not go anywhere.
+- সে কখনো দেরি করে না। _(she kokhono deri kore na.)_: He / she is never late.
+- আমি কখনো সাপ দেখিনি। _(ami kokhono shap dekhini.)_: I have never seen a snake.
+- আমার কোনো সমস্যা নেই। _(amar kono shomoshsha nei.)_: I have no problem.
+- আমি কাউকে চিনি না। _(ami kauke chini na.)_: I do not know anyone.
+- কেউ কিছু বলল না। _(keu kichhu bollo na.)_: Nobody said anything.
+
+## Yes/no questions
+
+To ask a question that can be answered 'yes' or 'no', add কি (or কী) to the sentence, usually after the first word or just before the verb. In speech you can also keep the same sentence and raise your voice at the end. The word order does not change.
+
+**কি questions**
+
+- তুমি কি ভাত খাও? _(tumi ki bhat khao?)_: Do you eat rice?
+- আপনি কি বাংলা বলেন? _(apni ki bangla bolen?)_: Do you speak Bengali?
+- সে কি বাড়িতে থাকে? _(she ki barite thake?)_: Does he / she stay at home?
+- তুমি কি কাল আসবে? _(tumi ki kal asbe?)_: Will you come tomorrow?
+- তুমি কি ভাত খেয়েছ? _(tumi ki bhat kheyechho?)_: Have you eaten rice?
+- আপনি কি গতকাল অফিসে গেলেন? _(apni ki gotokal ofise gelen?)_: Did you go to the office yesterday?
+- তুমি কি এখন বই পড়ছ? _(tumi ki ekhon boi porchho?)_: Are you reading a book now?
+- আমরা কি আগামীকাল যাব? _(amra ki agamikal jabo?)_: Shall we go tomorrow?
+
+**Short questions**
+
+- তুমি আসবে? _(tumi ashbe?)_: Will you come?
+- চা খাবে? _(cha khabe?)_: Will you have tea?
+- ভালো আছ? _(bhalo achho?)_: Are you well?
+- খেয়েছ? _(kheyechho?)_: Have you eaten?
+
+To ask a choice, put বা or না between the two parts. 'Or' is বা, অথবা or কিংবা in writing; in speech you often hear না.
+
+**Choices**
+
+- তুমি চা খাবে, না কফি? _(tumi cha khabe, na kophi?)_: Will you have tea or coffee?
+- তুমি আজ যাবে, না কাল? _(tumi aj jabe, na kal?)_: Will you go today or tomorrow?
+- এটা কি বই, না খাতা? _(eta ki boi, na khata?)_: Is this a book or a notebook?
+- আপনি বাসে যাবেন বা ট্রেনে? _(apni base jaben ba trene?)_: Will you go by bus or by train?
+
+**Tag questions**
+
+- তুমি কাল আসবে, তাই না? _(tumi kal ashbe, tai na?)_: You will come tomorrow, won't you?
+- আজ খুব গরম, তাই না? _(aj khub gorom, tai na?)_: It is very hot today, isn't it?
+- তুমি বাংলা জানো, না? _(tumi bangla jano, na?)_: You know Bengali, don't you?
+
+## Question words
+
+Question words usually sit just before the verb, where the answer would sit. They are called প্রশ্নবাচক শব্দ. Learn them as a set, because you will use them in every conversation.
+
+**The question words**
+
+| Word | Meaning | Question | Answer |
+|---|---|---|---|
+| কে _(ke)_ | who | ও কে? _(o ke?)_ | ও আমার ভাই। _(o amar bhai.)_ |
+| কী _(ki)_ | what | তুমি কী খাচ্ছ? _(tumi ki khachchho?)_ | আমি ভাত খাচ্ছি। _(ami bhat khachchhi.)_ |
+| কোথায় _(kothay)_ | where | তুমি কোথায় যাচ্ছ? _(tumi kothay jachchho?)_ | আমি বাজারে যাচ্ছি। _(ami bajare jachchhi.)_ |
+| কখন _(kokhon)_ | when (what time) | তুমি কখন আসবে? _(tumi kokhon ashbe?)_ | আমি সন্ধ্যায় আসব। _(ami shondhyay ashbo.)_ |
+| কবে _(kobe)_ | when (which day) | তোমার জন্মদিন কবে? _(tomar jonmodin kobe?)_ | আগামী সোমবার। _(agami shombar.)_ |
+| কেন _(keno)_ | why | তুমি কেন কাঁদছ? _(tumi keno kandchho?)_ | আমার কষ্ট হচ্ছে। _(amar koshto hochchhe.)_ |
+| কীভাবে _(kibhabe)_ | how | এটা কীভাবে করব? _(eta kibhabe korbo?)_ | এভাবে করো। _(ebhabe koro.)_ |
+| কেমন _(kemon)_ | how, what like | আপনি কেমন আছেন? _(apni kemon achhen?)_ | আমি ভালো আছি। _(ami bhalo achhi.)_ |
+| কত _(koto)_ | how much | এটা কত টাকা? _(eta koto taka?)_ | এটা পঞ্চাশ টাকা। _(eta ponchash taka.)_ |
+| কয়টা / কটা _(koyta / kota)_ | how many | তোমার কয়টা বই আছে? _(tomar koyta boi achhe?)_ | আমার তিনটে বই আছে। _(amar tinte boi achhe.)_ |
+| কতজন _(kotojon)_ | how many people | ক্লাসে কতজন আছে? _(klase kotojon achhe?)_ | ক্লাসে দশজন আছে। _(klase doshjon achhe.)_ |
+| কোন _(kon)_ | which | কোন বইটা তোমার? _(kon boita tomar?)_ | এই বইটা। _(ei boita.)_ |
+| কার _(kar)_ | whose | এটা কার বই? _(eta kar boi?)_ | এটা আমার বই। _(eta amar boi.)_ |
+| কাকে _(kake)_ | whom | তুমি কাকে ডাকছ? _(tumi kake dakchho?)_ | আমি রামকে ডাকছি। _(ami ramke dakchhi.)_ |
+
+**কে, কী, কোথায়**
+
+- তোমার নাম কী? _(tomar nam ki?)_: What is your name?
+- আপনি কোথায় থাকেন? _(apni kothay thaken?)_: Where do you live?
+- ওই লোকটা কে? _(oi lokta ke?)_: Who is that man?
+- তুমি কী করছ? _(tumi ki korchho?)_: What are you doing?
+- বইটা কোথায়? _(boita kothay?)_: Where is the book?
+- কে এসেছে? _(ke eshechhe?)_: Who has come?
+- এটা কী? _(eta ki?)_: What is this?
+- তুমি কাকে খুঁজছ? _(tumi kake khujchho?)_: Whom are you looking for?
+
+**কখন, কেন, কীভাবে, কেমন**
+
+- তুমি কখন আসবে? _(tumi kokhon ashbe?)_: When will you come?
+- তুমি কেন দেরি করলে? _(tumi keno deri korle?)_: Why were you late?
+- এটা কীভাবে খোলে? _(eta kibhabe khole?)_: How does this open?
+- স্কুল কবে খুলবে? _(skul kobe khulbe?)_: When will school open?
+- আপনি কেমন আছেন? _(apni kemon achhen?)_: How are you?
+- তুমি কীভাবে এলে? _(tumi kibhabe ele?)_: How did you come?
+- ট্রেন কখন ছাড়বে? _(tren kokhon chharbe?)_: When does the train leave?
+- আজ আবহাওয়া কেমন? _(aj abhaoya kemon?)_: How is the weather today?
+
+**কত, কয়টা, কোন, কার**
+
+- এটা কত টাকা? _(eta koto taka?)_: How much is this?
+- তোমার কয়টা ভাই আছে? _(tomar koyta bhai achhe?)_: How many brothers do you have?
+- কতজন এসেছে? _(kotojon eshechhe?)_: How many people have come?
+- কোন বাসটা যাবে? _(kon basta jabe?)_: Which bus will go?
+- এটা কার ব্যাগ? _(eta kar byag?)_: Whose bag is this?
+- কোন রংটা তোমার পছন্দ? _(kon rongta tomar pochhondo?)_: Which colour do you like?
+- কত দূর? _(koto dur?)_: How far is it?
+- কতক্ষণ লাগবে? _(kotokkhon lagbe?)_: How long will it take?
+
+## Answering questions
+
+The usual answer to a yes/no question is the verb, said again, or হ্যাঁ (yes) or না (no). Bengali does not need a pronoun in the answer. For a question word, answer with just the missing piece.
+
+| Question | Short answer | Full answer |
+|---|---|---|
+| তুমি কি খাবে? _(tumi ki khabe?)_ | হ্যাঁ, খাব। _(hyan, khabo.)_ | হ্যাঁ, আমি খাব। _(hyan, ami khabo.)_ |
+| তুমি কি যাবে? _(tumi ki jabe?)_ | না, যাব না। _(na, jabo na.)_ | না, আমি যাব না। _(na, ami jabo na.)_ |
+| আপনি কি বাংলা জানেন? _(apni ki bangla janen?)_ | একটু একটু জানি। _(ektu ektu jani.)_ | হ্যাঁ, আমি একটু একটু বাংলা জানি। _(hyan, ami ektu ektu bangla jani.)_ |
+
+**Questions and answers**
+
+- আপনার নাম কী? _(apnar nam ki?)_: What is your name?
+- আমার নাম রাহুল। _(amar nam rahul.)_: My name is Rahul.
+- আপনি কোথায় থাকেন? _(apni kothay thaken?)_: Where do you live?
+- আমি কলকাতায় থাকি। _(ami kolkatay thaki.)_: I live in Kolkata.
+- এটা কত টাকা? _(eta koto taka?)_: How much is this?
+- এটা পঞ্চাশ টাকা। _(eta ponchash taka.)_: It is fifty rupees.
+- আপনি কি বাংলা বলতে পারেন? _(apni ki bangla bolte paren?)_: Can you speak Bengali?
+- হ্যাঁ, একটু একটু পারি। _(hyan, ektu ektu pari.)_: Yes, I can a little.
+
+## Questions inside sentences
+
+A question can sit inside a longer sentence. The question word stays, and the main verb comes last. 'Whether' is কি না.
+
+**Questions inside sentences**
+
+- সে কোথায় থাকে আমি জানি না। _(she kothay thake ami jani na.)_: I do not know where he / she lives.
+- তুমি কী খাচ্ছ আমাকে বলো। _(tumi ki khachchho amake bolo.)_: Tell me what you are eating.
+- সে আসবে কি না জানি না। _(she ashbe ki na jani na.)_: I do not know whether he / she will come.
+- কখন যাব বুঝতে পারছি না। _(kokhon jabo bujhte parchhi na.)_: I cannot understand when to go.
+- তুমি কেন কাঁদছ আমি বুঝতে পারছি না। _(tumi keno kandchho ami bujhte parchhi na.)_: I cannot understand why you are crying.
+- এটা কত টাকা জানেন? _(eta koto taka janen?)_: Do you know how much this is?
+- কে এসেছে দেখো তো। _(ke eshechhe dekho to.)_: See who has come.
+- সে কী বলল আমি শুনিনি। _(she ki bollo ami shunini.)_: I did not hear what he / she said.
+
+## Practice questions
+
+1. Where does না go in a negative sentence?
+   - A) before the noun
+   - B) after the verb  ✔
+   - C) at the start
    - _Why:_ না comes after the verb: খাই না.
-2. Make this negative (past). **আমি গিয়েছি।**
+2. How do you say 'I do not eat rice'?
+   - A) আমি ভাত খাই না। _(ami bhat khai na.)_  ✔
+   - B) আমি না ভাত খাই। _(ami na bhat khai.)_
+   - C) আমি ভাত না খাই। _(ami bhat na khai.)_
+   - _Why:_ না after the verb.
+3. How do you say 'I did not go'?
    - A) আমি যাইনি। _(ami jaini.)_  ✔
    - B) আমি যাই না। _(ami jai na.)_
    - C) আমি যাব না। _(ami jabo na.)_
-   - _Why:_ The past negative adds -নি to the present form: যাইনি.
-3. Choose the right word. **আমি ছাত্র ___।**
+   - _Why:_ The past negative: present form + -নি.
+4. How do you say 'I will not go'?
+   - A) আমি যাব না। _(ami jabo na.)_  ✔
+   - B) আমি যাইনি। _(ami jaini.)_
+   - C) আমি যাই না। _(ami jai na.)_
+   - _Why:_ Future negative: যাব না.
+5. How do you say 'I am not eating'?
+   - A) আমি খাচ্ছি না। _(ami khachchhi na.)_  ✔
+   - B) আমি খাইনি। _(ami khaini.)_
+   - C) আমি খাব না। _(ami khabo na.)_
+   - _Why:_ Continuous negative: খাচ্ছি না.
+6. Which word fills the blank? **আমি ডাক্তার ___।**
    - A) নই _(noi)_  ✔
    - B) নও _(nou)_
    - C) নয় _(noy)_
-   - _Why:_ 'I am not' is আমি … নই.
-4. Choose the right word. **তুমি ছাত্র ___।**
+   - _Why:_ 'I am not' = নই.
+7. Which word fills the blank? **তুমি ছাত্র ___।**
    - A) নও _(nou)_  ✔
    - B) নই _(noi)_
    - C) নন _(non)_
-   - _Why:_ 'You (তুমি) are not' is তুমি … নও.
-5. Choose the right word. **সে ডাক্তার ___।**
+   - _Why:_ 'You are not' = নও.
+8. Which word fills the blank? **আপনি শিক্ষক ___।**
+   - A) নন _(non)_  ✔
+   - B) নও _(nou)_
+   - C) নয় _(noy)_
+   - _Why:_ 'You (respectful) are not' = নন.
+9. Which word fills the blank? **এটা আমার বই ___।**
    - A) নয় _(noy)_  ✔
    - B) নই _(noi)_
    - C) নও _(nou)_
-   - _Why:_ 'He / she is not' is সে … নয়.
-6. Choose the right word ('I have no money'). **আমার কাছে টাকা ___।**
+   - _Why:_ 'This is not' = নয়.
+10. Which word fills the blank? **আমার সময় ___।**
    - A) নেই _(nei)_  ✔
    - B) নয় _(noy)_
    - C) না _(na)_
-   - _Why:_ 'There is none / do not have' is নেই.
-7. Choose the question word for 'where'. **তুমি ___ যাচ্ছ?**
+   - _Why:_ 'There is none' = নেই.
+11. Which word fills the blank? **ঘরে জল ___।**
+   - A) নেই _(nei)_  ✔
+   - B) নয় _(noy)_
+   - C) নই _(noi)_
+   - _Why:_ 'There is no water' = নেই.
+12. Which word fills the blank? **___ আসেনি।**
+   - A) কেউ _(keu)_  ✔
+   - B) কে _(ke)_
+   - C) কিছু _(kichhu)_
+   - _Why:_ 'Nobody came' = কেউ আসেনি.
+13. Which word fills the blank? **আমি ___ খাইনি।**
+   - A) কিছু _(kichhu)_  ✔
+   - B) কেউ _(keu)_
+   - C) কোথাও _(kothao)_
+   - _Why:_ 'I ate nothing' = কিছু খাইনি.
+14. Which word fills the blank? **তুমি ___ যাবে?**
+   - A) কি _(ki)_  ✔
+   - B) কে _(ke)_
+   - C) কত _(koto)_
+   - _Why:_ কি makes a yes/no question.
+15. Which word fills the blank? **তুমি ___ যাচ্ছ?**
    - A) কোথায় _(kothay)_  ✔
    - B) কখন _(kokhon)_
    - C) কেন _(keno)_
-   - _Why:_ কোথায় means where.
-8. Choose the question word for 'why'. **তুমি ___ কাঁদছ?**
-   - A) কেন _(keno)_  ✔
-   - B) কত _(koto)_
-   - C) কে _(ke)_
-   - _Why:_ কেন means why.
-9. Choose the question word for 'how much'. **এটা ___ টাকা?**
+   - _Why:_ 'Where are you going?' = কোথায়.
+16. Which word fills the blank? **এটা ___ টাকা?**
    - A) কত _(koto)_  ✔
    - B) কোন _(kon)_
    - C) কার _(kar)_
-   - _Why:_ কত asks about amount or price.
-10. Which sentence has the right word order?
+   - _Why:_ 'How much money?' = কত টাকা.
+17. Which word fills the blank? **এটা ___ বই?**
+   - A) কার _(kar)_  ✔
+   - B) কত _(koto)_
+   - C) কখন _(kokhon)_
+   - _Why:_ 'Whose book?' = কার বই.
+18. Which word fills the blank? **তুমি ___ কাঁদছ?**
+   - A) কেন _(keno)_  ✔
+   - B) কোথায় _(kothay)_
+   - C) কখন _(kokhon)_
+   - _Why:_ 'Why are you crying?' = কেন.
+19. Which word fills the blank? **তোমার নাম ___?**
+   - A) কী _(ki)_  ✔
+   - B) কে _(ke)_
+   - C) কোথায় _(kothay)_
+   - _Why:_ 'What is your name?' = কী.
+20. Which question word means 'when (what time)'?
+   - A) কখন _(kokhon)_  ✔
+   - B) কেন _(keno)_
+   - C) কীভাবে _(kibhabe)_
+   - _Why:_ কখন = when.
+21. Which question word means 'how'?
+   - A) কীভাবে _(kibhabe)_  ✔
+   - B) কখন _(kokhon)_
+   - C) কত _(koto)_
+   - _Why:_ কীভাবে = how.
+22. Which question word means 'which'?
+   - A) কোন _(kon)_  ✔
+   - B) কার _(kar)_
+   - C) কে _(ke)_
+   - _Why:_ কোন = which.
+23. What does কোথাও mean in 'আমি কোথাও যাব না'?
+   - A) somewhere
+   - B) anywhere / nowhere  ✔
+   - C) everywhere
+   - _Why:_ With a negative verb, কোথাও means 'nowhere / not anywhere'.
+24. Which sentence is correct?
+   - A) কেউ আসেনি। _(keu asheni.)_  ✔
+   - B) কেউ এসেছে না। _(keu eshechhe na.)_
+   - C) কেউ আসবে নি। _(keu ashbe ni.)_
+   - _Why:_ Past negative: present form + -নি → আসেনি.
+25. Which sentence is correct?
+   - A) আমি কখনো সাপ দেখিনি। _(ami kokhono shap dekhini.)_  ✔
+   - B) আমি কখনো সাপ দেখেছি। _(ami kokhono shap dekhechhi.)_
+   - C) আমি কখনো সাপ দেখব। _(ami kokhono shap dekhbo.)_
+   - _Why:_ 'Never seen': কখনো + -নি.
+26. Which sentence is correct?
+   - A) তুমি কি যাবে? _(tumi ki jabe?)_  ✔
+   - B) তুমি যাবে কি? _(tumi jabe ki?)_
+   - C) কি তুমি যাবে না? _(ki tumi jabe na?)_
+   - _Why:_ কি usually follows the first word.
+
+---
+
+# বাক্য · Bakyo · Building sentences
+
+_Word order, describing words, comparing, joining sentences with 'and', 'but' and 'because', and giving reasons._
+
+## Word order: subject, object, verb
+
+A Bengali sentence usually follows the order subject – object – verb (SOV): আমি ভাত খাই, literally 'I rice eat'. The verb comes last. English puts the verb in the middle (subject – verb – object), so this is the first big habit to learn.
+
+**A fuller sentence: আমি রোজ সকালে বাজারে মাছ কিনি**
+
+| Part | Position | Example |
+|---|---|---|
+| doer (subject) | first | আমি _(ami)_ |
+| time | near the start | রোজ সকালে _(roj shokale)_ |
+| place | before the object | বাজারে _(bajare)_ |
+| object | just before the verb | মাছ _(mach)_ |
+| verb | last | কিনি _(kini)_ |
+
+**Verb last**
+
+- আমি রোজ সকালে বাজারে মাছ কিনি। _(ami roj shokale bajare mach kini.)_: I buy fish at the market every morning.
+- মা রান্নাঘরে ভাত রান্না করছেন। _(ma rannaghore bhat ranna korchhen.)_: Mother is cooking rice in the kitchen.
+- শিক্ষক ক্লাসে ছাত্রদের গল্প বললেন। _(shikkhok klase chhatroder golpo bollen.)_: The teacher told the students a story in class.
+- সে কাল বন্ধুকে চিঠি লিখবে। _(she kal bondhuke chithi likhbe.)_: He / she will write a letter to a friend tomorrow.
+- আমরা রবিবার পার্কে খেলি। _(amra robibar parke kheli.)_: We play in the park on Sundays.
+- বাবা অফিসে যান। _(baba ofise jan.)_: Father goes to the office.
+- আমি আজ সকালে চা খাইনি। _(ami aj shokale cha khaini.)_: I did not have tea this morning.
+- ছেলেরা মাঠে ফুটবল খেলছে। _(chhelera mathe phutbol khelchhe.)_: The boys are playing football in the field.
+
+> **Note:** In speech, and in poetry, a word is sometimes moved to the end for stress: খাই আমি ভাত? is rare, but আমি যাব না, কাল is a natural afterthought. As a learner, keep to subject – object – verb.
+
+## Describing words: adjectives and adverbs
+
+An adjective (বিশেষণ) comes before the noun it describes: ভালো বই (good book), বড় বাড়ি (big house). An adverb (ক্রিয়াবিশেষণ) comes before the verb it describes: আস্তে বলো (speak slowly). Adjectives do not change for number or gender, and the noun carries any ending.
+
+| Adjective | Meaning | Example |
+|---|---|---|
+| ভালো _(bhalo)_ | good | ভালো বই _(bhalo boi)_ |
+| খারাপ _(kharap)_ | bad | খারাপ আবহাওয়া _(kharap abhaoya)_ |
+| বড় _(boro)_ | big | বড় বাড়ি _(boro bari)_ |
+| ছোট _(chhoto)_ | small | ছোট ঘর _(chhoto ghor)_ |
+| নতুন _(notun)_ | new | নতুন জামা _(notun jama)_ |
+| পুরনো _(purono)_ | old | পুরনো বই _(purono boi)_ |
+| সুন্দর _(shundor)_ | beautiful | সুন্দর ফুল _(shundor phul)_ |
+| লম্বা _(lomba)_ | tall, long | লম্বা ছেলে _(lomba chhele)_ |
+| গরম _(gorom)_ | hot | গরম চা _(gorom cha)_ |
+| ঠান্ডা _(thanda)_ | cold | ঠান্ডা জল _(thanda jol)_ |
+| মিষ্টি _(mishti)_ | sweet | মিষ্টি আম _(mishti am)_ |
+| সহজ _(shohoj)_ | easy | সহজ প্রশ্ন _(shohoj proshno)_ |
+
+**Describing nouns**
+
+- আমি একটা ভালো বই কিনলাম। _(ami ekta bhalo boi kinlam.)_: I bought a good book.
+- ওটা একটা বড় বাড়ি। _(ota ekta boro bari.)_: That is a big house.
+- সে নতুন জামা পরেছে। _(she notun jama porechhe.)_: He / she is wearing a new shirt.
+- আমি গরম চা খাই। _(ami gorom cha khai.)_: I drink hot tea.
+- আমাদের একটা ছোট বাগান আছে। _(amader ekta chhoto bagan achhe.)_: We have a small garden.
+- এটা একটা সুন্দর ছবি। _(eta ekta shundor chhobi.)_: This is a beautiful picture.
+- আমি মিষ্টি আম ভালোবাসি। _(ami mishti am bhalobashi.)_: I love sweet mangoes.
+- এটা সহজ প্রশ্ন। _(eta shohoj proshno.)_: This is an easy question.
+
+When the adjective says what something is, it often comes at the end of the sentence without a verb: ঘরটা বড় (the room is big).
+
+**Saying what it is like**
+
+- ঘরটা বড়। _(ghorta boro.)_: The room is big.
+- আমটা খুব মিষ্টি। _(amta khub mishti.)_: The mango is very sweet.
+- জলটা ঠান্ডা। _(jolta thanda.)_: The water is cold.
+- প্রশ্নটা কঠিন। _(proshnota kothin.)_: The question is hard.
+- ছেলেটা লম্বা। _(chheleta lomba.)_: The boy is tall.
+
+**Adverbs**
+
+- আস্তে বলুন। _(aste bolun.)_: Please speak slowly.
+- সে তাড়াতাড়ি হাঁটে। _(she taratari hate.)_: He / she walks fast.
+- সে খুব ভালো গান গায়। _(she khub bhalo gan gay.)_: He / she sings very well.
+- আমি একটু ক্লান্ত। _(ami ektu klanto.)_: I am a little tired.
+- তুমি ঠিক বলেছ। _(tumi thik bolechho.)_: You have said it right.
+- আমরা আনন্দে নাচলাম। _(amra anonde nachlam.)_: We danced with joy.
+
+| Word | Meaning | Example |
+|---|---|---|
+| খুব _(khub)_ | very | খুব সুন্দর _(khub shundor)_ |
+| একটু _(ektu)_ | a little | একটু ঠান্ডা _(ektu thanda)_ |
+| অনেক _(onek)_ | much, many | অনেক বড় _(onek boro)_ |
+| আরও _(aro)_ | more, even more | আরও ভালো _(aro bhalo)_ |
+| সবচেয়ে _(shobcheye)_ | the most | সবচেয়ে ভালো _(shobcheye bhalo)_ |
+
+## Comparing: more, less, the most
+
+To compare, put the thing you compare with in the genitive (-র / -এর) and add চেয়ে (than). The adjective stays as it is. To say 'the most', use সবচেয়ে or সবার চেয়ে (more than all).
+
+| Idea | Bengali pattern | Example |
+|---|---|---|
+| more than | X-র চেয়ে Y adjective | রামের চেয়ে শ্যাম লম্বা। _(ramer cheye shyam lomba.)_ |
+| as … as | X-র মতো Y adjective | সে আমার মতো লম্বা। _(she amar moto lomba.)_ |
+| the most | সবচেয়ে + adjective | সে সবচেয়ে লম্বা। _(she shobcheye lomba.)_ |
+| better, more | আরও + adjective | এটা আরও ভালো। _(eta aro bhalo.)_ |
+
+**More than, as … as, the most**
+
+- রামের চেয়ে শ্যাম লম্বা। _(ramer cheye shyam lomba.)_: Shyam is taller than Ram.
+- গরমের চেয়ে শীত ভালো। _(gormer cheye shit bhalo.)_: Winter is better than summer.
+- এটা ওটার চেয়ে সস্তা। _(eta otar cheye shosta.)_: This is cheaper than that.
+- সে আমার মতো লম্বা। _(she amar moto lomba.)_: He / she is as tall as I am.
+- সে ক্লাসের সবচেয়ে ভালো ছাত্র। _(she klaser shobcheye bhalo chhatro.)_: He / she is the best student in the class.
+- এটা সবচেয়ে সুন্দর ছবি। _(eta shobcheye shundor chhobi.)_: This is the most beautiful picture.
+- আজ কালকের চেয়ে বেশি গরম। _(aj kalker cheye beshi gorom.)_: Today is hotter than yesterday.
+- কলকাতা আমার সবচেয়ে প্রিয় শহর। _(kolkata amar shobcheye priyo shohor.)_: Kolkata is my favourite city.
+
+## Joining sentences: and, but, or, so
+
+Short words join one idea to another. Learn the most common ones, and you will be able to build sentences of any length.
+
+| Word | Meaning | Example |
+|---|---|---|
+| আর / এবং _(ar / ebong)_ | and | আমি চা খাই আর সে কফি খায়। _(ami cha khai ar she kophi khay.)_ |
+| কিন্তু _(kintu)_ | but | আমি যাব, কিন্তু সে যাবে না। _(ami jabo, kintu she jabe na.)_ |
+| বা / অথবা _(ba / othoba)_ | or | চা বা কফি _(cha ba kophi)_ |
+| তাই _(tai)_ | so, therefore | আমি ক্লান্ত, তাই ঘুমাব। _(ami klanto, tai ghumabo.)_ |
+| কারণ _(karon)_ | because | আমি যাব না, কারণ বৃষ্টি হচ্ছে। _(ami jabo na, karon brishti hochchhe.)_ |
+| তবে _(tobe)_ | however, but | এটা সুন্দর, তবে দামি। _(eta shundor, tobe dami.)_ |
+| যদি … তাহলে _(jodi … tahole)_ | if … then | যদি পড়ো তাহলে পাশ করবে। _(jodi poro tahole pash korbe.)_ |
+| যখন … তখন _(jokhon … tokhon)_ | when … then | যখন এলাম তখন সে ঘুমাচ্ছিল। _(jokhon elam tokhon she ghumachchhilo.)_ |
+| যে _(je)_ | that | সে বলল যে সে আসবে। _(she bollo je she ashbe.)_ |
+| না হলে _(na hole)_ | otherwise | তাড়াতাড়ি চলো, না হলে দেরি হবে। _(taratari cholo, na hole deri hobe.)_ |
+
+**Joining equals**
+
+- আমি চা খাই আর সে কফি খায়। _(ami cha khai ar she kophi khay.)_: I drink tea and he / she drinks coffee.
+- আমি বাজারে গেলাম এবং মাছ কিনলাম। _(ami bajare gelam ebong mach kinlam.)_: I went to the market and bought fish.
+- আমি যাব, কিন্তু সে যাবে না। _(ami jabo, kintu she jabe na.)_: I will go, but he / she will not.
+- এটা সুন্দর, তবে দামি। _(eta shundor, tobe dami.)_: This is beautiful, but expensive.
+- তুমি চা খাবে বা কফি? _(tumi cha khabe ba kophi?)_: Will you have tea or coffee?
+- রাম আর শ্যাম দুজন বন্ধু। _(ram ar shyam dujon bondhu.)_: Ram and Shyam are two friends.
+
+Both words say that one thing is the reason for another. তাই comes after the reason and introduces the result. কারণ comes after the result and introduces the reason.
+
+**Because and so**
+
+- আমি ক্লান্ত, তাই ঘুমাব। _(ami klanto, tai ghumabo.)_: I am tired, so I will sleep.
+- আমি যাব না, কারণ বৃষ্টি হচ্ছে। _(ami jabo na, karon brishti hochchhe.)_: I will not go, because it is raining.
+- তার জ্বর হয়েছে, তাই সে আসেনি। _(tar jor hoyechhe, tai she asheni.)_: He / she has a fever, so he / she did not come.
+- সে আসেনি, কারণ তার জ্বর হয়েছে। _(she asheni, karon tar jor hoyechhe.)_: He / she did not come, because he / she has a fever.
+- আমার খিদে পেয়েছে, তাই আমি খাচ্ছি। _(amar khide peyechhe, tai ami khachchhi.)_: I am hungry, so I am eating.
+- বৃষ্টি হচ্ছে, তাই ছাতা নাও। _(brishti hochchhe, tai chhata nao.)_: It is raining, so take an umbrella.
+
+**Longer sentences**
+
+- যখন বৃষ্টি পড়ে তখন আমি বাড়িতে থাকি। _(jokhon brishti pore tokhon ami barite thaki.)_: When it rains I stay at home.
+- যদি তুমি আসো তাহলে আমি খুশি হব। _(jodi tumi asho tahole ami khushi hobo.)_: If you come, then I will be happy.
+- সে বলল যে সে কাল আসবে। _(she bollo je she kal ashbe.)_: He / she said that he / she will come tomorrow.
+- আমি জানি যে তুমি ভালো আছ। _(ami jani je tumi bhalo achho.)_: I know that you are well.
+- তাড়াতাড়ি চলো, না হলে দেরি হবে। _(taratari cholo, na hole deri hobe.)_: Hurry up, otherwise we will be late.
+
+## How much, how many: quantity words
+
+Quantity words stand before a noun and usually need no plural ending: অনেক বন্ধু (many friends), কিছু জল (some water).
+
+| Word | Meaning | Example |
+|---|---|---|
+| অনেক _(onek)_ | many, much | অনেক বই _(onek boi)_ |
+| কিছু _(kichhu)_ | some | কিছু লোক _(kichhu lok)_ |
+| সব _(shob)_ | all | সব ছাত্র _(shob chhatro)_ |
+| কয়েকটা _(koyekta)_ | a few | কয়েকটা বই _(koyekta boi)_ |
+| একটু _(ektu)_ | a little | একটু জল _(ektu jol)_ |
+| কম _(kom)_ | few, little | কম লোক _(kom lok)_ |
+| বেশি _(beshi)_ | more | বেশি টাকা _(beshi taka)_ |
+| প্রত্যেক _(protyek)_ | each, every | প্রত্যেক দিন _(protyek din)_ |
+| কোনো _(kono)_ | any, no (with না) | কোনো সমস্যা নেই _(kono shomoshsha nei)_ |
+
+**Quantity words in sentences**
+
+- আমার অনেক বন্ধু আছে। _(amar onek bondhu achhe.)_: I have many friends.
+- কিছু লোক এসেছে। _(kichhu lok eshechhe.)_: Some people have come.
+- সব ছাত্র ক্লাসে আছে। _(shob chhatro klase achhe.)_: All the students are in class.
+- আমাকে কয়েকটা বই দাও। _(amake koyekta boi dao.)_: Give me a few books.
+- একটু জল দিন। _(ektu jol din.)_: Please give a little water.
+- প্রত্যেক দিন আমি হাঁটি। _(protyek din ami hati.)_: Every day I walk.
+- আজ কম লোক এসেছে। _(aj kom lok eshechhe.)_: Few people have come today.
+- আমার কোনো সমস্যা নেই। _(amar kono shomoshsha nei.)_: I have no problem.
+
+## Building a long sentence step by step
+
+You can build a long, natural sentence by adding one piece at a time. Start with the core and add time, place, description and reason, always keeping the verb last.
+
+**Four steps**
+
+- আমি যাই। _(ami jai.)_: I go.
+- আমি বাজারে যাই। _(ami bajare jai.)_: I go to the market.
+- আমি রোজ বাজারে যাই। _(ami roj bajare jai.)_: I go to the market every day.
+- আমি রোজ বাজারে মাছ কিনতে যাই। _(ami roj bajare mach kinte jai.)_: I go to the market every day to buy fish.
+- আমি রোজ সকালে বাজারে তাজা মাছ কিনতে যাই। _(ami roj shokale bajare taja mach kinte jai.)_: I go to the market every morning to buy fresh fish.
+
+## Practice questions
+
+1. Where does the verb go in a Bengali sentence?
+   - A) at the beginning
+   - B) in the middle
+   - C) at the end  ✔
+   - _Why:_ Bengali order is subject – object – verb.
+2. Which sentence is correct?
    - A) আমি ভাত খাই। _(ami bhat khai.)_  ✔
    - B) আমি খাই ভাত। _(ami khai bhat.)_
-   - C) ভাত খাই আমি। _(bhat khai ami.)_
-   - _Why:_ The verb comes at the end: subject, object, verb.
+   - C) খাই আমি ভাত। _(khai ami bhat.)_
+   - _Why:_ The verb goes last.
+3. Which sentence is correct?
+   - A) সে রোজ বই পড়ে। _(she roj boi pore.)_  ✔
+   - B) সে পড়ে রোজ বই। _(she pore roj boi.)_
+   - C) রোজ পড়ে সে বই। _(roj pore she boi.)_
+   - _Why:_ Subject, time, object, verb.
+4. Which sentence is correct?
+   - A) মা রান্নাঘরে রান্না করছেন। _(ma rannaghore ranna korchhen.)_  ✔
+   - B) মা করছেন রান্না রান্নাঘরে। _(ma korchhen ranna rannaghore.)_
+   - C) রান্নাঘরে করছেন মা রান্না। _(rannaghore korchhen ma ranna.)_
+   - _Why:_ The verb করছেন comes last.
+5. Where does an adjective go?
+   - A) before the noun  ✔
+   - B) after the noun
+   - C) after the verb
+   - _Why:_ ভালো বই: the adjective comes before the noun.
+6. I bought a good book.
+   - A) আমি একটা ভালো বই কিনলাম। _(ami ekta bhalo boi kinlam.)_  ✔
+   - B) আমি বই ভালো একটা কিনলাম। _(ami boi bhalo ekta kinlam.)_
+   - C) আমি কিনলাম একটা ভালো বই। _(ami kinlam ekta bhalo boi.)_
+   - _Why:_ Adjective before the noun, verb last.
+7. Shyam is taller than Ram.
+   - A) রামের চেয়ে শ্যাম লম্বা। _(ramer cheye shyam lomba.)_  ✔
+   - B) রাম চেয়ে শ্যাম লম্বা। _(ram cheye shyam lomba.)_
+   - C) শ্যামের চেয়ে রাম লম্বা। _(shyamer cheye ram lomba.)_
+   - _Why:_ X-র চেয়ে Y: Y is more than X.
+8. He / she is the best student in the class.
+   - A) সে ক্লাসের সবচেয়ে ভালো ছাত্র। _(she klaser shobcheye bhalo chhatro.)_  ✔
+   - B) সে ক্লাসে ভালো ছাত্র সবচেয়ে। _(she klase bhalo chhatro shobcheye.)_
+   - C) সে সবচেয়ে ক্লাসের ভালো ছাত্র। _(she shobcheye klaser bhalo chhatro.)_
+   - _Why:_ সবচেয়ে goes before the adjective.
+9. Which word fills the blank? **আমি ক্লান্ত, ___ ঘুমাব।**
+   - A) তাই _(tai)_  ✔
+   - B) কিন্তু _(kintu)_
+   - C) কারণ _(karon)_
+   - _Why:_ '… so I will sleep': তাই.
+10. Which word fills the blank? **আমি যাব, ___ সে যাবে না।**
+   - A) কিন্তু _(kintu)_  ✔
+   - B) তাই _(tai)_
+   - C) কারণ _(karon)_
+   - _Why:_ '… but he will not go': কিন্তু.
+11. Which word fills the blank? **আমি যাব না, ___ বৃষ্টি হচ্ছে।**
+   - A) কারণ _(karon)_  ✔
+   - B) তাই _(tai)_
+   - C) কিন্তু _(kintu)_
+   - _Why:_ '… because it is raining': কারণ.
+12. Which word fills the blank? **তুমি চা খাবে ___ কফি?**
+   - A) বা _(ba)_  ✔
+   - B) আর _(ar)_
+   - C) তাই _(tai)_
+   - _Why:_ 'tea or coffee': বা.
+13. Which word fills the blank? **আমি চা খাই ___ সে কফি খায়।**
+   - A) আর _(ar)_  ✔
+   - B) কিন্তু _(kintu)_
+   - C) কারণ _(karon)_
+   - _Why:_ 'tea and … coffee': আর.
+14. Which word fills the blank? **___ বৃষ্টি পড়ে ___ আমি বাড়িতে থাকি।**
+   - A) যখন … তখন _(jokhon … tokhon)_  ✔
+   - B) যদি … কিন্তু _(jodi … kintu)_
+   - C) কারণ … তাই _(karon … tai)_
+   - _Why:_ 'When it rains, then I stay home': যখন … তখন.
+15. Which word means 'very'?
+   - A) খুব _(khub)_  ✔
+   - B) একটু _(ektu)_
+   - C) কম _(kom)_
+   - _Why:_ খুব = very.
+16. Which word means 'a little'?
+   - A) একটু _(ektu)_  ✔
+   - B) খুব _(khub)_
+   - C) অনেক _(onek)_
+   - _Why:_ একটু = a little.
+17. Which word means 'the most'?
+   - A) সবচেয়ে _(shobcheye)_  ✔
+   - B) আরও _(aro)_
+   - C) খুব _(khub)_
+   - _Why:_ সবচেয়ে = the most.
+18. After a quantity word like অনেক, the noun usually:
+   - A) takes -গুলো
+   - B) stays plain: অনেক বই  ✔
+   - C) takes -রা
+   - _Why:_ Quantity words need no plural ending.
+19. Which means 'everyone has come' in the order doer – verb?
+   - A) সবাই এসেছে। _(shobai eshechhe.)_  ✔
+   - B) এসেছে সবাই। _(eshechhe shobai.)_
+   - C) সবাই এসেছে না। _(shobai eshechhe na.)_
+   - _Why:_ Verb last: সবাই এসেছে.
+20. Which sentence is correct?
+   - A) সে বলল যে সে আসবে। _(she bollo je she ashbe.)_  ✔
+   - B) সে যে বলল আসবে সে। _(she je bollo ashbe she.)_
+   - C) যে সে বলল সে আসবে। _(je she bollo she ashbe.)_
+   - _Why:_ 'said that': বলল যে.
+21. Which sentence is correct?
+   - A) এটা সুন্দর, তবে দামি। _(eta shundor, tobe dami.)_  ✔
+   - B) এটা সুন্দর তবে দামি না, তবে। _(eta shundor tobe dami na, tobe.)_
+   - C) তবে এটা দামি সুন্দর। _(tobe eta dami shundor.)_
+   - _Why:_ Two descriptions joined by তবে.
 
 ---
