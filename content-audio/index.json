@@ -5262,5 +5262,365 @@
  "96cd67b394b15b72": {
   "text": "স্বাগতম, ভেতরে আসুন।",
   "from": "vocab greetings phrase"
+ },
+ "c83f9ae263436177": {
+  "text": "তালু",
+  "from": "vocab mouth-voice"
+ },
+ "d60fb281759a36a6": {
+  "text": "চোয়াল",
+  "from": "vocab mouth-voice"
+ },
+ "64cb7c9039edeb14": {
+  "text": "থুতনি",
+  "from": "vocab mouth-voice"
+ },
+ "a59e87ddcaf7362f": {
+  "text": "ফুসফুস",
+  "from": "vocab mouth-voice"
+ },
+ "7d9e813787ecd825": {
+  "text": "শ্বাস",
+  "from": "vocab mouth-voice"
+ },
+ "4a6b8d4f501ac46f": {
+  "text": "স্বরযন্ত্র",
+  "from": "vocab mouth-voice"
+ },
+ "d0ca25c160a1aee2": {
+  "text": "আওয়াজ",
+  "from": "vocab mouth-voice"
+ },
+ "4451da91ee549df8": {
+  "text": "স্বর",
+  "from": "vocab mouth-voice"
+ },
+ "f477e4a774de7956": {
+  "text": "জোরে",
+  "from": "vocab mouth-voice"
+ },
+ "149c3fb84d1b6b39": {
+  "text": "আস্তে",
+  "from": "vocab mouth-voice"
+ },
+ "b44b097c8c4ef8f8": {
+  "text": "চুপ",
+  "from": "vocab mouth-voice"
+ },
+ "a8ded4412778a03f": {
+  "text": "ফিসফিস",
+  "from": "vocab mouth-voice"
+ },
+ "458eba8b532619e5": {
+  "text": "হাঁচি",
+  "from": "vocab mouth-voice"
+ },
+ "244ed45468499c45": {
+  "text": "শ্রবণশক্তি",
+  "from": "vocab mouth-voice"
+ },
+ "0de7ca9b47fc2850": {
+  "text": "বধির",
+  "from": "vocab mouth-voice"
+ },
+ "e2c3c45144666b1d": {
+  "text": "কানে কম শোনা",
+  "from": "vocab mouth-voice"
+ },
+ "b22cb09cd2b4d410": {
+  "text": "কানের ব্যথা",
+  "from": "vocab mouth-voice"
+ },
+ "d2a2e5b1d4bf6dd6": {
+  "text": "কানের পর্দা",
+  "from": "vocab mouth-voice"
+ },
+ "6c97503d62ac0e3d": {
+  "text": "কানের যন্ত্র",
+  "from": "vocab mouth-voice"
+ },
+ "1fb1c2a46eeafffa": {
+  "text": "মুখ খোলো।",
+  "from": "vocab mouth-voice phrase"
+ },
+ "00828767c1546125": {
+  "text": "জিভ বের করো।",
+  "from": "vocab mouth-voice phrase"
+ },
+ "00b2f9734bb931d9": {
+  "text": "ঠোঁট বন্ধ করো।",
+  "from": "vocab mouth-voice phrase"
+ },
+ "9996701ddb625731": {
+  "text": "জিভটা ওপরে তোলো।",
+  "from": "vocab mouth-voice phrase"
+ },
+ "081998a6ca5bd412": {
+  "text": "দাঁত দেখাও।",
+  "from": "vocab mouth-voice phrase"
+ },
+ "eb79361964b7deb5": {
+  "text": "গভীর শ্বাস নাও।",
+  "from": "vocab mouth-voice phrase"
+ },
+ "3c869ceacfdb0ca3": {
+  "text": "আস্তে আস্তে শ্বাস ছাড়ো।",
+  "from": "vocab mouth-voice phrase"
+ },
+ "435ceca492d90050": {
+  "text": "তুমি কি ভালো শুনতে পাও?",
+  "from": "vocab mouth-voice phrase"
+ },
+ "568c996fb9ed7c2a": {
+  "text": "কানে কি ব্যথা করে?",
+  "from": "vocab mouth-voice phrase"
+ },
+ "d8ddb1ab1e7a9958": {
+  "text": "গলা কি ব্যথা করছে?",
+  "from": "vocab mouth-voice phrase"
+ },
+ "6d3ef335f1ff4bf1": {
+  "text": "কথা",
+  "from": "vocab speech-language"
+ },
+ "70bc5bca118ecf33": {
+  "text": "কথা বলা",
+  "from": "vocab speech-language"
+ },
+ "d6f64e062291e84e": {
+  "text": "ভাষা",
+  "from": "vocab speech-language"
+ },
+ "4b2634179abd556c": {
+  "text": "ধ্বনি",
+  "from": "vocab speech-language"
+ },
+ "f86c39c9e48f4d18": {
+  "text": "উচ্চারণ",
+  "from": "vocab speech-language"
+ },
+ "bcdefeaa24d67c75": {
+  "text": "স্পষ্ট",
+  "from": "vocab speech-language"
+ },
+ "6cdc25cdc51ee682": {
+  "text": "অস্পষ্ট",
+  "from": "vocab speech-language"
+ },
+ "5313f2a4fd6e717d": {
+  "text": "ধীরে",
+  "from": "vocab speech-language"
+ },
+ "9fe4575c0092b633": {
+  "text": "আবার",
+  "from": "vocab speech-language"
+ },
+ "ef7cf29983252cfd": {
+  "text": "বারবার",
+  "from": "vocab speech-language"
+ },
+ "c52d67979bafd7c4": {
+  "text": "তোতলানো",
+  "from": "vocab speech-language"
+ },
+ "79d03e22de26dd0e": {
+  "text": "আধো আধো কথা",
+  "from": "vocab speech-language"
+ },
+ "252ab074bf18d986": {
+  "text": "নাকি সুরে",
+  "from": "vocab speech-language"
+ },
+ "fc09c57c56694c5b": {
+  "text": "বয়স",
+  "from": "vocab speech-language"
+ },
+ "2b65071b8b38efb6": {
+  "text": "বড় হওয়া",
+  "from": "vocab speech-language"
+ },
+ "e6b244facc47de39": {
+  "text": "প্রথম",
+  "from": "vocab speech-language"
+ },
+ "bcd2d8aae76a133e": {
+  "text": "দেরি",
+  "from": "vocab speech-language"
+ },
+ "8217dac70c5c96e7": {
+  "text": "মাতৃভাষা",
+  "from": "vocab speech-language"
+ },
+ "52ddce9b465e1daa": {
+  "text": "দুই ভাষা",
+  "from": "vocab speech-language"
+ },
+ "20c5f671e4947850": {
+  "text": "আপনার ছেলের বয়স কত?",
+  "from": "vocab speech-language phrase"
+ },
+ "e2f1c98aa0b11211": {
+  "text": "আপনার মেয়ে কবে প্রথম কথা বলেছিল?",
+  "from": "vocab speech-language phrase"
+ },
+ "6f21c35b01e7d4d9": {
+  "text": "ও কি আপনার কথা বোঝে?",
+  "from": "vocab speech-language phrase"
+ },
+ "41fa974ef01b3ffb": {
+  "text": "বাড়িতে আপনারা কোন কোন ভাষায় কথা বলেন?",
+  "from": "vocab speech-language phrase"
+ },
+ "25f6ea2113a3bfed": {
+  "text": "ওর কথা কি স্পষ্ট?",
+  "from": "vocab speech-language phrase"
+ },
+ "5f603c0e5c7a52ba": {
+  "text": "আবার বলো।",
+  "from": "vocab speech-language phrase"
+ },
+ "1ac98b70270c61be": {
+  "text": "আমার সঙ্গে বলো।",
+  "from": "vocab speech-language phrase"
+ },
+ "ab83c4508e82dc1a": {
+  "text": "আস্তে আস্তে বলো।",
+  "from": "vocab speech-language phrase"
+ },
+ "15e6c504ea44b4a6": {
+  "text": "থেরাপিস্ট",
+  "from": "vocab therapy-practice"
+ },
+ "995210d22ad52784": {
+  "text": "থেরাপি",
+  "from": "vocab therapy-practice"
+ },
+ "832beb7287c912dc": {
+  "text": "বাবা-মা",
+  "from": "vocab therapy-practice"
+ },
+ "3f4040b956acdef8": {
+  "text": "অভিভাবক",
+  "from": "vocab therapy-practice"
+ },
+ "0f70642c992332c8": {
+  "text": "রোগী",
+  "from": "vocab therapy-practice"
+ },
+ "5253bbfadcf915c2": {
+  "text": "ক্লিনিক",
+  "from": "vocab therapy-practice"
+ },
+ "99eaf1ddbfa3598a": {
+  "text": "সেশন",
+  "from": "vocab therapy-practice"
+ },
+ "09bc8698545caa07": {
+  "text": "মূল্যায়ন",
+  "from": "vocab therapy-practice"
+ },
+ "9cd37d2f8e3efe26": {
+  "text": "রিপোর্ট",
+  "from": "vocab therapy-practice"
+ },
+ "8e81ecb53417ab13": {
+  "text": "লক্ষ্য",
+  "from": "vocab therapy-practice"
+ },
+ "93e54e1ad82ede88": {
+  "text": "পরিকল্পনা",
+  "from": "vocab therapy-practice"
+ },
+ "c920bdd7f5abc9ab": {
+  "text": "উন্নতি",
+  "from": "vocab therapy-practice"
+ },
+ "b440835fda5bb0bf": {
+  "text": "সমস্যা",
+  "from": "vocab therapy-practice"
+ },
+ "eb7a54b20cb96a95": {
+  "text": "পরামর্শ",
+  "from": "vocab therapy-practice"
+ },
+ "3d6cfc739be12b35": {
+  "text": "পরের সপ্তাহ",
+  "from": "vocab therapy-practice"
+ },
+ "093aafc9e8215bb3": {
+  "text": "অনুশীলন",
+  "from": "vocab therapy-practice"
+ },
+ "9ce82c3bb81bb9aa": {
+  "text": "ব্যায়াম",
+  "from": "vocab therapy-practice"
+ },
+ "ceac70829e36a723": {
+  "text": "বাড়ির কাজ",
+  "from": "vocab therapy-practice"
+ },
+ "c277c1f20ea4f1b6": {
+  "text": "রোজ",
+  "from": "vocab therapy-practice"
+ },
+ "c882ad0c06780448": {
+  "text": "খেলনা",
+  "from": "vocab therapy-practice"
+ },
+ "ca19ada3cae4e313": {
+  "text": "প্রশংসা",
+  "from": "vocab therapy-practice"
+ },
+ "df6970ff08a508f2": {
+  "text": "সাবাশ",
+  "from": "vocab therapy-practice"
+ },
+ "fde4194bc22c9ece": {
+  "text": "চেষ্টা",
+  "from": "vocab therapy-practice"
+ },
+ "8fdb8b84d114aa17": {
+  "text": "ধৈর্য",
+  "from": "vocab therapy-practice"
+ },
+ "2c804c965defe4c8": {
+  "text": "আজ আমরা একসঙ্গে খেলব।",
+  "from": "vocab therapy-practice phrase"
+ },
+ "249b15e1e97bc9cb": {
+  "text": "আমার দিকে তাকাও।",
+  "from": "vocab therapy-practice phrase"
+ },
+ "3885c85ac39bd0e0": {
+  "text": "মন দিয়ে শোনো।",
+  "from": "vocab therapy-practice phrase"
+ },
+ "2d47a349fd1ce1c1": {
+  "text": "সাবাশ! খুব ভালো হয়েছে।",
+  "from": "vocab therapy-practice phrase"
+ },
+ "c1f1524eb62b11f5": {
+  "text": "আবার চেষ্টা করো।",
+  "from": "vocab therapy-practice phrase"
+ },
+ "f48b60f2168519d0": {
+  "text": "বাড়িতে রোজ দশ মিনিট অনুশীলন করবেন।",
+  "from": "vocab therapy-practice phrase"
+ },
+ "8ff2bd24631bad68": {
+  "text": "সে ধীরে ধীরে ভালো হচ্ছে।",
+  "from": "vocab therapy-practice phrase"
+ },
+ "7469b721a2f7ffb8": {
+  "text": "আপনার কোনো প্রশ্ন আছে?",
+  "from": "vocab therapy-practice phrase"
+ },
+ "8ad6c62ec789477a": {
+  "text": "পরের সপ্তাহে আবার আসবেন।",
+  "from": "vocab therapy-practice phrase"
+ },
+ "349640d136c0e707": {
+  "text": "ধৈর্য ধরুন, সময় লাগবে।",
+  "from": "vocab therapy-practice phrase"
  }
 }
