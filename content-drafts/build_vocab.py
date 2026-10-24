@@ -7,7 +7,7 @@ import json, re, sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent / "vocab"))
-import a_people, b_food, c_home, d_nature, e_time, f_city, g_language, h_phrases, i_clinical  # noqa: E402
+import a_people, b_food, c_home, d_nature, e_time, f_city, g_language, h_phrases, i_clinical, j_interests  # noqa: E402
 
 GROUPS = [
     ("people", "People and body", "Family, jobs, the body and feelings."),
@@ -20,7 +20,7 @@ GROUPS = [
     ("words", "Words that do the work", "Verbs, describing words, question words and polite phrases."),
     ("clinical", "Speech, hearing and therapy", "For speech therapists and others who work with Bengali-speaking families."),
 ]
-MODULES = [a_people, b_food, c_home, d_nature, e_time, f_city, g_language, i_clinical]
+MODULES = [a_people, b_food, c_home, d_nature, e_time, f_city, g_language, i_clinical, j_interests]
 TOPICS = [t for m in MODULES for t in m.TOPICS]
 for t in TOPICS:  # example phrases live in vocab/h_phrases.py
     t["phrases"] = list(t["phrases"]) + list(h_phrases.EXTRA.get(t["id"], []))

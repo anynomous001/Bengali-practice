@@ -254,6 +254,8 @@ export const GOALS: PathGoal[] = [
           { id: "vocabulary/body", why: "The body, and how to say what hurts." },
           { id: "vocabulary/mouth-voice", why: "Mouth, throat, voice, sound and hearing: the words of your work." },
           { id: "vocabulary/speech-language", why: "Speech, language, how speech sounds and how a child develops." },
+          { id: "vocabulary/clinical-history", why: "Conditions, feeding and swallowing, and the questions for a case history." },
+          { id: "vocabulary/science-brain", why: "Science, the brain and memory, and the words for sound and language." },
         ],
       },
       {
@@ -304,6 +306,8 @@ export const GOALS: PathGoal[] = [
           { id: "vocabulary/food", why: "Bengali food is a good reason to learn the language." },
           { id: "vocabulary/festivals", why: "Festivals, and how people wish each other well." },
           { id: "vocabulary/describing", why: "Describe people, food and things." },
+          { id: "vocabulary/film-tv", why: "Talk about films and TV, and what you thought of them." },
+          { id: "vocabulary/art-craft", why: "Painting, sculpture and the crafts of Bengal." },
         ],
       },
       {

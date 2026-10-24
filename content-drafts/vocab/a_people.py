@@ -21,6 +21,13 @@ dict(id="family", group="people", title=("পরিবার", "poribar", "Famil
    ("মামা", "mama", "uncle (mother's brother)"), ("মামি", "mami", "aunt (wife of mama)"),
    ("মাসি", "mashi", "aunt (mother's sister)"), ("মেসো", "meso", "uncle (mashi's husband)"),
   ]),
+  ("More in-laws", [
+   ("বেয়াই", "beyai", "father of your child's spouse"), ("বেয়ান", "beyan", "mother of your child's spouse"),
+   ("বউমা", "bouma", "daughter-in-law (said with affection)"), ("জামাইবাবু", "jamaibabu", "sister's husband"),
+   ("বৌদি", "boudi", "brother's wife; sister-in-law"), ("শ্যালক", "shyalok", "wife's brother"), ("শ্যালিকা", "shyalika", "wife's sister"),
+   ("দেওর", "deor", "husband's younger brother"), ("ননদ", "nonod", "husband's sister"), ("ভাশুর", "bhashur", "husband's elder brother"),
+   ("জা", "ja", "wife of your husband's brother"),
+  ]),
   ("Nieces, nephews and in-laws", [
    ("ভাইপো", "bhaipo", "nephew (brother's son)"), ("ভাইঝি", "bhaijhi", "niece (brother's daughter)"),
    ("ভাগ্নে", "bhagne", "nephew (sister's son)"), ("ভাগ্নি", "bhagni", "niece (sister's daughter)"),

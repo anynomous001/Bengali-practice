@@ -99,4 +99,36 @@ dict(id="therapy-practice", group="clinical", title=("থেরাপি ও অ
   ("পরের সপ্তাহে আবার আসবেন।", "porer shoptahe abar ashben.", "Please come again next week."),
   ("ধৈর্য ধরুন, সময় লাগবে।", "dhoirjo dhorun, shomoy lagbe.", "Please be patient, it will take time."),
  ]),
+
+dict(id="clinical-history", group="clinical", title=("রোগ ও ইতিহাস", "rog o itihash", "Conditions and history"),
+ blurb="Conditions you may meet, feeding and swallowing, and the questions for a case history.",
+ sections=[
+  ("Conditions", [
+   ("অটিজম", "otijom", "autism"), ("বধিরতা", "bodhirota", "deafness"), ("কানের সংক্রমণ", "kaner shongkromon", "ear infection"),
+   ("তালু ফাটা", "talu phata", "cleft palate"), ("স্ট্রোক", "strok", "stroke"), ("তোতলামি", "totlami", "stuttering"),
+   ("কথা দেরিতে বলা", "kotha derite bola", "late talking; speech delay"), ("গলা বসে যাওয়া", "gola bose jaoya", "hoarse voice"),
+   ("মৃগী", "mrigi", "epilepsy"), ("এলার্জি", "elarji", "allergy"), ("সংক্রমণ", "shongkromon", "infection"),
+  ]),
+  ("Feeding and swallowing", [
+   ("গেলা", "gela", "to swallow"), ("চিবানো", "chibano", "to chew"), ("দম আটকে যাওয়া", "dom atke jaoya", "to choke"),
+   ("চামচ", "chamoch", "spoon"), ("গ্লাস", "glash", "glass"), ("নরম খাবার", "norom khabar", "soft food"),
+   ("শক্ত খাবার", "shokto khabar", "hard food"), ("তরল", "torol", "liquid"),
+  ]),
+  ("Case history", [
+   ("জন্ম", "jonmo", "birth"), ("গর্ভাবস্থা", "gorbhabostha", "pregnancy"), ("অসুখ", "oshukh", "illness"),
+   ("অপারেশন", "opareshon", "operation; surgery"), ("হাসপাতালে ভর্তি", "haspatale bhorti", "admitted to hospital"),
+   ("ওষুধ", "oshudh", "medicine"), ("কবে থেকে", "kobe theke", "since when"), ("কতদিন", "kotodin", "how long"),
+  ]),
+ ],
+ phrases=[
+  ("ও কবে জন্মেছে?", "o kobe jonmechhe?", "When was he born?"),
+  ("জন্মের সময় কোনো সমস্যা হয়েছিল?", "jonmer shomoy kono shomoshya hoyechhilo?", "Was there any problem at birth?"),
+  ("ওর কি কখনো অপারেশন হয়েছে?", "or ki kokhono opareshon hoyechhe?", "Has he ever had an operation?"),
+  ("কোনো কিছুতে এলার্জি আছে?", "kono kichhute elarji achhe?", "Is there an allergy to anything?"),
+  ("ও কি ওষুধ খায়?", "o ki oshudh khay?", "Does he take any medicine?"),
+  ("কবে থেকে এই সমস্যা?", "kobe theke ei shomoshya?", "Since when has there been this problem?"),
+  ("খাবার গিলতে কি কষ্ট হয়?", "khabar gilte ki koshto hoy?", "Is it hard to swallow food?"),
+  ("ও কি খাওয়ার সময় কাশে?", "o ki khaowar shomoy kashe?", "Does he cough while eating?"),
+  ("পরিবারে আর কারো কি কথা বলতে অসুবিধা ছিল?", "poribare ar karo ki kotha bolte oshubidha chhilo?", "Did anyone else in the family have trouble speaking?"),
+ ]),
 ]
