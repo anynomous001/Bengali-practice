@@ -1188,3 +1188,4 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
 .g-table th, .g-table td { padding:14px 16px; }
 .g-table thead th .bn-ro, .g-section h3 .bn-ro { text-transform:none; letter-spacing:0; font-size:.9em; font-weight:400; }
 .g-table td { min-width:4.2rem; } .g-table tbody th { max-width:12.5rem; min-width:7.5rem; }
+.trace-hear { margin:6px 0 10px; text-align:center; } .trace-hear .btn { display:inline-flex; align-items:center; gap:6px; }

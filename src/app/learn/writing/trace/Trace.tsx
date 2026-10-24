@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { recordWriting } from "../../../actions";
 import { useRoman } from "../../Roman";
+import Icon from "../../Icon";
+import { speak } from "@/lib/speak";
 import { VOWEL_STEPS } from "@/data/vowel-steps";
 import { CONSONANT_STEPS } from "@/data/consonant-steps";
 import { NUMERAL_STEPS } from "@/data/numeral-steps";
@@ -21,6 +23,8 @@ export type TraceItem = {
   tile: string;
   rom: string;
   group: string;
+  /** What to say aloud for the sound button. Defaults to the guide. */
+  say?: string;
   /** Extra line under the pad, for example the name of a vowel sign. */
   note?: string;
   /** Guide size as a share of the pad; longer shapes need less. Defaults to the page's value. */
@@ -155,6 +159,7 @@ export default function Trace({
     <>
       <p className="muted">{intro} Use the eraser or undo if you slip. When you are happy with it, tap “I&apos;m done”. Nothing you draw is saved: only how many times you practiced each one.</p>
       <p className="trace-now">{noun} <b lang="bn">{item.guide}</b>{roman && ` (${item.rom})`}{counts[sel] ? ` · practiced ${counts[sel]}×` : ""}{item.note && <><br /><span className="muted">{item.note}</span></>}</p>
+      <p className="trace-hear"><button type="button" className="btn small ghost" onClick={() => speak(item.say ?? item.guide)}><Icon name="sound" size={16} /> Hear it</button></p>
       <div className="trace-box">
         <canvas ref={guideRef} className="trace-canvas" aria-hidden />
         <canvas

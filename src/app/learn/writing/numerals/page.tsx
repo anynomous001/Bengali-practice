@@ -12,6 +12,7 @@ export default async function TraceNumeralsPage() {
   const items = NUMBER_CHART.filter((n) => n.value < 10 || TENS.has(n.value)).map((n) => ({
     id: `n:${n.value}`,
     guide: n.numeral,
+    say: n.word,
     tile: n.numeral,
     rom: n.wrom,
     group: n.value < 10 ? "digits" : "tens",
