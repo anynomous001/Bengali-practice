@@ -91,6 +91,7 @@ function Learn({ progress }: { progress: Progress }) {
       <button type="button" className="lcard-main" onClick={() => { setSel(l); speak(l.ch); }} aria-label={`${l.ch}, ${l.rom}. Hear it and see more.`}>
         <span className="ch" lang="bn">{l.ch}</span>
         {roman && <span className="rom">{l.rom}</span>}
+        {l.ipa && <span className="ipa" title="International Phonetic Alphabet">/{l.ipa}/</span>}
       </button>
       {l.word && <span className="ex"><span lang="bn">{l.word}</span>{roman && ` (${l.wrom})`}: {l.wmean}</span>}
       {l.tip && <span className="ex tip"><b>Trick: </b><TipText text={l.tip} /></span>}
@@ -105,13 +106,14 @@ function Learn({ progress }: { progress: Progress }) {
       {sel && (
         <section className="detail more">
           <div>
-            <p className="sound"><b lang="bn" className="more-ch">{sel.ch}</b>{roman && <> sounds like <b>{sel.rom}</b></>}</p>
+            <p className="sound"><b lang="bn" className="more-ch">{sel.ch}</b>{roman && <> sounds like <b>{sel.rom}</b></>}{sel.ipa && <> · IPA <b className="ipa">/{sel.ipa}/</b></>}</p>
             {place && <p className="place-line">Made in the <b lang="bn">{place.bn}</b> place: {place.en}. {place.how}</p>}
             {sel.vs && <p className="trick-vs">Do not mix it up with <TipText text={sel.vs} />.</p>}
             <LetterFeedback key={sel.ch} letter={sel.ch} />
           </div>
         </section>
       )}
+      <p className="muted ipa-note">The symbol between slashes is the sound in the International Phonetic Alphabet (IPA), as in Standard Colloquial Bengali. <b>ʰ</b> after a letter means a puff of air, and <b>ʈ ɖ</b> are made with the tongue curled back.</p>
       <div className="place-switch" role="group" aria-label="Group the letters by">
         <button type="button" className={view === "order" ? "on" : ""} onClick={() => setView("order")}>In order</button>
         <button type="button" className={view === "place" ? "on" : ""} onClick={() => setView("place")}>By sound place</button>

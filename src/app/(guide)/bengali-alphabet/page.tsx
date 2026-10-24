@@ -36,6 +36,7 @@ export default function BengaliAlphabet() {
               <li key={l.ch}>
                 <span className="ch" lang="bn">{l.ch}</span>
                 <span className="rom">{l.rom}</span>
+                {l.ipa && <span className="ipa">/{l.ipa}/</span>}
                 {l.word && <span className="ex"><span lang="bn">{l.word}</span> ({l.wrom}): {l.wmean}</span>}
                 {l.tip && <span className="ex">{l.tip}</span>}
               </li>

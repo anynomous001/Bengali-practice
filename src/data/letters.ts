@@ -117,6 +117,21 @@ const TIPS: Record<string, [string, string?]> = {
   "ঁ": ["Say the vowel through your nose, like the on in French bon: চাঁদ (chãd)."],
 };
 
+/**
+ * International Phonetic Alphabet value of each letter, in Standard Colloquial Bengali (the Kolkata standard).
+ * These are the commonly cited values; a few letters vary by position or speaker, and say so. The teacher should review them.
+ */
+const IPA: Record<string, string> = {
+  "অ": "ɔ", "আ": "a", "ই": "i", "ঈ": "i", "উ": "u", "ঊ": "u", "ঋ": "ri", "এ": "e", "ঐ": "oi̯", "ও": "o", "ঔ": "ou̯",
+  "ক": "k", "খ": "kʰ", "গ": "ɡ", "ঘ": "ɡʱ", "ঙ": "ŋ",
+  "চ": "t͡ʃ", "ছ": "t͡ʃʰ", "জ": "d͡ʒ", "ঝ": "d͡ʒʱ", "ঞ": "n ~ ɲ",
+  "ট": "ʈ", "ঠ": "ʈʰ", "ড": "ɖ", "ঢ": "ɖʱ", "ণ": "n",
+  "ত": "t̪", "থ": "t̪ʰ", "দ": "d̪", "ধ": "d̪ʱ", "ন": "n",
+  "প": "p", "ফ": "pʰ ~ ɸ", "ব": "b", "ভ": "bʱ", "ম": "m",
+  "য": "d͡ʒ", "র": "r", "ল": "l", "শ": "ʃ", "ষ": "ʃ", "স": "ʃ (s in clusters)", "হ": "ɦ",
+  "ড়": "ɽ", "ঢ়": "ɽʱ", "য়": "e̯ ~ j", "ৎ": "t̪", "ং": "ŋ", "ঃ": "h", "ঁ": "◌̃ (nasalised vowel)",
+};
+
 /** The traditional Bengali grouping by where in the mouth a sound is made (উচ্চারণ স্থান). */
 export const PLACES: { id: string; bn: string; en: string; how: string }[] = [
   { id: "kanthya", bn: "কণ্ঠ্য", en: "Throat (velar)", how: "Made at the back of the throat, where the tongue lifts to meet the soft palate, as in the k of sky or the g of go." },
@@ -150,6 +165,8 @@ export type Letter = {
   group: string;
   /** Place of articulation id, see PLACES. */
   place: string;
+  /** The sound in the International Phonetic Alphabet. */
+  ipa: string | null;
   /** A trick for saying the letter, comparing it with English sounds. */
   tip: string | null;
   /** What it is easily mixed up with. */
@@ -167,6 +184,7 @@ export const LETTERS: Letter[] = GROUPS_RAW.flatMap((g) =>
     wmean: wmean ?? null,
     group: g.id,
     place: PLACE_OF[ch] ?? "kanthya",
+    ipa: IPA[ch] ?? null,
     tip: TIPS[ch]?.[0] ?? null,
     vs: TIPS[ch]?.[1] ?? null,
   })),
