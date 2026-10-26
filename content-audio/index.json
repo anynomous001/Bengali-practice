@@ -5799,6 +5799,338 @@
   "text": "পরিবারে আর কারো কি কথা বলতে অসুবিধা ছিল?",
   "from": "vocab clinical-history phrase"
  },
+ "8fb00b79431b7c87": {
+  "text": "হাঁ করা",
+  "from": "vocab swallow-check"
+ },
+ "5e84031ef26fe541": {
+  "text": "বের করা",
+  "from": "vocab swallow-check"
+ },
+ "99266fd8776345b7": {
+  "text": "তোলা",
+  "from": "vocab swallow-check"
+ },
+ "b070c1a12c245658": {
+  "text": "ফোলানো",
+  "from": "vocab swallow-check"
+ },
+ "eb7efadde3525d1e": {
+  "text": "ওপরে",
+  "from": "vocab swallow-check"
+ },
+ "2751a4b3a7cd268a": {
+  "text": "পেছনে",
+  "from": "vocab swallow-check"
+ },
+ "cdfb1be3f4a622e3": {
+  "text": "ঢোক",
+  "from": "vocab swallow-check"
+ },
+ "49fb020f0c8ca235": {
+  "text": "চুমুক",
+  "from": "vocab swallow-check"
+ },
+ "bdd8040bf13f40fc": {
+  "text": "পাতলা",
+  "from": "vocab swallow-check"
+ },
+ "13d24d8162791650": {
+  "text": "ঘন",
+  "from": "vocab swallow-check"
+ },
+ "a58504c08bb935f6": {
+  "text": "থুতু",
+  "from": "vocab swallow-check"
+ },
+ "ad7db4c73b4b9b04": {
+  "text": "কাশা",
+  "from": "vocab swallow-check"
+ },
+ "9fe8874c6e19c93c": {
+  "text": "বিষম খাওয়া",
+  "from": "vocab swallow-check"
+ },
+ "ae4260fb903bd8d4": {
+  "text": "আটকে যাওয়া",
+  "from": "vocab swallow-check"
+ },
+ "ede17a5a8bc9f77e": {
+  "text": "গলা পরিষ্কার করা",
+  "from": "vocab swallow-check"
+ },
+ "88011569241045b9": {
+  "text": "ভেজা আওয়াজ",
+  "from": "vocab swallow-check"
+ },
+ "c8d81a20a7c4bf18": {
+  "text": "আওয়াজ বদলে যাওয়া",
+  "from": "vocab swallow-check"
+ },
+ "e2c5f934e079d6e6": {
+  "text": "দম নিতে কষ্ট",
+  "from": "vocab swallow-check"
+ },
+ "d8da3fb9a2deaedd": {
+  "text": "গিলতে কষ্ট",
+  "from": "vocab swallow-check"
+ },
+ "1d34e4d1ee0deff6": {
+  "text": "মুখে জমে থাকা",
+  "from": "vocab swallow-check"
+ },
+ "88b509f447afe9ba": {
+  "text": "সোজা হয়ে বসা",
+  "from": "vocab swallow-check"
+ },
+ "b825d33261821b8a": {
+  "text": "হাঁ করুন।",
+  "from": "vocab swallow-check phrase"
+ },
+ "339f40ffdafe01b5": {
+  "text": "জিভ বের করুন।",
+  "from": "vocab swallow-check phrase"
+ },
+ "6a2a167010cb4018": {
+  "text": "জিভ ডান দিকে নিন।",
+  "from": "vocab swallow-check phrase"
+ },
+ "5014214273381e22": {
+  "text": "জিভ বাঁ দিকে নিন।",
+  "from": "vocab swallow-check phrase"
+ },
+ "e827d4557d7c17d2": {
+  "text": "ঠোঁট বন্ধ করুন।",
+  "from": "vocab swallow-check phrase"
+ },
+ "bde84227b9002305": {
+  "text": "গাল ফোলান।",
+  "from": "vocab swallow-check phrase"
+ },
+ "2ef86e556f6d6467": {
+  "text": "একটু হাসুন।",
+  "from": "vocab swallow-check phrase"
+ },
+ "da1d98f009cd7056": {
+  "text": "জোরে কাশুন।",
+  "from": "vocab swallow-check phrase"
+ },
+ "4d900448221d99e3": {
+  "text": "গলা পরিষ্কার করুন।",
+  "from": "vocab swallow-check phrase"
+ },
+ "4ca226ef00f69627": {
+  "text": "আ-আ-আ বলুন।",
+  "from": "vocab swallow-check phrase"
+ },
+ "259757541b29e62e": {
+  "text": "থুতু গিলুন।",
+  "from": "vocab swallow-check phrase"
+ },
+ "3d1916165ad4c44a": {
+  "text": "আস্তে আস্তে ছোট চুমুকে জল খান।",
+  "from": "vocab swallow-check phrase"
+ },
+ "ee19cdcc70d79c5a": {
+  "text": "এবার ঢোক গিলুন।",
+  "from": "vocab swallow-check phrase"
+ },
+ "33c29d6400ec969d": {
+  "text": "কাশি পেলে বলবেন।",
+  "from": "vocab swallow-check phrase"
+ },
+ "855a6692d828330c": {
+  "text": "গলায় কিছু আটকে যাচ্ছে?",
+  "from": "vocab swallow-check phrase"
+ },
+ "1c3636a8adb95c12": {
+  "text": "খাওয়ার সময় কি বিষম খান?",
+  "from": "vocab swallow-check phrase"
+ },
+ "cd6af9189021f05a": {
+  "text": "সোজা হয়ে বসুন।",
+  "from": "vocab swallow-check phrase"
+ },
+ "4ab731a2f30b2bd1": {
+  "text": "বার",
+  "from": "vocab memory-check"
+ },
+ "f0c0924c1ab1807e": {
+  "text": "সাল",
+  "from": "vocab memory-check"
+ },
+ "03f4d765a1108579": {
+  "text": "মনে পড়া",
+  "from": "vocab memory-check"
+ },
+ "a1070c0247425f84": {
+  "text": "শেষ",
+  "from": "vocab memory-check"
+ },
+ "cb21590e7a69a4d1": {
+  "text": "মনোযোগ",
+  "from": "vocab memory-check"
+ },
+ "232a9f62f338549d": {
+  "text": "উল্টো",
+  "from": "vocab memory-check"
+ },
+ "cf06e908c5f46fd3": {
+  "text": "গোনা",
+  "from": "vocab memory-check"
+ },
+ "5fde40a432d34191": {
+  "text": "আজ কত তারিখ?",
+  "from": "vocab memory-check phrase"
+ },
+ "2a711fb06be7be09": {
+  "text": "এটা কোন সাল?",
+  "from": "vocab memory-check phrase"
+ },
+ "5e88686ffe2c3bf7": {
+  "text": "এখন কোন ঋতু?",
+  "from": "vocab memory-check phrase"
+ },
+ "cf86107c7ed6e603": {
+  "text": "আপনি এখন কোথায় আছেন?",
+  "from": "vocab memory-check phrase"
+ },
+ "2b2960b44244b167": {
+  "text": "আমি তিনটে শব্দ বলব। মন দিয়ে শুনুন।",
+  "from": "vocab memory-check phrase"
+ },
+ "e151575e23226c35": {
+  "text": "নীল, থলে, আম। এবার আপনি বলুন।",
+  "from": "vocab memory-check phrase"
+ },
+ "1b71864da06605bf": {
+  "text": "শব্দ তিনটে মনে রাখবেন। পরে আবার জিজ্ঞেস করব।",
+  "from": "vocab memory-check phrase"
+ },
+ "65089e1f38aab28e": {
+  "text": "আমি যে তিনটে শব্দ বলেছিলাম, সেগুলো কী?",
+  "from": "vocab memory-check phrase"
+ },
+ "2150611b42901ff6": {
+  "text": "দশ থেকে উল্টো দিকে গুনুন।",
+  "from": "vocab memory-check phrase"
+ },
+ "95bb0b3b27243b29": {
+  "text": "এটা কী? এর নাম বলুন।",
+  "from": "vocab memory-check phrase"
+ },
+ "a93be1f75477cb90": {
+  "text": "মনে না থাকলে কোনো অসুবিধা নেই।",
+  "from": "vocab memory-check phrase"
+ },
+ "41eb2f38e723b126": {
+  "text": "খুব ভালো করেছেন।",
+  "from": "vocab memory-check phrase"
+ },
+ "b9e7a6f8dddc27a5": {
+  "text": "পাড়া",
+  "from": "vocab patient-chat"
+ },
+ "595154ad4ec0dcf9": {
+  "text": "দেশের বাড়ি",
+  "from": "vocab patient-chat"
+ },
+ "f400a1273ed55481": {
+  "text": "সঙ্গে",
+  "from": "vocab patient-chat"
+ },
+ "0b86ce32bf9749a2": {
+  "text": "নাতি-নাতনি",
+  "from": "vocab patient-chat"
+ },
+ "10118c585d2b656f": {
+  "text": "দেখাশোনা করা",
+  "from": "vocab patient-chat"
+ },
+ "5118dccbee007f7e": {
+  "text": "আরাম",
+  "from": "vocab patient-chat"
+ },
+ "79a3d1cb5c990b59": {
+  "text": "অবসর",
+  "from": "vocab patient-chat"
+ },
+ "1cd8989b598ee8a5": {
+  "text": "শখ",
+  "from": "vocab patient-chat"
+ },
+ "4215b56d35b5c1ad": {
+  "text": "বই পড়া",
+  "from": "vocab patient-chat"
+ },
+ "569e57405af361d6": {
+  "text": "পড়ানো",
+  "from": "vocab patient-chat"
+ },
+ "abfbab35232ea134": {
+  "text": "ছেলেবেলা",
+  "from": "vocab patient-chat"
+ },
+ "0a58e308c2f279df": {
+  "text": "গত হওয়া",
+  "from": "vocab patient-chat"
+ },
+ "30f4d6a257edcbcb": {
+  "text": "আপনার বাড়ি কোথায়?",
+  "from": "vocab patient-chat phrase"
+ },
+ "bd9632aa37d72f57": {
+  "text": "আপনি কার সঙ্গে থাকেন?",
+  "from": "vocab patient-chat phrase"
+ },
+ "32b4e50e8a92eb27": {
+  "text": "বাড়িতে কে কে আছেন?",
+  "from": "vocab patient-chat phrase"
+ },
+ "4b75a150669d11b0": {
+  "text": "আপনি কি একা থাকেন?",
+  "from": "vocab patient-chat phrase"
+ },
+ "c8c5e6cedb463b55": {
+  "text": "আপনার ছেলেমেয়েরা কোথায় থাকে?",
+  "from": "vocab patient-chat phrase"
+ },
+ "8c1861a2e4132ae0": {
+  "text": "আজ কেমন লাগছে?",
+  "from": "vocab patient-chat phrase"
+ },
+ "d806651717c695d4": {
+  "text": "রাতে ভালো ঘুম হয়েছিল?",
+  "from": "vocab patient-chat phrase"
+ },
+ "393a28f7df4d518e": {
+  "text": "সকালে কিছু খেয়েছেন?",
+  "from": "vocab patient-chat phrase"
+ },
+ "b3fcd40fbd3479e0": {
+  "text": "আপনি আগে কী কাজ করতেন?",
+  "from": "vocab patient-chat phrase"
+ },
+ "1544946577cee1ae": {
+  "text": "আপনার শখ কী?",
+  "from": "vocab patient-chat phrase"
+ },
+ "35eecb006902fb63": {
+  "text": "আপনার দেশের বাড়ি কোথায়?",
+  "from": "vocab patient-chat phrase"
+ },
+ "a3beffd5d15a4e20": {
+  "text": "আপনার নাতি-নাতনিরা কেমন আছে?",
+  "from": "vocab patient-chat phrase"
+ },
+ "f09f6d01b4555719": {
+  "text": "বালিশটা ঠিক করে দেব?",
+  "from": "vocab patient-chat phrase"
+ },
+ "f21f1336e4695205": {
+  "text": "শুনে খুব দুঃখ পেলাম।",
+  "from": "vocab patient-chat phrase"
+ },
  "39cbb45d322173a7": {
   "text": "চলচ্চিত্র",
   "from": "vocab film-tv"
@@ -5869,10 +6201,6 @@
  },
  "8f784c22a7b3630f": {
   "text": "শুরু",
-  "from": "vocab film-tv"
- },
- "a1070c0247425f84": {
-  "text": "শেষ",
   "from": "vocab film-tv"
  },
  "177c562244114f1f": {
@@ -6061,10 +6389,6 @@
  },
  "dfd87e4e6f46293a": {
   "text": "স্মৃতি",
-  "from": "vocab science-brain"
- },
- "cb21590e7a69a4d1": {
-  "text": "মনোযোগ",
   "from": "vocab science-brain"
  },
  "b119ca52f9ddb952": {
