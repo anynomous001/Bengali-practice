@@ -1,3 +1,5 @@
+import NewTag from "./NewTag";
+import { isNew } from "@/data/new";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { requireAccess } from "@/lib/access";
@@ -80,7 +82,7 @@ export default async function CourseOverview({ courseId }: { courseId: string })
                   <li key={l.id}>
                     <Link href={l.href} className={done.has(l.id) ? "is-done" : ""}>
                       <LessonStatus done={done.has(l.id)} />
-                      <span className="les-info"><b>{l.title}</b><small>{l.blurb}</small></span>
+                      <span className="les-info"><b>{l.title}{isNew(l.id) && <NewTag />}</b><small>{l.blurb}</small></span>
                       <span className="kind">{l.kind}</span>
                     </Link>
                   </li>

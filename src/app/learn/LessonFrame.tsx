@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { findLesson, courseStats } from "@/data/curriculum";
 import { loadLessonProgress } from "@/lib/progress";
 import CompleteButton from "./CompleteButton";
+import NewTag from "./NewTag";
+import { isNew } from "@/data/new";
 import Icon from "./Icon";
 import LessonStatus from "./LessonStatus";
 import OnThisPage from "./OnThisPage";
@@ -60,7 +62,7 @@ export default async function LessonFrame({ lessonId, toc, children }: { lessonI
                     <li key={l.id}>
                       <Link href={l.href} aria-current={l.id === lesson.id ? "page" : undefined}>
                         <LessonStatus done={done.has(l.id)} size={16} />
-                        <span>{l.title}</span>
+                        <span>{l.title}{isNew(l.id) && <NewTag />}</span>
                       </Link>
                     </li>
                   ))}

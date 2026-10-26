@@ -5,6 +5,8 @@ import { loadChosen, buildPath, fmtMinutes, pathBlurb, pathTitle } from "@/lib/p
 import { GOALS, READS } from "@/data/paths";
 import Icon, { IconTile } from "../Icon";
 import ProgressBar from "../ProgressBar";
+import NewTag from "../NewTag";
+import { isNew } from "@/data/new";
 import { choosePath } from "./actions";
 
 export default async function PathPage({ searchParams }: { searchParams: Promise<{ change?: string; need?: string }> }) {
@@ -36,7 +38,7 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
               <label key={g.id} className="pth-goal">
                 <input type="checkbox" name="goal" value={g.id} defaultChecked={chosen?.goals.some((x) => x.id === g.id)} />
                 <span className="pth-bn" lang="bn">{g.bn}</span>
-                <b>{g.title}</b>
+                <b>{g.title}{isNew(`goal:${g.id}`) && <NewTag />}</b>
                 <span>{g.blurb}</span>
                 <small>{g.who}</small>
                 <small className="pth-pick">Selected</small>
@@ -100,7 +102,7 @@ export default async function PathPage({ searchParams }: { searchParams: Promise
                     <li key={x.lesson.id} className={x.done ? "done" : path.next?.lesson.id === x.lesson.id ? "next" : ""}>
                       <Link href={x.lesson.href}>
                         <span className="pth-tick">{x.done ? <Icon name="check" size={14} /> : null}</span>
-                        <span className="pth-text"><b>{x.lesson.title}{x.tags.map((t) => <span key={t} className="pth-tag">{t}</span>)}</b><span className="muted">{x.why}</span></span>
+                        <span className="pth-text"><b>{x.lesson.title}{isNew(x.lesson.id) && <NewTag />}{x.tags.map((t) => <span key={t} className="pth-tag">{t}</span>)}</b><span className="muted">{x.why}</span></span>
                         <small className="pth-kind">{x.course} · {x.lesson.kind} · {fmtMinutes(x.minutes)}</small>
                       </Link>
                     </li>
