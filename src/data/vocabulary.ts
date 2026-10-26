@@ -8635,6 +8635,295 @@ export const VOCAB: VocabTopic[] = [
   ]
  },
  {
+  "id": "patient-chat",
+  "group": "clinical",
+  "title": [
+   "রোগীর সঙ্গে গল্প",
+   "rogir shonge golpo",
+   "Chatting with a patient"
+  ],
+  "blurb": "Where a patient lives and with whom, how they slept and feel, what they used to do, and the small talk that puts them at ease.",
+  "sections": [
+   {
+    "title": "Where and with whom",
+    "words": [
+     [
+      "বাড়ি",
+      "bari",
+      "home; house"
+     ],
+     [
+      "থাকা",
+      "thaka",
+      "to live; to stay"
+     ],
+     [
+      "শহর",
+      "shohor",
+      "city; town"
+     ],
+     [
+      "গ্রাম",
+      "gram",
+      "village"
+     ],
+     [
+      "পাড়া",
+      "para",
+      "neighbourhood"
+     ],
+     [
+      "দেশের বাড়ি",
+      "desher bari",
+      "home village; family home in the country"
+     ],
+     [
+      "একা",
+      "eka",
+      "alone"
+     ],
+     [
+      "সঙ্গে",
+      "shonge",
+      "with"
+     ],
+     [
+      "ছেলে",
+      "chhele",
+      "son"
+     ],
+     [
+      "মেয়ে",
+      "meye",
+      "daughter"
+     ],
+     [
+      "স্বামী",
+      "shami",
+      "husband"
+     ],
+     [
+      "স্ত্রী",
+      "stri",
+      "wife"
+     ],
+     [
+      "নাতি-নাতনি",
+      "nati-natni",
+      "grandchildren"
+     ],
+     [
+      "প্রতিবেশী",
+      "protibeshi",
+      "neighbour"
+     ],
+     [
+      "দেখাশোনা করা",
+      "dekhashona kora",
+      "to look after"
+     ]
+    ]
+   },
+   {
+    "title": "Comfort and daily life",
+    "words": [
+     [
+      "আরাম",
+      "aram",
+      "comfort; ease"
+     ],
+     [
+      "ঘুম",
+      "ghum",
+      "sleep"
+     ],
+     [
+      "খিদে",
+      "khide",
+      "hunger; appetite"
+     ],
+     [
+      "চা",
+      "cha",
+      "tea"
+     ],
+     [
+      "বিছানা",
+      "bichhana",
+      "bed"
+     ],
+     [
+      "বালিশ",
+      "balish",
+      "pillow"
+     ],
+     [
+      "কম্বল",
+      "kombol",
+      "blanket"
+     ],
+     [
+      "জানালা",
+      "janala",
+      "window"
+     ],
+     [
+      "ঠান্ডা",
+      "thanda",
+      "cold"
+     ],
+     [
+      "গরম",
+      "gorom",
+      "hot; warm"
+     ],
+     [
+      "ভালো লাগা",
+      "bhalo laga",
+      "to like; to feel well"
+     ]
+    ]
+   },
+   {
+    "title": "Past and interests",
+    "words": [
+     [
+      "কাজ",
+      "kaj",
+      "work"
+     ],
+     [
+      "চাকরি",
+      "chakri",
+      "job"
+     ],
+     [
+      "অবসর",
+      "obosor",
+      "retirement; leisure"
+     ],
+     [
+      "শখ",
+      "shokh",
+      "hobby"
+     ],
+     [
+      "বাগান",
+      "bagan",
+      "garden"
+     ],
+     [
+      "গান",
+      "gan",
+      "song; music"
+     ],
+     [
+      "বই পড়া",
+      "boi pora",
+      "reading books"
+     ],
+     [
+      "পড়ানো",
+      "porano",
+      "to teach"
+     ],
+     [
+      "আগে",
+      "age",
+      "before; in the past"
+     ],
+     [
+      "ছেলেবেলা",
+      "chhelebela",
+      "childhood"
+     ],
+     [
+      "গত হওয়া",
+      "goto howa",
+      "to pass away (polite)"
+     ]
+    ]
+   }
+  ],
+  "phrases": [
+   [
+    "আপনি কোথায় থাকেন?",
+    "apni kothay thaken?",
+    "Where do you live?"
+   ],
+   [
+    "আপনার বাড়ি কোথায়?",
+    "apnar bari kothay?",
+    "Where is your home?"
+   ],
+   [
+    "আপনি কার সঙ্গে থাকেন?",
+    "apni kar shonge thaken?",
+    "Who do you live with?"
+   ],
+   [
+    "বাড়িতে কে কে আছেন?",
+    "barite ke ke achhen?",
+    "Who is at home with you?"
+   ],
+   [
+    "আপনি কি একা থাকেন?",
+    "apni ki eka thaken?",
+    "Do you live alone?"
+   ],
+   [
+    "আপনার ছেলেমেয়েরা কোথায় থাকে?",
+    "apnar chhelemeyera kothay thake?",
+    "Where do your children live?"
+   ],
+   [
+    "আজ কেমন লাগছে?",
+    "aj kemon lagchhe?",
+    "How are you feeling today?"
+   ],
+   [
+    "রাতে ভালো ঘুম হয়েছিল?",
+    "rate bhalo ghum hoyechhilo?",
+    "Did you sleep well last night?"
+   ],
+   [
+    "সকালে কিছু খেয়েছেন?",
+    "shokale kichhu kheyechhen?",
+    "Have you eaten anything this morning?"
+   ],
+   [
+    "আপনি আগে কী কাজ করতেন?",
+    "apni age ki kaj korten?",
+    "What work did you do before?"
+   ],
+   [
+    "আপনার শখ কী?",
+    "apnar shokh ki?",
+    "What is your hobby?"
+   ],
+   [
+    "আপনার দেশের বাড়ি কোথায়?",
+    "apnar desher bari kothay?",
+    "Where is your home village?"
+   ],
+   [
+    "আপনার নাতি-নাতনিরা কেমন আছে?",
+    "apnar nati-natnira kemon achhe?",
+    "How are your grandchildren?"
+   ],
+   [
+    "বালিশটা ঠিক করে দেব?",
+    "balishta thik kore debo?",
+    "Shall I fix your pillow?"
+   ],
+   [
+    "শুনে খুব দুঃখ পেলাম।",
+    "shune khub dukkho pelam.",
+    "I am very sorry to hear that."
+   ]
+  ]
+ },
+ {
   "id": "film-tv",
   "group": "school",
   "title": [

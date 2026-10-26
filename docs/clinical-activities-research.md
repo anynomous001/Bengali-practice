@@ -1,6 +1,6 @@
 # Clinical Bengali: swallowing and memory checks
 
-Prepared 26 October 2026, for a student who is a speech-language pathologist (SLP) and checks swallowing and memory in patients every day. This note says what the new activities are based on, how far to trust it, and what else could be added.
+Prepared 26 October 2026, updated 27 October, for a student who is a speech-language pathologist (SLP) and checks swallowing and memory in patients every day. This note says what the new activities are based on, how far to trust it, and what else could be added.
 
 Labels: **[Web]** found by web search in this session (summaries only, I could not open the full pages), **[Judgment]** my opinion, **[Built]** what is now in the app.
 
@@ -12,7 +12,9 @@ Labels: **[Web]** found by web search in this session (summaries only, I could n
 | Vocabulary: **Memory and orientation check** | 35 words and 15 phrases. Date, day, month, year, the six Bengali seasons, the words for remembering and forgetting, and the objects used for naming. |
 | Role play: **Checking a swallow at the bedside** | A hospital ward with an elderly stroke patient. The phrases are the commands a swallow check uses, from "open your mouth wide" to "now swallow". A second conversation shows what to say when he coughs. |
 | Role play: **A memory and orientation check** | A clinic visit with an elderly patient and her son. It covers the name, day, month, year, season and place, then three words to remember, counting backwards and asking for the words again. A second conversation shows what to say when she cannot remember. |
-| Path | Both topics and both role plays are a new stage, "With adult patients", in the "Speech and health care work" path. |
+| Vocabulary: **Chatting with a patient** | 37 words and 15 phrases (added 27 October at the student's request). Where a patient lives and with whom, how they slept and feel, what they used to do, and kind words. |
+| Role play: **Chatting with a patient** | Small talk before a session with Mr. Dutta: how he feels, where he lives, who is at home, where his children are, what work he did. The second conversation shows how to answer when he says his wife has passed away. |
+| Path | The topics and role plays are a new stage, "With adult patients", in the "Speech and health care work" path. |
 
 All the Bengali is a draft for the teacher's review. Adult patients are spoken to as আপনি with the polite -উন ending (খুলুন, বলুন, গিলুন).
 

@@ -279,10 +279,12 @@ export const GOALS: PathGoal[] = [
       },
       {
         title: "With adult patients",
-        blurb: "The two checks you may do every day: a bedside swallowing check and a memory and orientation check.",
+        blurb: "Friendly small talk with a patient, and the two checks you may do every day: a bedside swallowing check and a memory and orientation check.",
         steps: [
           { id: "vocabulary/swallow-check", why: "Mouth and tongue movements, water and sips, and what you listen for." },
+          { id: "vocabulary/patient-chat", why: "Where a patient lives and with whom, how they slept, and small talk that puts them at ease." },
           { id: "vocabulary/memory-check", why: "Date, day and season questions, three-word recall and kind words for the patient." },
+          { id: "speaking/roleplay-clinical-chat", why: "Chat with a patient before a session: where they live, who is at home, and what they used to do." },
           { id: "speaking/roleplay-clinical-swallow", why: "Check a patient's swallow: mouth, tongue, cough, saliva and small sips of water." },
           { id: "speaking/roleplay-clinical-memory", why: "Ask orientation questions, give three words to remember and ask for them again." },
         ],
