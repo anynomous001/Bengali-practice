@@ -277,6 +277,16 @@ export const GOALS: PathGoal[] = [
           { id: "speaking/roleplay-phone", why: "Call a family to confirm an appointment." },
         ],
       },
+      {
+        title: "With adult patients",
+        blurb: "The two checks you may do every day: a bedside swallowing check and a memory and orientation check.",
+        steps: [
+          { id: "vocabulary/swallow-check", why: "Mouth and tongue movements, water and sips, and what you listen for." },
+          { id: "vocabulary/memory-check", why: "Date, day and season questions, three-word recall and kind words for the patient." },
+          { id: "speaking/roleplay-clinical-swallow", why: "Check a patient's swallow: mouth, tongue, cough, saliva and small sips of water." },
+          { id: "speaking/roleplay-clinical-memory", why: "Ask orientation questions, give three words to remember and ask for them again." },
+        ],
+      },
     ],
     note: "Written for this path and still to be reviewed by your teacher. Phonetic symbols (IPA) and longer listening practice are still to come.",
   },

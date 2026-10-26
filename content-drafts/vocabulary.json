@@ -8059,6 +8059,564 @@
    ]
   },
   {
+   "id": "swallow-check",
+   "group": "clinical",
+   "title": [
+    "গিলতে পারার পরীক্ষা",
+    "gilte parar porikkha",
+    "Swallowing check"
+   ],
+   "blurb": "The words for a bedside swallowing check: moving the mouth and tongue, drinking water, and what to listen for.",
+   "sections": [
+    {
+     "title": "Mouth and tongue",
+     "words": [
+      [
+       "হাঁ করা",
+       "han kora",
+       "to open the mouth wide"
+      ],
+      [
+       "খোলা",
+       "khola",
+       "to open; open"
+      ],
+      [
+       "বন্ধ করা",
+       "bondho kora",
+       "to close"
+      ],
+      [
+       "বের করা",
+       "ber kora",
+       "to stick out; to take out"
+      ],
+      [
+       "তোলা",
+       "tola",
+       "to lift"
+      ],
+      [
+       "ফোলানো",
+       "phulano",
+       "to puff out"
+      ],
+      [
+       "হাসা",
+       "hasha",
+       "to smile"
+      ],
+      [
+       "ডান",
+       "dan",
+       "right"
+      ],
+      [
+       "বাঁ",
+       "ban",
+       "left"
+      ],
+      [
+       "ওপরে",
+       "opore",
+       "up; above"
+      ],
+      [
+       "নিচে",
+       "niche",
+       "down; below"
+      ],
+      [
+       "সামনে",
+       "samne",
+       "in front"
+      ],
+      [
+       "পেছনে",
+       "pechhone",
+       "behind; back"
+      ]
+     ]
+    },
+    {
+     "title": "Swallowing and drinking",
+     "words": [
+      [
+       "গেলা",
+       "gela",
+       "to swallow"
+      ],
+      [
+       "ঢোক",
+       "dhok",
+       "a gulp; a swallow"
+      ],
+      [
+       "চুমুক",
+       "chumuk",
+       "a sip"
+      ],
+      [
+       "জল",
+       "jol",
+       "water"
+      ],
+      [
+       "পাতলা",
+       "patla",
+       "thin (liquid)"
+      ],
+      [
+       "ঘন",
+       "ghono",
+       "thick"
+      ],
+      [
+       "চিবানো",
+       "chibano",
+       "to chew"
+      ],
+      [
+       "থুতু",
+       "thutu",
+       "saliva; spit"
+      ],
+      [
+       "কাশা",
+       "kasha",
+       "to cough"
+      ],
+      [
+       "বিষম খাওয়া",
+       "bishom khaoya",
+       "to choke on food or drink"
+      ],
+      [
+       "আটকে যাওয়া",
+       "atke jaoya",
+       "to get stuck"
+      ],
+      [
+       "গলা পরিষ্কার করা",
+       "gola poriskar kora",
+       "to clear the throat"
+      ]
+     ]
+    },
+    {
+     "title": "What you listen for",
+     "words": [
+      [
+       "ভেজা আওয়াজ",
+       "bheja awaj",
+       "wet voice"
+      ],
+      [
+       "আওয়াজ বদলে যাওয়া",
+       "awaj bodle jaoya",
+       "the voice changes"
+      ],
+      [
+       "দম নিতে কষ্ট",
+       "dom nite koshto",
+       "trouble breathing"
+      ],
+      [
+       "গিলতে কষ্ট",
+       "gilte koshto",
+       "difficulty swallowing"
+      ],
+      [
+       "মুখে জমে থাকা",
+       "mukhe jome thaka",
+       "food left in the mouth"
+      ],
+      [
+       "ধীরে",
+       "dhire",
+       "slowly"
+      ],
+      [
+       "থামা",
+       "thama",
+       "to stop"
+      ],
+      [
+       "সোজা হয়ে বসা",
+       "shoja hoye bosha",
+       "to sit up straight"
+      ]
+     ]
+    }
+   ],
+   "phrases": [
+    [
+     "হাঁ করুন।",
+     "han korun.",
+     "Open your mouth wide."
+    ],
+    [
+     "জিভ বের করুন।",
+     "jibh ber korun.",
+     "Stick out your tongue."
+    ],
+    [
+     "জিভ ডান দিকে নিন।",
+     "jibh dan dike nin.",
+     "Move your tongue to the right."
+    ],
+    [
+     "জিভ বাঁ দিকে নিন।",
+     "jibh ban dike nin.",
+     "Move your tongue to the left."
+    ],
+    [
+     "ঠোঁট বন্ধ করুন।",
+     "thont bondho korun.",
+     "Close your lips."
+    ],
+    [
+     "গাল ফোলান।",
+     "gal pholan.",
+     "Puff out your cheeks."
+    ],
+    [
+     "একটু হাসুন।",
+     "ektu hashun.",
+     "Smile a little."
+    ],
+    [
+     "জোরে কাশুন।",
+     "jore kashun.",
+     "Cough hard."
+    ],
+    [
+     "গলা পরিষ্কার করুন।",
+     "gola poriskar korun.",
+     "Clear your throat."
+    ],
+    [
+     "আ-আ-আ বলুন।",
+     "a-a-a bolun.",
+     "Say ah."
+    ],
+    [
+     "থুতু গিলুন।",
+     "thutu gilun.",
+     "Swallow your saliva."
+    ],
+    [
+     "আস্তে আস্তে ছোট চুমুকে জল খান।",
+     "aste aste chhoto chumuke jol khan.",
+     "Drink the water slowly, in small sips."
+    ],
+    [
+     "এবার ঢোক গিলুন।",
+     "ebar dhok gilun.",
+     "Now swallow."
+    ],
+    [
+     "কাশি পেলে বলবেন।",
+     "kashi pele bolben.",
+     "Tell me if you feel like coughing."
+    ],
+    [
+     "গলায় কিছু আটকে যাচ্ছে?",
+     "golay kichhu atke jachchhe?",
+     "Is something getting stuck in your throat?"
+    ],
+    [
+     "খাওয়ার সময় কি বিষম খান?",
+     "khaowar shomoy ki bishom khan?",
+     "Do you choke while eating?"
+    ],
+    [
+     "সোজা হয়ে বসুন।",
+     "shoja hoye boshun.",
+     "Sit up straight."
+    ]
+   ]
+  },
+  {
+   "id": "memory-check",
+   "group": "clinical",
+   "title": [
+    "স্মৃতি পরীক্ষা",
+    "smriti porikkha",
+    "Memory and orientation check"
+   ],
+   "blurb": "Questions about the date, day and place, a three-word recall, and the words to put a patient at ease.",
+   "sections": [
+    {
+     "title": "Time and place",
+     "words": [
+      [
+       "আজ",
+       "aj",
+       "today"
+      ],
+      [
+       "কাল",
+       "kal",
+       "tomorrow; yesterday"
+      ],
+      [
+       "তারিখ",
+       "tarikh",
+       "date"
+      ],
+      [
+       "বার",
+       "bar",
+       "day of the week"
+      ],
+      [
+       "মাস",
+       "mash",
+       "month"
+      ],
+      [
+       "সাল",
+       "shal",
+       "year (in a date)"
+      ],
+      [
+       "ঋতু",
+       "ritu",
+       "season"
+      ],
+      [
+       "গ্রীষ্ম",
+       "grishsho",
+       "summer"
+      ],
+      [
+       "বর্ষা",
+       "borsha",
+       "the rains"
+      ],
+      [
+       "শরৎ",
+       "shorot",
+       "autumn"
+      ],
+      [
+       "হেমন্ত",
+       "hemonto",
+       "late autumn"
+      ],
+      [
+       "শীত",
+       "shit",
+       "winter"
+      ],
+      [
+       "বসন্ত",
+       "boshonto",
+       "spring"
+      ],
+      [
+       "জায়গা",
+       "jayga",
+       "place"
+      ],
+      [
+       "শহর",
+       "shohor",
+       "city"
+      ]
+     ]
+    },
+    {
+     "title": "Remembering",
+     "words": [
+      [
+       "শব্দ",
+       "shobdo",
+       "word"
+      ],
+      [
+       "মনে রাখা",
+       "mone rakha",
+       "to remember; to keep in mind"
+      ],
+      [
+       "মনে পড়া",
+       "mone pora",
+       "to recall"
+      ],
+      [
+       "ভুলে যাওয়া",
+       "bhule jaoya",
+       "to forget"
+      ],
+      [
+       "আবার",
+       "abar",
+       "again"
+      ],
+      [
+       "পরে",
+       "pore",
+       "later"
+      ],
+      [
+       "প্রথম",
+       "prothom",
+       "first"
+      ],
+      [
+       "শেষ",
+       "shesh",
+       "last; end"
+      ],
+      [
+       "জিজ্ঞেস করা",
+       "jiggesh kora",
+       "to ask"
+      ],
+      [
+       "মনোযোগ",
+       "monojog",
+       "attention"
+      ]
+     ]
+    },
+    {
+     "title": "Words and objects to name",
+     "words": [
+      [
+       "নীল",
+       "nil",
+       "blue"
+      ],
+      [
+       "থলে",
+       "thole",
+       "sack; bag"
+      ],
+      [
+       "আম",
+       "am",
+       "mango"
+      ],
+      [
+       "গোলাপ",
+       "golap",
+       "rose"
+      ],
+      [
+       "ঘড়ি",
+       "ghori",
+       "clock; watch"
+      ],
+      [
+       "চাবি",
+       "chabi",
+       "key"
+      ],
+      [
+       "কলম",
+       "kolom",
+       "pen"
+      ],
+      [
+       "চশমা",
+       "choshma",
+       "glasses"
+      ],
+      [
+       "উল্টো",
+       "ulto",
+       "backwards; opposite"
+      ],
+      [
+       "গোনা",
+       "gona",
+       "to count"
+      ]
+     ]
+    }
+   ],
+   "phrases": [
+    [
+     "আপনার নাম কী?",
+     "apnar nam ki?",
+     "What is your name?"
+    ],
+    [
+     "আজ কত তারিখ?",
+     "aj koto tarikh?",
+     "What is today's date?"
+    ],
+    [
+     "আজ কী বার?",
+     "aj ki bar?",
+     "What day of the week is it?"
+    ],
+    [
+     "এটা কোন মাস?",
+     "eta kon mash?",
+     "Which month is this?"
+    ],
+    [
+     "এটা কোন সাল?",
+     "eta kon shal?",
+     "Which year is this?"
+    ],
+    [
+     "এখন কোন ঋতু?",
+     "ekhon kon ritu?",
+     "Which season is it now?"
+    ],
+    [
+     "আপনি এখন কোথায় আছেন?",
+     "apni ekhon kothay achhen?",
+     "Where are you now?"
+    ],
+    [
+     "আমি তিনটে শব্দ বলব। মন দিয়ে শুনুন।",
+     "ami tinte shobdo bolbo. mon diye shunun.",
+     "I will say three words. Listen carefully."
+    ],
+    [
+     "নীল, থলে, আম। এবার আপনি বলুন।",
+     "nil, thole, am. ebar apni bolun.",
+     "Blue, sack, mango. Now you say them."
+    ],
+    [
+     "শব্দ তিনটে মনে রাখবেন। পরে আবার জিজ্ঞেস করব।",
+     "shobdo tinte mone rakhben. pore abar jiggesh korbo.",
+     "Please remember the three words. I will ask again later."
+    ],
+    [
+     "আমি যে তিনটে শব্দ বলেছিলাম, সেগুলো কী?",
+     "ami je tinte shobdo bolechhilam, segulo ki?",
+     "What were the three words I said?"
+    ],
+    [
+     "দশ থেকে উল্টো দিকে গুনুন।",
+     "dosh theke ulto dike gunun.",
+     "Count backwards from ten."
+    ],
+    [
+     "এটা কী? এর নাম বলুন।",
+     "eta ki? er nam bolun.",
+     "What is this? Say its name."
+    ],
+    [
+     "মনে না থাকলে কোনো অসুবিধা নেই।",
+     "mone na thakle kono oshubidha nei.",
+     "It is all right if you do not remember."
+    ],
+    [
+     "খুব ভালো করেছেন।",
+     "khub bhalo korechhen.",
+     "You did very well."
+    ]
+   ]
+  },
+  {
    "id": "film-tv",
    "group": "school",
    "title": [
