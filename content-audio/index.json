@@ -751,6 +751,50 @@
   "text": "মেসো",
   "from": "vocab family"
  },
+ "d0fd6900f1088209": {
+  "text": "বেয়াই",
+  "from": "vocab family"
+ },
+ "11ff12523389e73c": {
+  "text": "বেয়ান",
+  "from": "vocab family"
+ },
+ "61464f1f9c97ab3e": {
+  "text": "বউমা",
+  "from": "vocab family"
+ },
+ "ee00903cb4560e6b": {
+  "text": "জামাইবাবু",
+  "from": "vocab family"
+ },
+ "e2289e607e756186": {
+  "text": "বৌদি",
+  "from": "vocab family"
+ },
+ "1f8b984f5c0747b8": {
+  "text": "শ্যালক",
+  "from": "vocab family"
+ },
+ "30fbee9796662a4a": {
+  "text": "শ্যালিকা",
+  "from": "vocab family"
+ },
+ "4bbd71c596ccf73f": {
+  "text": "দেওর",
+  "from": "vocab family"
+ },
+ "cc98e74324d4b183": {
+  "text": "ননদ",
+  "from": "vocab family"
+ },
+ "bbfa32b6d2fbc50e": {
+  "text": "ভাশুর",
+  "from": "vocab family"
+ },
+ "947ae3b868b42d77": {
+  "text": "জা",
+  "from": "vocab family"
+ },
  "db433abd5aaf26c2": {
   "text": "ভাইপো",
   "from": "vocab family"
@@ -5622,5 +5666,465 @@
  "349640d136c0e707": {
   "text": "ধৈর্য ধরুন, সময় লাগবে।",
   "from": "vocab therapy-practice phrase"
+ },
+ "d9ec88e77f4eaec3": {
+  "text": "অটিজম",
+  "from": "vocab clinical-history"
+ },
+ "61070b34260149db": {
+  "text": "বধিরতা",
+  "from": "vocab clinical-history"
+ },
+ "372b81fcc787221e": {
+  "text": "কানের সংক্রমণ",
+  "from": "vocab clinical-history"
+ },
+ "87099626c8aa0563": {
+  "text": "তালু ফাটা",
+  "from": "vocab clinical-history"
+ },
+ "caa15af748857694": {
+  "text": "স্ট্রোক",
+  "from": "vocab clinical-history"
+ },
+ "4b924d085000c31b": {
+  "text": "তোতলামি",
+  "from": "vocab clinical-history"
+ },
+ "a84a048017bea1cc": {
+  "text": "কথা দেরিতে বলা",
+  "from": "vocab clinical-history"
+ },
+ "eb7c1c70d78a59fa": {
+  "text": "গলা বসে যাওয়া",
+  "from": "vocab clinical-history"
+ },
+ "4ecda41534d41ff1": {
+  "text": "মৃগী",
+  "from": "vocab clinical-history"
+ },
+ "79496f1c6bbe6007": {
+  "text": "এলার্জি",
+  "from": "vocab clinical-history"
+ },
+ "eb74c7fab757107f": {
+  "text": "সংক্রমণ",
+  "from": "vocab clinical-history"
+ },
+ "cba3b0f96f16a487": {
+  "text": "গেলা",
+  "from": "vocab clinical-history"
+ },
+ "19c1c1d57eb09cb7": {
+  "text": "চিবানো",
+  "from": "vocab clinical-history"
+ },
+ "efebee7d10b7ee5f": {
+  "text": "দম আটকে যাওয়া",
+  "from": "vocab clinical-history"
+ },
+ "e12e23aa1ddb847b": {
+  "text": "নরম খাবার",
+  "from": "vocab clinical-history"
+ },
+ "ed0f66e0794bcb7b": {
+  "text": "শক্ত খাবার",
+  "from": "vocab clinical-history"
+ },
+ "29faf94274c40a29": {
+  "text": "তরল",
+  "from": "vocab clinical-history"
+ },
+ "0200dfe125a8c258": {
+  "text": "জন্ম",
+  "from": "vocab clinical-history"
+ },
+ "08474d0b24fad816": {
+  "text": "গর্ভাবস্থা",
+  "from": "vocab clinical-history"
+ },
+ "2422c98502e28c81": {
+  "text": "অসুখ",
+  "from": "vocab clinical-history"
+ },
+ "52d72f6896bf56ee": {
+  "text": "অপারেশন",
+  "from": "vocab clinical-history"
+ },
+ "8bdd85693244386f": {
+  "text": "হাসপাতালে ভর্তি",
+  "from": "vocab clinical-history"
+ },
+ "d56813fc95d3a219": {
+  "text": "কবে থেকে",
+  "from": "vocab clinical-history"
+ },
+ "b37bd349c03f732d": {
+  "text": "কতদিন",
+  "from": "vocab clinical-history"
+ },
+ "1edde53b522b5b2a": {
+  "text": "ও কবে জন্মেছে?",
+  "from": "vocab clinical-history phrase"
+ },
+ "24594c049fb72016": {
+  "text": "জন্মের সময় কোনো সমস্যা হয়েছিল?",
+  "from": "vocab clinical-history phrase"
+ },
+ "e94e4c9462200785": {
+  "text": "ওর কি কখনো অপারেশন হয়েছে?",
+  "from": "vocab clinical-history phrase"
+ },
+ "2d0ee1db1751c366": {
+  "text": "কোনো কিছুতে এলার্জি আছে?",
+  "from": "vocab clinical-history phrase"
+ },
+ "ee0fb4bd5a7340b4": {
+  "text": "ও কি ওষুধ খায়?",
+  "from": "vocab clinical-history phrase"
+ },
+ "0007782b8965470e": {
+  "text": "কবে থেকে এই সমস্যা?",
+  "from": "vocab clinical-history phrase"
+ },
+ "a1969c6e0415856f": {
+  "text": "খাবার গিলতে কি কষ্ট হয়?",
+  "from": "vocab clinical-history phrase"
+ },
+ "e6d40dacf5a45731": {
+  "text": "ও কি খাওয়ার সময় কাশে?",
+  "from": "vocab clinical-history phrase"
+ },
+ "1a87e49bd9dcc523": {
+  "text": "পরিবারে আর কারো কি কথা বলতে অসুবিধা ছিল?",
+  "from": "vocab clinical-history phrase"
+ },
+ "39cbb45d322173a7": {
+  "text": "চলচ্চিত্র",
+  "from": "vocab film-tv"
+ },
+ "f4e3bb4e7396d8ad": {
+  "text": "ধারাবাহিক",
+  "from": "vocab film-tv"
+ },
+ "5e027fae129cfa21": {
+  "text": "কার্টুন",
+  "from": "vocab film-tv"
+ },
+ "1486b925fb2ae3f5": {
+  "text": "বিজ্ঞাপন",
+  "from": "vocab film-tv"
+ },
+ "8908601d81fdcbbf": {
+  "text": "চ্যানেল",
+  "from": "vocab film-tv"
+ },
+ "df8da63531b75d94": {
+  "text": "পর্দা",
+  "from": "vocab film-tv"
+ },
+ "5e64fa4cf3b61679": {
+  "text": "অভিনেতা",
+  "from": "vocab film-tv"
+ },
+ "0497b659fa4b0e0e": {
+  "text": "অভিনেত্রী",
+  "from": "vocab film-tv"
+ },
+ "5aab44d99ab7b586": {
+  "text": "পরিচালক",
+  "from": "vocab film-tv"
+ },
+ "240c57977e32b357": {
+  "text": "প্রযোজক",
+  "from": "vocab film-tv"
+ },
+ "ad561e18a0fb5de7": {
+  "text": "দর্শক",
+  "from": "vocab film-tv"
+ },
+ "7c902ee7ae69ddc3": {
+  "text": "গায়িকা",
+  "from": "vocab film-tv"
+ },
+ "dc9d364536162f27": {
+  "text": "চরিত্র",
+  "from": "vocab film-tv"
+ },
+ "83f95b39187202c8": {
+  "text": "দৃশ্য",
+  "from": "vocab film-tv"
+ },
+ "5ecbeadce28b8cd1": {
+  "text": "সংলাপ",
+  "from": "vocab film-tv"
+ },
+ "50f56a4f8b1e3100": {
+  "text": "সাবটাইটেল",
+  "from": "vocab film-tv"
+ },
+ "3871c243950862d1": {
+  "text": "ভূমিকা",
+  "from": "vocab film-tv"
+ },
+ "8f784c22a7b3630f": {
+  "text": "শুরু",
+  "from": "vocab film-tv"
+ },
+ "a1070c0247425f84": {
+  "text": "শেষ",
+  "from": "vocab film-tv"
+ },
+ "177c562244114f1f": {
+  "text": "পুরস্কার",
+  "from": "vocab film-tv"
+ },
+ "6f7cdcc98de9daf7": {
+  "text": "সমালোচনা",
+  "from": "vocab film-tv"
+ },
+ "1a33d81a6a4f75b3": {
+  "text": "প্রিয়",
+  "from": "vocab film-tv"
+ },
+ "d2c929894cca96d9": {
+  "text": "আজ রাতে একটা বাংলা ছবি দেখব।",
+  "from": "vocab film-tv phrase"
+ },
+ "371304bbb8907b8f": {
+  "text": "তোমার প্রিয় অভিনেতা কে?",
+  "from": "vocab film-tv phrase"
+ },
+ "6131f1f0be2432a4": {
+  "text": "এই ছবির পরিচালক কে?",
+  "from": "vocab film-tv phrase"
+ },
+ "8d78443dfc73e656": {
+  "text": "সাবটাইটেল দিয়ে দেখো।",
+  "from": "vocab film-tv phrase"
+ },
+ "5f5e63cd31e52212": {
+  "text": "ছবিটা আমার খুব ভালো লেগেছে।",
+  "from": "vocab film-tv phrase"
+ },
+ "024d98154629820d": {
+  "text": "গল্পটা খুব সুন্দর।",
+  "from": "vocab film-tv phrase"
+ },
+ "22a65fb231df0c4e": {
+  "text": "সত্যজিৎ রায়ের ছবি দেখেছ?",
+  "from": "vocab film-tv phrase"
+ },
+ "31429270a6a208bb": {
+  "text": "আবার বলো, আমি বুঝতে পারিনি।",
+  "from": "vocab film-tv phrase"
+ },
+ "0acefdb808bdf1c5": {
+  "text": "শিল্প",
+  "from": "vocab art-craft"
+ },
+ "6cad8dfbed8fd50a": {
+  "text": "চিত্র",
+  "from": "vocab art-craft"
+ },
+ "6b7a2f86e9d65fd9": {
+  "text": "তুলি",
+  "from": "vocab art-craft"
+ },
+ "2d76cfb5dd46417f": {
+  "text": "জলরং",
+  "from": "vocab art-craft"
+ },
+ "c03e9e188e91ec91": {
+  "text": "ক্যানভাস",
+  "from": "vocab art-craft"
+ },
+ "d0dd122a29327b01": {
+  "text": "ভাস্কর্য",
+  "from": "vocab art-craft"
+ },
+ "f40ffb11a47bd2d8": {
+  "text": "মূর্তি",
+  "from": "vocab art-craft"
+ },
+ "24f2d779a03ecbe4": {
+  "text": "হস্তশিল্প",
+  "from": "vocab art-craft"
+ },
+ "5cd85448a4edc342": {
+  "text": "আলপনা",
+  "from": "vocab art-craft"
+ },
+ "d475eaff5e159da8": {
+  "text": "পট",
+  "from": "vocab art-craft"
+ },
+ "339fc44cb4a6de61": {
+  "text": "কালীঘাটের পট",
+  "from": "vocab art-craft"
+ },
+ "1a78e28cd667f44a": {
+  "text": "টেরাকোটা",
+  "from": "vocab art-craft"
+ },
+ "cb916bea870b3936": {
+  "text": "কাঁথা",
+  "from": "vocab art-craft"
+ },
+ "75fc209b5f669a87": {
+  "text": "তাঁত",
+  "from": "vocab art-craft"
+ },
+ "db2486b6dda34346": {
+  "text": "প্রদর্শনী",
+  "from": "vocab art-craft"
+ },
+ "ca2457b02fbe483d": {
+  "text": "সংগ্রহ",
+  "from": "vocab art-craft"
+ },
+ "2407cd4ca56de29f": {
+  "text": "নকশা",
+  "from": "vocab art-craft"
+ },
+ "7d692d28936ca147": {
+  "text": "রঙিন",
+  "from": "vocab art-craft"
+ },
+ "ef823e8f27e4eea7": {
+  "text": "পুরোনো",
+  "from": "vocab art-craft"
+ },
+ "923a1b74e6c602b1": {
+  "text": "তুমি কি ছবি আঁকো?",
+  "from": "vocab art-craft phrase"
+ },
+ "0eb3e162a7fd8bc2": {
+  "text": "ছবিটা কে এঁকেছে?",
+  "from": "vocab art-craft phrase"
+ },
+ "50e3161cac6aa603": {
+  "text": "এই নকশাটা খুব সুন্দর।",
+  "from": "vocab art-craft phrase"
+ },
+ "892a447ea4b5b25b": {
+  "text": "আমরা জাদুঘরে যাব।",
+  "from": "vocab art-craft phrase"
+ },
+ "1459a8baf08b4480": {
+  "text": "পুজোয় বাড়ির সামনে আলপনা দেওয়া হয়।",
+  "from": "vocab art-craft phrase"
+ },
+ "d26db8c04601477b": {
+  "text": "কাঁথা হাতে সেলাই করা হয়।",
+  "from": "vocab art-craft phrase"
+ },
+ "05972b8c409faee9": {
+  "text": "এখানে একটা ছবির প্রদর্শনী আছে।",
+  "from": "vocab art-craft phrase"
+ },
+ "0d32f240cd9b0845": {
+  "text": "বিজ্ঞানী",
+  "from": "vocab science-brain"
+ },
+ "ffecd4a381120aff": {
+  "text": "গবেষণা",
+  "from": "vocab science-brain"
+ },
+ "3668ad3b42331a99": {
+  "text": "তথ্য",
+  "from": "vocab science-brain"
+ },
+ "5a0f933ad9cc7b84": {
+  "text": "প্রমাণ",
+  "from": "vocab science-brain"
+ },
+ "f20c4a742580ac49": {
+  "text": "তত্ত্ব",
+  "from": "vocab science-brain"
+ },
+ "eec864dc6b1ac1c5": {
+  "text": "ল্যাবরেটরি",
+  "from": "vocab science-brain"
+ },
+ "3dcadbd3f708e42f": {
+  "text": "মস্তিষ্ক",
+  "from": "vocab science-brain"
+ },
+ "c333d94afd767ed2": {
+  "text": "মগজ",
+  "from": "vocab science-brain"
+ },
+ "7bb438dfabef1acb": {
+  "text": "স্নায়ু",
+  "from": "vocab science-brain"
+ },
+ "dfd87e4e6f46293a": {
+  "text": "স্মৃতি",
+  "from": "vocab science-brain"
+ },
+ "cb21590e7a69a4d1": {
+  "text": "মনোযোগ",
+  "from": "vocab science-brain"
+ },
+ "b119ca52f9ddb952": {
+  "text": "বুদ্ধি",
+  "from": "vocab science-brain"
+ },
+ "52c21343e0eebef8": {
+  "text": "ধ্বনিবিজ্ঞান",
+  "from": "vocab science-brain"
+ },
+ "3ccb20f7f8ca38e8": {
+  "text": "ভাষাবিজ্ঞান",
+  "from": "vocab science-brain"
+ },
+ "8e23e6c5ad708ad4": {
+  "text": "তরঙ্গ",
+  "from": "vocab science-brain"
+ },
+ "bc7ecd01a545015b": {
+  "text": "কম্পন",
+  "from": "vocab science-brain"
+ },
+ "f1d6c0426cd5824e": {
+  "text": "কণ্ঠ",
+  "from": "vocab science-brain"
+ },
+ "9e7d7f197d172c68": {
+  "text": "স্বরবর্ণ",
+  "from": "vocab science-brain"
+ },
+ "aabacfc752d7625f": {
+  "text": "ব্যঞ্জনবর্ণ",
+  "from": "vocab science-brain"
+ },
+ "ad0008ce285df925": {
+  "text": "আমি স্পিচ থেরাপি নিয়ে কাজ করি।",
+  "from": "vocab science-brain phrase"
+ },
+ "99d91c66b4ea6088": {
+  "text": "ভাষা শেখা মস্তিষ্কের কাজ।",
+  "from": "vocab science-brain phrase"
+ },
+ "4272c830127881a3": {
+  "text": "এই গবেষণার ফল কী?",
+  "from": "vocab science-brain phrase"
+ },
+ "dd41b377f2baaf60": {
+  "text": "শিশুরা খুব তাড়াতাড়ি ভাষা শেখে।",
+  "from": "vocab science-brain phrase"
+ },
+ "f4a727252b49f678": {
+  "text": "মনোযোগ দিয়ে শোনো।",
+  "from": "vocab science-brain phrase"
+ },
+ "cede4e6e319c3c29": {
+  "text": "আমি ভুলে গেছি।",
+  "from": "vocab science-brain phrase"
+ },
+ "0bfe299246a8f1d1": {
+  "text": "মনে রাখার চেষ্টা করো।",
+  "from": "vocab science-brain phrase"
  }
 }
