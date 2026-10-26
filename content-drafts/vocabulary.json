@@ -41,6 +41,11 @@
    "blurb": "Verbs, describing words, question words and polite phrases."
   },
   {
+   "id": "bangladesh",
+   "title": "Bengali in Bangladesh",
+   "blurb": "Words and phrases used in Bangladesh, for students with family or clients there."
+  },
+  {
    "id": "clinical",
    "title": "Speech, hearing and therapy",
    "blurb": "For speech therapists and others who work with Bengali-speaking families."
@@ -9524,6 +9529,346 @@
      "মনে রাখার চেষ্টা করো।",
      "mone rakhar cheshta koro.",
      "Try to remember."
+    ]
+   ]
+  },
+  {
+   "id": "bangladesh-words",
+   "group": "bangladesh",
+   "title": [
+    "বাংলাদেশের শব্দ",
+    "bangladesher shobdo",
+    "Words used in Bangladesh"
+   ],
+   "blurb": "Everyday words that differ between Bangladesh and West Bengal: family, home, food and daily life. Each note gives the Kolkata word.",
+   "sections": [
+    {
+     "title": "Family",
+     "words": [
+      [
+       "আব্বা",
+       "abba",
+       "father",
+       "West Bengal: বাবা (baba). Common in Muslim families"
+      ],
+      [
+       "আম্মা",
+       "amma",
+       "mother",
+       "West Bengal: মা (ma). Common in Muslim families"
+      ],
+      [
+       "নানা",
+       "nana",
+       "mother's father",
+       "West Bengal: দাদু (dadu)"
+      ],
+      [
+       "নানি",
+       "nani",
+       "mother's mother",
+       "West Bengal: দিদা (dida)"
+      ],
+      [
+       "দাদা",
+       "dada",
+       "father's father",
+       "West Bengal: ঠাকুরদা (thakurda). In West Bengal দাদা means elder brother"
+      ],
+      [
+       "দাদি",
+       "dadi",
+       "father's mother",
+       "West Bengal: ঠাকুমা (thakuma)"
+      ],
+      [
+       "খালা",
+       "khala",
+       "mother's sister",
+       "West Bengal: মাসি (mashi)"
+      ],
+      [
+       "খালু",
+       "khalu",
+       "husband of mother's sister",
+       "West Bengal: মেসো (meso)"
+      ],
+      [
+       "ফুফু",
+       "phuphu",
+       "father's sister",
+       "West Bengal: পিসি (pishi)"
+      ],
+      [
+       "ফুফা",
+       "phupha",
+       "husband of father's sister",
+       "West Bengal: পিসেমশাই (pishemoshai)"
+      ],
+      [
+       "চাচা",
+       "chacha",
+       "father's younger brother",
+       "West Bengal: কাকা (kaka)"
+      ],
+      [
+       "চাচি",
+       "chachi",
+       "wife of father's younger brother",
+       "West Bengal: কাকিমা (kakima)"
+      ],
+      [
+       "ভাবি",
+       "bhabi",
+       "brother's wife",
+       "West Bengal: বৌদি (boudi)"
+      ],
+      [
+       "দুলাভাই",
+       "dulabhai",
+       "sister's husband",
+       "West Bengal: জামাইবাবু (jamaibabu)"
+      ],
+      [
+       "ভাইয়া",
+       "bhaiya",
+       "elder brother",
+       "West Bengal: দাদা (dada)"
+      ],
+      [
+       "আপা",
+       "apa",
+       "elder sister",
+       "West Bengal: দিদি (didi)"
+      ],
+      [
+       "আপু",
+       "apu",
+       "elder sister (affectionate, informal)",
+       "West Bengal: দিদি (didi)"
+      ]
+     ]
+    },
+    {
+     "title": "Home and food",
+     "words": [
+      [
+       "বাসা",
+       "basha",
+       "home; flat",
+       "West Bengal: বাড়ি (bari)"
+      ],
+      [
+       "পানি",
+       "pani",
+       "water",
+       "West Bengal: জল (jol)"
+      ],
+      [
+       "লবণ",
+       "lobon",
+       "salt",
+       "West Bengal: নুন (nun)"
+      ],
+      [
+       "মরিচ",
+       "morich",
+       "chilli",
+       "West Bengal: লঙ্কা (lonka)"
+      ],
+      [
+       "গোশত",
+       "gosht",
+       "meat",
+       "Also মাংস (mangsho). West Bengal: মাংস"
+      ],
+      [
+       "নাশতা",
+       "nashta",
+       "breakfast; a light meal",
+       "West Bengal: জলখাবার (jolkhabar)"
+      ],
+      [
+       "দাওয়াত",
+       "daoat",
+       "invitation to a meal",
+       "West Bengal: নেমন্তন্ন (nemontonno)"
+      ],
+      [
+       "মেহমান",
+       "mehman",
+       "guest",
+       "West Bengal: অতিথি (atithi)"
+      ],
+      [
+       "গোসল",
+       "gosol",
+       "a bath; to bathe",
+       "West Bengal: স্নান (snan)"
+      ],
+      [
+       "চুলা",
+       "chula",
+       "stove",
+       "West Bengal: উনুন (unun)"
+      ],
+      [
+       "পোলাপান",
+       "polapan",
+       "children (informal)",
+       "West Bengal: ছেলেমেয়ে (chhelemeye)"
+      ]
+     ]
+    },
+    {
+     "title": "Greetings and thanks",
+     "words": [
+      [
+       "আসসালামু আলাইকুম",
+       "assalamu alaikum",
+       "peace be upon you (a greeting)",
+       "Reply: ওয়ালাইকুম আসসালাম. Used by Muslims in both Bangladesh and West Bengal"
+      ],
+      [
+       "আদাব",
+       "adab",
+       "a greeting, said with a slight bow",
+       "Used in Bangladesh; also by Muslims in Kolkata"
+      ],
+      [
+       "নমস্কার",
+       "nomoshkar",
+       "a greeting, with folded hands",
+       "Used by Hindus in both Bangladesh and West Bengal"
+      ],
+      [
+       "আলহামদুলিল্লাহ",
+       "alhamdulillah",
+       "thank God",
+       "Often said after \"I am well\""
+      ],
+      [
+       "ইনশাআল্লাহ",
+       "inshaallah",
+       "God willing",
+       "Said about plans"
+      ],
+      [
+       "আল্লাহ হাফেজ",
+       "allah hafez",
+       "goodbye (God keep you)",
+       "Muslim families. West Bengal: আসছি or নমস্কার"
+      ],
+      [
+       "ধন্যবাদ",
+       "dhonyobad",
+       "thank you",
+       "Works everywhere"
+      ],
+      [
+       "শুকরিয়া",
+       "shukriya",
+       "thanks",
+       "A warm word of thanks in Muslim families"
+      ]
+     ]
+    },
+    {
+     "title": "If your family is Muslim",
+     "words": [
+      [
+       "ঈদ",
+       "id",
+       "Eid, the festival"
+      ],
+      [
+       "ঈদ মোবারক",
+       "id mubarak",
+       "Happy Eid"
+      ],
+      [
+       "রোজা",
+       "roja",
+       "the fast"
+      ],
+      [
+       "রমজান",
+       "romjan",
+       "Ramadan"
+      ],
+      [
+       "ইফতার",
+       "iftar",
+       "the meal that ends the fast each evening"
+      ],
+      [
+       "নামাজ",
+       "namaj",
+       "prayer"
+      ],
+      [
+       "মসজিদ",
+       "moshjid",
+       "mosque"
+      ],
+      [
+       "দোয়া",
+       "doa",
+       "a prayer; a blessing"
+      ]
+     ]
+    }
+   ],
+   "phrases": [
+    [
+     "আসসালামু আলাইকুম, আব্বা। কেমন আছেন?",
+     "assalamu alaikum, abba. kemon achhen?",
+     "Peace be with you, Father. How are you?"
+    ],
+    [
+     "আমি ভালো আছি, আলহামদুলিল্লাহ।",
+     "ami bhalo achhi, alhamdulillah.",
+     "I am well, thank God."
+    ],
+    [
+     "খালা, আপনি কেমন আছেন?",
+     "khala, apni kemon achhen?",
+     "Aunt, how are you?"
+    ],
+    [
+     "আমাকে দাওয়াত দেওয়ার জন্য ধন্যবাদ।",
+     "amake daoat deoyar jonyo dhonyobad.",
+     "Thank you for inviting me."
+    ],
+    [
+     "একটু পানি দিন।",
+     "ektu pani din.",
+     "Please give me a little water."
+    ],
+    [
+     "আজ নাশতায় কী আছে?",
+     "aj nashtay ki achhe?",
+     "What is there for breakfast today?"
+    ],
+    [
+     "আমাদের বাসা ঢাকায়।",
+     "amader basha dhakay.",
+     "Our home is in Dhaka."
+    ],
+    [
+     "ইনশাআল্লাহ, কাল আসব।",
+     "inshaallah, kal ashbo.",
+     "God willing, I will come tomorrow."
+    ],
+    [
+     "মেহমানদের জন্য চা বানাই?",
+     "mehmander jonyo cha banai?",
+     "Shall I make tea for the guests?"
+    ],
+    [
+     "ভাবি, ভাত খেয়েছেন?",
+     "bhabi, bhat kheyechhen?",
+     "Sister-in-law, have you eaten?"
     ]
    ]
   }

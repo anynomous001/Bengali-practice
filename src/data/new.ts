@@ -6,6 +6,9 @@ export const NEW_FOR_DAYS = 30;
 export const ADDED: Record<string, string> = {
   "goal:passion": "2026-10-22",
   "goal:clinical": "2026-10-24",
+  "goal:bangladesh": "2026-10-28",
+  "vocabulary/bangladesh-words": "2026-10-28",
+  "speaking/roleplay-bangladesh-inlaws": "2026-10-28",
   "vocabulary/mouth-voice": "2026-10-24",
   "vocabulary/speech-language": "2026-10-24",
   "vocabulary/therapy-practice": "2026-10-24",

@@ -74,7 +74,7 @@ export default function VocabTopic({ topic, best, quizLen, flashHref, devotional
             <section key={s.title} id={`sec-w${si}`} className="vsection">
               <h2>{s.title} <span>{s.words.length}</span></h2>
               <ul className={"wlist" + (s.words.some((w) => isLong(w[0])) ? " one" : "")}>
-                {s.words.map((w) => <li key={w[0]}><WordRow bn={w[0]} roman={w[1]} en={w[2]} hideMeaning={cover} /></li>)}
+                {s.words.map((w) => <li key={w[0]}><WordRow bn={w[0]} roman={w[1]} en={w[2]} note={w[3]} hideMeaning={cover} /></li>)}
               </ul>
             </section>
           ))}

@@ -295,6 +295,57 @@ export const GOALS: PathGoal[] = [
     note: "Written for this path and still to be reviewed by your teacher. Phonetic symbols (IPA) and longer listening practice are still to come.",
   },
   {
+    id: "bangladesh",
+    tag: "Bangladesh",
+    title: "Talk with family in Bangladesh",
+    bn: "বাংলাদেশ",
+    bnRoman: "bangladesh",
+    blurb: "Greet and talk with relatives in Bangladesh: the words and phrases used there, family terms and meals.",
+    who: "For people with in-laws, relatives or clients in Bangladesh.",
+    stages: [
+      SCRIPT,
+      {
+        title: "Greetings and family in Bangladesh",
+        blurb: "The greetings, family words and everyday words used in Bangladesh, next to the ones used in Kolkata.",
+        steps: [
+          { id: "vocabulary/greetings", why: "Polite words for any meeting." },
+          { id: "vocabulary/bangladesh-words", why: "Words that differ in Bangladesh: family terms, food, home and greetings." },
+          { id: "vocabulary/family", why: "Names for every relative: the words you will use most." },
+          { id: "vocabulary/feelings", why: "Say how you are, and ask how they are." },
+        ],
+      },
+      {
+        title: "Talking with elders",
+        blurb: "Who you say আপনি to, and the verbs you need.",
+        steps: [
+          { id: "grammar/purush", why: "Choosing আপনি, তুমি or তুই is the key to speaking respectfully with in-laws." },
+          { id: "vocabulary/verbs", why: "The 52 most common verbs for everyday talk." },
+          { id: "grammar/kriya", why: "How verbs change for each person, including polite requests." },
+          { id: "grammar/tense-present", why: "Say what you are doing and what you do every day." },
+        ],
+      },
+      {
+        title: "Everyday talk",
+        blurb: "Food, the house and times, for meals and visits.",
+        steps: [
+          { id: "vocabulary/food", why: "Meals are a big part of family life." },
+          { id: "vocabulary/house", why: "Talk about home, and ask about theirs." },
+          { id: "vocabulary/time", why: "Days and times, for planning visits." },
+          { id: "vocabulary/questions", why: "Ask who, what, where and when." },
+        ],
+      },
+      {
+        title: "At your in-laws' home",
+        blurb: "A visit to your spouse's family in Dhaka, and a call home.",
+        steps: [
+          { id: "speaking/roleplay-bangladesh-inlaws", why: "Greet your in-laws, thank them, praise the food and say no kindly." },
+          { id: "speaking/roleplay-family-call", why: "A video call with your parents, to practise asking and answering." },
+        ],
+      },
+    ],
+    note: "The audio uses a standard Bengali voice. A recording by a Dhaka speaker is still to come, and the Bengali needs review by a native speaker from Dhaka.",
+  },
+  {
     id: "passion",
     tag: "Curiosity",
     title: "Learn it for the love of it",

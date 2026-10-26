@@ -6451,6 +6451,190 @@
   "text": "মনে রাখার চেষ্টা করো।",
   "from": "vocab science-brain phrase"
  },
+ "01032fec1df6eb66": {
+  "text": "আব্বা",
+  "from": "vocab bangladesh-words"
+ },
+ "f996b464eb497cb7": {
+  "text": "আম্মা",
+  "from": "vocab bangladesh-words"
+ },
+ "34234550f36c561b": {
+  "text": "নানা",
+  "from": "vocab bangladesh-words"
+ },
+ "ff6dfd1537072f1f": {
+  "text": "নানি",
+  "from": "vocab bangladesh-words"
+ },
+ "9140347fb367f361": {
+  "text": "দাদি",
+  "from": "vocab bangladesh-words"
+ },
+ "723c0cba3f4c3ce4": {
+  "text": "খালা",
+  "from": "vocab bangladesh-words"
+ },
+ "09e35e946b73b81a": {
+  "text": "খালু",
+  "from": "vocab bangladesh-words"
+ },
+ "10ef9a304ae882a2": {
+  "text": "ফুফু",
+  "from": "vocab bangladesh-words"
+ },
+ "4dfcb3cfcff180ea": {
+  "text": "ফুফা",
+  "from": "vocab bangladesh-words"
+ },
+ "fdc9f9117c2200f5": {
+  "text": "চাচা",
+  "from": "vocab bangladesh-words"
+ },
+ "fd710f806748663e": {
+  "text": "চাচি",
+  "from": "vocab bangladesh-words"
+ },
+ "15968ae34c1c6333": {
+  "text": "ভাবি",
+  "from": "vocab bangladesh-words"
+ },
+ "36f2de05b411bc64": {
+  "text": "দুলাভাই",
+  "from": "vocab bangladesh-words"
+ },
+ "97ac6b53075ce644": {
+  "text": "ভাইয়া",
+  "from": "vocab bangladesh-words"
+ },
+ "2469edf2f3e6b413": {
+  "text": "আপা",
+  "from": "vocab bangladesh-words"
+ },
+ "97e273dc289a87c2": {
+  "text": "আপু",
+  "from": "vocab bangladesh-words"
+ },
+ "a259fa5f9d43ec1b": {
+  "text": "পানি",
+  "from": "vocab bangladesh-words"
+ },
+ "f6d40a60d23ad34f": {
+  "text": "লবণ",
+  "from": "vocab bangladesh-words"
+ },
+ "d4ea15c366b6715e": {
+  "text": "গোশত",
+  "from": "vocab bangladesh-words"
+ },
+ "f80779ae1c75bd9d": {
+  "text": "নাশতা",
+  "from": "vocab bangladesh-words"
+ },
+ "73cc4567771466ba": {
+  "text": "দাওয়াত",
+  "from": "vocab bangladesh-words"
+ },
+ "57fa384255896257": {
+  "text": "মেহমান",
+  "from": "vocab bangladesh-words"
+ },
+ "20ce2304535181e6": {
+  "text": "গোসল",
+  "from": "vocab bangladesh-words"
+ },
+ "9d9508c05f7d17a4": {
+  "text": "চুলা",
+  "from": "vocab bangladesh-words"
+ },
+ "855adbb1373d4621": {
+  "text": "পোলাপান",
+  "from": "vocab bangladesh-words"
+ },
+ "c802677ed2d9150c": {
+  "text": "আসসালামু আলাইকুম",
+  "from": "vocab bangladesh-words"
+ },
+ "4c6b46adb1d54402": {
+  "text": "আলহামদুলিল্লাহ",
+  "from": "vocab bangladesh-words"
+ },
+ "328793f0adf175d3": {
+  "text": "ইনশাআল্লাহ",
+  "from": "vocab bangladesh-words"
+ },
+ "185b301b9ae7fbb5": {
+  "text": "আল্লাহ হাফেজ",
+  "from": "vocab bangladesh-words"
+ },
+ "79ebfc8de93fbdc1": {
+  "text": "শুকরিয়া",
+  "from": "vocab bangladesh-words"
+ },
+ "62cc82cec2299aae": {
+  "text": "ঈদ মোবারক",
+  "from": "vocab bangladesh-words"
+ },
+ "cbfbc11a2ce990cb": {
+  "text": "রোজা",
+  "from": "vocab bangladesh-words"
+ },
+ "258f6512a76d568f": {
+  "text": "রমজান",
+  "from": "vocab bangladesh-words"
+ },
+ "a50f0f150842e00d": {
+  "text": "ইফতার",
+  "from": "vocab bangladesh-words"
+ },
+ "c079326d7090675a": {
+  "text": "নামাজ",
+  "from": "vocab bangladesh-words"
+ },
+ "4cb80b92f7ce6e79": {
+  "text": "দোয়া",
+  "from": "vocab bangladesh-words"
+ },
+ "e94ba475e92b303c": {
+  "text": "আসসালামু আলাইকুম, আব্বা। কেমন আছেন?",
+  "from": "vocab bangladesh-words phrase"
+ },
+ "d72e895910361cc2": {
+  "text": "আমি ভালো আছি, আলহামদুলিল্লাহ।",
+  "from": "vocab bangladesh-words phrase"
+ },
+ "a7def0d9472f2ed1": {
+  "text": "খালা, আপনি কেমন আছেন?",
+  "from": "vocab bangladesh-words phrase"
+ },
+ "e4027c4613136cd0": {
+  "text": "আমাকে দাওয়াত দেওয়ার জন্য ধন্যবাদ।",
+  "from": "vocab bangladesh-words phrase"
+ },
+ "6f685e4e408cc28a": {
+  "text": "একটু পানি দিন।",
+  "from": "vocab bangladesh-words phrase"
+ },
+ "88fc101ce825a893": {
+  "text": "আজ নাশতায় কী আছে?",
+  "from": "vocab bangladesh-words phrase"
+ },
+ "e65e7e000065f512": {
+  "text": "আমাদের বাসা ঢাকায়।",
+  "from": "vocab bangladesh-words phrase"
+ },
+ "22d0e8cb60d0893d": {
+  "text": "ইনশাআল্লাহ, কাল আসব।",
+  "from": "vocab bangladesh-words phrase"
+ },
+ "87b5c7bf00941e56": {
+  "text": "মেহমানদের জন্য চা বানাই?",
+  "from": "vocab bangladesh-words phrase"
+ },
+ "14831a21b38b0d4a": {
+  "text": "ভাবি, ভাত খেয়েছেন?",
+  "from": "vocab bangladesh-words phrase"
+ },
  "6cc90c8815790f6d": {
   "text": "গিলতে একটু কষ্ট হয়।",
   "from": "listening patient"
