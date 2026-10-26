@@ -84,6 +84,10 @@ export const COURSES: Course[] = [
       { id: "numbers", title: "Numbers and money", blurb: "Understand what you hear at the market.", lessons: [
         { id: "speaking/numbers", title: "Numbers and money listening", blurb: "Hear a number or price and pick the numeral.", href: "/learn/speaking/numbers", kind: "Practice" },
       ] },
+      { id: "listening", title: "Listening practice", blurb: "Hear it, then show that you understood.", lessons: [
+        { id: "speaking/listen-patient", title: "Understand your patient", blurb: "Hear what a patient says and pick what it means.", href: "/learn/speaking/listen-patient", kind: "Practice" },
+        { id: "speaking/listen-memory", title: "Three-word memory game", blurb: "Hear three words, count backwards, then pick them from a list.", href: "/learn/speaking/listen-memory", kind: "Practice" },
+      ] },
       { id: "say", title: "Say it aloud", blurb: "See the meaning, say the word, then check.", lessons: [
         { id: "speaking/flashcards", title: "Say-it-aloud flashcards", blurb: "English first: say the Bengali word before you reveal it.", href: "/learn/speaking/flashcards", kind: "Review" },
       ] },

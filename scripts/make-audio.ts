@@ -25,6 +25,7 @@ import { audioId } from "../src/lib/audio";
 import { LETTERS } from "../src/data/letters";
 import { NUMBERS } from "../src/data/numbers";
 import { VOCAB } from "../src/data/vocabulary";
+import { PATIENT_LINES } from "../src/data/listening-clinical";
 
 const DIR = path.join(process.cwd(), "content-audio");
 const args = new Set(process.argv.slice(2));
@@ -48,6 +49,7 @@ function collect(): Map<string, string> {
     for (const sec of t.sections) for (const w of sec.words) add(w[0], `vocab ${t.id}`);
     if (args.has("--phrases")) for (const p of t.phrases) add(p[0], `vocab ${t.id} phrase`);
   }
+  for (const l of PATIENT_LINES) add(l[0], "listening patient");
   return out;
 }
 

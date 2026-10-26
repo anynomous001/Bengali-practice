@@ -285,6 +285,8 @@ export const GOALS: PathGoal[] = [
           { id: "vocabulary/patient-chat", why: "Where a patient lives and with whom, how they slept, and small talk that puts them at ease." },
           { id: "vocabulary/memory-check", why: "Date, day and season questions, three-word recall and kind words for the patient." },
           { id: "speaking/roleplay-clinical-chat", why: "Chat with a patient before a session: where they live, who is at home, and what they used to do." },
+          { id: "speaking/listen-patient", why: "Hear what a patient says and pick what it means." },
+          { id: "speaking/listen-memory", why: "The three-word recall check, for your own ears: hear, count backwards, then recall." },
           { id: "speaking/roleplay-clinical-swallow", why: "Check a patient's swallow: mouth, tongue, cough, saliva and small sips of water." },
           { id: "speaking/roleplay-clinical-memory", why: "Ask orientation questions, give three words to remember and ask for them again." },
         ],
