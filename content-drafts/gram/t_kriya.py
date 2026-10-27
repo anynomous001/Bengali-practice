@@ -26,7 +26,7 @@ TOPICS = [finish(dict(id="kriya", title=("ক্রিয়া", "Kriya", "Verb
 
   dict(id="regular", title="Regular and irregular verbs", blocks=[
    P("A regular verb keeps its root the same and just takes the endings. করা, বলা, দেখা, পড়া, চলা, থাকা, বসা, খেলা and হাঁটা are regular. An irregular verb changes its root in some tenses. খাওয়া, যাওয়া, দেওয়া, নেওয়া and আসা are the most common irregular verbs, and you must memorise them."),
-   TABLE(["Verb", "Present (I)", "Past (I)", "Future (I)", "'and then' form"], [[c(VERBS[k]["bn"] + " (" + VERBS[k]["en"] + ")", VERBS[k]["ro"]), VERBS[k]["f"]["pres"][0], VERBS[k]["f"]["past"][0], VERBS[k]["f"]["fut"][0], c(*VERBS[k]["conj"])] for k in ("kora","bola","dekha","pora","khaoya","jaoya","deoya","neoya","asha","lekha","shona")],
+   TABLE(["Verb", "Present (I)", "Past (I)", "Future (I)", "'and then' form"], [[c(VERBS[k]["bn"] + " (" + VERBS[k]["en"] + ")", VERBS[k]["ro"]), VERBS[k]["f"]["pres"][0], VERBS[k]["f"]["pastperf"][0], VERBS[k]["f"]["fut"][0], c(*VERBS[k]["conj"])] for k in ("kora","bola","dekha","pora","khaoya","jaoya","deoya","neoya","asha","lekha","shona")],
          "Regular verbs first, then irregular ones"),
    H("Regular verbs in the present tense"),
    EXS([S("ami",[BOI],"pora","pres","I read a book."), S("tumi",[GAN],"shona","pres","You listen to a song."), S("se",[KAJ],"kora","pres","He / she works."),

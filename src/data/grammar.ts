@@ -3267,8 +3267,8 @@ export const GRAMMAR: GrammarTopic[] = [
          "ro": "kori"
         },
         {
-         "bn": "করলাম",
-         "ro": "korlam"
+         "bn": "করেছিলাম",
+         "ro": "korechhilam"
         },
         {
          "bn": "করব",
@@ -3289,8 +3289,8 @@ export const GRAMMAR: GrammarTopic[] = [
          "ro": "boli"
         },
         {
-         "bn": "বললাম",
-         "ro": "bollam"
+         "bn": "বলেছিলাম",
+         "ro": "bolechhilam"
         },
         {
          "bn": "বলব",
@@ -3311,8 +3311,8 @@ export const GRAMMAR: GrammarTopic[] = [
          "ro": "dekhi"
         },
         {
-         "bn": "দেখলাম",
-         "ro": "dekhlam"
+         "bn": "দেখেছিলাম",
+         "ro": "dekhechhilam"
         },
         {
          "bn": "দেখব",
@@ -3333,8 +3333,8 @@ export const GRAMMAR: GrammarTopic[] = [
          "ro": "pori"
         },
         {
-         "bn": "পড়লাম",
-         "ro": "porlam"
+         "bn": "পড়েছিলাম",
+         "ro": "porechhilam"
         },
         {
          "bn": "পড়ব",
@@ -3355,8 +3355,8 @@ export const GRAMMAR: GrammarTopic[] = [
          "ro": "khai"
         },
         {
-         "bn": "খেলাম",
-         "ro": "khelam"
+         "bn": "খেয়েছিলাম",
+         "ro": "kheyechhilam"
         },
         {
          "bn": "খাব",
@@ -3377,8 +3377,8 @@ export const GRAMMAR: GrammarTopic[] = [
          "ro": "jai"
         },
         {
-         "bn": "গেলাম",
-         "ro": "gelam"
+         "bn": "গিয়েছিলাম",
+         "ro": "giyechhilam"
         },
         {
          "bn": "যাব",
@@ -3399,8 +3399,8 @@ export const GRAMMAR: GrammarTopic[] = [
          "ro": "dii"
         },
         {
-         "bn": "দিলাম",
-         "ro": "dilam"
+         "bn": "দিয়েছিলাম",
+         "ro": "diyechhilam"
         },
         {
          "bn": "দেব",
@@ -3421,8 +3421,8 @@ export const GRAMMAR: GrammarTopic[] = [
          "ro": "nii"
         },
         {
-         "bn": "নিলাম",
-         "ro": "nilam"
+         "bn": "নিয়েছিলাম",
+         "ro": "niyechhilam"
         },
         {
          "bn": "নেব",
@@ -3443,8 +3443,8 @@ export const GRAMMAR: GrammarTopic[] = [
          "ro": "ashi"
         },
         {
-         "bn": "এলাম",
-         "ro": "elam"
+         "bn": "এসেছিলাম",
+         "ro": "eshechhilam"
         },
         {
          "bn": "আসব",
@@ -3465,8 +3465,8 @@ export const GRAMMAR: GrammarTopic[] = [
          "ro": "likhi"
         },
         {
-         "bn": "লিখলাম",
-         "ro": "likhlam"
+         "bn": "লিখেছিলাম",
+         "ro": "likhechhilam"
         },
         {
          "bn": "লিখব",
@@ -3487,8 +3487,8 @@ export const GRAMMAR: GrammarTopic[] = [
          "ro": "shuni"
         },
         {
-         "bn": "শুনলাম",
-         "ro": "shunlam"
+         "bn": "শুনেছিলাম",
+         "ro": "shunechhilam"
         },
         {
          "bn": "শুনব",

@@ -546,17 +546,17 @@ A regular verb keeps its root the same and just takes the endings. করা, �
 
 | Verb | Present (I) | Past (I) | Future (I) | 'and then' form |
 |---|---|---|---|---|
-| করা (to do) _(kora)_ | করি _(kori)_ | করলাম _(korlam)_ | করব _(korbo)_ | করে _(kore)_ |
-| বলা (to say / tell) _(bola)_ | বলি _(boli)_ | বললাম _(bollam)_ | বলব _(bolbo)_ | বলে _(bole)_ |
-| দেখা (to see / look) _(dekha)_ | দেখি _(dekhi)_ | দেখলাম _(dekhlam)_ | দেখব _(dekhbo)_ | দেখে _(dekhe)_ |
-| পড়া (to read / study) _(pora)_ | পড়ি _(pori)_ | পড়লাম _(porlam)_ | পড়ব _(porbo)_ | পড়ে _(pore)_ |
-| খাওয়া (to eat) _(khaoya)_ | খাই _(khai)_ | খেলাম _(khelam)_ | খাব _(khabo)_ | খেয়ে _(kheye)_ |
-| যাওয়া (to go) _(jaoya)_ | যাই _(jai)_ | গেলাম _(gelam)_ | যাব _(jabo)_ | গিয়ে _(giye)_ |
-| দেওয়া (to give) _(deoya)_ | দিই _(dii)_ | দিলাম _(dilam)_ | দেব _(debo)_ | দিয়ে _(diye)_ |
-| নেওয়া (to take) _(neoya)_ | নিই _(nii)_ | নিলাম _(nilam)_ | নেব _(nebo)_ | নিয়ে _(niye)_ |
-| আসা (to come) _(asha)_ | আসি _(ashi)_ | এলাম _(elam)_ | আসব _(asbo)_ | এসে _(eshe)_ |
-| লেখা (to write) _(lekha)_ | লিখি _(likhi)_ | লিখলাম _(likhlam)_ | লিখব _(likhbo)_ | লিখে _(likhe)_ |
-| শোনা (to hear / listen) _(shona)_ | শুনি _(shuni)_ | শুনলাম _(shunlam)_ | শুনব _(shunbo)_ | শুনে _(shune)_ |
+| করা (to do) _(kora)_ | করি _(kori)_ | করেছিলাম _(korechhilam)_ | করব _(korbo)_ | করে _(kore)_ |
+| বলা (to say / tell) _(bola)_ | বলি _(boli)_ | বলেছিলাম _(bolechhilam)_ | বলব _(bolbo)_ | বলে _(bole)_ |
+| দেখা (to see / look) _(dekha)_ | দেখি _(dekhi)_ | দেখেছিলাম _(dekhechhilam)_ | দেখব _(dekhbo)_ | দেখে _(dekhe)_ |
+| পড়া (to read / study) _(pora)_ | পড়ি _(pori)_ | পড়েছিলাম _(porechhilam)_ | পড়ব _(porbo)_ | পড়ে _(pore)_ |
+| খাওয়া (to eat) _(khaoya)_ | খাই _(khai)_ | খেয়েছিলাম _(kheyechhilam)_ | খাব _(khabo)_ | খেয়ে _(kheye)_ |
+| যাওয়া (to go) _(jaoya)_ | যাই _(jai)_ | গিয়েছিলাম _(giyechhilam)_ | যাব _(jabo)_ | গিয়ে _(giye)_ |
+| দেওয়া (to give) _(deoya)_ | দিই _(dii)_ | দিয়েছিলাম _(diyechhilam)_ | দেব _(debo)_ | দিয়ে _(diye)_ |
+| নেওয়া (to take) _(neoya)_ | নিই _(nii)_ | নিয়েছিলাম _(niyechhilam)_ | নেব _(nebo)_ | নিয়ে _(niye)_ |
+| আসা (to come) _(asha)_ | আসি _(ashi)_ | এসেছিলাম _(eshechhilam)_ | আসব _(asbo)_ | এসে _(eshe)_ |
+| লেখা (to write) _(lekha)_ | লিখি _(likhi)_ | লিখেছিলাম _(likhechhilam)_ | লিখব _(likhbo)_ | লিখে _(likhe)_ |
+| শোনা (to hear / listen) _(shona)_ | শুনি _(shuni)_ | শুনেছিলাম _(shunechhilam)_ | শুনব _(shunbo)_ | শুনে _(shune)_ |
 
 **Regular verbs**
 
