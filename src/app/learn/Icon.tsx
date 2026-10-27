@@ -1,7 +1,7 @@
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 import {
   ArrowRight, BookOpenText, Gift, List, Medal, ChatCircleText, Fire, Target, Trophy, CaretDown, CaretLeft, CaretRight, Cards, Check, CheckCircle, Circle, Clock, Desktop, House, ListBullets,
-  Lock, Microphone, Moon, Path, PencilSimpleLine, Play, ShieldCheck, SignOut, SpeakerHigh, Sun, TextAa, Translate, X,
+  Headphones, Lock, Microphone, Moon, Path, PencilSimpleLine, Play, ShieldCheck, SignOut, SpeakerHigh, Sun, TextAa, Translate, X,
 } from "@phosphor-icons/react/dist/ssr";
 
 // One icon family (Phosphor) for the whole app, so strokes, corners and weights match everywhere.
@@ -10,6 +10,7 @@ const ICONS = {
   home: House,
   reading: BookOpenText,
   speaking: Microphone,
+  listening: Headphones,
   writing: PencilSimpleLine,
   path: Path,
   grammar: TextAa,
@@ -46,7 +47,7 @@ const ICONS = {
 export type IconName = keyof typeof ICONS;
 type Weight = "regular" | "bold" | "fill" | "duotone";
 
-const COURSE = new Set<IconName>(["reading", "speaking", "vocabulary", "grammar", "writing"]);
+const COURSE = new Set<IconName>(["reading", "speaking", "listening", "vocabulary", "grammar", "writing"]);
 
 export default function Icon({ name, size = 20, weight }: { name: IconName; size?: number; weight?: Weight }) {
   const Cmp = ICONS[name];
@@ -56,7 +57,7 @@ export default function Icon({ name, size = 20, weight }: { name: IconName; size
 
 /** The colour of the tile behind an icon, by icon name. Each section of the app has its own colour. */
 const TONES: Partial<Record<IconName, string>> = {
-  home: "home", path: "path", reading: "reading", speaking: "speaking", vocabulary: "vocabulary", grammar: "grammar", writing: "writing",
+  home: "home", path: "path", reading: "reading", speaking: "speaking", listening: "listening", vocabulary: "vocabulary", grammar: "grammar", writing: "writing",
   trophy: "progress", medal: "leader", gift: "gift", feedback: "chat", shield: "slate", logout: "slate", flame: "flame", target: "leader", lock: "slate",
 };
 

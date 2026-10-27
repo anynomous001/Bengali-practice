@@ -26,6 +26,7 @@ import { LETTERS } from "../src/data/letters";
 import { NUMBERS } from "../src/data/numbers";
 import { VOCAB } from "../src/data/vocabulary";
 import { PATIENT_LINES } from "../src/data/listening-clinical";
+import { LISTENING_STORIES } from "../src/data/listening-stories";
 
 const DIR = path.join(process.cwd(), "content-audio");
 const args = new Set(process.argv.slice(2));
@@ -35,6 +36,8 @@ const endpoint = process.env.TTS_ENDPOINT; // override, used by the tests
 const voiceName = process.env.TTS_VOICE ?? (provider === "azure" ? "bn-IN-TanishaaNeural" : provider === "sarvam" ? "shubh" : "bn-IN-Wavenet-A");
 const model = process.env.TTS_MODEL ?? "bulbul:v3";
 const TAKA = "টাকা";
+const SLOW = "slow|";
+const variantOf = (key: string) => (key.startsWith(SLOW) ? { text: key.slice(SLOW.length), slow: true } : { text: key, slow: false });
 
 /** Every text the app speaks, with where it comes from. */
 function collect(): Map<string, string> {
@@ -50,12 +53,14 @@ function collect(): Map<string, string> {
     if (args.has("--phrases")) for (const p of t.phrases) add(p[0], `vocab ${t.id} phrase`);
   }
   for (const l of PATIENT_LINES) add(l[0], "listening patient");
+  // Story lines are read slowly: they are stored under a "slow" variant and made at a slower pace.
+  for (const st of LISTENING_STORIES) for (const l of st.lines) add(`${SLOW}${l.bn}`, `listening story ${st.id}`);
   return out;
 }
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-async function synth(text: string, speaker = voiceName): Promise<Buffer> {
+async function synth(text: string, speaker = voiceName, slow = false): Promise<Buffer> {
   if (provider === "sarvam") {
     if (!speaker) throw new Error("Set TTS_VOICE to a Sarvam speaker name (see the comment at the top of this file).");
     // bulbul:v3 has shubh (male) and ishita (female). bulbul:v4-flash has arnab_bn_conversation, roopa_bn_conversational, bimal_bn_suspense.
@@ -64,7 +69,7 @@ async function synth(text: string, speaker = voiceName): Promise<Buffer> {
     for (let attempt = 0; ; attempt++) {
       r = await fetch(endpoint ?? "https://api.sarvam.ai/text-to-speech", {
         method: "POST", headers: { "Content-Type": "application/json", "api-subscription-key": key },
-        body: JSON.stringify({ text, language_code: "bn-IN", speaker, model, output_audio_codec: "mp3" }),
+        body: JSON.stringify({ text, language_code: "bn-IN", speaker, model, output_audio_codec: "mp3", ...(slow ? { pace: Number(process.env.TTS_SLOW_PACE ?? 0.75) } : {}) }),
       });
       if (r.status !== 429 || attempt >= 5) break;
       await sleep(5000 * (attempt + 1)); // over the rate limit: wait, then try again
@@ -119,7 +124,7 @@ const exists = (f: string) => access(f).then(() => true, () => false);
 async function main() {
   const texts = collect();
   if (args.has("--list")) {
-    for (const [t, from] of texts) console.log(`${audioId(t)}\t${from}\t${t}`);
+    for (const [t, from] of texts) { const v = variantOf(t); console.log(`${audioId(v.text, v.slow ? "slow" : "")}\t${from}\t${t}`); }
     console.log(`\n${texts.size} texts`);
     return;
   }
@@ -133,13 +138,14 @@ async function main() {
   if (args.has("--sample")) return sample();
   await mkdir(DIR, { recursive: true });
   let made = 0, kept = 0, failed = 0;
-  for (const [text] of texts) {
-    const file = path.join(DIR, `${audioId(text)}.mp3`);
+  for (const [key] of texts) {
+    const { text, slow } = variantOf(key);
+    const file = path.join(DIR, `${audioId(text, slow ? "slow" : "")}.mp3`);
     if (!args.has("--force") && (await exists(file))) { kept++; continue; }
-    try { await writeFile(file, await synth(text)); made++; process.stdout.write("."); if (gap) await sleep(gap); }
+    try { await writeFile(file, await synth(text, voiceName, slow)); made++; process.stdout.write("."); if (gap) await sleep(gap); }
     catch (e) { failed++; console.error(`\nfailed: ${text}: ${(e as Error).message}`); if (failed >= 5) { console.error("Stopping after 5 failures."); break; } }
   }
-  const index = Object.fromEntries([...texts].map(([t, from]) => [audioId(t), { text: t, from }]));
+  const index = Object.fromEntries([...texts].map(([t, from]) => { const v = variantOf(t); return [audioId(v.text, v.slow ? "slow" : ""), { text: v.text, from, ...(v.slow ? { slow: true } : {}) }]; }));
   await writeFile(path.join(DIR, "index.json"), JSON.stringify(index, null, 1));
   const total = (await readdir(DIR)).filter((f) => f.endsWith(".mp3")).length;
   console.log(`\nmade ${made}, kept ${kept}, failed ${failed}. ${total} clips in content-audio/`);

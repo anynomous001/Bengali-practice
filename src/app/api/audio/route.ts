@@ -7,10 +7,12 @@ import { audioId } from "@/lib/audio";
 export async function GET(req: Request) {
   const user = await getUser();
   if (!user?.hasAccess) return new Response("Not allowed", { status: 401 });
-  const text = new URL(req.url).searchParams.get("t") ?? "";
+  const params = new URL(req.url).searchParams;
+  const text = params.get("t") ?? "";
+  const variant = params.get("v") === "slow" ? "slow" : "";
   if (!text || text.length > 2000) return new Response("Bad request", { status: 400 });
   try {
-    const file = await readFile(path.join(process.cwd(), "content-audio", `${audioId(text)}.mp3`));
+    const file = await readFile(path.join(process.cwd(), "content-audio", `${audioId(text, variant)}.mp3`));
     return new Response(new Uint8Array(file), {
       headers: { "Content-Type": "audio/mpeg", "Cache-Control": "private, max-age=31536000, immutable" },
     });

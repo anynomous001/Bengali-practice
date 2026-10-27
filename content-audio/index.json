@@ -6710,5 +6710,105 @@
  "75324dae52259b06": {
   "text": "রাতে আমার ভালো ঘুম হয়নি।",
   "from": "listening patient"
+ },
+ "237c434707789b5c": {
+  "text": "আজ ক্লিনিকে একজন রোগী এসেছেন।",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "7505a6cad745e00b": {
+  "text": "তাঁর নাম দীপক সেন।",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "2f98aa5dd617e83e": {
+  "text": "তাঁর বয়স পঞ্চান্ন।",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "afb324fca07d1eb2": {
+  "text": "তিনি স্ত্রীর সঙ্গে এসেছেন।",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "bc1dd0ad1f33a051": {
+  "text": "দীপকবাবু একজন শিক্ষক।",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "38c0060b364472bd": {
+  "text": "তিনি সারাদিন ক্লাসে কথা বলেন।",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "7c559b8bde5dce5b": {
+  "text": "দীপকবাবু বললেন, \"আমার গলা বসে গেছে। প্রায় এক মাস ধরে। কথা বললে গলায় ব্যথা করে।\"",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "d6367566442b4b07": {
+  "text": "থেরাপিস্ট জিজ্ঞেস করলেন, \"আপনি কি চা বেশি খান?\"",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "24d7a1d79de0b9f5": {
+  "text": "তিনি বললেন, \"হ্যাঁ, দিনে পাঁচ কাপ।\"",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "311b7b0a019bd6ad": {
+  "text": "থেরাপিস্ট বললেন, \"আ বলুন।\" দীপকবাবু \"আ\" বললেন।",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "259ad04db402b1b4": {
+  "text": "তারপর থেরাপিস্ট বললেন, \"এবার আমি তিনটে শব্দ বলব। মন দিয়ে শুনুন। বই, ফুল, পাখি।\"",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "e777db8434247f83": {
+  "text": "দীপকবাবু বললেন, \"বই, ফুল, পাখি।\"",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "277d40af4e933183": {
+  "text": "থেরাপিস্ট বললেন, \"ঠিক! শব্দ তিনটে মনে রাখবেন। এখন এক থেকে পাঁচ পর্যন্ত গুনুন।\"",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "d2477cec9bef6568": {
+  "text": "দীপকবাবু ঠিক গুনলেন: এক, দুই, তিন, চার, পাঁচ।",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "05a42cd08ad6463e": {
+  "text": "থেরাপিস্ট জিজ্ঞেস করলেন, \"এবার বলুন, তিনটে শব্দ কী ছিল?\"",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "42781ad60958b3e6": {
+  "text": "দীপকবাবু বললেন, \"বই... পাখি... আর একটা কী যেন ছিল?\"",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "52fc07584a958887": {
+  "text": "থেরাপিস্ট বললেন, \"একটা শব্দ গাছে হয়।\"",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "be8b188e8e998d26": {
+  "text": "দীপকবাবু হেসে বললেন, \"ফুল!\"",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "b3e0811409617edd": {
+  "text": "থেরাপিস্ট বললেন, \"খুব ভালো! চিন্তা করবেন না। আস্তে কথা বলবেন। রোজ গরম জল খাবেন।\"",
+  "from": "listening story dipak-sen",
+  "slow": true
+ },
+ "a14fbc62e4368d4c": {
+  "text": "দীপকবাবু হেসে বললেন, \"ধন্যবাদ।\"",
+  "from": "listening story dipak-sen",
+  "slow": true
  }
 }

@@ -1,14 +1,6 @@
-import { requireAccess } from "@/lib/access";
-import { PATIENT_LINES } from "@/data/listening-clinical";
-import PatientListening from "../../PatientListening";
-import LessonFrame from "../../LessonFrame";
+import { redirect } from "next/navigation";
 
-export default async function Page() {
-  await requireAccess();
-  return (
-    <LessonFrame lessonId="speaking/listen-patient">
-      <h1>Understand your patient</h1>
-      <PatientListening lines={PATIENT_LINES} />
-    </LessonFrame>
-  );
+// This activity now lives in the Listening section.
+export default function Page() {
+  redirect("/learn/listening/patient");
 }

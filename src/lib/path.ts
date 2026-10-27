@@ -28,7 +28,7 @@ export function pathBlurb(goals: PathGoal[]): string {
 /** Minutes for lessons that are longer or shorter than their kind suggests. */
 const MINUTES_OVERRIDE: Record<string, number> = {
   "reading/alphabet": 25, "reading/matras": 15, "reading/numbers": 15, "speaking/sounds": 10, "speaking/numbers": 8,
-  "speaking/impromptu": 10, "speaking/story-relay": 10, "grammar/translate": 8,
+  "speaking/impromptu": 10, "speaking/story-relay": 10, "grammar/translate": 8, "listening/story-dipak-sen": 15,
 };
 
 /** A rough time for one lesson, so a student can plan. These are estimates, not measured. */

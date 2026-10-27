@@ -11,9 +11,9 @@ import { SCENARIOS } from "./roleplay";
 import { DEV_VOCAB, DEV_READING, DEV_SCENARIOS, DEV_CLASSWORK } from "./devotional";
 import { DEV_STORIES } from "./devotional-stories";
 
-export type CourseId = "reading" | "speaking" | "vocabulary" | "grammar";
+export type CourseId = "reading" | "speaking" | "vocabulary" | "grammar" | "listening";
 export type Kind = "Lesson" | "Practice" | "Quiz" | "Review" | "Exam";
-export type Lesson = { id: string; title: string; blurb: string; href: string; kind: Kind };
+export type Lesson = { id: string; title: string; blurb: string; href: string; kind: Kind; /** Who it is for, such as "Clinical". */ tag?: string };
 /** `devotional` modules are tagged "Devotional", kept apart from the main course, and not counted in its progress. */
 export type Module = { id: string; title: string; blurb: string; lessons: Lesson[]; devotional?: boolean };
 export type Course = {
@@ -83,10 +83,6 @@ export const COURSES: Course[] = [
       ] },
       { id: "numbers", title: "Numbers and money", blurb: "Understand what you hear at the market.", lessons: [
         { id: "speaking/numbers", title: "Numbers and money listening", blurb: "Hear a number or price and pick the numeral.", href: "/learn/speaking/numbers", kind: "Practice" },
-      ] },
-      { id: "listening", title: "Listening practice", blurb: "Hear it, then show that you understood.", lessons: [
-        { id: "speaking/listen-patient", title: "Understand your patient", blurb: "Hear what a patient says and pick what it means.", href: "/learn/speaking/listen-patient", kind: "Practice" },
-        { id: "speaking/listen-memory", title: "Three-word memory game", blurb: "Hear three words, count backwards, then pick them from a list.", href: "/learn/speaking/listen-memory", kind: "Practice" },
       ] },
       { id: "say", title: "Say it aloud", blurb: "See the meaning, say the word, then check.", lessons: [
         { id: "speaking/flashcards", title: "Say-it-aloud flashcards", blurb: "English first: say the Bengali word before you reveal it.", href: "/learn/speaking/flashcards", kind: "Review" },
@@ -164,6 +160,27 @@ export const COURSES: Course[] = [
       { id: "exam", title: "Exam", blurb: "A timed test across the whole course.", lessons: [exam("grammar")] },
     ],
     upcoming: [],
+  },
+  {
+    id: "listening", title: "Listening", bn: "শোনা",
+    blurb: "Train your ear: hear a story told slowly, answer questions about it, and practise understanding what people say.",
+    outcomes: [
+      "Follow a short Bengali story that is told slowly",
+      "Understand what a patient, a shopkeeper or a relative says",
+      "Read the romanization and the English only when you want them",
+    ],
+    modules: [
+      { id: "stories", title: "Stories", blurb: "Hear the story slowly as often as you like. Then read it with romanization if you want, answer questions, and read it in English.", lessons: [
+        { id: "listening/story-dipak-sen", title: "Dipak Sen's voice", blurb: "A teacher with a hoarse voice visits a speech therapist, who checks his voice and his memory.", href: "/learn/listening/story/dipak-sen", kind: "Practice", tag: "Clinical" },
+      ] },
+      { id: "activities", title: "Listening activities", blurb: "Hear it, then show that you understood.", lessons: [
+        { id: "listening/patient", title: "Understand your patient", blurb: "Hear what a patient says and pick what it means.", href: "/learn/listening/patient", kind: "Practice", tag: "Clinical" },
+        { id: "listening/memory", title: "Three-word memory game", blurb: "Hear three words, count backwards, then pick them from a list.", href: "/learn/listening/memory", kind: "Practice", tag: "Clinical" },
+      ] },
+    ],
+    upcoming: [
+      { title: "More stories", blurb: "At the market, on a journey and with the family." },
+    ],
   },
 ];
 

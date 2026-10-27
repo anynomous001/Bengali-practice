@@ -23,43 +23,53 @@ function bestVoice(): SpeechSynthesisVoice | undefined {
   return [...voices].sort((a, b) => score(b) - score(a)).find((v) => score(v) > 0);
 }
 
-function useBrowserVoice(text: string, onEnd?: () => void) {
+const key = (text: string, slow: boolean) => (slow ? `slow|${text}` : text);
+const clipUrl = (text: string, slow: boolean) => `/api/audio?t=${encodeURIComponent(text)}${slow ? "&v=slow" : ""}`;
+
+function useBrowserVoice(text: string, onEnd?: () => void, slow = false) {
   if (typeof window === "undefined" || !("speechSynthesis" in window)) { onEnd?.(); return; }
   if (!voices.length) loadVoices();
   const voice = bestVoice();
   const u = new SpeechSynthesisUtterance(text);
   u.voice = voice ?? null;
   u.lang = voice?.lang ?? "bn-IN";
-  u.rate = 0.85;
+  u.rate = slow ? 0.65 : 0.85;
   if (onEnd) { u.onend = onEnd; u.onerror = onEnd; }
   speechSynthesis.cancel();
   speechSynthesis.speak(u);
 }
 
-export function speak(text: string) {
+export function speak(text: string, slow = false) {
   if (typeof window === "undefined") return;
   audio?.pause();
   if ("speechSynthesis" in window) speechSynthesis.cancel();
-  if (noClip.has(text)) return useBrowserVoice(text);
+  if (noClip.has(key(text, slow))) return useBrowserVoice(text, undefined, slow);
 
   // The element is created and started inside the tap, which keeps mobile Safari happy.
-  const a = new Audio(`/api/audio?t=${encodeURIComponent(text)}`);
+  const a = new Audio(clipUrl(text, slow));
   audio = a;
-  a.addEventListener("error", () => { noClip.add(text); useBrowserVoice(text); }, { once: true });
+  a.addEventListener("error", () => { noClip.add(key(text, slow)); useBrowserVoice(text, undefined, slow); }, { once: true });
   a.play().catch(() => { /* an error event handles missing clips; a blocked play does nothing */ });
 }
 
 /** Like speak, but resolves when the clip has finished, so a list of words can be played one after another. */
-export function speakThen(text: string): Promise<void> {
+export function speakThen(text: string, slow = false): Promise<void> {
   return new Promise((resolve) => {
     if (typeof window === "undefined") return resolve();
     audio?.pause();
     if ("speechSynthesis" in window) speechSynthesis.cancel();
-    if (noClip.has(text)) return useBrowserVoice(text, resolve);
-    const a = new Audio(`/api/audio?t=${encodeURIComponent(text)}`);
+    if (noClip.has(key(text, slow))) return useBrowserVoice(text, resolve, slow);
+    const a = new Audio(clipUrl(text, slow));
     audio = a;
     a.addEventListener("ended", () => resolve(), { once: true });
-    a.addEventListener("error", () => { noClip.add(text); useBrowserVoice(text, resolve); }, { once: true });
+    a.addEventListener("error", () => { noClip.add(key(text, slow)); useBrowserVoice(text, resolve, slow); }, { once: true });
     a.play().catch(() => resolve());
   });
+}
+
+/** Stops whatever is playing. */
+export function stopSpeaking() {
+  if (typeof window === "undefined") return;
+  audio?.pause();
+  if ("speechSynthesis" in window) speechSynthesis.cancel();
 }

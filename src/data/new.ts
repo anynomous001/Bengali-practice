@@ -25,8 +25,10 @@ export const ADDED: Record<string, string> = {
   "speaking/roleplay-clinical-memory": "2026-10-26",
   "vocabulary/patient-chat": "2026-10-27",
   "speaking/roleplay-clinical-chat": "2026-10-27",
-  "speaking/listen-patient": "2026-10-27",
-  "speaking/listen-memory": "2026-10-27",
+  "listening/patient": "2026-10-27",
+  "listening/memory": "2026-10-27",
+  "listening/story-dipak-sen": "2026-10-28",
+  "nav:listening": "2026-10-28",
 };
 
 /** True for a lesson or goal that went live in the last NEW_FOR_DAYS days. */
