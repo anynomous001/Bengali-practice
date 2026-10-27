@@ -92,6 +92,7 @@ export const COURSES: Course[] = [
       { id: "impromptu", title: "Free speaking", blurb: "Speak on a topic you have never seen, or build a story with a partner.", lessons: [
         { id: "speaking/impromptu", title: "Impromptu topics", blurb: "Choose the kind of topic and how long to prepare and speak. The app picks the topic and keeps time.", href: "/learn/speaking/impromptu", kind: "Practice" },
         { id: "speaking/story-relay", title: "Story relay", blurb: "Build one story together, taking turns of 2 to 3 sentences. Free, or with a tense card each turn.", href: "/learn/speaking/story-relay", kind: "Practice" },
+        { id: "grammar/drills", title: "Translation drills by tense", blurb: "Worksheets of English sentences to turn into Bengali. Pick your tenses, then easy, medium, hard or a step-up round.", href: "/learn/grammar/drills", kind: "Practice" },
       ] },
       { id: "devotional", devotional: true, title: "Devotional speaking", blurb: "Greetings, prasād and farewells in the sādhu-saṅga, with role plays and say-it-aloud cards. Kept separate from the main course.", lessons: [
         ...DEV_SCENARIOS.map((r): Lesson => ({ id: `speaking/roleplay-${r.id}`, title: r.title, blurb: r.blurb, href: `/learn/speaking/roleplay/${r.id}`, kind: "Practice" })),

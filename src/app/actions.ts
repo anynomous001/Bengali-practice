@@ -20,6 +20,7 @@ import { getDevStory } from "@/data/devotional-stories";
 import { VOCAB, VOCAB_QUIZ_LEN } from "@/data/vocabulary";
 import { getExam } from "@/data/exams";
 import { generateExam, toPublic, type ExamQ, type PublicExamQ } from "@/lib/examgen";
+import { DRILLS, DRILL_TENSES, type DrillItem, type DrillLevel } from "@/data/translation-drills";
 import { makeRound, TRANSLATE_LEN, type Direction, type Source, type TQuestion } from "@/lib/translation";
 import {
   canSignIn,
@@ -210,6 +211,28 @@ export async function translationRound(direction: Direction, source: Source): Pr
   if (!user?.hasAccess) return [];
   if (!["en2bn", "bn2en"].includes(direction) || !["all", "phrases", "grammar"].includes(source)) return [];
   return makeRound(direction, source);
+}
+
+/** A translation worksheet for the chosen tenses and level. "step" runs easy, then medium, then hard. The sentences stay on the server. */
+export async function drillRound(tenses: string[], level: string, count: number): Promise<(DrillItem & { tense: string; level: DrillLevel })[]> {
+  const user = await getUser();
+  if (!user?.hasAccess) return [];
+  const ids = DRILL_TENSES.map((t) => t.id as string);
+  const picked = tenses.filter((t) => ids.includes(t));
+  if (!picked.length || !["easy", "medium", "hard", "step"].includes(level)) return [];
+  const n = Math.max(5, Math.min(20, Math.floor(count) || 10));
+  const shuffle = <T,>(a: T[]) => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
+  const pool = (lv: DrillLevel) => shuffle(picked.flatMap((t) => (DRILLS[`${t}:${lv}`] ?? []).map((d) => ({ ...d, tense: t, level: lv }))));
+  if (level !== "step") return pool(level as DrillLevel).slice(0, n);
+  const a = Math.round(n * 0.4), b = Math.round(n * 0.4);
+  return [...pool("easy").slice(0, a), ...pool("medium").slice(0, b), ...pool("hard").slice(0, n - a - b)];
+}
+
+export async function finishDrill(score: number, total: number) {
+  const user = await getUser();
+  if (!user?.hasAccess || !Number.isFinite(score) || !Number.isFinite(total) || total < 8) return;
+  await recordActivity(user.email, "quiz", "drills", { pass: score >= Math.ceil(total * 0.7) });
+  if (score >= Math.ceil(total * 0.7)) await completeLesson(user.email, "grammar/drills");
 }
 
 /** One random impromptu topic. Topics stay on the server and are handed out one at a time. */
