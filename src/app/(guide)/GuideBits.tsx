@@ -1,6 +1,6 @@
 import Link from "next/link";
 import JsonLd from "../JsonLd";
-import { PREPLY_URL, SITE_URL } from "@/lib/site";
+import { PREPLY_REFERRAL_URL, PREPLY_URL, SITE_URL } from "@/lib/site";
 
 export function Crumbs({ name, path }: { name: string; path: string }) {
   return (
@@ -24,7 +24,7 @@ export function GuideCta() {
         <Link className="cr-btn on-dark" href="/#try">Try a letter</Link>
         <Link className="cr-btn ghost-dark" href="/#pricing">See pricing</Link>
       </div>
-      <p className="cr-fine-dark" style={{ marginTop: 18 }}>Want a live teacher too? <a href={PREPLY_URL} target="_blank" rel="noopener" style={{ color: "#fff" }}>Book Pritam on Preply</a>.</p>
+      <p className="cr-fine-dark" style={{ marginTop: 18 }}>Want a live teacher too? <a href={PREPLY_URL} target="_blank" rel="noopener" style={{ color: "#fff" }}>Book Pritam on Preply</a>. New to Preply? <a href={PREPLY_REFERRAL_URL} target="_blank" rel="noopener sponsored" style={{ color: "#fff" }}>Sign up with this link for 30% off</a>.</p>
     </section>
   );
 }

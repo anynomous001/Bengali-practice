@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "../../JsonLd";
-import { OG_IMAGES, PREPLY_URL, SITE_NAME, SITE_URL, TWITTER_SITE } from "@/lib/site";
+import { OG_IMAGES, PREPLY_REFERRAL_URL, PREPLY_URL, SITE_NAME, SITE_URL, TWITTER_SITE } from "@/lib/site";
 import { Crumbs, GuideCta } from "../GuideBits";
 
 const TITLE = "How to Learn Bengali from Zero";
@@ -75,7 +75,7 @@ export default function LearnBengali() {
         <details key={f.q}><summary>{f.q}</summary><p>{f.a}</p></details>
       ))}
 
-      <p style={{ marginTop: 28 }}>Learning with a live teacher is the quickest way to get speaking right. You can <a href={PREPLY_URL} target="_blank" rel="noopener">book a one-to-one lesson with Pritam on Preply</a> and use Bengali Practice between lessons to read, remember and write what you learn.</p>
+      <p style={{ marginTop: 28 }}>Learning with a live teacher is the quickest way to get speaking right. You can <a href={PREPLY_URL} target="_blank" rel="noopener">book a one-to-one lesson with Pritam on Preply</a> (new to Preply? <a href={PREPLY_REFERRAL_URL} target="_blank" rel="noopener sponsored">sign up with this link for 30% off</a>) and use Bengali Practice between lessons to read, remember and write what you learn.</p>
 
       <GuideCta />
     </>

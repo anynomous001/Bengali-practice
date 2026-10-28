@@ -11,6 +11,8 @@ export const SITE_KEYWORDS = [
   "learn Bangla online", "Bengali flashcards", "Bengali tutor", "Kolkata Bengali",
 ];
 export const PREPLY_URL = "https://preply.in/PRITAM6EN35993949102";
+/** Pritam's Preply referral link: new students get 30% off their lessons (all subjects, all tutors). */
+export const PREPLY_REFERRAL_URL = "https://preply.com/en/?pref=MjgyMjgxOTk=&id=1793158415.967744&ep=a2";
 /** When the public content last changed in a way worth telling search engines. */
 export const CONTENT_UPDATED = "2026-10-22";
 /** The share card, attached explicitly to pages that set their own openGraph block (Next only inherits it otherwise). */

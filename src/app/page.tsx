@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "./JsonLd";
 import { inter } from "./inter";
-import { OG_IMAGES, PREPLY_URL, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL, SOCIAL_DESCRIPTION, TWITTER_SITE } from "@/lib/site";
+import { OG_IMAGES, PREPLY_REFERRAL_URL, PREPLY_URL, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL, SOCIAL_DESCRIPTION, TWITTER_SITE } from "@/lib/site";
 import "./landing.css";
 import type { CSSProperties } from "react";
 import Image from "next/image";
@@ -365,6 +365,7 @@ export default async function Home() {
               </figure>
               <a className="cr-btn on-dark" href={TEACHER.liveLessonsUrl} target="_blank" rel="noopener">Book me on Preply</a>
               <p className="cr-fine-dark">Lessons start at $8 for 50 minutes. See my calendar and current rates on my Preply profile.</p>
+              <p className="cr-fine-dark">New to Preply? <a href={PREPLY_REFERRAL_URL} target="_blank" rel="noopener sponsored">Sign up with my link</a> for 30% off your lessons, then search for Pritam.</p>
             </article>
             <span className="cr-plus" aria-hidden="true">+</span>
             <article className="cr-panel cr-way" data-tint="about" data-reveal>
