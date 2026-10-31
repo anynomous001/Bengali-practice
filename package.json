@@ -10,7 +10,8 @@
     "audio": "tsx scripts/make-audio.ts",
     "glyphs": "tsx scripts/make-glyph-paths.mts",
     "shots": "tsx scripts/landing-shots.ts",
-    "check:paths": "tsx scripts/check-paths.ts"
+    "check:paths": "tsx scripts/check-paths.ts",
+    "check:kids": "tsx scripts/check-kids.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1152.0",

@@ -1,13 +1,14 @@
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 import {
   ArrowRight, BookOpenText, Gift, List, Medal, ChatCircleText, Fire, Target, Trophy, CaretDown, CaretLeft, CaretRight, Cards, Check, CheckCircle, Circle, Clock, Desktop, House, ListBullets,
-  Headphones, Lock, Microphone, Moon, Path, PencilSimpleLine, Play, ShieldCheck, SignOut, SpeakerHigh, Sun, TextAa, Translate, X,
+  Headphones, Smiley, Lock, Microphone, Moon, Path, PencilSimpleLine, Play, ShieldCheck, SignOut, SpeakerHigh, Sun, TextAa, Translate, X,
 } from "@phosphor-icons/react/dist/ssr";
 
 // One icon family (Phosphor) for the whole app, so strokes, corners and weights match everywhere.
 // Course icons use the duotone weight; everything else is a regular line icon.
 const ICONS = {
   home: House,
+  kids: Smiley,
   reading: BookOpenText,
   speaking: Microphone,
   listening: Headphones,

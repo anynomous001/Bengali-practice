@@ -36,6 +36,7 @@
 [data-seg="listening"] { --seg: var(--listen); --seg-l: #f3a3b8; }
 [data-seg="writing"] { --seg: var(--write); --seg-l: var(--write-l); }
 [data-seg="grammar"] { --seg: var(--gram); --seg-l: var(--gram-l); }
+[data-seg="kids"] { --seg: #e0612f; --seg-l: #ffb690; }
 [data-seg="vocabulary"] { --seg: var(--vocab); --seg-l: #9ccbff; }
 
 /* ---------- base ---------- */

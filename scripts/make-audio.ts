@@ -25,6 +25,7 @@ import { audioId } from "../src/lib/audio";
 import { LETTERS } from "../src/data/letters";
 import { NUMBERS } from "../src/data/numbers";
 import { VOCAB } from "../src/data/vocabulary";
+import { KID_TOPICS } from "../src/data/kids";
 import { PATIENT_LINES } from "../src/data/listening-clinical";
 import { LISTENING_STORIES } from "../src/data/listening-stories";
 
@@ -55,6 +56,8 @@ function collect(): Map<string, string> {
   for (const l of PATIENT_LINES) add(l[0], "listening patient");
   // Story lines are read slowly: they are stored under a "slow" variant and made at a slower pace.
   for (const st of LISTENING_STORIES) for (const l of st.lines) add(`${SLOW}${l.bn}`, `listening story ${st.id}`);
+  // Kids mode: every card word, normal and slow (tapping a card twice plays it slowly).
+  for (const t of KID_TOPICS) for (const w of t.words) { add(w.bn, `kids ${t.id}`); add(`${SLOW}${w.bn}`, `kids ${t.id} slow`); }
   return out;
 }
 
