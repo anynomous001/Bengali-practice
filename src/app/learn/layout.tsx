@@ -10,6 +10,7 @@ import Icon from "./Icon";
 import MobileMenu from "./MobileMenu";
 import NavLinks from "./NavLinks";
 import { EnglishToggle, RomanProvider, RomanToggle } from "./Roman";
+import { KidModeToggle, RailToggle, SideToggle } from "./LayoutControls";
 import ThemeToggle from "./ThemeToggle";
 import TzSync from "./TzSync";
 
@@ -23,22 +24,29 @@ export default async function LearnLayout({ children }: { children: React.ReactN
   const jar = await cookies();
   const roman = jar.get("bp_roman")?.value !== "0"; // on unless the student turned it off
   const english = jar.get("bp_english")?.value !== "0";
+  const kid = jar.get("bp_kid")?.value === "on";
+  const side = jar.get("bp_side")?.value === "off" ? "off" : "on";
+  const rail = jar.get("bp_rail")?.value === "off" ? "off" : "on";
   const t = jar.get("bp_theme")?.value;
   const theme = t === "light" || t === "dark" ? t : "system";
   return (
     <RomanProvider initial={roman} initialEnglish={english}>
       <SessionHint mode="set" />
       <TzSync />
-      <div className="app" data-english={english ? "on" : "off"}>
+      <div className="app" data-english={english ? "on" : "off"} data-kid={kid ? "on" : "off"} data-side={side} data-rail={rail}>
+        <SideToggle place="out" />
+        <RailToggle place="out" />
         <aside className="side">
           <Link href="/learn" className="side-brand">
             <Logo />
             <span><b lang="bn">বাংলা</b><small>Practice</small></span>
           </Link>
+          <SideToggle place="in" />
           <nav className="side-nav" aria-label="Main"><NavLinks variant="side" /></nav>
           <div className="side-foot">
             <RomanToggle />
             <EnglishToggle />
+            <KidModeToggle initial={kid} />
             <ThemeToggle initial={theme} />
             <div className="who" title={user.email}>{user.email}</div>
             <div className="side-actions">
@@ -59,14 +67,14 @@ export default async function LearnLayout({ children }: { children: React.ReactN
               { href: "/learn/path", label: "My path", icon: "path" },
               { href: "/learn/listening", label: "Listening", icon: "listening" },
               { href: "/learn/writing", label: "Writing", icon: "writing" },
-              { href: "/kids", label: "Kids", icon: "kids" },
+              { href: "/learn/kids", label: "Kids", icon: "kids" },
               { href: "/learn/progress", label: "My progress", icon: "trophy" },
               { href: "/learn/leaderboard", label: "Leaderboard", icon: "medal" },
               { href: "/learn/refer", label: "Refer a friend", icon: "gift" },
               { href: "/learn/feedback", label: "Feedback", icon: "feedback" },
               ...(user.isAdmin ? [{ href: "/admin", label: "Admin", icon: "shield" as const }] : []),
             ]}
-            controls={<><RomanToggle /><EnglishToggle /><ThemeToggle initial={theme} /></>}
+            controls={<><RomanToggle /><EnglishToggle /><KidModeToggle initial={kid} /><ThemeToggle initial={theme} /></>}
             footer={<form action={logout}><button className="mm-link mm-signout"><Icon name="logout" size={20} />Sign out</button></form>}
           />
         </header>

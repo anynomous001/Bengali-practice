@@ -92,7 +92,6 @@ export const COURSES: Course[] = [
       { id: "impromptu", title: "Free speaking", blurb: "Speak on a topic you have never seen, or build a story with a partner.", lessons: [
         { id: "speaking/impromptu", title: "Impromptu topics", blurb: "Choose the kind of topic and how long to prepare and speak. The app picks the topic and keeps time.", href: "/learn/speaking/impromptu", kind: "Practice" },
         { id: "speaking/story-relay", title: "Story relay", blurb: "Build one story together, taking turns of 2 to 3 sentences. Free, or with a tense card each turn.", href: "/learn/speaking/story-relay", kind: "Practice" },
-        { id: "grammar/drills", title: "Translation drills by tense", blurb: "Worksheets of English sentences to turn into Bengali. Pick your tenses, then easy, medium, hard or a step-up round.", href: "/learn/grammar/drills", kind: "Practice" },
       ] },
       { id: "devotional", devotional: true, title: "Devotional speaking", blurb: "Greetings, prasād and farewells in the sādhu-saṅga, with role plays and say-it-aloud cards. Kept separate from the main course.", lessons: [
         ...DEV_SCENARIOS.map((r): Lesson => ({ id: `speaking/roleplay-${r.id}`, title: r.title, blurb: r.blurb, href: `/learn/speaking/roleplay/${r.id}`, kind: "Practice" })),
@@ -155,6 +154,7 @@ export const COURSES: Course[] = [
       { id: "classwork", title: "Class exercises", blurb: "The kinds of exercises done in class: build, fix, translate, transform and combine sentences.", lessons: CLASSWORK.map((c): Lesson => ({ id: `grammar/class-${c.id}`, title: c.title, blurb: c.blurb, href: `/learn/grammar/class/${c.id}`, kind: "Practice" })) },
       { id: "translate", title: "Translation", blurb: "Turn English into Bengali and Bengali into English, quickly and often.", lessons: [
         { id: "grammar/translate", title: "Quick translation", blurb: "Ten sentences a round, in either direction. Pick the answer, or think it and check.", href: "/learn/grammar/translate", kind: "Practice" },
+        { id: "grammar/drills", title: "Translation drills by tense", blurb: "Worksheets of English sentences to turn into Bengali. Pick your tenses, then easy, medium, hard or a step-up round.", href: "/learn/grammar/drills", kind: "Practice" },
       ] },
       { id: "devotional", devotional: true, title: "Devotional practice", blurb: "Complete lines, say things politely and spell devotional words the Bengali way. Kept separate from the main course.", lessons:
         DEV_CLASSWORK.map((c): Lesson => ({ id: `grammar/class-${c.id}`, title: c.title, blurb: c.blurb, href: `/learn/grammar/class/${c.id}`, kind: "Practice" })) },

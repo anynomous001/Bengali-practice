@@ -7,6 +7,7 @@ import NewTag from "./NewTag";
 import { isNew } from "@/data/new";
 import Icon from "./Icon";
 import LessonStatus from "./LessonStatus";
+import { RailToggle } from "./LayoutControls";
 import OnThisPage from "./OnThisPage";
 import ProgressBar from "./ProgressBar";
 import type { TocItem } from "@/lib/toc";
@@ -47,6 +48,7 @@ export default async function LessonFrame({ lessonId, toc, children }: { lessonI
         </div>
 
         <aside className="lp-outline" aria-label="Course outline">
+          <RailToggle place="in" />
           {toc && <OnThisPage items={toc} variant="side" />}
           <Link href={courseHref} className="lp-outline-title">{course.title} <span lang="bn">{course.bn}</span></Link>
           {course.modules.map((m, mi) => {

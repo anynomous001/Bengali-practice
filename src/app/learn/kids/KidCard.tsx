@@ -3,11 +3,11 @@
 import { useRef, useState } from "react";
 import type { KidWord } from "@/data/kids";
 import { speak } from "@/lib/speak";
-import { useKidsEnglish } from "./KidsShell";
+import { useEnglish } from "../Roman";
 
 /** A picture card. Tap to hear the word, tap again to hear it slowly, and so on. */
 export default function KidCard({ word, tone }: { word: KidWord; tone: string }) {
-  const english = useKidsEnglish();
+  const { english } = useEnglish();
   const [bounce, setBounce] = useState(0);
   const slowNext = useRef(false);
   const [slowCue, setSlowCue] = useState(false);

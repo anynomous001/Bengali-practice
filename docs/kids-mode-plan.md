@@ -2,7 +2,7 @@
 
 A separate, picture-first interface for young children learning Bengali, built to sit beside the grown-up app. It shares the sign-in, the brand colors and the Bengali voice, but not the layout: no sidebar, no lesson lists, no progress bars or counts. Big pictures, big tap targets, stars.
 
-Route: `/kids` (outside `/learn`, with its own layout). Reached from a "Kids" link in the grown-up sidebar. Access check is the same as the rest of the app.
+**Revised approach.** Kids mode is not a separate app. It is a switch ("Kid mode") in the sidebar and mobile menu. The pages and layout stay exactly as they are; kid mode only changes how things are presented: a bigger, colorful, rounded sidebar (Bengali labels larger, Kids first), chunky buttons, rounder cards. Kid pages live inside the normal app at `/learn/kids` (`/kids` redirects there). The sidebar and the lesson outline on the right can each be hidden with a button, in any mode, and the choice is remembered (cookies `bp_kid`, `bp_side`, `bp_rail`). The app-wide "English meanings" switch hides English on the picture cards, so there is no separate grown-ups gate.
 
 ## Pictures
 Never copy cartoons from websites and never use known characters. Only free libraries that allow commercial use:
