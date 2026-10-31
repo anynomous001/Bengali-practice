@@ -66,7 +66,7 @@ export default function PotionClass({ colours, goal, timers }: { colours: Potion
     <div className="wiz" onKeyDown={(e) => { if (e.key === " " && (e.target as HTMLElement).tagName !== "BUTTON" && (e.target as HTMLElement).tagName !== "SELECT") { e.preventDefault(); rollDie(); } }} tabIndex={-1}>
       <div className="wiz-head">
         <div>
-          <a className="wiz-back" href="/learn/kids">← Spell School</a>
+          <a className="wiz-back" href="/learn/kids/games">← Spell School</a>
           <h1>Potion Class <small lang="bn">জাদুর শরবত</small></h1>
           <p className="wz-lede">We are brewing a magic potion. Roll the colour dice, find something that colour in your room, and bring it back before the timer runs out.</p>
         </div>

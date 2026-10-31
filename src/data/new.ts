@@ -30,6 +30,10 @@ export const ADDED: Record<string, string> = {
   "listening/memory": "2026-10-27",
   "listening/story-dipak-sen": "2026-10-28",
   "nav:kids": "2026-10-31",
+  "kids/colours-learn": "2026-10-31",
+  "kids/colours-quiz": "2026-10-31",
+  "kids/body-learn": "2026-10-31",
+  "kids/body-quiz": "2026-10-31",
   "nav:listening": "2026-10-28",
 };
 

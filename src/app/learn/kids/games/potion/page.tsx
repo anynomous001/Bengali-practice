@@ -1,6 +1,6 @@
 import { POTION_COLOURS, POTION_GOAL, resolveRo } from "@/data/kids-games";
 import { requireAccess } from "@/lib/access";
-import PotionClass from "../wizard/PotionClass";
+import PotionClass from "../../wizard/PotionClass";
 
 export default async function Page() {
   await requireAccess();

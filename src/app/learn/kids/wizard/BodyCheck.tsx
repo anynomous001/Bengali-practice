@@ -108,7 +108,7 @@ export default function BodyCheck({ parts, order, commands }: { parts: BodyPart[
     <div className="wiz" onKeyDown={(e) => { if (tab !== "learn") return; if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); step(1); } if (e.key === "ArrowLeft") { e.preventDefault(); step(-1); } }}>
       <div className="wiz-head">
         <div>
-          <a className="wiz-back" href="/learn/kids">← Spell School</a>
+          <a className="wiz-back" href="/learn/kids/games">← Spell School</a>
           <h1>Wizard Body Check <small lang="bn">শরীরের জাদু</small></h1>
         </div>
         <StarMeter stars={stars} onReset={reset} />

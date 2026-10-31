@@ -139,7 +139,7 @@ async function completeLesson(email: string, lessonId: string) {
     "INSERT INTO lesson_progress (email, lesson_id) VALUES ($1, $2) ON CONFLICT (email, lesson_id) DO NOTHING RETURNING lesson_id",
     [email, lessonId],
   );
-  if (added.length) await recordActivity(email, "lesson", lessonId); // points the first time only
+  if (added.length && !lessonId.startsWith("kids/")) await recordActivity(email, "lesson", lessonId); // points the first time only; kids' lessons do not count on the leaderboard
 }
 
 /** Mark a lesson complete, or undo it. Only known lesson ids are accepted. */
@@ -233,6 +233,15 @@ export async function recordKidsSession(game: string, stars: number) {
   const user = await getUser();
   if (!user?.hasAccess || !["body", "potion", "creatures"].includes(game) || !Number.isFinite(stars)) return;
   await query("INSERT INTO kids_sessions (email, game, stars) VALUES ($1, $2, $3)", [user.email, game, Math.max(0, Math.min(99, Math.floor(stars)))]);
+  await completeLesson(user.email, `kids/game-${game}`);
+}
+
+/** A finished kids' picture quiz. Seven out of ten completes the lesson. */
+export async function finishKidsQuiz(topic: string, score: number, total: number) {
+  const user = await getUser();
+  const lesson = topic === "colours" ? "kids/colours-quiz" : topic === "body" ? "kids/body-quiz" : null;
+  if (!user?.hasAccess || !lesson || !Number.isFinite(score) || !Number.isFinite(total) || total < 5) return;
+  if (score >= Math.ceil(total * 0.7)) await completeLesson(user.email, lesson);
 }
 
 export async function finishDrill(score: number, total: number) {

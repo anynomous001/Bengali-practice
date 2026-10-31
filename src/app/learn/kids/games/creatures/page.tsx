@@ -1,6 +1,6 @@
 import { CREATURES, resolveRo } from "@/data/kids-games";
 import { requireAccess } from "@/lib/access";
-import MysteryWizard from "../wizard/MysteryWizard";
+import MysteryWizard from "../../wizard/MysteryWizard";
 
 export default async function Page() {
   await requireAccess();

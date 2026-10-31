@@ -11,7 +11,7 @@ import { SCENARIOS } from "./roleplay";
 import { DEV_VOCAB, DEV_READING, DEV_SCENARIOS, DEV_CLASSWORK } from "./devotional";
 import { DEV_STORIES } from "./devotional-stories";
 
-export type CourseId = "reading" | "speaking" | "vocabulary" | "grammar" | "listening";
+export type CourseId = "reading" | "speaking" | "vocabulary" | "grammar" | "listening" | "kids";
 export type Kind = "Lesson" | "Practice" | "Quiz" | "Review" | "Exam";
 export type Lesson = { id: string; title: string; blurb: string; href: string; kind: Kind; /** Who it is for, such as "Clinical". */ tag?: string };
 /** `devotional` modules are tagged "Devotional", kept apart from the main course, and not counted in its progress. */
@@ -161,6 +161,34 @@ export const COURSES: Course[] = [
       { id: "exam", title: "Exam", blurb: "A timed test across the whole course.", lessons: [exam("grammar")] },
     ],
     upcoming: [],
+  },
+  {
+    id: "kids", title: "Kids", bn: "ছোটদের",
+    blurb: "Picture lessons and games for young children. See the picture, hear the Bengali word, then say what it is.",
+    outcomes: [
+      "Name the colours and the parts of the body in Bengali",
+      "Answer \"এটা কী?\" (what is this?) in Bengali",
+      "Understand spoken Bengali words by pointing, acting and fetching",
+    ],
+    modules: [
+      { id: "colours", title: "Colours", blurb: "Twelve colours with a picture each. Tap to hear, then name each colour.", lessons: [
+        { id: "kids/colours-learn", title: "Colour cards", blurb: "Tap a colour to hear it. Tap again to hear it slowly.", href: "/learn/kids/colours/learn", kind: "Lesson", tag: "Kids" },
+        { id: "kids/colours-quiz", title: "What colour is this?", blurb: "A colour appears. Say it in Bengali, or pick the word.", href: "/learn/kids/colours/quiz", kind: "Quiz", tag: "Kids" },
+        { id: "kids/game-potion", title: "Potion Class", blurb: "Roll the colour dice, find something that colour and brew a potion.", href: "/learn/kids/games/potion", kind: "Practice", tag: "Kids" },
+      ] },
+      { id: "body", title: "Body parts", blurb: "The parts of the body on a real child, with a glowing ring on each one.", lessons: [
+        { id: "kids/body-learn", title: "Body part cards", blurb: "Tap a part to hear its name. Tap again to hear it slowly.", href: "/learn/kids/body-parts/learn", kind: "Lesson", tag: "Kids" },
+        { id: "kids/body-quiz", title: "What is this?", blurb: "A body part glows. Say what it is in Bengali, or pick the word.", href: "/learn/kids/body-parts/quiz", kind: "Quiz", tag: "Kids" },
+        { id: "kids/game-body", title: "Wizard Body Check", blurb: "Learn the words, find the part, and follow spell commands.", href: "/learn/kids/games/body", kind: "Practice", tag: "Kids" },
+      ] },
+      { id: "creatures", title: "Creatures", blurb: "Meet five creatures and guess the one behind the magic curtain.", lessons: [
+        { id: "kids/game-creatures", title: "Mystery Wizard", blurb: "What is this? It is an owl, a cat, a frog, a dragon or a snake.", href: "/learn/kids/games/creatures", kind: "Practice", tag: "Kids" },
+      ] },
+    ],
+    upcoming: [
+      { title: "More pictures", blurb: "Animals, fruits, family, days and numbers, each with real pictures." },
+    ],
+    tools: [{ label: "All the games", href: "/learn/kids/games", blurb: "Spell School: body, colour and creature games." }],
   },
   {
     id: "listening", title: "Listening", bn: "শোনা",

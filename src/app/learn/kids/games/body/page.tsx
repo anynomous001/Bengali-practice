@@ -1,6 +1,6 @@
 import { BODY_COMMANDS, BODY_ORDER, BODY_PARTS, resolveRo } from "@/data/kids-games";
 import { requireAccess } from "@/lib/access";
-import BodyCheck from "../wizard/BodyCheck";
+import BodyCheck from "../../wizard/BodyCheck";
 
 export default async function Page() {
   await requireAccess();

@@ -80,7 +80,7 @@ export default function MysteryWizard({ creatures }: { creatures: Creature[] }) 
     <div className="wiz" onKeyDown={(e) => { if (tab === "mystery" && e.key === " " && (e.target as HTMLElement).tagName !== "BUTTON") { e.preventDefault(); revealPiece(); } }} tabIndex={-1}>
       <div className="wiz-head">
         <div>
-          <a className="wiz-back" href="/learn/kids">← Spell School</a>
+          <a className="wiz-back" href="/learn/kids/games">← Spell School</a>
           <h1>Mystery Wizard <small lang="bn">জাদুর প্রাণী</small></h1>
         </div>
         <StarMeter stars={stars} onReset={reset} />

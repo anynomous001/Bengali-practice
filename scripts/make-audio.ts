@@ -25,8 +25,8 @@ import { audioId } from "../src/lib/audio";
 import { LETTERS } from "../src/data/letters";
 import { NUMBERS } from "../src/data/numbers";
 import { VOCAB } from "../src/data/vocabulary";
-import { KID_TOPICS } from "../src/data/kids";
 import { KIDS_PHRASES } from "../src/data/kids-games";
+import { KID_TOPIC_QUESTIONS, KID_TOPIC_WORDS } from "../src/data/kids-topics";
 import { PATIENT_LINES } from "../src/data/listening-clinical";
 import { LISTENING_STORIES } from "../src/data/listening-stories";
 
@@ -57,9 +57,10 @@ function collect(): Map<string, string> {
   for (const l of PATIENT_LINES) add(l[0], "listening patient");
   // Story lines are read slowly: they are stored under a "slow" variant and made at a slower pace.
   for (const st of LISTENING_STORIES) for (const l of st.lines) add(`${SLOW}${l.bn}`, `listening story ${st.id}`);
-  // Kids mode: every card word, normal and slow (tapping a card twice plays it slowly).
-  for (const t of KID_TOPICS) for (const w of t.words) { add(w.bn, `kids ${t.id}`); add(`${SLOW}${w.bn}`, `kids ${t.id} slow`); }
   for (const t of KIDS_PHRASES) { add(t, "kids games"); }
+  // Kids lessons: every card word (normal and slow, since a second tap plays it slowly) and the quiz questions.
+  for (const t of KID_TOPIC_WORDS) { add(t, "kids lesson"); add(`${SLOW}${t}`, "kids lesson slow"); }
+  for (const t of KID_TOPIC_QUESTIONS) add(t, "kids question");
   return out;
 }
 
