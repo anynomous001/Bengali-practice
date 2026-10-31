@@ -1,4 +1,35 @@
-# Kid mode: plan (no code yet)
+# Kids: recommended approach (replaces the "kid mode" idea below)
+
+**Decision: do not build a separate kid interface or a kid mode.** Keep one app. Add pictures everywhere they help, add one "Kids" section to the sidebar, and tag existing lessons that suit children. This gets about 90 percent of the value for a fraction of the work, and nothing is duplicated.
+
+## Why
+- A second curriculum means every word, lesson and audio file exists twice, and every fix is made twice.
+- Most of what makes content "for kids" is pictures, games and stars, not a different layout. Those help adults too: a picture of a body part or a color teaches a grown-up learner just as well.
+- Young children are guided by a parent or by you in the lesson, so they do not need a locked-down interface of their own.
+- Grammar, reading, writing and the path system already work. Kids do not need a grammar section at all, so it is simply not part of the kid path.
+
+## What we build instead
+1. **Pictures in the main vocabulary.** Add a picture to words that can be pictured (colors, body, animals, food, family, home, clothes, nature, numbers, days). A "Pictures" switch beside Romanized and English turns them on or off. Adult learners get them too. New topics fill the gaps adults and kids both need: full colors, days and months, fruits and vegetables, shapes, opposites, seasons.
+2. **One new sidebar item: "Kids" (ছোটদের).** It holds only things that exist for children: the picture games (tap what you hear, body figure, color hunt, count with me), rhymes, picture-book fables, little sentences, and the star chart. Nothing else in the app changes.
+3. **A "Kids" tag on existing lessons** that work for children: the alphabet, numbers, the listening activities, vocabulary topics with pictures. The tag shows in the course lists and on the My path steps, in the same style as the New tag.
+4. **A "My child" goal in My path.** A parent or teacher picks it and gets a kid-ordered path through the existing and new lessons (Hello, Colors, Numbers, Body, Family, Animals, Days, then letters). Grammar and devotional content are simply not in it. The path and goal system already supports this, so no new machinery is needed.
+5. **Stars and a parent view**, last: a star per finished game, a sticker every 5 stars, and a weekly summary of what the child practiced.
+
+## Build order
+1. Picture support in vocabulary (data field, the Pictures switch, the picture word row) and the first picture topics: Colors, Body, Numbers, Family, Animals.
+2. The "Kids" sidebar item with the picture card pages and the "Tap what you hear" game.
+3. The "My child" goal and the Kids tag.
+4. Days, months, seasons, food, home, clothes, nature, shapes, opposites.
+5. Body figure, color hunt, count with me.
+6. Stars, stickers, parent view.
+7. Rhymes, picture-book fables, little sentences.
+
+## What is already built that this reuses
+The picture cards, the Twemoji pictures and credit, the six starter topics and the check script from the earlier work stay. The sidebar restyle and the separate kid-mode switch are removed in step 2, because there is no kid mode any more.
+
+---
+
+# Earlier idea (kept for reference): kid mode as a content swap
 
 ## What kid mode is
 One switch ("Kid mode"). The app looks the same: the same sidebar, the same page layouts, the same course pages, lesson pages, progress and sign-in. Nothing about the shell is restyled.
