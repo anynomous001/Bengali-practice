@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { requireAccess } from "@/lib/access";
-import "./wizard/wizard.css";
+import "../wizard/wizard.css";
 
 const GAMES = [
   { href: "/learn/kids/games/body", pic: "1f9d9", en: "Wizard Body Check", bn: "শরীরের জাদু", line: "Learn your body words and cast body spells" },
