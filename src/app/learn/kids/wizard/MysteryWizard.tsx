@@ -97,7 +97,7 @@ export default function MysteryWizard({ creatures }: { creatures: Creature[] }) 
             {creatures.map((c, i) => (
               <button key={c.key} type="button" className={"mw-card" + (picked === i ? " on" : "") + (askDone && ask === i ? " right" : "") + (bad === i ? " wrong wz-shake" : "")} onClick={() => clickCreature(i)} aria-label={`${c.en}`}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={`/kids/pic/${c.pic}.svg`} alt="" width={96} height={96} />
+                <img src={c.photo ?? `/kids/pic/${c.pic}.svg`} alt="" width={96} height={96} className={c.photo ? "mw-photo" : undefined} />
                 {names && <b lang="bn">{c.bn}</b>}
                 {names && showRo && <small className="mw-ro">{c.ro}</small>}
                 {names && showEn && <small>{c.en}</small>}
@@ -124,7 +124,7 @@ export default function MysteryWizard({ creatures }: { creatures: Creature[] }) 
         <>
           <div className="mw-stage-wrap">
             <div className="mw-stage">
-              {mc && /* eslint-disable-next-line @next/next/no-img-element */ <img src={`/kids/pic/${mc.pic}.svg`} alt={solved ? mc.en : "A hidden creature"} className="mw-hidden-pic" />}
+              {mc && /* eslint-disable-next-line @next/next/no-img-element */ <img src={mc.photo ?? `/kids/pic/${mc.pic}.svg`} alt={solved ? mc.en : "A hidden creature"} className={"mw-hidden-pic" + (mc.photo ? " mw-photo-full" : "")} />}
               {mc && (
                 <div className="mw-curtain" aria-hidden>
                   {Array.from({ length: TILES }, (_, k) => (
@@ -149,7 +149,7 @@ export default function MysteryWizard({ creatures }: { creatures: Creature[] }) 
               {creatures.map((c, i) => (
                 <button key={c.key} type="button" className={"mw-choice" + (badChoice === i ? " wrong wz-shake" : "") + (solved && i === mys ? " right" : "")} onClick={() => chooseMystery(i)}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={`/kids/pic/${c.pic}.svg`} alt="" width={44} height={44} />
+                  <img src={c.photo ?? `/kids/pic/${c.pic}.svg`} alt="" width={44} height={44} className={c.photo ? "mw-photo" : undefined} />
                   <b lang="bn">{c.bn}</b>{showRo && <small>{c.ro}</small>}
                 </button>
               ))}

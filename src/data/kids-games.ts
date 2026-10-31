@@ -5,7 +5,7 @@ import { VOCAB } from "./vocabulary";
 export type BodyPart = { key: string; bn: string; ro: string; en: string; gesture: string; anchor: [number, number]; side: "L" | "R"; labelY: number };
 export type BodyCommand = { bn: string; ro: string; en: string; part: string | null };
 export type PotionColour = { bn: string; ro: string; en: string; hex: string; textOn: string };
-export type Creature = { key: string; pic: string; bn: string; ro: string; en: string; fun: string };
+export type Creature = { key: string; pic: string; bn: string; ro: string; en: string; fun: string; /** A real photo, filled in by the page when public/kids/photo/animals-<key>.webp exists. */ photo?: string };
 
 // Body part labels sit left or right of the figure; anchor and labelY are in the figure's own coordinates: the picture is 971 x 1619 (see BodyCheck.tsx).
 export const BODY_PARTS: BodyPart[] = [
@@ -51,7 +51,7 @@ export const CREATURES: Creature[] = [
   { key: "owl", pic: "1f989", bn: "পেঁচা", ro: "pecha", en: "owl", fun: "carries the post" },
   { key: "cat", pic: "1f431", bn: "বিড়াল", ro: "biral", en: "cat", fun: "says ম্যাও (myao)" },
   { key: "frog", pic: "1f438", bn: "ব্যাঙ", ro: "byang", en: "frog", fun: "jumps: লাফাও!" },
-  { key: "dragon", pic: "1f409", bn: "ড্রাগন", ro: "dragon", en: "dragon", fun: "breathes fire 🔥" },
+  { key: "elephant", pic: "1f418", bn: "হাতি", ro: "hati", en: "elephant", fun: "has a long trunk" },
   { key: "snake", pic: "1f40d", bn: "সাপ", ro: "shap", en: "snake", fun: "goes হিস্‌স্‌ (hiss)" },
 ];
 

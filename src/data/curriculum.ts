@@ -181,12 +181,22 @@ export const COURSES: Course[] = [
         { id: "kids/body-quiz", title: "What is this?", blurb: "A body part glows. Say what it is in Bengali, or pick the word.", href: "/learn/kids/body-parts/quiz", kind: "Quiz", tag: "Kids" },
         { id: "kids/game-body", title: "Wizard Body Check", blurb: "Learn the words, find the part, and follow spell commands.", href: "/learn/kids/games/body", kind: "Practice", tag: "Kids" },
       ] },
-      { id: "creatures", title: "Creatures", blurb: "Meet five creatures and guess the one behind the magic curtain.", lessons: [
-        { id: "kids/game-creatures", title: "Mystery Wizard", blurb: "What is this? It is an owl, a cat, a frog, a dragon or a snake.", href: "/learn/kids/games/creatures", kind: "Practice", tag: "Kids" },
+      { id: "numbers", title: "Numbers", blurb: "Count from one to ten with pictures of things to count.", lessons: [
+        { id: "kids/numbers-learn", title: "Number cards", blurb: "Tap a number to hear it. Count the things in the picture.", href: "/learn/kids/numbers/learn", kind: "Lesson", tag: "Kids" },
+        { id: "kids/numbers-quiz", title: "How many?", blurb: "Count the things, then say the number in Bengali.", href: "/learn/kids/numbers/quiz", kind: "Quiz", tag: "Kids" },
+      ] },
+      { id: "animals", title: "Animals", blurb: "Real photos of twelve animals.", lessons: [
+        { id: "kids/animals-learn", title: "Animal cards", blurb: "Tap an animal to hear its name. Tap again to hear it slowly.", href: "/learn/kids/animals/learn", kind: "Lesson", tag: "Kids" },
+        { id: "kids/animals-quiz", title: "What is this animal?", blurb: "A photo appears. Say the animal in Bengali, or pick the word.", href: "/learn/kids/animals/quiz", kind: "Quiz", tag: "Kids" },
+        { id: "kids/game-creatures", title: "Mystery Wizard", blurb: "Guess the creature behind the magic curtain.", href: "/learn/kids/games/creatures", kind: "Practice", tag: "Kids" },
+      ] },
+      { id: "fruits", title: "Fruits", blurb: "Real photos of twelve fruits.", lessons: [
+        { id: "kids/fruits-learn", title: "Fruit cards", blurb: "Tap a fruit to hear its name. Tap again to hear it slowly.", href: "/learn/kids/fruits/learn", kind: "Lesson", tag: "Kids" },
+        { id: "kids/fruits-quiz", title: "What fruit is this?", blurb: "A photo appears. Say the fruit in Bengali, or pick the word.", href: "/learn/kids/fruits/quiz", kind: "Quiz", tag: "Kids" },
       ] },
     ],
     upcoming: [
-      { title: "More pictures", blurb: "Animals, fruits, family, days and numbers, each with real pictures." },
+      { title: "More pictures", blurb: "Family, days of the week and food, each with real pictures." },
     ],
     tools: [{ label: "All the games", href: "/learn/kids/games", blurb: "Spell School: body, colour and creature games." }],
   },

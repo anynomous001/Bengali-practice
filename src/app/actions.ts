@@ -20,6 +20,7 @@ import { getDevStory } from "@/data/devotional-stories";
 import { VOCAB, VOCAB_QUIZ_LEN } from "@/data/vocabulary";
 import { getExam } from "@/data/exams";
 import { generateExam, toPublic, type ExamQ, type PublicExamQ } from "@/lib/examgen";
+import { KID_TOPIC_IDS, kidLessonIds } from "@/data/kids-topics";
 import { DRILLS, DRILL_TENSES, type DrillItem, type DrillLevel } from "@/data/translation-drills";
 import { makeRound, TRANSLATE_LEN, type Direction, type Source, type TQuestion } from "@/lib/translation";
 import {
@@ -239,7 +240,7 @@ export async function recordKidsSession(game: string, stars: number) {
 /** A finished kids' picture quiz. Seven out of ten completes the lesson. */
 export async function finishKidsQuiz(topic: string, score: number, total: number) {
   const user = await getUser();
-  const lesson = topic === "colours" ? "kids/colours-quiz" : topic === "body" ? "kids/body-quiz" : null;
+  const lesson = KID_TOPIC_IDS.includes(topic) ? kidLessonIds(topic).quiz : null;
   if (!user?.hasAccess || !lesson || !Number.isFinite(score) || !Number.isFinite(total) || total < 5) return;
   if (score >= Math.ceil(total * 0.7)) await completeLesson(user.email, lesson);
 }

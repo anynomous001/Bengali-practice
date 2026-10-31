@@ -25,4 +25,5 @@
 @media (prefers-reduced-motion: reduce) { .kp-ring, .kk-pic.bounce, .kk-shake { animation: none; } }
 .kk-pic, .kk-qpic { aspect-ratio: 4 / 3; display: grid; place-items: center; }
 .kk-pic .kp, .kk-qpic .kp { width: 100%; height: 100%; }
-.kk-pic .kp-photo, .kk-qpic .kp-photo { aspect-ratio: auto; }
+.kk-pic .kp-photo, .kk-qpic .kp-photo { aspect-ratio: 4 / 3; object-fit: cover; }
+.kk-badge { font-family: var(--font-bn); font-weight: 700; color: var(--ink-2); font-size: 1.1rem; }

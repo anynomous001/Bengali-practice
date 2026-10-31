@@ -7,7 +7,7 @@ import { useRoman } from "../Roman";
 import KidPic from "./KidPic";
 import "./kids-lessons.css";
 
-type Item = { id: string; bn: string; ro: string; en: string; pic: PicSpec };
+type Item = { id: string; bn: string; ro: string; en: string; pic: PicSpec; badge?: string };
 
 /** Picture cards. Tap to hear the word, tap again to hear it slowly. */
 export default function KidsCards({ items }: { items: Item[] }) {
@@ -29,6 +29,7 @@ export default function KidsCards({ items }: { items: Item[] }) {
       {items.map((it) => (
         <button key={it.id} type="button" className="kk-card" onClick={() => tap(it)} aria-label={`${it.en}. ${it.ro}. Tap to hear it.`}>
           <span className={"kk-pic" + (bounce?.startsWith(it.id) ? " bounce" : "")} key={bounce?.startsWith(it.id) ? bounce : it.id}><KidPic pic={it.pic} label={it.en} /></span>
+          {it.badge && <span className="kk-badge" lang="bn">{it.badge}</span>}
           <span className="kk-bn" lang="bn">{it.bn}</span>
           {roman && <span className="kk-ro">{it.ro}</span>}
           {english && <span className="kk-en">{it.en}</span>}
