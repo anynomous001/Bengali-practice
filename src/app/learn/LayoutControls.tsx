@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Icon from "./Icon";
 
 /** Layout choices live on the .app element as data attributes, and in cookies so the server renders them with no flash. */
@@ -26,19 +25,5 @@ export function RailToggle({ place }: { place: "in" | "out" }) {
     <button type="button" className={`lc-btn lc-rail lc-${place}`} aria-label={hide ? "Hide the outline" : "Show the outline"} title={hide ? "Hide the outline" : "Show the outline"} onClick={() => setApp("data-rail", "bp_rail", hide ? "off" : "on")}>
       <Icon name="list" size={20} />{!hide && <span>Outline</span>}
     </button>
-  );
-}
-
-/** Kid mode: the same pages and the same layout, shown with bigger, friendlier, more colorful navigation and cards. */
-export function KidModeToggle({ initial }: { initial: boolean }) {
-  const [on, setOn] = useState(initial);
-  return (
-    <div className="toolbar">
-      <span className="toolbar-label">Kid mode</span>
-      <button type="button" role="switch" aria-checked={on} aria-label="Kid mode" className="switch" onClick={() => { setOn(!on); setApp("data-kid", "bp_kid", on ? "off" : "on"); }}>
-        <span className="switch-knob" />
-        <span className="switch-text">{on ? "On" : "Off"}</span>
-      </button>
-    </div>
   );
 }

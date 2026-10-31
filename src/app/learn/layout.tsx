@@ -10,7 +10,7 @@ import Icon from "./Icon";
 import MobileMenu from "./MobileMenu";
 import NavLinks from "./NavLinks";
 import { EnglishToggle, RomanProvider, RomanToggle } from "./Roman";
-import { KidModeToggle, RailToggle, SideToggle } from "./LayoutControls";
+import { RailToggle, SideToggle } from "./LayoutControls";
 import ThemeToggle from "./ThemeToggle";
 import TzSync from "./TzSync";
 
@@ -24,7 +24,6 @@ export default async function LearnLayout({ children }: { children: React.ReactN
   const jar = await cookies();
   const roman = jar.get("bp_roman")?.value !== "0"; // on unless the student turned it off
   const english = jar.get("bp_english")?.value !== "0";
-  const kid = jar.get("bp_kid")?.value === "on";
   const side = jar.get("bp_side")?.value === "off" ? "off" : "on";
   const rail = jar.get("bp_rail")?.value === "off" ? "off" : "on";
   const t = jar.get("bp_theme")?.value;
@@ -33,7 +32,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
     <RomanProvider initial={roman} initialEnglish={english}>
       <SessionHint mode="set" />
       <TzSync />
-      <div className="app" data-english={english ? "on" : "off"} data-kid={kid ? "on" : "off"} data-side={side} data-rail={rail}>
+      <div className="app" data-english={english ? "on" : "off"} data-side={side} data-rail={rail}>
         <SideToggle place="out" />
         <RailToggle place="out" />
         <aside className="side">
@@ -46,7 +45,6 @@ export default async function LearnLayout({ children }: { children: React.ReactN
           <div className="side-foot">
             <RomanToggle />
             <EnglishToggle />
-            <KidModeToggle initial={kid} />
             <ThemeToggle initial={theme} />
             <div className="who" title={user.email}>{user.email}</div>
             <div className="side-actions">
@@ -74,7 +72,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
               { href: "/learn/feedback", label: "Feedback", icon: "feedback" },
               ...(user.isAdmin ? [{ href: "/admin", label: "Admin", icon: "shield" as const }] : []),
             ]}
-            controls={<><RomanToggle /><EnglishToggle /><KidModeToggle initial={kid} /><ThemeToggle initial={theme} /></>}
+            controls={<><RomanToggle /><EnglishToggle /><ThemeToggle initial={theme} /></>}
             footer={<form action={logout}><button className="mm-link mm-signout"><Icon name="logout" size={20} />Sign out</button></form>}
           />
         </header>

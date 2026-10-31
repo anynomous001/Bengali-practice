@@ -183,6 +183,14 @@ const SCHEMA = `
       reads text NOT NULL DEFAULT 'no',
       updated_at timestamptz NOT NULL DEFAULT now()
     );
+    CREATE TABLE IF NOT EXISTS kids_sessions (
+      id bigserial PRIMARY KEY,
+      email text NOT NULL,
+      game text NOT NULL,
+      stars int NOT NULL,
+      played_at timestamptz NOT NULL DEFAULT now()
+    );
+    CREATE INDEX IF NOT EXISTS kids_sessions_email ON kids_sessions (email, played_at DESC);
     CREATE TABLE IF NOT EXISTS student_goals (
       email text NOT NULL,
       goal text NOT NULL,

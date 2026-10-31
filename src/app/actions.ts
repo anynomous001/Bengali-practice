@@ -228,6 +228,13 @@ export async function drillRound(tenses: string[], level: string, count: number)
   return [...pool("easy").slice(0, a), ...pool("medium").slice(0, b), ...pool("hard").slice(0, n - a - b)];
 }
 
+/** A finished kids' game (10 stars). Kept in its own table: kids' games are not on the leaderboard. */
+export async function recordKidsSession(game: string, stars: number) {
+  const user = await getUser();
+  if (!user?.hasAccess || !["body", "potion", "creatures"].includes(game) || !Number.isFinite(stars)) return;
+  await query("INSERT INTO kids_sessions (email, game, stars) VALUES ($1, $2, $3)", [user.email, game, Math.max(0, Math.min(99, Math.floor(stars)))]);
+}
+
 export async function finishDrill(score: number, total: number) {
   const user = await getUser();
   if (!user?.hasAccess || !Number.isFinite(score) || !Number.isFinite(total) || total < 8) return;
