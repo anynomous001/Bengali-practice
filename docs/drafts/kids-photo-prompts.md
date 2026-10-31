@@ -1,3 +1,17 @@
+# Fastest way: two contact sheets (2 images instead of 24)
+
+Ask the image generator for ONE image with a 4 x 3 grid, then send it to me here. I cut it into the 12 files with `scripts/split-photo-sheet.py`, so you do not have to save or rename anything.
+
+## Animals sheet
+Realistic photographs arranged in a perfect grid of 4 columns and 3 rows, 12 equal cells, each cell showing one animal centered on a plain white background with no borders, no text and no labels. Row 1: dog, cat, cow, elephant. Row 2: tiger, a small bird, goldfish, monkey. Row 3: horse, owl, green frog, a harmless green snake. Soft natural light, sharp focus, true-to-life colors. 16:9 landscape image.
+
+## Fruits sheet
+Realistic photographs arranged in a perfect grid of 4 columns and 3 rows, 12 equal cells, each cell showing one fruit centered on a plain white background with no borders, no text and no labels. Row 1: mango, banana, red apple, orange. Row 2: jackfruit, lychee, guava, papaya. Row 3: watermelon (a slice), coconut, grapes, pineapple. Soft natural light, sharp focus, true-to-life colors. 16:9 landscape image.
+
+If a cell comes out wrong, ask the tool to redo that one animal or fruit on its own and send it with the name.
+
+---
+
 # Real photos for the kids' lessons
 
 Drop a file in `public/kids/photo/` named `<topic>-<id>.webp` (or send it to me and I will add it). The lesson, the quiz and (for animals) the Mystery Wizard game pick it up on their own, with no code change. Until a photo exists, Animals and Fruits show only the words that have one, and Colours show a colour swatch. Numbers use plain dots until a mango photo exists, then they count real mangoes.
