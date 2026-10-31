@@ -7,16 +7,16 @@ export type BodyCommand = { bn: string; ro: string; en: string; part: string | n
 export type PotionColour = { bn: string; ro: string; en: string; hex: string; textOn: string };
 export type Creature = { key: string; pic: string; bn: string; ro: string; en: string; fun: string };
 
-// Body part labels sit left or right of the figure; anchor and labelY are in the SVG's own coordinates (see BodyCheck.tsx).
+// Body part labels sit left or right of the figure; anchor and labelY are in the figure's own coordinates: the picture is 971 x 1619 (see BodyCheck.tsx).
 export const BODY_PARTS: BodyPart[] = [
-  { key: "matha", bn: "মাথা", ro: "matha", en: "head", gesture: "pat your head", anchor: [322, 112], side: "R", labelY: 40 },
-  { key: "chokh", bn: "চোখ", ro: "chokh", en: "eye(s)", gesture: "point at your eyes", anchor: [260, 154], side: "L", labelY: 96 },
-  { key: "nak", bn: "নাক", ro: "nak", en: "nose", gesture: "tap your nose", anchor: [278, 180], side: "L", labelY: 164 },
-  { key: "kan", bn: "কান", ro: "kan", en: "ear", gesture: "pull your ear gently", anchor: [346, 168], side: "R", labelY: 118 },
-  { key: "mukh", bn: "মুখ", ro: "mukh", en: "mouth / face", gesture: "point at your mouth", anchor: [264, 204], side: "L", labelY: 232 },
-  { key: "hat", bn: "হাত", ro: "hat", en: "hand / arm", gesture: "wave your hand", anchor: [174, 356], side: "L", labelY: 330 },
-  { key: "pet", bn: "পেট", ro: "pet", en: "tummy", gesture: "pat your tummy", anchor: [312, 320], side: "R", labelY: 290 },
-  { key: "pa", bn: "পা", ro: "pa", en: "leg / foot", gesture: "lift your foot", anchor: [306, 478], side: "R", labelY: 450 },
+  { key: "matha", bn: "মাথা", ro: "matha", en: "head", gesture: "pat your head", anchor: [600, 70], side: "R", labelY: 20 },
+  { key: "chokh", bn: "চোখ", ro: "chokh", en: "eye(s)", gesture: "point at your eyes", anchor: [420, 228], side: "L", labelY: 110 },
+  { key: "nak", bn: "নাক", ro: "nak", en: "nose", gesture: "tap your nose", anchor: [470, 270], side: "L", labelY: 300 },
+  { key: "kan", bn: "কান", ro: "kan", en: "ear", gesture: "pull your ear gently", anchor: [596, 252], side: "R", labelY: 200 },
+  { key: "mukh", bn: "মুখ", ro: "mukh", en: "mouth / face", gesture: "point at your mouth", anchor: [440, 304], side: "L", labelY: 470 },
+  { key: "hat", bn: "হাত", ro: "hat", en: "hand / arm", gesture: "wave your hand", anchor: [222, 960], side: "L", labelY: 900 },
+  { key: "pet", bn: "পেট", ro: "pet", en: "tummy", gesture: "pat your tummy", anchor: [580, 720], side: "R", labelY: 640 },
+  { key: "pa", bn: "পা", ro: "pa", en: "leg / foot", gesture: "lift your foot", anchor: [600, 1350], side: "R", labelY: 1250 },
 ];
 /** The fixed order the Learn tab steps through. */
 export const BODY_ORDER = ["matha", "chokh", "nak", "kan", "mukh", "hat", "pa", "pet"];

@@ -181,62 +181,37 @@ function Figure({ parts, sel, flash, labels, showEn, showRo, onPick }: {
   parts: BodyPart[]; sel: string | null; flash: Flash; labels: boolean; showEn: boolean; showRo: boolean; onPick: (k: string) => void;
 }) {
   const cls = (k: string) => "bc-part" + (sel === k ? " hl" : "") + (flash?.key === k ? ` ${flash.kind}` : "");
-  const hit = (k: string) => ({ "data-part": k, className: cls(k), onClick: (e: React.MouseEvent) => { e.stopPropagation(); onPick(k); }, role: "button" as const, tabIndex: 0, onKeyDown: (e: React.KeyboardEvent) => { if (e.key === "Enter") { e.preventDefault(); e.stopPropagation(); onPick(k); } }, "aria-label": parts.find((p) => p.key === k)?.en });
-  const skin = "#ffd7b0", robe = "#6a3fc4";
+  const hit = (k: string) => ({ "data-part": k, className: cls(k), onClick: (e: React.MouseEvent) => { e.stopPropagation(); onPick(k); }, role: "button" as const, tabIndex: 0, onKeyDown: (e: React.KeyboardEvent) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); e.stopPropagation(); onPick(k); } }, "aria-label": parts.find((p) => p.key === k)?.en });
+  // The picture is 971 x 1619. Each part is an invisible shape over it that glows when chosen. Small parts come last so they win the click.
   return (
-    <svg viewBox="0 0 560 570" className="bc-svg" role="group" aria-label="A cartoon wizard child. Tap a body part.">
-      {/* legs and feet (pa) */}
+    <svg viewBox="-260 0 1490 1619" className="bc-svg" role="group" aria-label="A child standing. Tap a body part.">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <image href="/kids/body-boy.webp" x="0" y="0" width="971" height="1619" style={{ pointerEvents: "none" }} />
       <g {...hit("pa")}>
-        <rect x="250" y="425" width="28" height="62" rx="12" fill={skin} /><rect x="282" y="425" width="28" height="62" rx="12" fill={skin} />
-        <ellipse cx="258" cy="494" rx="26" ry="12" fill="#3a2478" /><ellipse cx="302" cy="494" rx="26" ry="12" fill="#3a2478" />
+        <rect x="335" y="1125" width="118" height="290" rx="40" /><rect x="520" y="1125" width="118" height="290" rx="40" />
+        <ellipse cx="340" cy="1505" rx="100" ry="95" /><ellipse cx="632" cy="1500" rx="95" ry="95" />
+        <rect x="325" y="1380" width="90" height="70" /><rect x="565" y="1380" width="90" height="70" />
       </g>
-      {/* arms and hands (hat) */}
       <g {...hit("hat")}>
-        <path d="M236 240 L182 350" stroke={robe} strokeWidth="28" strokeLinecap="round" fill="none" />
-        <path d="M324 240 L378 350" stroke={robe} strokeWidth="28" strokeLinecap="round" fill="none" />
-        <circle cx="180" cy="358" r="18" fill={skin} /><circle cx="380" cy="358" r="18" fill={skin} />
+        <path d="M270 620 L340 650 L302 880 L264 1030 L190 990 L222 870 Z" /><path d="M702 620 L632 650 L670 880 L708 1030 L782 990 L750 870 Z" />
       </g>
-      {/* wand */}
-      <g style={{ pointerEvents: "none" }}>
-        <line x1="382" y1="352" x2="424" y2="268" stroke="#8d5a2b" strokeWidth="6" strokeLinecap="round" />
-        <text x="424" y="262" fontSize="30" textAnchor="middle" fill="#ffd54a">★</text>
-      </g>
-      {/* robe, tummy (pet) */}
-      <path d="M232 222 L328 222 L362 432 L198 432 Z" fill={robe} style={{ pointerEvents: "none" }} />
-      <g {...hit("pet")}><ellipse cx="280" cy="326" rx="40" ry="48" fill="#8d68e4" /><circle cx="280" cy="326" r="5" fill="#6a3fc4" /></g>
-      {/* ears (kan) behind the head */}
-      <g {...hit("kan")}><circle cx="222" cy="168" r="15" fill={skin} /><circle cx="338" cy="168" r="15" fill={skin} /></g>
-      {/* head */}
-      <g {...hit("matha")}>
-        <circle cx="280" cy="162" r="60" fill={skin} />
-        <path d="M222 150 Q230 100 280 98 Q330 100 338 150 Q300 128 222 150 Z" fill="#6b3a1c" />
-      </g>
-      {/* face parts drawn after the head so they win the click */}
-      <g {...hit("chokh")}>
-        <circle cx="260" cy="160" r="9" fill="#fff" stroke="#3a2478" strokeWidth="2" /><circle cx="300" cy="160" r="9" fill="#fff" stroke="#3a2478" strokeWidth="2" />
-        <circle cx="262" cy="162" r="4.5" fill="#2b2140" /><circle cx="298" cy="162" r="4.5" fill="#2b2140" />
-        <circle cx="260" cy="160" r="15" fill="transparent" /><circle cx="300" cy="160" r="15" fill="transparent" />
-      </g>
-      <g {...hit("nak")}><ellipse cx="280" cy="182" rx="7" ry="9" fill="#f0a77a" /><circle cx="280" cy="182" r="14" fill="transparent" /></g>
-      <g {...hit("mukh")}><path d="M262 204 Q280 222 298 204" stroke="#c0392b" strokeWidth="5" strokeLinecap="round" fill="none" /><rect x="256" y="196" width="48" height="30" fill="transparent" /></g>
-      {/* hat (not clickable) */}
-      <g style={{ pointerEvents: "none" }}>
-        <polygon points="222,122 338,122 298,18" fill="#5b34b5" /><ellipse cx="280" cy="124" rx="84" ry="14" fill="#4a2a9a" />
-        <text x="288" y="86" fontSize="26" textAnchor="middle" fill="#ffd54a">★</text>
-      </g>
-      {/* labels */}
+      <g {...hit("pet")}><ellipse cx="482" cy="715" rx="125" ry="115" /></g>
+      <g {...hit("matha")}><ellipse cx="470" cy="200" rx="190" ry="205" /></g>
+      <g {...hit("kan")}><ellipse cx="350" cy="268" rx="34" ry="52" /><ellipse cx="594" cy="252" rx="32" ry="52" /></g>
+      <g {...hit("chokh")}><ellipse cx="418" cy="228" rx="52" ry="34" /><ellipse cx="520" cy="222" rx="52" ry="34" /></g>
+      <g {...hit("nak")}><ellipse cx="478" cy="268" rx="30" ry="36" /></g>
+      <g {...hit("mukh")}><ellipse cx="478" cy="304" rx="58" ry="32" /></g>
       {parts.map((p) => {
-        const show = labels || sel === p.key;
-        if (!show) return null;
-        const x = p.side === "L" ? 118 : 442;
-        const tx = p.side === "L" ? 8 : 450;
+        if (!(labels || sel === p.key)) return null;
+        const left = p.side === "L";
+        const x = left ? 160 : 810, tx = left ? -250 : 820;
         return (
           <g key={p.key} style={{ pointerEvents: "none" }}>
-            <line x1={p.anchor[0]} y1={p.anchor[1]} x2={x} y2={p.labelY + 14} stroke="#ffd54a" strokeWidth="2" strokeDasharray="5 4" />
-            <circle cx={p.anchor[0]} cy={p.anchor[1]} r="4" fill="#ffd54a" />
-            <text x={tx} y={p.labelY + 10} fontSize="20" fontWeight="700" fill="#fff" fontFamily="var(--font-bn)">{p.bn}</text>
-            {showRo && <text x={tx} y={p.labelY + 28} fontSize="13" fill="#ffd54a">{p.ro}</text>}
-            {showEn && <text x={tx} y={p.labelY + (showRo ? 43 : 28)} fontSize="12" fill="#bfb3e6">{p.en}</text>}
+            <line x1={p.anchor[0]} y1={p.anchor[1]} x2={x} y2={p.labelY + 60} stroke="#ffd54a" strokeWidth="6" strokeDasharray="16 12" />
+            <circle cx={p.anchor[0]} cy={p.anchor[1]} r="12" fill="#ffd54a" stroke="#1b1035" strokeWidth="4" />
+            <text x={tx} y={p.labelY + 62} fontSize="64" fontWeight="700" fill="#fff" fontFamily="var(--font-bn)">{p.bn}</text>
+            {showRo && <text x={tx} y={p.labelY + 112} fontSize="44" fontWeight="600" fill="#ffd54a">{p.ro}</text>}
+            {showEn && <text x={tx} y={p.labelY + (showRo ? 156 : 112)} fontSize="38" fill="#bfb3e6">{p.en}</text>}
           </g>
         );
       })}
