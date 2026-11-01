@@ -3,7 +3,7 @@
 It finds the 12 objects on the white background and centers each one on a white 4:3 picture, so a hoof or a paw that
 reaches into the next cell is not cut off. If it cannot find exactly 12 objects it falls back to cutting an even grid.
 
-Usage:  python3 scripts/split-photo-sheet.py <sheet-image> animals|fruits|family|seasons|body|bodymore
+Usage:  python3 scripts/split-photo-sheet.py <sheet-image> animals|fruits|family|seasons|body|bodymore|colours
 
 Row by row, left to right, the cells must be in the order printed below. Each cell is cropped to 4:3,
 resized to 800 x 600 and saved as public/kids/photo/<topic>-<id>.webp.
@@ -17,6 +17,7 @@ from scipy import ndimage
 ORDER = {
     "animals": ["dog", "cat", "cow", "elephant", "tiger", "bird", "fish", "monkey", "horse", "owl", "frog", "snake"],
     "body": ["matha", "chul", "chokh", "nak", "kan", "_ear-right", "mukh", "gola", "hat", "pet", "hantu", "pa"],  # no shoulders cell: kandh keeps the figure until a photo is added
+    "colours": ["lal", "nil", "holud", "sobuj", "shada", "kalo", "komola", "golapi", "beguni", "badami", "dhushor", "akashi"],
     "bodymore": ["kandh", "kopal", "bhuru", "gal", "thutni", "thont", "dant", "jibh", "angul", "nokh", "buk", "pith"],
     "seasons": ["summer", "monsoon", "autumn", "late-autumn", "winter", "spring"],
     "family": ["mother", "father", "grandmother", "grandfather", "elder-brother", "elder-sister", "brother", "sister", "baby", "uncle", "aunt", "family"],
@@ -24,8 +25,8 @@ ORDER = {
 }
 W, H = 800, 600
 # columns x rows of each sheet. "scenes" are landscape photos that fill their cell, so they are cut as an even grid.
-LAYOUT = {"animals": (4, 3), "fruits": (4, 3), "family": (4, 3), "seasons": (3, 2), "body": (4, 3), "bodymore": (4, 3)}
-SCENES = {"seasons", "family", "body", "bodymore"}
+LAYOUT = {"animals": (4, 3), "fruits": (4, 3), "family": (4, 3), "seasons": (3, 2), "body": (4, 3), "bodymore": (4, 3), "colours": (4, 3)}
+SCENES = {"seasons", "family", "body", "bodymore", "colours"}
 PREFIX = {"bodymore": "body"}  # these are more body parts: files are still body-<id>.webp
 
 def find_objects(sheet: Image.Image, count: int = 12, cols: int = 4):
