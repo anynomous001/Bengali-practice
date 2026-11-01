@@ -23,7 +23,7 @@ ORDER = {
 W, H = 800, 600
 # columns x rows of each sheet. "scenes" are landscape photos that fill their cell, so they are cut as an even grid.
 LAYOUT = {"animals": (4, 3), "fruits": (4, 3), "family": (4, 3), "seasons": (3, 2)}
-SCENES = {"seasons"}
+SCENES = {"seasons", "family"}
 
 def find_objects(sheet: Image.Image, count: int = 12, cols: int = 4):
     """Bounding boxes of the 12 objects, ordered row by row then left to right, or None."""
@@ -75,7 +75,7 @@ def main() -> None:
             place(sheet.crop((x0, y0, x1, y1))).save(out / f"{topic}-{name}.webp", "WEBP", quality=88)
             print("saved", f"{topic}-{name}.webp")
             continue
-        m = 0.012 if topic in SCENES else 0  # trim the sheet's grid lines off scene photos
+        m = 0.008 if topic in SCENES else 0  # trim the sheet's grid lines off scene photos
         cell = sheet.crop((round((c + m) * cw), round((r + m) * ch), round((c + 1 - m) * cw), round((r + 1 - m) * ch)))
         # crop to 4:3 around the centre
         want = 4 / 3
