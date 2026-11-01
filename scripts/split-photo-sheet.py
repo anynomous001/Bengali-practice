@@ -16,7 +16,7 @@ from scipy import ndimage
 
 ORDER = {
     "animals": ["dog", "cat", "cow", "elephant", "tiger", "bird", "fish", "monkey", "horse", "owl", "frog", "snake"],
-    "body": ["matha", "chul", "chokh", "nak", "kan", "mukh", "gola", "kandh", "hat", "pet", "hantu", "pa"],
+    "body": ["matha", "chul", "chokh", "nak", "kan", "_ear-right", "mukh", "gola", "hat", "pet", "hantu", "pa"],  # no shoulders cell: kandh keeps the figure until a photo is added
     "seasons": ["summer", "monsoon", "autumn", "late-autumn", "winter", "spring"],
     "family": ["mother", "father", "grandmother", "grandfather", "elder-brother", "elder-sister", "brother", "sister", "baby", "uncle", "aunt", "family"],
     "fruits": ["mango", "banana", "apple", "orange", "jackfruit", "lychee", "guava", "papaya", "watermelon", "coconut", "grapes", "pineapple"],
@@ -70,6 +70,8 @@ def main() -> None:
     print(f"found {COLS * ROWS} objects" if boxes else "cutting an even grid")
     cw, ch = sheet.width / COLS, sheet.height / ROWS
     for i, name in enumerate(ORDER[topic]):
+        if name.startswith("_"):  # a cell we do not use
+            continue
         r, c = divmod(i, COLS)
         if boxes:
             x0, y0, x1, y1 = boxes[i]
