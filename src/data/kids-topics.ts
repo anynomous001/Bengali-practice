@@ -48,6 +48,30 @@ const FAMILY: KidWordItem[] = ([
   ["baby", "শিশু", "shishu", "baby"], ["uncle", "কাকা", "kaka", "uncle (dad's younger brother)"], ["aunt", "মাসি", "mashi", "aunt (mom's sister)"], ["family", "পরিবার", "poribar", "family"],
 ] as const).map(([id, bn, ro, en]) => w(id, bn, ro, en, photoOf("family", id)));
 
+const DAY_EN = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const DAYS: KidWordItem[] = ([
+  ["sunday", "রবিবার", "robibar", "Sunday"], ["monday", "সোমবার", "shombar", "Monday"], ["tuesday", "মঙ্গলবার", "mongolbar", "Tuesday"], ["wednesday", "বুধবার", "budhbar", "Wednesday"],
+  ["thursday", "বৃহস্পতিবার", "brihoshpotibar", "Thursday"], ["friday", "শুক্রবার", "shukrobar", "Friday"], ["saturday", "শনিবার", "shonibar", "Saturday"],
+] as const).map(([id, bn, ro, en], i) => w(id, bn, ro, en, { kind: "cells", i, labels: DAY_EN, cols: 7 }));
+
+const MONTH_EN = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const MONTHS: KidWordItem[] = ([
+  ["jan", "জানুয়ারি", "januari", "January"], ["feb", "ফেব্রুয়ারি", "phebruari", "February"], ["mar", "মার্চ", "march", "March"], ["apr", "এপ্রিল", "epril", "April"],
+  ["may", "মে", "me", "May"], ["jun", "জুন", "jun", "June"], ["jul", "জুলাই", "julai", "July"], ["aug", "আগস্ট", "agosto", "August"],
+  ["sep", "সেপ্টেম্বর", "septembor", "September"], ["oct", "অক্টোবর", "oktobor", "October"], ["nov", "নভেম্বর", "novembor", "November"], ["dec", "ডিসেম্বর", "disembor", "December"],
+] as const).map(([id, bn, ro, en], i) => w(id, bn, ro, en, { kind: "cells", i, labels: MONTH_EN, cols: 4 }));
+
+const BMONTH_RANGE = ["Apr-May", "May-Jun", "Jun-Jul", "Jul-Aug", "Aug-Sep", "Sep-Oct", "Oct-Nov", "Nov-Dec", "Dec-Jan", "Jan-Feb", "Feb-Mar", "Mar-Apr"];
+const BMONTHS: KidWordItem[] = ([
+  ["boishakh", "বৈশাখ", "boishakh"], ["joishtho", "জ্যৈষ্ঠ", "joishtho"], ["asharh", "আষাঢ়", "asharh"], ["shrabon", "শ্রাবণ", "shrabon"], ["bhadro", "ভাদ্র", "bhadro"], ["ashwin", "আশ্বিন", "ashwin"],
+  ["kartik", "কার্তিক", "kartik"], ["ograhayon", "অগ্রহায়ণ", "ograhayon"], ["poush", "পৌষ", "poush"], ["magh", "মাঘ", "magh"], ["phalgun", "ফাল্গুন", "phalgun"], ["choitro", "চৈত্র", "choitro"],
+] as const).map(([id, bn, ro], i) => w(id, bn, ro, `Bengali month ${i + 1} (${BMONTH_RANGE[i]})`, { kind: "cells", i, labels: BMONTH_RANGE, cols: 4 }));
+
+const SEASONS: KidWordItem[] = ([
+  ["summer", "গ্রীষ্ম", "grishmo", "summer"], ["monsoon", "বর্ষা", "borsha", "monsoon (rainy season)"], ["autumn", "শরৎ", "shorot", "autumn"],
+  ["late-autumn", "হেমন্ত", "hemonto", "late autumn"], ["winter", "শীত", "shit", "winter"], ["spring", "বসন্ত", "boshonto", "spring"],
+] as const).map(([id, bn, ro, en]) => w(id, bn, ro, en, photoOf("seasons", id)));
+
 const NUMBER_EN = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
 const NUMBERS_1_10: KidWordItem[] = NUMBERS.filter((n) => n.value >= 1 && n.value <= 10)
   .map((n) => w(`n${n.value}`, n.word, n.wrom, NUMBER_EN[n.value], { kind: "count", n: n.value }, `${n.numeral} · ${n.value}`));
@@ -60,6 +84,10 @@ const TOPICS: Omit<KidTopic, "ready">[] = [
   { id: "body", slug: "body-parts", title: "Body parts", bn: "শরীর", words: BODY, question: { bn: "এটা কী?", ro: "eta ki?", en: "What is this?" }, photos: "none" },
   { id: "numbers", slug: "numbers", title: "Numbers 1 to 10", bn: "সংখ্যা", words: NUMBERS_1_10, question: { bn: "কয়টা?", ro: "koyta?", en: "How many?" }, photos: "optional" },
   { id: "animals", slug: "animals", title: "Animals", bn: "পশুপাখি", words: ANIMALS, question: { bn: "এটা কী?", ro: "eta ki?", en: "What is this?" }, photos: "required" },
+  { id: "days", slug: "days", title: "Days of the week", bn: "বার", words: DAYS, question: { bn: "এটা কী বার?", ro: "eta ki bar?", en: "Which day is this?" }, photos: "none" },
+  { id: "months", slug: "months", title: "Months", bn: "মাস", words: MONTHS, question: { bn: "এটা কী মাস?", ro: "eta ki mash?", en: "Which month is this?" }, photos: "none" },
+  { id: "bmonths", slug: "bengali-months", title: "Bengali months", bn: "বাংলা মাস", words: BMONTHS, question: { bn: "এটা কী মাস?", ro: "eta ki mash?", en: "Which month is this?" }, photos: "none" },
+  { id: "seasons", slug: "seasons", title: "Seasons", bn: "ঋতু", words: SEASONS, question: { bn: "এটা কোন ঋতু?", ro: "eta kon ritu?", en: "Which season is this?" }, photos: "required" },
   { id: "family", slug: "family", title: "Family", bn: "পরিবার", words: FAMILY, question: { bn: "ইনি কে?", ro: "ini ke?", en: "Who is this?" }, photos: "required" },
   { id: "fruits", slug: "fruits", title: "Fruits", bn: "ফল", words: FRUITS, question: { bn: "এটা কী?", ro: "eta ki?", en: "What is this?" }, photos: "required" },
 ];
@@ -71,7 +99,7 @@ export function getKidTopic(id: string): KidTopic | undefined {
   const t = TOPICS.find((x) => x.id === id);
   if (!t) return undefined;
   let words = resolveRo(t.words).map((wd) => {
-    if (wd.pic.kind === "body" || wd.pic.kind === "count") return wd;
+    if (wd.pic.kind === "body" || wd.pic.kind === "count" || wd.pic.kind === "cells") return wd;
     if (wd.pic.kind === "photo") return has(wd.pic.src) ? wd : null;
     const file = `/kids/photo/${t.id}-${wd.id}.webp`;
     return has(file) ? { ...wd, pic: { kind: "photo", src: file } as PicSpec } : wd;

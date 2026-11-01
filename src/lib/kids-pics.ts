@@ -4,7 +4,8 @@ export type PicSpec =
   | { kind: "swatch"; hex: string }
   | { kind: "body"; key: string }
   | { kind: "photo"; src: string }
-  | { kind: "count"; n: number; src?: string };
+  | { kind: "count"; n: number; src?: string }
+  | { kind: "cells"; i: number; labels: string[]; cols: number };
 
 export type Shape = { t: "e"; cx: number; cy: number; rx: number; ry: number } | { t: "p"; d: string };
 export type BodyArea = { shapes: Shape[]; zoom: [number, number, number, number] };

@@ -190,6 +190,18 @@ export const COURSES: Course[] = [
         { id: "kids/animals-quiz", title: "What is this animal?", blurb: "A photo appears. Say the animal in Bengali, or pick the word.", href: "/learn/kids/animals/quiz", kind: "Quiz", tag: "Kids" },
         { id: "kids/game-creatures", title: "Mystery Wizard", blurb: "Guess the creature behind the magic curtain.", href: "/learn/kids/games/creatures", kind: "Practice", tag: "Kids" },
       ] },
+      { id: "calendar", title: "Days and months", blurb: "The days of the week and the months, shown on a week and a year with the right one lit up.", lessons: [
+        { id: "kids/days-learn", title: "Days of the week", blurb: "Tap a day to hear it. Tap again to hear it slowly.", href: "/learn/kids/days/learn", kind: "Lesson", tag: "Kids" },
+        { id: "kids/days-quiz", title: "Which day is this?", blurb: "A day lights up on the week. Say its name in Bengali, or pick the word.", href: "/learn/kids/days/quiz", kind: "Quiz", tag: "Kids" },
+        { id: "kids/months-learn", title: "Months", blurb: "Tap a month to hear it. Tap again to hear it slowly.", href: "/learn/kids/months/learn", kind: "Lesson", tag: "Kids" },
+        { id: "kids/months-quiz", title: "Which month is this?", blurb: "A month lights up on the year. Say it in Bengali, or pick the word.", href: "/learn/kids/months/quiz", kind: "Quiz", tag: "Kids" },
+        { id: "kids/bmonths-learn", title: "Bengali months", blurb: "The twelve months of the Bengali calendar, from Boishakh to Choitro.", href: "/learn/kids/bengali-months/learn", kind: "Lesson", tag: "Kids" },
+        { id: "kids/bmonths-quiz", title: "Which Bengali month?", blurb: "A Bengali month lights up with its English dates. Say it, or pick the word.", href: "/learn/kids/bengali-months/quiz", kind: "Quiz", tag: "Kids" },
+      ] },
+      { id: "seasons", title: "Seasons", blurb: "The six seasons of Bengal, each with a real photo.", lessons: [
+        { id: "kids/seasons-learn", title: "Season cards", blurb: "Tap a season to hear it. Tap again to hear it slowly.", href: "/learn/kids/seasons/learn", kind: "Lesson", tag: "Kids" },
+        { id: "kids/seasons-quiz", title: "Which season is this?", blurb: "A photo appears. Say the season in Bengali, or pick the word.", href: "/learn/kids/seasons/quiz", kind: "Quiz", tag: "Kids" },
+      ] },
       { id: "family", title: "Family", blurb: "The people in a family, with a real picture of each one.", lessons: [
         { id: "kids/family-learn", title: "Family cards", blurb: "Tap a person to hear the word. Tap again to hear it slowly.", href: "/learn/kids/family/learn", kind: "Lesson", tag: "Kids" },
         { id: "kids/family-quiz", title: "Who is this?", blurb: "A picture appears. Say who it is in Bengali, or pick the word.", href: "/learn/kids/family/quiz", kind: "Quiz", tag: "Kids" },

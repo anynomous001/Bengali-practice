@@ -22,6 +22,24 @@ export default function KidPic({ pic, label = "" }: { pic: PicSpec; label?: stri
       </svg>
     );
   }
+  if (pic.kind === "cells") {
+    // a week or a year laid out in cells, with the one being asked about highlighted
+    const rows = Math.ceil(pic.labels.length / pic.cols), gap = 8, cw = (400 - gap * (pic.cols + 1)) / pic.cols, ch = Math.min(cw * (pic.cols > 5 ? 1.9 : 0.8), (190 - gap * (rows + 1)) / rows);
+    const vh = gap + rows * (ch + gap);
+    return (
+      <svg viewBox={`0 0 400 ${vh}`} className="kp" role="img" aria-label={label}>
+        {pic.labels.map((t, k) => {
+          const x = gap + (k % pic.cols) * (cw + gap), y = gap + Math.floor(k / pic.cols) * (ch + gap), on = k === pic.i;
+          return (
+            <g key={k}>
+              <rect x={x} y={y} width={cw} height={ch} rx="12" fill={on ? "#ffc107" : "#ffffff"} stroke={on ? "#c79100" : "#cfc8ee"} strokeWidth={on ? 4 : 2} />
+              <text x={x + cw / 2} y={y + ch / 2 + 6} textAnchor="middle" fontSize={pic.cols > 5 ? 20 : 19} fontWeight={on ? 800 : 600} fill={on ? "#3b2a00" : "#6a6490"} fontFamily="var(--font-ui), sans-serif">{t}</text>
+            </g>
+          );
+        })}
+      </svg>
+    );
+  }
   if (pic.kind === "photo") {
     // eslint-disable-next-line @next/next/no-img-element
     return <img src={pic.src} alt={label} className="kp kp-photo" />;

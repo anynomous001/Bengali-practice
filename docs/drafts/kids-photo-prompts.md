@@ -2,6 +2,10 @@
 
 Ask the image generator for ONE image with a 4 x 3 grid, then send it to me here. I cut it into the 12 files with `scripts/split-photo-sheet.py`, so you do not have to save or rename anything.
 
+## Seasons sheet (6 photos, 3 columns x 2 rows)
+Six realistic landscape photographs arranged in a grid of 3 columns and 2 rows, 6 equal cells, no borders, no text, no labels, no people. The Bengal countryside in each of the six seasons. Row 1: summer, hot and dry with a bright sun and a mango tree full of ripe mangoes; monsoon, heavy rain over green paddy fields under dark clouds; autumn, white kash flowers swaying in a field under a blue sky with white clouds. Row 2: late autumn, golden ripe paddy fields at harvest in soft evening light; winter, a misty morning with fog over a field and date palm trees; spring, a tree covered in red palash flowers against a clear sky. 16:9 landscape image.
+Files: `seasons-<id>.webp` (summer, monsoon, autumn, late-autumn, winter, spring). Run `python3 scripts/split-photo-sheet.py <sheet> seasons`.
+
 ## Family sheet
 Realistic photographs arranged in a perfect grid of 4 columns and 3 rows, 12 equal cells, each cell showing one friendly South Asian (Bengali) person centered on a plain white background with no borders, no text and no labels. Head and shoulders to waist, smiling, looking at the camera, natural light, sharp focus. Row 1: a mother (woman about 35 in a saree), a father (man about 40 in a shirt), a grandmother (elderly woman in a white saree with a red border), a grandfather (elderly man with gray hair and a kurta). Row 2: an elder brother (teenage boy about 16), an elder sister (teenage girl about 16), a younger brother (boy about 7), a younger sister (girl about 6). Row 3: a baby, an uncle (man about 35 with a moustache), an aunt (woman about 32 in a salwar kameez), a family of five standing together (mother, father, grandmother, a boy and a girl). 16:9 landscape image.
 
