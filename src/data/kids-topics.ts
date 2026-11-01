@@ -32,6 +32,13 @@ const BODY: KidWordItem[] = [
   w("hantu", "হাঁটু", "hantu", "knees", body("hantu")), w("pa", "পা", "pa", "leg / foot", body("pa")),
 ];
 
+// More parts of the body. They need a photo (body-<id>.webp) and appear on their own once the file exists.
+const BODY_MORE: KidWordItem[] = ([
+  ["kopal", "কপাল", "kopal", "forehead"], ["bhuru", "ভুরু", "bhuru", "eyebrows"], ["gal", "গাল", "gal", "cheek"], ["thutni", "থুতনি", "thutni", "chin"],
+  ["thont", "ঠোঁট", "thont", "lips"], ["dant", "দাঁত", "dant", "teeth"], ["jibh", "জিভ", "jibh", "tongue"], ["angul", "আঙুল", "angul", "fingers"],
+  ["nokh", "নখ", "nokh", "nails"], ["buk", "বুক", "buk", "chest"], ["pith", "পিঠ", "pith", "back"],
+] as const).map(([id, bn, ro, en]) => w(id, bn, ro, en, photoOf("body", id)));
+
 const ANIMALS: KidWordItem[] = ([
   ["dog", "কুকুর", "kukur"], ["cat", "বিড়াল", "biral"], ["cow", "গরু", "goru"], ["elephant", "হাতি", "hati"], ["tiger", "বাঘ", "bagh"], ["bird", "পাখি", "pakhi"],
   ["fish", "মাছ", "mach"], ["monkey", "বাঁদর", "bandor"], ["horse", "ঘোড়া", "ghora"], ["owl", "পেঁচা", "pencha"], ["frog", "ব্যাঙ", "byang"], ["snake", "সাপ", "shap"],
@@ -81,7 +88,7 @@ export type KidTopic = { id: string; slug: string; title: string; bn: string; wo
 
 const TOPICS: Omit<KidTopic, "ready">[] = [
   { id: "colours", slug: "colours", title: "Colours", bn: "রং", words: COLOURS, question: { bn: "এটা কী রং?", ro: "eta ki rong?", en: "What colour is this?" }, photos: "optional" },
-  { id: "body", slug: "body-parts", title: "Body parts", bn: "শরীর", words: BODY, question: { bn: "এটা কী?", ro: "eta ki?", en: "What is this?" }, photos: "none" },
+  { id: "body", slug: "body-parts", title: "Body parts", bn: "শরীর", words: [...BODY, ...BODY_MORE], question: { bn: "এটা কী?", ro: "eta ki?", en: "What is this?" }, photos: "none" },
   { id: "numbers", slug: "numbers", title: "Numbers 1 to 10", bn: "সংখ্যা", words: NUMBERS_1_10, question: { bn: "কয়টা?", ro: "koyta?", en: "How many?" }, photos: "optional" },
   { id: "animals", slug: "animals", title: "Animals", bn: "পশুপাখি", words: ANIMALS, question: { bn: "এটা কী?", ro: "eta ki?", en: "What is this?" }, photos: "required" },
   { id: "days", slug: "days", title: "Days of the week", bn: "বার", words: DAYS, question: { bn: "এটা কী বার?", ro: "eta ki bar?", en: "Which day is this?" }, photos: "none" },

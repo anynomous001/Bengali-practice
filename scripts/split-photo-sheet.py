@@ -3,7 +3,7 @@
 It finds the 12 objects on the white background and centers each one on a white 4:3 picture, so a hoof or a paw that
 reaches into the next cell is not cut off. If it cannot find exactly 12 objects it falls back to cutting an even grid.
 
-Usage:  python3 scripts/split-photo-sheet.py <sheet-image> animals|fruits|family|seasons|body
+Usage:  python3 scripts/split-photo-sheet.py <sheet-image> animals|fruits|family|seasons|body|bodymore
 
 Row by row, left to right, the cells must be in the order printed below. Each cell is cropped to 4:3,
 resized to 800 x 600 and saved as public/kids/photo/<topic>-<id>.webp.
@@ -17,14 +17,16 @@ from scipy import ndimage
 ORDER = {
     "animals": ["dog", "cat", "cow", "elephant", "tiger", "bird", "fish", "monkey", "horse", "owl", "frog", "snake"],
     "body": ["matha", "chul", "chokh", "nak", "kan", "_ear-right", "mukh", "gola", "hat", "pet", "hantu", "pa"],  # no shoulders cell: kandh keeps the figure until a photo is added
+    "bodymore": ["kandh", "kopal", "bhuru", "gal", "thutni", "thont", "dant", "jibh", "angul", "nokh", "buk", "pith"],
     "seasons": ["summer", "monsoon", "autumn", "late-autumn", "winter", "spring"],
     "family": ["mother", "father", "grandmother", "grandfather", "elder-brother", "elder-sister", "brother", "sister", "baby", "uncle", "aunt", "family"],
     "fruits": ["mango", "banana", "apple", "orange", "jackfruit", "lychee", "guava", "papaya", "watermelon", "coconut", "grapes", "pineapple"],
 }
 W, H = 800, 600
 # columns x rows of each sheet. "scenes" are landscape photos that fill their cell, so they are cut as an even grid.
-LAYOUT = {"animals": (4, 3), "fruits": (4, 3), "family": (4, 3), "seasons": (3, 2), "body": (4, 3)}
-SCENES = {"seasons", "family", "body"}
+LAYOUT = {"animals": (4, 3), "fruits": (4, 3), "family": (4, 3), "seasons": (3, 2), "body": (4, 3), "bodymore": (4, 3)}
+SCENES = {"seasons", "family", "body", "bodymore"}
+PREFIX = {"bodymore": "body"}  # these are more body parts: files are still body-<id>.webp
 
 def find_objects(sheet: Image.Image, count: int = 12, cols: int = 4):
     """Bounding boxes of the 12 objects, ordered row by row then left to right, or None."""
@@ -75,8 +77,8 @@ def main() -> None:
         r, c = divmod(i, COLS)
         if boxes:
             x0, y0, x1, y1 = boxes[i]
-            place(sheet.crop((x0, y0, x1, y1))).save(out / f"{topic}-{name}.webp", "WEBP", quality=88)
-            print("saved", f"{topic}-{name}.webp")
+            place(sheet.crop((x0, y0, x1, y1))).save(out / f"{PREFIX.get(topic, topic)}-{name}.webp", "WEBP", quality=88)
+            print("saved", f"{PREFIX.get(topic, topic)}-{name}.webp")
             continue
         m = 0.008 if topic in SCENES else 0  # trim the sheet's grid lines off scene photos
         cell = sheet.crop((round((c + m) * cw), round((r + m) * ch), round((c + 1 - m) * cw), round((r + 1 - m) * ch)))
@@ -86,8 +88,8 @@ def main() -> None:
             nw = round(cell.height * want); x = (cell.width - nw) // 2; cell = cell.crop((x, 0, x + nw, cell.height))
         else:
             nh = round(cell.width / want); y = (cell.height - nh) // 2; cell = cell.crop((0, y, cell.width, y + nh))
-        cell.resize((W, H), Image.LANCZOS).save(out / f"{topic}-{name}.webp", "WEBP", quality=88)
-        print("saved", f"{topic}-{name}.webp")
+        cell.resize((W, H), Image.LANCZOS).save(out / f"{PREFIX.get(topic, topic)}-{name}.webp", "WEBP", quality=88)
+        print("saved", f"{PREFIX.get(topic, topic)}-{name}.webp")
 
 if __name__ == "__main__":
     main()

@@ -7,6 +7,10 @@ Realistic close-up photographs arranged in a perfect grid of 4 columns and 3 row
 If the tool refuses, say "a person" in place of "a smiling child", or generate the twelve one at a time.
 Files: `body-<id>.webp` (matha, chul, chokh, nak, kan, mukh, gola, kandh, hat, pet, hantu, pa). Run `python3 scripts/split-photo-sheet.py <sheet> body`. Until the photos exist, the lessons keep the child figure with a glowing ring.
 
+## More body parts sheet (12 close-ups, 4 columns x 3 rows)
+Realistic close-up photographs arranged in a perfect grid of 4 columns and 3 rows, 12 equal cells, no borders, no text, no labels, plain white background. Each cell is a close-up of one part of a smiling child, fully clothed, in soft natural light. Row 1: both shoulders in a blue t-shirt (front view), the forehead, both eyebrows, one cheek. Row 2: the chin, closed lips, smiling teeth, the tongue sticking out. Row 3: the fingers of one hand, fingernails, the chest in a t-shirt, the back seen from behind in a t-shirt. 16:9 landscape image.
+Files: `body-<id>.webp` (kandh, kopal, bhuru, gal, thutni, thont, dant, jibh, angul, nokh, buk, pith). Run `python3 scripts/split-photo-sheet.py <sheet> bodymore`. These words are added to the Body parts lessons automatically once their photos exist, and the shoulders photo replaces the ring figure.
+
 ## Seasons sheet (6 photos, 3 columns x 2 rows)
 Six realistic landscape photographs arranged in a grid of 3 columns and 2 rows, 6 equal cells, no borders, no text, no labels, no people. The Bengal countryside in each of the six seasons. Row 1: summer, hot and dry with a bright sun and a mango tree full of ripe mangoes; monsoon, heavy rain over green paddy fields under dark clouds; autumn, white kash flowers swaying in a field under a blue sky with white clouds. Row 2: late autumn, golden ripe paddy fields at harvest in soft evening light; winter, a misty morning with fog over a field and date palm trees; spring, a tree covered in red palash flowers against a clear sky. 16:9 landscape image.
 Files: `seasons-<id>.webp` (summer, monsoon, autumn, late-autumn, winter, spring). Run `python3 scripts/split-photo-sheet.py <sheet> seasons`.
