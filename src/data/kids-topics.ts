@@ -42,6 +42,12 @@ const FRUITS: KidWordItem[] = ([
   ["guava", "পেয়ারা", "peyara"], ["papaya", "পেঁপে", "pepe"], ["watermelon", "তরমুজ", "tormuj"], ["coconut", "নারকেল", "narkel"], ["grapes", "আঙুর", "angur"], ["pineapple", "আনারস", "anarosh"],
 ] as const).map(([id, bn, ro]) => w(id, bn, ro, id, photoOf("fruits", id)));
 
+const FAMILY: KidWordItem[] = ([
+  ["mother", "মা", "ma", "mother"], ["father", "বাবা", "baba", "father"], ["grandmother", "ঠাকুমা", "thakuma", "grandmother (dad's mom)"], ["grandfather", "ঠাকুরদা", "thakurda", "grandfather (dad's dad)"],
+  ["elder-brother", "দাদা", "dada", "elder brother"], ["elder-sister", "দিদি", "didi", "elder sister"], ["brother", "ভাই", "bhai", "younger brother"], ["sister", "বোন", "bon", "younger sister"],
+  ["baby", "শিশু", "shishu", "baby"], ["uncle", "কাকা", "kaka", "uncle (dad's younger brother)"], ["aunt", "মাসি", "mashi", "aunt (mom's sister)"], ["family", "পরিবার", "poribar", "family"],
+] as const).map(([id, bn, ro, en]) => w(id, bn, ro, en, photoOf("family", id)));
+
 const NUMBER_EN = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
 const NUMBERS_1_10: KidWordItem[] = NUMBERS.filter((n) => n.value >= 1 && n.value <= 10)
   .map((n) => w(`n${n.value}`, n.word, n.wrom, NUMBER_EN[n.value], { kind: "count", n: n.value }, `${n.numeral} · ${n.value}`));
@@ -54,6 +60,7 @@ const TOPICS: Omit<KidTopic, "ready">[] = [
   { id: "body", slug: "body-parts", title: "Body parts", bn: "শরীর", words: BODY, question: { bn: "এটা কী?", ro: "eta ki?", en: "What is this?" }, photos: "none" },
   { id: "numbers", slug: "numbers", title: "Numbers 1 to 10", bn: "সংখ্যা", words: NUMBERS_1_10, question: { bn: "কয়টা?", ro: "koyta?", en: "How many?" }, photos: "optional" },
   { id: "animals", slug: "animals", title: "Animals", bn: "পশুপাখি", words: ANIMALS, question: { bn: "এটা কী?", ro: "eta ki?", en: "What is this?" }, photos: "required" },
+  { id: "family", slug: "family", title: "Family", bn: "পরিবার", words: FAMILY, question: { bn: "ইনি কে?", ro: "ini ke?", en: "Who is this?" }, photos: "required" },
   { id: "fruits", slug: "fruits", title: "Fruits", bn: "ফল", words: FRUITS, question: { bn: "এটা কী?", ro: "eta ki?", en: "What is this?" }, photos: "required" },
 ];
 

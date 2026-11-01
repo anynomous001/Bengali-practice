@@ -34,6 +34,8 @@ export const ADDED: Record<string, string> = {
   "kids/colours-quiz": "2026-10-31",
   "kids/body-learn": "2026-10-31",
   "kids/body-quiz": "2026-10-31",
+  "kids/family-learn": "2026-11-02",
+  "kids/family-quiz": "2026-11-02",
   "kids/fruits-learn": "2026-11-01",
   "kids/fruits-quiz": "2026-11-01",
   "kids/animals-learn": "2026-11-01",

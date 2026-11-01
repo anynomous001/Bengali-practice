@@ -190,13 +190,17 @@ export const COURSES: Course[] = [
         { id: "kids/animals-quiz", title: "What is this animal?", blurb: "A photo appears. Say the animal in Bengali, or pick the word.", href: "/learn/kids/animals/quiz", kind: "Quiz", tag: "Kids" },
         { id: "kids/game-creatures", title: "Mystery Wizard", blurb: "Guess the creature behind the magic curtain.", href: "/learn/kids/games/creatures", kind: "Practice", tag: "Kids" },
       ] },
+      { id: "family", title: "Family", blurb: "The people in a family, with a real picture of each one.", lessons: [
+        { id: "kids/family-learn", title: "Family cards", blurb: "Tap a person to hear the word. Tap again to hear it slowly.", href: "/learn/kids/family/learn", kind: "Lesson", tag: "Kids" },
+        { id: "kids/family-quiz", title: "Who is this?", blurb: "A picture appears. Say who it is in Bengali, or pick the word.", href: "/learn/kids/family/quiz", kind: "Quiz", tag: "Kids" },
+      ] },
       { id: "fruits", title: "Fruits", blurb: "Real photos of twelve fruits.", lessons: [
         { id: "kids/fruits-learn", title: "Fruit cards", blurb: "Tap a fruit to hear its name. Tap again to hear it slowly.", href: "/learn/kids/fruits/learn", kind: "Lesson", tag: "Kids" },
         { id: "kids/fruits-quiz", title: "What fruit is this?", blurb: "A photo appears. Say the fruit in Bengali, or pick the word.", href: "/learn/kids/fruits/quiz", kind: "Quiz", tag: "Kids" },
       ] },
     ],
     upcoming: [
-      { title: "More pictures", blurb: "Family, days of the week and food, each with real pictures." },
+      { title: "More pictures", blurb: "Days of the week, food, clothes and things at home, each with real pictures." },
     ],
     tools: [{ label: "All the games", href: "/learn/kids/games", blurb: "Spell School: body, colour and creature games." }],
   },
