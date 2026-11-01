@@ -99,7 +99,11 @@ export function getKidTopic(id: string): KidTopic | undefined {
   const t = TOPICS.find((x) => x.id === id);
   if (!t) return undefined;
   let words = resolveRo(t.words).map((wd) => {
-    if (wd.pic.kind === "body" || wd.pic.kind === "count" || wd.pic.kind === "cells") return wd;
+    if (wd.pic.kind === "body") { // a real close-up photo when there is one, otherwise the child figure with a ring
+      const file = `/kids/photo/body-${wd.id}.webp`;
+      return has(file) ? { ...wd, pic: { kind: "photo", src: file } as PicSpec } : wd;
+    }
+    if (wd.pic.kind === "count" || wd.pic.kind === "cells") return wd;
     if (wd.pic.kind === "photo") return has(wd.pic.src) ? wd : null;
     const file = `/kids/photo/${t.id}-${wd.id}.webp`;
     return has(file) ? { ...wd, pic: { kind: "photo", src: file } as PicSpec } : wd;

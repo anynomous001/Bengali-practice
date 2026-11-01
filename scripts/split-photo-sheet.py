@@ -3,7 +3,7 @@
 It finds the 12 objects on the white background and centers each one on a white 4:3 picture, so a hoof or a paw that
 reaches into the next cell is not cut off. If it cannot find exactly 12 objects it falls back to cutting an even grid.
 
-Usage:  python3 scripts/split-photo-sheet.py <sheet-image> animals|fruits|family|seasons
+Usage:  python3 scripts/split-photo-sheet.py <sheet-image> animals|fruits|family|seasons|body
 
 Row by row, left to right, the cells must be in the order printed below. Each cell is cropped to 4:3,
 resized to 800 x 600 and saved as public/kids/photo/<topic>-<id>.webp.
@@ -16,14 +16,15 @@ from scipy import ndimage
 
 ORDER = {
     "animals": ["dog", "cat", "cow", "elephant", "tiger", "bird", "fish", "monkey", "horse", "owl", "frog", "snake"],
+    "body": ["matha", "chul", "chokh", "nak", "kan", "mukh", "gola", "kandh", "hat", "pet", "hantu", "pa"],
     "seasons": ["summer", "monsoon", "autumn", "late-autumn", "winter", "spring"],
     "family": ["mother", "father", "grandmother", "grandfather", "elder-brother", "elder-sister", "brother", "sister", "baby", "uncle", "aunt", "family"],
     "fruits": ["mango", "banana", "apple", "orange", "jackfruit", "lychee", "guava", "papaya", "watermelon", "coconut", "grapes", "pineapple"],
 }
 W, H = 800, 600
 # columns x rows of each sheet. "scenes" are landscape photos that fill their cell, so they are cut as an even grid.
-LAYOUT = {"animals": (4, 3), "fruits": (4, 3), "family": (4, 3), "seasons": (3, 2)}
-SCENES = {"seasons", "family"}
+LAYOUT = {"animals": (4, 3), "fruits": (4, 3), "family": (4, 3), "seasons": (3, 2), "body": (4, 3)}
+SCENES = {"seasons", "family", "body"}
 
 def find_objects(sheet: Image.Image, count: int = 12, cols: int = 4):
     """Bounding boxes of the 12 objects, ordered row by row then left to right, or None."""
