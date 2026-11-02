@@ -149,6 +149,7 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
               <p className="muted">Access for a few days, counted from now. Works for new emails and for existing students (it adds to what they have).</p>
               <input name="email" type="email" required placeholder="someone@example.com" aria-label="Trial email" />
               <select name="days" defaultValue="1" aria-label="Length of the trial"><option value="1">1 day</option><option value="3">3 days</option><option value="7">7 days</option><option value="14">14 days</option></select>
+              <label className="adm-check"><input type="checkbox" name="notify" defaultChecked /> Email them how to sign in (from Bengali Practice)</label>
               <button className="btn">Give trial access</button>
             </form>
             <form action={inviteSomeone} className="adm-card stack">

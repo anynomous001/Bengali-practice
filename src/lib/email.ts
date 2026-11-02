@@ -114,6 +114,22 @@ export function sendInviteEmail(to: string, link: string) {
   });
 }
 
+/** Sent when a short trial is given: says how long it lasts and how to sign in. */
+export function sendTrialEmail(to: string, days: number, link: string) {
+  const len = days === 1 ? "one day" : `${days} days`;
+  return send(to, `Your ${len} of access to ${BRAND}`, {
+    preheader: `You have ${len} to look around the real app.`,
+    heading: `Your ${len} of access starts now`,
+    paragraphs: [
+      `You have been given ${len} of free access to ${BRAND}, so you can look around the real app before deciding anything. The time counts from this moment.`,
+      "To sign in, press the button below, type this email address and choose \"Email me a link\". We then email you a one-time sign-in link, so there is no password to remember.",
+      "A good place to start: Reading, then the Alphabet lesson. Then try Speaking and the Vocabulary topics, and the Kids picture lessons if you have children learning too.",
+    ],
+    button: { label: "Go to sign in", href: link },
+    note: "The sign-in link we email you works once and expires after 15 minutes. If it has expired, ask for a new one. If anything does not work, just reply to this email.",
+  });
+}
+
 /** Tells a student that a friend they referred has joined and that three months were added. */
 export function sendReferralEmail(to: string, link: string, months: number) {
   return send(to, `${months} months added to your plan`, {

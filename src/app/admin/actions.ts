@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { getUser, normalizeEmail, validEmail } from "@/lib/auth";
 import { appBase } from "@/lib/base-url";
 import { query } from "@/lib/db";
-import { sendInviteEmail } from "@/lib/email";
+import { sendInviteEmail, sendTrialEmail } from "@/lib/email";
 
 async function requireAdmin() {
   const user = await getUser();
@@ -58,7 +58,17 @@ export async function grantTrial(fd: FormData) {
      ON CONFLICT (email) DO UPDATE SET access_expires_at = GREATEST(now(), COALESCE(students.access_expires_at, now())) + make_interval(days => $3)`,
     [email, `${days}-day trial`, days],
   );
-  done(fd, "students", `${email} has ${days} day${days === 1 ? "" : "s"} of access from now.`);
+  let mailed = "";
+  if (fd.get("notify") === "on") {
+    try {
+      await sendTrialEmail(email, days, `${await appBase()}/login`);
+      mailed = " The welcome email was sent.";
+    } catch (e) {
+      console.error("trial email failed", e);
+      mailed = " The welcome email could not be sent.";
+    }
+  }
+  done(fd, "students", `${email} has ${days} day${days === 1 ? "" : "s"} of access from now.${mailed}`);
 }
 
 export async function revokeAccess(fd: FormData) {
