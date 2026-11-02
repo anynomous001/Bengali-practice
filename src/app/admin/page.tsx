@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getUser } from "@/lib/auth";
 import { query } from "@/lib/db";
-import { addStudent, grantYear, inviteSomeone, removeStudent, resolveFeedback, revokeAccess, setBuddies } from "./actions";
+import { addStudent, grantTrial, grantYear, inviteSomeone, removeStudent, resolveFeedback, revokeAccess, setBuddies } from "./actions";
 import Icon from "../learn/Icon";
 import Toast from "../Toast";
 import { loadTeacherView } from "@/lib/activity";
@@ -143,6 +143,13 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
               <input name="note" placeholder="Note (optional, e.g. paid via PayPal)" maxLength={200} aria-label="Note" />
               <label className="adm-check"><input type="checkbox" name="grant" defaultChecked /> Give 12 months of access from today</label>
               <button className="btn">Add student</button>
+            </form>
+            <form action={grantTrial} className="adm-card stack">
+              <h2>Give a short trial</h2>
+              <p className="muted">Access for a few days, counted from now. Works for new emails and for existing students (it adds to what they have).</p>
+              <input name="email" type="email" required placeholder="someone@example.com" aria-label="Trial email" />
+              <select name="days" defaultValue="1" aria-label="Length of the trial"><option value="1">1 day</option><option value="3">3 days</option><option value="7">7 days</option><option value="14">14 days</option></select>
+              <button className="btn">Give trial access</button>
             </form>
             <form action={inviteSomeone} className="adm-card stack">
               <h2>Invite someone</h2>

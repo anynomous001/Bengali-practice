@@ -47,6 +47,20 @@ export async function grantYear(fd: FormData) {
   done(fd, "students", `12 months added for ${emailOf(fd)}.`);
 }
 
+/** A short trial: gives access for a number of days from now (or from the current expiry if that is later), and adds the person if they are new. */
+export async function grantTrial(fd: FormData) {
+  await requireAdmin();
+  const email = emailOf(fd);
+  if (!validEmail(email)) done(fd, "students", "That email address doesn't look right.");
+  const days = [1, 3, 7, 14].includes(Number(fd.get("days"))) ? Number(fd.get("days")) : 1;
+  await query(
+    `INSERT INTO students (email, note, access_expires_at) VALUES ($1, $2, now() + make_interval(days => $3))
+     ON CONFLICT (email) DO UPDATE SET access_expires_at = GREATEST(now(), COALESCE(students.access_expires_at, now())) + make_interval(days => $3)`,
+    [email, `${days}-day trial`, days],
+  );
+  done(fd, "students", `${email} has ${days} day${days === 1 ? "" : "s"} of access from now.`);
+}
+
 export async function revokeAccess(fd: FormData) {
   await requireAdmin();
   await query("UPDATE students SET access_expires_at = NULL WHERE email = $1", [emailOf(fd)]);
