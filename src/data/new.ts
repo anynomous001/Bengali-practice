@@ -5,6 +5,8 @@ export const NEW_FOR_DAYS = 30;
 
 export const ADDED: Record<string, string> = {
   "grammar/drills": "2026-10-27",
+  "grammar/fill-blanks": "2026-11-04",
+  "grammar/mixed-translate": "2026-11-04",
   "goal:passion": "2026-10-22",
   "goal:clinical": "2026-10-24",
   "goal:bangladesh": "2026-10-28",

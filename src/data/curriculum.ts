@@ -154,6 +154,8 @@ export const COURSES: Course[] = [
       { id: "classwork", title: "Class exercises", blurb: "The kinds of exercises done in class: build, fix, translate, transform and combine sentences.", lessons: CLASSWORK.map((c): Lesson => ({ id: `grammar/class-${c.id}`, title: c.title, blurb: c.blurb, href: `/learn/grammar/class/${c.id}`, kind: "Practice" })) },
       { id: "translate", title: "Translation", blurb: "Turn English into Bengali and Bengali into English, quickly and often.", lessons: [
         { id: "grammar/translate", title: "Quick translation", blurb: "Ten sentences a round, in either direction. Pick the answer, or think it and check.", href: "/learn/grammar/translate", kind: "Practice" },
+        { id: "grammar/fill-blanks", title: "Fill in the blanks: mixed tenses", blurb: "A story in every tense. Choose the right form of each verb, or say the sentence and check.", href: "/learn/grammar/fill-blanks", kind: "Practice" },
+        { id: "grammar/mixed-translate", title: "Translate: mixed tenses", blurb: "Ten English sentences in different tenses to turn into Bengali, one at a time or as a worksheet.", href: "/learn/grammar/mixed-translate", kind: "Practice" },
         { id: "grammar/drills", title: "Translation drills by tense", blurb: "Worksheets of English sentences to turn into Bengali. Pick your tenses, then easy, medium, hard or a step-up round.", href: "/learn/grammar/drills", kind: "Practice" },
       ] },
       { id: "devotional", devotional: true, title: "Devotional practice", blurb: "Complete lines, say things politely and spell devotional words the Bengali way. Kept separate from the main course.", lessons:

@@ -245,6 +245,15 @@ export async function finishKidsQuiz(topic: string, score: number, total: number
   if (score >= Math.ceil(total * 0.7)) await completeLesson(user.email, lesson);
 }
 
+/** A finished mixed-tense set (fill in the blanks, or translate). 70 percent completes the lesson. */
+export async function finishTenseSet(kind: string, score: number, total: number) {
+  const user = await getUser();
+  const lesson = kind === "fill" ? "grammar/fill-blanks" : kind === "translate" ? "grammar/mixed-translate" : null;
+  if (!user?.hasAccess || !lesson || !Number.isFinite(score) || !Number.isFinite(total) || total < 5) return;
+  await recordActivity(user.email, "quiz", lesson, { pass: score >= Math.ceil(total * 0.7) });
+  if (score >= Math.ceil(total * 0.7)) await completeLesson(user.email, lesson);
+}
+
 export async function finishDrill(score: number, total: number) {
   const user = await getUser();
   if (!user?.hasAccess || !Number.isFinite(score) || !Number.isFinite(total) || total < 8) return;

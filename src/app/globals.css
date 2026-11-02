@@ -1242,3 +1242,10 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
   .app[data-rail="off"] .lp-content { margin-inline:auto; }
   .app[data-rail="off"]:has(.lp-outline) .lc-rail.lc-out { display:inline-flex; position:fixed; top:14px; right:18px; z-index:30; }
 }
+
+.kk-sentence { font-family: var(--font-bn); font-size: clamp(1.3rem, 3.4vw, 1.7rem); line-height: 1.9; margin: 12px 0 4px; }
+.kk-blank { color: var(--ink-2); font-weight: 600; } .kk-blank small { font-family: var(--font-ui); font-size: .8rem; font-weight: 500; }
+.kk-blank.on { color: var(--seg, var(--primary)); background: color-mix(in srgb, var(--seg, var(--primary)) 14%, transparent); border-radius: 8px; padding: 0 6px; }
+.kk-filled { color: var(--ok); }
+.kk-opt-bn { font-family: var(--font-bn); font-weight: 800; font-size: 1.5rem; display: block; }
+.kk-shake { animation: kk-shake .45s; } @keyframes kk-shake { 20%, 60% { transform: translateX(-7px); } 40%, 80% { transform: translateX(7px); } }
