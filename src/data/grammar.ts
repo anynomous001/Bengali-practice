@@ -811,24 +811,24 @@ export const GRAMMAR: GrammarTopic[] = [
        [
         "Simple past",
         {
-         "bn": "করলাম",
-         "ro": "korlam"
+         "bn": "করেছিলাম",
+         "ro": "korechhilam"
         },
         {
-         "bn": "করলি",
-         "ro": "korli"
+         "bn": "করেছিলি",
+         "ro": "korechhili"
         },
         {
-         "bn": "করলে",
-         "ro": "korle"
+         "bn": "করেছিলে",
+         "ro": "korechhile"
         },
         {
-         "bn": "করলেন",
-         "ro": "korlen"
+         "bn": "করেছিলেন",
+         "ro": "korechhilen"
         },
         {
-         "bn": "করল",
-         "ro": "korlo"
+         "bn": "করেছিল",
+         "ro": "korechhilo"
         }
        ],
        [
@@ -852,29 +852,6 @@ export const GRAMMAR: GrammarTopic[] = [
         {
          "bn": "করছিল",
          "ro": "korchhilo"
-        }
-       ],
-       [
-        "Past perfect",
-        {
-         "bn": "করেছিলাম",
-         "ro": "korechhilam"
-        },
-        {
-         "bn": "করেছিলি",
-         "ro": "korechhili"
-        },
-        {
-         "bn": "করেছিলে",
-         "ro": "korechhile"
-        },
-        {
-         "bn": "করেছিলেন",
-         "ro": "korechhilen"
-        },
-        {
-         "bn": "করেছিল",
-         "ro": "korechhilo"
         }
        ],
        [

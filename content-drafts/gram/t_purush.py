@@ -50,7 +50,8 @@ TOPICS = [finish(dict(id="purush", title=("পুরুষ", "Purush", "Person &
    H("One verb through all the persons"),
    P("Here is করা (to do) in all the main tenses, so you can see the root কর stay still while the ending moves. The tenses with -ছ- show something going on, the ones with -ছিল- belong to the past, and the future tenses use -ব-."),
    TABLE(["Tense", "আমি", "তুই", "তুমি", "আপনি / তিনি", "সে"], [
-     [en] + VERBS["kora"]["f"][tid] for tid, bn, ro, en in TENSES if tid in ("pres", "cont", "perf", "past", "pastcont", "pastperf", "fut", "futcont")
+     [label] + VERBS["kora"]["f"][tid] for label, tid in (("Simple present", "pres"), ("Present continuous", "cont"), ("Present perfect", "perf"),
+       ("Simple past", "pastperf"), ("Past continuous", "pastcont"), ("Simple future", "fut"), ("Future continuous", "futcont"))  # simple past is the -েছিলাম form, as the teacher teaches it
    ], "করা (kora), to do"),
    H("Hear the person in the ending"),
    P("Because the ending names the person, a short sentence with no pronoun is still complete. Cover the English and say who is doing each action."),
