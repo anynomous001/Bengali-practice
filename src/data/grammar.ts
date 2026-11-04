@@ -725,7 +725,7 @@ export const GRAMMAR: GrammarTopic[] = [
      },
      {
       "t": "p",
-      "text": "Here is করা (to do) in five common tenses, so you can see the root কর stay still while the ending moves."
+      "text": "Here is করা (to do) in all the main tenses, so you can see the root কর stay still while the ending moves. The tenses with -ছ- show something going on, the ones with -ছিল- belong to the past, and the future tenses use -ব-."
      },
      {
       "t": "table",
@@ -786,6 +786,29 @@ export const GRAMMAR: GrammarTopic[] = [
         }
        ],
        [
+        "Present perfect",
+        {
+         "bn": "করেছি",
+         "ro": "korechhi"
+        },
+        {
+         "bn": "করেছিস",
+         "ro": "korechhis"
+        },
+        {
+         "bn": "করেছ",
+         "ro": "korechho"
+        },
+        {
+         "bn": "করেছেন",
+         "ro": "korechhen"
+        },
+        {
+         "bn": "করেছে",
+         "ro": "korechhe"
+        }
+       ],
+       [
         "Simple past",
         {
          "bn": "করলাম",
@@ -809,26 +832,49 @@ export const GRAMMAR: GrammarTopic[] = [
         }
        ],
        [
-        "Past habitual",
+        "Past continuous",
         {
-         "bn": "করতাম",
-         "ro": "kortam"
+         "bn": "করছিলাম",
+         "ro": "korchhilam"
         },
         {
-         "bn": "করতিস",
-         "ro": "kortis"
+         "bn": "করছিলি",
+         "ro": "korchhili"
         },
         {
-         "bn": "করতে",
-         "ro": "korte"
+         "bn": "করছিলে",
+         "ro": "korchhile"
         },
         {
-         "bn": "করতেন",
-         "ro": "korten"
+         "bn": "করছিলেন",
+         "ro": "korchhilen"
         },
         {
-         "bn": "করত",
-         "ro": "korto"
+         "bn": "করছিল",
+         "ro": "korchhilo"
+        }
+       ],
+       [
+        "Past perfect",
+        {
+         "bn": "করেছিলাম",
+         "ro": "korechhilam"
+        },
+        {
+         "bn": "করেছিলি",
+         "ro": "korechhili"
+        },
+        {
+         "bn": "করেছিলে",
+         "ro": "korechhile"
+        },
+        {
+         "bn": "করেছিলেন",
+         "ro": "korechhilen"
+        },
+        {
+         "bn": "করেছিল",
+         "ro": "korechhilo"
         }
        ],
        [
@@ -852,6 +898,29 @@ export const GRAMMAR: GrammarTopic[] = [
         {
          "bn": "করবে",
          "ro": "korbe"
+        }
+       ],
+       [
+        "Future continuous",
+        {
+         "bn": "করতে থাকব",
+         "ro": "korte thakbo"
+        },
+        {
+         "bn": "করতে থাকবি",
+         "ro": "korte thakbi"
+        },
+        {
+         "bn": "করতে থাকবে",
+         "ro": "korte thakbe"
+        },
+        {
+         "bn": "করতে থাকবেন",
+         "ro": "korte thakben"
+        },
+        {
+         "bn": "করতে থাকবে",
+         "ro": "korte thakbe"
         }
        ]
       ]

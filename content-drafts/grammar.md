@@ -139,7 +139,7 @@ Each tense has its own set of five endings, one for each person. They always com
 | Past habitual | -তাম _(-tam)_ | -তিস _(-tis)_ | -তে _(-te)_ | -তেন _(-ten)_ | -ত _(-to)_ |
 | Simple future | -ব _(-bo)_ | -বি _(-bi)_ | -বে _(-be)_ | -বেন _(-ben)_ | -বে _(-be)_ |
 
-Here is করা (to do) in five common tenses, so you can see the root কর stay still while the ending moves.
+Here is করা (to do) in all the main tenses, so you can see the root কর stay still while the ending moves. The tenses with -ছ- show something going on, the ones with -ছিল- belong to the past, and the future tenses use -ব-.
 
 **করা (kora), to do**
 
@@ -147,9 +147,12 @@ Here is করা (to do) in five common tenses, so you can see the root কর 
 |---|---|---|---|---|---|
 | Simple present | করি _(kori)_ | করিস _(koris)_ | করো _(koro)_ | করেন _(koren)_ | করে _(kore)_ |
 | Present continuous | করছি _(korchhi)_ | করছিস _(korchhis)_ | করছ _(korchho)_ | করছেন _(korchhen)_ | করছে _(korchhe)_ |
+| Present perfect | করেছি _(korechhi)_ | করেছিস _(korechhis)_ | করেছ _(korechho)_ | করেছেন _(korechhen)_ | করেছে _(korechhe)_ |
 | Simple past | করলাম _(korlam)_ | করলি _(korli)_ | করলে _(korle)_ | করলেন _(korlen)_ | করল _(korlo)_ |
-| Past habitual | করতাম _(kortam)_ | করতিস _(kortis)_ | করতে _(korte)_ | করতেন _(korten)_ | করত _(korto)_ |
+| Past continuous | করছিলাম _(korchhilam)_ | করছিলি _(korchhili)_ | করছিলে _(korchhile)_ | করছিলেন _(korchhilen)_ | করছিল _(korchhilo)_ |
+| Past perfect | করেছিলাম _(korechhilam)_ | করেছিলি _(korechhili)_ | করেছিলে _(korechhile)_ | করেছিলেন _(korechhilen)_ | করেছিল _(korechhilo)_ |
 | Simple future | করব _(korbo)_ | করবি _(korbi)_ | করবে _(korbe)_ | করবেন _(korben)_ | করবে _(korbe)_ |
+| Future continuous | করতে থাকব _(korte thakbo)_ | করতে থাকবি _(korte thakbi)_ | করতে থাকবে _(korte thakbe)_ | করতে থাকবেন _(korte thakben)_ | করতে থাকবে _(korte thakbe)_ |
 
 Because the ending names the person, a short sentence with no pronoun is still complete. Cover the English and say who is doing each action.
 

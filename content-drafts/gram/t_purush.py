@@ -48,9 +48,9 @@ TOPICS = [finish(dict(id="purush", title=("পুরুষ", "Purush", "Person &
    TABLE(["Tense", "আমি", "তুই", "তুমি", "আপনি / তিনি", "সে"],
      [[en] + [c(("◌" if e[0][0] in "ািীুূৃেৈোৌ" else "-") + e[0], "-" + e[1]) for e in ENDINGS[tid]] for tid, bn, ro, en in TENSES if tid in ENDINGS], "Verb endings by tense and person"),
    H("One verb through all the persons"),
-   P("Here is করা (to do) in five common tenses, so you can see the root কর stay still while the ending moves."),
+   P("Here is করা (to do) in all the main tenses, so you can see the root কর stay still while the ending moves. The tenses with -ছ- show something going on, the ones with -ছিল- belong to the past, and the future tenses use -ব-."),
    TABLE(["Tense", "আমি", "তুই", "তুমি", "আপনি / তিনি", "সে"], [
-     [en] + VERBS["kora"]["f"][tid] for tid, bn, ro, en in TENSES if tid in ("pres", "cont", "past", "habit", "fut")
+     [en] + VERBS["kora"]["f"][tid] for tid, bn, ro, en in TENSES if tid in ("pres", "cont", "perf", "past", "pastcont", "pastperf", "fut", "futcont")
    ], "করা (kora), to do"),
    H("Hear the person in the ending"),
    P("Because the ending names the person, a short sentence with no pronoun is still complete. Cover the English and say who is doing each action."),
