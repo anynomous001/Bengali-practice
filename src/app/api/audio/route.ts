@@ -6,7 +6,7 @@ import { audioId } from "@/lib/audio";
 // Pronunciation clips live in content-audio/ (not in public/), so only signed-in students with access can fetch them.
 export async function GET(req: Request) {
   const user = await getUser();
-  if (!user?.hasAccess) return new Response("Not allowed", { status: 401 });
+  if (!user?.hasAccess && !user?.preview) return new Response("Not allowed", { status: 401 });
   const params = new URL(req.url).searchParams;
   const text = params.get("t") ?? "";
   const variant = params.get("v") === "slow" ? "slow" : "";

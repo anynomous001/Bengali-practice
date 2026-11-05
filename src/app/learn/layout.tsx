@@ -11,6 +11,7 @@ import MobileMenu from "./MobileMenu";
 import NavLinks from "./NavLinks";
 import { EnglishToggle, RomanProvider, RomanToggle } from "./Roman";
 import { RailToggle, SideToggle } from "./LayoutControls";
+import PreviewBanner from "./PreviewBanner";
 import ThemeToggle from "./ThemeToggle";
 import TzSync from "./TzSync";
 
@@ -19,7 +20,7 @@ export const metadata: Metadata = { robots: { index: false } };
 export default async function LearnLayout({ children }: { children: React.ReactNode }) {
   const user = await getUser();
   if (!user) redirect("/login");
-  if (!user.hasAccess) redirect("/access-ended");
+  if (!user.hasAccess && !user.preview) redirect("/access-ended");
 
   const jar = await cookies();
   const roman = jar.get("bp_roman")?.value !== "0"; // on unless the student turned it off
@@ -77,7 +78,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
           />
         </header>
 
-        <div className="main">{children}</div>
+        <div className="main">{user.preview && <PreviewBanner />}{children}</div>
 
         <nav className="tabbar" aria-label="Main"><NavLinks variant="tabs" /></nav>
       </div>

@@ -182,9 +182,9 @@ export default async function Home() {
           <p className="cr-lead">I&apos;m Pritam. I teach Bengali online, one to one. This is where my students practice between our lessons, and now you can too.</p>
           <div className="cr-cta">
             <BuyLink place="hero" className="cr-btn on-dark">Start learning · <Price usd={usd} inr={inr} /> for 12 months</BuyLink>
-            <a className="cr-btn ghost-dark" href="#try">Try a letter</a>
+            <Link className="cr-btn ghost-dark" href="/try">Look inside for free</Link>
           </div>
-          <p className="cr-fine-dark">Pay once for a year. No password, just an email link.</p>
+          <p className="cr-fine-dark">Pay once for a year. No password, just an email link. Or <a href="#try" style={{ color: "#fff" }}>try a letter</a> right here.</p>
           <div className="cr-hero-grid">
             <figure className="cr-first">
               <span className="cr-glyph" lang="bn">অ</span>

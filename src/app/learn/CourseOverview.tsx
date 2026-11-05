@@ -8,6 +8,7 @@ import { courseStats, getCourse } from "@/data/curriculum";
 import { loadStats } from "@/lib/activity";
 import Icon from "./Icon";
 import LessonStatus from "./LessonStatus";
+import { isPreviewLesson } from "@/data/preview";
 import ProgressBar from "./ProgressBar";
 
 /** The course home: progress, resume, what you will learn, and the full syllabus. */
@@ -81,7 +82,7 @@ export default async function CourseOverview({ courseId }: { courseId: string })
                 {m.lessons.map((l) => (
                   <li key={l.id}>
                     <Link href={l.href} className={done.has(l.id) ? "is-done" : ""}>
-                      <LessonStatus done={done.has(l.id)} />
+                      {user.preview && !isPreviewLesson(l.id) ? <span className="lock-mark" title="In the full course"><Icon name="lock" size={16} /></span> : <LessonStatus done={done.has(l.id)} />}
                       <span className="les-info"><b>{l.title}{l.tag && <span className="pth-tag">{l.tag}</span>}{isNew(l.id) && <NewTag />}</b><small>{l.blurb}</small></span>
                       <span className="kind">{l.kind}</span>
                     </Link>

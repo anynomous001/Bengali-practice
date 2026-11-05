@@ -36,6 +36,14 @@ const hash = (t: string) => createHash("sha256").update(t).digest("hex");
 type StudentRow = { email: string; access_expires_at: Date | null };
 
 /** Who may sign in: admins, and anyone on the student list (even if their access has expired). */
+/** Adds someone to the free preview (no paid access). Does nothing if they are already known. Returns false when too many people signed up in the last hour. */
+export async function enrollPreview(email: string): Promise<boolean> {
+  const recent = await query<{ n: string }>("SELECT count(*) AS n FROM students WHERE note = 'preview' AND created_at > now() - interval '1 hour'");
+  if (Number(recent[0].n) >= 200) return false;
+  await query("INSERT INTO students (email, note) VALUES ($1, 'preview') ON CONFLICT (email) DO NOTHING", [email]);
+  return true;
+}
+
 export async function canSignIn(email: string): Promise<boolean> {
   if (isAdminEmail(email)) return true;
   const rows = await query<StudentRow>("SELECT email FROM students WHERE email = $1", [email]);
@@ -90,7 +98,8 @@ export async function endSession() {
   (await cookies()).delete("bp_in");
 }
 
-export type User = { email: string; isAdmin: boolean; hasAccess: boolean; expiresAt: Date | null };
+/** `preview` is a signed-in visitor with no paid access, who may open the free sample lessons. */
+export type User = { email: string; isAdmin: boolean; hasAccess: boolean; preview: boolean; expiresAt: Date | null };
 
 /** Current user, re-checked against the database on every call so revocation is immediate. */
 export async function getUser(): Promise<User | null> {
@@ -115,5 +124,6 @@ export async function getUser(): Promise<User | null> {
     isAdmin,
     expiresAt,
     hasAccess: isAdmin || (!!expiresAt && expiresAt.getTime() > Date.now()),
+    preview: !isAdmin && expiresAt === null,
   };
 }

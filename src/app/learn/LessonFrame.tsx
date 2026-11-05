@@ -7,6 +7,8 @@ import NewTag from "./NewTag";
 import { isNew } from "@/data/new";
 import Icon from "./Icon";
 import LessonStatus from "./LessonStatus";
+import { isPreviewLesson } from "@/data/preview";
+import { getUser } from "@/lib/auth";
 import { RailToggle } from "./LayoutControls";
 import OnThisPage from "./OnThisPage";
 import ProgressBar from "./ProgressBar";
@@ -18,6 +20,7 @@ export default async function LessonFrame({ lessonId, toc, children }: { lessonI
   if (!at) notFound();
   const { course, module, lesson, prev, next } = at;
   const { done } = await loadLessonProgress();
+  const preview = !!(await getUser())?.preview;
   const isDev = !!module.devotional;
   const stats = courseStats(course, done, isDev); // devotional lessons have their own progress
   const courseHref = `/learn/${course.id}`;
@@ -63,7 +66,7 @@ export default async function LessonFrame({ lessonId, toc, children }: { lessonI
                   {m.lessons.map((l) => (
                     <li key={l.id}>
                       <Link href={l.href} aria-current={l.id === lesson.id ? "page" : undefined}>
-                        <LessonStatus done={done.has(l.id)} size={16} />
+                        {preview && !isPreviewLesson(l.id) ? <span className="lock-mark" title="In the full course"><Icon name="lock" size={16} /></span> : <LessonStatus done={done.has(l.id)} size={16} />}
                         <span>{l.title}{isNew(l.id) && <NewTag />}</span>
                       </Link>
                     </li>

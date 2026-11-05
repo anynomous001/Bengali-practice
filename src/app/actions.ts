@@ -28,6 +28,7 @@ import {
   consumeLoginToken,
   createLoginToken,
   endSession,
+  enrollPreview,
   getUser,
   normalizeEmail,
   startSession,
@@ -57,6 +58,25 @@ export async function requestLogin(_prev: FormState, formData: FormData): Promis
     return { message: "Something went wrong sending the email. Please try again shortly." };
   }
   return { ok: true, message: "If this email is enrolled, a sign-in link is on its way. Check your inbox." };
+}
+
+/** The free preview: anyone can sign up with an email and open the sample lessons. Same reply whatever happens, so nothing can be probed. */
+export async function requestPreview(_prev: FormState, formData: FormData): Promise<FormState> {
+  const email = normalizeEmail(String(formData.get("email") ?? ""));
+  if (!validEmail(email)) return { message: "Please enter a valid email address." };
+  try {
+    if (await enrollPreview(email)) {
+      const token = await createLoginToken(email);
+      if (token) {
+        const base = await appBase();
+        after(() => sendLoginEmail(email, `${base}/login/verify?token=${encodeURIComponent(token)}`).catch((e) => console.error("login email failed", e)));
+      }
+    }
+  } catch (e) {
+    console.error("requestPreview failed", e);
+    return { message: "Something went wrong sending the email. Please try again shortly." };
+  }
+  return { ok: true, message: "A sign-in link is on its way. Check your inbox (and spam) and press Sign in." };
 }
 
 export async function verifyLogin(formData: FormData) {

@@ -1,5 +1,6 @@
 import SessionHint from "../SessionHint";
 import type { Metadata } from "next";
+import Link from "next/link";
 import AuthFrame from "../AuthFrame";
 import LoginForm from "./LoginForm";
 
@@ -15,6 +16,7 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
       {error && <p className="msg bad">That sign-in link has expired or was already used. Request a new one.</p>}
       <p className="muted">Enter the email your teacher enrolled you with. We&apos;ll send you a one-time sign-in link: no password to remember.</p>
       <LoginForm />
+      <p className="muted">New here? <Link href="/try">Look inside for free</Link>.</p>
     </AuthFrame>
   );
 }
