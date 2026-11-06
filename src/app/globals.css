@@ -1249,3 +1249,31 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
 .kk-filled { color: var(--ok); }
 .kk-opt-bn { font-family: var(--font-bn); font-weight: 800; font-size: 1.5rem; display: block; }
 .kk-shake { animation: kk-shake .45s; } @keyframes kk-shake { 20%, 60% { transform: translateX(-7px); } 40%, 80% { transform: translateX(7px); } }
+
+/* free preview */
+.preview-banner { display:flex; align-items:center; flex-wrap:wrap; gap:10px 14px; margin:0 auto 22px; max-width:880px; padding:12px 16px; border-radius:14px; border:1px solid var(--line-2); background:light-dark(#fff7e0, #2a2410); color:var(--ink); font-size:.93rem; }
+.preview-banner svg { flex:none; color:var(--gold); } .preview-banner span { flex:1 1 260px; } .preview-banner .btn { margin:0; }
+.lock-mark { display:inline-grid; place-items:center; width:22px; color:var(--ink-2); flex:none; }
+.pv-list { list-style:none; margin:10px 0 0; padding:0; display:grid; gap:8px; max-width:640px; }
+.pv-list a { display:grid; gap:2px; padding:12px 14px; border:1px solid var(--line); border-radius:12px; background:var(--surface); color:var(--ink); text-decoration:none; } .pv-list a:hover { border-color:var(--primary); } .pv-list small { color:var(--ink-2); }
+
+/* conjuncts */
+.cj-table { margin:14px 0 22px; border:1px solid var(--line); border-radius:16px; overflow:hidden; background:var(--surface); }
+.cj-head, .cj-row { display:grid; grid-template-columns:90px 130px minmax(0, 1fr); gap:14px; align-items:center; padding:12px 16px; }
+.cj-head { background:var(--surface-2); font:600 .78rem var(--font-ui); letter-spacing:.06em; text-transform:uppercase; color:var(--ink-2); }
+.cj-row { border-top:1px solid var(--line); }
+.cj-head.story, .cj-row.story { grid-template-columns:minmax(150px, 1.2fr) 80px 90px minmax(0, 1.4fr); }
+.cj-conj { font:700 2.4rem/1.2 var(--font-bn); color:var(--seg, var(--primary)); }
+.cj-parts { font:600 1.1rem var(--font-bn); color:var(--ink-2); display:grid; } .cj-parts small { font:500 .75rem var(--font-ui); }
+.cj-words { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:8px; }
+.cj-word { display:inline-grid; grid-auto-flow:column; align-items:baseline; gap:2px 8px; padding:6px 12px; border:1px solid var(--line-2); border-radius:12px; background:var(--bg); color:var(--ink); font:inherit; cursor:pointer; text-align:left; }
+.cj-word:hover { border-color:var(--primary); } .cj-word b { font:700 1.25rem var(--font-bn); } .cj-word i { font-style:normal; color:var(--ink-2); font-size:.85rem; } .cj-word small { color:var(--ink-2); } .cj-word svg { align-self:center; color:var(--ink-2); }
+@media (max-width:640px) { .cj-head { display:none; } .cj-row, .cj-row.story { grid-template-columns:70px minmax(0, 1fr); } .cj-row .cj-words, .cj-row.story > :nth-child(4) { grid-column:1 / -1; } .cj-row.story > :first-child { grid-column:1 / -1; } }
+.cj-names { display:grid; gap:10px; padding-left:1.1rem; } .cj-names em { font-style:normal; font-weight:700; }
+.cj-story { font:500 1.35rem/2.1 var(--font-bn); margin:0 0 14px; } .cj-story mark { background:color-mix(in srgb, var(--seg, var(--primary)) 22%, transparent); color:inherit; border-radius:6px; padding:0 4px; font-weight:700; }
+.cj-match { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:12px 0; } .cj-match ol, .cj-match ul { list-style:none; margin:0; padding:0; display:grid; gap:8px; align-content:start; }
+.cj-mb { width:100%; display:grid; justify-items:start; gap:1px; padding:10px 14px; border:2px solid var(--line-2); border-radius:14px; background:var(--surface); color:var(--ink); font:inherit; cursor:pointer; text-align:left; min-height:52px; }
+.cj-mb b { font:700 1.35rem var(--font-bn); } .cj-mb i { font-style:normal; color:var(--ink-2); font-size:.85rem; } .cj-mb small { color:var(--ink-2); }
+.cj-mb.on { border-color:var(--primary); background:color-mix(in srgb, var(--primary) 10%, var(--surface)); } .cj-mb.ok { border-color:var(--ok); background:color-mix(in srgb, var(--ok) 14%, var(--surface)); opacity:.75; cursor:default; }
+.cj-big { font:700 clamp(2.4rem, 8vw, 3.6rem)/1.3 var(--font-bn); border:0; background:none; color:var(--ink); padding:0; cursor:pointer; }
+span.cj-big { cursor:default; color:var(--seg, var(--primary)); }
