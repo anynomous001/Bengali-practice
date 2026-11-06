@@ -274,6 +274,14 @@ export async function finishTenseSet(kind: string, score: number, total: number)
   if (score >= Math.ceil(total * 0.7)) await completeLesson(user.email, lesson);
 }
 
+/** A finished conjunct quiz. Seven in ten completes the lesson. */
+export async function finishConjunctQuiz(score: number, total: number) {
+  const user = await getUser();
+  if (!user?.hasAccess || !Number.isFinite(score) || !Number.isFinite(total) || total < 4) return;
+  await recordActivity(user.email, "quiz", "reading/conj-quiz", { pass: score >= Math.ceil(total * 0.7) });
+  if (score >= Math.ceil(total * 0.7)) await completeLesson(user.email, "reading/conj-quiz");
+}
+
 export async function finishDrill(score: number, total: number) {
   const user = await getUser();
   if (!user?.hasAccess || !Number.isFinite(score) || !Number.isFinite(total) || total < 8) return;
