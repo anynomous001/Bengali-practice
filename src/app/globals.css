@@ -1272,3 +1272,4 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
 span.cj-big { cursor:default; color:var(--seg, var(--primary)); }
 .pv-list { list-style:none; margin:10px 0 0; padding:0; display:grid; gap:8px; max-width:640px; }
 .pv-list a { display:grid; gap:2px; padding:12px 14px; border:1px solid var(--line); border-radius:12px; background:var(--surface); color:var(--ink); text-decoration:none; } .pv-list a:hover { border-color:var(--primary); } .pv-list small { color:var(--ink-2); }
+.story-conj { margin-top:36px; }

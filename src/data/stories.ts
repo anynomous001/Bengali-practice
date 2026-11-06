@@ -1545,3 +1545,7 @@ export const STORIES: Story[] = [
     ]
   }
 ];
+
+// Stories shared by Brian (graded reader), added after the fables.
+import { READER_STORIES } from "./stories-reader";
+STORIES.push(...READER_STORIES);

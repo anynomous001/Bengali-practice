@@ -4,8 +4,8 @@ import { speak } from "@/lib/speak";
 import Icon from "./Icon";
 import { useRoman } from "./Roman";
 
-type Word = { bn: string; ro: string; en: string };
-type Row = { id: string; conj: string; parts: string[]; words: Word[] };
+type Word = { bn: string; ro?: string; en?: string };
+type Row = { id: string; conj: string; parts: string[]; words: Word[]; group?: string };
 
 /** The conjuncts of one group: the conjunct, the letters it is made of, and example words you can hear. */
 export default function ConjunctTable({ rows, typeLabel }: { rows: Row[]; typeLabel?: string }) {
@@ -16,14 +16,14 @@ export default function ConjunctTable({ rows, typeLabel }: { rows: Row[]; typeLa
       {rows.map((r) => (
         <div className="cj-row" role="row" key={r.id}>
           <span className="cj-conj" lang="bn" role="cell">{r.conj}</span>
-          <span className="cj-parts" lang="bn" role="cell">{r.parts.join(" + ")}{typeLabel && <small>{typeLabel}</small>}</span>
+          <span className="cj-parts" lang="bn" role="cell">{r.parts.join(" + ")}{(r.group ?? typeLabel) && <small>{r.group ?? typeLabel}</small>}</span>
           <ul className="cj-words" role="cell">
             {r.words.map((w) => (
               <li key={w.bn}>
-                <button type="button" className="cj-word" onClick={() => speak(w.bn)} aria-label={`Hear ${w.ro}`}>
+                <button type="button" className="cj-word" onClick={() => speak(w.bn)} aria-label={`Hear ${w.ro ?? w.bn}`}>
                   <b lang="bn">{w.bn}</b>
-                  {roman && <i>{w.ro}</i>}
-                  {english && <small>{w.en}</small>}
+                  {roman && w.ro && <i>{w.ro}</i>}
+                  {english && w.en && <small>{w.en}</small>}
                   <Icon name="sound" size={14} />
                 </button>
               </li>

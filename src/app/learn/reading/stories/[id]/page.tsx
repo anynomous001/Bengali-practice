@@ -4,6 +4,7 @@ import { loadStoryProgress } from "@/lib/progress";
 import { STORIES } from "@/data/stories";
 import StoryReader from "./StoryReader";
 import LessonFrame from "../../../LessonFrame";
+import StoryConjuncts from "../../../StoryConjuncts";
 
 export default async function StoryPage({ params }: { params: Promise<{ id: string }> }) {
   await requireAccess();
@@ -14,6 +15,7 @@ export default async function StoryPage({ params }: { params: Promise<{ id: stri
   return (
     <LessonFrame lessonId={`reading/story-${story.id}`}>
       <StoryReader story={story} best={best} />
+      <StoryConjuncts story={story} />
     </LessonFrame>
   );
 }
