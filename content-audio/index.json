@@ -839,50 +839,6 @@
   "text": "প্রতিবেশী",
   "from": "vocab family"
  },
- "444e2b4f4a60b25e": {
-  "text": "ইনি আমার মা।",
-  "from": "vocab family phrase"
- },
- "415f16f670ae06c2": {
-  "text": "আমার একটা ছোট ভাই আছে।",
-  "from": "vocab family phrase"
- },
- "26769814a73c6eef": {
-  "text": "তোমার বাড়িতে কে কে আছে?",
-  "from": "vocab family phrase"
- },
- "c8587a169c74a192": {
-  "text": "আমার বাবা অফিসে কাজ করেন।",
-  "from": "vocab family phrase"
- },
- "7af714f0e32b28d8": {
-  "text": "আমার মা খুব ভালো রান্না করেন।",
-  "from": "vocab family phrase"
- },
- "0c1bbdba26a6c17a": {
-  "text": "ঠাকুমা আমাকে গল্প শোনান।",
-  "from": "vocab family phrase"
- },
- "3c6b3f3a535f208e": {
-  "text": "আমার দিদি কলেজে পড়ে।",
-  "from": "vocab family phrase"
- },
- "1b1684c4d0ba5e4f": {
-  "text": "মামা কাল আমাদের বাড়িতে আসবেন।",
-  "from": "vocab family phrase"
- },
- "db268413d0c028c4": {
-  "text": "তোমার কয়টা ভাইবোন?",
-  "from": "vocab family phrase"
- },
- "12172abe41158e46": {
-  "text": "আমার বন্ধু আমার প্রতিবেশী।",
-  "from": "vocab family phrase"
- },
- "18510414caf575d0": {
-  "text": "আমার পরিবারে পাঁচজন লোক।",
-  "from": "vocab family phrase"
- },
  "82f6cac221fa1ba2": {
   "text": "মানুষ",
   "from": "vocab people"
@@ -1002,50 +958,6 @@
  "5b92fb3389345658": {
   "text": "পুরোহিত",
   "from": "vocab people"
- },
- "4ee6a78c50e68245": {
-  "text": "আপনি কী করেন?",
-  "from": "vocab people phrase"
- },
- "9cc5b5c48a24cca0": {
-  "text": "আমি শিক্ষক।",
-  "from": "vocab people phrase"
- },
- "905cd8d0ab56fe1a": {
-  "text": "উনি ডাক্তার।",
-  "from": "vocab people phrase"
- },
- "5451b214951ae02a": {
-  "text": "আমার বাবা একজন শিক্ষক।",
-  "from": "vocab people phrase"
- },
- "d16fbc36b6fb86c2": {
-  "text": "ডাক্তার ওষুধ দিলেন।",
-  "from": "vocab people phrase"
- },
- "5bf41ea165195aa4": {
-  "text": "চাষি মাঠে কাজ করছে।",
-  "from": "vocab people phrase"
- },
- "f1972d0ee793272c": {
-  "text": "জেলে নদীতে মাছ ধরছে।",
-  "from": "vocab people phrase"
- },
- "0df0625cb1a49f9f": {
-  "text": "ড্রাইভার গাড়ি চালাচ্ছে।",
-  "from": "vocab people phrase"
- },
- "04f74707f61866b7": {
-  "text": "আমার ছেলে ইঞ্জিনিয়ার হতে চায়।",
-  "from": "vocab people phrase"
- },
- "eb4f0314769de9f0": {
-  "text": "অতিথিরা এসে গেছেন।",
-  "from": "vocab people phrase"
- },
- "b4ccbc337a90cd07": {
-  "text": "শিল্পী ছবি আঁকছেন।",
-  "from": "vocab people phrase"
  },
  "2de8647492279cde": {
   "text": "মাথা",
@@ -1191,50 +1103,6 @@
   "text": "ওষুধ",
   "from": "vocab body"
  },
- "b5f570ca0ae6c670": {
-  "text": "আমার মাথা ব্যথা করছে।",
-  "from": "vocab body phrase"
- },
- "2d84b33f085892a0": {
-  "text": "আমার জ্বর হয়েছে।",
-  "from": "vocab body phrase"
- },
- "2862660947a9d54c": {
-  "text": "আমার পেটে ব্যথা।",
-  "from": "vocab body phrase"
- },
- "070f665be90eb858": {
-  "text": "আমার কান ব্যথা করছে।",
-  "from": "vocab body phrase"
- },
- "4387877488ebf861": {
-  "text": "তোমার হাত ধুয়ে নাও।",
-  "from": "vocab body phrase"
- },
- "50efedf5d37629d1": {
-  "text": "তুমি কি দাঁত মেজেছ?",
-  "from": "vocab body phrase"
- },
- "6f7864ed5afcaf8b": {
-  "text": "ডাক্তার বললেন, ওষুধ খেতে হবে।",
-  "from": "vocab body phrase"
- },
- "d3ad27156bf02fa7": {
-  "text": "আমার পা কেটে গেছে, রক্ত পড়ছে।",
-  "from": "vocab body phrase"
- },
- "34937fd255a61380": {
-  "text": "তার চোখ দুটো খুব সুন্দর।",
-  "from": "vocab body phrase"
- },
- "e612ad731c90cf88": {
-  "text": "আমার গলা ব্যথা করছে।",
-  "from": "vocab body phrase"
- },
- "2c577021e08c329f": {
-  "text": "আমার সর্দি-কাশি হয়েছে।",
-  "from": "vocab body phrase"
- },
  "0be196e674f8a38e": {
   "text": "খুশি",
   "from": "vocab feelings"
@@ -1302,50 +1170,6 @@
  "57c631fbc4831e8a": {
   "text": "একা",
   "from": "vocab feelings"
- },
- "be9e6edae5aceecb": {
-  "text": "আমার খুব খিদে পেয়েছে।",
-  "from": "vocab feelings phrase"
- },
- "d2e3cb9c661473e5": {
-  "text": "আমার ঘুম পাচ্ছে।",
-  "from": "vocab feelings phrase"
- },
- "ab051eac17222cf4": {
-  "text": "আমি খুব খুশি।",
-  "from": "vocab feelings phrase"
- },
- "518d6df15644bed5": {
-  "text": "সে খুব রেগে গেছে।",
-  "from": "vocab feelings phrase"
- },
- "da1806feaa564568": {
-  "text": "আমার ভয় করছে।",
-  "from": "vocab feelings phrase"
- },
- "5e10649fe10c2b51": {
-  "text": "আমি খুব ক্লান্ত, আমি ঘুমাব।",
-  "from": "vocab feelings phrase"
- },
- "de52223e6aeef44c": {
-  "text": "আমার তেষ্টা পেয়েছে, জল দাও।",
-  "from": "vocab feelings phrase"
- },
- "501e7d00805059aa": {
-  "text": "তুমি কি অসুস্থ?",
-  "from": "vocab feelings phrase"
- },
- "16bb1f9121d8ddb0": {
-  "text": "আমি তোমাকে নিয়ে চিন্তা করছি।",
-  "from": "vocab feelings phrase"
- },
- "310e67749012500e": {
-  "text": "সে একা থাকতে ভালোবাসে।",
-  "from": "vocab feelings phrase"
- },
- "990115217239afd7": {
-  "text": "খবরটা শুনে আমি অবাক হলাম।",
-  "from": "vocab feelings phrase"
  },
  "15b7803460a15483": {
   "text": "খাবার",
@@ -1491,50 +1315,6 @@
   "text": "সুস্বাদু",
   "from": "vocab food"
  },
- "ae2eed5b730f0303": {
-  "text": "আমি ভাত খাই।",
-  "from": "vocab food phrase"
- },
- "7b3e742345f1b60b": {
-  "text": "আমাকে এক গ্লাস জল দিন।",
-  "from": "vocab food phrase"
- },
- "bc1a92ec99724645": {
-  "text": "ঝালটা একটু কম দেবেন।",
-  "from": "vocab food phrase"
- },
- "677a2313e036d405": {
-  "text": "আমি রোজ সকালে চা খাই।",
-  "from": "vocab food phrase"
- },
- "f9cbf2e828d7c0c3": {
-  "text": "মা ডাল আর ভাত রান্না করেছেন।",
-  "from": "vocab food phrase"
- },
- "e12b72bf1d00bca9": {
-  "text": "আমি ঝোল ভাত খেতে ভালোবাসি।",
-  "from": "vocab food phrase"
- },
- "769d31fdaf7ab0cf": {
-  "text": "রুটির সঙ্গে তরকারি দাও।",
-  "from": "vocab food phrase"
- },
- "291ffca220e2f7f6": {
-  "text": "দুধে একটু চিনি দিন।",
-  "from": "vocab food phrase"
- },
- "b5e159722c552ee3": {
-  "text": "খাবারটা খুব সুস্বাদু হয়েছে।",
-  "from": "vocab food phrase"
- },
- "4b0c4508030a1bc6": {
-  "text": "এই তরকারিতে নুন কম।",
-  "from": "vocab food phrase"
- },
- "9e8893a7c882ff5a": {
-  "text": "আমি আজ খিচুড়ি খাব।",
-  "from": "vocab food phrase"
- },
  "62baebfe9f4d1de7": {
   "text": "রুই",
   "from": "vocab fish-meat"
@@ -1610,50 +1390,6 @@
  "46d84a3add4910cc": {
   "text": "জাল",
   "from": "vocab fish-meat"
- },
- "4875a8573e2e4f38": {
-  "text": "আমি ইলিশ মাছ ভালোবাসি।",
-  "from": "vocab fish-meat phrase"
- },
- "6d860ec1a3acdf06": {
-  "text": "মাছটা কত করে কিলো?",
-  "from": "vocab fish-meat phrase"
- },
- "72eca09b8cadacf4": {
-  "text": "এটা কি ভেটকি?",
-  "from": "vocab fish-meat phrase"
- },
- "f79db3fe46d6eadf": {
-  "text": "আজ বাজারে ভালো ইলিশ পাওয়া যাচ্ছে।",
-  "from": "vocab fish-meat phrase"
- },
- "3ab3ea66a26589d6": {
-  "text": "আমি মাছ খাই কিন্তু মাংস খাই না।",
-  "from": "vocab fish-meat phrase"
- },
- "bc758e09bb424293": {
-  "text": "মা রুই মাছের ঝোল রেঁধেছেন।",
-  "from": "vocab fish-meat phrase"
- },
- "828879785eb92116": {
-  "text": "চিংড়ি মাছের দাম অনেক বেশি।",
-  "from": "vocab fish-meat phrase"
- },
- "752ed7b561addad6": {
-  "text": "মুরগির মাংস কি তাজা?",
-  "from": "vocab fish-meat phrase"
- },
- "607102fe68dee675": {
-  "text": "মাছের কাঁটা বেছে খেতে হয়।",
-  "from": "vocab fish-meat phrase"
- },
- "f62eaafc46cf1c5d": {
-  "text": "জেলে জাল ফেলছে।",
-  "from": "vocab fish-meat phrase"
- },
- "028162504ffbd771": {
-  "text": "আজ রাতে ডিম আর ভাত খাব।",
-  "from": "vocab fish-meat phrase"
  },
  "2fe29b18edc81d75": {
   "text": "কলা",
@@ -1746,50 +1482,6 @@
  "51af8cb39eb93f10": {
   "text": "কাজু",
   "from": "vocab fruits"
- },
- "fe15002efd73da3d": {
-  "text": "আমি আম খেতে ভালোবাসি।",
-  "from": "vocab fruits phrase"
- },
- "e934e8901fbb7a36": {
-  "text": "এই আমটা কি মিষ্টি?",
-  "from": "vocab fruits phrase"
- },
- "d5b03808f7cb5b96": {
-  "text": "আমাকে আধ কিলো আঙুর দিন।",
-  "from": "vocab fruits phrase"
- },
- "457ac331e853f029": {
-  "text": "আমি রোজ একটা কলা খাই।",
-  "from": "vocab fruits phrase"
- },
- "15aa3c3aa5dd6c77": {
-  "text": "গরমে তরমুজ খেতে ভালো লাগে।",
-  "from": "vocab fruits phrase"
- },
- "79a7422d73354d95": {
-  "text": "কাঁঠাল আমার খুব প্রিয়।",
-  "from": "vocab fruits phrase"
- },
- "6a23979b73437289": {
-  "text": "এই আপেলটা কত করে?",
-  "from": "vocab fruits phrase"
- },
- "8dc829a7edeba7c9": {
-  "text": "একটা লেবু দিন।",
-  "from": "vocab fruits phrase"
- },
- "05942664861c1673": {
-  "text": "নারকেলের জল খুব ঠান্ডা।",
-  "from": "vocab fruits phrase"
- },
- "7ef3b34f99e5e1b0": {
-  "text": "পেয়ারা গাছে অনেক পেয়ারা হয়েছে।",
-  "from": "vocab fruits phrase"
- },
- "01ad4878c6b92244": {
-  "text": "আমরা ফল কিনতে বাজারে যাব।",
-  "from": "vocab fruits phrase"
  },
  "836f5e12800e0a8f": {
   "text": "সবজি",
@@ -1955,50 +1647,6 @@
   "text": "কালোজিরে",
   "from": "vocab vegetables"
  },
- "15e71567f0e20001": {
-  "text": "আমি আলু আর পেঁয়াজ কিনব।",
-  "from": "vocab vegetables phrase"
- },
- "911e04e4374779c9": {
-  "text": "আজ কী তরকারি হয়েছে?",
-  "from": "vocab vegetables phrase"
- },
- "8aa187a6cc4edb3b": {
-  "text": "একটু নুন আর হলুদ দিন।",
-  "from": "vocab vegetables phrase"
- },
- "264f666c6e75f7e9": {
-  "text": "আজ আমি পটল ভাজা খাব।",
-  "from": "vocab vegetables phrase"
- },
- "06b677d1b963c9d9": {
-  "text": "শাকটা ভালো করে ধুয়ে নাও।",
-  "from": "vocab vegetables phrase"
- },
- "fd1370b273a76694": {
-  "text": "এক কিলো টমেটো কত?",
-  "from": "vocab vegetables phrase"
- },
- "dcd7b87fdcb859c2": {
-  "text": "তরকারিতে হলুদ আর জিরে দিয়েছি।",
-  "from": "vocab vegetables phrase"
- },
- "8debe7ceeddd9ee3": {
-  "text": "আমি ঝাল খাই না, কাঁচা লঙ্কা দেবেন না।",
-  "from": "vocab vegetables phrase"
- },
- "f319473b3a2b9669": {
-  "text": "বেগুন ভাজা আমার প্রিয়।",
-  "from": "vocab vegetables phrase"
- },
- "e64b4cb2b2bae00c": {
-  "text": "ফুলকপির তরকারি রান্না হচ্ছে।",
-  "from": "vocab vegetables phrase"
- },
- "6c2a00ab599ec6eb": {
-  "text": "রসুন আর আদা বেটে নাও।",
-  "from": "vocab vegetables phrase"
- },
  "32e9d68e24453802": {
   "text": "রসগোল্লা",
   "from": "vocab sweets-snacks"
@@ -2082,50 +1730,6 @@
  "c75fa81544071110": {
   "text": "সিঙ্গারা",
   "from": "vocab sweets-snacks"
- },
- "7c54bfef7c92cd77": {
-  "text": "আমাকে দুটো রসগোল্লা দিন।",
-  "from": "vocab sweets-snacks phrase"
- },
- "70ebda3913ae58c8": {
-  "text": "এখানকার ফুচকা খুব ভালো।",
-  "from": "vocab sweets-snacks phrase"
- },
- "22a777a12e7c693c": {
-  "text": "একটা ঝালমুড়ি দিন, ঝাল কম।",
-  "from": "vocab sweets-snacks phrase"
- },
- "c84520830598d613": {
-  "text": "বিকেলে আমরা ঝালমুড়ি খাব।",
-  "from": "vocab sweets-snacks phrase"
- },
- "8d30665551004ed3": {
-  "text": "পুজোয় আমরা অনেক মিষ্টি খাই।",
-  "from": "vocab sweets-snacks phrase"
- },
- "d3c428f5bae44bb3": {
-  "text": "সন্দেশ বানাতে দুধ লাগে।",
-  "from": "vocab sweets-snacks phrase"
- },
- "b65db2d9bb62cf24": {
-  "text": "শীতে গরম তেলেভাজা দারুণ লাগে।",
-  "from": "vocab sweets-snacks phrase"
- },
- "869aaf80b03cfe4b": {
-  "text": "তুমি কি মিষ্টি দই খেয়েছ?",
-  "from": "vocab sweets-snacks phrase"
- },
- "b185fcbc16d20464": {
-  "text": "আমাকে আরেকটা সিঙ্গারা দিন।",
-  "from": "vocab sweets-snacks phrase"
- },
- "0fc50b7407bbc8f9": {
-  "text": "এখানে চা আর বিস্কুট পাওয়া যায়।",
-  "from": "vocab sweets-snacks phrase"
- },
- "fb8c4e75f4f7b4e7": {
-  "text": "নলেন গুড়ের সন্দেশ শীতকালে পাওয়া যায়।",
-  "from": "vocab sweets-snacks phrase"
  },
  "3feda68eb523e068": {
   "text": "বাড়ি",
@@ -2222,50 +1826,6 @@
  "224cafc6f84591b0": {
   "text": "ঘণ্টা",
   "from": "vocab house"
- },
- "6705b10ff08c0c65": {
-  "text": "আমার বাড়ি কলকাতায়।",
-  "from": "vocab house phrase"
- },
- "e304e80bb27b5ffb": {
-  "text": "দরজাটা বন্ধ করে দাও।",
-  "from": "vocab house phrase"
- },
- "c3a22fa26b21351a": {
-  "text": "জানালাটা খুলে দিন।",
-  "from": "vocab house phrase"
- },
- "456c76a0a31c7bf0": {
-  "text": "আমাদের বাড়িতে তিনটে ঘর আছে।",
-  "from": "vocab house phrase"
- },
- "e9f93e261cb352ee": {
-  "text": "রান্নাঘরে মা রান্না করছেন।",
-  "from": "vocab house phrase"
- },
- "be14eb18959b1c28": {
-  "text": "ছাদে অনেক হাওয়া।",
-  "from": "vocab house phrase"
- },
- "2c1bb65fe339892c": {
-  "text": "তুমি কি দরজায় তালা দিয়েছ?",
-  "from": "vocab house phrase"
- },
- "6a81986b4f5f805e": {
-  "text": "চাবিটা কোথায় রেখেছ?",
-  "from": "vocab house phrase"
- },
- "e4751cccbf137c83": {
-  "text": "বারান্দা থেকে নদী দেখা যায়।",
-  "from": "vocab house phrase"
- },
- "59dd6b4e6776a026": {
-  "text": "আলোটা জ্বেলে দাও।",
-  "from": "vocab house phrase"
- },
- "65f3baa12fde75fb": {
-  "text": "সিঁড়ি দিয়ে উপরে যাও।",
-  "from": "vocab house phrase"
  },
  "5a642eaa31a635ca": {
   "text": "জিনিস",
@@ -2399,50 +1959,6 @@
   "text": "কাগজ",
   "from": "vocab things"
  },
- "7a029533376a9cc9": {
-  "text": "টেবিলের উপর বইটা রাখো।",
-  "from": "vocab things phrase"
- },
- "42a2dcab01837ad6": {
-  "text": "আমার ছাতাটা কোথায়?",
-  "from": "vocab things phrase"
- },
- "42810cc794fa756f": {
-  "text": "এই থালাটা পরিষ্কার করো।",
-  "from": "vocab things phrase"
- },
- "34bab67f74507e59": {
-  "text": "বইগুলো আলমারিতে রাখো।",
-  "from": "vocab things phrase"
- },
- "d7c1c9a5299ef17e": {
-  "text": "আমার ব্যাগটা কোথায়?",
-  "from": "vocab things phrase"
- },
- "185bf62826cfd4e3": {
-  "text": "বালতিতে জল ভরো।",
-  "from": "vocab things phrase"
- },
- "23b41a60cb3aaeb0": {
-  "text": "রাতে বিছানায় শুতে যাও।",
-  "from": "vocab things phrase"
- },
- "1148068ed64626f1": {
-  "text": "ঘড়িতে এখন কটা বাজে?",
-  "from": "vocab things phrase"
- },
- "f84ab30a20bf01e2": {
-  "text": "টর্চটা জ্বালাও, অন্ধকার।",
-  "from": "vocab things phrase"
- },
- "8ae54256b27db5bd": {
-  "text": "চামচ দিয়ে খাও।",
-  "from": "vocab things phrase"
- },
- "e429b579152e2404": {
-  "text": "ছুরিটা সাবধানে ধরো।",
-  "from": "vocab things phrase"
- },
  "e60008269e61fec7": {
   "text": "পোশাক",
   "from": "vocab clothes"
@@ -2543,50 +2059,6 @@
   "text": "বেল্ট",
   "from": "vocab clothes"
  },
- "f615825fe2a81261": {
-  "text": "আজ আমি নতুন শাড়ি পরব।",
-  "from": "vocab clothes phrase"
- },
- "b3aa19d578bf2873": {
-  "text": "এই জামাটা আমাকে মানাচ্ছে না।",
-  "from": "vocab clothes phrase"
- },
- "967911017ceee6ec": {
-  "text": "আমার জুতো ছোট হয়ে গেছে।",
-  "from": "vocab clothes phrase"
- },
- "788361339348288e": {
-  "text": "আমি পুজোয় নতুন জামা পরব।",
-  "from": "vocab clothes phrase"
- },
- "773588ff14806c6e": {
-  "text": "শীতে আমি সোয়েটার পরি।",
-  "from": "vocab clothes phrase"
- },
- "a259d438e08e25ce": {
-  "text": "তার শাড়িটা খুব সুন্দর।",
-  "from": "vocab clothes phrase"
- },
- "b45ed55542c4446c": {
-  "text": "বাবা ধুতি আর পাঞ্জাবি পরেছেন।",
-  "from": "vocab clothes phrase"
- },
- "26af45dc16776da3": {
-  "text": "আমার একজোড়া নতুন জুতো চাই।",
-  "from": "vocab clothes phrase"
- },
- "1211c3c09256f22a": {
-  "text": "গামছাটা দাও, স্নান করব।",
-  "from": "vocab clothes phrase"
- },
- "07758656fb3ad0b8": {
-  "text": "আমি সোনার হার আর চুড়ি কিনেছি।",
-  "from": "vocab clothes phrase"
- },
- "4f0a238b32ba1569": {
-  "text": "এই জামাটা ধুতে হবে।",
-  "from": "vocab clothes phrase"
- },
  "cf8f99d9f9702093": {
   "text": "পশু",
   "from": "vocab animals"
@@ -2683,50 +2155,6 @@
   "text": "ব্যাঙ",
   "from": "vocab animals"
  },
- "7d2bfc20f5cca2e3": {
-  "text": "আমার একটা কুকুর আছে।",
-  "from": "vocab animals phrase"
- },
- "53bcaf8222e14c9b": {
-  "text": "সুন্দরবনে বাঘ আছে।",
-  "from": "vocab animals phrase"
- },
- "28ce19faf973a57c": {
-  "text": "বিড়ালটা দুধ খাচ্ছে।",
-  "from": "vocab animals phrase"
- },
- "ac59115bd3cab640": {
-  "text": "রাস্তায় একটা কুকুর ঘুরছে।",
-  "from": "vocab animals phrase"
- },
- "ee28b36e975148cc": {
-  "text": "গরু ঘাস খাচ্ছে।",
-  "from": "vocab animals phrase"
- },
- "0eea18e9625a5c07": {
-  "text": "আমরা হাতি দেখতে চিড়িয়াখানায় যাব।",
-  "from": "vocab animals phrase"
- },
- "5178e79c45f476eb": {
-  "text": "বাঘ বনে থাকে।",
-  "from": "vocab animals phrase"
- },
- "2544df70d99d8d4a": {
-  "text": "ইঁদুরটা বিড়ালকে দেখে পালাল।",
-  "from": "vocab animals phrase"
- },
- "ac07066ff777c695": {
-  "text": "সাপ দেখলে আমি ভয় পাই।",
-  "from": "vocab animals phrase"
- },
- "80e685ee5cab5069": {
-  "text": "ঘোড়া খুব জোরে দৌড়ায়।",
-  "from": "vocab animals phrase"
- },
- "bccadc8e4b082346": {
-  "text": "বাঁদরটা গাছে উঠেছে।",
-  "from": "vocab animals phrase"
- },
  "8926a6281f81b31b": {
   "text": "কাক",
   "from": "vocab birds-insects"
@@ -2822,50 +2250,6 @@
  "8531e4baadbee41b": {
   "text": "বাসা",
   "from": "vocab birds-insects"
- },
- "cac427320161d205": {
-  "text": "গাছে একটা পাখি বসে আছে।",
-  "from": "vocab birds-insects phrase"
- },
- "eba435c0588024cf": {
-  "text": "কোকিল গান গাইছে।",
-  "from": "vocab birds-insects phrase"
- },
- "84f0804d87856546": {
-  "text": "রাতে খুব মশা কামড়ায়।",
-  "from": "vocab birds-insects phrase"
- },
- "df863d4afa3886b7": {
-  "text": "ভোরে পাখি ডাকে।",
-  "from": "vocab birds-insects phrase"
- },
- "0106db9238f4ea41": {
-  "text": "কাকটা জানালায় বসে আছে।",
-  "from": "vocab birds-insects phrase"
- },
- "fef271457ed4f1f3": {
-  "text": "ময়ূর পেখম মেলেছে।",
-  "from": "vocab birds-insects phrase"
- },
- "512c8fc202dc91dd": {
-  "text": "রাতে ঘরে অনেক মশা।",
-  "from": "vocab birds-insects phrase"
- },
- "3f6301aad414b759": {
-  "text": "ফুলে একটা প্রজাপতি বসেছে।",
-  "from": "vocab birds-insects phrase"
- },
- "f32db4f760507d69": {
-  "text": "পিঁপড়েরা চিনির কাছে এসেছে।",
-  "from": "vocab birds-insects phrase"
- },
- "03167bf37a46f49e": {
-  "text": "হাঁস পুকুরে সাঁতার কাটছে।",
-  "from": "vocab birds-insects phrase"
- },
- "73d33ee4ad254ede": {
-  "text": "পেঁচা রাতে জেগে থাকে।",
-  "from": "vocab birds-insects phrase"
  },
  "a408387f50fbe0f9": {
   "text": "আকাশ",
@@ -3027,50 +2411,6 @@
   "text": "রজনীগন্ধা",
   "from": "vocab nature"
  },
- "c414a8f03e84f926": {
-  "text": "আকাশে মেঘ করেছে।",
-  "from": "vocab nature phrase"
- },
- "af87d3cc0005ed28": {
-  "text": "নদীর পাড়ে অনেক গাছ আছে।",
-  "from": "vocab nature phrase"
- },
- "b2d50f21d9b357aa": {
-  "text": "শরতে কাশফুল ফোটে।",
-  "from": "vocab nature phrase"
- },
- "844a9dd4090fafcc": {
-  "text": "আজ আকাশে অনেক তারা।",
-  "from": "vocab nature phrase"
- },
- "93228d0f0f3a3993": {
-  "text": "সূর্য পূর্ব দিকে ওঠে।",
-  "from": "vocab nature phrase"
- },
- "8aeb6fb9db88a623": {
-  "text": "নদীর জল খুব পরিষ্কার।",
-  "from": "vocab nature phrase"
- },
- "d841bfb70791d914": {
-  "text": "বনে অনেক গাছ আছে।",
-  "from": "vocab nature phrase"
- },
- "6de5d316dd20fe59": {
-  "text": "ঝড়ে গাছ ভেঙে পড়েছে।",
-  "from": "vocab nature phrase"
- },
- "37a628c568fd3d4e": {
-  "text": "পাহাড়ের উপর মেঘ জমেছে।",
-  "from": "vocab nature phrase"
- },
- "889845f7d2cd125f": {
-  "text": "সমুদ্রের ঢেউ খুব বড়।",
-  "from": "vocab nature phrase"
- },
- "93e018a88deb65fa": {
-  "text": "বাগানে গোলাপ ফুটেছে।",
-  "from": "vocab nature phrase"
- },
  "a4854b0530dbd5cd": {
   "text": "ঋতু",
   "from": "vocab weather"
@@ -3134,50 +2474,6 @@
  "db471be3ae17610a": {
   "text": "আরামদায়ক",
   "from": "vocab weather"
- },
- "d4593c1d51cae98a": {
-  "text": "আজ খুব গরম।",
-  "from": "vocab weather phrase"
- },
- "290ab6b3a474dd58": {
-  "text": "বাইরে বৃষ্টি হচ্ছে।",
-  "from": "vocab weather phrase"
- },
- "e804d161199a8c28": {
-  "text": "কলকাতায় শীত খুব কম।",
-  "from": "vocab weather phrase"
- },
- "10ba2ac94c565b9f": {
-  "text": "বর্ষায় কলকাতায় অনেক বৃষ্টি হয়।",
-  "from": "vocab weather phrase"
- },
- "d42b23d5330bf242": {
-  "text": "শীতকালে সকালে কুয়াশা থাকে।",
-  "from": "vocab weather phrase"
- },
- "4e6f7ca131289f14": {
-  "text": "আজ আকাশ মেঘলা।",
-  "from": "vocab weather phrase"
- },
- "9adcac7f7d7bac83": {
-  "text": "বাইরে যাওয়ার সময় ছাতা নিয়ে যাও।",
-  "from": "vocab weather phrase"
- },
- "ad246dd596ab39c5": {
-  "text": "গ্রীষ্মকালে খুব গরম পড়ে।",
-  "from": "vocab weather phrase"
- },
- "39caedee79be5061": {
-  "text": "বসন্তে সবকিছু সুন্দর লাগে।",
-  "from": "vocab weather phrase"
- },
- "1656840cbfbe5be6": {
-  "text": "কাল কি বৃষ্টি হবে?",
-  "from": "vocab weather phrase"
- },
- "44bcad8800fb9495": {
-  "text": "আজকের আবহাওয়া ভালো।",
-  "from": "vocab weather phrase"
  },
  "799dca93cbe8a331": {
   "text": "রবিবার",
@@ -3315,50 +2611,6 @@
   "text": "তাড়াতাড়ি",
   "from": "vocab time"
  },
- "cb884d4f1735d43a": {
-  "text": "আজ কী বার?",
-  "from": "vocab time phrase"
- },
- "59a57dabae77d950": {
-  "text": "আমি প্রতিদিন সকালে চা খাই।",
-  "from": "vocab time phrase"
- },
- "9079daa3869d260c": {
-  "text": "এখন কটা বাজে?",
-  "from": "vocab time phrase"
- },
- "b031c9bf42a0d3b2": {
-  "text": "আজ সোমবার।",
-  "from": "vocab time phrase"
- },
- "6ec9e9bbaaeaf0f3": {
-  "text": "কাল রবিবার, আমার ছুটি।",
-  "from": "vocab time phrase"
- },
- "c8827a9c93941506": {
-  "text": "আমি সকালে ছটায় উঠি।",
-  "from": "vocab time phrase"
- },
- "da1f8aa32556b5fd": {
-  "text": "বিকেলে আমরা পার্কে যাব।",
-  "from": "vocab time phrase"
- },
- "d981c7f708a66564": {
-  "text": "আমি রাত দশটায় ঘুমাই।",
-  "from": "vocab time phrase"
- },
- "6454b20808ba0660": {
-  "text": "গতকাল আমি বাজারে গিয়েছিলাম।",
-  "from": "vocab time phrase"
- },
- "7a1f99bb486d438c": {
-  "text": "এক সপ্তাহে সাত দিন।",
-  "from": "vocab time phrase"
- },
- "4b018ca924525510": {
-  "text": "একটু পরে আসছি।",
-  "from": "vocab time phrase"
- },
  "b0c3ceda494d48b4": {
   "text": "বৈশাখ",
   "from": "vocab months"
@@ -3471,50 +2723,6 @@
   "text": "ছুটি",
   "from": "vocab months"
  },
- "b5635adf2208e0e7": {
-  "text": "বাংলা নববর্ষ পয়লা বৈশাখে।",
-  "from": "vocab months phrase"
- },
- "e7b6d5ea72e2e8af": {
-  "text": "তোমার জন্মদিন কবে?",
-  "from": "vocab months phrase"
- },
- "9228ce3f07497f19": {
-  "text": "আমার জন্মদিন মার্চ মাসে।",
-  "from": "vocab months phrase"
- },
- "8c4b99fa54ad96de": {
-  "text": "বাংলা বছর বৈশাখ মাসে শুরু হয়।",
-  "from": "vocab months phrase"
- },
- "7508b370e262ef44": {
-  "text": "শ্রাবণ মাসে খুব বৃষ্টি হয়।",
-  "from": "vocab months phrase"
- },
- "cd546acf899a2e8a": {
-  "text": "আশ্বিন মাসে দুর্গাপূজা হয়।",
-  "from": "vocab months phrase"
- },
- "64f8382111966642": {
-  "text": "ফেব্রুয়ারি মাসে বইমেলা হয়।",
-  "from": "vocab months phrase"
- },
- "15c04316c90b1b0a": {
-  "text": "আমি জানুয়ারি মাসে কলকাতায় এসেছি।",
-  "from": "vocab months phrase"
- },
- "4c0698b2d493b667": {
-  "text": "এটা কোন মাস?",
-  "from": "vocab months phrase"
- },
- "a17874c54673e75d": {
-  "text": "পৌষ মাসে পিঠে খাওয়া হয়।",
-  "from": "vocab months phrase"
- },
- "e28c7b4cb32e32cf": {
-  "text": "বছরে বারো মাস।",
-  "from": "vocab months phrase"
- },
  "41e2aa806d9d2033": {
   "text": "রং",
   "from": "vocab colours"
@@ -3578,50 +2786,6 @@
  "cfff5d887bb13bd7": {
   "text": "উজ্জ্বল",
   "from": "vocab colours"
- },
- "0c3ce9f495866de7": {
-  "text": "আমার প্রিয় রং নীল।",
-  "from": "vocab colours phrase"
- },
- "302f319e94f2d6d9": {
-  "text": "এই শাড়িটা লাল আর সাদা।",
-  "from": "vocab colours phrase"
- },
- "de99a48c8ef2f9e3": {
-  "text": "আকাশটা আজ খুব নীল।",
-  "from": "vocab colours phrase"
- },
- "ff699ccc43a968ea": {
-  "text": "আমি লাল রং ভালোবাসি।",
-  "from": "vocab colours phrase"
- },
- "0555d68b9f132f39": {
-  "text": "আকাশ নীল আর ঘাস সবুজ।",
-  "from": "vocab colours phrase"
- },
- "b4167392dcfd55b3": {
-  "text": "তার চুল কালো।",
-  "from": "vocab colours phrase"
- },
- "a4d1567f449962ca": {
-  "text": "ফুলটা হলুদ রঙের।",
-  "from": "vocab colours phrase"
- },
- "936017a35a77ef23": {
-  "text": "আমাকে একটা সাদা জামা দিন।",
-  "from": "vocab colours phrase"
- },
- "614492adfe29ad9e": {
-  "text": "তোমার প্রিয় রং কী?",
-  "from": "vocab colours phrase"
- },
- "6d9c4e53fb3dc77d": {
-  "text": "দুর্গাপূজায় সাদা-লাল শাড়ি পরা হয়।",
-  "from": "vocab colours phrase"
- },
- "c68b4bd99451c218": {
-  "text": "এটা গাঢ় নীল না ফিকে নীল?",
-  "from": "vocab colours phrase"
  },
  "065476e1173e9cf4": {
   "text": "জায়গা",
@@ -3747,50 +2911,6 @@
   "text": "শিয়ালদহ",
   "from": "vocab places"
  },
- "d1bd6e5362115973": {
-  "text": "এখানে কাছে কি কোনো ওষুধের দোকান আছে?",
-  "from": "vocab places phrase"
- },
- "018be36184ac9365": {
-  "text": "আমি কলেজ স্ট্রিটে বই কিনতে যাচ্ছি।",
-  "from": "vocab places phrase"
- },
- "58b6ab903fc6f36d": {
-  "text": "হাসপাতালটা কোথায়?",
-  "from": "vocab places phrase"
- },
- "f8f99d67aaba04c3": {
-  "text": "বাজার কোন দিকে?",
-  "from": "vocab places phrase"
- },
- "89831fdd3fe4b968": {
-  "text": "আমি স্কুলে পড়ি।",
-  "from": "vocab places phrase"
- },
- "ffa1cfb3f39aa955": {
-  "text": "মন্দিরে অনেক ভিড়।",
-  "from": "vocab places phrase"
- },
- "6c047c06fb0821f2": {
-  "text": "পার্কে ছেলেমেয়েরা খেলছে।",
-  "from": "vocab places phrase"
- },
- "ca2a7c4ac3d8ed67": {
-  "text": "ব্যাংকটা কখন খোলে?",
-  "from": "vocab places phrase"
- },
- "0e9522e0373ee0ca": {
-  "text": "আমরা কাল জাদুঘরে যাব।",
-  "from": "vocab places phrase"
- },
- "35419fb828bc2662": {
-  "text": "ডাকঘরে একটা চিঠি ফেলতে হবে।",
-  "from": "vocab places phrase"
- },
- "ed50cebf8486cd05": {
-  "text": "আমার অফিস হাওড়ায়।",
-  "from": "vocab places phrase"
- },
  "6b53d437d17a8100": {
   "text": "দিক",
   "from": "vocab directions"
@@ -3907,50 +3027,6 @@
   "text": "ঠিকানা",
   "from": "vocab directions"
  },
- "2d4fa86e39bb43f7": {
-  "text": "সোজা গিয়ে ডান দিকে ঘুরুন।",
-  "from": "vocab directions phrase"
- },
- "ec3f64f850058b42": {
-  "text": "স্টেশনটা এখান থেকে কত দূর?",
-  "from": "vocab directions phrase"
- },
- "c4cd5d777dfcebbc": {
-  "text": "এটা কি সঠিক রাস্তা?",
-  "from": "vocab directions phrase"
- },
- "bb867cdada91e6ad": {
-  "text": "ডান দিকে ঘুরুন।",
-  "from": "vocab directions phrase"
- },
- "73e216a02b008950": {
-  "text": "বাঁ দিকে একটা দোকান আছে।",
-  "from": "vocab directions phrase"
- },
- "d63d96bec9c25c1d": {
-  "text": "হাসপাতাল এখান থেকে কাছে।",
-  "from": "vocab directions phrase"
- },
- "bccf934f25e7def8": {
-  "text": "স্টেশন একটু দূরে।",
-  "from": "vocab directions phrase"
- },
- "3e0c26cc3c602a4a": {
-  "text": "মোড়ের মাথায় দাঁড়ান।",
-  "from": "vocab directions phrase"
- },
- "009f73759a990b39": {
-  "text": "রাস্তাটা সোজা গেছে।",
-  "from": "vocab directions phrase"
- },
- "df5536a551dda9c5": {
-  "text": "ঠিকানাটা লিখে দিন।",
-  "from": "vocab directions phrase"
- },
- "91593d96c2b213f6": {
-  "text": "কলেজ স্ট্রিট কোথায়?",
-  "from": "vocab directions phrase"
- },
  "5a0cc4562419a162": {
   "text": "গাড়ি",
   "from": "vocab transport"
@@ -4038,50 +3114,6 @@
  "50c6633b164f5a9b": {
   "text": "যাত্রা",
   "from": "vocab transport"
- },
- "2b8215e4dc47bb86": {
-  "text": "ভাড়া কত?",
-  "from": "vocab transport phrase"
- },
- "f29a991971bfc78f": {
-  "text": "এই বাসটা কোথায় যাবে?",
-  "from": "vocab transport phrase"
- },
- "69fa752376e17706": {
-  "text": "আমাকে হাওড়া স্টেশনে নিয়ে যান।",
-  "from": "vocab transport phrase"
- },
- "c19f0328b916d4e2": {
-  "text": "আমি ট্রামে করে অফিস যাই।",
-  "from": "vocab transport phrase"
- },
- "210ba3f86ca43654": {
-  "text": "মেট্রোতে ভিড় কম।",
-  "from": "vocab transport phrase"
- },
- "5ee631459e50208e": {
-  "text": "একটা রিকশা ডাকো।",
-  "from": "vocab transport phrase"
- },
- "925bc2e4edf8ff0e": {
-  "text": "ট্রেন কটায় ছাড়বে?",
-  "from": "vocab transport phrase"
- },
- "7b17a1c76e88d43c": {
-  "text": "আমাকে একটা টিকিট দিন।",
-  "from": "vocab transport phrase"
- },
- "e90398ed1e265d2f": {
-  "text": "আমরা নৌকায় নদী পার হব।",
-  "from": "vocab transport phrase"
- },
- "39a6cf5ad8393734": {
-  "text": "এখান থেকে বিমানবন্দর কত দূর?",
-  "from": "vocab transport phrase"
- },
- "cb71ede2e4b31825": {
-  "text": "ট্যাক্সিওয়ালা ভাড়া বেশি চাইছে।",
-  "from": "vocab transport phrase"
  },
  "ac02ad892eebc8af": {
   "text": "পয়সা",
@@ -4178,50 +3210,6 @@
  "0905e1fb3d4c1d26": {
   "text": "অনেক",
   "from": "vocab market"
- },
- "454e3fa5f12f3b51": {
-  "text": "এটার দাম কত?",
-  "from": "vocab market phrase"
- },
- "c9b6fcae8a6dd22f": {
-  "text": "একটু কমান।",
-  "from": "vocab market phrase"
- },
- "8c5db99f5c582c31": {
-  "text": "আমি এক কিলো আলু চাই।",
-  "from": "vocab market phrase"
- },
- "704b78ead2cee728": {
-  "text": "এক ডজন কলার দাম কত?",
-  "from": "vocab market phrase"
- },
- "e61aeb736fc7d7fa": {
-  "text": "আপনার কাছে খুচরো আছে?",
-  "from": "vocab market phrase"
- },
- "e3f893d8e19d7bd4": {
-  "text": "দামটা একটু বেশি।",
-  "from": "vocab market phrase"
- },
- "3006df8025f1bf06": {
-  "text": "আমি কার্ডে দাম দেব।",
-  "from": "vocab market phrase"
- },
- "621e77d36d830a5e": {
-  "text": "আধ কিলো ডাল দিন।",
-  "from": "vocab market phrase"
- },
- "06a0a57da1e3e1b5": {
-  "text": "রসিদটা দেবেন?",
-  "from": "vocab market phrase"
- },
- "fe96b3de6aa3521d": {
-  "text": "আজ কিছু ছাড় পাব?",
-  "from": "vocab market phrase"
- },
- "a21c63d39e4689fe": {
-  "text": "বাজার থেকে সবজি কিনে আনো।",
-  "from": "vocab market phrase"
  },
  "697445077342e535": {
   "text": "ক্লাস",
@@ -4327,50 +3315,6 @@
   "text": "নম্বর",
   "from": "vocab school"
  },
- "a4d49c4f0d793133": {
-  "text": "আমি বাংলা শিখছি।",
-  "from": "vocab school phrase"
- },
- "9deb1040ff705cb0": {
-  "text": "আমি বুঝতে পারিনি।",
-  "from": "vocab school phrase"
- },
- "04c721b990dc0cba": {
-  "text": "আরেকবার বলবেন?",
-  "from": "vocab school phrase"
- },
- "14aade1b684dc3dd": {
-  "text": "আমি রোজ স্কুলে যাই।",
-  "from": "vocab school phrase"
- },
- "776f3f1dd612a77f": {
-  "text": "খাতায় লেখো।",
-  "from": "vocab school phrase"
- },
- "09d8c61334b1ebfc": {
-  "text": "আজ আমাদের বাংলা ক্লাস আছে।",
-  "from": "vocab school phrase"
- },
- "0cf411d9c9577598": {
-  "text": "আমার পরীক্ষা সামনে।",
-  "from": "vocab school phrase"
- },
- "62a645df72e840a7": {
-  "text": "প্রশ্নের উত্তর দাও।",
-  "from": "vocab school phrase"
- },
- "5060f527ba696f05": {
-  "text": "এই বাক্যটা পড়ো।",
-  "from": "vocab school phrase"
- },
- "d6cfeb417d0048c5": {
-  "text": "আমি অঙ্ক ভালোবাসি।",
-  "from": "vocab school phrase"
- },
- "efeea70f65e01939": {
-  "text": "শিক্ষক আমাদের নতুন পাঠ শেখালেন।",
-  "from": "vocab school phrase"
- },
  "d007e1d601250141": {
   "text": "কাজ",
   "from": "vocab media"
@@ -4458,50 +3402,6 @@
  "dd1e9752661a83d5": {
   "text": "কবিতা",
   "from": "vocab media"
- },
- "15d2d9ae6d5f65b2": {
-  "text": "আমি অফিসে যাচ্ছি।",
-  "from": "vocab media phrase"
- },
- "133745b1bd1eb1db": {
-  "text": "আপনার ফোন নম্বর কত?",
-  "from": "vocab media phrase"
- },
- "f6d33f6d81b4ea9c": {
-  "text": "আমাকে একটা মেসেজ পাঠাও।",
-  "from": "vocab media phrase"
- },
- "ee0d99fe1264c7af": {
-  "text": "আমি রোজ খবরের কাগজ পড়ি।",
-  "from": "vocab media phrase"
- },
- "90df511416e8af07": {
-  "text": "আমাকে ফোন করো।",
-  "from": "vocab media phrase"
- },
- "4aebabff7c181ed4": {
-  "text": "আমি একটা চিঠি লিখছি।",
-  "from": "vocab media phrase"
- },
- "011a9091e2482abd": {
-  "text": "ইন্টারনেট ধীর চলছে।",
-  "from": "vocab media phrase"
- },
- "af5c0532da8cb13c": {
-  "text": "আমি তোমাকে একটা ছবি পাঠালাম।",
-  "from": "vocab media phrase"
- },
- "676406cf104cb7db": {
-  "text": "কাল অফিসে মিটিং আছে।",
-  "from": "vocab media phrase"
- },
- "f7ca5af6d9ecbba5": {
-  "text": "আজ টিভিতে ভালো সিনেমা আছে।",
-  "from": "vocab media phrase"
- },
- "3708682ad4ad54c2": {
-  "text": "এই গল্পটা খুব মজার।",
-  "from": "vocab media phrase"
  },
  "45483f4a4681c3c3": {
   "text": "উৎসব",
@@ -4614,50 +3514,6 @@
  "2a773b918da338c3": {
   "text": "আড্ডা",
   "from": "vocab festivals"
- },
- "162d930143f840f7": {
-  "text": "শুভ নববর্ষ!",
-  "from": "vocab festivals phrase"
- },
- "86c9576fe215e227": {
-  "text": "দুর্গাপূজায় আমরা ঠাকুর দেখতে যাব।",
-  "from": "vocab festivals phrase"
- },
- "d5a8cc9ae6ad20d7": {
-  "text": "শুভ বিজয়া!",
-  "from": "vocab festivals phrase"
- },
- "f9290d15387989f9": {
-  "text": "দুর্গাপূজায় ঢাক বাজে।",
-  "from": "vocab festivals phrase"
- },
- "256edba31b7a7afa": {
-  "text": "আমরা মণ্ডপে প্রতিমা দেখতে যাব।",
-  "from": "vocab festivals phrase"
- },
- "016625fe1e7b2dae": {
-  "text": "পয়লা বৈশাখে আমরা নতুন জামা পরি।",
-  "from": "vocab festivals phrase"
- },
- "e320d69f99744575": {
-  "text": "মা ঠাকুরের জন্য প্রসাদ বানিয়েছেন।",
-  "from": "vocab festivals phrase"
- },
- "f088098ee9cc9443": {
-  "text": "বইমেলায় অনেক বই পাওয়া যায়।",
-  "from": "vocab festivals phrase"
- },
- "3af5f3b87b768393": {
-  "text": "রবীন্দ্রসংগীত আমার খুব ভালো লাগে।",
-  "from": "vocab festivals phrase"
- },
- "f14332fda97d66d9": {
-  "text": "দীপাবলিতে বাড়িতে আলো জ্বলে।",
-  "from": "vocab festivals phrase"
- },
- "092714d370c74f89": {
-  "text": "আমি বন্ধুদের সঙ্গে আড্ডা দেব।",
-  "from": "vocab festivals phrase"
  },
  "90a8b0ae98b49ba0": {
   "text": "যাওয়া",
@@ -4851,50 +3707,6 @@
   "text": "থাকা",
   "from": "vocab verbs"
  },
- "0605e73e246503a8": {
-  "text": "আমি রোজ সকালে হাঁটি।",
-  "from": "vocab verbs phrase"
- },
- "e48a72d6ae12465d": {
-  "text": "তুমি কী চাও?",
-  "from": "vocab verbs phrase"
- },
- "b8512a897576e043": {
-  "text": "আমি তোমাকে ভুলব না।",
-  "from": "vocab verbs phrase"
- },
- "5f156e65792b2c00": {
-  "text": "আমি রোজ বাংলা পড়ি।",
-  "from": "vocab verbs phrase"
- },
- "e6e8a76fb115cc3f": {
-  "text": "সে বাজারে যাচ্ছে।",
-  "from": "vocab verbs phrase"
- },
- "c104ef3774ea688a": {
-  "text": "তুমি কী খাবে?",
-  "from": "vocab verbs phrase"
- },
- "0dfaa996929d8f58": {
-  "text": "আমি গান শুনছি।",
-  "from": "vocab verbs phrase"
- },
- "6fb807c2849eb2f3": {
-  "text": "আমি তোমাকে ডাকছি।",
-  "from": "vocab verbs phrase"
- },
- "4bc3e0eb7454a159": {
-  "text": "দরজাটা খুলে দাও।",
-  "from": "vocab verbs phrase"
- },
- "6dc5aa79ac2f3816": {
-  "text": "সে ভালো গান গায়।",
-  "from": "vocab verbs phrase"
- },
- "c5ee536dec9a2364": {
-  "text": "আমি কিছু বুঝতে পারছি না।",
-  "from": "vocab verbs phrase"
- },
  "7f5c3e1f44517a96": {
   "text": "ছোট",
   "from": "vocab describing"
@@ -5051,50 +3863,6 @@
   "text": "ব্যস্ত",
   "from": "vocab describing"
  },
- "e59c201e3bf9d0c1": {
-  "text": "এই ঘরটা খুব বড়।",
-  "from": "vocab describing phrase"
- },
- "d591d0a1ec4a7d99": {
-  "text": "প্রশ্নটা কঠিন, কিন্তু উত্তরটা সহজ।",
-  "from": "vocab describing phrase"
- },
- "a307bda3aefdbda6": {
-  "text": "আস্তে আস্তে বলুন।",
-  "from": "vocab describing phrase"
- },
- "3cc850df53657463": {
-  "text": "এটা খুব সুন্দর ফুল।",
-  "from": "vocab describing phrase"
- },
- "fc72145c8882a57e": {
-  "text": "আজকের পরীক্ষা সহজ ছিল।",
-  "from": "vocab describing phrase"
- },
- "8abe8b6211bc2a2e": {
-  "text": "ব্যাগটা খুব ভারী।",
-  "from": "vocab describing phrase"
- },
- "e1a39910e30ed558": {
-  "text": "তার বাড়ি অনেক বড়।",
-  "from": "vocab describing phrase"
- },
- "fa8faaf214efdc5e": {
-  "text": "আমি ব্যস্ত, পরে ফোন করব।",
-  "from": "vocab describing phrase"
- },
- "46ee59fe957ff16b": {
-  "text": "গ্লাসটা খালি।",
-  "from": "vocab describing phrase"
- },
- "e67f5225aa0f114f": {
-  "text": "এই রাস্তাটা পরিষ্কার।",
-  "from": "vocab describing phrase"
- },
- "a0af7a1f328eb7ec": {
-  "text": "তুমি কি সুখী?",
-  "from": "vocab describing phrase"
- },
  "2ca85ec4899a31be": {
   "text": "কে",
   "from": "vocab questions"
@@ -5142,46 +3910,6 @@
  "937bf11992ef9128": {
   "text": "কেমন",
   "from": "vocab questions"
- },
- "701bd5fb440f7902": {
-  "text": "আপনার নাম কী?",
-  "from": "vocab questions phrase"
- },
- "54241e50db1d7cee": {
-  "text": "আপনি কোথায় থাকেন?",
-  "from": "vocab questions phrase"
- },
- "4ceb5ce09d65577a": {
-  "text": "এটা কত টাকা?",
-  "from": "vocab questions phrase"
- },
- "241c29279f4b5d40": {
-  "text": "এটা কী?",
-  "from": "vocab questions phrase"
- },
- "ee145afd99507b52": {
-  "text": "তুমি কেন কাঁদছ?",
-  "from": "vocab questions phrase"
- },
- "1c3b93eac79604f1": {
-  "text": "আপনি কখন আসবেন?",
-  "from": "vocab questions phrase"
- },
- "3d8639c6f4ada02b": {
-  "text": "এটা কার বই?",
-  "from": "vocab questions phrase"
- },
- "fa4510c9f7a40641": {
-  "text": "আপনি কোন স্কুলে পড়েন?",
-  "from": "vocab questions phrase"
- },
- "ce2d8d99f753975b": {
-  "text": "আমি কীভাবে যাব?",
-  "from": "vocab questions phrase"
- },
- "6f91e8d945172334": {
-  "text": "তোমার বাড়িতে কে আছে?",
-  "from": "vocab questions phrase"
  },
  "732ac4754e8dae35": {
   "text": "নমস্কার",
@@ -5243,6 +3971,10 @@
   "text": "ভালো আছি",
   "from": "vocab greetings"
  },
+ "701bd5fb440f7902": {
+  "text": "আপনার নাম কী?",
+  "from": "vocab greetings"
+ },
  "40e867a430dfd08d": {
   "text": "আস্তে বলুন",
   "from": "vocab greetings"
@@ -5262,50 +3994,6 @@
  "c98ccf6e9ee0b696": {
   "text": "আমি বুঝিনি",
   "from": "vocab greetings"
- },
- "77f49ea46b9af1e3": {
-  "text": "নমস্কার, আপনি কেমন আছেন?",
-  "from": "vocab greetings phrase"
- },
- "a343adb4c092ba9a": {
-  "text": "ধন্যবাদ, আমি ভালো আছি।",
-  "from": "vocab greetings phrase"
- },
- "ce50429e7e20aa1a": {
-  "text": "দয়া করে একটু সাহায্য করুন।",
-  "from": "vocab greetings phrase"
- },
- "4be2b7cda8fed5b6": {
-  "text": "শুভ সকাল! আজ কেমন আছেন?",
-  "from": "vocab greetings phrase"
- },
- "360142f047ad6a65": {
-  "text": "আপনাকে ধন্যবাদ।",
-  "from": "vocab greetings phrase"
- },
- "6afcccbc9cfb1173": {
-  "text": "মাফ করবেন, আমি দেরি করে ফেলেছি।",
-  "from": "vocab greetings phrase"
- },
- "8521f16397ef38af": {
-  "text": "আবার দেখা হবে।",
-  "from": "vocab greetings phrase"
- },
- "841dc3181a8f739c": {
-  "text": "আমার নাম রাহুল।",
-  "from": "vocab greetings phrase"
- },
- "742bb5651988ece1": {
-  "text": "আপনি কি ইংরেজি বলতে পারেন?",
-  "from": "vocab greetings phrase"
- },
- "59c6730314b3afab": {
-  "text": "আস্তে বলবেন?",
-  "from": "vocab greetings phrase"
- },
- "96cd67b394b15b72": {
-  "text": "স্বাগতম, ভেতরে আসুন।",
-  "from": "vocab greetings phrase"
  },
  "c83f9ae263436177": {
   "text": "তালু",
@@ -5383,46 +4071,6 @@
   "text": "কানের যন্ত্র",
   "from": "vocab mouth-voice"
  },
- "1fb1c2a46eeafffa": {
-  "text": "মুখ খোলো।",
-  "from": "vocab mouth-voice phrase"
- },
- "00828767c1546125": {
-  "text": "জিভ বের করো।",
-  "from": "vocab mouth-voice phrase"
- },
- "00b2f9734bb931d9": {
-  "text": "ঠোঁট বন্ধ করো।",
-  "from": "vocab mouth-voice phrase"
- },
- "9996701ddb625731": {
-  "text": "জিভটা ওপরে তোলো।",
-  "from": "vocab mouth-voice phrase"
- },
- "081998a6ca5bd412": {
-  "text": "দাঁত দেখাও।",
-  "from": "vocab mouth-voice phrase"
- },
- "eb79361964b7deb5": {
-  "text": "গভীর শ্বাস নাও।",
-  "from": "vocab mouth-voice phrase"
- },
- "3c869ceacfdb0ca3": {
-  "text": "আস্তে আস্তে শ্বাস ছাড়ো।",
-  "from": "vocab mouth-voice phrase"
- },
- "435ceca492d90050": {
-  "text": "তুমি কি ভালো শুনতে পাও?",
-  "from": "vocab mouth-voice phrase"
- },
- "568c996fb9ed7c2a": {
-  "text": "কানে কি ব্যথা করে?",
-  "from": "vocab mouth-voice phrase"
- },
- "d8ddb1ab1e7a9958": {
-  "text": "গলা কি ব্যথা করছে?",
-  "from": "vocab mouth-voice phrase"
- },
  "6d3ef335f1ff4bf1": {
   "text": "কথা",
   "from": "vocab speech-language"
@@ -5498,38 +4146,6 @@
  "52ddce9b465e1daa": {
   "text": "দুই ভাষা",
   "from": "vocab speech-language"
- },
- "20c5f671e4947850": {
-  "text": "আপনার ছেলের বয়স কত?",
-  "from": "vocab speech-language phrase"
- },
- "e2f1c98aa0b11211": {
-  "text": "আপনার মেয়ে কবে প্রথম কথা বলেছিল?",
-  "from": "vocab speech-language phrase"
- },
- "6f21c35b01e7d4d9": {
-  "text": "ও কি আপনার কথা বোঝে?",
-  "from": "vocab speech-language phrase"
- },
- "41fa974ef01b3ffb": {
-  "text": "বাড়িতে আপনারা কোন কোন ভাষায় কথা বলেন?",
-  "from": "vocab speech-language phrase"
- },
- "25f6ea2113a3bfed": {
-  "text": "ওর কথা কি স্পষ্ট?",
-  "from": "vocab speech-language phrase"
- },
- "5f603c0e5c7a52ba": {
-  "text": "আবার বলো।",
-  "from": "vocab speech-language phrase"
- },
- "1ac98b70270c61be": {
-  "text": "আমার সঙ্গে বলো।",
-  "from": "vocab speech-language phrase"
- },
- "ab83c4508e82dc1a": {
-  "text": "আস্তে আস্তে বলো।",
-  "from": "vocab speech-language phrase"
  },
  "15e6c504ea44b4a6": {
   "text": "থেরাপিস্ট",
@@ -5627,46 +4243,6 @@
   "text": "ধৈর্য",
   "from": "vocab therapy-practice"
  },
- "2c804c965defe4c8": {
-  "text": "আজ আমরা একসঙ্গে খেলব।",
-  "from": "vocab therapy-practice phrase"
- },
- "249b15e1e97bc9cb": {
-  "text": "আমার দিকে তাকাও।",
-  "from": "vocab therapy-practice phrase"
- },
- "3885c85ac39bd0e0": {
-  "text": "মন দিয়ে শোনো।",
-  "from": "vocab therapy-practice phrase"
- },
- "2d47a349fd1ce1c1": {
-  "text": "সাবাশ! খুব ভালো হয়েছে।",
-  "from": "vocab therapy-practice phrase"
- },
- "c1f1524eb62b11f5": {
-  "text": "আবার চেষ্টা করো।",
-  "from": "vocab therapy-practice phrase"
- },
- "f48b60f2168519d0": {
-  "text": "বাড়িতে রোজ দশ মিনিট অনুশীলন করবেন।",
-  "from": "vocab therapy-practice phrase"
- },
- "8ff2bd24631bad68": {
-  "text": "সে ধীরে ধীরে ভালো হচ্ছে।",
-  "from": "vocab therapy-practice phrase"
- },
- "7469b721a2f7ffb8": {
-  "text": "আপনার কোনো প্রশ্ন আছে?",
-  "from": "vocab therapy-practice phrase"
- },
- "8ad6c62ec789477a": {
-  "text": "পরের সপ্তাহে আবার আসবেন।",
-  "from": "vocab therapy-practice phrase"
- },
- "349640d136c0e707": {
-  "text": "ধৈর্য ধরুন, সময় লাগবে।",
-  "from": "vocab therapy-practice phrase"
- },
  "d9ec88e77f4eaec3": {
   "text": "অটিজম",
   "from": "vocab clinical-history"
@@ -5763,42 +4339,6 @@
   "text": "কতদিন",
   "from": "vocab clinical-history"
  },
- "1edde53b522b5b2a": {
-  "text": "ও কবে জন্মেছে?",
-  "from": "vocab clinical-history phrase"
- },
- "24594c049fb72016": {
-  "text": "জন্মের সময় কোনো সমস্যা হয়েছিল?",
-  "from": "vocab clinical-history phrase"
- },
- "e94e4c9462200785": {
-  "text": "ওর কি কখনো অপারেশন হয়েছে?",
-  "from": "vocab clinical-history phrase"
- },
- "2d0ee1db1751c366": {
-  "text": "কোনো কিছুতে এলার্জি আছে?",
-  "from": "vocab clinical-history phrase"
- },
- "ee0fb4bd5a7340b4": {
-  "text": "ও কি ওষুধ খায়?",
-  "from": "vocab clinical-history phrase"
- },
- "0007782b8965470e": {
-  "text": "কবে থেকে এই সমস্যা?",
-  "from": "vocab clinical-history phrase"
- },
- "a1969c6e0415856f": {
-  "text": "খাবার গিলতে কি কষ্ট হয়?",
-  "from": "vocab clinical-history phrase"
- },
- "e6d40dacf5a45731": {
-  "text": "ও কি খাওয়ার সময় কাশে?",
-  "from": "vocab clinical-history phrase"
- },
- "1a87e49bd9dcc523": {
-  "text": "পরিবারে আর কারো কি কথা বলতে অসুবিধা ছিল?",
-  "from": "vocab clinical-history phrase"
- },
  "8fb00b79431b7c87": {
   "text": "হাঁ করা",
   "from": "vocab swallow-check"
@@ -5883,74 +4423,6 @@
   "text": "সোজা হয়ে বসা",
   "from": "vocab swallow-check"
  },
- "b825d33261821b8a": {
-  "text": "হাঁ করুন।",
-  "from": "vocab swallow-check phrase"
- },
- "339f40ffdafe01b5": {
-  "text": "জিভ বের করুন।",
-  "from": "vocab swallow-check phrase"
- },
- "6a2a167010cb4018": {
-  "text": "জিভ ডান দিকে নিন।",
-  "from": "vocab swallow-check phrase"
- },
- "5014214273381e22": {
-  "text": "জিভ বাঁ দিকে নিন।",
-  "from": "vocab swallow-check phrase"
- },
- "e827d4557d7c17d2": {
-  "text": "ঠোঁট বন্ধ করুন।",
-  "from": "vocab swallow-check phrase"
- },
- "bde84227b9002305": {
-  "text": "গাল ফোলান।",
-  "from": "vocab swallow-check phrase"
- },
- "2ef86e556f6d6467": {
-  "text": "একটু হাসুন।",
-  "from": "vocab swallow-check phrase"
- },
- "da1d98f009cd7056": {
-  "text": "জোরে কাশুন।",
-  "from": "vocab swallow-check phrase"
- },
- "4d900448221d99e3": {
-  "text": "গলা পরিষ্কার করুন।",
-  "from": "vocab swallow-check phrase"
- },
- "4ca226ef00f69627": {
-  "text": "আ-আ-আ বলুন।",
-  "from": "vocab swallow-check phrase"
- },
- "259757541b29e62e": {
-  "text": "থুতু গিলুন।",
-  "from": "vocab swallow-check phrase"
- },
- "3d1916165ad4c44a": {
-  "text": "আস্তে আস্তে ছোট চুমুকে জল খান।",
-  "from": "vocab swallow-check phrase"
- },
- "ee19cdcc70d79c5a": {
-  "text": "এবার ঢোক গিলুন।",
-  "from": "vocab swallow-check phrase"
- },
- "33c29d6400ec969d": {
-  "text": "কাশি পেলে বলবেন।",
-  "from": "vocab swallow-check phrase"
- },
- "855a6692d828330c": {
-  "text": "গলায় কিছু আটকে যাচ্ছে?",
-  "from": "vocab swallow-check phrase"
- },
- "1c3636a8adb95c12": {
-  "text": "খাওয়ার সময় কি বিষম খান?",
-  "from": "vocab swallow-check phrase"
- },
- "cd6af9189021f05a": {
-  "text": "সোজা হয়ে বসুন।",
-  "from": "vocab swallow-check phrase"
- },
  "4ab731a2f30b2bd1": {
   "text": "বার",
   "from": "vocab memory-check"
@@ -5978,54 +4450,6 @@
  "cf06e908c5f46fd3": {
   "text": "গোনা",
   "from": "vocab memory-check"
- },
- "5fde40a432d34191": {
-  "text": "আজ কত তারিখ?",
-  "from": "vocab memory-check phrase"
- },
- "2a711fb06be7be09": {
-  "text": "এটা কোন সাল?",
-  "from": "vocab memory-check phrase"
- },
- "5e88686ffe2c3bf7": {
-  "text": "এখন কোন ঋতু?",
-  "from": "vocab memory-check phrase"
- },
- "cf86107c7ed6e603": {
-  "text": "আপনি এখন কোথায় আছেন?",
-  "from": "vocab memory-check phrase"
- },
- "2b2960b44244b167": {
-  "text": "আমি তিনটে শব্দ বলব। মন দিয়ে শুনুন।",
-  "from": "vocab memory-check phrase"
- },
- "e151575e23226c35": {
-  "text": "নীল, থলে, আম। এবার আপনি বলুন।",
-  "from": "vocab memory-check phrase"
- },
- "1b71864da06605bf": {
-  "text": "শব্দ তিনটে মনে রাখবেন। পরে আবার জিজ্ঞেস করব।",
-  "from": "vocab memory-check phrase"
- },
- "65089e1f38aab28e": {
-  "text": "আমি যে তিনটে শব্দ বলেছিলাম, সেগুলো কী?",
-  "from": "vocab memory-check phrase"
- },
- "2150611b42901ff6": {
-  "text": "দশ থেকে উল্টো দিকে গুনুন।",
-  "from": "vocab memory-check phrase"
- },
- "95bb0b3b27243b29": {
-  "text": "এটা কী? এর নাম বলুন।",
-  "from": "vocab memory-check phrase"
- },
- "a93be1f75477cb90": {
-  "text": "মনে না থাকলে কোনো অসুবিধা নেই।",
-  "from": "vocab memory-check phrase"
- },
- "41eb2f38e723b126": {
-  "text": "খুব ভালো করেছেন।",
-  "from": "vocab memory-check phrase"
  },
  "b9e7a6f8dddc27a5": {
   "text": "পাড়া",
@@ -6074,62 +4498,6 @@
  "0a58e308c2f279df": {
   "text": "গত হওয়া",
   "from": "vocab patient-chat"
- },
- "30f4d6a257edcbcb": {
-  "text": "আপনার বাড়ি কোথায়?",
-  "from": "vocab patient-chat phrase"
- },
- "bd9632aa37d72f57": {
-  "text": "আপনি কার সঙ্গে থাকেন?",
-  "from": "vocab patient-chat phrase"
- },
- "32b4e50e8a92eb27": {
-  "text": "বাড়িতে কে কে আছেন?",
-  "from": "vocab patient-chat phrase"
- },
- "4b75a150669d11b0": {
-  "text": "আপনি কি একা থাকেন?",
-  "from": "vocab patient-chat phrase"
- },
- "c8c5e6cedb463b55": {
-  "text": "আপনার ছেলেমেয়েরা কোথায় থাকে?",
-  "from": "vocab patient-chat phrase"
- },
- "8c1861a2e4132ae0": {
-  "text": "আজ কেমন লাগছে?",
-  "from": "vocab patient-chat phrase"
- },
- "d806651717c695d4": {
-  "text": "রাতে ভালো ঘুম হয়েছিল?",
-  "from": "vocab patient-chat phrase"
- },
- "393a28f7df4d518e": {
-  "text": "সকালে কিছু খেয়েছেন?",
-  "from": "vocab patient-chat phrase"
- },
- "b3fcd40fbd3479e0": {
-  "text": "আপনি আগে কী কাজ করতেন?",
-  "from": "vocab patient-chat phrase"
- },
- "1544946577cee1ae": {
-  "text": "আপনার শখ কী?",
-  "from": "vocab patient-chat phrase"
- },
- "35eecb006902fb63": {
-  "text": "আপনার দেশের বাড়ি কোথায়?",
-  "from": "vocab patient-chat phrase"
- },
- "a3beffd5d15a4e20": {
-  "text": "আপনার নাতি-নাতনিরা কেমন আছে?",
-  "from": "vocab patient-chat phrase"
- },
- "f09f6d01b4555719": {
-  "text": "বালিশটা ঠিক করে দেব?",
-  "from": "vocab patient-chat phrase"
- },
- "f21f1336e4695205": {
-  "text": "শুনে খুব দুঃখ পেলাম।",
-  "from": "vocab patient-chat phrase"
  },
  "39cbb45d322173a7": {
   "text": "চলচ্চিত্র",
@@ -6215,38 +4583,6 @@
   "text": "প্রিয়",
   "from": "vocab film-tv"
  },
- "d2c929894cca96d9": {
-  "text": "আজ রাতে একটা বাংলা ছবি দেখব।",
-  "from": "vocab film-tv phrase"
- },
- "371304bbb8907b8f": {
-  "text": "তোমার প্রিয় অভিনেতা কে?",
-  "from": "vocab film-tv phrase"
- },
- "6131f1f0be2432a4": {
-  "text": "এই ছবির পরিচালক কে?",
-  "from": "vocab film-tv phrase"
- },
- "8d78443dfc73e656": {
-  "text": "সাবটাইটেল দিয়ে দেখো।",
-  "from": "vocab film-tv phrase"
- },
- "5f5e63cd31e52212": {
-  "text": "ছবিটা আমার খুব ভালো লেগেছে।",
-  "from": "vocab film-tv phrase"
- },
- "024d98154629820d": {
-  "text": "গল্পটা খুব সুন্দর।",
-  "from": "vocab film-tv phrase"
- },
- "22a65fb231df0c4e": {
-  "text": "সত্যজিৎ রায়ের ছবি দেখেছ?",
-  "from": "vocab film-tv phrase"
- },
- "31429270a6a208bb": {
-  "text": "আবার বলো, আমি বুঝতে পারিনি।",
-  "from": "vocab film-tv phrase"
- },
  "0acefdb808bdf1c5": {
   "text": "শিল্প",
   "from": "vocab art-craft"
@@ -6323,34 +4659,6 @@
   "text": "পুরোনো",
   "from": "vocab art-craft"
  },
- "923a1b74e6c602b1": {
-  "text": "তুমি কি ছবি আঁকো?",
-  "from": "vocab art-craft phrase"
- },
- "0eb3e162a7fd8bc2": {
-  "text": "ছবিটা কে এঁকেছে?",
-  "from": "vocab art-craft phrase"
- },
- "50e3161cac6aa603": {
-  "text": "এই নকশাটা খুব সুন্দর।",
-  "from": "vocab art-craft phrase"
- },
- "892a447ea4b5b25b": {
-  "text": "আমরা জাদুঘরে যাব।",
-  "from": "vocab art-craft phrase"
- },
- "1459a8baf08b4480": {
-  "text": "পুজোয় বাড়ির সামনে আলপনা দেওয়া হয়।",
-  "from": "vocab art-craft phrase"
- },
- "d26db8c04601477b": {
-  "text": "কাঁথা হাতে সেলাই করা হয়।",
-  "from": "vocab art-craft phrase"
- },
- "05972b8c409faee9": {
-  "text": "এখানে একটা ছবির প্রদর্শনী আছে।",
-  "from": "vocab art-craft phrase"
- },
  "0d32f240cd9b0845": {
   "text": "বিজ্ঞানী",
   "from": "vocab science-brain"
@@ -6422,34 +4730,6 @@
  "aabacfc752d7625f": {
   "text": "ব্যঞ্জনবর্ণ",
   "from": "vocab science-brain"
- },
- "ad0008ce285df925": {
-  "text": "আমি স্পিচ থেরাপি নিয়ে কাজ করি।",
-  "from": "vocab science-brain phrase"
- },
- "99d91c66b4ea6088": {
-  "text": "ভাষা শেখা মস্তিষ্কের কাজ।",
-  "from": "vocab science-brain phrase"
- },
- "4272c830127881a3": {
-  "text": "এই গবেষণার ফল কী?",
-  "from": "vocab science-brain phrase"
- },
- "dd41b377f2baaf60": {
-  "text": "শিশুরা খুব তাড়াতাড়ি ভাষা শেখে।",
-  "from": "vocab science-brain phrase"
- },
- "f4a727252b49f678": {
-  "text": "মনোযোগ দিয়ে শোনো।",
-  "from": "vocab science-brain phrase"
- },
- "cede4e6e319c3c29": {
-  "text": "আমি ভুলে গেছি।",
-  "from": "vocab science-brain phrase"
- },
- "0bfe299246a8f1d1": {
-  "text": "মনে রাখার চেষ্টা করো।",
-  "from": "vocab science-brain phrase"
  },
  "01032fec1df6eb66": {
   "text": "আব্বা",
@@ -6595,46 +4875,6 @@
   "text": "দোয়া",
   "from": "vocab bangladesh-words"
  },
- "e94ba475e92b303c": {
-  "text": "আসসালামু আলাইকুম, আব্বা। কেমন আছেন?",
-  "from": "vocab bangladesh-words phrase"
- },
- "d72e895910361cc2": {
-  "text": "আমি ভালো আছি, আলহামদুলিল্লাহ।",
-  "from": "vocab bangladesh-words phrase"
- },
- "a7def0d9472f2ed1": {
-  "text": "খালা, আপনি কেমন আছেন?",
-  "from": "vocab bangladesh-words phrase"
- },
- "e4027c4613136cd0": {
-  "text": "আমাকে দাওয়াত দেওয়ার জন্য ধন্যবাদ।",
-  "from": "vocab bangladesh-words phrase"
- },
- "6f685e4e408cc28a": {
-  "text": "একটু পানি দিন।",
-  "from": "vocab bangladesh-words phrase"
- },
- "88fc101ce825a893": {
-  "text": "আজ নাশতায় কী আছে?",
-  "from": "vocab bangladesh-words phrase"
- },
- "e65e7e000065f512": {
-  "text": "আমাদের বাসা ঢাকায়।",
-  "from": "vocab bangladesh-words phrase"
- },
- "22d0e8cb60d0893d": {
-  "text": "ইনশাআল্লাহ, কাল আসব।",
-  "from": "vocab bangladesh-words phrase"
- },
- "87b5c7bf00941e56": {
-  "text": "মেহমানদের জন্য চা বানাই?",
-  "from": "vocab bangladesh-words phrase"
- },
- "14831a21b38b0d4a": {
-  "text": "ভাবি, ভাত খেয়েছেন?",
-  "from": "vocab bangladesh-words phrase"
- },
  "6cc90c8815790f6d": {
   "text": "গিলতে একটু কষ্ট হয়।",
   "from": "listening patient"
@@ -6645,6 +4885,10 @@
  },
  "a6a56a2325173a35": {
   "text": "গলায় কিছু আটকে যাচ্ছে।",
+  "from": "listening patient"
+ },
+ "e612ad731c90cf88": {
+  "text": "আমার গলা ব্যথা করছে।",
   "from": "listening patient"
  },
  "787732b29f63ada2": {
@@ -6810,5 +5054,2107 @@
   "text": "দীপকবাবু হেসে বললেন, \"ধন্যবাদ।\"",
   "from": "listening story dipak-sen",
   "slow": true
+ },
+ "f412d89188d9296a": {
+  "text": "কোথায়?",
+  "from": "kids games"
+ },
+ "241c29279f4b5d40": {
+  "text": "এটা কী?",
+  "from": "kids games"
+ },
+ "f57a364f5365e19a": {
+  "text": "এটা কী রং?",
+  "from": "kids games"
+ },
+ "694196ec9be052c4": {
+  "text": "তাড়াতাড়ি!",
+  "from": "kids games"
+ },
+ "6639d2dfb5fd3b5a": {
+  "text": "জাদু!",
+  "from": "kids games"
+ },
+ "4342cb1fd7c0ace0": {
+  "text": "খুব ভালো!",
+  "from": "kids games"
+ },
+ "ef47c6779966a450": {
+  "text": "হ্যাঁ!",
+  "from": "kids games"
+ },
+ "10f9d1c67f49db97": {
+  "text": "না!",
+  "from": "kids games"
+ },
+ "fe46bf514713a483": {
+  "text": "মাথা কোথায়?",
+  "from": "kids games"
+ },
+ "22db770b4d7d3413": {
+  "text": "এটা মাথা?",
+  "from": "kids games"
+ },
+ "b42d57fe2d55cdd6": {
+  "text": "চোখ কোথায়?",
+  "from": "kids games"
+ },
+ "e94a4d32b4d5871f": {
+  "text": "এটা চোখ?",
+  "from": "kids games"
+ },
+ "3983dcc2778b59cf": {
+  "text": "নাক কোথায়?",
+  "from": "kids games"
+ },
+ "8016c670201970c9": {
+  "text": "এটা নাক?",
+  "from": "kids games"
+ },
+ "09d410099f19d53d": {
+  "text": "কান কোথায়?",
+  "from": "kids games"
+ },
+ "02cba4720ed1a906": {
+  "text": "এটা কান?",
+  "from": "kids games"
+ },
+ "957485c7f7af678b": {
+  "text": "মুখ কোথায়?",
+  "from": "kids games"
+ },
+ "547dd8781f50d7a7": {
+  "text": "এটা মুখ?",
+  "from": "kids games"
+ },
+ "9e448ca6baf264c6": {
+  "text": "হাত কোথায়?",
+  "from": "kids games"
+ },
+ "f491c3a191d4f5a7": {
+  "text": "এটা হাত?",
+  "from": "kids games"
+ },
+ "5c32aeba1d1d882d": {
+  "text": "পেট কোথায়?",
+  "from": "kids games"
+ },
+ "2f65862d97ea2bf3": {
+  "text": "এটা পেট?",
+  "from": "kids games"
+ },
+ "bb04c9ae89fa76db": {
+  "text": "পা কোথায়?",
+  "from": "kids games"
+ },
+ "b39def421900bcae": {
+  "text": "এটা পা?",
+  "from": "kids games"
+ },
+ "eee5b4a3f062faac": {
+  "text": "মাথা ধরো",
+  "from": "kids games"
+ },
+ "b25f3726340a77ed": {
+  "text": "জাদু! মাথা ধরো",
+  "from": "kids games"
+ },
+ "257add7a1f028882": {
+  "text": "নাক ধরো",
+  "from": "kids games"
+ },
+ "3965167c1ed9e53a": {
+  "text": "জাদু! নাক ধরো",
+  "from": "kids games"
+ },
+ "803d3d14b26d79c0": {
+  "text": "কান ধরো",
+  "from": "kids games"
+ },
+ "de560366ba4d34c4": {
+  "text": "জাদু! কান ধরো",
+  "from": "kids games"
+ },
+ "5968336e01f38fe5": {
+  "text": "পেট ধরো",
+  "from": "kids games"
+ },
+ "6ff973184444b87c": {
+  "text": "জাদু! পেট ধরো",
+  "from": "kids games"
+ },
+ "b03170e9a98dd31e": {
+  "text": "চোখ বন্ধ করো",
+  "from": "kids games"
+ },
+ "e0f6db278ac1077a": {
+  "text": "জাদু! চোখ বন্ধ করো",
+  "from": "kids games"
+ },
+ "da981ba09c38e576": {
+  "text": "চোখ খোলো",
+  "from": "kids games"
+ },
+ "b7772b0272f89181": {
+  "text": "জাদু! চোখ খোলো",
+  "from": "kids games"
+ },
+ "fe253a29ec4aade7": {
+  "text": "মুখ খোলো",
+  "from": "kids games"
+ },
+ "a1d89f727d87c7ca": {
+  "text": "জাদু! মুখ খোলো",
+  "from": "kids games"
+ },
+ "374f715b1c70b22c": {
+  "text": "হাত তোলো",
+  "from": "kids games"
+ },
+ "b2b948ad20683963": {
+  "text": "জাদু! হাত তোলো",
+  "from": "kids games"
+ },
+ "606d99fa7fddd71f": {
+  "text": "হাত নাড়াও",
+  "from": "kids games"
+ },
+ "7e570e6f128a76e1": {
+  "text": "জাদু! হাত নাড়াও",
+  "from": "kids games"
+ },
+ "11116b79cb7b9ca8": {
+  "text": "পা নাড়াও",
+  "from": "kids games"
+ },
+ "f805e9cab536c169": {
+  "text": "জাদু! পা নাড়াও",
+  "from": "kids games"
+ },
+ "a7bba6d38101f344": {
+  "text": "ওঠো",
+  "from": "kids games"
+ },
+ "3445241155f64d46": {
+  "text": "জাদু! ওঠো",
+  "from": "kids games"
+ },
+ "8c0ee7673a9b9653": {
+  "text": "বসো",
+  "from": "kids games"
+ },
+ "d99131edf99f68a3": {
+  "text": "জাদু! বসো",
+  "from": "kids games"
+ },
+ "40ea6f045762cd75": {
+  "text": "লাফাও",
+  "from": "kids games"
+ },
+ "a3b4d90405fd36e5": {
+  "text": "জাদু! লাফাও",
+  "from": "kids games"
+ },
+ "c60d95f261acd8df": {
+  "text": "লাল কিছু নিয়ে এসো!",
+  "from": "kids games"
+ },
+ "587a55800966c56f": {
+  "text": "নীল কিছু নিয়ে এসো!",
+  "from": "kids games"
+ },
+ "f63a950d86fe5e22": {
+  "text": "হলুদ কিছু নিয়ে এসো!",
+  "from": "kids games"
+ },
+ "81473a4c4080e7b7": {
+  "text": "সবুজ কিছু নিয়ে এসো!",
+  "from": "kids games"
+ },
+ "1291816144e87c9a": {
+  "text": "সাদা কিছু নিয়ে এসো!",
+  "from": "kids games"
+ },
+ "3196686c94b0faf6": {
+  "text": "কালো কিছু নিয়ে এসো!",
+  "from": "kids games"
+ },
+ "2b8535938fa6394e": {
+  "text": "পেঁচা কোথায়?",
+  "from": "kids games"
+ },
+ "4ddc693517af55d1": {
+  "text": "এটা পেঁচা!",
+  "from": "kids games"
+ },
+ "d245badaa6a2a5a3": {
+  "text": "বিড়াল কোথায়?",
+  "from": "kids games"
+ },
+ "945f58c548514294": {
+  "text": "এটা বিড়াল!",
+  "from": "kids games"
+ },
+ "fc903ae168041dc7": {
+  "text": "ব্যাঙ কোথায়?",
+  "from": "kids games"
+ },
+ "d383778375cbc65b": {
+  "text": "এটা ব্যাঙ!",
+  "from": "kids games"
+ },
+ "cbe8dadfd0db4619": {
+  "text": "হাতি কোথায়?",
+  "from": "kids games"
+ },
+ "15629c96d41de2cf": {
+  "text": "এটা হাতি!",
+  "from": "kids games"
+ },
+ "5bb7ee35c6d1fa05": {
+  "text": "সাপ কোথায়?",
+  "from": "kids games"
+ },
+ "8c07e9502b788d59": {
+  "text": "এটা সাপ!",
+  "from": "kids games"
+ },
+ "0168a1c06eab9cb9": {
+  "text": "ক্রম",
+  "from": "conjunct rofola"
+ },
+ "60e9e802cb4bfaec": {
+  "text": "চক্র",
+  "from": "conjunct rofola"
+ },
+ "9c331e565002e4cc": {
+  "text": "ক্রিকেট",
+  "from": "conjunct rofola"
+ },
+ "6aec84f7bb761230": {
+  "text": "গ্রহ",
+  "from": "conjunct rofola"
+ },
+ "63d3ead15b086353": {
+  "text": "গ্রন্থ",
+  "from": "conjunct rofola"
+ },
+ "687587895820f447": {
+  "text": "শীঘ্র",
+  "from": "conjunct rofola"
+ },
+ "4dd744e568bef226": {
+  "text": "ঘ্রাণ",
+  "from": "conjunct rofola"
+ },
+ "0bc81eeaa59c09e1": {
+  "text": "ট্রাক",
+  "from": "conjunct rofola"
+ },
+ "304dfbfbd9131bb1": {
+  "text": "ড্রেস",
+  "from": "conjunct rofola"
+ },
+ "6e1874d86446f86b": {
+  "text": "ড্রাম",
+  "from": "conjunct rofola"
+ },
+ "7d8ff7044496df31": {
+  "text": "পত্র",
+  "from": "conjunct rofola"
+ },
+ "b3311f4702d10d0b": {
+  "text": "মিত্র",
+  "from": "conjunct rofola"
+ },
+ "61687e0125c22c10": {
+  "text": "পুত্র",
+  "from": "conjunct rofola"
+ },
+ "72484f62ee01aa08": {
+  "text": "ভদ্র",
+  "from": "conjunct rofola"
+ },
+ "725b3105f3a790da": {
+  "text": "দ্রব্য",
+  "from": "conjunct rofola"
+ },
+ "596b98da93e2e265": {
+  "text": "দরিদ্র",
+  "from": "conjunct rofola"
+ },
+ "54bf48e9cc5bf01d": {
+  "text": "ধ্রুব",
+  "from": "conjunct rofola"
+ },
+ "459d338b46edaa70": {
+  "text": "প্রকৃতি",
+  "from": "conjunct rofola"
+ },
+ "3653d9923abb8adc": {
+  "text": "প্রভাত",
+  "from": "conjunct rofola"
+ },
+ "7a7a684a3073738c": {
+  "text": "প্রেম",
+  "from": "conjunct rofola"
+ },
+ "91cb99871a629c95": {
+  "text": "ফ্রক",
+  "from": "conjunct rofola"
+ },
+ "a784aa9f449e8d15": {
+  "text": "ফ্রিজ",
+  "from": "conjunct rofola"
+ },
+ "287590810efe5674": {
+  "text": "ফ্রান্স",
+  "from": "conjunct rofola"
+ },
+ "e65a2d1deb885a19": {
+  "text": "ব্রত",
+  "from": "conjunct rofola"
+ },
+ "0777d9b427e25b6d": {
+  "text": "ব্রাশ",
+  "from": "conjunct rofola"
+ },
+ "c80140ee31d55ac3": {
+  "text": "ভ্রমণ",
+  "from": "conjunct rofola"
+ },
+ "a969783dc26bedbe": {
+  "text": "ভ্রু",
+  "from": "conjunct rofola"
+ },
+ "aad9fbadf0be24b7": {
+  "text": "ভ্রান্তি",
+  "from": "conjunct rofola"
+ },
+ "53c57ebb9c10f34f": {
+  "text": "নম্র",
+  "from": "conjunct rofola"
+ },
+ "1681efcb410e22ab": {
+  "text": "তাম্র",
+  "from": "conjunct rofola"
+ },
+ "b35e713c1720123f": {
+  "text": "সম্রাট",
+  "from": "conjunct rofola"
+ },
+ "d88ecf9d6bc32346": {
+  "text": "শ্রম",
+  "from": "conjunct rofola"
+ },
+ "0efad5d2ae0066e9": {
+  "text": "শ্রী",
+  "from": "conjunct rofola"
+ },
+ "df50a82a4664555c": {
+  "text": "শ্রেণি",
+  "from": "conjunct rofola"
+ },
+ "a313d098093d6e8b": {
+  "text": "শ্রদ্ধা",
+  "from": "conjunct rofola"
+ },
+ "4501256bf49a02ea": {
+  "text": "সহস্র",
+  "from": "conjunct rofola"
+ },
+ "167835a7c9af85d6": {
+  "text": "স্রোত",
+  "from": "conjunct rofola"
+ },
+ "bf49ed85557703fd": {
+  "text": "অজস্র",
+  "from": "conjunct rofola"
+ },
+ "86de08881bc2777a": {
+  "text": "হ্রদ",
+  "from": "conjunct rofola"
+ },
+ "f281db70622a4868": {
+  "text": "হ্রাস",
+  "from": "conjunct rofola"
+ },
+ "f4e7e05e655ae67b": {
+  "text": "ঐক্য",
+  "from": "conjunct yafola"
+ },
+ "dd4b2527b795a89b": {
+  "text": "ভাগ্য",
+  "from": "conjunct yafola"
+ },
+ "633c7e9c34d507fe": {
+  "text": "যোগ্য",
+  "from": "conjunct yafola"
+ },
+ "c70109eed54c63aa": {
+  "text": "সৌভাগ্য",
+  "from": "conjunct yafola"
+ },
+ "6dc7663464cb67b0": {
+  "text": "রাজ্য",
+  "from": "conjunct yafola"
+ },
+ "af7996b301d5b143": {
+  "text": "বাণিজ্য",
+  "from": "conjunct yafola"
+ },
+ "64c792e4abf99931": {
+  "text": "নাট্য",
+  "from": "conjunct yafola"
+ },
+ "5a3a97cf7d70c415": {
+  "text": "পুণ্য",
+  "from": "conjunct yafola"
+ },
+ "b0411a20dc0872f8": {
+  "text": "পণ্য",
+  "from": "conjunct yafola"
+ },
+ "8d9503ad9ebc77e5": {
+  "text": "লাবণ্য",
+  "from": "conjunct yafola"
+ },
+ "99fd0baa406613b4": {
+  "text": "সত্য",
+  "from": "conjunct yafola"
+ },
+ "afb6cfc99ad05ea1": {
+  "text": "নৃত্য",
+  "from": "conjunct yafola"
+ },
+ "07675aa7a0853e8e": {
+  "text": "মৃত্যু",
+  "from": "conjunct yafola"
+ },
+ "e5e6f203e1ab0117": {
+  "text": "নিত্য",
+  "from": "conjunct yafola"
+ },
+ "df8aa0a96de33537": {
+  "text": "বিদ্যা",
+  "from": "conjunct yafola"
+ },
+ "c083efb30a5709b0": {
+  "text": "খাদ্য",
+  "from": "conjunct yafola"
+ },
+ "ba68b1227a44c15b": {
+  "text": "সদ্য",
+  "from": "conjunct yafola"
+ },
+ "110bccbf69d9bffd": {
+  "text": "মধ্য",
+  "from": "conjunct yafola"
+ },
+ "da2e0bacd9336e7c": {
+  "text": "বাধ্য",
+  "from": "conjunct yafola"
+ },
+ "718ba0957889504b": {
+  "text": "সাধ্য",
+  "from": "conjunct yafola"
+ },
+ "e845086c7941f965": {
+  "text": "অন্য",
+  "from": "conjunct yafola"
+ },
+ "dfdd722470e9b368": {
+  "text": "ধন্য",
+  "from": "conjunct yafola"
+ },
+ "387b730e06069d90": {
+  "text": "শূন্য",
+  "from": "conjunct yafola"
+ },
+ "48fe2ed59efcedfa": {
+  "text": "কন্যা",
+  "from": "conjunct yafola"
+ },
+ "69eb73c463e2e0ef": {
+  "text": "সৈন্য",
+  "from": "conjunct yafola"
+ },
+ "fea8bbd24e0dc2e7": {
+  "text": "ব্যবসা",
+  "from": "conjunct yafola"
+ },
+ "ac79d3ad6e24958e": {
+  "text": "সভ্য",
+  "from": "conjunct yafola"
+ },
+ "6d397f2687542cdb": {
+  "text": "অভ্যাস",
+  "from": "conjunct yafola"
+ },
+ "1a037499b4b3ec2d": {
+  "text": "সৌম্য",
+  "from": "conjunct yafola"
+ },
+ "6a4322a5daf6cf79": {
+  "text": "গ্রাম্য",
+  "from": "conjunct yafola"
+ },
+ "fa20cb164b5389d0": {
+  "text": "সাম্য",
+  "from": "conjunct yafola"
+ },
+ "2a0f5143c0a89285": {
+  "text": "মূল্য",
+  "from": "conjunct yafola"
+ },
+ "941bde00edf2dc3c": {
+  "text": "কল্যাণ",
+  "from": "conjunct yafola"
+ },
+ "906fe93b7486ce88": {
+  "text": "বাল্য",
+  "from": "conjunct yafola"
+ },
+ "32de1d4c96d4162a": {
+  "text": "আবশ্যক",
+  "from": "conjunct yafola"
+ },
+ "d28a7b851ba07e12": {
+  "text": "ভবিষ্যৎ",
+  "from": "conjunct yafola"
+ },
+ "cf187429f086713d": {
+  "text": "মনুষ্য",
+  "from": "conjunct yafola"
+ },
+ "a1e25896d922be75": {
+  "text": "শিষ্য",
+  "from": "conjunct yafola"
+ },
+ "c1d7b2e43209e26e": {
+  "text": "রহস্য",
+  "from": "conjunct yafola"
+ },
+ "a6b3f2c2b89d6b45": {
+  "text": "হাস্য",
+  "from": "conjunct yafola"
+ },
+ "dc08216148f47e8c": {
+  "text": "শস্য",
+  "from": "conjunct yafola"
+ },
+ "8c82a97d388d247a": {
+  "text": "সহ্য",
+  "from": "conjunct yafola"
+ },
+ "1a8e56349365dc3e": {
+  "text": "বাহ্যিক",
+  "from": "conjunct yafola"
+ },
+ "5e7c5f0e6d67b9a1": {
+  "text": "তর্ক",
+  "from": "conjunct repha"
+ },
+ "16591e6801d457ed": {
+  "text": "সতর্ক",
+  "from": "conjunct repha"
+ },
+ "57b8cdb6ab4d7523": {
+  "text": "কর্কশ",
+  "from": "conjunct repha"
+ },
+ "bbbfbbbf00ff2d6f": {
+  "text": "স্বর্গ",
+  "from": "conjunct repha"
+ },
+ "0b215dae7995df3a": {
+  "text": "দুর্গ",
+  "from": "conjunct repha"
+ },
+ "f3c6c6c253009510": {
+  "text": "বর্গ",
+  "from": "conjunct repha"
+ },
+ "b7fd16cf6e3387ca": {
+  "text": "মার্গ",
+  "from": "conjunct repha"
+ },
+ "9415a8d6fc3a8b59": {
+  "text": "চর্চা",
+  "from": "conjunct repha"
+ },
+ "5abcf5f37a69cbf9": {
+  "text": "অর্চনা",
+  "from": "conjunct repha"
+ },
+ "000b2cecdc33511b": {
+  "text": "গর্জন",
+  "from": "conjunct repha"
+ },
+ "3717a1e8eeb39e7f": {
+  "text": "বর্জন",
+  "from": "conjunct repha"
+ },
+ "ba482ccbe706db2c": {
+  "text": "অর্জন",
+  "from": "conjunct repha"
+ },
+ "61f87825a6b612bb": {
+  "text": "বোর্ড",
+  "from": "conjunct repha"
+ },
+ "4d04235e1a54db73": {
+  "text": "গার্ড",
+  "from": "conjunct repha"
+ },
+ "ffb156463dd3ea40": {
+  "text": "বর্ণ",
+  "from": "conjunct repha"
+ },
+ "d3ab25487b763e7f": {
+  "text": "কর্ণ",
+  "from": "conjunct repha"
+ },
+ "01b15abbfcbaedc8": {
+  "text": "স্বর্ণ",
+  "from": "conjunct repha"
+ },
+ "f5f872ea186eb246": {
+  "text": "পূর্ণ",
+  "from": "conjunct repha"
+ },
+ "b63a1714da4b48e0": {
+  "text": "কীর্তি",
+  "from": "conjunct repha"
+ },
+ "b21deb3d7aadb84c": {
+  "text": "বার্তা",
+  "from": "conjunct repha"
+ },
+ "25bf61a2fb2dede4": {
+  "text": "ধূর্ত",
+  "from": "conjunct repha"
+ },
+ "fc43fe9d02f994de": {
+  "text": "অর্থ",
+  "from": "conjunct repha"
+ },
+ "5bbded1b12cc0a87": {
+  "text": "ব্যর্থ",
+  "from": "conjunct repha"
+ },
+ "3f42c3242f627b38": {
+  "text": "স্বার্থ",
+  "from": "conjunct repha"
+ },
+ "c62c133941557a02": {
+  "text": "তীর্থ",
+  "from": "conjunct repha"
+ },
+ "94d63e2933a1fcbf": {
+  "text": "উর্দু",
+  "from": "conjunct repha"
+ },
+ "abd8410c2b6e62e1": {
+  "text": "কর্দম",
+  "from": "conjunct repha"
+ },
+ "53f1abe0295feaf2": {
+  "text": "অর্ধ",
+  "from": "conjunct repha"
+ },
+ "7551e1e7f23a4c03": {
+  "text": "বর্ধন",
+  "from": "conjunct repha"
+ },
+ "73e4ac514fc8bd6c": {
+  "text": "জার্নাল",
+  "from": "conjunct repha"
+ },
+ "2752fe97c7dcdd96": {
+  "text": "কার্নিশ",
+  "from": "conjunct repha"
+ },
+ "b08b73d0a76b054d": {
+  "text": "দর্পণ",
+  "from": "conjunct repha"
+ },
+ "2bfa35f7da59eca7": {
+  "text": "সর্প",
+  "from": "conjunct repha"
+ },
+ "3a5ac4ef84736d94": {
+  "text": "কর্পূর",
+  "from": "conjunct repha"
+ },
+ "7624c9fb25ac983c": {
+  "text": "অর্পণ",
+  "from": "conjunct repha"
+ },
+ "8ec0c7e6e79fa3b7": {
+  "text": "গর্ব",
+  "from": "conjunct repha"
+ },
+ "64b037a2e98c0687": {
+  "text": "পর্ব",
+  "from": "conjunct repha"
+ },
+ "190812b5375f21a9": {
+  "text": "সর্ব",
+  "from": "conjunct repha"
+ },
+ "bb5c1e8b5b219819": {
+  "text": "গর্ভ",
+  "from": "conjunct repha"
+ },
+ "e4efb77584fccb5d": {
+  "text": "দুর্ভাগ্য",
+  "from": "conjunct repha"
+ },
+ "a121c51b3e2e3cac": {
+  "text": "ধর্ম",
+  "from": "conjunct repha"
+ },
+ "66d772fd72ee9912": {
+  "text": "কর্ম",
+  "from": "conjunct repha"
+ },
+ "b77daff76b1d116c": {
+  "text": "চর্ম",
+  "from": "conjunct repha"
+ },
+ "95168ba3c50eda9f": {
+  "text": "মর্ম",
+  "from": "conjunct repha"
+ },
+ "aae6de41d28bbf71": {
+  "text": "কার্য",
+  "from": "conjunct repha"
+ },
+ "2ea8ae58d0972a4e": {
+  "text": "সৌন্দর্য",
+  "from": "conjunct repha"
+ },
+ "8528b051c7a5bf37": {
+  "text": "দর্শন",
+  "from": "conjunct repha"
+ },
+ "f3b72985dd334d71": {
+  "text": "স্পর্শ",
+  "from": "conjunct repha"
+ },
+ "af917b9ed9bba156": {
+  "text": "আদর্শ",
+  "from": "conjunct repha"
+ },
+ "1b5fe4e47d241637": {
+  "text": "বর্ষ",
+  "from": "conjunct repha"
+ },
+ "a856cf3634aae878": {
+  "text": "হর্ষ",
+  "from": "conjunct repha"
+ },
+ "397f3c9ab85cb7df": {
+  "text": "আকর্ষণ",
+  "from": "conjunct repha"
+ },
+ "e32b7b51ed41e20a": {
+  "text": "ক্লাব",
+  "from": "conjunct lafola"
+ },
+ "977a4152bd229edf": {
+  "text": "গ্লানি",
+  "from": "conjunct lafola"
+ },
+ "49c057e3cd53022d": {
+  "text": "প্লেট",
+  "from": "conjunct lafola"
+ },
+ "150c5738193a95af": {
+  "text": "প্লেন",
+  "from": "conjunct lafola"
+ },
+ "991686de55579530": {
+  "text": "প্লাবন",
+  "from": "conjunct lafola"
+ },
+ "b827a5280edf8057": {
+  "text": "ব্লাউজ",
+  "from": "conjunct lafola"
+ },
+ "03bde52561c48e04": {
+  "text": "ব্লক",
+  "from": "conjunct lafola"
+ },
+ "ddf81f7e300773c2": {
+  "text": "ফ্লাস্ক",
+  "from": "conjunct lafola"
+ },
+ "29f92a4fa7d6f0ed": {
+  "text": "ফ্ল্যাট",
+  "from": "conjunct lafola"
+ },
+ "9bdc8b335ffe91c9": {
+  "text": "স্লেট",
+  "from": "conjunct lafola"
+ },
+ "fcce0bb18e25d48c": {
+  "text": "স্লিপ",
+  "from": "conjunct lafola"
+ },
+ "164aead192d63f91": {
+  "text": "অম্ল",
+  "from": "conjunct lafola"
+ },
+ "7b8291642887858c": {
+  "text": "অস্তিত্ব",
+  "from": "conjunct bafola"
+ },
+ "a4ffcec3784ba605": {
+  "text": "নেতৃত্ব",
+  "from": "conjunct bafola"
+ },
+ "69edbd49c26481f0": {
+  "text": "দ্বার",
+  "from": "conjunct bafola"
+ },
+ "55cd0798a7c92e6e": {
+  "text": "দ্বিতীয়",
+  "from": "conjunct bafola"
+ },
+ "b9338761cbb4dd69": {
+  "text": "দ্বন্দ্ব",
+  "from": "conjunct bafola"
+ },
+ "6671ee0d3fb3b914": {
+  "text": "ধ্বংস",
+  "from": "conjunct bafola"
+ },
+ "646b081aed43f7d4": {
+  "text": "স্বপ্ন",
+  "from": "conjunct bafola"
+ },
+ "27ce7e1de306adec": {
+  "text": "স্বাধীন",
+  "from": "conjunct bafola"
+ },
+ "7b7fe23589ab64e2": {
+  "text": "স্বাগত",
+  "from": "conjunct bafola"
+ },
+ "e52e9cad15e2ff0f": {
+  "text": "বিশ্বাস",
+  "from": "conjunct bafola"
+ },
+ "7b364de6bcb7cd1f": {
+  "text": "বিশ্ব",
+  "from": "conjunct bafola"
+ },
+ "8f822de85ac03047": {
+  "text": "ঈশ্বর",
+  "from": "conjunct bafola"
+ },
+ "d7347a36e54cfd26": {
+  "text": "পক্ব",
+  "from": "conjunct bafola"
+ },
+ "9145d7b2f7520c6d": {
+  "text": "জ্বালা",
+  "from": "conjunct bafola"
+ },
+ "cab6f760839c76cb": {
+  "text": "আহ্বান",
+  "from": "conjunct bafola"
+ },
+ "b7c06ce13d7acaaf": {
+  "text": "জিহ্বা",
+  "from": "conjunct bafola"
+ },
+ "a6c646e3bd34fa3f": {
+  "text": "যুগ্ম",
+  "from": "conjunct mafola"
+ },
+ "dc9341c756d17954": {
+  "text": "আত্মা",
+  "from": "conjunct mafola"
+ },
+ "6ef4453e9d8203fb": {
+  "text": "মহাত্মা",
+  "from": "conjunct mafola"
+ },
+ "316c3ef40a7ccf7f": {
+  "text": "ছদ্ম",
+  "from": "conjunct mafola"
+ },
+ "28747cd7f10e3e37": {
+  "text": "স্মরণ",
+  "from": "conjunct mafola"
+ },
+ "9b4f6e808f0fe065": {
+  "text": "বিস্ময়",
+  "from": "conjunct mafola"
+ },
+ "9717128d3ea94d5c": {
+  "text": "উষ্মা",
+  "from": "conjunct mafola"
+ },
+ "cafc28c2b6475bb6": {
+  "text": "ব্রাহ্মণ",
+  "from": "conjunct mafola"
+ },
+ "0f0e6bada7aa2d4e": {
+  "text": "ব্রহ্ম",
+  "from": "conjunct mafola"
+ },
+ "05f9632baeb3ae81": {
+  "text": "অগ্নি",
+  "from": "conjunct nafola"
+ },
+ "40715ee56769330e": {
+  "text": "ভগ্ন",
+  "from": "conjunct nafola"
+ },
+ "21cc4f34434356f4": {
+  "text": "লগ্ন",
+  "from": "conjunct nafola"
+ },
+ "2aa80f6f1b3f4009": {
+  "text": "বিঘ্ন",
+  "from": "conjunct nafola"
+ },
+ "0cd316f9a187e9b5": {
+  "text": "যত্ন",
+  "from": "conjunct nafola"
+ },
+ "729ef0d28c210917": {
+  "text": "রত্ন",
+  "from": "conjunct nafola"
+ },
+ "90fb0a33c95d2211": {
+  "text": "নিম্ন",
+  "from": "conjunct nafola"
+ },
+ "62878a8af857215b": {
+  "text": "স্নান",
+  "from": "conjunct nafola"
+ },
+ "dfc568d7bf369879": {
+  "text": "স্নেহ",
+  "from": "conjunct nafola"
+ },
+ "3d8aae95c7e4af3c": {
+  "text": "চিহ্ন",
+  "from": "conjunct nafola"
+ },
+ "c44b40e69fd517ee": {
+  "text": "অপরাহ্ন",
+  "from": "conjunct nafola"
+ },
+ "2451afb8e6bc22eb": {
+  "text": "শঙ্কা",
+  "from": "conjunct nasal"
+ },
+ "1e49fa6aee5a19ec": {
+  "text": "আতঙ্ক",
+  "from": "conjunct nasal"
+ },
+ "0b8c360435c53f39": {
+  "text": "অঙ্গ",
+  "from": "conjunct nasal"
+ },
+ "eda0ea3f24839e5d": {
+  "text": "বঙ্গ",
+  "from": "conjunct nasal"
+ },
+ "e3582a1d62842ea6": {
+  "text": "সঙ্গ",
+  "from": "conjunct nasal"
+ },
+ "3011f198dcfa76bd": {
+  "text": "লঙ্ঘন",
+  "from": "conjunct nasal"
+ },
+ "cd4db7478a790d93": {
+  "text": "পঞ্চ",
+  "from": "conjunct nasal"
+ },
+ "451e2f27da8adffb": {
+  "text": "মঞ্চ",
+  "from": "conjunct nasal"
+ },
+ "7070eafc0a0a8c67": {
+  "text": "অঞ্চল",
+  "from": "conjunct nasal"
+ },
+ "7941a85fe5195edb": {
+  "text": "সঞ্চয়",
+  "from": "conjunct nasal"
+ },
+ "854098c009927f95": {
+  "text": "লাঞ্ছনা",
+  "from": "conjunct nasal"
+ },
+ "07eaaa3e467fdec0": {
+  "text": "বাঞ্ছা",
+  "from": "conjunct nasal"
+ },
+ "d302e2676e4fb424": {
+  "text": "গঞ্জ",
+  "from": "conjunct nasal"
+ },
+ "65a0f5f743b61fa7": {
+  "text": "কুঞ্জ",
+  "from": "conjunct nasal"
+ },
+ "3cd1d94d2c2ee5a4": {
+  "text": "ব্যঞ্জন",
+  "from": "conjunct nasal"
+ },
+ "76487e569740fd71": {
+  "text": "ঝঞ্ঝা",
+  "from": "conjunct nasal"
+ },
+ "6de5a937eb2dcef6": {
+  "text": "কণ্টক",
+  "from": "conjunct nasal"
+ },
+ "8805048c5c9cdc62": {
+  "text": "উৎকণ্ঠা",
+  "from": "conjunct nasal"
+ },
+ "280d810f16d1fe74": {
+  "text": "দণ্ড",
+  "from": "conjunct nasal"
+ },
+ "680295e377aeb249": {
+  "text": "প্রচণ্ড",
+  "from": "conjunct nasal"
+ },
+ "20d937b48947316e": {
+  "text": "পণ্ডিত",
+  "from": "conjunct nasal"
+ },
+ "db83b0ae612d6439": {
+  "text": "খণ্ড",
+  "from": "conjunct nasal"
+ },
+ "95f6d10c331498e6": {
+  "text": "অন্ত",
+  "from": "conjunct nasal"
+ },
+ "5f66bfae0e895bdc": {
+  "text": "পন্থা",
+  "from": "conjunct nasal"
+ },
+ "1771425391376954": {
+  "text": "কন্থা",
+  "from": "conjunct nasal"
+ },
+ "348434da05135d50": {
+  "text": "ছন্দ",
+  "from": "conjunct nasal"
+ },
+ "fd117ce0ebac7ffd": {
+  "text": "বন্দর",
+  "from": "conjunct nasal"
+ },
+ "fc7b3fef82f10675": {
+  "text": "অন্ধ",
+  "from": "conjunct nasal"
+ },
+ "491fc5ca4e39f32e": {
+  "text": "গন্ধ",
+  "from": "conjunct nasal"
+ },
+ "01e29ec6fb38c0eb": {
+  "text": "বন্ধ",
+  "from": "conjunct nasal"
+ },
+ "c7b265426b688d04": {
+  "text": "পয়েন্ট",
+  "from": "conjunct nasal"
+ },
+ "3c83e37fec995df0": {
+  "text": "ভান্ডার",
+  "from": "conjunct nasal"
+ },
+ "f82a75d4e8ef810c": {
+  "text": "বান্ডিল",
+  "from": "conjunct nasal"
+ },
+ "dbda603d41b18ff9": {
+  "text": "সম্পর্ক",
+  "from": "conjunct nasal"
+ },
+ "060dd7cb52ad321b": {
+  "text": "চম্পা",
+  "from": "conjunct nasal"
+ },
+ "b6b37a741a8a0a1c": {
+  "text": "লম্ফ",
+  "from": "conjunct nasal"
+ },
+ "0ba4cb292e3fe85f": {
+  "text": "অম্বর",
+  "from": "conjunct nasal"
+ },
+ "bf40e1a6e6cbc83d": {
+  "text": "আরম্ভ",
+  "from": "conjunct nasal"
+ },
+ "3b3248ab4e6b0579": {
+  "text": "সম্ভব",
+  "from": "conjunct nasal"
+ },
+ "a761d49ba1883a53": {
+  "text": "গম্ভীর",
+  "from": "conjunct nasal"
+ },
+ "cbbf6b7ab6701a5d": {
+  "text": "স্তম্ভ",
+  "from": "conjunct nasal"
+ },
+ "347b34a23ae20215": {
+  "text": "ধাক্কা",
+  "from": "conjunct double"
+ },
+ "806f58694717f145": {
+  "text": "চক্কর",
+  "from": "conjunct double"
+ },
+ "8b77502c1c1f53ae": {
+  "text": "উচ্চ",
+  "from": "conjunct double"
+ },
+ "a1be62d6f07c9102": {
+  "text": "সজ্জা",
+  "from": "conjunct double"
+ },
+ "194b2b6c373cf06f": {
+  "text": "চট্টগ্রাম",
+  "from": "conjunct double"
+ },
+ "e87171933a96ca04": {
+  "text": "গাড্ডা",
+  "from": "conjunct double"
+ },
+ "e1d301671ad34500": {
+  "text": "বৃত্ত",
+  "from": "conjunct double"
+ },
+ "3372e22cccbaf0a0": {
+  "text": "উদ্দেশ্য",
+  "from": "conjunct double"
+ },
+ "0719dc6afa5b1efa": {
+  "text": "হদ্দ",
+  "from": "conjunct double"
+ },
+ "4258937e5724acc0": {
+  "text": "ছাপ্পান্ন",
+  "from": "conjunct double"
+ },
+ "184e8c59858f3f6d": {
+  "text": "সম্মান",
+  "from": "conjunct double"
+ },
+ "714518951941a44a": {
+  "text": "অন্ন",
+  "from": "conjunct double"
+ },
+ "867aec9ea085ee81": {
+  "text": "ছিন্ন",
+  "from": "conjunct double"
+ },
+ "03c740f679e31972": {
+  "text": "সম্পন্ন",
+  "from": "conjunct double"
+ },
+ "ab1071b68966650b": {
+  "text": "উল্লাস",
+  "from": "conjunct double"
+ },
+ "6f14f9e39940a70c": {
+  "text": "পল্লি",
+  "from": "conjunct double"
+ },
+ "ee92d50891d303e5": {
+  "text": "বল্লম",
+  "from": "conjunct double"
+ },
+ "6ecaa77c2eff106d": {
+  "text": "শুষ্ক",
+  "from": "conjunct sibilant"
+ },
+ "f6580dca385e5dbe": {
+  "text": "দুষ্কর",
+  "from": "conjunct sibilant"
+ },
+ "f58f8503fb3e8910": {
+  "text": "কষ্ট",
+  "from": "conjunct sibilant"
+ },
+ "f35d31f5c73e0744": {
+  "text": "শ্রেষ্ঠ",
+  "from": "conjunct sibilant"
+ },
+ "79ff8dcf867b4a9e": {
+  "text": "কনিষ্ঠ",
+  "from": "conjunct sibilant"
+ },
+ "c7e7ba9cea7577a3": {
+  "text": "নিষ্ঠা",
+  "from": "conjunct sibilant"
+ },
+ "549a8804ac258bfa": {
+  "text": "ষষ্ঠ",
+  "from": "conjunct sibilant"
+ },
+ "75d7a74742937fa9": {
+  "text": "বাষ্প",
+  "from": "conjunct sibilant"
+ },
+ "387eb16adce4e1aa": {
+  "text": "নিষ্পাপ",
+  "from": "conjunct sibilant"
+ },
+ "5e1ebe64e2ac044b": {
+  "text": "নিষ্ফল",
+  "from": "conjunct sibilant"
+ },
+ "c1bd1a985fd4dfe1": {
+  "text": "কৃষ্ণ",
+  "from": "conjunct sibilant"
+ },
+ "d2671d31e7dc07d1": {
+  "text": "উষ্ণ",
+  "from": "conjunct sibilant"
+ },
+ "eab061632f3b4b1f": {
+  "text": "তৃষ্ণা",
+  "from": "conjunct sibilant"
+ },
+ "857c8820f14820b6": {
+  "text": "স্টল",
+  "from": "conjunct sibilant"
+ },
+ "1b769e883c62f33c": {
+  "text": "হস্ত",
+  "from": "conjunct sibilant"
+ },
+ "fa8c325f7e0ec89a": {
+  "text": "স্থান",
+  "from": "conjunct sibilant"
+ },
+ "19964dcae293ea76": {
+  "text": "স্থির",
+  "from": "conjunct sibilant"
+ },
+ "c9dfad7d50669d85": {
+  "text": "অবস্থা",
+  "from": "conjunct sibilant"
+ },
+ "e065e25b6b3d5df3": {
+  "text": "স্পন্দন",
+  "from": "conjunct sibilant"
+ },
+ "72595ddefe6221a4": {
+  "text": "বিস্ফোরণ",
+  "from": "conjunct sibilant"
+ },
+ "a2dedb10d3cbe59e": {
+  "text": "স্ফটিক",
+  "from": "conjunct sibilant"
+ },
+ "8d63cc71d7f4ed28": {
+  "text": "আশ্চর্য",
+  "from": "conjunct sibilant"
+ },
+ "f8108b2cfe77ea80": {
+  "text": "নিশ্চয়",
+  "from": "conjunct sibilant"
+ },
+ "efa0376fbb9e9e5f": {
+  "text": "শ্লোক",
+  "from": "conjunct sibilant"
+ },
+ "8a7942052e6c5669": {
+  "text": "অশ্লীল",
+  "from": "conjunct sibilant"
+ },
+ "99bad90d78aae304": {
+  "text": "কাশ্মীর",
+  "from": "conjunct sibilant"
+ },
+ "31c10ee9672c8e82": {
+  "text": "রশ্মি",
+  "from": "conjunct sibilant"
+ },
+ "eadd1ae8fa1d52db": {
+  "text": "ভক্তি",
+  "from": "conjunct mixed"
+ },
+ "4c90319b76260a05": {
+  "text": "শক্ত",
+  "from": "conjunct mixed"
+ },
+ "0a4ec50bb37559f4": {
+  "text": "মুক্ত",
+  "from": "conjunct mixed"
+ },
+ "177e74d3b6a2fa2e": {
+  "text": "বাক্স",
+  "from": "conjunct mixed"
+ },
+ "e31d3a233348da98": {
+  "text": "মুখ্য",
+  "from": "conjunct mixed"
+ },
+ "b874410d7d3d3939": {
+  "text": "আখ্যান",
+  "from": "conjunct mixed"
+ },
+ "5d545eff3d3590f3": {
+  "text": "খ্যাতি",
+  "from": "conjunct mixed"
+ },
+ "0ec7aa07d1728601": {
+  "text": "দুগ্ধ",
+  "from": "conjunct mixed"
+ },
+ "95ebebe4aec08a50": {
+  "text": "মুগ্ধ",
+  "from": "conjunct mixed"
+ },
+ "ed5f72dd2adce946": {
+  "text": "স্নিগ্ধ",
+  "from": "conjunct mixed"
+ },
+ "0cc7434534d7e0c7": {
+  "text": "ইচ্ছা",
+  "from": "conjunct mixed"
+ },
+ "f614ba26ea80cc74": {
+  "text": "স্বচ্ছ",
+  "from": "conjunct mixed"
+ },
+ "233798ecbad55da5": {
+  "text": "যুদ্ধ",
+  "from": "conjunct mixed"
+ },
+ "cd398be2b5c5c5ad": {
+  "text": "শুদ্ধ",
+  "from": "conjunct mixed"
+ },
+ "e9b96ec1b0016291": {
+  "text": "উদ্ধার",
+  "from": "conjunct mixed"
+ },
+ "74798b1a7112b2b6": {
+  "text": "উদ্ভিদ",
+  "from": "conjunct mixed"
+ },
+ "222e6c9032cfb81e": {
+  "text": "উদ্ভব",
+  "from": "conjunct mixed"
+ },
+ "89b74fb6793e5d42": {
+  "text": "অব্দ",
+  "from": "conjunct mixed"
+ },
+ "9e9c122e454fac37": {
+  "text": "লব্ধ",
+  "from": "conjunct mixed"
+ },
+ "64ffb7029a64e93c": {
+  "text": "কল্পনা",
+  "from": "conjunct mixed"
+ },
+ "9a5e4f0ed385da31": {
+  "text": "ক্ষমা",
+  "from": "conjunct special"
+ },
+ "a3b04ef59e3186d7": {
+  "text": "শিক্ষা",
+  "from": "conjunct special"
+ },
+ "3f9b75dc7140429b": {
+  "text": "ক্ষতি",
+  "from": "conjunct special"
+ },
+ "e396e72477ebb241": {
+  "text": "জ্ঞান",
+  "from": "conjunct special"
+ },
+ "46669a5a4d739fb1": {
+  "text": "যজ্ঞ",
+  "from": "conjunct special"
+ },
+ "df49b565c8cdc06e": {
+  "text": "আজ্ঞা",
+  "from": "conjunct special"
+ },
+ "2885fef48843b6c6": {
+  "text": "চন্দ্র",
+  "from": "conjunct triple"
+ },
+ "c880770be247c332": {
+  "text": "ইন্দ্র",
+  "from": "conjunct triple"
+ },
+ "157ab2b1f5e83fde": {
+  "text": "রাষ্ট্র",
+  "from": "conjunct triple"
+ },
+ "cf2214204bb9098a": {
+  "text": "অস্ত্র",
+  "from": "conjunct triple"
+ },
+ "5c2dff67bdb17730": {
+  "text": "শাস্ত্র",
+  "from": "conjunct triple"
+ },
+ "bf16160231b8abc9": {
+  "text": "বস্ত্র",
+  "from": "conjunct triple"
+ },
+ "9945e3b14e3f6d12": {
+  "text": "মন্ত্র",
+  "from": "conjunct triple"
+ },
+ "46193f433b3ac5c6": {
+  "text": "তন্ত্র",
+  "from": "conjunct triple"
+ },
+ "9c81355e95fc123d": {
+  "text": "লক্ষ্মী",
+  "from": "conjunct triple"
+ },
+ "f0cad241eb3b1bd6": {
+  "text": "সূক্ষ্ম",
+  "from": "conjunct triple"
+ },
+ "9e425953bca7929a": {
+  "text": "স্বাস্থ্য",
+  "from": "conjunct triple"
+ },
+ "79cbacb1278190ab": {
+  "text": "স্প্রে",
+  "from": "conjunct triple"
+ },
+ "9ad937954e2e8733": {
+  "text": "স্ক্রু",
+  "from": "conjunct triple"
+ },
+ "b76905c69f58a91f": {
+  "text": "লাল",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "49edf520d383a182": {
+  "text": "নীল",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "275c56b0dc3f063b": {
+  "text": "হলুদ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "b1329725ecaa09d3": {
+  "text": "সবুজ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "17bc35fc032283c7": {
+  "text": "সাদা",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "aac028a82efd8f57": {
+  "text": "কালো",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "1e543af548a7490d": {
+  "text": "কমলা",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "192f3f8aff01d68c": {
+  "text": "গোলাপি",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "e6a0603799c18777": {
+  "text": "বেগুনি",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "8782080f651f8d0d": {
+  "text": "বাদামি",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "6b63268756d5e1b1": {
+  "text": "ধূসর",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "fbd1fb5effc689d3": {
+  "text": "আকাশি",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "6d53dff17a535d17": {
+  "text": "মাথা",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "da947b8bdf860f22": {
+  "text": "চুল",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "426c2120aa00f738": {
+  "text": "চোখ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "5014c637729d60e0": {
+  "text": "নাক",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "422cbd04c91c43a1": {
+  "text": "কান",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "bb5471e261614e9b": {
+  "text": "মুখ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "9f8f357ce83b25e0": {
+  "text": "গলা",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "022e7134a2d72092": {
+  "text": "কাঁধ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "6f20af28851e7a5f": {
+  "text": "হাত",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "21ed27822ef507c0": {
+  "text": "পেট",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "d0e454aa908b9149": {
+  "text": "হাঁটু",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "635219b34c15ebde": {
+  "text": "পা",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "0c0f1f2a1f011804": {
+  "text": "কপাল",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "66d93a9352c0e314": {
+  "text": "ভুরু",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "f8f93570b40ab711": {
+  "text": "গাল",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "3e38a45b5704d126": {
+  "text": "থুতনি",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "2a0d16f420053117": {
+  "text": "ঠোঁট",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "d419b367e39b0625": {
+  "text": "দাঁত",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "d19b90a522b66d88": {
+  "text": "জিভ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "9d29a56f856ea6fb": {
+  "text": "আঙুল",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "e0f318b222c3edf2": {
+  "text": "নখ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "7dfcdf58ff437a7d": {
+  "text": "বুক",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "7e96b927dd79e1ea": {
+  "text": "পিঠ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "20c5806af45e7e29": {
+  "text": "এক",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "0c84fb1e68b727d7": {
+  "text": "দুই",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "08a818c6fc036b6f": {
+  "text": "তিন",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "a62e82722ab8f87a": {
+  "text": "চার",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "cdc223c4023338a5": {
+  "text": "পাঁচ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "b000beecb648fcec": {
+  "text": "ছয়",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "2626052ea3745473": {
+  "text": "সাত",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "d3c475f9a83523a3": {
+  "text": "আট",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "32868c117eee2c30": {
+  "text": "নয়",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "9ce2918e05e349fa": {
+  "text": "দশ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "8fd81cf4ea888521": {
+  "text": "কুকুর",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "67fdc4aee3140035": {
+  "text": "বিড়াল",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "6b52439b998df9d9": {
+  "text": "গরু",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "856c18def11490ca": {
+  "text": "হাতি",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "3a385883e91df35b": {
+  "text": "বাঘ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "729520f25ac16b3b": {
+  "text": "পাখি",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "d52a1d3e8a5b02da": {
+  "text": "মাছ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "7d9f53f92b5adb9d": {
+  "text": "বাঁদর",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "e8736f9dd2a2c609": {
+  "text": "ঘোড়া",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "c092e9b32cf4846d": {
+  "text": "পেঁচা",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "b5c7149905812efa": {
+  "text": "ব্যাঙ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "7dcd948a21112e47": {
+  "text": "সাপ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "a101cb28f6aca052": {
+  "text": "রবিবার",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "684ccf27d97b3a6a": {
+  "text": "সোমবার",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "c8bb9eac785aa990": {
+  "text": "মঙ্গলবার",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "c7814cc94618c95e": {
+  "text": "বুধবার",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "e63e0ee578801570": {
+  "text": "বৃহস্পতিবার",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "fb08a6abeb3db552": {
+  "text": "শুক্রবার",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "d9569bc7565910fd": {
+  "text": "শনিবার",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "34fd68d64d13726c": {
+  "text": "জানুয়ারি",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "2107eb9b1ac2a932": {
+  "text": "ফেব্রুয়ারি",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "9570e337aabe7ef0": {
+  "text": "মার্চ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "f23fbf5cf8e9bf32": {
+  "text": "এপ্রিল",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "2c167ebb92470f37": {
+  "text": "মে",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "a8c5726bb6e07c3a": {
+  "text": "জুন",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "7a19ae20a5c29913": {
+  "text": "জুলাই",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "642ae2926c20e98a": {
+  "text": "আগস্ট",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "f7f9f28138d7d321": {
+  "text": "সেপ্টেম্বর",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "8447d7c715538c81": {
+  "text": "অক্টোবর",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "c60868d55a118b6a": {
+  "text": "নভেম্বর",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "6b6f4ba5333863a1": {
+  "text": "ডিসেম্বর",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "f6fd8d2f0c4dccf2": {
+  "text": "বৈশাখ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "d49b77a68d899a6c": {
+  "text": "জ্যৈষ্ঠ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "a5d38c35efd2ee07": {
+  "text": "আষাঢ়",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "ab707fad5b0ad667": {
+  "text": "শ্রাবণ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "b9df5d15948b6915": {
+  "text": "ভাদ্র",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "85f479c44c63da9e": {
+  "text": "আশ্বিন",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "7ae669d86bf827b5": {
+  "text": "কার্তিক",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "a5cd082f8f04f292": {
+  "text": "অগ্রহায়ণ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "1512aef25b883ba6": {
+  "text": "পৌষ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "d4f97a64ff583e30": {
+  "text": "মাঘ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "251b161d443559ce": {
+  "text": "ফাল্গুন",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "dfcdd93b88d76e2c": {
+  "text": "চৈত্র",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "ba6af8e7583ff6de": {
+  "text": "গ্রীষ্ম",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "4c082beeecfe4443": {
+  "text": "বর্ষা",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "9a074ce279393da6": {
+  "text": "শরৎ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "78d23225268cfc2a": {
+  "text": "হেমন্ত",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "b7ecb2c6d0a69364": {
+  "text": "শীত",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "0f55f48d17623246": {
+  "text": "বসন্ত",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "79f1adf46f1d3be0": {
+  "text": "মা",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "ea4131af3f359bbd": {
+  "text": "বাবা",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "ba94fabbc365bd33": {
+  "text": "ঠাকুমা",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "af6a15f46f2be15f": {
+  "text": "ঠাকুরদা",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "7aae0158d76c3533": {
+  "text": "দাদা",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "b690843aa723d115": {
+  "text": "দিদি",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "d9b0bdc153d9ea50": {
+  "text": "ভাই",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "a09eb780494e3045": {
+  "text": "বোন",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "a37db4dfe9a1263e": {
+  "text": "শিশু",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "2535e3da34bceea8": {
+  "text": "কাকা",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "583758bbc8b9e626": {
+  "text": "মাসি",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "e91a9a2ca19f3133": {
+  "text": "পরিবার",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "63db152c3b6ab372": {
+  "text": "আম",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "e1afbb9fde562a68": {
+  "text": "কলা",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "0fe6925727ae479e": {
+  "text": "আপেল",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "33532d9e7eeb55b0": {
+  "text": "কমলালেবু",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "32801678aee06dd2": {
+  "text": "কাঁঠাল",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "1cd61c41c5114fd6": {
+  "text": "লিচু",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "047e1a68dfabcff0": {
+  "text": "পেয়ারা",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "f96473a0ce866df3": {
+  "text": "পেঁপে",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "805604c6e0e91f72": {
+  "text": "তরমুজ",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "2927557299107fc7": {
+  "text": "নারকেল",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "331e1ad72881cfaf": {
+  "text": "আঙুর",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "534539e9592d1919": {
+  "text": "আনারস",
+  "from": "kids lesson slow",
+  "slow": true
+ },
+ "00babae627ecc461": {
+  "text": "কয়টা?",
+  "from": "kids question"
+ },
+ "fc5869e2688ff5ae": {
+  "text": "এটা কী বার?",
+  "from": "kids question"
+ },
+ "e536263895bb528f": {
+  "text": "এটা কী মাস?",
+  "from": "kids question"
+ },
+ "72ff618fea8ead8c": {
+  "text": "এটা কোন ঋতু?",
+  "from": "kids question"
+ },
+ "4f55d7e1325ebc60": {
+  "text": "ইনি কে?",
+  "from": "kids question"
  }
 }
