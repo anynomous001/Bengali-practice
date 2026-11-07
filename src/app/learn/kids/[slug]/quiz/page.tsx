@@ -13,7 +13,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   return (
     <LessonFrame lessonId={kidLessonIds(t.id).quiz}>
       <h1>{t.question.en.replace("?", "")} <span lang="bn">{t.question.bn}</span></h1>
-      <KidsQuiz topic={t.id} items={t.words} question={t.question} />
+      <KidsQuiz topic={t.id} items={t.words} question={t.question} fill={t.fill} />
     </LessonFrame>
   );
 }
