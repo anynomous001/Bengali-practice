@@ -65,7 +65,7 @@ export default function KidsQuiz({ topic, items, question, fill }: { topic: stri
     return (
       <div className="card-static practice-done">
         <h2>{score} of {qs.length}</h2>
-        {fill && <div className="kk-done-fill"><Cauldron colors={layers} goal={qs.length} label={`Cauldron with ${layers.length} of ${qs.length} layers`} /></div>}
+        {fill && <div className="kk-done-fill"><Cauldron colors={layers} goal={qs.length} label={`Jar with ${layers.length} of ${qs.length} layers`} /></div>}
         <p className="kk-stars" aria-hidden>{Array.from({ length: qs.length }, (_, k) => <span key={k} className={k < score ? "on" : ""}>★</span>)}</p>
         <p>{score >= Math.ceil(qs.length * 0.7) ? <><b lang="bn">খুব ভালো!</b> This lesson counts as complete.</> : "Good try. Seven or more completes the lesson. Play again."}</p>
         <button type="button" className="btn" onClick={() => start(mode)}>Play again</button>
@@ -85,7 +85,7 @@ export default function KidsQuiz({ topic, items, question, fill }: { topic: stri
       <p className="kk-ask"><span lang="bn">{question.bn}</span><button type="button" className="icon-link" aria-label="Hear the question" onClick={() => speak(question.bn)}><Icon name="sound" size={22} /></button></p>
       {(roman || english) && <p className="kk-ask-sub">{roman && question.ro}{roman && english && " · "}{english && question.en}</p>}
       </div>
-      {fill && <figure className="kk-fill"><Cauldron colors={layers} goal={qs.length} /><figcaption>{fill === "colours" ? "Fill the cauldron with colors" : "Fill the potion"}: {layers.length} of {qs.length}</figcaption></figure>}
+      {fill && <figure className="kk-fill"><Cauldron colors={layers} goal={qs.length} /><figcaption>{fill === "colours" ? "Fill the jar with colors" : "Fill the jar"}: {layers.length} of {qs.length}</figcaption></figure>}
       </div>
 
       {mode === "pick" ? (
