@@ -5,6 +5,7 @@ import { DEV_VOCAB } from "@/data/devotional";
 import { SCENARIOS } from "@/data/roleplay";
 import { DEV_SCENARIOS } from "@/data/devotional";
 import { EXTRA_GLOSS } from "@/data/gloss-extra";
+import { STORY_GLOSS } from "@/data/gloss-stories";
 
 export type Gloss = Record<string, string>;
 
@@ -15,7 +16,8 @@ let index: Map<string, string> | null = null;
 
 function shortEn(en: string) {
   // "to give, to offer" stays as is; strip a trailing parenthetical note to keep the pop-up short.
-  return en.replace(/\s*\([^)]*\)\s*$/, "").trim();
+  const short = en.replace(/\s*\([^)]*\)\s*$/, "").trim();
+  return short || en.trim();
 }
 
 function add(map: Map<string, string>, bn: string, en: string, force = false) {
@@ -30,6 +32,7 @@ function build() {
   for (const s of [...SCENARIOS, ...DEV_SCENARIOS]) for (const w of s.words) add(m, w[0], w[2]);
   for (const t of [...VOCAB, ...DEV_VOCAB]) for (const sec of t.sections) for (const w of sec.words) add(m, w[0], w[2]);
   for (const [bn, en] of Object.entries(EXTRA_GLOSS)) add(m, bn, en, true);
+  for (const line of STORY_GLOSS.split("\n")) { const i = line.indexOf("="); if (i > 0) add(m, line.slice(0, i), line.slice(i + 1)); }
   return m;
 }
 
