@@ -596,7 +596,7 @@ html { scroll-behavior:smooth; } @media (prefers-reduced-motion: reduce) { html 
 @media (max-width:520px) { .exam-bar { flex-direction:column; align-items:flex-start; } .qmap button { width:34px; height:34px; } }
 
 /* ---- Role play + impromptu ---- */
-.rp-group { margin-top:20px; } .rp-lines { display:grid; gap:8px; grid-template-columns:repeat(auto-fill, minmax(min(100%, 360px), 1fr)); }
+.rp-group { margin-top:20px; } .rp-group > .g-h, .rp-demo-wrap > .g-h { margin:0 0 12px; line-height:1.35; } .rp-lines { display:grid; gap:8px; grid-template-columns:repeat(auto-fill, minmax(min(100%, 360px), 1fr)); }
 .rp-line { display:flex; gap:12px; align-items:flex-start; padding:10px 12px; background:var(--surface); border:1px solid var(--line); border-radius:14px; }
 .rp-en { color:var(--ink-2); font-size:.92rem; }
 .rp-who { font-size:.74rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--seg, var(--primary)); }
