@@ -4,6 +4,12 @@
 export const NEW_FOR_DAYS = 30;
 
 export const ADDED: Record<string, string> = {
+  "speaking/roleplay-dev-japa": "2026-11-09",
+  "speaking/roleplay-dev-kitchen": "2026-11-09",
+  "speaking/roleplay-dev-ekadashi": "2026-11-09",
+  "speaking/roleplay-dev-dikkha": "2026-11-09",
+  "speaking/roleplay-dev-phone": "2026-11-09",
+  "speaking/roleplay-dev-dham": "2026-11-09",
   "grammar/drills": "2026-10-27",
   "reading/conj-intro": "2026-11-06",
   "reading/conj-quiz": "2026-11-06",

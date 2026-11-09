@@ -8,6 +8,7 @@ import type { Scenario } from "./roleplay";
 import type { CwSet } from "./classwork";
 import { DEV_READING_3 } from "./devotional-3";
 import { DEV_VOCAB_2, DEV_READING_2, DEV_SCENARIOS_2, DEV_CLASSWORK_2, DEV_SAY_2 } from "./devotional-2";
+import { DEV_SCENARIOS_4 } from "./devotional-4";
 
 /** Romanization in the app's plain style (the source notes use diacritics such as ô and ṭ). */
 const ro = (s: string) =>
@@ -499,7 +500,7 @@ const DEV_SCENARIOS_1: Scenario[] = [
   },
 ];
 
-export const DEV_SCENARIOS: Scenario[] = [...DEV_SCENARIOS_1, ...DEV_SCENARIOS_2];
+export const DEV_SCENARIOS: Scenario[] = [...DEV_SCENARIOS_1, ...DEV_SCENARIOS_2, ...DEV_SCENARIOS_4];
 export const getDevScenario = (id: string) => DEV_SCENARIOS.find((s) => s.id === id);
 
 // ---------------------------------------------------------------- Grammar: devotional exercises

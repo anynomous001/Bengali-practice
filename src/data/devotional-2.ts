@@ -384,7 +384,7 @@ export const DEV_SCENARIOS_2: Scenario[] = [
       { id: "smooth", title: "Between songs", kind: "smooth", setup: "You chat with the devotee beside you.",
         turns: [
           you("প্রভু, কী সুন্দর কীর্তন!", "prôbhu, ki shundôr kirtôn!", "Prabhu, what beautiful kīrtan!"),
-          them("নিতাইয়ের কৃপা। আপনি গান গান?", "Nitaiyer kripa. apni gan gan?", "By Nitāi's grace. Do you sing?"),
+          them("নিতাইয়ের কৃপা। আপনি গান করেন?", "Nitaiyer kripa. apni gan kôren?", "By Nitāi's grace. Do you sing?"),
           you("না, আমি করতাল বাজাতে পারি। এই গানের মানে কী?", "na, ami kôrtal bajate pari. ei ganer mane ki?", "No, I can play the cymbals. What does this song mean?"),
           them("এই গানটা রাধার বিরহের।", "ei ganṭa Radhar birôhor.", "This song is about Rādhā's pain of separation."),
           you("আরেকবার গান, প্রভু!", "arekbar gan, prôbhu!", "Sing once more, Prabhu!"),
