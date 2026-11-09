@@ -1273,3 +1273,13 @@ span.cj-big { cursor:default; color:var(--seg, var(--primary)); }
 .pv-list { list-style:none; margin:10px 0 0; padding:0; display:grid; gap:8px; max-width:640px; }
 .pv-list a { display:grid; gap:2px; padding:12px 14px; border:1px solid var(--line); border-radius:12px; background:var(--surface); color:var(--ink); text-decoration:none; } .pv-list a:hover { border-color:var(--primary); } .pv-list small { color:var(--ink-2); }
 .story-conj { margin-top:36px; }
+
+/* Hover meanings: a Bengali word shows its English in a small pop-up. */
+.gw { position:relative; display:inline-block; cursor:help; border-bottom:1px dotted color-mix(in srgb, var(--ink-2) 55%, transparent); outline:none; }
+.gw:hover, .gw:focus-visible { border-bottom-color:var(--seg, var(--primary)); }
+.gw-tip { position:absolute; z-index:30; left:0; bottom:calc(100% + 6px); width:max-content; max-width:min(240px, 70vw);
+  padding:5px 10px; border-radius:8px; background:var(--ink); color:var(--bg); font:500 .85rem/1.35 var(--font-ui); text-align:left; white-space:normal;
+  box-shadow:0 4px 14px rgba(0,0,0,.25); pointer-events:none; opacity:0; visibility:hidden; transition:opacity .12s; }
+.gw-tip::after { content:""; position:absolute; top:100%; left:12px; border:5px solid transparent; border-top-color:var(--ink); }
+.gw:hover > .gw-tip, .gw:focus > .gw-tip { opacity:1; visibility:visible; }
+.app[data-english="off"] .gw-tip { display:none; }

@@ -7,6 +7,7 @@ import Icon from "../../../Icon";
 import { useRoman } from "../../../Roman";
 import UnderlineTabs from "../../../UnderlineTabs";
 import WordRow from "../../../WordRow";
+import GlossText from "../../../GlossText";
 
 function Line({ line, label }: { line: L; label?: string }) {
   const { roman } = useRoman();
@@ -14,7 +15,7 @@ function Line({ line, label }: { line: L; label?: string }) {
     <div className="rp-line">
       <span className="wtext">
         {label && <span className="rp-who">{label}</span>}
-        <span className="wbn" lang="bn">{line[0]}</span>
+        <span className="wbn" lang="bn"><GlossText text={line[0]} /></span>
         {roman && <span className="wro">{line[1]}</span>}
         <span className="rp-en gloss">{line[2]}</span>
       </span>
@@ -80,7 +81,7 @@ function Practice({ scenario }: { scenario: Scenario }) {
                 <>
                   <div className="model">
                     <p className="model-label">Say it like this</p>
-                    <span className="wbn" lang="bn">{turn.line[0]}</span>
+                    <span className="wbn" lang="bn"><GlossText text={turn.line[0]} /></span>
                     {roman && <span className="wro">{turn.line[1]}</span>}
                   </div>
                   <button className="btn" onClick={next}>{i + 1 >= demo.turns.length ? "Finish" : "Next"}</button>

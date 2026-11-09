@@ -7,6 +7,7 @@ import Icon from "../../../Icon";
 import { recordStoryQuiz } from "../../../../actions";
 import { useEnglish, useRoman } from "../../../Roman";
 import Stepper from "../../../Stepper";
+import GlossText from "../../../GlossText";
 
 type Step = "words" | "bengali" | "lines" | "english" | "original" | "quiz";
 const ALL_STEPS: { id: Step; label: string; blurb: string }[] = [
@@ -57,7 +58,7 @@ export default function StoryReader({ story, best }: { story: Story; best: { sco
 
       {step === "bengali" && (
         <article className="story-text">
-          <p lang="bn" className="story-bn">{story.lines.map((l) => l[0]).join(" ")}</p>
+          <p lang="bn" className="story-bn"><GlossText text={story.lines.map((l) => l[0]).join(" ")} /></p>
           {story.moral && <p lang="bn" className="story-bn lesson"><b>শিক্ষা:</b> {story.moral[0]}</p>}
           {roman && <p className="story-roman">{story.lines.map((l) => l[1]).join(" ")}</p>}
         </article>
@@ -68,7 +69,7 @@ export default function StoryReader({ story, best }: { story: Story; best: { sco
           {[...story.lines, ...(story.moral ? [story.moral] : [])].map(([bn, ro, en], i) => (
             <li key={i} className={i === story.lines.length ? "lesson" : ""}>
               <div className="line-top">
-                <span lang="bn" className="line-bn">{i === story.lines.length && <b>শিক্ষা: </b>}{bn}</span>
+                <span lang="bn" className="line-bn">{i === story.lines.length && <b>শিক্ষা: </b>}<GlossText text={bn} /></span>
               </div>
               {roman && <span className="line-roman">{ro}</span>}
               <span className="line-en gloss">{en}</span>

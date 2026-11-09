@@ -4,6 +4,8 @@ import { getScenario } from "@/data/roleplay";
 import { getDevScenario } from "@/data/devotional";
 import LessonFrame from "../../../LessonFrame";
 import RolePlay from "./RolePlay";
+import { GlossProvider } from "../../../GlossText";
+import { glossFrom } from "@/lib/glossary";
 
 export default async function RolePlayPage({ params }: { params: Promise<{ id: string }> }) {
   await requireAccess();
@@ -18,9 +20,11 @@ export default async function RolePlayPage({ params }: { params: Promise<{ id: s
     { id: "sec-demos", label: "Examples" },
     { id: "sec-practice", label: "Now you speak" },
   ];
+  const lines = [...s.say, ...s.hear].flatMap((g) => g.items.map((l) => l[0])).concat(s.demos.flatMap((d) => d.turns.map((t) => t.line[0])));
+  const gloss = glossFrom(lines);
   return (
     <LessonFrame lessonId={`speaking/roleplay-${s.id}`} toc={toc}>
-      <RolePlay scenario={s} />
+      <GlossProvider gloss={gloss}><RolePlay scenario={s} /></GlossProvider>
     </LessonFrame>
   );
 }
