@@ -1275,8 +1275,8 @@ span.cj-big { cursor:default; color:var(--seg, var(--primary)); }
 .story-conj { margin-top:36px; }
 
 /* Hover meanings: a Bengali word shows its English in a small pop-up. */
-.gw { position:relative; display:inline-block; cursor:help; border-bottom:1px dotted color-mix(in srgb, var(--ink-2) 55%, transparent); outline:none; }
-.gw:hover, .gw:focus-visible { border-bottom-color:var(--seg, var(--primary)); }
+.gw { position:relative; display:inline; cursor:help; border-radius:4px; outline:none; transition:background .12s; }
+.gw:hover, .gw:focus-visible { background:color-mix(in srgb, var(--seg, var(--primary)) 16%, transparent); box-shadow:0 0 0 2px color-mix(in srgb, var(--seg, var(--primary)) 16%, transparent); }
 .gw-tip { position:absolute; z-index:30; left:0; bottom:calc(100% + 6px); width:max-content; max-width:min(240px, 70vw);
   padding:5px 10px; border-radius:8px; background:var(--ink); color:var(--bg); font:500 .85rem/1.35 var(--font-ui); text-align:left; white-space:normal;
   box-shadow:0 4px 14px rgba(0,0,0,.25); pointer-events:none; opacity:0; visibility:hidden; transition:opacity .12s; }
