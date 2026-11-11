@@ -4,6 +4,18 @@
 export const NEW_FOR_DAYS = 30;
 
 export const ADDED: Record<string, string> = {
+  "goal:tripura": "2026-11-11",
+  "vocabulary/trip-family": "2026-11-11",
+  "vocabulary/trip-greetings": "2026-11-11",
+  "vocabulary/trip-food": "2026-11-11",
+  "vocabulary/trip-home": "2026-11-11",
+  "vocabulary/trip-travel": "2026-11-11",
+  "vocabulary/trip-shopping": "2026-11-11",
+  "vocabulary/trip-feelings": "2026-11-11",
+  "vocabulary/trip-questions": "2026-11-11",
+  "vocabulary/trip-rescue": "2026-11-11",
+  "vocabulary/trip-places": "2026-11-11",
+  "vocabulary/trip-verbs": "2026-11-11",
   "speaking/roleplay-dev-japa": "2026-11-09",
   "speaking/roleplay-dev-kitchen": "2026-11-09",
   "speaking/roleplay-dev-ekadashi": "2026-11-09",

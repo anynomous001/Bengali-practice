@@ -302,6 +302,49 @@ export const GOALS: PathGoal[] = [
     note: "Written for this path and still to be reviewed by your teacher. Phonetic symbols (IPA) and longer listening practice are still to come.",
   },
   {
+    id: "tripura",
+    tag: "Tripura",
+    title: "Visit family in Tripura",
+    bn: "ত্রিপুরা",
+    bnRoman: "tripura",
+    blurb: "Get ready to stay with Bengali-speaking in-laws: greet them, eat with them, get around and cope when you do not understand.",
+    who: "For a learner, such as a Tamil speaker, about to visit a spouse's Bengali family in Tripura.",
+    stages: [
+      {
+        title: "First, the rescue phrases",
+        blurb: "Six sentences that save any conversation, and the greetings for meeting the family.",
+        steps: [
+          { id: "vocabulary/trip-rescue", why: "Ask someone to slow down, repeat, or tell you a word." },
+          { id: "vocabulary/trip-greetings", why: "Greet your in-laws and take your leave with respect." },
+          { id: "vocabulary/trip-family", why: "Who is who in the family, and what to call them." },
+          { id: "vocabulary/trip-questions", why: "The question words you will use all day." },
+        ],
+      },
+      SCRIPT,
+      {
+        title: "In the house",
+        blurb: "Meals, rooms, the day, and how to feel and say so.",
+        steps: [
+          { id: "vocabulary/trip-food", why: "Ask for more, say no kindly, and praise the cooking." },
+          { id: "vocabulary/trip-home", why: "Rooms, the bathroom, and parts of the day." },
+          { id: "vocabulary/trip-feelings", why: "Say how you feel, and what to say if you are unwell." },
+          { id: "vocabulary/trip-verbs", why: "The twelve verbs to learn first." },
+          { id: "speaking/roleplay-bangladesh-inlaws", why: "Greet in-laws, thank them, praise the food and say no kindly." },
+        ],
+      },
+      {
+        title: "Getting around",
+        blurb: "The journey, shopping for gifts, and the map of Tripura.",
+        steps: [
+          { id: "vocabulary/trip-travel", why: "Talk about the journey and getting around Agartala." },
+          { id: "vocabulary/trip-shopping", why: "Ask the price and give gifts." },
+          { id: "vocabulary/trip-places", why: "Directions, and talking about Tripura on the map." },
+        ],
+      },
+    ],
+    note: "Written from the teacher's notes for this trip and still to be reviewed. In Tripura the Bengali is close to that of West Bengal.",
+  },
+  {
     id: "bangladesh",
     tag: "Bangladesh",
     title: "Talk with family in Bangladesh",
