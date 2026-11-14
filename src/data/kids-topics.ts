@@ -3,7 +3,7 @@
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import type { PicSpec } from "@/lib/kids-pics";
-import { NUMBERS } from "./numbers";
+import { NUMBER_CHART, NUMBERS, toBengaliDigits } from "./numbers";
 import { resolveRo } from "./kids-games";
 
 export type KidWordItem = { id: string; bn: string; ro: string; en: string; pic: PicSpec; badge?: string; /** The color of a colour word, kept when a photo replaces the swatch. */ tint?: string };
@@ -79,9 +79,21 @@ const SEASONS: KidWordItem[] = ([
   ["late-autumn", "হেমন্ত", "hemonto", "late autumn"], ["winter", "শীত", "shit", "winter"], ["spring", "বসন্ত", "boshonto", "spring"],
 ] as const).map(([id, bn, ro, en]) => w(id, bn, ro, en, photoOf("seasons", id)));
 
-const NUMBER_EN = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
-const NUMBERS_1_10: KidWordItem[] = NUMBERS.filter((n) => n.value >= 1 && n.value <= 10)
-  .map((n) => w(`n${n.value}`, n.word, n.wrom, NUMBER_EN[n.value], { kind: "count", n: n.value }, `${n.numeral} · ${n.value}`));
+const ONES_EN = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+const TENS_EN = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+const numEn = (n: number) => (n < 20 ? ONES_EN[n] : n % 10 === 0 ? TENS_EN[n / 10] : `${TENS_EN[Math.floor(n / 10)]}-${ONES_EN[n % 10]}`);
+const nw = (value: number, word: string, wrom: string, en = numEn(value)) =>
+  w(`n${value}`, word, wrom, en, { kind: "numeral", text: toBengaliDigits(value), sub: String(value) });
+/** The numbers from the chart, a range at a time. Bengali numbers up to 100 are all separate words, so each one is learned by itself. */
+const range = (from: number, to: number) => NUMBER_CHART.filter((n) => n.value >= from && n.value <= to).map((n) => nw(n.value, n.word, n.wrom));
+const NUMBERS_0_10 = range(0, 10);
+const NUMBERS_11_20 = range(11, 20);
+const NUMBERS_21_50 = range(21, 50);
+const NUMBERS_51_100 = range(51, 100);
+const NUMBERS_BIG: KidWordItem[] = [
+  ...[10, 20, 30, 40, 50, 60, 70, 80, 90].map((v) => { const n = NUMBER_CHART[v]; return nw(v, n.word, n.wrom); }),
+  ...NUMBERS.filter((n) => n.value >= 100).map((n) => nw(n.value, n.word, n.wrom, { 100: "one hundred", 200: "two hundred", 500: "five hundred", 1000: "one thousand" }[n.value] ?? String(n.value))),
+];
 
 type Photos = "required" | "optional" | "none";
 /** "colours": the cauldron fills with the colors asked. "magic": it fills with a sparkle of colors. Left out: no cauldron. */
@@ -91,7 +103,11 @@ export type KidTopic = { id: string; slug: string; title: string; bn: string; wo
 const TOPICS: Omit<KidTopic, "ready">[] = [
   { id: "colours", slug: "colours", title: "Colours", bn: "রং", words: COLOURS, question: { bn: "এটা কী রং?", ro: "eta ki rong?", en: "What colour is this?" }, photos: "optional", fill: "colours" },
   { id: "body", slug: "body-parts", title: "Body parts", bn: "শরীর", words: [...BODY, ...BODY_MORE], question: { bn: "এটা কী?", ro: "eta ki?", en: "What is this?" }, photos: "none", fill: "magic" },
-  { id: "numbers", slug: "numbers", title: "Numbers 1 to 10", bn: "সংখ্যা", words: NUMBERS_1_10, question: { bn: "কয়টা?", ro: "koyta?", en: "How many?" }, photos: "optional" },
+  { id: "numbers", slug: "numbers", title: "Numbers 0 to 10", bn: "সংখ্যা", words: NUMBERS_0_10, question: { bn: "এটা কোন সংখ্যা?", ro: "eta kon shongkhya?", en: "What number is this?" }, photos: "none" },
+  { id: "numbers-11", slug: "numbers-11-to-20", title: "Numbers 11 to 20", bn: "এগারো থেকে বিশ", words: NUMBERS_11_20, question: { bn: "এটা কোন সংখ্যা?", ro: "eta kon shongkhya?", en: "What number is this?" }, photos: "none" },
+  { id: "numbers-21", slug: "numbers-21-to-50", title: "Numbers 21 to 50", bn: "একুশ থেকে পঞ্চাশ", words: NUMBERS_21_50, question: { bn: "এটা কোন সংখ্যা?", ro: "eta kon shongkhya?", en: "What number is this?" }, photos: "none" },
+  { id: "numbers-51", slug: "numbers-51-to-100", title: "Numbers 51 to 100", bn: "একান্ন থেকে একশো", words: NUMBERS_51_100, question: { bn: "এটা কোন সংখ্যা?", ro: "eta kon shongkhya?", en: "What number is this?" }, photos: "none" },
+  { id: "numbers-big", slug: "big-numbers", title: "Tens, hundreds and a thousand", bn: "বড় সংখ্যা", words: NUMBERS_BIG, question: { bn: "এটা কোন সংখ্যা?", ro: "eta kon shongkhya?", en: "What number is this?" }, photos: "none" },
   { id: "animals", slug: "animals", title: "Animals", bn: "পশুপাখি", words: ANIMALS, question: { bn: "এটা কী?", ro: "eta ki?", en: "What is this?" }, photos: "required", fill: "magic" },
   { id: "days", slug: "days", title: "Days of the week", bn: "বার", words: DAYS, question: { bn: "এটা কী বার?", ro: "eta ki bar?", en: "Which day is this?" }, photos: "none" },
   { id: "months", slug: "months", title: "Months", bn: "মাস", words: MONTHS, question: { bn: "এটা কী মাস?", ro: "eta ki mash?", en: "Which month is this?" }, photos: "none" },
@@ -112,16 +128,12 @@ export function getKidTopic(id: string): KidTopic | undefined {
       const file = `/kids/photo/body-${wd.id}.webp`;
       return has(file) ? { ...wd, pic: { kind: "photo", src: file } as PicSpec } : wd;
     }
-    if (wd.pic.kind === "count" || wd.pic.kind === "cells") return wd;
+    if (wd.pic.kind === "count" || wd.pic.kind === "cells" || wd.pic.kind === "numeral") return wd;
     if (wd.pic.kind === "photo") return has(wd.pic.src) ? wd : null;
     const file = `/kids/photo/${t.id}-${wd.id}.webp`;
     const tint = wd.pic.kind === "swatch" ? wd.pic.hex : undefined;
     return has(file) ? { ...wd, tint, pic: { kind: "photo", src: file } as PicSpec } : { ...wd, tint };
   }).filter((x): x is KidWordItem => !!x);
-  if (t.id === "numbers") { // count real fruit when there is a mango photo
-    const mango = "/kids/photo/fruits-mango.webp";
-    if (has(mango)) words = words.map((wd) => (wd.pic.kind === "count" ? { ...wd, pic: { ...wd.pic, src: mango } } : wd));
-  }
   return { ...t, words, ready: words.length >= 4 };
 }
 export const kidTopicBySlug = (slug: string) => TOPICS.find((t) => t.slug === slug)?.id;

@@ -4,6 +4,14 @@
 export const NEW_FOR_DAYS = 30;
 
 export const ADDED: Record<string, string> = {
+  "kids/numbers-11-learn": "2026-11-14",
+  "kids/numbers-11-quiz": "2026-11-14",
+  "kids/numbers-21-learn": "2026-11-14",
+  "kids/numbers-21-quiz": "2026-11-14",
+  "kids/numbers-51-learn": "2026-11-14",
+  "kids/numbers-51-quiz": "2026-11-14",
+  "kids/numbers-big-learn": "2026-11-14",
+  "kids/numbers-big-quiz": "2026-11-14",
   "goal:tripura": "2026-11-11",
   "vocabulary/trip-family": "2026-11-11",
   "vocabulary/trip-greetings": "2026-11-11",

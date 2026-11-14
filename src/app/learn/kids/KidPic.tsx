@@ -22,6 +22,17 @@ export default function KidPic({ pic, label = "" }: { pic: PicSpec; label?: stri
       </svg>
     );
   }
+  if (pic.kind === "numeral") {
+    // a big numeral on a soft tile; longer numbers shrink to fit
+    const size = pic.text.length > 4 ? 64 : pic.text.length > 3 ? 84 : pic.text.length > 2 ? 108 : pic.text.length > 1 ? 130 : 150;
+    return (
+      <svg viewBox="0 0 400 260" className="kp" role="img" aria-label={label}>
+        <rect x="14" y="10" width="372" height="240" rx="40" fill="#fff6d6" stroke="#e0b94a" strokeWidth="5" />
+        <text x="200" y={size > 100 ? 150 : 140} textAnchor="middle" fontSize={size} fontWeight="800" fill="#c2410c" fontFamily="var(--font-bn-serif), serif">{pic.text}</text>
+        <text x="200" y="228" textAnchor="middle" fontSize="38" fontWeight="700" fill="#8a6d1d" fontFamily="var(--font-ui), sans-serif">{pic.sub}</text>
+      </svg>
+    );
+  }
   if (pic.kind === "cells") {
     // a week or a year laid out in cells, with the one being asked about highlighted
     const rows = Math.ceil(pic.labels.length / pic.cols), gap = 8, cw = (400 - gap * (pic.cols + 1)) / pic.cols, ch = Math.min(cw * (pic.cols > 5 ? 1.9 : 0.8), (190 - gap * (rows + 1)) / rows);

@@ -201,9 +201,25 @@ export const COURSES: Course[] = [
         { id: "kids/body-quiz", title: "What is this?", blurb: "A body part glows. Say what it is in Bengali, or pick the word.", href: "/learn/kids/body-parts/quiz", kind: "Quiz", tag: "Kids" },
         { id: "kids/game-body", title: "Wizard Body Check", blurb: "Learn the words, find the part, and follow spell commands.", href: "/learn/kids/games/body", kind: "Practice", tag: "Kids" },
       ] },
-      { id: "numbers", title: "Numbers", blurb: "Count from one to ten with pictures of things to count.", lessons: [
-        { id: "kids/numbers-learn", title: "Number cards", blurb: "Tap a number to hear it. Count the things in the picture.", href: "/learn/kids/numbers/learn", kind: "Lesson", tag: "Kids" },
-        { id: "kids/numbers-quiz", title: "How many?", blurb: "Count the things, then say the number in Bengali.", href: "/learn/kids/numbers/quiz", kind: "Quiz", tag: "Kids" },
+      { id: "numbers", title: "Numbers 0 to 10", blurb: "Zero to ten, each on a big number card.", lessons: [
+        { id: "kids/numbers-learn", title: "Number cards", blurb: "Tap a number to hear it. Tap again to hear it slowly.", href: "/learn/kids/numbers/learn", kind: "Lesson", tag: "Kids" },
+        { id: "kids/numbers-quiz", title: "What number is this? (0 to 10)", blurb: "A number appears. Say it in Bengali, or pick the word.", href: "/learn/kids/numbers/quiz", kind: "Quiz", tag: "Kids" },
+      ] },
+      { id: "numbers-11", title: "Numbers 11 to 20", blurb: "Eleven to twenty.", lessons: [
+        { id: "kids/numbers-11-learn", title: "Number cards", blurb: "Tap a number to hear it. Tap again to hear it slowly.", href: "/learn/kids/numbers-11-to-20/learn", kind: "Lesson", tag: "Kids" },
+        { id: "kids/numbers-11-quiz", title: "What number is this? (11 to 20)", blurb: "A number appears. Say it in Bengali, or pick the word.", href: "/learn/kids/numbers-11-to-20/quiz", kind: "Quiz", tag: "Kids" },
+      ] },
+      { id: "numbers-21", title: "Numbers 21 to 50", blurb: "Twenty-one to fifty. Every one is its own word in Bengali.", lessons: [
+        { id: "kids/numbers-21-learn", title: "Number cards", blurb: "Tap a number to hear it. Tap again to hear it slowly.", href: "/learn/kids/numbers-21-to-50/learn", kind: "Lesson", tag: "Kids" },
+        { id: "kids/numbers-21-quiz", title: "What number is this? (21 to 50)", blurb: "A number appears. Say it in Bengali, or pick the word.", href: "/learn/kids/numbers-21-to-50/quiz", kind: "Quiz", tag: "Kids" },
+      ] },
+      { id: "numbers-51", title: "Numbers 51 to 100", blurb: "Fifty-one to a hundred.", lessons: [
+        { id: "kids/numbers-51-learn", title: "Number cards", blurb: "Tap a number to hear it. Tap again to hear it slowly.", href: "/learn/kids/numbers-51-to-100/learn", kind: "Lesson", tag: "Kids" },
+        { id: "kids/numbers-51-quiz", title: "What number is this? (51 to 100)", blurb: "A number appears. Say it in Bengali, or pick the word.", href: "/learn/kids/numbers-51-to-100/quiz", kind: "Quiz", tag: "Kids" },
+      ] },
+      { id: "numbers-big", title: "Tens, hundreds, a thousand", blurb: "Counting by tens, then hundreds and a thousand.", lessons: [
+        { id: "kids/numbers-big-learn", title: "Big number cards", blurb: "Tap a number to hear it. Tap again to hear it slowly.", href: "/learn/kids/big-numbers/learn", kind: "Lesson", tag: "Kids" },
+        { id: "kids/numbers-big-quiz", title: "What number is this? (big numbers)", blurb: "A number appears. Say it in Bengali, or pick the word.", href: "/learn/kids/big-numbers/quiz", kind: "Quiz", tag: "Kids" },
       ] },
       { id: "animals", title: "Animals", blurb: "Real photos of twelve animals.", lessons: [
         { id: "kids/animals-learn", title: "Animal cards", blurb: "Tap an animal to hear its name. Tap again to hear it slowly.", href: "/learn/kids/animals/learn", kind: "Lesson", tag: "Kids" },
