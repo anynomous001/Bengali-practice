@@ -42,3 +42,5 @@
 .kk-fill { margin: 0; text-align: center; } .kk-fill figcaption { font-size: .85rem; color: var(--ink-2); font-weight: 600; }
 .kk-done-fill { max-width: 220px; margin: 6px auto 0; }
 @media (prefers-reduced-motion: reduce) { .kc-layer, .kc-bubble, .kc-wave, .kc-spark { animation: none; } }
+/* Command photos show a whole child standing, so they are fitted inside the card and not cropped to 4:3. */
+.kk-pic .kp-photo[src*="/assets/commands/"], .kk-qpic .kp-photo[src*="/assets/commands/"] { object-fit: contain; background: #d5d4da; }

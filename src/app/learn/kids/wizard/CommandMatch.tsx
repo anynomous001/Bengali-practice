@@ -5,6 +5,7 @@ import { recordKidsSession } from "../../../actions";
 import { attempt, isDone, isMatched, newRound, type MatchState } from "@/lib/match-game";
 import { speak } from "@/lib/speak";
 import { GameButton, Toggle, useShowText } from "./Wizard";
+import Icon from "../../Icon";
 import "./wizard.css";
 import "./commands.css";
 
@@ -183,7 +184,7 @@ export default function CommandMatch({ commands }: { commands: Command[] }) {
         <div>
           <a className="wiz-back" href="/learn/kids/games">← Spell School</a>
           <h1>Drag &amp; Match <small lang="bn">আদেশ মেলাও</small></h1>
-          <p className="wz-lede">Drag each picture onto its Bengali command. Or tap a picture, then tap the box. Tap 🔊 to hear a word.</p>
+          <p className="wz-lede">Drag each picture onto its Bengali command. Or tap a picture, then tap the box. Tap the speaker to hear a word.</p>
         </div>
         <p className="cm-score" aria-live="polite"><b>{score}</b> of {total}</p>
       </div>
@@ -196,7 +197,7 @@ export default function CommandMatch({ commands }: { commands: Command[] }) {
         </div>
         <GameButton kind="primary" onClick={() => startRound(size)}>New round</GameButton>
         <div className="wz-toggles">
-          <Toggle label="👂 Listen mode (hide the words)" checked={listen} onChange={setListen} />
+          <Toggle label="Listen mode (hide the words)" checked={listen} onChange={setListen} />
           <Toggle label="Show English" checked={showEn} onChange={setShowEn} />
           <Toggle label="Show romanization" checked={showRo} onChange={setShowRo} />
           <Toggle label="Sounds" checked={sound} onChange={setSound} />
@@ -233,7 +234,7 @@ export default function CommandMatch({ commands }: { commands: Command[] }) {
             const hidden = listen && !matched;
             return (
               <div key={id} data-box={id} className={"cm-box" + (matched ? " matched" : "") + (hot === id ? " hot" : "") + (selected && !matched ? " ready" : "")}>
-                <button type="button" className="cm-hear" aria-label={hidden ? `Hear word ${i + 1}` : `Hear ${c.en}`} onClick={() => say(c)}>🔊</button>
+                <button type="button" className="cm-hear" aria-label={hidden ? `Hear word ${i + 1}` : `Hear ${c.en}`} onClick={() => say(c)}><Icon name="sound" size={22} /></button>
                 <button type="button" className="cm-drop" onClick={() => onBoxClick(id)} disabled={matched}
                   aria-label={matched ? `${c.en}: matched` : hidden ? `Word ${i + 1}. Put the picked-up picture here` : `${c.bn}, ${c.en}. Put the picked-up picture here`}>
                   {matched ? <span className="cm-placed">{cardImg(id)}</span> : null}

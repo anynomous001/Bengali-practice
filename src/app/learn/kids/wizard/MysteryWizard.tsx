@@ -113,9 +113,9 @@ export default function MysteryWizard({ creatures }: { creatures: Creature[] }) 
             <WordCard bn={pc.bn} ro={pc.ro} en={pc.en} showEn={showEn} showRo={showRo} speakText={pc.bn} small />
           ) : <div className="wz-word small"><p className="wz-word-en">Tap a creature, or press Where is it?</p></div>}
           <div>
-            <GameButton onClick={newAsk}>🔍 Where is it? (কোথায়?)</GameButton>
-            {ac && !askDone && <GameButton kind="success" onClick={() => { setAskDone(true); setPicked(ask); addStar(); }}>✅ He pointed right!</GameButton>}
-            <GameButton kind="ghost" onClick={() => setHideNames((h) => !h)}>{hideNames ? "👀 Show names" : "🙈 Hide names"}</GameButton>
+            <GameButton onClick={newAsk}>Where is it? (কোথায়?)</GameButton>
+            {ac && !askDone && <GameButton kind="success" onClick={() => { setAskDone(true); setPicked(ask); addStar(); }}>He pointed right</GameButton>}
+            <GameButton kind="ghost" onClick={() => setHideNames((h) => !h)}>{hideNames ? "Show names" : "Hide names"}</GameButton>
           </div>
         </>
       )}
@@ -128,11 +128,11 @@ export default function MysteryWizard({ creatures }: { creatures: Creature[] }) 
               {mc && (
                 <div className="mw-curtain" aria-hidden>
                   {Array.from({ length: TILES }, (_, k) => (
-                    <i key={k} className={tiles.includes(k) ? "" : "gone"}>{k % 2 ? "✦" : "☾"}</i>
+                    <i key={k} className={tiles.includes(k) ? "" : "gone"}></i>
                   ))}
                 </div>
               )}
-              {!mc && <p className="mw-empty">🔮 Press Next mystery</p>}
+              {!mc && <p className="mw-empty">Press Next mystery</p>}
             </div>
             <p className="wz-prompt">Pieces revealed: {mc ? TILES - tiles.length : 0} / {TILES}</p>
           </div>
@@ -157,16 +157,16 @@ export default function MysteryWizard({ creatures }: { creatures: Creature[] }) 
           )}
 
           <div>
-            <GameButton onClick={nextMystery}>🔮 Next mystery</GameButton>
-            <GameButton kind="ghost" onClick={revealPiece} disabled={!mc || solved}>✨ Reveal a piece</GameButton>
-            <GameButton kind="success" onClick={solve} disabled={!mc || solved}>🎉 Show the creature</GameButton>
+            <GameButton onClick={nextMystery}>Next mystery</GameButton>
+            <GameButton kind="ghost" onClick={revealPiece} disabled={!mc || solved}>Reveal a piece</GameButton>
+            <GameButton kind="success" onClick={solve} disabled={!mc || solved}>Show the creature</GameButton>
           </div>
           <p className="wz-prompt">When it is solved, he repeats the whole sentence: <b lang="bn">এটা ___!</b> That is his first full Bengali sentence.</p>
         </>
       )}
 
       <div className="wz-toggles">
-        <Toggle label="👂 Listening mode" checked={listen} onChange={setListen} />
+        <Toggle label="Listening mode" checked={listen} onChange={setListen} />
         <Toggle label="Show English" checked={showEn} onChange={setShowEn} />
         <Toggle label="Show romanization" checked={showRo} onChange={setShowRo} />
         {tab === "mystery" && <Toggle label="Show creature choices" checked={choices} onChange={setChoices} />}

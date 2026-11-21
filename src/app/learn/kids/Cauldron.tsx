@@ -8,7 +8,6 @@ export default function Cauldron({ colors, goal, label }: { colors: string[]; go
   const id = useId().replace(/:/g, "");
   const bottom = 232, top = 62, h = (bottom - top) / Math.max(1, goal);
   const level = bottom - h * colors.length;
-  const full = colors.length >= goal && goal > 0;
   const jar = "M72 24 H128 V50 Q164 62 164 104 V202 Q164 236 130 236 H70 Q36 236 36 202 V104 Q36 62 72 50 Z";
   const topColor = colors[colors.length - 1];
   return (
@@ -33,7 +32,6 @@ export default function Cauldron({ colors, goal, label }: { colors: string[]; go
       <path d="M48 120 V196" stroke="#fff" strokeWidth="6" strokeLinecap="round" fill="none" opacity=".6" />
       <path d={jar} fill="none" stroke="#7a67c2" strokeWidth="5" strokeLinejoin="round" />
       <rect x="62" y="14" width="76" height="14" rx="7" fill="#c9bdf0" stroke="#7a67c2" strokeWidth="4" />
-      {full && [[44, 40], [160, 30], [150, 84]].map(([x, y], i) => <text key={i} className="kc-spark" x={x} y={y} fontSize="22" textAnchor="middle" fill="#ffc107" style={{ animationDelay: `${i * 0.25}s` }}>★</text>)}
     </svg>
   );
 }

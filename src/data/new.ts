@@ -5,6 +5,8 @@ export const NEW_FOR_DAYS = 30;
 
 export const ADDED: Record<string, string> = {
   "kids/game-commands": "2026-11-21",
+  "kids/commands-learn": "2026-11-21",
+  "kids/commands-quiz": "2026-11-21",
   "kids/numbers-11-learn": "2026-11-14",
   "kids/numbers-11-quiz": "2026-11-14",
   "kids/numbers-21-learn": "2026-11-14",

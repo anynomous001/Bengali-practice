@@ -87,20 +87,20 @@ export default function BodyCheck({ parts, order, commands }: { parts: BodyPart[
   // what the big card shows
   let card: React.ReactNode;
   if (tab === "learn" && cur) {
-    card = <WordCard bn={cur.bn} ro={cur.ro} en={cur.en} hint={`🖐 ${cur.gesture}`} showEn={showEn} showRo={showRo} speakText={cur.bn} />;
+    card = <WordCard bn={cur.bn} ro={cur.ro} en={cur.en} hint={`Gesture: ${cur.gesture}`} showEn={showEn} showRo={showRo} speakText={cur.bn} />;
   } else if (tab === "spells" && askPart) {
     card = <WordCard bn={`${askPart.bn} কোথায়?`} ro={`${askPart.ro} kothay?`} en={`Where is the ${askPart.en}?`} showEn={showEn} showRo={showRo} hidden={listen && !answered} speakText={`${askPart.bn} কোথায়?`}
-      verdict={answered ? "হ্যাঁ! খুব ভালো! ⭐" : undefined} verdictKind="yes" />;
+      verdict={answered ? "হ্যাঁ! খুব ভালো!" : undefined} verdictKind="yes" />;
   } else if (tab === "spells" && yn && ynPart) {
     const same = yn.asked === yn.key;
     card = <WordCard bn={`এটা ${ynPart.bn}?`} ro={`eta ${ynPart.ro}?`} en={`Is this the ${ynPart.en}?`} showEn={showEn} showRo={showRo} hidden={listen && !yn.revealed} speakText={`এটা ${ynPart.bn}?`}
-      verdict={yn.revealed ? (same ? "হ্যাঁ! 👍" : `না! 👎 ${byKey(yn.key).bn}`) : undefined} verdictKind={same ? "yes" : "no"} />;
+      verdict={yn.revealed ? (same ? "হ্যাঁ!" : `না! ${byKey(yn.key).bn}`) : undefined} verdictKind={same ? "yes" : "no"} />;
   } else if (tab === "commands" && cmd) {
     const text = cmd.magic ? `জাদু! ${cmd.c.bn}` : cmd.c.bn;
     card = <WordCard bn={text} ro={cmd.magic ? `jadu! ${cmd.c.ro}` : cmd.c.ro} en={cmd.magic ? `Magic! ${cmd.c.en}` : cmd.c.en} showEn={showEn} showRo={showRo} hidden={listen && !cmdMarked} speakText={text}
-      verdict={cmdMarked && trick ? (cmd.magic ? "Do it! ✅" : "Freeze! 🧊") : undefined} verdictKind={cmd.magic ? "yes" : "no"} />;
+      verdict={cmdMarked && trick ? (cmd.magic ? "Do it!" : "Freeze!") : undefined} verdictKind={cmd.magic ? "yes" : "no"} />;
   } else {
-    card = <WordCard bn="🪄" ro="" en={tab === "spells" ? "Press a spell button to begin" : "Press Cast a spell to begin"} showEn showRo={false} />;
+    card = <WordCard bn="শুরু" ro="shuru" en={tab === "spells" ? "Press a spell button to begin" : "Press Cast a spell to begin"} showEn showRo={false} />;
   }
 
   const labelAll = labels || false;
@@ -137,9 +137,9 @@ export default function BodyCheck({ parts, order, commands }: { parts: BodyPart[
                 ); })}
               </div>
               <div>
-                <GameButton kind="ghost" onClick={() => step(-1)}>◀ Back</GameButton>
-                <GameButton onClick={() => step(1)}>Next ▶</GameButton>
-                <GameButton kind="success" onClick={() => { if (sel) { addStar(); flashPart(sel, "right"); } }}>⭐ He did the gesture!</GameButton>
+                <GameButton kind="ghost" onClick={() => step(-1)}>Back</GameButton>
+                <GameButton onClick={() => step(1)}>Next</GameButton>
+                <GameButton kind="success" onClick={() => { if (sel) { addStar(); flashPart(sel, "right"); } }}>He did the gesture</GameButton>
               </div>
               <p className="wz-prompt">Say the word, he does the gesture. Later, say only the Bengali. Arrow keys also move.</p>
             </>
@@ -147,25 +147,25 @@ export default function BodyCheck({ parts, order, commands }: { parts: BodyPart[
 
           {tab === "spells" && (
             <div>
-              <GameButton onClick={newSpell}>🔮 New spell</GameButton>
-              <GameButton kind="ghost" onClick={newYn}>🤔 Yes / No spell</GameButton>
-              {ask && <GameButton kind="success" onClick={() => pointed(true, ask)} disabled={answered}>✅ He pointed right!</GameButton>}
-              {yn && <GameButton kind="ghost" onClick={revealYn} disabled={yn.revealed}>👀 Show answer</GameButton>}
+              <GameButton onClick={newSpell}>New spell</GameButton>
+              <GameButton kind="ghost" onClick={newYn}>Yes / No spell</GameButton>
+              {ask && <GameButton kind="success" onClick={() => pointed(true, ask)} disabled={answered}>He pointed right</GameButton>}
+              {yn && <GameButton kind="ghost" onClick={revealYn} disabled={yn.revealed}>Show answer</GameButton>}
               <p className="wz-prompt">{ask ? "He points on his own body. Then click that part on the wizard." : yn ? "Is the glowing part the one named?" : "Press a spell to begin."}</p>
             </div>
           )}
 
           {tab === "commands" && (
             <div>
-              <GameButton onClick={castSpell}>🪄 Cast a spell</GameButton>
-              {cmd && <><GameButton kind="success" onClick={() => markCmd(true)} disabled={cmdMarked}>✅ Got it right</GameButton><GameButton kind="danger" onClick={() => markCmd(false)} disabled={cmdMarked}>❌ Oops</GameButton></>}
-              <Toggle label="🪄 Trick round (only act after জাদু!)" checked={trick} onChange={setTrick} />
+              <GameButton onClick={castSpell}>Cast a spell</GameButton>
+              {cmd && <><GameButton kind="success" onClick={() => markCmd(true)} disabled={cmdMarked}>Got it right</GameButton><GameButton kind="danger" onClick={() => markCmd(false)} disabled={cmdMarked}>Not quite</GameButton></>}
+              <Toggle label="Trick round (only act after জাদু!)" checked={trick} onChange={setTrick} />
             </div>
           )}
 
           <div className="wz-toggles">
             <Toggle label="Show all labels on the wizard" checked={labels} onChange={setLabels} />
-            <Toggle label="👂 Listening mode" checked={listen} onChange={setListen} />
+            <Toggle label="Listening mode" checked={listen} onChange={setListen} />
             <Toggle label="Show English" checked={showEn} onChange={setShowEn} />
             <Toggle label="Show romanization" checked={showRo} onChange={setShowRo} />
           </div>

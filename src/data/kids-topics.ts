@@ -5,6 +5,7 @@ import { join } from "node:path";
 import type { PicSpec } from "@/lib/kids-pics";
 import { NUMBER_CHART, NUMBERS, toBengaliDigits } from "./numbers";
 import { resolveRo } from "./kids-games";
+import { COMMANDS } from "./commands-game";
 
 export type KidWordItem = { id: string; bn: string; ro: string; en: string; pic: PicSpec; badge?: string; /** The color of a colour word, kept when a photo replaces the swatch. */ tint?: string };
 export type KidQuestion = { bn: string; ro: string; en: string };
@@ -22,6 +23,9 @@ const COLOURS: KidWordItem[] = [
   w("beguni", "বেগুনি", "beguni", "purple", sw("#8e24aa")), w("badami", "বাদামি", "badami", "brown", sw("#795548")),
   w("dhushor", "ধূসর", "dhushor", "grey", sw("#9e9e9e")), w("akashi", "আকাশি", "akashi", "sky blue", sw("#4fc3f7")),
 ];
+
+// Commands for a lesson: one photo each, taken from the game's list so the cards and the game always agree.
+const COMMANDS_TOPIC: KidWordItem[] = COMMANDS.map((c) => w(c.id, c.bn, c.ro, c.en, { kind: "photo", src: c.image ?? `/assets/commands/${c.id}.webp` }));
 
 const BODY: KidWordItem[] = [
   w("matha", "মাথা", "matha", "head", body("matha")), w("chul", "চুল", "chul", "hair", body("chul")),
@@ -108,6 +112,7 @@ const TOPICS: Omit<KidTopic, "ready">[] = [
   { id: "numbers-21", slug: "numbers-21-to-50", title: "Numbers 21 to 50", bn: "একুশ থেকে পঞ্চাশ", words: NUMBERS_21_50, question: { bn: "এটা কোন সংখ্যা?", ro: "eta kon shongkhya?", en: "What number is this?" }, photos: "none" },
   { id: "numbers-51", slug: "numbers-51-to-100", title: "Numbers 51 to 100", bn: "একান্ন থেকে একশো", words: NUMBERS_51_100, question: { bn: "এটা কোন সংখ্যা?", ro: "eta kon shongkhya?", en: "What number is this?" }, photos: "none" },
   { id: "numbers-big", slug: "big-numbers", title: "Tens, hundreds and a thousand", bn: "বড় সংখ্যা", words: NUMBERS_BIG, question: { bn: "এটা কোন সংখ্যা?", ro: "eta kon shongkhya?", en: "What number is this?" }, photos: "none" },
+  { id: "commands", slug: "commands", title: "Commands", bn: "আদেশ", words: COMMANDS_TOPIC, question: { bn: "কী বলব?", ro: "ki bolbo?", en: "What do I say?" }, photos: "required" },
   { id: "animals", slug: "animals", title: "Animals", bn: "পশুপাখি", words: ANIMALS, question: { bn: "এটা কী?", ro: "eta ki?", en: "What is this?" }, photos: "required", fill: "magic" },
   { id: "days", slug: "days", title: "Days of the week", bn: "বার", words: DAYS, question: { bn: "এটা কী বার?", ro: "eta ki bar?", en: "Which day is this?" }, photos: "none" },
   { id: "months", slug: "months", title: "Months", bn: "মাস", words: MONTHS, question: { bn: "এটা কী মাস?", ro: "eta ki mash?", en: "Which month is this?" }, photos: "none" },

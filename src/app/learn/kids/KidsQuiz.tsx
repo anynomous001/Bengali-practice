@@ -66,7 +66,6 @@ export default function KidsQuiz({ topic, items, question, fill }: { topic: stri
       <div className="card-static practice-done">
         <h2>{score} of {qs.length}</h2>
         {fill && <div className="kk-done-fill"><Cauldron colors={layers} goal={qs.length} label={`Jar with ${layers.length} of ${qs.length} layers`} /></div>}
-        <p className="kk-stars" aria-hidden>{Array.from({ length: qs.length }, (_, k) => <span key={k} className={k < score ? "on" : ""}>★</span>)}</p>
         <p>{score >= Math.ceil(qs.length * 0.7) ? <><b lang="bn">খুব ভালো!</b> This lesson counts as complete.</> : "Good try. Seven or more completes the lesson. Play again."}</p>
         <button type="button" className="btn" onClick={() => start(mode)}>Play again</button>
         <button type="button" className="btn ghost" onClick={() => setPhase("setup")}>Change how to answer</button>
@@ -100,7 +99,7 @@ export default function KidsQuiz({ topic, items, question, fill }: { topic: stri
               );
             })}
           </div>
-          {right && (<><p className="feedback"><b lang="bn">খুব ভালো!</b> ⭐ {wrong.length === 0 ? "" : "Try the next one."}</p><button type="button" className="btn" onClick={() => next(wrong.length === 0)}>{i + 1 >= qs.length ? "See my stars" : "Next"}</button></>)}
+          {right && (<><p className="feedback"><b lang="bn">খুব ভালো!</b>{wrong.length === 0 ? "" : " Try the next one."}</p><button type="button" className="btn" onClick={() => next(wrong.length === 0)}>{i + 1 >= qs.length ? "See my stars" : "Next"}</button></>)}
         </>
       ) : !shown ? (
         <button type="button" className="btn" onClick={() => { setShown(true); speak(q.item.bn); }}>Show the answer</button>

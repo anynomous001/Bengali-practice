@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { recordKidsSession } from "../../../actions";
 import type { PotionColour } from "@/data/kids-games";
 import { Celebration, GameButton, SpeakBtn, StarMeter, Toggle, WordCard, pickNew, useShowText, useStars } from "./Wizard";
+import Jar from "../Cauldron";
 import "./wizard.css";
 
 const NUM_BN = ["শূন্য", "এক", "দুই", "তিন", "চার", "পাঁচ"];
@@ -76,7 +77,7 @@ export default function PotionClass({ colours, goal, timers }: { colours: Potion
       <div className="pc-grid">
         <div className="pc-main">
           <button type="button" className={"pc-die" + (rolling ? " rolling" : "")} onClick={rollDie} aria-label="Roll the colour dice"
-            style={{ background: dieColour?.hex ?? "#3a2478", color: dieColour?.textOn ?? "#ffd54a", borderColor: dieColour?.hex === "#fafafa" ? "#ccc" : "rgba(255,255,255,.35)" }}>
+            style={{ background: dieColour?.hex ?? "var(--surface-2)", color: dieColour?.textOn ?? "var(--ink-2)", borderColor: dieColour ? (dieColour.hex === "#fafafa" ? "#ccc" : "rgba(0,0,0,.2)") : "var(--line-2)" }}>
             {dieColour ? <span className="pc-die-dots" aria-hidden>●</span> : <span className="pc-die-q">?</span>}
           </button>
 
@@ -89,31 +90,31 @@ export default function PotionClass({ colours, goal, timers }: { colours: Potion
                   {showRo && <p className="wz-word-ro">{c.ro} kichhu niye esho!</p>}
                   {showEn && <p className="wz-word-en">Bring something {c.en}!</p>}
                 </div>
-              ) : <div className="wz-word small pc-spell"><p className="wz-word-bn">👂</p><p className="wz-word-en">Listen to your teacher&apos;s spell…</p></div>}
+              ) : <div className="wz-word small pc-spell"><p className="wz-word-bn" lang="bn">শোনো</p><p className="wz-word-en">Listen to your teacher&apos;s spell</p></div>}
             </>
           ) : <div className="wz-word small"><p className="wz-word-en">{rolling ? "Rolling…" : "Roll the dice to start"}</p></div>}
 
           {limit > 0 && c && !rolling && (
             <div className="pc-timer" aria-live="off">
               <div className="pc-bar"><div style={{ width: `${(left / limit) * 100}%`, background: left <= 5 ? "var(--w-bad)" : "var(--w-gold)" }} /></div>
-              <small>{timeUp ? "⏰ Time's up! Roll again?" : found ? "Found it! 🎉" : `${left} s · `}{!timeUp && !found && <span lang="bn">তাড়াতাড়ি!</span>}{!timeUp && !found && " (taratari, quickly!)"}</small>
+              <small>{timeUp ? "Time's up. Roll again?" : found ? "Found it!" : `${left} s · `}{!timeUp && !found && <span lang="bn">তাড়াতাড়ি!</span>}{!timeUp && !found && " (taratari, quickly!)"}</small>
             </div>
           )}
 
           <div>
-            <GameButton onClick={rollDie} disabled={rolling}>🎲 Roll</GameButton>
-            <GameButton kind="success" onClick={foundIt} disabled={cur === null || found || rolling}>✅ Found it!</GameButton>
-            {listen && <GameButton kind="ghost" onClick={() => setRevealed(true)} disabled={cur === null || revealed}>👀 Reveal colour</GameButton>}
+            <GameButton onClick={rollDie} disabled={rolling}>Roll</GameButton>
+            <GameButton kind="success" onClick={foundIt} disabled={cur === null || found || rolling}>Found it</GameButton>
+            {listen && <GameButton kind="ghost" onClick={() => setRevealed(true)} disabled={cur === null || revealed}>Reveal colour</GameButton>}
           </div>
           <p className="wz-prompt">Say the spell aloud. When he shows the object, ask <b lang="bn">এটা কী রং?</b> (eta ki rong?)</p>
         </div>
 
         <aside className="pc-side">
-          <Cauldron colours={colours} layers={layers} goal={goal} />
+          <Jar colors={layers.map((i) => colours[i].hex)} goal={goal} label={`Jar with ${layers.length} of ${goal} colours`} />
           <p className="pc-count"><span lang="bn">{NUM_BN[Math.min(layers.length, 5)]}</span> · {layers.length} / {goal} ingredients</p>
-          <GameButton kind="ghost" onClick={newPotion}>↺ New potion</GameButton>
+          <GameButton kind="ghost" onClick={newPotion}>New potion</GameButton>
           <div className="wz-toggles">
-            <Toggle label="👂 Listening round" checked={listen} onChange={setListen} />
+            <Toggle label="Listening round" checked={listen} onChange={setListen} />
             <Toggle label="Show English" checked={showEn} onChange={setShowEn} />
             <Toggle label="Show romanization" checked={showRo} onChange={setShowRo} />
             <label className="wz-toggle">Timer
@@ -129,30 +130,7 @@ export default function PotionClass({ colours, goal, timers }: { colours: Potion
           </ul>
         </aside>
       </div>
-      {(potionDone || done) && <Celebration line={potionDone ? "Potion ready! 🧪✨" : "Great potion master!"} onAgain={() => { newPotion(); reset(); }} />}
+      {(potionDone || done) && <Celebration line={potionDone ? "Potion ready!" : "Great potion master!"} onAgain={() => { newPotion(); reset(); }} />}
     </div>
-  );
-}
-
-function Cauldron({ colours, layers, goal }: { colours: PotionColour[]; layers: number[]; goal: number }) {
-  const top = 92, bottom = 206, h = (bottom - top) / goal;
-  return (
-    <svg viewBox="0 0 240 240" className="pc-cauldron" role="img" aria-label={`Cauldron with ${layers.length} of ${goal} ingredients`}>
-      <defs><clipPath id="pc-pot"><path d="M44 96 Q40 190 80 214 L160 214 Q200 190 196 96 Z" /></clipPath></defs>
-      <ellipse cx="120" cy="226" rx="78" ry="9" fill="rgba(0,0,0,.35)" />
-      <g clipPath="url(#pc-pot)">
-        <rect x="30" y="90" width="180" height="130" fill="#14091f" />
-        {layers.map((li, i) => (
-          <rect key={i} className="pc-layer" x="30" y={bottom - h * (i + 1)} width="180" height={h + 0.5} fill={colours[li].hex} />
-        ))}
-      </g>
-      <path d="M44 96 Q40 190 80 214 L160 214 Q200 190 196 96" fill="none" stroke="#4b3a73" strokeWidth="9" />
-      <ellipse cx="120" cy="96" rx="78" ry="14" fill="none" stroke="#6a579b" strokeWidth="8" />
-      <path d="M52 130 q-26 6 -22 28" stroke="#4b3a73" strokeWidth="7" fill="none" strokeLinecap="round" />
-      <path d="M188 130 q26 6 22 28" stroke="#4b3a73" strokeWidth="7" fill="none" strokeLinecap="round" />
-      {layers.length > 0 && [0, 1, 2].map((i) => (
-        <circle key={i} className="pc-bubble" cx={92 + i * 34} cy="92" r={5 + i} fill="rgba(255,255,255,.55)" style={{ animationDelay: `${i * 0.5}s` }} />
-      ))}
-    </svg>
   );
 }

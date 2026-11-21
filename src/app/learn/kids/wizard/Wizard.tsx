@@ -4,6 +4,7 @@ import { useCallback, useRef, useState } from "react";
 import { recordKidsSession } from "../../../actions";
 import { speak } from "@/lib/speak";
 import { useRoman } from "../../Roman";
+import Icon from "../../Icon";
 
 const STAR_GOAL = 10;
 
@@ -34,10 +35,11 @@ export function useShowText() {
 export function StarMeter({ stars, onReset }: { stars: number; onReset: () => void }) {
   return (
     <div className="wz-stars">
-      <div className="wz-star-row" role="img" aria-label={`${stars} of ${STAR_GOAL} stars`}>
-        {Array.from({ length: STAR_GOAL }, (_, i) => <span key={i} className={i < stars ? "on" : ""} aria-hidden>★</span>)}
+      <div className="wz-progress" role="img" aria-label={`${stars} of ${STAR_GOAL} done`}>
+        <span><b>{stars}</b> of {STAR_GOAL}</span>
+        <div className="bar" aria-hidden><div style={{ width: `${(stars / STAR_GOAL) * 100}%` }} /></div>
       </div>
-      <button type="button" className="wz-link" onClick={onReset}>Reset stars</button>
+      <button type="button" className="wz-link" onClick={onReset}>Reset</button>
     </div>
   );
 }
@@ -45,7 +47,6 @@ export function StarMeter({ stars, onReset }: { stars: number; onReset: () => vo
 export function Celebration({ line, onAgain }: { line: string; onAgain: () => void }) {
   return (
     <div className="wz-celebrate" role="dialog" aria-label="Well done">
-      <div className="wz-confetti" aria-hidden>{Array.from({ length: 24 }, (_, i) => <i key={i} style={{ left: `${(i * 37) % 100}%`, animationDelay: `${(i % 8) * 0.18}s`, background: ["#ffd54a", "#7cf29a", "#ff8ac8", "#8ad4ff"][i % 4] }} />)}</div>
       <div className="wz-celebrate-box">
         <p className="wz-celebrate-bn" lang="bn">খুব ভালো!</p>
         <p className="wz-celebrate-ro">khub bhalo!</p>
@@ -57,7 +58,9 @@ export function Celebration({ line, onAgain }: { line: string; onAgain: () => vo
 }
 
 export function GameButton({ kind = "primary", children, ...rest }: { kind?: "primary" | "success" | "danger" | "ghost" } & React.ButtonHTMLAttributes<HTMLButtonElement>) {
-  return <button type="button" {...rest} className={`wz-btn ${kind}${rest.className ? " " + rest.className : ""}`}>{children}</button>;
+  // The app's own button styles: the main action is solid, everything else is outlined.
+  const cls = kind === "primary" || kind === "success" ? "btn" : "btn ghost";
+  return <button type="button" {...rest} className={cls + (rest.className ? " " + rest.className : "")}>{children}</button>;
 }
 
 export function Toggle({ label, checked, onChange }: { label: string; checked: boolean; onChange: (v: boolean) => void }) {
@@ -70,7 +73,7 @@ export function Toggle({ label, checked, onChange }: { label: string; checked: b
 }
 
 export function SpeakBtn({ text, label = "Hear it" }: { text: string; label?: string }) {
-  return <button type="button" className="wz-speak" aria-label={`${label}: ${text}`} onClick={() => speak(text)}>🔊</button>;
+  return <button type="button" className="wz-speak" aria-label={`${label}: ${text}`} onClick={() => speak(text)}><Icon name="sound" size={22} /></button>;
 }
 
 /** Bengali first (largest), then romanization, then English, as the teacher asked. */
@@ -80,7 +83,7 @@ export function WordCard({ bn, ro, en, hint, verdict, verdictKind, showEn, showR
 }) {
   return (
     <div className={"wz-word" + (small ? " small" : "")}>
-      {hidden ? <p className="wz-word-bn" aria-live="polite">👂</p> : (
+      {hidden ? <p className="wz-word-bn wz-listen" aria-live="polite"><Icon name="listening" size={44} /><span>Listen</span></p> : (
         <>
           <p className="wz-word-bn" lang="bn">{bn}{speakText !== undefined && <SpeakBtn text={speakText || bn} />}</p>
           {showRo && <p className="wz-word-ro">{ro}</p>}
