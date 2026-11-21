@@ -9,6 +9,7 @@ const ro = (s: string) =>
 const L = (bn: string, r: string, en: string): Triple => [bn, ro(r), en];
 /** A key word: the romanization is generated. */
 const V = (bn: string, en: string): Triple => [bn, bnToRoman(bn), en];
+import { STORY_QUIZZES } from "./story-quizzes";
 const Q = (q: string, right: string, ...wrong: string[]): StoryQuestion => ({ q, options: [right, ...wrong], answer: 0 });
 
 export const DEV_STORIES: Story[] = [
@@ -280,4 +281,5 @@ export const DEV_STORIES: Story[] = [
   },
 ];
 
+for (const s of DEV_STORIES) { const qs = STORY_QUIZZES[s.id]; if (qs) s.quiz = qs; }
 export const getDevStory = (id: string) => DEV_STORIES.find((s) => s.id === id);
