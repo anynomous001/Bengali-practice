@@ -1,0 +1,42 @@
+/* Drag & Match: Bengali Commands. Builds on the wizard theme in wizard.css. */
+.cm-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; margin: 6px 0 4px; }
+.cm-sizes { display: flex; flex-wrap: wrap; gap: 8px; }
+.wz-tab[aria-pressed="true"] { background: var(--w-gold); color: #2b2140; border-color: var(--w-gold); }
+.cm-score { margin: 0; font: 700 1.2rem var(--f-fredoka), sans-serif; color: var(--w-mute); } .cm-score b { color: var(--w-gold); font-size: 1.8rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+.cm-board { display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; margin-top: 10px; }
+@media (max-width: 720px) { .cm-board { grid-template-columns: 1fr; } }
+
+.cm-tray { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); padding: 12px; border-radius: 22px; background: rgba(255,255,255,.05); border: 2px dashed var(--w-line); min-height: 140px; }
+.cm-slot { aspect-ratio: 1; min-width: 96px; border-radius: 18px; background: rgba(0,0,0,.18); }
+.cm-card { position: relative; display: block; width: 100%; height: 100%; padding: 0; border: 3px solid rgba(255,255,255,.55); border-radius: 18px; overflow: hidden; background: #d9d9de; cursor: grab;
+  touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; transition: transform .22s cubic-bezier(.3,1.4,.5,1), box-shadow .15s, border-color .15s; box-shadow: 0 5px 0 rgba(0,0,0,.28); }
+.cm-card img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.cm-card:hover { border-color: #fff; }
+.cm-card.selected { border-color: var(--w-gold); box-shadow: 0 0 0 4px rgba(255,213,74,.5), 0 5px 0 rgba(0,0,0,.28); transform: translateY(-3px); }
+.cm-card.dragging { cursor: grabbing; z-index: 40; transition: none; box-shadow: 0 16px 30px rgba(0,0,0,.5); }
+.cm-card:focus-visible { outline: 4px solid #fff; outline-offset: 3px; }
+.cm-shake { animation: cm-shake .45s; }
+@keyframes cm-shake { 0%, 100% { translate: 0; } 20% { translate: -9px; } 40% { translate: 9px; } 60% { translate: -6px; } 80% { translate: 6px; } }
+.cm-ph { display: grid; place-items: center; width: 100%; height: 100%; background: linear-gradient(160deg, #e6e6ea, #c9c9d2); color: #6a6a78; font: 600 .95rem var(--f-fredoka), sans-serif; }
+
+.cm-boxes { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.cm-box { position: relative; min-height: 112px; border-radius: 20px; border: 3px dashed rgba(255,255,255,.35); background: var(--w-card); display: flex; align-items: stretch; transition: border-color .12s, background .12s, transform .12s; }
+.cm-box.ready { border-color: rgba(255,213,74,.7); }
+.cm-box.hot { border-color: var(--w-gold); background: rgba(255,213,74,.2); transform: scale(1.03); }
+.cm-box.matched { border-style: solid; border-color: var(--w-ok); background: rgba(124,242,154,.14); animation: cm-snap .35s; }
+@keyframes cm-snap { 0% { transform: scale(.94); } 60% { transform: scale(1.04); } 100% { transform: scale(1); } }
+.cm-hear { flex: none; width: 56px; min-height: 80px; border: 0; background: none; color: var(--w-ink); font-size: 1.5rem; cursor: pointer; border-radius: 17px 0 0 17px; }
+.cm-hear:hover { background: rgba(255,255,255,.12); }
+.cm-drop { flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px; padding: 8px 12px 8px 4px; border: 0; background: none; color: var(--w-ink); font: inherit; text-align: left; cursor: pointer; border-radius: 0 17px 17px 0; min-height: 80px; }
+.cm-drop:disabled { cursor: default; }
+.cm-hear:focus-visible, .cm-drop:focus-visible { outline: 4px solid #fff; outline-offset: -4px; }
+.cm-placed { flex: none; width: 80px; height: 80px; border-radius: 14px; overflow: hidden; border: 2px solid #fff; }
+.cm-placed img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.cm-word { display: grid; line-height: 1.15; min-width: 0; }
+.cm-bn { font: 700 clamp(1.6rem, 4vw, 2.2rem) var(--font-bn), sans-serif; color: var(--w-gold); }
+.cm-ro { font-weight: 600; color: var(--w-ink); } .cm-en { color: var(--w-mute); font-size: .95rem; }
+.cm-q { font: 700 2.6rem var(--f-fredoka), sans-serif; color: var(--w-mute); margin: 0 auto; }
+
+@media (prefers-reduced-motion: reduce) { .cm-card, .cm-box, .cm-shake { transition: none; animation: none; } }

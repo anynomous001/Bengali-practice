@@ -221,6 +221,9 @@ export const COURSES: Course[] = [
         { id: "kids/numbers-big-learn", title: "Big number cards", blurb: "Tap a number to hear it. Tap again to hear it slowly.", href: "/learn/kids/big-numbers/learn", kind: "Lesson", tag: "Kids" },
         { id: "kids/numbers-big-quiz", title: "What number is this? (big numbers)", blurb: "A number appears. Say it in Bengali, or pick the word.", href: "/learn/kids/big-numbers/quiz", kind: "Quiz", tag: "Kids" },
       ] },
+      { id: "commands", title: "Commands", blurb: "Action words for a lesson: sit, stand, look, listen, give, take, jump, stop, walk and say.", lessons: [
+        { id: "kids/game-commands", title: "Drag & Match: Commands", blurb: "Drag each picture onto its Bengali command: sit, stand, jump, give and more.", href: "/learn/kids/games/commands", kind: "Practice", tag: "Kids" },
+      ] },
       { id: "animals", title: "Animals", blurb: "Real photos of twelve animals.", lessons: [
         { id: "kids/animals-learn", title: "Animal cards", blurb: "Tap an animal to hear its name. Tap again to hear it slowly.", href: "/learn/kids/animals/learn", kind: "Lesson", tag: "Kids" },
         { id: "kids/animals-quiz", title: "What is this animal?", blurb: "A photo appears. Say the animal in Bengali, or pick the word.", href: "/learn/kids/animals/quiz", kind: "Quiz", tag: "Kids" },

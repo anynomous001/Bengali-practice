@@ -232,7 +232,7 @@ export async function drillRound(tenses: string[], level: string, count: number)
 /** A finished kids' game (10 stars). Kept in its own table: kids' games are not on the leaderboard. */
 export async function recordKidsSession(game: string, stars: number) {
   const user = await getUser();
-  if (!user?.hasAccess || !["body", "potion", "creatures"].includes(game) || !Number.isFinite(stars)) return;
+  if (!user?.hasAccess || !["body", "potion", "creatures", "commands"].includes(game) || !Number.isFinite(stars)) return;
   await query("INSERT INTO kids_sessions (email, game, stars) VALUES ($1, $2, $3)", [user.email, game, Math.max(0, Math.min(99, Math.floor(stars)))]);
   await completeLesson(user.email, `kids/game-${game}`);
 }

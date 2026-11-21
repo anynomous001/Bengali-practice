@@ -5,6 +5,7 @@ import "../wizard/wizard.css";
 const GAMES = [
   { href: "/learn/kids/games/body", pic: "1f9d9", en: "Wizard Body Check", bn: "শরীরের জাদু", line: "Learn your body words and cast body spells" },
   { href: "/learn/kids/games/potion", pic: "1f9ea", en: "Potion Class", bn: "জাদুর শরবত", line: "Roll the colour dice and brew a potion" },
+  { href: "/learn/kids/games/commands", pic: "1f466", en: "Drag & Match", bn: "আদেশ মেলাও", line: "Match each picture to its Bengali command" },
   { href: "/learn/kids/games/creatures", pic: "1f52e", en: "Mystery Wizard", bn: "জাদুর প্রাণী", line: "Guess the creature behind the magic curtain" },
 ];
 
