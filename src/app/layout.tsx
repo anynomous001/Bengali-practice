@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Newsreader, Noto_Sans_Bengali, Noto_Serif_Bengali } from "next/font/google";
+import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
 import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, SITE_TITLE, SITE_URL, SOCIAL_DESCRIPTION, TWITTER_SITE } from "@/lib/site";
 import GoogleAnalytics from "./GoogleAnalytics";
@@ -33,11 +33,18 @@ export const viewport: Viewport = { width: "device-width", initialScale: 1, them
 
 // Fonts are downloaded at build time and served from this site, so the page never waits on a font stylesheet from another host.
 // The same Inter and Newsreader pair as the home page and free guides, so the lessons look like the rest of the site.
-const ui = Inter({ subsets: ["latin"], display: "swap", variable: "--f-ui" });
+// The fonts are files in ./fonts (the same Google fonts), not fetched from Google at build time, so a Google Fonts outage cannot fail a deploy.
+const ui = localFont({ src: "./fonts/Inter-latin.woff2", weight: "100 900", style: "normal", display: "swap", variable: "--f-ui", adjustFontFallback: "Arial" });
 // A Latin serif for the landing page headings, chosen to sit beside Noto Serif Bengali.
-const serif = Newsreader({ subsets: ["latin"], style: ["normal", "italic"], display: "swap", variable: "--f-serif" });
-const bnSans = Noto_Sans_Bengali({ subsets: ["bengali"], weight: ["400", "500", "600", "700"], display: "swap", variable: "--f-bn", preload: false });
-const bnSerif = Noto_Serif_Bengali({ subsets: ["bengali"], weight: ["400", "500", "600", "700"], display: "swap", variable: "--f-bn-serif", preload: false });
+const serif = localFont({
+  src: [
+    { path: "./fonts/Newsreader-latin.woff2", weight: "200 800", style: "normal" },
+    { path: "./fonts/Newsreader-latin-italic.woff2", weight: "200 800", style: "italic" },
+  ],
+  display: "swap", variable: "--f-serif", adjustFontFallback: "Times New Roman",
+});
+const bnSans = localFont({ src: "./fonts/NotoSansBengali.woff2", weight: "100 900", style: "normal", display: "swap", variable: "--f-bn", preload: false, adjustFontFallback: false });
+const bnSerif = localFont({ src: "./fonts/NotoSerifBengali.woff2", weight: "100 900", style: "normal", display: "swap", variable: "--f-bn-serif", preload: false, adjustFontFallback: false });
 
 // The saved light/dark choice (a cookie) is applied before the first paint. Reading it here, not on the server, keeps pages static.
 const THEME = `(function(){try{var m=document.cookie.match(/(?:^|; )bp_theme=(light|dark)/);if(m)document.documentElement.setAttribute("data-theme",m[1])}catch(e){}})();`;
