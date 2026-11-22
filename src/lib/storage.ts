@@ -1,6 +1,5 @@
 import { createHash } from "node:crypto";
-import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
-import { dirname, join } from "node:path";
+import { query } from "./db";
 import { DeleteObjectCommand, GetObjectCommand, ListObjectsV2Command, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 
 // Neon Object Storage (S3-compatible). Credentials, endpoint and region come from the injected AWS_* variables.
@@ -15,26 +14,29 @@ export const storageConfigured = () => !!process.env.AWS_ENDPOINT_URL_S3 && !!pr
 /** A stable, non-reversible folder name for one student, so object keys never contain an email address. */
 export const ownerFolder = (email: string) => createHash("sha256").update(email.trim().toLowerCase()).digest("hex").slice(0, 24);
 
-// With no bucket set up, `npm run dev` keeps files in ./.local-storage instead (never in production), the way the database does.
-const LOCAL_DIR = join(process.cwd(), ".local-storage");
-const localMode = () => !storageConfigured() && process.env.NODE_ENV !== "production";
-const localPath = (key: string) => join(LOCAL_DIR, ...key.split("/").filter((p) => p && p !== ".."));
-/** True when files can be stored here: the bucket is configured, or this is a local dev run. */
-export const fileStoreReady = () => storageConfigured() || localMode();
+// With no bucket set up (no AWS_* variables), files are kept in the database instead (table stored_objects), so uploads work
+// everywhere with no extra setup. When a bucket is configured, it is used.
+const dbMode = () => !storageConfigured();
+/** Files can always be stored: in the bucket when there is one, otherwise in the database. */
+export const fileStoreReady = () => true;
 
 export async function putObject(key: string, body: Uint8Array, contentType: string) {
-  if (localMode()) { const f = localPath(key); await mkdir(dirname(f), { recursive: true }); await writeFile(f, body); return; }
+  if (dbMode()) {
+    await query("INSERT INTO stored_objects (key, content_type, data) VALUES ($1, $2, $3) ON CONFLICT (key) DO UPDATE SET content_type = $2, data = $3", [key, contentType, Buffer.from(body)]);
+    return;
+  }
   await s3().send(new PutObjectCommand({ Bucket: BUCKET, Key: key, Body: body, ContentType: contentType }));
 }
 
 export async function deleteObject(key: string) {
-  if (localMode()) { await rm(localPath(key), { force: true }); return; }
+  if (dbMode()) { await query("DELETE FROM stored_objects WHERE key = $1", [key]); return; }
   await s3().send(new DeleteObjectCommand({ Bucket: BUCKET, Key: key }));
 }
 
 export async function getObject(key: string): Promise<{ bytes: Uint8Array; contentType: string } | null> {
-  if (localMode()) {
-    try { return { bytes: new Uint8Array(await readFile(localPath(key))), contentType: key.endsWith(".pdf") ? "application/pdf" : "application/octet-stream" }; } catch { return null; }
+  if (dbMode()) {
+    const [row] = await query<{ data: Uint8Array; content_type: string }>("SELECT data, content_type FROM stored_objects WHERE key = $1", [key]);
+    return row ? { bytes: new Uint8Array(row.data), contentType: row.content_type } : null;
   }
   try {
     const r = await s3().send(new GetObjectCommand({ Bucket: BUCKET, Key: key }));
@@ -48,4 +50,9 @@ export async function getObject(key: string): Promise<{ bytes: Uint8Array; conte
 export async function listObjects(prefix: string) {
   const r = await s3().send(new ListObjectsV2Command({ Bucket: BUCKET, Prefix: prefix, MaxKeys: 100 }));
   return (r.Contents ?? []).map((o) => ({ key: o.Key!, size: o.Size ?? 0, modified: o.LastModified?.toISOString() ?? "" }));
+}
+
+/** Throws away upload pieces that were never finished (a closed tab, a failed upload). Only needed for database storage. */
+export async function purgeStaleUploads() {
+  if (dbMode()) await query("DELETE FROM stored_objects WHERE key LIKE 'files/tmp/%' AND created_at < now() - interval '1 day'");
 }

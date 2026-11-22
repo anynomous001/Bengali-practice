@@ -221,6 +221,12 @@ const SCHEMA = `
       PRIMARY KEY (file_id, lesson_id)
     );
     CREATE INDEX IF NOT EXISTS lesson_file_links_lesson ON lesson_file_links (lesson_id);
+    CREATE TABLE IF NOT EXISTS stored_objects (
+      key text PRIMARY KEY,
+      content_type text NOT NULL DEFAULT 'application/octet-stream',
+      data bytea NOT NULL,
+      created_at timestamptz NOT NULL DEFAULT now()
+    );
   `;
 
 async function ensureSchema() {

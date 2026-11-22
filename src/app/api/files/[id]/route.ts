@@ -16,9 +16,16 @@ export async function GET(req: Request, ctx: { params: Promise<{ id: string }> }
   if (!file) return NextResponse.json({ error: "Not found." }, { status: 404 });
   const download = new URL(req.url).searchParams.get("download") === "1";
   const name = row.filename.replace(/[^\w .()-]/g, "_");
-  return new Response(Buffer.from(file.bytes), {
+  const bytes = file.bytes;
+  const STEP = 256 * 1024;
+  let at = 0;
+  const body = new ReadableStream<Uint8Array>({
+    pull(c) { if (at >= bytes.length) return c.close(); c.enqueue(bytes.subarray(at, at + STEP)); at += STEP; },
+  });
+  return new Response(body, {
     headers: {
       "Content-Type": "application/pdf",
+      "Content-Length": String(bytes.length),
       "Content-Disposition": `${download ? "attachment" : "inline"}; filename="${name}"`,
       "Cache-Control": "private, no-store",
       "X-Content-Type-Options": "nosniff",
