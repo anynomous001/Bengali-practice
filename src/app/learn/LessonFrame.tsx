@@ -10,6 +10,7 @@ import LessonStatus from "./LessonStatus";
 import { RailToggle } from "./LayoutControls";
 import OnThisPage from "./OnThisPage";
 import ProgressBar from "./ProgressBar";
+import LessonFiles from "./LessonFiles";
 import type { TocItem } from "@/lib/toc";
 
 /** Wraps a lesson page: breadcrumb, course progress, syllabus outline, and complete / previous / next. */
@@ -39,6 +40,7 @@ export default async function LessonFrame({ lessonId, toc, children }: { lessonI
         <div className="lp-content">
           {toc && <OnThisPage items={toc} variant="bar" />}
           {children}
+          <LessonFiles lessonId={lesson.id} />
           <footer className="lp-foot">
             <div className="lp-nav">
               {prev ? <Link href={prev.href} className="btn ghost small"><Icon name="prev" size={16} />{prev.title}</Link> : <span />}

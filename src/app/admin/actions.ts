@@ -6,6 +6,8 @@ import { getUser, normalizeEmail, validEmail } from "@/lib/auth";
 import { appBase } from "@/lib/base-url";
 import { query } from "@/lib/db";
 import { sendInviteEmail, sendTrialEmail } from "@/lib/email";
+import { cleanLessonIds } from "@/lib/lesson-files";
+import { deleteObject } from "@/lib/storage";
 
 async function requireAdmin() {
   const user = await getUser();
@@ -114,4 +116,27 @@ export async function setBuddies(fd: FormData) {
   await query("INSERT INTO app_flags (key, value) VALUES ('buddies', $1) ON CONFLICT (key) DO UPDATE SET value = $1", [value]);
   revalidatePath("/learn/leaderboard");
   done(fd, "overview", value === "on" ? "Practice buddies are on." : "Practice buddies are off.");
+}
+
+/** Remove a lesson PDF: the file, and everywhere it was shown. */
+export async function deleteLessonFile(fd: FormData) {
+  await requireAdmin();
+  const id = Number(fd.get("id"));
+  if (!Number.isInteger(id)) return;
+  const [row] = await query<{ storage_key: string }>("DELETE FROM lesson_files WHERE id = $1 RETURNING storage_key", [id]);
+  if (row) await deleteObject(row.storage_key).catch(() => undefined);
+  revalidatePath("/admin/files");
+  redirect("/admin/files?notice=" + encodeURIComponent("PDF removed."));
+}
+
+/** Change the lessons a PDF appears in. */
+export async function retagFile(fd: FormData) {
+  await requireAdmin();
+  const id = Number(fd.get("id"));
+  const lessons = cleanLessonIds(fd.getAll("lesson"));
+  if (!Number.isInteger(id) || !lessons.length) redirect("/admin/files?notice=" + encodeURIComponent("Choose at least one lesson."));
+  await query("DELETE FROM lesson_file_links WHERE file_id = $1", [id]);
+  for (const l of lessons) await query("INSERT INTO lesson_file_links (file_id, lesson_id) VALUES ($1, $2) ON CONFLICT DO NOTHING", [id, l]);
+  revalidatePath("/admin/files");
+  redirect("/admin/files?notice=" + encodeURIComponent("Lessons updated."));
 }

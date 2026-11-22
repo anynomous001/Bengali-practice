@@ -206,6 +206,21 @@ const SCHEMA = `
       reviews int NOT NULL DEFAULT 0,
       PRIMARY KEY (email, card_id)
     );
+    CREATE TABLE IF NOT EXISTS lesson_files (
+      id serial PRIMARY KEY,
+      title text NOT NULL,
+      filename text NOT NULL,
+      storage_key text NOT NULL,
+      size int NOT NULL,
+      uploaded_by text NOT NULL DEFAULT '',
+      created_at timestamptz NOT NULL DEFAULT now()
+    );
+    CREATE TABLE IF NOT EXISTS lesson_file_links (
+      file_id int NOT NULL REFERENCES lesson_files(id) ON DELETE CASCADE,
+      lesson_id text NOT NULL,
+      PRIMARY KEY (file_id, lesson_id)
+    );
+    CREATE INDEX IF NOT EXISTS lesson_file_links_lesson ON lesson_file_links (lesson_id);
   `;
 
 async function ensureSchema() {

@@ -20,9 +20,17 @@ const config: NextConfig = {
     ];
   },
   async headers() {
+    const common = [
+      { key: "X-Content-Type-Options", value: "nosniff" },
+      { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+      { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+      { key: "Strict-Transport-Security", value: "max-age=63072000" },
+    ];
     return [
+      // Lesson PDFs are shown inside our own lesson pages, so they may be framed by this site (and only this site).
+      { source: "/api/files/:id", headers: [...common, { key: "X-Frame-Options", value: "SAMEORIGIN" }, { key: "Content-Security-Policy", value: "frame-ancestors 'self'" }] },
       {
-        source: "/(.*)",
+        source: "/((?!api/files/).*)",
         headers: [
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "X-Frame-Options", value: "DENY" },
