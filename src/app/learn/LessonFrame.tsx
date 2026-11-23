@@ -39,8 +39,8 @@ export default async function LessonFrame({ lessonId, toc, children }: { lessonI
       <div className="lp-grid">
         <div className="lp-content">
           {toc && <OnThisPage items={toc} variant="bar" />}
-          {children}
           <LessonFiles lessonId={lesson.id} />
+          {children}
           <footer className="lp-foot">
             <div className="lp-nav">
               {prev ? <Link href={prev.href} className="btn ghost small"><Icon name="prev" size={16} />{prev.title}</Link> : <span />}
