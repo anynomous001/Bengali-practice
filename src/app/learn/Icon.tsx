@@ -1,7 +1,7 @@
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 import {
   ArrowRight, BookOpenText, Gift, List, Medal, ChatCircleText, Fire, Target, Trophy, CaretDown, CaretLeft, CaretRight, Cards, Check, CheckCircle, Circle, Clock, Desktop, House, ListBullets,
-  Headphones, Smiley, Lock, Microphone, Moon, Path, PencilSimpleLine, Play, ShieldCheck, SignOut, SpeakerHigh, Sun, TextAa, Translate, X,
+  Headphones, CookingPot, Smiley, Lock, Microphone, Moon, Path, PencilSimpleLine, Play, ShieldCheck, SignOut, SpeakerHigh, Sun, TextAa, Translate, X,
 } from "@phosphor-icons/react/dist/ssr";
 
 // One icon family (Phosphor) for the whole app, so strokes, corners and weights match everywhere.
@@ -9,6 +9,7 @@ import {
 const ICONS = {
   home: House,
   kids: Smiley,
+  kitchen: CookingPot,
   reading: BookOpenText,
   speaking: Microphone,
   listening: Headphones,
@@ -58,7 +59,7 @@ export default function Icon({ name, size = 20, weight }: { name: IconName; size
 
 /** The colour of the tile behind an icon, by icon name. Each section of the app has its own colour. */
 const TONES: Partial<Record<IconName, string>> = {
-  home: "home", path: "path", reading: "reading", speaking: "speaking", listening: "listening", vocabulary: "vocabulary", grammar: "grammar", writing: "writing",
+  home: "home", path: "path", kitchen: "kitchen", reading: "reading", speaking: "speaking", listening: "listening", vocabulary: "vocabulary", grammar: "grammar", writing: "writing",
   trophy: "progress", medal: "leader", gift: "gift", feedback: "chat", shield: "slate", logout: "slate", flame: "flame", target: "leader", lock: "slate",
 };
 

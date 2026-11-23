@@ -10,8 +10,9 @@ import { CLASSWORK } from "./classwork";
 import { SCENARIOS } from "./roleplay";
 import { DEV_VOCAB, DEV_READING, DEV_SCENARIOS, DEV_CLASSWORK } from "./devotional";
 import { DEV_STORIES } from "./devotional-stories";
+import { KITCHEN } from "./kitchen/content";
 
-export type CourseId = "reading" | "speaking" | "vocabulary" | "grammar" | "listening" | "kids";
+export type CourseId = "reading" | "speaking" | "vocabulary" | "grammar" | "listening" | "kids" | "kitchen";
 export type Kind = "Lesson" | "Practice" | "Quiz" | "Review" | "Exam";
 export type Lesson = { id: string; title: string; blurb: string; href: string; kind: Kind; /** Who it is for, such as "Clinical". */ tag?: string };
 /** `devotional` modules are tagged "Devotional", kept apart from the main course, and not counted in its progress. */
@@ -277,6 +278,22 @@ export const COURSES: Course[] = [
     upcoming: [
       { title: "More stories", blurb: "At the market, on a journey and with the family." },
     ],
+  },
+  {
+    // Kitchen Bengali: a separate journey for people who work in restaurant kitchens with Bengali-speaking colleagues.
+    id: "kitchen", title: "Kitchen Bengali", bn: "",
+    blurb: "Spoken Bengali for the kitchen: safety, ingredients, quantities, working with your team, and leading it.",
+    outcomes: KITCHEN.stages.map((st) => st.goal),
+    modules: [
+      ...KITCHEN.stages.map((st) => ({
+        id: `stage-${st.id}`, title: `Stage ${st.id}: ${st.title}`, blurb: st.goal,
+        lessons: [{ id: `kitchen/stage-${st.id}`, title: st.title, blurb: st.goal, href: `/learn/kitchen/stage/${st.id}`, kind: "Practice" as const }],
+      })),
+      { id: "listening", title: "Listening practice", blurb: "Listen, then pick the English. Three levels.", lessons: [
+        { id: "kitchen/listening", title: "Listening practice", blurb: "Hear a Bengali phrase and choose its English meaning.", href: "/learn/kitchen/listening", kind: "Quiz" as const },
+      ] },
+    ],
+    upcoming: [],
   },
 ];
 

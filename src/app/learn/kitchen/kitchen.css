@@ -1,0 +1,80 @@
+/* Kitchen Bengali: built on the app's own look (surfaces, lines, type, buttons) with the orange accent of this section. */
+.kt h1 { margin: 0 0 6px; } .kt .lede { margin: 0 0 14px; }
+.kt-block { margin-top: 26px; } .kt-block > h2 { margin-bottom: 6px; } .kt-sub { margin: 18px 0 8px; font: 600 1.05rem var(--font-ui); }
+.kt-inline-bn { font-family: var(--font-bn-serif); font-weight: 600; }
+.kt-bn { font-family: var(--font-bn-serif); font-weight: 700; font-size: clamp(1.5rem, 4.4vw, 2.1rem); line-height: 1.35; color: var(--ink); }
+.kt-bn.big { font-size: clamp(1.9rem, 6vw, 2.8rem); }
+.kt-ro { color: var(--ink-2); font-size: .9rem; } .kt-en { color: var(--ink-2); font-size: 1rem; }
+.kt-en.show { color: var(--ink); font-weight: 600; }
+
+/* stage steps */
+.kt-steps ol { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.kt-steps a { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid var(--line-2); border-radius: var(--radius-sm); background: var(--surface); color: var(--ink); text-decoration: none; font-size: .9rem; line-height: 1.25; }
+.kt-steps a b { flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--surface-2); color: var(--ink-2); font-size: .85rem; }
+.kt-steps a.on { border-color: var(--seg); background: color-mix(in srgb, var(--seg) 9%, var(--surface)); } .kt-steps a.on b { background: var(--seg); color: #fff; }
+
+/* audio bar */
+.kt-audio { margin: 4px 0 6px; } .kt-note { margin: 8px 0 0; padding: 10px 14px; border-radius: var(--radius-sm); background: var(--surface-2); color: var(--ink-2); font-size: .92rem; }
+.kt-speed { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.kt-speed-label { font-weight: 600; color: var(--ink-2); font-size: .9rem; margin-right: 2px; }
+.kt-speed button, .kt-scenes button { min-height: 40px; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); color: var(--ink); font: 600 .92rem var(--font-ui); cursor: pointer; }
+.kt-speed button.on, .kt-scenes button.on { background: var(--seg); border-color: var(--seg); color: #fff; }
+.kt-speed button:focus-visible, .kt-scenes button:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+
+/* cards */
+.kt-cards { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; }
+.kt-cards.grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); } .kt-cards.list { grid-template-columns: 1fr; }
+.kt-card { position: relative; width: 100%; height: 100%; display: grid; gap: 2px; justify-items: start; text-align: left; padding: 12px 40px 12px 14px; border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--surface); color: var(--ink); font: inherit; cursor: pointer; box-shadow: var(--shadow); transition: border-color .12s; }
+.kt-card:hover { border-color: var(--seg); } .kt-card.open { border-color: var(--seg); }
+.kt-card:focus-visible, .kt-pic:focus-visible, .kt-phrase:focus-visible, .kt-line-text:focus-visible, .kt-listen:focus-visible, .kt-option:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+.kt-card .kt-en { font-size: .92rem; } .kt-card:not(.open) .kt-en { opacity: .7; font-size: .82rem; }
+.kt-ear { position: absolute; top: 10px; right: 10px; color: var(--seg); }
+
+/* picture matching */
+.kt-score { margin: 10px 0; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; color: var(--ink-2); } .kt-score b.good { color: var(--ok); } .kt-score b.bad { color: var(--bad); } .kt-count { font-weight: 600; }
+.kt-match-grid { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); margin-bottom: 12px; }
+@media (min-width: 760px) { .kt-match-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); } }
+.kt-pics, .kt-phrases { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.kt-pics { grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); align-content: start; }
+.kt-pic { position: relative; width: 100%; aspect-ratio: 1; min-height: 84px; display: grid; place-items: center; border: 2px solid var(--line-2); border-radius: var(--radius); background: var(--surface); color: var(--seg); cursor: pointer; }
+.kt-pic.picked { border-color: var(--seg); background: color-mix(in srgb, var(--seg) 12%, var(--surface)); box-shadow: 0 0 0 3px color-mix(in srgb, var(--seg) 30%, transparent); }
+.kt-pic.done { opacity: .5; border-color: var(--ok); cursor: default; }
+.kt-badge { position: absolute; right: 6px; bottom: 6px; display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #d33c32; color: #fff; } .kt-badge.no { background: var(--ink); }
+.kt-phrase { width: 100%; display: grid; gap: 2px; justify-items: start; text-align: left; padding: 10px 14px; min-height: 64px; border: 1px solid var(--line-2); border-radius: var(--radius-sm); background: var(--surface); color: var(--ink); font: inherit; cursor: pointer; }
+.kt-phrase:hover:not(:disabled) { border-color: var(--seg); } .kt-phrase.done { border-color: var(--ok); background: color-mix(in srgb, var(--ok) 9%, var(--surface)); cursor: default; }
+.kt-phrase .kt-bn { font-size: clamp(1.25rem, 3.6vw, 1.6rem); }
+
+/* sentence builder */
+.kt-fields { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); } .kt-field { display: grid; gap: 4px; font-weight: 600; font-size: .9rem; color: var(--ink-2); }
+.kt-field select { min-height: 46px; padding: 8px 10px; border: 1px solid var(--line-2); border-radius: var(--radius-sm); background: var(--surface); color: var(--ink); font: 500 1rem var(--font-ui); }
+.kt-built { display: grid; gap: 4px; justify-items: start; margin-top: 14px; padding: 16px 18px; border: 2px solid var(--seg); border-radius: var(--radius); background: color-mix(in srgb, var(--seg) 7%, var(--surface)); } .kt-built .btn { margin: 8px 0 0; }
+
+/* listening quiz */
+.kt-ask { margin: 14px 0 8px; font-weight: 600; } .kt-options { display: grid; gap: 8px; }
+.kt-option { min-height: 52px; padding: 10px 14px; text-align: left; border: 1px solid var(--line-2); border-radius: var(--radius-sm); background: var(--surface); color: var(--ink); font: 600 1rem var(--font-ui); cursor: pointer; }
+.kt-option:hover:not(:disabled) { border-color: var(--seg); } .kt-option.right { border-color: var(--ok); background: color-mix(in srgb, var(--ok) 14%, var(--surface)); } .kt-option.wrong { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 12%, var(--surface)); }
+.kt-feedback { margin: 12px 0 4px; } .kt-feedback.good b { color: var(--ok); } .kt-feedback.bad b { color: var(--bad); } .kt-reveal { margin: 0 0 8px; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+
+/* roleplay */
+.kt-scenes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; } .kt-role-tools { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-bottom: 12px; } .kt-role-tools .btn { margin: 0; }
+.kt-lines { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.kt-line { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; align-items: center; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.kt-line.mine { border-color: var(--seg); background: color-mix(in srgb, var(--seg) 7%, var(--surface)); }
+.kt-who { grid-column: 1 / -1; font: 700 .75rem var(--font-ui); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); } .kt-line.mine .kt-who { color: var(--seg); }
+.kt-line-text { display: grid; gap: 2px; justify-items: start; text-align: left; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; padding: 2px; border-radius: 8px; }
+.kt-listen { width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid var(--line-2); border-radius: 50%; background: var(--surface); color: var(--seg); cursor: pointer; }
+.kt-listen:hover { background: var(--surface-2); }
+
+/* recipe reader */
+.kt-step-no { margin: 0 0 8px; font-weight: 700; color: var(--seg); }
+.kt-recipe-card { display: grid; gap: 8px; justify-items: start; padding: 18px; border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); } .kt-recipe-card .btn { margin: 0; }
+.kt-recipe-nav { display: flex; gap: 8px; margin-top: 10px; } .kt-recipe-nav .btn { margin: 0; }
+
+/* progress check and plain lists */
+.kt-check ul, .kt-plain { list-style: none; margin: 8px 0; padding: 0; display: grid; gap: 6px; }
+.kt-check label { display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 8px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); cursor: pointer; }
+.kt-check input { width: 22px; height: 22px; accent-color: var(--seg); flex: none; }
+.kt-goal { margin: 0 0 8px; }
+.kt-plain li { padding: 8px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }
+.kt-done h3 { margin: 0 0 6px; }
+@media (prefers-reduced-motion: reduce) { .kt-card { transition: none; } }

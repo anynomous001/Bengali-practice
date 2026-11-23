@@ -27,7 +27,7 @@ export default async function CourseOverview({ courseId }: { courseId: string })
     <main data-seg={course.id} className="wide course">
       <header className="course-head">
         <div className="course-intro">
-          <p className="eyebrow" lang="bn">{course.bn}</p>
+          {course.bn && <p className="eyebrow" lang="bn">{course.bn}</p>}
           <h1>{course.title}</h1>
           <p className="lede">{course.blurb}</p>
           <Link href="/learn/progress" className={"practised" + (day.practisedToday ? " on" : "")}><Icon name="flame" size={16} weight="fill" />{day.practisedToday ? "Practised today" : "Not practised yet today"}{day.current > 0 && ` · ${day.current}-day streak`}</Link>
