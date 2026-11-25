@@ -78,3 +78,24 @@
 .kt-plain li { padding: 8px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }
 .kt-done h3 { margin: 0 0 6px; }
 @media (prefers-reduced-motion: reduce) { .kt-card { transition: none; } }
+
+/* practice exercises */
+.kt-ex { margin-top: 22px; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); } .kt-ex h3 { margin: 0 0 10px; font: 600 1.1rem var(--font-ui); }
+.kt-item { padding: 12px 0; border-top: 1px solid var(--line); } .kt-item:first-of-type { border-top: 0; }
+.kt-prompt { margin: 0 0 8px; } .kt-bn.small { font-size: clamp(1.3rem, 3.6vw, 1.6rem); }
+.kt-blank { display: inline-block; min-width: 56px; text-align: center; border-bottom: 2px solid var(--seg); font-family: var(--font-bn-serif); font-weight: 700; color: var(--seg); }
+.kt-answer { min-height: 54px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 8px 10px; margin-bottom: 8px; border: 2px dashed var(--line-2); border-radius: var(--radius-sm); }
+.kt-bank { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.kt-tile { min-height: 48px; min-width: 52px; padding: 6px 16px; border: 1px solid var(--line-2); border-radius: var(--radius-sm); background: var(--surface); color: var(--ink); font: 700 1.3rem var(--font-bn-serif); cursor: pointer; }
+.kt-tile:hover:not(:disabled) { border-color: var(--seg); } .kt-tile:disabled { opacity: .4; cursor: default; } .kt-tile.on { background: color-mix(in srgb, var(--seg) 10%, var(--surface)); border-color: var(--seg); }
+.kt-tile.right { border-color: var(--ok); background: color-mix(in srgb, var(--ok) 14%, var(--surface)); opacity: 1; } .kt-tile.wrong { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 12%, var(--surface)); }
+.kt-tile:focus-visible, .kt-listen:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+.kt-ex-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 6px; } .kt-ex-actions .btn { margin: 0; }
+.kt-verdict.good { color: var(--ok); } .kt-verdict.bad { color: var(--bad); }
+.kt-listen.small { width: 40px; height: 40px; }
+.kt-sort { list-style: none; margin: 0 0 10px; padding: 0; display: grid; gap: 8px; }
+.kt-sort li { display: grid; grid-template-columns: minmax(70px, auto) auto minmax(0, 1fr); gap: 10px; align-items: center; padding: 8px 12px; border: 1px solid var(--line-2); border-radius: var(--radius-sm); background: var(--surface); }
+.kt-sort li.right, .kt-dialog li.right { border-color: var(--ok); background: color-mix(in srgb, var(--ok) 9%, var(--surface)); } .kt-sort li.wrong, .kt-dialog li.wrong { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 8%, var(--surface)); }
+.kt-sort select, .kt-dialog select { min-height: 44px; padding: 6px 10px; border: 1px solid var(--line-2); border-radius: var(--radius-sm); background: var(--surface); color: var(--ink); font: 500 1rem var(--font-ui); }
+.kt-dialog select { width: auto; display: inline-block; vertical-align: middle; min-width: 92px; max-width: 100%; font-family: var(--font-bn-serif); font-weight: 700; font-size: 1.15rem; margin: 2px 6px; }
+.kt-dialog { list-style: none; margin: 8px 0 10px; padding: 0; display: grid; gap: 8px; } .kt-dialog li { display: grid; gap: 2px; padding: 10px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }

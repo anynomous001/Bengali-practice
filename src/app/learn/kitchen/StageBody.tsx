@@ -4,6 +4,7 @@ import { MEASURE_PLURAL, WARNING_PICTURES } from "@/data/kitchen/config";
 import AudioBar from "./AudioBar";
 import Block from "./Block";
 import Cards from "./Cards";
+import Exercises from "./Exercises";
 import Mixed from "./Mixed";
 import PictureMatch from "./PictureMatch";
 import ProgressCheck from "./ProgressCheck";
@@ -28,6 +29,7 @@ export function stageToc(n: number) {
     else if (s.kind === "recipe") add("sec-recipe", "Recipe reader");
     else add(slug(s.id), s.title);
   }
+  if (n === 2) add("sec-practice", "Practice exercises");
   add("sec-check", "Progress check");
   return names;
 }
@@ -68,6 +70,7 @@ export default function StageBody({ n }: { n: number }) {
         {cards(sec(2, "2.6"))}
         {cards(sec(2, "2.7"))}
         {cards(sec(2, "2.8"))}
+        <Block id="sec-practice" title="Practice exercises" note="Sort the words, write the amounts, choose the counter, fill the blanks and finish the dialogue."><Exercises exercises={KITCHEN.exercises} /></Block>
       </>
     );
   } else if (n === 3) {

@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "test": "tsx --test src/lib/match-game.test.ts src/data/kitchen/content.test.ts",
+    "test": "tsx --test src/lib/match-game.test.ts src/data/kitchen/content.test.ts src/lib/kitchen-exercises.test.ts",
     "audio": "tsx scripts/make-audio.ts",
     "glyphs": "tsx scripts/make-glyph-paths.mts",
     "shots": "tsx scripts/landing-shots.ts",

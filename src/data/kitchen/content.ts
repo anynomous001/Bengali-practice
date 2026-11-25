@@ -3,7 +3,9 @@
 export type KItem = { bn: string; ro: string; en: string; who?: "Shift lead" | "Team member" };
 export type KSection = { id: string; title: string; kind: "words" | "dialogue" | "recipe"; note: string; items: KItem[] };
 export type KStage = { id: number; title: string; goal: string; note: string; sections: KSection[] };
-export type KitchenContent = { stages: KStage[]; listening: KSection[]; listeningNote: string; pronunciation: string[]; homework: string[]; progress: string[]; teacher: string[] };
+export type KExItem = { prompt: string; answer: string; ro: string; en: string; options: string[]; who?: string };
+export type KExercise = { id: string; title: string; type: "categorise" | "build" | "counter" | "fill" | "dialogue"; words: string[]; bank: string[]; categories: { name: string; words: string[] }[]; items: KExItem[] };
+export type KitchenContent = { stages: KStage[]; listening: KSection[]; listeningNote: string; exercises: KExercise[]; pronunciation: string[]; homework: string[]; progress: string[]; teacher: string[] };
 
 export const KITCHEN: KitchenContent = {
  "stages": [
@@ -1625,6 +1627,265 @@ export const KITCHEN: KitchenContent = {
   }
  ],
  "listeningNote": "Use three levels. Teach the words first, then play the Bengali and have the learner give the English or act it out.",
+ "exercises": [
+  {
+   "id": "ex-1",
+   "title": "Put each word in its category",
+   "type": "categorise",
+   "words": [
+    "আলু",
+    "হলুদ",
+    "ঘি",
+    "মাছ",
+    "ডাল",
+    "টমেটো"
+   ],
+   "bank": [],
+   "categories": [
+    {
+     "name": "Vegetables",
+     "words": [
+      "আলু",
+      "টমেটো"
+     ]
+    },
+    {
+     "name": "Spices",
+     "words": [
+      "হলুদ"
+     ]
+    },
+    {
+     "name": "Fats and oils",
+     "words": [
+      "ঘি"
+     ]
+    },
+    {
+     "name": "Meat and fish",
+     "words": [
+      "মাছ"
+     ]
+    },
+    {
+     "name": "Grains and lentils",
+     "words": [
+      "ডাল"
+     ]
+    }
+   ],
+   "items": []
+  },
+  {
+   "id": "ex-2",
+   "title": "Write the amount in Bengali",
+   "type": "build",
+   "words": [],
+   "bank": [],
+   "categories": [],
+   "items": [
+    {
+     "prompt": "Half a kilo of potatoes",
+     "answer": "আধা কিলো আলু",
+     "ro": "adha kilo alu",
+     "en": "half a kilo of potatoes",
+     "options": [
+      "দুই",
+      "চামচ",
+      "কাপ"
+     ]
+    },
+    {
+     "prompt": "Two hundred grams of flour",
+     "answer": "দুশো গ্রাম ময়দা",
+     "ro": "dusho gram moyda",
+     "en": "200 grams of flour",
+     "options": [
+      "এক",
+      "কিলো",
+      "চাল"
+     ]
+    },
+    {
+     "prompt": "One pinch of cumin",
+     "answer": "এক চিমটি জিরে",
+     "ro": "ek chimti jire",
+     "en": "one pinch of cumin",
+     "options": [
+      "মুঠো",
+      "লবণ",
+      "তিন"
+     ]
+    },
+    {
+     "prompt": "Two spoons of oil",
+     "answer": "দুই চামচ তেল",
+     "ro": "dui chamoch tel",
+     "en": "two spoons of oil",
+     "options": [
+      "কাপ",
+      "ঘি",
+      "এক"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ex-3",
+   "title": "Write the number with the right counter",
+   "type": "counter",
+   "words": [],
+   "bank": [],
+   "categories": [],
+   "items": [
+    {
+     "prompt": "Three eggs",
+     "answer": "তিনটে ডিম",
+     "ro": "tinte dim",
+     "en": "three eggs",
+     "options": [
+      "তিনটা",
+      "তিনটো",
+      "তিনটে"
+     ]
+    },
+    {
+     "prompt": "Two tomatoes",
+     "answer": "দুটো টমেটো",
+     "ro": "duto tometo",
+     "en": "two tomatoes",
+     "options": [
+      "দুটা",
+      "দুটো",
+      "দুটে"
+     ]
+    },
+    {
+     "prompt": "Five potatoes",
+     "answer": "পাঁচটা আলু",
+     "ro": "pachta alu",
+     "en": "five potatoes",
+     "options": [
+      "পাঁচটা",
+      "পাঁচটো",
+      "পাঁচটে"
+     ]
+    },
+    {
+     "prompt": "Four onions",
+     "answer": "চারটে পেঁয়াজ",
+     "ro": "charte peyaj",
+     "en": "four onions",
+     "options": [
+      "চারটা",
+      "চারটো",
+      "চারটে"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ex-4",
+   "title": "Fill in the blank",
+   "type": "fill",
+   "words": [],
+   "bank": [],
+   "categories": [],
+   "items": [
+    {
+     "prompt": "____ চামচ লবণ দাও।",
+     "answer": "এক",
+     "ro": "ek chamoch lobon dao.",
+     "en": "Give me one spoon of salt.",
+     "options": [
+      "এক",
+      "দুই",
+      "তিন"
+     ]
+    },
+    {
+     "prompt": "দুই ____ জল দাও।",
+     "answer": "কাপ",
+     "ro": "dui kap jol dao.",
+     "en": "Give me two cups of water.",
+     "options": [
+      "চামচ",
+      "কাপ",
+      "চিমটি"
+     ]
+    },
+    {
+     "prompt": "এক ____ পেঁয়াজ লাগবে।",
+     "answer": "কিলো",
+     "ro": "ek kilo peyaj lagbe.",
+     "en": "We need one kilo of onions.",
+     "options": [
+      "কিলো",
+      "মুঠো",
+      "লিটার"
+     ]
+    },
+    {
+     "prompt": "____ গ্রাম ময়দা লাগবে।",
+     "answer": "দুশো",
+     "ro": "dusho gram moyda lagbe.",
+     "en": "We need 200 grams of flour.",
+     "options": [
+      "দুশো",
+      "দুই",
+      "দশ"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ex-5",
+   "title": "Complete the dialogue",
+   "type": "dialogue",
+   "words": [],
+   "bank": [
+    "দাও",
+    "আছে",
+    "শেষ",
+    "লাগবে"
+   ],
+   "categories": [],
+   "items": [
+    {
+     "prompt": "আমাকে এক কিলো পেঁয়াজ ____।",
+     "answer": "দাও",
+     "ro": "amake ek kilo peyaj dao.",
+     "en": "Give me one kilo of onions.",
+     "options": [],
+     "who": "A"
+    },
+    {
+     "prompt": "ঠিক আছে। রসুন ____?",
+     "answer": "আছে",
+     "ro": "thik achhe. rosun achhe?",
+     "en": "Okay. Is there garlic?",
+     "options": [],
+     "who": "B"
+    },
+    {
+     "prompt": "রসুন ____।",
+     "answer": "শেষ",
+     "ro": "rosun shesh.",
+     "en": "We are out of garlic.",
+     "options": [],
+     "who": "A"
+    },
+    {
+     "prompt": "তাহলে দুটো রসুন ____।",
+     "answer": "লাগবে",
+     "ro": "tahole duto rosun lagbe.",
+     "en": "Then we need two garlic cloves.",
+     "options": [],
+     "who": "B"
+    }
+   ]
+  }
+ ],
  "pronunciation": [
   "Aspirated sounds (kh, gh, chh, jh, th, dh, ph, bh): the breath is strong. Examples: খাবার (khabar, food), ধীরে (dhire, slowly), ছুরি (churi, knife), ভালো (bhalo, good).",
   "Retroflex sounds (ট, ঠ, ড, ঢ): the tongue curls back. Practise the sound in ডাল (dal, lentils) and ঢালো (dhalo, pour).",

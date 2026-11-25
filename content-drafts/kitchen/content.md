@@ -385,6 +385,58 @@ Use three levels. Teach the words first, then play the Bengali and have the lear
 * ধীরে যাও, মেঝে ভেজা। (dhire jao, mejhe bhija.) — Go slowly, the floor is wet.
 * তেল গরম করো, তারপর পেঁয়াজ দাও। (tel gorom koro, tarpor peyaj dao.) — Heat the oil, then give me the onion.
 
+## Exercises
+
+These exercises practise Stage 2 (ingredients and quantities). Each line is: prompt | answer | romanization | English | extra options.
+
+### Put each word in its category
+
+Type: categorise
+Words: আলু, হলুদ, ঘি, মাছ, ডাল, টমেটো
+
+* Vegetables: আলু, টমেটো
+* Spices: হলুদ
+* Fats and oils: ঘি
+* Meat and fish: মাছ
+* Grains and lentils: ডাল
+
+### Write the amount in Bengali
+
+Type: build
+
+1. Half a kilo of potatoes | আধা কিলো আলু | adha kilo alu | half a kilo of potatoes | দুই, চামচ, কাপ
+2. Two hundred grams of flour | দুশো গ্রাম ময়দা | dusho gram moyda | 200 grams of flour | এক, কিলো, চাল
+3. One pinch of cumin | এক চিমটি জিরে | ek chimti jire | one pinch of cumin | মুঠো, লবণ, তিন
+4. Two spoons of oil | দুই চামচ তেল | dui chamoch tel | two spoons of oil | কাপ, ঘি, এক
+
+### Write the number with the right counter
+
+Type: counter
+
+1. Three eggs | তিনটে ডিম | tinte dim | three eggs | তিনটা, তিনটো, তিনটে
+2. Two tomatoes | দুটো টমেটো | duto tometo | two tomatoes | দুটা, দুটো, দুটে
+3. Five potatoes | পাঁচটা আলু | pachta alu | five potatoes | পাঁচটা, পাঁচটো, পাঁচটে
+4. Four onions | চারটে পেঁয়াজ | charte peyaj | four onions | চারটা, চারটো, চারটে
+
+### Fill in the blank
+
+Type: fill
+
+1. ____ চামচ লবণ দাও। | এক | ek chamoch lobon dao. | Give me one spoon of salt. | এক, দুই, তিন
+2. দুই ____ জল দাও। | কাপ | dui kap jol dao. | Give me two cups of water. | চামচ, কাপ, চিমটি
+3. এক ____ পেঁয়াজ লাগবে। | কিলো | ek kilo peyaj lagbe. | We need one kilo of onions. | কিলো, মুঠো, লিটার
+4. ____ গ্রাম ময়দা লাগবে। | দুশো | dusho gram moyda lagbe. | We need 200 grams of flour. | দুশো, দুই, দশ
+
+### Complete the dialogue
+
+Type: dialogue
+Choose from: দাও, আছে, শেষ, লাগবে
+
+* A: আমাকে এক কিলো পেঁয়াজ ____। | দাও | amake ek kilo peyaj dao. | Give me one kilo of onions.
+* B: ঠিক আছে। রসুন ____? | আছে | thik achhe. rosun achhe? | Okay. Is there garlic?
+* A: রসুন ____। | শেষ | rosun shesh. | We are out of garlic.
+* B: তাহলে দুটো রসুন ____। | লাগবে | tahole duto rosun lagbe. | Then we need two garlic cloves.
+
 ## Pronunciation focus
 
 * Aspirated sounds (kh, gh, chh, jh, th, dh, ph, bh): the breath is strong. Examples: খাবার (khabar, food), ধীরে (dhire, slowly), ছুরি (churi, knife), ভালো (bhalo, good).
