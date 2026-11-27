@@ -11,8 +11,10 @@ import { SCENARIOS } from "./roleplay";
 import { DEV_VOCAB, DEV_READING, DEV_SCENARIOS, DEV_CLASSWORK } from "./devotional";
 import { DEV_STORIES } from "./devotional-stories";
 import { KITCHEN } from "./kitchen/content";
+import { BUSINESS_CLASSWORK } from "./classwork-business";
+import { BUSINESS_SCENARIOS } from "./roleplay-business";
 
-export type CourseId = "reading" | "speaking" | "vocabulary" | "grammar" | "listening" | "kids" | "kitchen";
+export type CourseId = "reading" | "speaking" | "vocabulary" | "grammar" | "listening" | "kids" | "kitchen" | "business";
 export type Kind = "Lesson" | "Practice" | "Quiz" | "Review" | "Exam";
 export type Lesson = { id: string; title: string; blurb: string; href: string; kind: Kind; /** Who it is for, such as "Clinical". */ tag?: string };
 /** `devotional` modules are tagged "Devotional", kept apart from the main course, and not counted in its progress. */
@@ -32,6 +34,22 @@ const topic = (id: string): Lesson => {
   const t = GRAMMAR.find((g) => g.id === id)!;
   return { id: `grammar/${id}`, title: t.title[2], blurb: t.blurb, href: `/learn/grammar/${id}`, kind: "Lesson" };
 };
+
+const bizVocab = (id: string): Lesson => { const t = VOCAB.find((x) => x.id === id)!; return { id: `vocabulary/${id}`, title: t.title[2], blurb: `${wordCount(t)} words, ${t.phrases.length} phrases · ${t.title[0]}`, href: `/learn/vocabulary/${id}`, kind: "Lesson", tag: "Business" }; };
+const bizWork = (id: string): Lesson => { const c = BUSINESS_CLASSWORK.find((x) => x.id === id)!; return { id: `grammar/class-${id}`, title: c.title, blurb: c.blurb, href: `/learn/grammar/class/${id}`, kind: "Practice", tag: "Business" }; };
+const bizRole = (id: string): Lesson => { const r = BUSINESS_SCENARIOS.find((x) => x.id === id)!; return { id: `speaking/roleplay-${id}`, title: r.title, blurb: r.blurb, href: `/learn/speaking/roleplay/${id}`, kind: "Practice", tag: "Business" }; };
+const BUSINESS_MODULES: Module[] = [
+  { id: "team", title: "Team talk", blurb: "Greet your team, say who you are talking to, and open and close a meeting.", lessons: [bizVocab("biz-team"), bizWork("biz-pronouns"), bizRole("biz-meeting")] },
+  { id: "updates", title: "Updates and plans", blurb: "Ask what has happened, give a task with a deadline, and say what must be done.", lessons: [
+    bizVocab("biz-updates"), bizWork("biz-past"), bizRole("biz-progress"), bizVocab("biz-plans"), bizWork("biz-future"), bizRole("biz-task"),
+  ] },
+  { id: "feedback", title: "Feedback and leading", blurb: "Ask politely, praise and correct kindly, and handle everyday situations.", lessons: [
+    bizVocab("biz-feedback"), bizWork("biz-polite"), bizRole("biz-feedback"), bizVocab("biz-situations"), bizRole("biz-leave"),
+  ] },
+  { id: "clients", title: "Client communication", blurb: "Apologize, explain a delay, understand a worry, offer a new date and reassure.", lessons: [
+    bizVocab("biz-client"), bizWork("biz-client"), bizRole("biz-client-delay"), bizRole("biz-complaint"),
+  ] },
+];
 
 export const COURSES: Course[] = [
   {
@@ -133,7 +151,7 @@ export const COURSES: Course[] = [
     ],
     tools: [{ label: "Word finder", href: "/learn/vocabulary/search", blurb: "Search every word by Bengali, romanized or English." }],
     modules: [
-      ...VOCAB_GROUPS.map((g): Module => ({
+      ...VOCAB_GROUPS.filter((g) => g.id !== "business").map((g): Module => ({
         id: g.id, title: g.title, blurb: g.blurb,
         lessons: VOCAB.filter((t) => t.group === g.id).map((t): Lesson => ({
           id: `vocabulary/${t.id}`, title: t.title[2],
@@ -293,6 +311,19 @@ export const COURSES: Course[] = [
         { id: "kitchen/listening", title: "Listening practice", blurb: "Hear a Bengali phrase and choose its English meaning.", href: "/learn/kitchen/listening", kind: "Quiz" as const },
       ] },
     ],
+    upcoming: [],
+  },
+  {
+    // Business Bengali: a separate section for people who manage a Bengali-speaking team or deal with Bengali-speaking clients.
+    id: "business", title: "Business Bengali", bn: "",
+    blurb: "Team talk and client calls for managers and company owners: meetings, updates, tasks, feedback and a polite client call.",
+    outcomes: [
+      "Greet your team and run a short meeting, using the respectful আপনি with staff and clients",
+      "Ask for updates, give a task with a deadline, and say what must be done",
+      "Give feedback kindly, ask politely, and handle a leave request",
+      "Handle a client call: apologize, explain a delay, offer a new date and reassure",
+    ],
+    modules: BUSINESS_MODULES,
     upcoming: [],
   },
 ];

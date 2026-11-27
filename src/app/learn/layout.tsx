@@ -67,6 +67,7 @@ export default async function LearnLayout({ children }: { children: React.ReactN
               { href: "/learn/writing", label: "Writing", icon: "writing" },
               { href: "/learn/kids", label: "Kids", icon: "kids" },
               { href: "/learn/kitchen", label: "Kitchen Bengali", icon: "kitchen" },
+              { href: "/learn/business", label: "Business Bengali", icon: "business" },
               { href: "/learn/progress", label: "My progress", icon: "trophy" },
               { href: "/learn/leaderboard", label: "Leaderboard", icon: "medal" },
               { href: "/learn/refer", label: "Refer a friend", icon: "gift" },

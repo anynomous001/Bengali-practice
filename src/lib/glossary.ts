@@ -3,6 +3,7 @@
 import { VOCAB } from "@/data/vocabulary";
 import { DEV_VOCAB } from "@/data/devotional";
 import { SCENARIOS } from "@/data/roleplay";
+import { BUSINESS_SCENARIOS } from "@/data/roleplay-business";
 import { DEV_SCENARIOS } from "@/data/devotional";
 import { EXTRA_GLOSS } from "@/data/gloss-extra";
 import { STORY_GLOSS } from "@/data/gloss-stories";
@@ -29,7 +30,7 @@ function add(map: Map<string, string>, bn: string, en: string, force = false) {
 function build() {
   const m = new Map<string, string>();
   // Lines from a scenario's own word list come first, so a word means what it means in that role play.
-  for (const s of [...SCENARIOS, ...DEV_SCENARIOS]) for (const w of s.words) add(m, w[0], w[2]);
+  for (const s of [...SCENARIOS, ...BUSINESS_SCENARIOS, ...DEV_SCENARIOS]) for (const w of s.words) add(m, w[0], w[2]);
   for (const t of [...VOCAB, ...DEV_VOCAB]) for (const sec of t.sections) for (const w of sec.words) add(m, w[0], w[2]);
   for (const [bn, en] of Object.entries(EXTRA_GLOSS)) add(m, bn, en, true);
   for (const line of STORY_GLOSS.split("\n")) { const i = line.indexOf("="); if (i > 0) add(m, line.slice(0, i), line.slice(i + 1)); }

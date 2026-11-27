@@ -38,6 +38,7 @@
 [data-seg="grammar"] { --seg: var(--gram); --seg-l: var(--gram-l); }
 [data-seg="kids"] { --seg: #e0612f; --seg-l: #ffb690; }
 [data-seg="kitchen"] { --seg: #e0612f; --seg-l: #ffb690; }
+[data-seg="business"] { --seg: #2563b8; --seg-l: #9cc3f0; }
 [data-seg="vocabulary"] { --seg: var(--vocab); --seg-l: #9ccbff; }
 
 /* ---------- base ---------- */
@@ -1034,6 +1035,7 @@ html.motion-ok .assemble.hold .grp, html.motion-ok .assemble.hold .assemble-ro, 
 .t-leader { --t1: #ff8089; --t2: #d93a54; }
 .t-gift { --t1: #f98abf; --t2: #cd3d85; }
 .t-kitchen { --t1: #f6a15b; --t2: #d9481c; }
+.t-business { --t1: #6fa8f5; --t2: #2457b8; }
 .t-chat { --t1: #55caf4; --t2: #1185c4; }
 .t-flame { --t1: #ff9c4d; --t2: #e43d17; }
 .t-slate { --t1: #8792ae; --t2: #4b5571; }

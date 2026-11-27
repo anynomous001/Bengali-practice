@@ -620,7 +620,7 @@ export const SCENARIOS: Scenario[] = [
   ...FAMILY_SCENARIOS,
   ...CLINICAL_SCENARIOS,
   ...BANGLADESH_SCENARIOS,
-  ...BUSINESS_SCENARIOS,
 ];
 
-export const getScenario = (id: string) => SCENARIOS.find((s) => s.id === id);
+// The business role plays belong to the Business Bengali section, so they are looked up here but not listed in Speaking.
+export const getScenario = (id: string) => SCENARIOS.find((s) => s.id === id) ?? BUSINESS_SCENARIOS.find((s) => s.id === id);
