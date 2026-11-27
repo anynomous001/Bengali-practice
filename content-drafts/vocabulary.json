@@ -46,6 +46,11 @@
    "blurb": "Words and phrases used in Bangladesh, for students with family or clients there."
   },
   {
+   "id": "business",
+   "title": "Business and team work",
+   "blurb": "For managers and company owners whose team speaks Bengali: team talk, updates, planning, feedback and client calls."
+  },
+  {
    "id": "tripura",
    "title": "Trip to Tripura",
    "blurb": "For a learner visiting Bengali-speaking in-laws: family, food, greetings, travel and rescue phrases. Starred words come first."
@@ -11288,6 +11293,841 @@
      "আমি গান শুনি।",
      "ami gan shuni.",
      "I listen to songs."
+    ]
+   ]
+  },
+  {
+   "id": "biz-team",
+   "group": "business",
+   "title": [
+    "টিম ও মিটিং",
+    "tim o meeting",
+    "Team and meetings"
+   ],
+   "blurb": "Greet your team, open and close a meeting and check in. Say আসসালামু আলাইকুম to Muslim colleagues and নমস্কার to Hindu colleagues; if you are unsure, answer in the words you hear.",
+   "sections": [
+    {
+     "title": "Greetings and meeting words",
+     "words": [
+      [
+       "নমস্কার",
+       "nomoshkar",
+       "hello (fits Hindu colleagues and formal occasions)"
+      ],
+      [
+       "আসসালামু আলাইকুম",
+       "assalamu alaikum",
+       "peace be upon you (the usual greeting with Muslim colleagues)"
+      ],
+      [
+       "ওয়ালাইকুম আসসালাম",
+       "walaikum assalam",
+       "and peace be upon you (the reply)"
+      ],
+      [
+       "শুভ সকাল",
+       "shubho shokal",
+       "good morning"
+      ],
+      [
+       "আপনি",
+       "apni",
+       "you (respectful: use it with staff and clients)",
+       "Not তুমি: that is for friends and younger family"
+      ],
+      [
+       "আপনারা",
+       "apnara",
+       "you all (respectful)"
+      ],
+      [
+       "স্যার",
+       "sir",
+       "sir (staff speaking to a man)"
+      ],
+      [
+       "ম্যাডাম",
+       "madam",
+       "madam (staff speaking to a woman)"
+      ],
+      [
+       "মিটিং",
+       "meeting",
+       "meeting"
+      ],
+      [
+       "দল",
+       "dol",
+       "team"
+      ],
+      [
+       "প্রশ্ন",
+       "proshno",
+       "question"
+      ],
+      [
+       "ধন্যবাদ",
+       "dhonnobad",
+       "thank you"
+      ]
+     ]
+    }
+   ],
+   "phrases": [
+    [
+     "আসসালামু আলাইকুম।",
+     "assalamu alaikum.",
+     "Peace be upon you. (Greeting with Muslim colleagues.)"
+    ],
+    [
+     "ওয়ালাইকুম আসসালাম।",
+     "walaikum assalam.",
+     "And peace be upon you. (The reply.)"
+    ],
+    [
+     "নমস্কার।",
+     "nomoshkar.",
+     "Hello. (Greeting with Hindu colleagues.)"
+    ],
+    [
+     "আপনি কেমন আছেন?",
+     "apni kemon achhen?",
+     "How are you?"
+    ],
+    [
+     "আমি ভালো আছি। আপনি?",
+     "ami bhalo achhi. apni?",
+     "I am well. And you?"
+    ],
+    [
+     "সবাই এসেছেন?",
+     "shobai eshechhen?",
+     "Has everyone come?"
+    ],
+    [
+     "চলুন, মিটিং শুরু করি।",
+     "cholun, meeting shuru kori.",
+     "Let us start the meeting."
+    ],
+    [
+     "আজ তিনটে বিষয় আছে।",
+     "aj tinte bishoy achhe.",
+     "Today there are three topics."
+    ],
+    [
+     "কাজ কেমন চলছে?",
+     "kaj kemon cholchhe?",
+     "How is the work going?"
+    ],
+    [
+     "কোনো সমস্যা আছে?",
+     "kono shomoshsha achhe?",
+     "Is there any problem?"
+    ],
+    [
+     "কারো কোনো প্রশ্ন আছে?",
+     "karo kono proshno achhe?",
+     "Does anyone have a question?"
+    ],
+    [
+     "আজকের মিটিং এখানেই শেষ।",
+     "ajker meeting ekhanei shesh.",
+     "Today's meeting ends here."
+    ]
+   ]
+  },
+  {
+   "id": "biz-updates",
+   "group": "business",
+   "title": [
+    "কাজের খবর",
+    "kajer khobor",
+    "Updates and tasks"
+   ],
+   "blurb": "Ask for and give status updates, hand out tasks, follow up, and ask about delays and problems.",
+   "sections": [
+    {
+     "title": "Work and updates",
+     "words": [
+      [
+       "রিপোর্ট",
+       "report",
+       "report"
+      ],
+      [
+       "ইমেইল",
+       "email",
+       "email"
+      ],
+      [
+       "দেরি",
+       "deri",
+       "delay; late"
+      ],
+      [
+       "সমস্যা",
+       "shomoshsha",
+       "problem"
+      ],
+      [
+       "শেষ করা",
+       "shesh kora",
+       "to finish"
+      ],
+      [
+       "পাঠানো",
+       "pathano",
+       "to send"
+      ],
+      [
+       "জানানো",
+       "janano",
+       "to let someone know"
+      ],
+      [
+       "দায়িত্ব",
+       "dayitto",
+       "responsibility; duty"
+      ],
+      [
+       "অগ্রগতি",
+       "ogrogoti",
+       "progress"
+      ],
+      [
+       "এখনো",
+       "ekhono",
+       "still; yet"
+      ],
+      [
+       "গতকাল",
+       "gotokal",
+       "yesterday"
+      ],
+      [
+       "সময়",
+       "shomoy",
+       "time"
+      ]
+     ]
+    }
+   ],
+   "phrases": [
+    [
+     "আমি রিপোর্টটা শেষ করেছি।",
+     "ami reportta shesh korechhi.",
+     "I have finished the report."
+    ],
+    [
+     "কাজটা এখনো শেষ হয়নি।",
+     "kajta ekhono shesh hoyni.",
+     "The work is not finished yet."
+    ],
+    [
+     "কাজ কতদূর হলো?",
+     "kaj kotodur holo?",
+     "How far has the work got?"
+    ],
+    [
+     "এই কাজটা আপনার দায়িত্ব।",
+     "ei kajta apnar dayitto.",
+     "This work is your responsibility."
+    ],
+    [
+     "ইমেইলটা কি পাঠিয়েছেন?",
+     "emailta ki pathiyechhen?",
+     "Have you sent the email?"
+    ],
+    [
+     "ক্লায়েন্টকে জানিয়েছেন?",
+     "clientke janiyechhen?",
+     "Have you let the client know?"
+    ],
+    [
+     "আপনি কাজটা আজ শেষ করতে পারবেন?",
+     "apni kajta aj shesh korte parben?",
+     "Can you finish the work today?"
+    ],
+    [
+     "দেরি হলো কেন?",
+     "deri holo keno?",
+     "Why was there a delay?"
+    ],
+    [
+     "কী সমস্যা হয়েছে?",
+     "ki shomoshsha hoyechhe?",
+     "What problem has happened?"
+    ],
+    [
+     "গতকাল আমি পারিনি।",
+     "gotokal ami parini.",
+     "I could not do it yesterday."
+    ],
+    [
+     "আমি আজই পাঠিয়ে দিলাম।",
+     "ami ajoi pathiye dilam.",
+     "I sent it today itself."
+    ],
+    [
+     "আমাকে জানাবেন।",
+     "amake janaben.",
+     "Please let me know."
+    ]
+   ]
+  },
+  {
+   "id": "biz-plans",
+   "group": "business",
+   "title": [
+    "পরিকল্পনা ও ডেডলাইন",
+    "porikolpona o deadline",
+    "Plans and deadlines"
+   ],
+   "blurb": "Set targets, give instructions and talk about what comes next. 'Must' is করতে হবে, 'need' is দরকার.",
+   "sections": [
+    {
+     "title": "Planning words",
+     "words": [
+      [
+       "লক্ষ্য",
+       "lokkho",
+       "target; goal"
+      ],
+      [
+       "ডেডলাইন",
+       "deadline",
+       "deadline"
+      ],
+      [
+       "পরিকল্পনা",
+       "porikolpona",
+       "plan"
+      ],
+      [
+       "সপ্তাহ",
+       "shoptah",
+       "week"
+      ],
+      [
+       "আগামী",
+       "agami",
+       "next; coming"
+      ],
+      [
+       "দরকার",
+       "dorkar",
+       "need; necessary"
+      ],
+      [
+       "আগে",
+       "age",
+       "before; first"
+      ],
+      [
+       "পরে",
+       "pore",
+       "after; later"
+      ],
+      [
+       "সোমবার",
+       "shombar",
+       "Monday"
+      ],
+      [
+       "মধ্যে",
+       "moddhe",
+       "within; by"
+      ],
+      [
+       "কাজ ভাগ করা",
+       "kaj bhag kora",
+       "to share out the work"
+      ],
+      [
+       "তালিকা",
+       "talika",
+       "list"
+      ]
+     ]
+    }
+   ],
+   "phrases": [
+    [
+     "এই সপ্তাহে আমাদের লক্ষ্য দশটা অর্ডার।",
+     "ei shoptahe amader lokkho doshta order.",
+     "This week our target is ten orders."
+    ],
+    [
+     "আপনাকে সোমবারের মধ্যে রিপোর্ট দিতে হবে।",
+     "apnake shombarer moddhe report dite hobe.",
+     "You must give the report by Monday."
+    ],
+    [
+     "আজকের মধ্যে কাজটা শেষ করতে হবে।",
+     "ajker moddhe kajta shesh korte hobe.",
+     "The work must be finished by the end of today."
+    ],
+    [
+     "আগে এটা করবেন, পরে ওটা করবেন।",
+     "age eta korben, pore ota korben.",
+     "Do this first, then do that."
+    ],
+    [
+     "আমার আরেকটা রিপোর্ট দরকার।",
+     "amar arekta report dorkar.",
+     "I need another report."
+    ],
+    [
+     "আগামী সপ্তাহে আমরা নতুন কাজ শুরু করব।",
+     "agami shoptahe amra notun kaj shuru korbo.",
+     "Next week we will start a new piece of work."
+    ],
+    [
+     "কাল সকালে মিটিং হবে।",
+     "kal shokale meeting hobe.",
+     "There will be a meeting tomorrow morning."
+    ],
+    [
+     "ডেডলাইন কবে?",
+     "deadline kobe?",
+     "When is the deadline?"
+    ],
+    [
+     "ডেডলাইন বৃহস্পতিবার।",
+     "deadline brihoshpotibar.",
+     "The deadline is Thursday."
+    ],
+    [
+     "আপনি কি পারবেন?",
+     "apni ki parben?",
+     "Will you be able to?"
+    ],
+    [
+     "কোনো অসুবিধা হলে আমাকে জানাবেন।",
+     "kono oshubidha hole amake janaben.",
+     "If there is any difficulty, let me know."
+    ],
+    [
+     "সবাই জানেন?",
+     "shobai janen?",
+     "Does everyone know?"
+    ]
+   ]
+  },
+  {
+   "id": "biz-feedback",
+   "group": "business",
+   "title": [
+    "মতামত ও নেতৃত্ব",
+    "motamot o netritto",
+    "Feedback and leading"
+   ],
+   "blurb": "Praise good work, correct mistakes kindly, motivate your team, and ask politely. For a polite request use the -ুন ending (করুন) or ask with করবেন?",
+   "sections": [
+    {
+     "title": "Words for feedback",
+     "words": [
+      [
+       "ভালো কাজ",
+       "bhalo kaj",
+       "good work"
+      ],
+      [
+       "ভুল",
+       "bhul",
+       "mistake"
+      ],
+      [
+       "ঠিক করা",
+       "thik kora",
+       "to fix; to correct"
+      ],
+      [
+       "উচিত",
+       "uchit",
+       "should; ought to"
+      ],
+      [
+       "চেষ্টা",
+       "cheshta",
+       "effort; try"
+      ],
+      [
+       "ভরসা",
+       "bhorosha",
+       "trust; reliance"
+      ],
+      [
+       "উন্নতি",
+       "unnoti",
+       "improvement"
+      ],
+      [
+       "দয়া করে",
+       "doya kore",
+       "please; kindly"
+      ],
+      [
+       "অনুগ্রহ করে",
+       "onugroho kore",
+       "please (more formal)"
+      ],
+      [
+       "সাহায্য",
+       "shahajjo",
+       "help"
+      ],
+      [
+       "প্রশংসা",
+       "proshongsha",
+       "praise"
+      ],
+      [
+       "শেখানো",
+       "shekhano",
+       "to teach"
+      ]
+     ]
+    }
+   ],
+   "phrases": [
+    [
+     "আপনি খুব ভালো কাজ করেছেন।",
+     "apni khub bhalo kaj korechhen.",
+     "You have done very good work."
+    ],
+    [
+     "আপনার কাজ দেখে আমি খুশি।",
+     "apnar kaj dekhe ami khushi.",
+     "I am happy to see your work."
+    ],
+    [
+     "কাজটা ভালো হয়েছে, শুধু এই জায়গাটা আরেকবার দেখে নিন।",
+     "kajta bhalo hoyechhe, shudhu ei jaygata arekbar dekhe nin.",
+     "The work is good; just check this part once more."
+    ],
+    [
+     "ভুল হতেই পারে। চলুন, একসঙ্গে ঠিক করি।",
+     "bhul hotei pare. cholun, ekshonge thik kori.",
+     "Mistakes can happen. Let us fix it together."
+    ],
+    [
+     "পরেরবার আরেকটু সাবধানে করবেন।",
+     "porerbar arektu shabdhane korben.",
+     "Next time, please do it a little more carefully."
+    ],
+    [
+     "আমি জানি আপনারা পারবেন।",
+     "ami jani apnara parben.",
+     "I know you can do it."
+    ],
+    [
+     "আমি আপনাদের ওপর ভরসা করি।",
+     "ami apnader opor bhorosha kori.",
+     "I trust you."
+    ],
+    [
+     "দলটা খুব ভালো করছে।",
+     "dolta khub bhalo korchhe.",
+     "The team is doing very well."
+    ],
+    [
+     "কোনো সাহায্য লাগলে বলবেন।",
+     "kono shahajjo lagle bolben.",
+     "If you need any help, tell me."
+    ],
+    [
+     "দয়া করে দেরি করবেন না।",
+     "doya kore deri korben na.",
+     "Please do not be late."
+    ],
+    [
+     "একটু অপেক্ষা করবেন?",
+     "ektu opekkha korben?",
+     "Will you wait a little?"
+    ],
+    [
+     "আপনার আগে ক্লায়েন্টকে জানানো উচিত।",
+     "apnar age clientke janano uchit.",
+     "You should let the client know first."
+    ]
+   ]
+  },
+  {
+   "id": "biz-client",
+   "group": "business",
+   "title": [
+    "ক্লায়েন্টের সঙ্গে কথা",
+    "clienter shonge kotha",
+    "Client communication"
+   ],
+   "blurb": "Explain a delay, understand a client's worry, negotiate, apologize and reassure. With clients say আমরা for your company, and keep আপনি.",
+   "sections": [
+    {
+     "title": "Client words",
+     "words": [
+      [
+       "ক্লায়েন্ট",
+       "client",
+       "client"
+      ],
+      [
+       "দুঃখিত",
+       "dukkhito",
+       "sorry"
+      ],
+      [
+       "অসুবিধা",
+       "oshubidha",
+       "inconvenience; difficulty"
+      ],
+      [
+       "কারণ",
+       "karon",
+       "reason; because"
+      ],
+      [
+       "নতুন তারিখ",
+       "notun tarikh",
+       "new date"
+      ],
+      [
+       "নিশ্চিত",
+       "nishchit",
+       "sure; certain"
+      ],
+      [
+       "ধৈর্য",
+       "dhoirjyo",
+       "patience"
+      ],
+      [
+       "প্রতিশ্রুতি",
+       "protishruti",
+       "promise; commitment"
+      ],
+      [
+       "চুক্তি",
+       "chukti",
+       "agreement; contract"
+      ],
+      [
+       "আলোচনা",
+       "alochona",
+       "discussion"
+      ],
+      [
+       "অভিযোগ",
+       "obhijog",
+       "complaint"
+      ],
+      [
+       "দাম",
+       "dam",
+       "price"
+      ]
+     ]
+    }
+   ],
+   "phrases": [
+    [
+     "দেরির জন্য আমরা অত্যন্ত দুঃখিত।",
+     "derir jonyo amra otyonto dukkhito.",
+     "We are very sorry for the delay."
+    ],
+    [
+     "অসুবিধার জন্য ক্ষমা করবেন।",
+     "oshubidhar jonyo khoma korben.",
+     "Please forgive the inconvenience."
+    ],
+    [
+     "কারণটা হলো, আমরা ফাইলটা দেরিতে পেয়েছি।",
+     "karonta holo, amra failta derite peyechhi.",
+     "The reason is that we received the file late."
+    ],
+    [
+     "আপনার সমস্যাটা আমি বুঝতে পেরেছি।",
+     "apnar shomoshshata ami bujhte perechhi.",
+     "I have understood your problem."
+    ],
+    [
+     "আপনার কী কী চিন্তা আছে, বলুন।",
+     "apnar ki ki chinta achhe, bolun.",
+     "Please tell me what your worries are."
+    ],
+    [
+     "যদি আপনি আরও দুই দিন সময় দেন, তাহলে আমরা ভালোভাবে করে দিতে পারব।",
+     "jodi apni aro dui din shomoy den, tahole amra bhalobhabe kore dite parbo.",
+     "If you give us two more days, we will be able to do it well."
+    ],
+    [
+     "নতুন তারিখ হবে আগামী মঙ্গলবার।",
+     "notun tarikh hobe agami mongolbar.",
+     "The new date will be next Tuesday."
+    ],
+    [
+     "আপনি নিশ্চিত থাকুন।",
+     "apni nishchit thakun.",
+     "Please be assured."
+    ],
+    [
+     "ধৈর্য ধরার জন্য ধন্যবাদ।",
+     "dhoirjyo dhorar jonyo dhonnobad.",
+     "Thank you for your patience."
+    ],
+    [
+     "আমরা আপনাকে কথা দিচ্ছি।",
+     "amra apnake kotha dichchhi.",
+     "We give you our word."
+    ],
+    [
+     "আর কিছু জানার থাকলে আমাকে ফোন করবেন।",
+     "ar kichhu janar thakle amake phon korben.",
+     "If you want to know anything else, call me."
+    ],
+    [
+     "আপনার সঙ্গে কথা বলে ভালো লাগল।",
+     "apnar shonge kotha bole bhalo laglo.",
+     "It was good to talk with you."
+    ]
+   ]
+  },
+  {
+   "id": "biz-situations",
+   "group": "business",
+   "title": [
+    "কাজের পরিস্থিতি",
+    "kajer poristhiti",
+    "Everyday work situations"
+   ],
+   "blurb": "Words for a leave request, a complaint, praise in front of the group and a disagreement.",
+   "sections": [
+    {
+     "title": "Situations",
+     "words": [
+      [
+       "ছুটি",
+       "chhuti",
+       "leave; holiday"
+      ],
+      [
+       "অনুমতি",
+       "onumoti",
+       "permission"
+      ],
+      [
+       "একমত",
+       "ekmoto",
+       "in agreement"
+      ],
+      [
+       "দ্বিমত",
+       "dwimoto",
+       "in disagreement"
+      ],
+      [
+       "সিদ্ধান্ত",
+       "shiddhanto",
+       "decision"
+      ],
+      [
+       "সমাধান",
+       "shomadhan",
+       "solution"
+      ],
+      [
+       "মান",
+       "man",
+       "quality; standard"
+      ],
+      [
+       "অসুস্থ",
+       "oshustho",
+       "unwell"
+      ],
+      [
+       "জরুরি",
+       "joruri",
+       "urgent"
+      ],
+      [
+       "ব্যস্ত",
+       "bysto",
+       "busy"
+      ],
+      [
+       "ঘটনা",
+       "ghotona",
+       "incident; event"
+      ],
+      [
+       "বিষয়",
+       "bishoy",
+       "matter; topic"
+      ]
+     ]
+    }
+   ],
+   "phrases": [
+    [
+     "আমার একদিনের ছুটি দরকার।",
+     "amar ekdiner chhuti dorkar.",
+     "I need one day of leave."
+    ],
+    [
+     "কবে থেকে ছুটি দরকার?",
+     "kobe theke chhuti dorkar?",
+     "From when do you need leave?"
+    ],
+    [
+     "ঠিক আছে, ছুটি নিন।",
+     "thik achhe, chhuti nin.",
+     "All right, take the leave."
+    ],
+    [
+     "আমি অসুস্থ, আজ আসতে পারব না।",
+     "ami oshustho, aj ashte parbo na.",
+     "I am unwell, I cannot come today."
+    ],
+    [
+     "কাজের মান ভালো হয়নি।",
+     "kajer man bhalo hoyni.",
+     "The quality of the work was not good."
+    ],
+    [
+     "আমরা বিষয়টা এখনই দেখছি।",
+     "amra bishoyta ekhoni dekhchhi.",
+     "We are looking into the matter right now."
+    ],
+    [
+     "সবার সামনে বলছি, রহিম সাহেব খুব ভালো কাজ করেছেন।",
+     "shobar samne bolchhi, rahim saheb khub bhalo kaj korechhen.",
+     "I say in front of everyone, Rahim Saheb has done very good work."
+    ],
+    [
+     "আপনার কথা আমি বুঝতে পারছি।",
+     "apnar kotha ami bujhte parchhi.",
+     "I understand what you are saying."
+    ],
+    [
+     "এই বিষয়ে আমি আপনার সঙ্গে একমত নই।",
+     "ei bishoye ami apnar shonge ekmoto noi.",
+     "On this matter I do not agree with you."
+    ],
+    [
+     "আসুন, একসঙ্গে সমাধান খুঁজি।",
+     "ashun, ekshonge shomadhan khunji.",
+     "Come, let us look for a solution together."
+    ],
+    [
+     "সিদ্ধান্তটা আমি কাল জানাব।",
+     "shiddhantota ami kal janabo.",
+     "I will tell you the decision tomorrow."
+    ],
+    [
+     "কাজটা জরুরি, আজই করতে হবে।",
+     "kajta joruri, ajoi korte hobe.",
+     "The work is urgent, it must be done today."
     ]
    ]
   }

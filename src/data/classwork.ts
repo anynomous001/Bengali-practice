@@ -149,4 +149,9 @@ export const CLASSWORK: CwSet[] = [
   },
 ];
 
+
+// Business persona sets (managers and company owners with a Bengali-speaking team) join the class exercises.
+import { BUSINESS_CLASSWORK } from "./classwork-business";
+CLASSWORK.push(...BUSINESS_CLASSWORK);
+
 export const getClasswork = (id: string) => CLASSWORK.find((s) => s.id === id);

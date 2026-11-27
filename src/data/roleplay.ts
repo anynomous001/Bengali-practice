@@ -4,6 +4,7 @@
 import { FAMILY_SCENARIOS } from "./roleplay-family";
 import { CLINICAL_SCENARIOS } from "./roleplay-clinical";
 import { BANGLADESH_SCENARIOS } from "./roleplay-bangladesh";
+import { BUSINESS_SCENARIOS } from "./roleplay-business";
 
 export type L = [bn: string, ro: string, en: string];
 export type RWord = L;
@@ -619,6 +620,7 @@ export const SCENARIOS: Scenario[] = [
   ...FAMILY_SCENARIOS,
   ...CLINICAL_SCENARIOS,
   ...BANGLADESH_SCENARIOS,
+  ...BUSINESS_SCENARIOS,
 ];
 
 export const getScenario = (id: string) => SCENARIOS.find((s) => s.id === id);
