@@ -3,12 +3,13 @@
 // Staff and clients are both addressed as আপনি. Staff may call you স্যার (or ম্যাডাম). Use the clients' and colleagues' own greeting back.
 // Only import this from server code (pages/actions) so the text is never in the public JS bundle.
 import type { Scenario, Turn, RWord } from "./roleplay";
+import { BUSINESS_MORE } from "./roleplay-business-more";
 
 const you = (bn: string, ro: string, en: string): Turn => ({ who: "you", line: [bn, ro, en] });
 const them = (bn: string, ro: string, en: string): Turn => ({ who: "them", line: [bn, ro, en] });
 const w = (bn: string, ro: string, en: string): RWord => [bn, ro, en];
 
-export const BUSINESS_SCENARIOS: Scenario[] = [
+const BASE_SCENARIOS: Scenario[] = [
   {
     id: "biz-meeting",
     title: "Opening a team meeting",
@@ -364,3 +365,5 @@ export const BUSINESS_SCENARIOS: Scenario[] = [
     ],
   },
 ];
+
+export const BUSINESS_SCENARIOS: Scenario[] = [...BASE_SCENARIOS, ...BUSINESS_MORE];

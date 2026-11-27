@@ -39,15 +39,16 @@ const bizVocab = (id: string): Lesson => { const t = VOCAB.find((x) => x.id === 
 const bizWork = (id: string): Lesson => { const c = BUSINESS_CLASSWORK.find((x) => x.id === id)!; return { id: `grammar/class-${id}`, title: c.title, blurb: c.blurb, href: `/learn/grammar/class/${id}`, kind: "Practice", tag: "Business" }; };
 const bizRole = (id: string): Lesson => { const r = BUSINESS_SCENARIOS.find((x) => x.id === id)!; return { id: `speaking/roleplay-${id}`, title: r.title, blurb: r.blurb, href: `/learn/speaking/roleplay/${id}`, kind: "Practice", tag: "Business" }; };
 const BUSINESS_MODULES: Module[] = [
-  { id: "team", title: "Team talk", blurb: "Greet your team, say who you are talking to, and open and close a meeting.", lessons: [bizVocab("biz-team"), bizWork("biz-pronouns"), bizRole("biz-meeting")] },
+  { id: "team", title: "Team talk", blurb: "Greet your team, say who you are talking to, and open and close a meeting.", lessons: [bizVocab("biz-team"), bizWork("biz-pronouns"), bizRole("biz-meeting"), bizRole("biz-new-member")] },
   { id: "updates", title: "Updates and plans", blurb: "Ask what has happened, give a task with a deadline, and say what must be done.", lessons: [
-    bizVocab("biz-updates"), bizWork("biz-past"), bizRole("biz-progress"), bizVocab("biz-plans"), bizWork("biz-future"), bizRole("biz-task"),
+    bizVocab("biz-updates"), bizWork("biz-past"), bizRole("biz-progress"), bizVocab("biz-plans"), bizWork("biz-future"), bizRole("biz-task"), bizRole("biz-supplier-late"),
   ] },
   { id: "feedback", title: "Feedback and leading", blurb: "Ask politely, praise and correct kindly, and handle everyday situations.", lessons: [
-    bizVocab("biz-feedback"), bizWork("biz-polite"), bizRole("biz-feedback"), bizVocab("biz-situations"), bizRole("biz-leave"),
+    bizVocab("biz-feedback"), bizWork("biz-polite"), bizRole("biz-feedback"), bizVocab("biz-situations"), bizRole("biz-leave"), bizRole("biz-late-staff"), bizRole("biz-thanks-team"),
   ] },
   { id: "clients", title: "Client communication", blurb: "Apologize, explain a delay, understand a worry, offer a new date and reassure.", lessons: [
-    bizVocab("biz-client"), bizWork("biz-client"), bizRole("biz-client-delay"), bizRole("biz-complaint"),
+    bizVocab("biz-client"), bizWork("biz-client"), bizRole("biz-deadline-push"), bizRole("biz-client-delay"), bizRole("biz-complaint"),
+    bizRole("biz-reschedule"), bizRole("biz-requirements"), bizRole("biz-price"), bizRole("biz-payment"), bizRole("biz-client-feedback"),
   ] },
 ];
 

@@ -8,12 +8,12 @@ import { COURSES } from "./curriculum";
 import { VOCAB } from "./vocabulary";
 import { GOALS } from "./paths";
 
-const RO = /^[a-z][a-z0-9 .?!',;:…-]*$/;
+const RO = /^[a-z][a-z0-9 .?!',;:…()-]*$/;
 const biz = BUSINESS_SCENARIOS;
 const lines = (s: (typeof biz)[number]) => [...s.say, ...s.hear].flatMap((g) => g.items).concat(s.demos.flatMap((d) => d.turns.map((t) => t.line)));
 
 test("every business role play line has Bengali, romanization and English", () => {
-  assert.ok(biz.length >= 7);
+  assert.equal(biz.length, 17);
   for (const s of biz) for (const [bn, ro, en] of lines(s)) {
     assert.ok(/[ঀ-৿]/.test(bn) && ro.trim() && en.trim(), `${s.id}: incomplete ${bn}`);
     assert.match(ro.toLowerCase(), RO, `${s.id}: odd romanization ${ro}`);
@@ -63,5 +63,5 @@ test("Business Bengali is its own section, and its lessons are not repeated in V
     assert.ok(!other.some((x) => x.includes("biz-")), `${id} still lists business lessons`);
   }
   assert.equal(new Set(ids).size, ids.length);
-  assert.equal(ids.length, 18); // 6 vocabulary topics, 5 class exercise sets, 7 role plays
+  assert.equal(ids.length, 28); // 6 vocabulary topics, 5 class exercise sets, 17 role plays
 });

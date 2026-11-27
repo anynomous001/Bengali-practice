@@ -320,6 +320,7 @@ export const GOALS: PathGoal[] = [
           { id: "vocabulary/biz-team", why: "Greetings, আসসালামু আলাইকুম and নমস্কার, and the words of a team meeting." },
           { id: "grammar/class-biz-pronouns", why: "Practise apni, ami and tini with the verbs kora, bola and jaoya." },
           { id: "speaking/roleplay-biz-meeting", why: "Open a team meeting, check in on the work and close it politely." },
+          { id: "speaking/roleplay-biz-new-member", why: "Welcome a new team member and tell them where to turn for help." },
         ],
       },
       {
@@ -334,6 +335,7 @@ export const GOALS: PathGoal[] = [
           { id: "vocabulary/biz-plans", why: "Targets, deadlines, instructions and what must be done." },
           { id: "grammar/class-biz-future", why: "Practise plans, 'must' (korte hobe) and 'need' (dorkar)." },
           { id: "speaking/roleplay-biz-task", why: "Give a new task with a deadline and ask what help is needed." },
+          { id: "speaking/roleplay-biz-supplier-late", why: "Phone a supplier whose delivery is late and ask for a confirmed time." },
         ],
       },
       {
@@ -345,6 +347,8 @@ export const GOALS: PathGoal[] = [
           { id: "speaking/roleplay-biz-feedback", why: "Give feedback to a team member: praise first, then a mistake, kindly." },
           { id: "vocabulary/biz-situations", why: "Leave, quality, a decision, a disagreement and urgent work." },
           { id: "speaking/roleplay-biz-leave", why: "Hear a leave request, show care and settle the urgent work." },
+          { id: "speaking/roleplay-biz-late-staff", why: "Talk kindly with a team member who is often late." },
+          { id: "speaking/roleplay-biz-thanks-team", why: "Thank the team in front of everyone after a good week." },
         ],
       },
       {
@@ -353,8 +357,14 @@ export const GOALS: PathGoal[] = [
         steps: [
           { id: "vocabulary/biz-client", why: "Apologies, reasons, new dates and reassurance for a client call." },
           { id: "grammar/class-biz-client", why: "Practise 'if ... then' sentences, reported speech and the formal client tone." },
+          { id: "speaking/roleplay-biz-deadline-push", why: "A short call: push a deadline with a client, say sorry, give the reason and promise updates." },
           { id: "speaking/roleplay-biz-client-delay", why: "A longer call: move a deadline with a client, with an apology, a reason, a new date and a reassurance." },
           { id: "speaking/roleplay-biz-complaint", why: "Hear a complaint about quality, apologize and say what you will do." },
+          { id: "speaking/roleplay-biz-reschedule", why: "Reschedule a meeting with a client and confirm the new time." },
+          { id: "speaking/roleplay-biz-requirements", why: "Confirm what a client wants: the number, the colour and the date." },
+          { id: "speaking/roleplay-biz-price", why: "Hear that your price is high, explain your quality and offer a discount." },
+          { id: "speaking/roleplay-biz-payment", why: "Follow up politely on a payment that has not come." },
+          { id: "speaking/roleplay-biz-client-feedback", why: "Ask a client how the job went and invite more work." },
         ],
       },
     ],

@@ -4,6 +4,16 @@
 export const NEW_FOR_DAYS = 30;
 
 export const ADDED: Record<string, string> = {
+  "speaking/roleplay-biz-deadline-push": "2026-11-30",
+  "speaking/roleplay-biz-payment": "2026-11-30",
+  "speaking/roleplay-biz-price": "2026-11-30",
+  "speaking/roleplay-biz-reschedule": "2026-11-30",
+  "speaking/roleplay-biz-requirements": "2026-11-30",
+  "speaking/roleplay-biz-client-feedback": "2026-11-30",
+  "speaking/roleplay-biz-supplier-late": "2026-11-30",
+  "speaking/roleplay-biz-new-member": "2026-11-30",
+  "speaking/roleplay-biz-late-staff": "2026-11-30",
+  "speaking/roleplay-biz-thanks-team": "2026-11-30",
   "goal:business": "2026-11-27",
   "vocabulary/biz-team": "2026-11-27",
   "vocabulary/biz-updates": "2026-11-27",
