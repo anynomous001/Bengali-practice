@@ -22,6 +22,7 @@ export function CellView({ cell, roman }: { cell: Cell; roman: boolean }) {
     <>
       <span lang="bn" className="g-bn">{cell.bn}</span>
       {roman && cell.ro && <small className="g-ro">{cell.ro}</small>}
+      {cell.en && <small className="g-cell-en gloss">{cell.en}</small>}
     </>
   );
 }
@@ -93,7 +94,11 @@ function BlockView({ block, roman }: { block: Block; roman: boolean }) {
           {block.title && <h3><BnText text={block.title} /></h3>}
           <div className="g-scroll" tabIndex={0} role="region" aria-label={block.title ?? "Table"}>
             <table className="g-table">
-              <thead><tr>{block.head.map((h, i) => <th key={i} scope="col"><BnText text={h} /></th>)}</tr></thead>
+              <thead><tr>{block.head.map((h, i) => {
+                // "I · আমি": the English meaning first, then the Bengali word with its romanization
+                const [en, bn] = h.includes(" · ") ? h.split(" · ") : [null, h];
+                return <th key={i} scope="col">{en && <span className="g-th-en">{en}</span>}<BnText text={bn} /></th>;
+              })}</tr></thead>
               <tbody>
                 {block.rows.map((r, i) => (
                   <tr key={i}>{r.map((c, j) => (j === 0 ? <th key={j} scope="row"><CellView cell={c} roman={roman} /></th> : <td key={j}><CellView cell={c} roman={roman} /></td>))}</tr>

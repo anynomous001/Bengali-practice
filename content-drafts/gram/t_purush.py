@@ -7,9 +7,9 @@ TOPICS = [finish(dict(id="purush", title=("পুরুষ", "Purush", "Person &
   dict(id="persons", title="The three persons", blocks=[
    P("পুরুষ (purush) means 'person' in the grammatical sense. Every sentence has a doer, and the doer is always one of three kinds: the person who is speaking, the person who is being spoken to, or somebody or something else who is being spoken about. Bengali verbs change their ending to match this person, so the very first thing to learn is which person you are talking about."),
    TABLE(["Person", "Who it is", "Singular", "Plural"], [
-     [c("উত্তম পুরুষ","uttom purush"), "1st person: the speaker", c("আমি","ami"), c("আমরা","amra")],
-     [c("মধ্যম পুরুষ","moddhom purush"), "2nd person: the one spoken to", c("তুই / তুমি / আপনি","tui / tumi / apni"), c("তোরা / তোমরা / আপনারা","tora / tomra / apnara")],
-     [c("নাম পুরুষ","nam purush"), "3rd person: the one spoken about", c("সে / তিনি","she / tini"), c("তারা / তাঁরা","tara / tanra")],
+     [c("উত্তম পুরুষ","uttom purush"), "1st person: the speaker", c("আমি","ami","I"), c("আমরা","amra","we")],
+     [c("মধ্যম পুরুষ","moddhom purush"), "2nd person: the one spoken to", c("তুই / তুমি / আপনি","tui / tumi / apni","you (very familiar / familiar / respectful)"), c("তোরা / তোমরা / আপনারা","tora / tomra / apnara","you all (very familiar / familiar / respectful)")],
+     [c("নাম পুরুষ","nam purush"), "3rd person: the one spoken about", c("সে / তিনি","she / tini","he, she, it (ordinary / respectful)"), c("তারা / তাঁরা","tara / tanra","they (ordinary / respectful)")],
    ]),
    NOTE("Some books call the third person প্রথম পুরুষ (first person, counting in the Sanskrit order). Ask your teacher which labels your class uses."),
    H("The same sentence in all three persons"),

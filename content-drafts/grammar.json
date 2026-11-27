@@ -34,11 +34,13 @@
         "1st person: the speaker",
         {
          "bn": "আমি",
-         "ro": "ami"
+         "ro": "ami",
+         "en": "I"
         },
         {
          "bn": "আমরা",
-         "ro": "amra"
+         "ro": "amra",
+         "en": "we"
         }
        ],
        [
@@ -49,11 +51,13 @@
         "2nd person: the one spoken to",
         {
          "bn": "তুই / তুমি / আপনি",
-         "ro": "tui / tumi / apni"
+         "ro": "tui / tumi / apni",
+         "en": "you (very familiar / familiar / respectful)"
         },
         {
          "bn": "তোরা / তোমরা / আপনারা",
-         "ro": "tora / tomra / apnara"
+         "ro": "tora / tomra / apnara",
+         "en": "you all (very familiar / familiar / respectful)"
         }
        ],
        [
@@ -64,11 +68,13 @@
         "3rd person: the one spoken about",
         {
          "bn": "সে / তিনি",
-         "ro": "she / tini"
+         "ro": "she / tini",
+         "en": "he, she, it (ordinary / respectful)"
         },
         {
          "bn": "তারা / তাঁরা",
-         "ro": "tara / tanra"
+         "ro": "tara / tanra",
+         "en": "they (ordinary / respectful)"
         }
        ]
       ]
@@ -216,11 +222,11 @@
       "title": "Six verbs, present tense, by person",
       "head": [
        "Verb",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -503,11 +509,11 @@
       "title": "Verb endings by tense and person",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -709,11 +715,11 @@
       "title": "করা (kora), to do",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -6645,11 +6651,11 @@
       "title": "Person endings added to the root (before the sign shown above)",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -8036,11 +8042,11 @@
       "title": "Simple present of twelve verbs",
       "head": [
        "Verb",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -8547,11 +8553,11 @@
       "title": "Present continuous of twelve verbs",
       "head": [
        "Verb",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -9057,11 +9063,11 @@
       "title": "Present perfect of twelve verbs",
       "head": [
        "Verb",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -10142,11 +10148,11 @@
       "title": "Simple past of twelve verbs",
       "head": [
        "Verb",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -10594,11 +10600,11 @@
       "title": "Past continuous of twelve verbs",
       "head": [
        "Verb",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -11044,11 +11050,11 @@
       "title": "Past perfect of twelve verbs",
       "head": [
        "Verb",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -11454,11 +11460,11 @@
       "title": "Past habitual of twelve verbs",
       "head": [
        "Verb",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -12517,11 +12523,11 @@
       "title": "Simple future of twelve verbs",
       "head": [
        "Verb",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -13755,11 +13761,11 @@
       "title": "করা (kora), to do",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -14003,11 +14009,11 @@
       "title": "বলা (bola), to say / tell",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -14251,11 +14257,11 @@
       "title": "দেখা (dekha), to see / look",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -14499,11 +14505,11 @@
       "title": "শোনা (shona), to hear / listen",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -14757,11 +14763,11 @@
       "title": "পড়া (pora), to read / study",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -15005,11 +15011,11 @@
       "title": "লেখা (lekha), to write",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -15253,11 +15259,11 @@
       "title": "থাকা (thaka), to stay / live",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -15501,11 +15507,11 @@
       "title": "বসা (bosha), to sit",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -15759,11 +15765,11 @@
       "title": "খেলা (khela), to play",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -16007,11 +16013,11 @@
       "title": "হাঁটা (hata), to walk",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -16255,11 +16261,11 @@
       "title": "ধরা (dhora), to hold / catch",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -16503,11 +16509,11 @@
       "title": "রাখা (rakha), to put / keep",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -16751,11 +16757,11 @@
       "title": "চলা (chola), to move / go along",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -17009,11 +17015,11 @@
       "title": "খাওয়া (khaoya), to eat",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -17257,11 +17263,11 @@
       "title": "যাওয়া (jaoya), to go",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -17505,11 +17511,11 @@
       "title": "আসা (asha), to come",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -17763,11 +17769,11 @@
       "title": "দেওয়া (deoya), to give",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -18011,11 +18017,11 @@
       "title": "নেওয়া (neoya), to take",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [
@@ -18259,11 +18265,11 @@
       "title": "ঘুমানো (ghumano), to sleep",
       "head": [
        "Tense",
-       "আমি",
-       "তুই",
-       "তুমি",
-       "আপনি / তিনি",
-       "সে"
+       "I · আমি",
+       "you (very familiar) · তুই",
+       "you (familiar) · তুমি",
+       "you / he, she (respectful) · আপনি / তিনি",
+       "he / she · সে"
       ],
       "rows": [
        [

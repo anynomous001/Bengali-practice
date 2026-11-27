@@ -1,7 +1,10 @@
 # Generates src/data/grammar.ts (app data) and content-drafts/grammar.md (review copy) from one source.
 import json, sys
 
-def c(bn, ro): return {"bn": bn, "ro": ro}
+def c(bn, ro, en=None):
+    d = {"bn": bn, "ro": ro}
+    if en: d["en"] = en
+    return d
 def P(text): return {"t": "p", "text": text}
 def NOTE(text): return {"t": "note", "text": text}
 def TABLE(head, rows, title=None): return {"t": "table", "title": title, "head": head, "rows": rows}
@@ -107,6 +110,6 @@ def verb_table(key):
     rows = []
     for tid, bn, ro, en in TENSES:
         rows.append([c(bn, ro)] + v["f"][tid])
-    head = ["Tense"] + [f"{b}" for b, r in PERSONS]
+    head = ["Tense"] + [{"আমি": "I · আমি", "তুই": "you (very familiar) · তুই", "তুমি": "you (familiar) · তুমি", "আপনি / তিনি": "you / he, she (respectful) · আপনি / তিনি", "সে": "he / she · সে"}.get(b, b) for b, r in PERSONS]
     return TABLE(head, rows, f"{v['bn']} ({v['ro']}), {v['en']}")
 

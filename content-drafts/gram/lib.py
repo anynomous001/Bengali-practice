@@ -156,8 +156,13 @@ def OF(verb, tense_ids, idx):
     """options from verb forms: first is the correct one"""
     return [c(*vform(verb, t, idx)) for t in tense_ids]
 
+HEAD_EN = {"আমি": "I · আমি", "তুই": "you (very familiar) · তুই", "তুমি": "you (familiar) · তুমি",
+           "আপনি / তিনি": "you / he, she (respectful) · আপনি / তিনি", "সে": "he / she · সে"}
 def finish(topic):
     """validate a topic dict"""
+    for s_ in topic["sections"]:
+        for b_ in s_["blocks"]:
+            if b_["t"] == "table": b_["head"] = [HEAD_EN.get(h, h) for h in b_["head"]]
     ids = [s["id"] for s in topic["sections"]]
     assert len(set(ids)) == len(ids), (topic["id"], "duplicate section ids")
     for s in topic["sections"]:
