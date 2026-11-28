@@ -12,8 +12,6 @@ export type Frame = {
   /** The pattern itself, e.g. আমার ... পেয়েছে. `english` says what it is for. */
   frame: Item;
   useWhen: string;
-  /** Set when only these words may go in the blank. */
-  onlyThese?: string;
   examples: Item[];
   situation: { text: string; line: Item };
 };
@@ -63,7 +61,6 @@ export const FIRST_SENTENCES: FirstSentences = {
     {
       id: "need", frame: it("fs-f-need", "আমার ... পেয়েছে", "Amar ... peyeche", "my body needs something"),
       useWhen: "Use it when your body needs something: food, a drink or sleep.",
-      onlyThese: "Only three words fit in the blank: খিদে (khide), তেষ্টা (testa) and ঘুম (ghum).",
       examples: [it("fs-s-khide", "আমার খিদে পেয়েছে।", "Amar khide peyeche.", "I'm hungry."), it("fs-s-testa", "আমার তেষ্টা পেয়েছে।", "Amar testa peyeche.", "I'm thirsty."), it("fs-s-ghum", "আমার ঘুম পেয়েছে।", "Amar ghum peyeche.", "I'm sleepy.")],
       situation: { text: "You come home from school and your tummy is rumbling.", line: it("fs-s-ma-khide", "মা, আমার খিদে পেয়েছে।", "Ma, amar khide peyeche.", "Mom, I'm hungry.") },
     },

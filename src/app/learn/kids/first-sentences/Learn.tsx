@@ -45,7 +45,6 @@ export default function Learn({ data }: { data: FirstSentences }) {
                 </div>
               </header>
               <p className="fs-when"><b>Use it when:</b> {f.useWhen}</p>
-              {f.onlyThese && <p className="fs-warn" role="note"><b>Careful!</b> {f.onlyThese}</p>}
               <h3 className="fs-sub">Say it</h3>
               <ul className="fs-examples">{f.examples.map((e) => <li key={e.id + e.roman}><Line item={e} size="m" /></li>)}</ul>
               <div className="fs-moment">
