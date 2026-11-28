@@ -1,0 +1,124 @@
+/* "First Sentences" (Kids). Uses the app's own colours, type and buttons; big type and big tap targets (56px and up) for small hands.
+   Bengali script is set in the app's Noto Sans Bengali (var(--font-bn)). */
+.fs { --fs-tap: 56px; --fs-ma: #c2410c; --fs-neel: #1d4ed8; color: var(--ink); max-width: 980px; }
+.fs h2 { margin: 28px 0 6px; font-size: clamp(1.5rem, 4vw, 2rem); }
+.fs h3 { margin: 22px 0 8px; }
+.fs :focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; border-radius: 10px; }
+.fs-help { margin: 4px 0 14px; color: var(--ink-2); font-size: 1.05rem; max-width: 62ch; }
+
+/* type: Bengali first and big, then Banglish, then English */
+.fs-bn { font-family: var(--font-bn); font-weight: 700; line-height: 1.35; margin: 0; font-size: clamp(1.7rem, 5vw, 2.3rem); }
+.fs-bn.s { font-size: 1.3rem; display: block; } .fs-bn.m { font-size: clamp(1.7rem, 5vw, 2.2rem); } .fs-bn.l { font-size: clamp(2.4rem, 8vw, 3.6rem); }
+.fs-ro { margin: 0; font-size: 1.2rem; font-weight: 600; color: var(--ink); } .fs-ro.big { font-size: clamp(1.7rem, 5vw, 2.4rem); font-weight: 700; }
+.fs-en { margin: 0; font-size: 1.1rem; color: var(--ink-2); } .fs-en.big { font-size: 1.5rem; color: var(--ink); margin: 6px 0 14px; }
+
+/* a line with its speaker button */
+.fs-line { display: flex; align-items: center; gap: 12px; justify-content: space-between; }
+.fs-line-text { min-width: 0; }
+.fs-line.s .fs-bn { font-size: 1.4rem; }
+.fs-say { flex: none; width: var(--fs-tap); height: var(--fs-tap); border-radius: 50%; border: 2px solid var(--seg, var(--primary)); background: var(--surface); color: var(--seg, var(--primary)); display: inline-grid; place-items: center; cursor: pointer; }
+.fs-say:hover { background: var(--surface-2); } .fs-say:active { transform: scale(.94); }
+
+/* the four parts */
+.fs-nav { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin: 10px 0 18px; }
+.fs-parts { display: flex; flex-wrap: wrap; gap: 8px; }
+.fs-part { display: inline-flex; align-items: center; min-height: var(--fs-tap); padding: 0 20px; border-radius: 999px; border: 2px solid var(--line-2); background: var(--surface); color: var(--ink); font-weight: 700; font-size: 1.05rem; text-decoration: none; }
+.fs-part:hover { border-color: var(--seg, var(--primary)); }
+.fs-part.on { background: var(--seg, var(--primary)); border-color: var(--seg, var(--primary)); color: #fff; }
+.fs-cheat-btn, .fs-btn { min-height: var(--fs-tap); padding: 0 22px; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 8px; }
+
+/* word cards */
+.fs-grid { list-style: none; margin: 10px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
+.fs-grid.small { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+.fs-word { width: 100%; min-height: 120px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 14px 10px; background: var(--surface); border: 2px solid var(--line-2); border-radius: 18px; cursor: pointer; color: var(--ink); box-shadow: var(--shadow); }
+.fs-word:hover { border-color: var(--seg, var(--primary)); transform: translateY(-2px); } .fs-word:active { transform: scale(.97); }
+.fs-grid.small .fs-word { min-height: 96px; } .fs-grid.small .fs-bn.l { font-size: 1.9rem; }
+
+/* sentence frames */
+.fs-frames { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 18px; }
+.fs-frame { background: var(--surface); border: 2px solid var(--line-2); border-radius: 20px; padding: 18px 18px 20px; box-shadow: var(--shadow); }
+.fs-frame header { display: flex; gap: 14px; align-items: center; }
+.fs-num { flex: none; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; font-size: 1.4rem; font-weight: 800; background: var(--seg, var(--primary)); color: #fff; }
+.fs-when { margin: 14px 0 6px; font-size: 1.1rem; }
+.fs-warn { margin: 10px 0; padding: 12px 14px; border-radius: 12px; background: color-mix(in srgb, #f5a524 18%, var(--surface)); border: 2px solid color-mix(in srgb, #f5a524 55%, transparent); font-size: 1.05rem; }
+.fs-sub { font-size: 1rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-2); margin: 14px 0 6px; }
+.fs-examples { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.fs-examples li { padding: 10px 12px; border-radius: 14px; background: var(--surface-2); }
+.fs-moment { margin-top: 14px; padding: 12px 14px; border-radius: 14px; border: 2px dashed var(--line-2); } .fs-moment p { margin: 0 0 8px; font-size: 1.05rem; }
+
+/* cheat sheet */
+.fs-table-wrap { overflow-x: auto; border: 2px solid var(--line-2); border-radius: 16px; background: var(--surface); }
+.fs-table { width: 100%; border-collapse: collapse; min-width: 640px; }
+.fs-table th, .fs-table td { padding: 12px 14px; text-align: left; vertical-align: middle; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+.fs-table thead th { background: var(--surface-2); font-size: .95rem; color: var(--ink-2); }
+.fs-table tbody th { font-weight: 700; width: 24%; } .fs-table tr:last-child > * { border-bottom: 0; }
+.fs-frame-cell { font-weight: 600; color: var(--ink); width: 22%; }
+.fs-table td .fs-ro, .fs-table td .fs-en { display: block; font-size: 1rem; }
+.fs-dialog { border: 0; padding: 0; border-radius: 20px; width: min(960px, 94vw); max-height: 90vh; background: var(--bg); color: var(--ink); box-shadow: 0 20px 60px rgba(0,0,0,.35); }
+.fs-dialog::backdrop { background: rgba(20, 15, 40, .55); }
+.fs-dialog-box { padding: 18px; } .fs-dialog-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; } .fs-dialog-head h2 { margin: 0; }
+
+/* roleplay */
+.fs-toggles { display: flex; flex-wrap: wrap; gap: 4px 22px; margin: 8px 0 14px; }
+.fs-toggle { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; font-size: 1.05rem; cursor: pointer; }
+.fs-toggle input { width: 26px; height: 26px; accent-color: var(--primary); }
+.fs-chat { list-style: none; margin: 0 0 14px; padding: 0; display: grid; gap: 14px; }
+.fs-bubble { display: flex; gap: 12px; align-items: flex-start; max-width: 720px; }
+.fs-bubble.neel { margin-left: auto; flex-direction: row-reverse; }
+.fs-who { flex: none; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 1.3rem; color: #fff; background: var(--fs-ma); }
+.fs-bubble.neel .fs-who { background: var(--fs-neel); }
+.fs-bubble-body { padding: 12px 16px; border-radius: 18px; background: var(--surface); border: 2px solid color-mix(in srgb, var(--fs-ma) 45%, transparent); min-width: 0; }
+.fs-bubble.neel .fs-bubble-body { border-color: color-mix(in srgb, var(--fs-neel) 45%, transparent); background: color-mix(in srgb, var(--fs-neel) 6%, var(--surface)); }
+.fs-speaker { margin: 0 0 4px; font-size: .95rem; color: var(--ink-2); } .fs-tag { margin-left: 8px; padding: 1px 8px; border-radius: 999px; background: var(--surface-2); font-size: .8rem; }
+.fs-action { margin: 0 0 6px; font-style: italic; color: var(--ink-2); }
+.fs-turn { margin: 4px 0 0; font-weight: 700; }
+.fs-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 10px 0 6px; }
+.fs-done { margin: 0; font-size: 1.2rem; }
+
+/* practice */
+.fs-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 8px; }
+.fs-tab { min-height: var(--fs-tap); padding: 0 20px; border-radius: 14px; border: 2px solid var(--line-2); background: var(--surface); color: var(--ink); font: 700 1.05rem var(--font-ui); cursor: pointer; }
+.fs-tab.on { background: var(--seg, var(--primary)); border-color: var(--seg, var(--primary)); color: #fff; }
+.fs-check { color: #2f9e5b; font-weight: 800; } .fs-tab.on .fs-check { color: #fff; }
+.fs-card { background: var(--surface); border: 2px solid var(--line-2); border-radius: 20px; padding: 18px; box-shadow: var(--shadow); }
+.fs-count { margin: 0 0 8px; color: var(--ink-2); font-weight: 600; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.fs-prompt { margin: 14px 0 8px; font-size: 1.25rem; font-weight: 700; }
+.fs-stars { display: inline-flex; gap: 2px; margin: 0; font-size: 1.4rem; color: var(--line-2); } .fs-stars .on { color: #f5a524; }
+.fs-row, .fs-slots { display: flex; flex-wrap: wrap; gap: 12px; align-items: stretch; margin: 8px 0; }
+.fs-slots { min-height: 96px; padding: 12px; border: 3px dashed var(--line-2); border-radius: 18px; align-items: center; background: var(--surface-2); }
+.fs-slots.good { border-style: solid; border-color: #2f9e5b; background: color-mix(in srgb, #2f9e5b 10%, var(--surface)); }
+.fs-slot-hint { color: var(--ink-2); font-size: 1.05rem; }
+.fs-tile { min-width: var(--fs-tap); min-height: 76px; padding: 8px 18px; border-radius: 16px; border: 2px solid var(--line-2); background: var(--surface); color: var(--ink); display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; cursor: pointer; box-shadow: var(--shadow); }
+.fs-tile:hover:not(:disabled) { border-color: var(--seg, var(--primary)); } .fs-tile:active:not(:disabled) { transform: scale(.96); }
+.fs-tile.placed { background: color-mix(in srgb, var(--primary) 8%, var(--surface)); cursor: pointer; }
+.fs-tile.mark { border-color: #c0392b; background: color-mix(in srgb, #c0392b 8%, var(--surface)); }
+.fs-tile.good { border-color: #2f9e5b; background: color-mix(in srgb, #2f9e5b 12%, var(--surface)); }
+.fs-tile:disabled { cursor: default; opacity: 1; }
+.fs-opts { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.fs-opt { min-height: 72px; padding: 10px 16px; border-radius: 16px; border: 2px solid var(--line-2); background: var(--surface); color: var(--ink); font: 700 1.3rem var(--font-ui); cursor: pointer; box-shadow: var(--shadow); }
+.fs-opt:hover:not(:disabled) { border-color: var(--seg, var(--primary)); }
+.fs-opt:disabled { opacity: .55; cursor: default; } .fs-opt.good { opacity: 1; border-color: #2f9e5b; background: color-mix(in srgb, #2f9e5b 14%, var(--surface)); }
+.fs-say-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin: 8px 0; }
+.fs-type { display: flex; flex-wrap: wrap; gap: 10px; } .fs-type input { flex: 1 1 260px; min-height: var(--fs-tap); padding: 0 16px; font: 600 1.25rem var(--font-ui); border: 2px solid var(--line-2); border-radius: 14px; background: var(--surface); color: var(--ink); }
+.fs-msg { min-height: 1.6em; margin: 10px 0 0; font-size: 1.1rem; font-weight: 600; color: var(--ink-2); }
+.fs-reward { margin-top: 12px; padding: 14px 16px; border-radius: 16px; background: color-mix(in srgb, #2f9e5b 10%, var(--surface)); border: 2px solid color-mix(in srgb, #2f9e5b 45%, transparent); display: grid; gap: 8px; justify-items: start; }
+.fs-cheer { margin: 0; display: inline-flex; gap: 8px; align-items: center; font-size: 1.3rem; color: #1f7a45; }
+.fs-finish { position: relative; overflow: hidden; text-align: center; padding: 28px 16px 24px; margin: 14px 0; border-radius: 22px; background: var(--surface); border: 2px solid var(--line-2); box-shadow: var(--shadow); }
+.fs-finish.all { border-color: #f5a524; } .fs-finish .fs-actions { justify-content: center; } .fs-finish .fs-stars { justify-content: center; margin: 10px 0; }
+
+/* notes */
+.fs-notes { margin: 12px 0; background: var(--surface); border: 2px solid var(--line-2); border-radius: 16px; padding: 4px 18px 12px; }
+.fs-notes summary { min-height: var(--fs-tap); display: flex; align-items: center; font-size: 1.2rem; font-weight: 700; cursor: pointer; }
+.fs-notes li { margin: 8px 0; font-size: 1.08rem; line-height: 1.55; }
+
+/* "no, try again": the word shakes. Never harsh, never timed. */
+@keyframes fs-shake { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-7px); } 40% { transform: translateX(7px); } 60% { transform: translateX(-5px); } 80% { transform: translateX(5px); } }
+.shake { animation: fs-shake .45s ease; }
+
+/* confetti */
+.fs-confetti { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.fs-confetti span { position: absolute; top: -14px; width: 10px; height: 16px; border-radius: 2px; opacity: .95; animation: fs-fall linear 1 forwards; }
+@keyframes fs-fall { to { transform: translateY(420px) rotate(540deg); opacity: 0; } }
+
+@media (max-width: 560px) { .fs-bubble, .fs-bubble.neel { max-width: 100%; } .fs-tile { min-height: 70px; padding: 6px 14px; } }
+@media (prefers-reduced-motion: reduce) { .shake { animation: none; outline: 3px solid #c0392b; } .fs-confetti span { animation: none; opacity: .0; } .fs-word:hover { transform: none; } }

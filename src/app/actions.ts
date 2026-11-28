@@ -237,6 +237,13 @@ export async function recordKidsSession(game: string, stars: number) {
   await completeLesson(user.email, `kids/game-${game}`);
 }
 
+/** A finished part of the Kids "First Sentences" module: the roleplay read to the end, or all three practice games finished. */
+export async function finishFirstSentences(part: string) {
+  const user = await getUser();
+  if (!user?.hasAccess || !["roleplay", "practice"].includes(part)) return;
+  await completeLesson(user.email, `kids/fs-${part}`);
+}
+
 /** A finished kids' picture quiz. Seven out of ten completes the lesson. */
 export async function finishKidsQuiz(topic: string, score: number, total: number) {
   const user = await getUser();

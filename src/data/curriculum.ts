@@ -271,6 +271,12 @@ export const COURSES: Course[] = [
         { id: "kids/fruits-learn", title: "Fruit cards", blurb: "Tap a fruit to hear its name. Tap again to hear it slowly.", href: "/learn/kids/fruits/learn", kind: "Lesson", tag: "Kids" },
         { id: "kids/fruits-quiz", title: "What fruit is this?", blurb: "A photo appears. Say the fruit in Bengali, or pick the word.", href: "/learn/kids/fruits/quiz", kind: "Quiz", tag: "Kids" },
       ] },
+      { id: "first-sentences", title: "First Sentences", blurb: "Say what I need, have, can do and like: seven sentence frames, a kitchen talk with Ma, and three games.", lessons: [
+        { id: "kids/fs-learn", title: "Learn: food words and sentence frames", blurb: "Eight food words, seven sentence frames and a cheat sheet. Tap to hear each one.", href: "/learn/kids/first-sentences/learn", kind: "Lesson", tag: "Kids" },
+        { id: "kids/fs-roleplay", title: "Roleplay: Neel and Ma in the kitchen", blurb: "Read the talk line by line, then hide Neel's lines and say them yourself.", href: "/learn/kids/first-sentences/roleplay", kind: "Lesson", tag: "Kids" },
+        { id: "kids/fs-practice", title: "Practice: fix it, build it, what does it mean?", blurb: "Three games with stars. Wrong answers just mean try again.", href: "/learn/kids/first-sentences/practice", kind: "Practice", tag: "Kids" },
+        { id: "kids/fs-notes", title: "Notes for parents and tutors", blurb: "How to teach the frames, activities to try and a five-minute home game.", href: "/learn/kids/first-sentences/notes", kind: "Lesson", tag: "Kids" },
+      ] },
     ],
     upcoming: [
       { title: "More pictures", blurb: "Days of the week, food, clothes and things at home, each with real pictures." },
