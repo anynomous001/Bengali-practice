@@ -4,7 +4,7 @@ import { useState } from "react";
 import { drillRound, finishDrill } from "../actions";
 import { useRoman } from "./Roman";
 
-type Item = { bn: string; ro: string; en: string; tense: string; level: string };
+type Item = { bn: string; ro: string; en: string; tense: string; level: string; kind?: string };
 type Tense = { id: string; label: string; example: string };
 type Phase = "setup" | "loading" | "run" | "sheet" | "done";
 
@@ -19,10 +19,39 @@ const MODES = [
   { id: "sheet", label: "Worksheet", hint: "All the sentences on one page. Reveal answers when you are done." },
 ];
 
-export default function TranslationDrills({ tenses }: { tenses: Tense[] }) {
+/** What to remember about each tense, shown with the answer. */
+const TIPS: Record<string, { sign: string; neg: string }> = {
+  pres: { sign: "root + ending (no sign): করি, করো, করে, করেন", neg: "add না after the verb: করি না" },
+  cont: { sign: "root + ছ + ending: করছি", neg: "add না after the verb: করছি না" },
+  perf: { sign: "root + েছ + ending: করেছি", neg: "simple present form + নি: করিনি (use এখনও for 'not yet')" },
+  perfcont: { sign: "present continuous + ধরে / থেকে: দুই বছর ধরে শিখছি", neg: "add না after the verb" },
+  past: { sign: "root + েছিল + ending: করেছিলাম (with a past time word like গতকাল)", neg: "simple present form + নি: করিনি" },
+  pastcont: { sign: "root + ছিল + ending: করছিলাম (with তখন)", neg: "add না after the verb: করছিলাম না" },
+  pastperf: { sign: "the same form as the simple past, plus আগে / আগেই: আগেই করেছিলাম", neg: "আগে + simple present form + নি: আগে করিনি" },
+  habit: { sign: "root + ত + ending: করতাম", neg: "add না after the verb: করতাম না" },
+  fut: { sign: "root + ব + ending: করব, করবে, করবেন", neg: "add না after the verb: করব না" },
+  futcont: { sign: "the -তে form + থাকব: করতে থাকব", neg: "add না after the verb: করতে থাকব না" },
+  futperf: { sign: "the -এ form + থাকব: করে থাকব", neg: "add না after the verb: করে থাকব না" },
+};
+const KIND_TIP: Record<string, string> = { q: "For a yes / no question add কি after the subject; the tense does not change.", two: "Two ideas: translate each clause in its own tense, then join them with আর (and) or কিন্তু (but)." };
+
+function Tip({ d }: { d: Item }) {
+  const t = TIPS[d.tense];
+  if (!t) return null;
+  return (
+    <div className="drill-tip">
+      <p><b>The tense:</b> {t.sign}</p>
+      {d.kind === "neg" || d.kind === "two" ? <p><b>Negative:</b> {t.neg}</p> : null}
+      {d.kind && KIND_TIP[d.kind] ? <p>{KIND_TIP[d.kind]}</p> : null}
+    </div>
+  );
+}
+
+export default function TranslationDrills({ tenses, only, embedded }: { tenses: Tense[]; only?: string[]; embedded?: boolean }) {
+  tenses = only ? tenses.filter((t) => only.includes(t.id)) : tenses;
   const { roman } = useRoman();
   const [phase, setPhase] = useState<Phase>("setup");
-  const [picked, setPicked] = useState<string[]>(["pres", "cont"]);
+  const [picked, setPicked] = useState<string[]>(only ?? ["pres", "cont"]);
   const [level, setLevel] = useState("easy");
   const [mode, setMode] = useState("one");
   const [dir, setDir] = useState<"en2bn" | "bn2en">("en2bn");
@@ -57,8 +86,8 @@ export default function TranslationDrills({ tenses }: { tenses: Tense[] }) {
   if (phase === "setup" || phase === "loading") {
     return (
       <div className="drill-setup">
-        <p className="lede">Short sets of sentences for the tenses you choose. Start easy, then try medium and hard, or take a step-up round that climbs through all three. Every round is mixed fresh.</p>
-        <h3>1. Tenses</h3>
+        <p className="lede">{embedded ? "Translate sentences in the tenses of this lesson. Start easy, then try medium (negatives and questions) and hard (two ideas in one sentence). After each answer you see a reminder of how the tense is built." : "Short sets of sentences for the tenses you choose. Start easy, then try medium and hard, or take a step-up round that climbs through all three. Every round is mixed fresh."}</p>
+        <h3>{embedded ? "1. Which tenses" : "1. Tenses"}</h3>
         <div className="choice-group" role="group" aria-label="Tenses">
           {tenses.map((t) => (
             <label key={t.id} className={"choice" + (picked.includes(t.id) ? " on" : "")}>
@@ -67,7 +96,14 @@ export default function TranslationDrills({ tenses }: { tenses: Tense[] }) {
             </label>
           ))}
         </div>
-        <p className="muted"><button className="btn ghost" onClick={() => setPicked(tenses.map((t) => t.id))}>All tenses</button> <button className="btn ghost" onClick={() => setPicked(["pres", "cont", "perf", "perfcont"])}>The four present tenses</button></p>
+        {!embedded && (
+          <p className="muted">
+            <button className="btn ghost" onClick={() => setPicked(tenses.map((t) => t.id))}>All tenses</button>{" "}
+            <button className="btn ghost" onClick={() => setPicked(["pres", "cont", "perf", "perfcont"])}>The present tenses</button>{" "}
+            <button className="btn ghost" onClick={() => setPicked(["past", "pastcont", "pastperf", "habit"])}>The past tenses</button>{" "}
+            <button className="btn ghost" onClick={() => setPicked(["fut", "futcont", "futperf"])}>The future tenses</button>
+          </p>
+        )}
         <h3>2. Level</h3>
         <div className="choice-group" role="radiogroup" aria-label="Level">
           {LEVELS.map((l) => (
@@ -110,7 +146,7 @@ export default function TranslationDrills({ tenses }: { tenses: Tense[] }) {
             <li key={k}>
               <div className="t-prompt">{prompt(d)}</div>
               <small className="muted">{label(d.tense)}</small>
-              {open[k] ? <div className="model">{answer(d)}</div> : <button className="btn ghost" onClick={() => setOpen({ ...open, [k]: true })}>Show</button>}
+              {open[k] ? <div className="model">{answer(d)}<Tip d={d} /></div> : <button className="btn ghost" onClick={() => setOpen({ ...open, [k]: true })}>Show</button>}
             </li>
           ))}
         </ol>
@@ -147,6 +183,7 @@ export default function TranslationDrills({ tenses }: { tenses: Tense[] }) {
       ) : (
         <>
           <div className="model"><p className="model-label">Answer</p>{answer(d)}</div>
+          <Tip d={d} />
           <div className="step-nav">
             <button className="btn ghost" onClick={() => rate(false)}>Not yet</button>
             <button className="btn" onClick={() => rate(true)}>I got it</button>

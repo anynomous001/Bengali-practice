@@ -6,6 +6,8 @@ import { recordGrammarQuiz } from "../actions";
 import Icon from "./Icon";
 import { useRoman } from "./Roman";
 import BnText from "./BnText";
+import TranslationDrills from "./TranslationDrills";
+import { TENSE_TOPIC_DRILLS } from "@/lib/toc";
 
 export function shuffle<T>(a: T[]): T[] {
   a = a.slice();
@@ -114,7 +116,7 @@ function BlockView({ block, roman }: { block: Block; roman: boolean }) {
 type Best = { score: number; total: number; attempts: number } | null;
 
 /** A lesson as one scrolling article: every section in order, then practice. The page's "On this page" list jumps between them. */
-export default function LessonReader({ topic, best }: { topic: GrammarTopic; best: Best }) {
+export default function LessonReader({ topic, best, drillTenses }: { topic: GrammarTopic; best: Best; drillTenses?: { id: string; label: string; example: string }[] }) {
   const { roman } = useRoman();
   return (
     <>
@@ -137,6 +139,13 @@ export default function LessonReader({ topic, best }: { topic: GrammarTopic; bes
         <h2>Practice</h2>
         <Practice topic={topic} best={best} />
       </section>
+
+      {drillTenses && TENSE_TOPIC_DRILLS[topic.id] && (
+        <section id="sec-translate" className="g-sec">
+          <h2>Translation practice</h2>
+          <TranslationDrills tenses={drillTenses} only={TENSE_TOPIC_DRILLS[topic.id]} embedded />
+        </section>
+      )}
     </>
   );
 }

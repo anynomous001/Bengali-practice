@@ -36,6 +36,9 @@ A = {
     "come": ("asha", [("এখানে", "ekhane")], "come", "comes", "coming", "come", "here"),
 }
 
+# the simple past in English (irregular forms)
+PAST_EN = {"rice": "ate", "tea": "drank", "book": "read", "film": "watched", "song": "listened to", "letter": "wrote", "bengali": "spoke", "market": "went", "work": "worked", "sleep": "slept", "play": "played", "come": "came"}
+
 # time words: (Bengali, roman, English)
 TIME = {
     "pres": [(("প্রতিদিন", "protidin"), "every day"), (("রোজ", "roj"), "every day"), (("সবসময়", "shobshomoy"), "always"), (("মাঝে মাঝে", "majhe majhe"), "sometimes")],
@@ -45,6 +48,10 @@ TIME = {
     "fut": [(("কাল", "kal"), "tomorrow"), (("আগামীকাল", "agamikal"), "tomorrow")],
     "futcont": [(("কাল এই সময়ে", "kal ei shomoye"), "at this time tomorrow")],
     "habit": [(("ছোটবেলায়", "chhotobelay"), "as a child")],
+    "past": [(("গতকাল", "gotokal"), "yesterday"), (("গত সপ্তাহে", "goto shoptahe"), "last week"), (("গত মাসে", "goto mashe"), "last month")],
+    "pastcont": [(("তখন", "tokhon"), "then"), (("সন্ধ্যায়", "shondhyay"), "in the evening")],
+    "pastperf": [(("আগেই", "agei"), "already")],
+    "futperf": [(("ততক্ষণে", "totokkhone"), "by then"), (("কাল সকালের মধ্যে", "kal shokaler moddhe"), "by tomorrow morning")],
 }
 TENSES = [
     ("pres", "Simple present", "I drink tea every day."),
@@ -53,8 +60,14 @@ TENSES = [
     ("perfcont", "Present perfect continuous", "I have been drinking tea for two years."),
     ("fut", "Simple future", "I will drink tea tomorrow."),
     ("futcont", "Future continuous", "I will be drinking tea at this time tomorrow."),
+    ("past", "Simple past", "I drank tea yesterday."),
+    ("pastcont", "Past continuous", "I was drinking tea then."),
+    ("pastperf", "Past perfect", "I had already drunk tea."),
     ("habit", "Past habitual", "I used to drink tea as a child."),
+    ("futperf", "Future perfect", "I will have drunk tea by then."),
 ]
+ORDER = ["pres", "cont", "perf", "perfcont", "past", "pastcont", "pastperf", "habit", "fut", "futcont", "futperf"]
+TENSES.sort(key=lambda t: ORDER.index(t[0]))
 ENGINE = {"perfcont": "cont"}  # "have been drinking for two years" is the present continuous with ধরে in Bengali
 
 
@@ -68,7 +81,14 @@ def english(tense, subj, act, time_en, neg=False, q=False):
         core = f"{'did not use to' if neg else 'used to'} {v}"
         if q: return f"Did {s} use to {v}{tail}?"
         return cap(f"{s} {core}{tail}.")
+    pst = PAST_EN[act]; was = {"am": "was", "is": "was", "are": "were"}[be]
+    if tense == "pastperf" and time_en == "already" and not neg and not q:
+        return cap(f"{s} had already {pp}{(' ' + obj) if obj else ''}.")
     if q:
+        if tense == "past": return f"Did {s} {v}{tail}?"
+        if tense == "pastcont": return f"{cap(was)} {s} {ing}{tail}?"
+        if tense == "pastperf": return f"Had {s} {pp}{tail}?"
+        if tense == "futperf": return f"Will {s} have {pp}{tail}?"
         if tense == "pres": return f"{'Does' if third else 'Do'} {s} {v}{tail}?"
         if tense == "cont": return f"{cap(be)} {s} {ing}{tail}?"
         if tense == "perf": return f"{cap(have)} {s} {pp}{tail}?"
@@ -76,11 +96,19 @@ def english(tense, subj, act, time_en, neg=False, q=False):
         if tense == "fut": return f"Will {s} {v}{tail}?"
         if tense == "futcont": return f"Will {s} be {ing}{tail}?"
     if neg:
+        if tense == "past": return cap(f"{s} did not {v}{tail}.")
+        if tense == "pastcont": return cap(f"{s} {was} not {ing}{tail}.")
+        if tense == "pastperf": return cap(f"{s} had not {pp}{tail}.")
+        if tense == "futperf": return cap(f"{s} will not have {pp}{tail}.")
         if tense == "pres": return cap(f"{s} {'does not' if third else 'do not'} {v}{tail}.")
         if tense == "cont": return cap(f"{s} {be} not {ing}{tail}.")
         if tense == "perf": return cap(f"{s} {have} not {pp}{tail}.")
         if tense == "fut": return cap(f"{s} will not {v}{tail}.")
         if tense == "futcont": return cap(f"{s} will not be {ing}{tail}.")
+    if tense == "past": return cap(f"{s} {pst}{tail}.")
+    if tense == "pastcont": return cap(f"{s} {was} {ing}{tail}.")
+    if tense == "pastperf": return cap(f"{s} had {pp}{tail}.")
+    if tense == "futperf": return cap(f"{s} will have {pp}{tail}.")
     if tense == "pres": return cap(f"{s} {v3 if third else v}{tail}.")
     if tense == "cont": return cap(f"{s} {be} {ing}{tail}.")
     if tense == "perf": return cap(f"{s} {have} {pp}{tail}.")
@@ -95,6 +123,8 @@ def make(tense, subj, act, time, neg=False, q=False):
     (tbn, tro), ten = time
     if neg and tense == "perf" and ten == "already":
         (tbn, tro), ten = ("এখনও", "ekhono"), "yet"
+    if (neg or q) and tense == "pastperf":
+        (tbn, tro), ten = ("আগে", "age"), "before"
     eng_t = ENGINE.get(tense, tense)
     bn, ro, _ = SENT(subj, [(tbn, tro)] + list(parts), verb, eng_t, "x", neg=neg, q=False)
     if q:
@@ -102,13 +132,13 @@ def make(tense, subj, act, time, neg=False, q=False):
         b = bn.split(" ", 1); r = ro.split(" ", 1)
         bn = f"{b[0]} কি {b[1]}".rstrip("।") + "?"
         ro = f"{r[0]} ki {r[1]}".rstrip(".") + "?"
-    return dict(bn=bn, ro=ro, en=english(tense, subj, act, ten, neg, q))
+    return dict(bn=bn, ro=ro, en=english(tense, subj, act, ten, neg, q), kind=("neg" if neg else "q" if q else "pos"))
 
 
 def join(a, b, conj, ro_conj, en_conj):
     """Two clauses in one sentence: a, conj b."""
     lo = lambda s: s if s.startswith("I ") or s.startswith("I'") else s[0].lower() + s[1:]
-    return dict(bn=a["bn"].rstrip("।") + f", {conj} " + b["bn"], ro=a["ro"].rstrip(".") + f", {ro_conj} " + b["ro"], en=a["en"].rstrip(".") + f", {en_conj} " + lo(b["en"]))
+    return dict(bn=a["bn"].rstrip("।") + f", {conj} " + b["bn"], ro=a["ro"].rstrip(".") + f", {ro_conj} " + b["ro"], en=a["en"].rstrip(".") + f", {en_conj} " + lo(b["en"]), kind="two")
 
 
 def when_clause(a, b, ten):
@@ -127,7 +157,7 @@ def pick_time(rng, tense, act):
     return t
 
 
-def easy(tense, n=10):
+def easy(tense, n=14):
     rng = random.Random("easy" + tense); out = []; seen = set()
     acts = ACTS[:]
     tries = 0
@@ -141,7 +171,7 @@ def easy(tense, n=10):
     return out
 
 
-def medium(tense, n=10):
+def medium(tense, n=18):
     rng = random.Random("medium" + tense); out = []; seen = set()
     tries = 0
     while len(out) < n and tries < 800:
@@ -156,7 +186,7 @@ def medium(tense, n=10):
     return out
 
 
-def hard(tense, n=8):
+def hard(tense, n=10):
     rng = random.Random("hard" + tense); out = []; seen = set()
     pairs = [("rice", "ami", "bengali", "se"), ("tea", "tumi", "book", "tini"), ("film", "amra", "song", "tara"), ("market", "se", "work", "ami"),
              ("letter", "apni", "sleep", "se"), ("play", "tara", "book", "tomra"), ("come", "tini", "rice", "ami"), ("bengali", "tumi", "film", "se"),
@@ -165,7 +195,7 @@ def hard(tense, n=8):
         if len(out) >= n: break
         if tense == "perfcont" and (a1 in ("sleep", "come") or a2 in ("sleep", "come")): continue
         t1 = pick_time(rng, tense, a1); t2 = pick_time(rng, tense, a2)
-        d1 = make(tense, s1, a1, t1); d2 = make(tense, s2, a2, t2, neg=(tense in ("pres", "cont", "perf", "fut") and i % 2 == 1))
+        d1 = make(tense, s1, a1, t1); d2 = make(tense, s2, a2, t2, neg=(tense in ("pres", "cont", "perf", "fut", "past", "pastcont", "pastperf", "futperf") and i % 2 == 1))
         if tense in ("pres", "cont") and i % 3 == 2:
             # when ... then ...: the first clause without its time word
             e1 = make(tense, s1, a1, ((("", ""), "")), )
@@ -187,6 +217,7 @@ for tid, label, ex in TENSES:
     drills[f"{tid}:hard"] = hard(tid)
 
 for k, v in drills.items():
+    for d in v: d.setdefault("kind", "two")
     assert len(v) >= 6, (k, len(v))
     for d in v:
         assert d["bn"].strip() and d["ro"].strip() and d["en"].strip(), (k, d)
@@ -195,8 +226,8 @@ for k, v in drills.items():
 root = Path(__file__).parent.parent
 ts = f'''// Translation drills by tense and level. Generated by content-drafts/build_drills.py: edit that, not this file.
 // Only import this from server code (pages/actions) so the sentences are never in the public JS bundle.
-export type DrillItem = {{ bn: string; ro: string; en: string }};
-export type DrillTense = "pres" | "cont" | "perf" | "perfcont" | "fut" | "futcont" | "habit";
+export type DrillItem = {{ bn: string; ro: string; en: string; /** positive, negative, question or two ideas in one sentence */ kind: "pos" | "neg" | "q" | "two" }};
+export type DrillTense = "pres" | "cont" | "perf" | "perfcont" | "past" | "pastcont" | "pastperf" | "habit" | "fut" | "futcont" | "futperf";
 export type DrillLevel = "easy" | "medium" | "hard";
 
 /** The tenses a student can pick, with an example in English. */
