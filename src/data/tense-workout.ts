@@ -23,8 +23,8 @@ export const WORKOUT: WorkRound[] = [
     },
     "options": [
      {
-      "bn": "সে বাজারে গেল।",
-      "ro": "she bajare gelo."
+      "bn": "সে বাজারে গিয়েছিল।",
+      "ro": "she bajare giyechhilo."
      },
      {
       "bn": "সে বাজারে যায়।",
@@ -40,7 +40,7 @@ export const WORKOUT: WorkRound[] = [
      }
     ],
     "answer": 0,
-    "why": "Simple past with সে: গেল."
+    "why": "Simple past with সে: গিয়েছিল."
    },
    {
     "kind": "choose",
@@ -91,8 +91,8 @@ export const WORKOUT: WorkRound[] = [
       "ro": "amra bajare giyechhi."
      },
      {
-      "bn": "আমরা বাজারে গেলাম।",
-      "ro": "amra bajare gelam."
+      "bn": "আমরা বাজারে গিয়েছিলাম।",
+      "ro": "amra bajare giyechhilam."
      }
     ],
     "answer": 0,
@@ -107,8 +107,8 @@ export const WORKOUT: WorkRound[] = [
     },
     "options": [
      {
-      "bn": "আপনি বাজারে গেলেন।",
-      "ro": "apni bajare gelen."
+      "bn": "আপনি বাজারে গিয়েছিলেন।",
+      "ro": "apni bajare giyechhilen."
      },
      {
       "bn": "আপনি বাজারে যান।",
@@ -124,7 +124,7 @@ export const WORKOUT: WorkRound[] = [
      }
     ],
     "answer": 0,
-    "why": "Simple past with আপনি: গেলেন."
+    "why": "Simple past with আপনি: গিয়েছিলেন."
    },
    {
     "kind": "choose",
@@ -147,8 +147,8 @@ export const WORKOUT: WorkRound[] = [
       "ro": "tara bajare jachchhe."
      },
      {
-      "bn": "তারা বাজারে গেল।",
-      "ro": "tara bajare gelo."
+      "bn": "তারা বাজারে গিয়েছিল।",
+      "ro": "tara bajare giyechhilo."
      }
     ],
     "answer": 0,
@@ -203,8 +203,8 @@ export const WORKOUT: WorkRound[] = [
       "ro": "she bhat kheyechhe."
      },
      {
-      "bn": "সে ভাত খেল।",
-      "ro": "she bhat khelo."
+      "bn": "সে ভাত খেয়েছিল।",
+      "ro": "she bhat kheyechhilo."
      }
     ],
     "answer": 0,
@@ -219,8 +219,8 @@ export const WORKOUT: WorkRound[] = [
     },
     "options": [
      {
-      "bn": "তুমি ভাত খেলে।",
-      "ro": "tumi bhat khele."
+      "bn": "তুমি ভাত খেয়েছিলে।",
+      "ro": "tumi bhat kheyechhile."
      },
      {
       "bn": "তুমি ভাত খাও।",
@@ -236,7 +236,7 @@ export const WORKOUT: WorkRound[] = [
      }
     ],
     "answer": 0,
-    "why": "Simple past with তুমি: খেলে."
+    "why": "Simple past with তুমি: খেয়েছিলে."
    },
    {
     "kind": "choose",
@@ -287,8 +287,8 @@ export const WORKOUT: WorkRound[] = [
       "ro": "apni bhat khachchhen."
      },
      {
-      "bn": "আপনি ভাত খেলেন।",
-      "ro": "apni bhat khelen."
+      "bn": "আপনি ভাত খেয়েছিলেন।",
+      "ro": "apni bhat kheyechhilen."
      }
     ],
     "answer": 0,
@@ -343,8 +343,8 @@ export const WORKOUT: WorkRound[] = [
       "ro": "uni bhat kheyechhen."
      },
      {
-      "bn": "উনি ভাত খেলেন।",
-      "ro": "uni bhat khelen."
+      "bn": "উনি ভাত খেয়েছিলেন।",
+      "ro": "uni bhat kheyechhilen."
      }
     ],
     "answer": 0,
@@ -375,8 +375,8 @@ export const WORKOUT: WorkRound[] = [
       "ro": "she ekhon office-e kaj kore."
      },
      {
-      "bn": "সে এখন অফিসে কাজ করল।",
-      "ro": "she ekhon office-e kaj korlo."
+      "bn": "সে এখন অফিসে কাজ করেছিল।",
+      "ro": "she ekhon office-e kaj korechhilo."
      },
      {
       "bn": "সে এখন অফিসে কাজ করবে।",
@@ -395,8 +395,8 @@ export const WORKOUT: WorkRound[] = [
     },
     "options": [
      {
-      "bn": "তুমি গতকাল অফিসে কাজ করলে।",
-      "ro": "tumi gotokal office-e kaj korle."
+      "bn": "তুমি গতকাল অফিসে কাজ করেছিলে।",
+      "ro": "tumi gotokal office-e kaj korechhile."
      },
      {
       "bn": "তুমি গতকাল অফিসে কাজ করো।",
@@ -412,7 +412,7 @@ export const WORKOUT: WorkRound[] = [
      }
     ],
     "answer": 0,
-    "why": "গতকাল (yesterday) needs the simple past: করলে. (করেছিলে is also possible when you stress it was long ago.)"
+    "why": "গতকাল (yesterday) needs the simple past: করেছিলে (korechhile)."
    },
    {
     "kind": "choose",
@@ -435,8 +435,8 @@ export const WORKOUT: WorkRound[] = [
       "ro": "amra agamikal office-e kaj korchhi."
      },
      {
-      "bn": "আমরা আগামীকাল অফিসে কাজ করলাম।",
-      "ro": "amra agamikal office-e kaj korlam."
+      "bn": "আমরা আগামীকাল অফিসে কাজ করেছিলাম।",
+      "ro": "amra agamikal office-e kaj korechhilam."
      }
     ],
     "answer": 0,
@@ -459,8 +459,8 @@ export const WORKOUT: WorkRound[] = [
       "ro": "apni roj office-e kaj korchhen."
      },
      {
-      "bn": "আপনি রোজ অফিসে কাজ করলেন।",
-      "ro": "apni roj office-e kaj korlen."
+      "bn": "আপনি রোজ অফিসে কাজ করেছিলেন।",
+      "ro": "apni roj office-e kaj korechhilen."
      },
      {
       "bn": "আপনি রোজ অফিসে কাজ করবেন।",
@@ -487,8 +487,8 @@ export const WORKOUT: WorkRound[] = [
       "ro": "tara aj shokal theke office-e kaj kore."
      },
      {
-      "bn": "তারা আজ সকাল থেকে অফিসে কাজ করল।",
-      "ro": "tara aj shokal theke office-e kaj korlo."
+      "bn": "তারা আজ সকাল থেকে অফিসে কাজ করেছিল।",
+      "ro": "tara aj shokal theke office-e kaj korechhilo."
      },
      {
       "bn": "তারা আজ সকাল থেকে অফিসে কাজ করবে।",
@@ -779,8 +779,8 @@ export const WORKOUT: WorkRound[] = [
       "ro": "amra kal cinema dekhbo."
      },
      {
-      "bn": "আমরা কাল সিনেমা দেখলাম।",
-      "ro": "amra kal cinema dekhlam."
+      "bn": "আমরা কাল সিনেমা দেখেছিলাম।",
+      "ro": "amra kal cinema dekhechhilam."
      },
      {
       "bn": "আমরা কাল সিনেমা দেখছে।",
@@ -882,8 +882,8 @@ export const WORKOUT: WorkRound[] = [
     "kind": "choose",
     "q": "Is the sentence correct? If not, pick the fixed sentence.",
     "sentence": {
-     "bn": "আমি আগামীকাল দিল্লি গেলাম।",
-     "ro": "ami agamikal dilli gelam."
+     "bn": "আমি আগামীকাল দিল্লি গিয়েছিলাম।",
+     "ro": "ami agamikal dilli giyechhilam."
     },
     "options": [
      {
@@ -1183,8 +1183,8 @@ export const WORKOUT: WorkRound[] = [
       "ro": "thakbo"
      },
      {
-      "bn": "থাকলাম",
-      "ro": "thaklam"
+      "bn": "থেকেছিলাম",
+      "ro": "thekechhilam"
      },
      {
       "bn": "থাকতাম",
@@ -1295,8 +1295,8 @@ export const WORKOUT: WorkRound[] = [
       "ro": "Thik achhe."
      },
      {
-      "bn": "আমি এখন বই পড়লাম।",
-      "ro": "ami ekhon boi porlam."
+      "bn": "আমি এখন বই পড়েছিলাম।",
+      "ro": "ami ekhon boi porechhilam."
      },
      {
       "bn": "আমি এখন বই পড়ব।",
@@ -1334,13 +1334,13 @@ export const WORKOUT: WorkRound[] = [
     "kind": "choose",
     "q": "Is this sentence right for the meaning in brackets?",
     "sentence": {
-     "bn": "সে গতকাল আমাকে ফোন করেছিল।",
-     "ro": "she gotokal amake phone korechhilo."
+     "bn": "সে গতকাল আমাকে ফোন করেছে।",
+     "ro": "she gotokal amake phone korechhe."
     },
     "options": [
      {
-      "bn": "সে গতকাল আমাকে ফোন করল।",
-      "ro": "she gotokal amake phone korlo."
+      "bn": "সে গতকাল আমাকে ফোন করেছিল।",
+      "ro": "she gotokal amake phone korechhilo."
      },
      {
       "bn": "সে গতকাল আমাকে ফোন করছে।",
@@ -1356,7 +1356,7 @@ export const WORKOUT: WorkRound[] = [
      }
     ],
     "answer": 0,
-    "why": "Fix: সে গতকাল আমাকে ফোন করল (simple past: she called me yesterday)."
+    "why": "Fix: সে গতকাল আমাকে ফোন করেছিল (simple past: she called me yesterday)."
    },
    {
     "kind": "choose",
@@ -1511,11 +1511,11 @@ export const WORKOUT: WorkRound[] = [
     "q": "Yesterday I met my new neighbour for the first time. (simple past)",
     "sentence": null,
     "answer": {
-     "bn": "গতকাল আমি আমার নতুন প্রতিবেশীর সঙ্গে প্রথমবার দেখা করলাম।",
-     "ro": "gotokal ami amar notun protibeshir songe prothombar dekha korlam."
+     "bn": "গতকাল আমি আমার নতুন প্রতিবেশীর সঙ্গে প্রথমবার দেখা করেছিলাম।",
+     "ro": "gotokal ami amar notun protibeshir songe prothombar dekha korechhilam."
     },
     "also": null,
-    "why": "Simple past: দেখা করলাম."
+    "why": "Simple past: দেখা করেছিলাম."
    },
    {
     "kind": "write",
@@ -1533,8 +1533,8 @@ export const WORKOUT: WorkRound[] = [
     "q": "By the time I moved in, the previous tenant had already left. (past perfect)",
     "sentence": null,
     "answer": {
-     "bn": "আমি যখন ঢুকলাম, তখন আগের ভাড়াটে ইতিমধ্যেই চলে গিয়েছিল।",
-     "ro": "ami jokhon dhuklam, tokhon ager bharate itimodhyei chole giyechhilo."
+     "bn": "আমি যখন ঢুকেছিলাম, তখন আগের ভাড়াটে ইতিমধ্যেই চলে গিয়েছিল।",
+     "ro": "ami jokhon dhukechhilam, tokhon ager bharate itimodhyei chole giyechhilo."
     },
     "also": "আমি ঢোকার আগেই আগের ভাড়াটে চলে গিয়েছিল।",
     "why": "Past perfect চলে গিয়েছিল for the earlier event."
@@ -1563,8 +1563,8 @@ export const WORKOUT: WorkRound[] = [
     "q": "By the time I called her, she had already left for the market.",
     "sentence": null,
     "answer": {
-     "bn": "আমি যখন তাকে ফোন করলাম, তখন সে ইতিমধ্যেই বাজারে চলে গিয়েছিল।",
-     "ro": "ami jokhon take phone korlam, tokhon she itimodhyei bajare chole giyechhilo."
+     "bn": "আমি যখন তাকে ফোন করেছিলাম, তখন সে ইতিমধ্যেই বাজারে চলে গিয়েছিল।",
+     "ro": "ami jokhon take phone korechhilam, tokhon she itimodhyei bajare chole giyechhilo."
     },
     "also": null,
     "why": "Past perfect for the earlier event: চলে গিয়েছিল."
@@ -1618,8 +1618,8 @@ export const WORKOUT: WorkRound[] = [
     "q": "I don't know if he has eaten yet. He was still asleep when I left.",
     "sentence": null,
     "answer": {
-     "bn": "আমি জানি না ও এখনও খেয়েছে কিনা। আমি যখন বেরিয়ে এলাম, তখনও ও ঘুমিয়ে ছিল।",
-     "ro": "ami jani na o ekhono kheyeche kina. ami jokhon beriye elam, tokhono o ghumiye chhilo."
+     "bn": "আমি জানি না ও এখনও খেয়েছে কিনা। আমি যখন বেরিয়ে এসেছিলাম, তখনও ও ঘুমিয়ে ছিল।",
+     "ro": "ami jani na o ekhono kheyeche kina. ami jokhon beriye eshechhilam, tokhono o ghumiye chhilo."
     },
     "also": null,
     "why": "'If' as a question is কিনা. 'Was asleep' is ঘুমিয়ে ছিল."
@@ -1732,11 +1732,11 @@ export const WORKOUT: WorkRound[] = [
      "ro": "tumi boi porechho."
     },
     "answer": {
-     "bn": "তুমি বই পড়লে।",
-     "ro": "tumi boi porle."
+     "bn": "তুমি বই পড়েছিলে।",
+     "ro": "tumi boi porechhile."
     },
     "also": null,
-    "why": "Root + -লে."
+    "why": "Root + -েছিলে."
    },
    {
     "kind": "write",
@@ -1845,8 +1845,8 @@ export const WORKOUT: WorkRound[] = [
     "q": "Join: [He was sleeping] + [the guests arrived].",
     "sentence": null,
     "answer": {
-     "bn": "সে যখন ঘুমাচ্ছিল, তখন অতিথিরা এল।",
-     "ro": "she jokhon ghumachchhilo, tokhon atithira elo."
+     "bn": "সে যখন ঘুমাচ্ছিল, তখন অতিথিরা এসেছিল।",
+     "ro": "she jokhon ghumachchhilo, tokhon atithira eshechhilo."
     },
     "also": null,
     "why": "যখন … তখন …: past continuous, then simple past."

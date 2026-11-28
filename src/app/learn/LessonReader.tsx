@@ -237,7 +237,17 @@ function Question({ ex, n, total, onDone }: { ex: Exercise; n: number; total: nu
       </div>
       {picked !== null && (
         <>
-          <p className="feedback">{picked === ex.answer ? "Correct. " : "Not quite. "}<span className="g-why"><BnText text={ex.why} /></span></p>
+          <div className={"feedback fb " + (picked === ex.answer ? "fb-ok" : "fb-no")} role="status">
+            {picked === ex.answer ? (
+              <p><b>Correct.</b> <span className="g-why"><BnText text={ex.why} /></span></p>
+            ) : (
+              <>
+                <p><b>Not quite.</b> {ex.wrong?.[picked] ? <span className="g-why"><BnText text={ex.wrong[picked]} /></span> : null}</p>
+                <p className="fb-answer"><b>The answer is</b> <span className="fb-cell"><CellView cell={ex.options[ex.answer]} roman={roman} /></span></p>
+                <p><span className="g-why"><BnText text={ex.why} /></span></p>
+              </>
+            )}
+          </div>
           <button className="btn" onClick={() => onDone(picked === ex.answer)}>{n === total ? "See my score" : "Next question"}</button>
         </>
       )}

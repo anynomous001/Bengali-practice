@@ -32,7 +32,7 @@ def tense_options(verb, pron, correct, others, mk):
     ids = [correct] + [t for t in others if t != correct][:3]
     return [mk(form(verb, t, pron)) for t in ids]
 
-ORDER = ["pres", "cont", "perf", "past", "pastcont", "pastperf", "fut", "habit"]
+ORDER = ["pres", "cont", "perf", "past", "pastcont", "fut", "habit"]
 
 # ---------------- Round 1: tense cues ----------------
 r1 = []
@@ -61,11 +61,11 @@ def cue(pron, pre, tense, others, label, why, alt_note=None):
     opts = [kaj(pron, t, pre) for t in [tense] + [x for x in others if x != tense][:3]]
     r2.append(choose(f"Time cue: “{PRON[pron][0]}, {label}”. Change the sentence (I work at the office).", base_work, opts, 0, why))
 cue("se", ("এখন","ekhon"), "cont", ["pres","past","fut","perf"], "ekhon (now)", "এখন (now) needs the present continuous: করছে.")
-cue("tumi", ("গতকাল","gotokal"), "past", ["pres","cont","fut","perf"], "gotokal (yesterday)", "গতকাল (yesterday) needs the simple past: করলে. (করেছিলে is also possible when you stress it was long ago.)")
+cue("tumi", ("গতকাল","gotokal"), "past", ["pres","cont","fut","perf"], "gotokal (yesterday)", "গতকাল (yesterday) needs the simple past: করেছিলে (korechhile).")
 cue("amra", ("আগামীকাল","agamikal"), "fut", ["pres","cont","past","perf"], "agamikal (tomorrow)", "আগামীকাল (tomorrow) needs the future: করব.")
 cue("apni", ("রোজ","roj"), "pres", ["cont","past","fut","perf"], "roj (every day)", "রোজ (every day) is a habit: the simple present করেন.")
 cue("tara", ("আজ সকাল থেকে","aj shokal theke"), "cont", ["pres","past","fut","perf"], "aj shokal theke (since this morning)", "'Since this morning' is an action still going on: present continuous + থেকে.")
-cue("uni", ("গত বছর","goto bochhor"), "pastperf", ["pres","cont","fut","perf"], "goto bochhor (last year)", "'Last year' is a finished time long ago: করেছিলেন. (For a regular habit then, use করতেন.)")
+cue("uni", ("গত বছর","goto bochhor"), "past", ["pres","cont","fut","perf"], "goto bochhor (last year)", "'Last year' is a finished time long ago: করেছিলেন. (For a regular habit then, use করতেন.)")
 
 # ---------------- Round 3: negatives ----------------
 def neg(pron, pre, kind, label, why):
@@ -97,11 +97,11 @@ def spot(bn, ro, ok, fix=None, wrong=None, why=""):
     options = [cell(fix[0] + "।", fix[1] + ".")] + [cell(b + "।", r + ".") for b, r in wrong] + [options[0]]
     return choose("Is the sentence correct? If not, pick the fixed sentence.", s, options, 0, why)
 r4 = [
- spot("আমরা কাল সিনেমা দেখবে", "amra kal cinema dekhbe", False, ("আমরা কাল সিনেমা দেখব", "amra kal cinema dekhbo"), [("আমরা কাল সিনেমা দেখলাম","amra kal cinema dekhlam"),("আমরা কাল সিনেমা দেখছে","amra kal cinema dekhchhe")], "আমরা takes the আমি ending: দেখব."),
+ spot("আমরা কাল সিনেমা দেখবে", "amra kal cinema dekhbe", False, ("আমরা কাল সিনেমা দেখব", "amra kal cinema dekhbo"), [("আমরা কাল সিনেমা দেখেছিলাম","amra kal cinema dekhechhilam"),("আমরা কাল সিনেমা দেখছে","amra kal cinema dekhchhe")], "আমরা takes the আমি ending: দেখব."),
  spot("সে গতকাল স্কুলে যাবে", "she gotokal skule jabe", False, ("সে গতকাল স্কুলে গেল", "she gotokal skule gelo"), [("সে গতকাল স্কুলে যায়","she gotokal skule jay"),("সে গতকাল স্কুলে যাচ্ছে","she gotokal skule jachchhe")], "গতকাল (yesterday) needs a past verb: গেল (or গিয়েছিল)."),
  spot("আপনি কোথায় থাকো", "apni kothay thako", False, ("আপনি কোথায় থাকেন", "apni kothay thaken"), [("আপনি কোথায় থাকি","apni kothay thaki"),("আপনি কোথায় থাকিস","apni kothay thakis")], "আপনি takes -েন: থাকেন."),
  spot("তারা এখন মাঠে খেলছে", "tara ekhon mathe khelchhe", True, wrong=[("তারা এখন মাঠে খেলল","tara ekhon mathe khello"),("তারা এখন মাঠে খেলবে","tara ekhon mathe khelbe"),("তারা এখন মাঠে খেলেছে","tara ekhon mathe khelechhe")], why="এখন (now) with the present continuous খেলছে is right."),
- spot("আমি আগামীকাল দিল্লি গেলাম", "ami agamikal dilli gelam", False, ("আমি আগামীকাল দিল্লি যাব", "ami agamikal dilli jabo"), [("আমি আগামীকাল দিল্লি যাচ্ছিলাম","ami agamikal dilli jachchhilam"),("আমি আগামীকাল দিল্লি গিয়েছি","ami agamikal dilli giyechhi")], "আগামীকাল (tomorrow) needs the future: যাব."),
+ spot("আমি আগামীকাল দিল্লি গিয়েছিলাম", "ami agamikal dilli giyechhilam", False, ("আমি আগামীকাল দিল্লি যাব", "ami agamikal dilli jabo"), [("আমি আগামীকাল দিল্লি যাচ্ছিলাম","ami agamikal dilli jachchhilam"),("আমি আগামীকাল দিল্লি গিয়েছি","ami agamikal dilli giyechhi")], "আগামীকাল (tomorrow) needs the future: যাব."),
  spot("তুমি কী খাচ্ছেন", "tumi ki khachchhen", False, ("তুমি কী খাচ্ছ", "tumi ki khachchho"), [("তুমি কী খাচ্ছি","tumi ki khachchhi"),("তুমি কী খাচ্ছিস","tumi ki khachchhis")], "তুমি takes -ছ in the present continuous: খাচ্ছ. (খাচ্ছেন is for আপনি.)"),
  spot("উনি রোজ সকালে হাঁটে", "uni roj shokale hante", False, ("উনি রোজ সকালে হাঁটেন", "uni roj shokale hanten"), [("উনি রোজ সকালে হাঁটি","uni roj shokale hanti"),("উনি রোজ সকালে হাঁটো","uni roj shokale hanto")], "উনি is respectful, so the verb ends in -েন: হাঁটেন."),
  spot("আমি গতকাল ভাত খাই না", "ami gotokal bhat khai na", False, ("আমি গতকাল ভাত খাইনি", "ami gotokal bhat khaini"), [("আমি গতকাল ভাত খাব না","ami gotokal bhat khabo na"),("আমি গতকাল ভাত খাচ্ছি না","ami gotokal bhat khachchhi na")], "A past negative uses -নি: খাইনি."),
@@ -121,7 +121,7 @@ r5 = [
  fill("বাড়িওয়ালা এখন ভাড়া", "(নেওয়া)।", "bariwala ekhon bhara", "(neoya).", [("নিচ্ছে","nichchhe"),("নেয়","ney"),("নিয়েছে","niyechhe"),("নেবে","nebe")], "এখন (now) needs the present continuous: নিচ্ছে.", "Fill the blank (present continuous)."),
  fill("তুমি কি নতুন বাড়ি", "(দেখা)?", "tumi ki notun bari", "(dekha)?", [("দেখেছ","dekhechho"),("দেখছ","dekhchho"),("দেখলে","dekhle"),("দেখবে","dekhbe")], "'Have you seen' is the present perfect: দেখেছ.", "Fill the blank (present perfect)."),
  fill("আমি গতকাল প্রতিবেশীর সঙ্গে কথা", "(বলা)।", "ami gotokal protibeshir songe kotha", "(bola).", [("বললাম","bollam"),("বলছিলাম","bolchhilam"),("বলি","boli"),("বলব","bolbo")], "গতকাল with one finished action: simple past বললাম.", "Fill the blank (simple past)."),
- fill("আমি তিন বছর ধরে এই এলাকায়", "(থাকা)।", "ami tin bochhor dhore ei elakay", "(thaka).", [("থাকি","thaki"),("থাকব","thakbo"),("থাকলাম","thaklam"),("থাকতাম","thaktam")], "'For three years, still true' uses the present + ধরে: থাকি. (থাকছি also works.)", "Fill the blank (has been doing)."),
+ fill("আমি তিন বছর ধরে এই এলাকায়", "(থাকা)।", "ami tin bochhor dhore ei elakay", "(thaka).", [("থাকি","thaki"),("থাকব","thakbo"),("থেকেছিলাম","thekechhilam"),("থাকতাম","thaktam")], "'For three years, still true' uses the present + ধরে: থাকি. (থাকছি also works.)", "Fill the blank (has been doing)."),
  fill("তুমি কাল বিকেলে কী", "(করা)?", "tumi kal bikele ki", "(kora)?", [("করছিলে","korchhile"),("করছ","korchho"),("করবে","korbe"),("করো","koro")], "'What were you doing' is the past continuous: করছিলে.", "Fill the blank (past continuous)."),
  fill("আমি আসার আগে বাড়িওয়ালা ঘর পরিষ্কার", "(করা)।", "ami asar age bariwala ghor porishkar", "(kora).", [("করেছিলেন","korechhilen"),("করছিলেন","korchhilen"),("করবেন","korben"),("করেন","koren")], "Done before another past event: past perfect করেছিলেন (respectful for the landlord).", "Fill the blank (past perfect)."),
 ]
@@ -139,9 +139,9 @@ def check(bn, ro, ok, tense, fix=None, wrong=()):
     return choose("Is this sentence right for the meaning in brackets?", s, opts, 0, why)
 r6 = [
  check("তুমি প্রতিদিন বাংলা শেখো", "tumi protidin bangla shekho", True, "simple present, a habit", wrong=[("তুমি প্রতিদিন বাংলা শিখলে","tumi protidin bangla shikhle"),("তুমি প্রতিদিন বাংলা শিখছিলে","tumi protidin bangla shikhchhile")]),
- check("আমি এখন বই পড়ছি", "ami ekhon boi porchhi", True, "present continuous", wrong=[("আমি এখন বই পড়লাম","ami ekhon boi porlam"),("আমি এখন বই পড়ব","ami ekhon boi porbo")]),
+ check("আমি এখন বই পড়ছি", "ami ekhon boi porchhi", True, "present continuous", wrong=[("আমি এখন বই পড়েছিলাম","ami ekhon boi porechhilam"),("আমি এখন বই পড়ব","ami ekhon boi porbo")]),
  check("তিনি কি নাস্তা করছেন", "tini ki nasta korchhen", True, "present continuous, respectful", wrong=[("তিনি কি নাস্তা করছে","tini ki nasta korchhe"),("তিনি কি নাস্তা করেন","tini ki nasta koren")]),
- check("সে গতকাল আমাকে ফোন করেছিল", "she gotokal amake phone korechhilo", False, "simple past: she called me yesterday", fix=("সে গতকাল আমাকে ফোন করল", "she gotokal amake phone korlo"), wrong=[("সে গতকাল আমাকে ফোন করছে","she gotokal amake phone korchhe"),("সে গতকাল আমাকে ফোন করবে","she gotokal amake phone korbe")]),
+ check("সে গতকাল আমাকে ফোন করেছে", "she gotokal amake phone korechhe", False, "simple past: she called me yesterday", fix=("সে গতকাল আমাকে ফোন করেছিল", "she gotokal amake phone korechhilo"), wrong=[("সে গতকাল আমাকে ফোন করছে","she gotokal amake phone korchhe"),("সে গতকাল আমাকে ফোন করবে","she gotokal amake phone korbe")]),
  check("আপনি তিন ঘণ্টা ধরে গাড়ি চালাচ্ছেন", "apni tin ghonta dhore gari chalachchhen", True, "has been driving, with ধরে", wrong=[("আপনি তিন ঘণ্টা ধরে গাড়ি চালালেন","apni tin ghonta dhore gari chalalen"),("আপনি তিন ঘণ্টা ধরে গাড়ি চালাবেন","apni tin ghonta dhore gari chalaben")]),
  check("তুমি গতকাল রাতে কী খাচ্ছিলে", "tumi gotokal rate ki khachchhile", True, "past continuous: what were you eating", wrong=[("তুমি গতকাল রাতে কী খাচ্ছ","tumi gotokal rate ki khachchho"),("তুমি গতকাল রাতে কী খাবে","tumi gotokal rate ki khabe")]),
  check("তিনি বাড়ি পৌঁছানোর আগে রান্না করেছিলেন", "tini bari pouchhanor age ranna korechhilen", True, "past perfect, before another past event", wrong=[("তিনি বাড়ি পৌঁছানোর আগে রান্না করছেন","tini bari pouchhanor age ranna korchhen"),("তিনি বাড়ি পৌঁছানোর আগে রান্না করবেন","tini bari pouchhanor age ranna korben")]),
@@ -154,18 +154,18 @@ r7 = [  # translate: tenant and landlord
  write("The landlord has already fixed the water problem. (present perfect)", None, cell("বাড়িওয়ালা ইতিমধ্যে জলের সমস্যা ঠিক করে দিয়েছেন।", "bariwala itimodhye joler somossha thik kore diyechhen."), "ঠিক করেছেন (also correct)", "Present perfect: ঠিক করে দিয়েছেন. 'Already' is ইতিমধ্যে."),
  write("Every month I pay the rent on the 5th. (simple present)", None, cell("প্রতি মাসে আমি পাঁচ তারিখে ভাড়া দিই।", "proti mashe ami panch tarikhe bhara dii."), "প্রতি মাসের পাঁচ তারিখে আমি ভাড়া দিই।", "A regular habit: simple present দিই."),
  write("I have been living in this area for two years. (has been doing)", None, cell("আমি দু বছর ধরে এই এলাকায় থাকি।", "ami du bochhor dhore ei elakay thaki."), "আমি দু বছর ধরে এই এলাকায় আছি।", "Bengali uses the present + ধরে for 'has been doing'."),
- write("Yesterday I met my new neighbour for the first time. (simple past)", None, cell("গতকাল আমি আমার নতুন প্রতিবেশীর সঙ্গে প্রথমবার দেখা করলাম।", "gotokal ami amar notun protibeshir songe prothombar dekha korlam."), None, "Simple past: দেখা করলাম."),
+ write("Yesterday I met my new neighbour for the first time. (simple past)", None, cell("গতকাল আমি আমার নতুন প্রতিবেশীর সঙ্গে প্রথমবার দেখা করেছিলাম।", "gotokal ami amar notun protibeshir songe prothombar dekha korechhilam."), None, "Simple past: দেখা করেছিলাম."),
  write("I was talking to the landlord when the electricity went out. (past continuous)", None, cell("আমি যখন বাড়িওয়ালার সঙ্গে কথা বলছিলাম, তখন বিদ্যুৎ চলে গেল।", "ami jokhon bariwalar songe kotha bolchhilam, tokhon biddyut chole gelo."), "…তখন বিদ্যুৎ চলে গিয়েছিল।", "যখন … তখন …: past continuous for the long action, simple past for the sudden one."),
- write("By the time I moved in, the previous tenant had already left. (past perfect)", None, cell("আমি যখন ঢুকলাম, তখন আগের ভাড়াটে ইতিমধ্যেই চলে গিয়েছিল।", "ami jokhon dhuklam, tokhon ager bharate itimodhyei chole giyechhilo."), "আমি ঢোকার আগেই আগের ভাড়াটে চলে গিয়েছিল।", "Past perfect চলে গিয়েছিল for the earlier event."),
+ write("By the time I moved in, the previous tenant had already left. (past perfect)", None, cell("আমি যখন ঢুকেছিলাম, তখন আগের ভাড়াটে ইতিমধ্যেই চলে গিয়েছিল।", "ami jokhon dhukechhilam, tokhon ager bharate itimodhyei chole giyechhilo."), "আমি ঢোকার আগেই আগের ভাড়াটে চলে গিয়েছিল।", "Past perfect চলে গিয়েছিল for the earlier event."),
  write("I had been searching for a house for a month before I found this one. (had been doing)", None, cell("এই বাড়িটা পাওয়ার আগে আমি এক মাস ধরে একটা বাড়ি খুঁজছিলাম।", "ei barita paoyar age ami ek mash dhore ekta bari khujchhilam."), None, "Past continuous + ধরে for 'had been doing'. 'Find' is খুঁজে পাওয়া; 'found' is খুঁজে পেয়েছিলাম."),
 ]
 r8 = [  # translate: complex situations
- write("By the time I called her, she had already left for the market.", None, cell("আমি যখন তাকে ফোন করলাম, তখন সে ইতিমধ্যেই বাজারে চলে গিয়েছিল।", "ami jokhon take phone korlam, tokhon she itimodhyei bajare chole giyechhilo."), None, "Past perfect for the earlier event: চলে গিয়েছিল."),
+ write("By the time I called her, she had already left for the market.", None, cell("আমি যখন তাকে ফোন করেছিলাম, তখন সে ইতিমধ্যেই বাজারে চলে গিয়েছিল।", "ami jokhon take phone korechhilam, tokhon she itimodhyei bajare chole giyechhilo."), None, "Past perfect for the earlier event: চলে গিয়েছিল."),
  write("I've been working on this project for three months, and I still haven't finished it.", None, cell("আমি তিন মাস ধরে এই প্রজেক্টে কাজ করছি, আর এখনও শেষ করতে পারিনি।", "ami tin mash dhore ei projekte kaj korchhi, ar ekhono shesh korte parini."), "…এখনও শেষ করিনি।", "Present continuous + ধরে, and এখনও … -নি for 'still not'."),
  write("He was cooking dinner when the electricity went out last night.", None, cell("গতকাল রাতে যখন বিদ্যুৎ চলে গেল, তখন সে রাতের খাবার রান্না করছিল।", "gotokal rate jokhon biddyut chole gelo, tokhon she rater khabar ranna korchhilo."), None, "Past continuous রান্না করছিল for the long action."),
  write("Every morning before going to work, she drinks a cup of tea.", None, cell("প্রতিদিন সকালে কাজে যাওয়ার আগে সে এক কাপ চা খায়।", "protidin shokale kaje jaoyar age she ek kap cha khay."), "…সে এক কাপ চা পান করে। (more formal)", "Habit: simple present. 'Before going' is যাওয়ার আগে."),
  write("We had been waiting for an hour before the train finally arrived.", None, cell("ট্রেনটা শেষ পর্যন্ত আসার আগে আমরা এক ঘণ্টা ধরে অপেক্ষা করছিলাম।", "trenta shesh porjonto asar age amra ek ghonta dhore opekkha korchhilam."), None, "Past continuous + ধরে."),
- write("I don't know if he has eaten yet. He was still asleep when I left.", None, cell("আমি জানি না ও এখনও খেয়েছে কিনা। আমি যখন বেরিয়ে এলাম, তখনও ও ঘুমিয়ে ছিল।", "ami jani na o ekhono kheyeche kina. ami jokhon beriye elam, tokhono o ghumiye chhilo."), None, "'If' as a question is কিনা. 'Was asleep' is ঘুমিয়ে ছিল."),
+ write("I don't know if he has eaten yet. He was still asleep when I left.", None, cell("আমি জানি না ও এখনও খেয়েছে কিনা। আমি যখন বেরিয়ে এসেছিলাম, তখনও ও ঘুমিয়ে ছিল।", "ami jani na o ekhono kheyeche kina. ami jokhon beriye eshechhilam, tokhono o ghumiye chhilo."), None, "'If' as a question is কিনা. 'Was asleep' is ঘুমিয়ে ছিল."),
  write("She has been learning English for two years now, and she is getting better every day.", None, cell("সে দু বছর ধরে ইংরেজি শিখছে, আর প্রতিদিন আরও ভালো হচ্ছে।", "she du bochhor dhore ingreji shikhchhe, ar protidin aro bhalo hochchhe."), None, "Present continuous + ধরে. 'Getting better' is ভালো হচ্ছে."),
  write("By next month I will have been living in this city for five years.", None, cell("আগামী মাসে এই শহরে আমার পাঁচ বছর হয়ে যাবে।", "agami mashe ei shohore amar panch bochhor hoye jabe."), "আগামী মাসে আমি এই শহরে পাঁচ বছর পূর্ণ করব।", "Bengali has no 'will have been'. It says 'five years will be complete'."),
 ]
@@ -175,7 +175,7 @@ r9 = [  # tense transformation
  write("Rewrite in the present perfect.", cell("সে গান শিখছে।", "she gan shikhchhe."), cell("সে গান শিখেছে।", "she gan shikhechhe."), None, "Root + -েছে."),
  write("Rewrite in the past perfect, and add an “আগে” clause.", cell("তিনি কাজ করছিলেন।", "tini kaj korchhilen."), cell("তিনি বাড়ি ফেরার আগে কাজ করেছিলেন।", "tini bari pherar age kaj korechhilen."), "তিনি আসার আগে কাজ করে ফেলেছিলেন।", "Past perfect -েছিলেন, with the earlier event marked by আগে."),
  write("Rewrite in the present perfect continuous, and add “কতক্ষণ ধরে”.", cell("আমি রান্না করছি।", "ami ranna korchhi."), cell("আমি এক ঘণ্টা ধরে রান্না করছি।", "ami ek ghonta dhore ranna korchhi."), None, "Bengali keeps the present continuous and adds ধরে."),
- write("Rewrite in the simple past.", cell("তুমি বই পড়েছ।", "tumi boi porechho."), cell("তুমি বই পড়লে।", "tumi boi porle."), None, "Root + -লে."),
+ write("Rewrite in the simple past.", cell("তুমি বই পড়েছ।", "tumi boi porechho."), cell("তুমি বই পড়েছিলে।", "tumi boi porechhile."), None, "Root + -েছিলে."),
  write("Rewrite in the present continuous.", cell("তিনি অফিস যাচ্ছিলেন।", "tini office jachchhilen."), cell("তিনি অফিস যাচ্ছেন।", "tini office jachchhen."), None, "Root + -ছেন."),
  write("Rewrite in the present perfect continuous.", cell("আমি দুই ঘণ্টা ধরে অপেক্ষা করছিলাম।", "ami dui ghonta dhore opekkha korchhilam."), cell("আমি দুই ঘণ্টা ধরে অপেক্ষা করছি।", "ami dui ghonta dhore opekkha korchhi."), None, "Present continuous + ধরে."),
 ]
@@ -186,7 +186,7 @@ r10 = [  # sentence combination
  write("Join: [I finish my work] + [I will rest]. (কাজ শেষ হলে …)", None, cell("কাজ শেষ হলে আমি বিশ্রাম নেব।", "kaj shesh hole ami bishram nebo."), None, "-লে means 'when / if': শেষ হলে."),
  write("Join: [She has been in Kolkata] + [five years].", None, cell("সে পাঁচ বছর ধরে কলকাতায় আছে।", "she panch bochhor dhore kolkatay achhe."), None, "Present + ধরে."),
  write("Join: [We reached the station] + [the train had already left].", None, cell("আমরা স্টেশনে পৌঁছানোর আগেই ট্রেন ছেড়ে চলে গিয়েছিল।", "amra stesone pouchhanor agei tren chhere chole giyechhilo."), None, "Past perfect for the earlier event."),
- write("Join: [He was sleeping] + [the guests arrived].", None, cell("সে যখন ঘুমাচ্ছিল, তখন অতিথিরা এল।", "she jokhon ghumachchhilo, tokhon atithira elo."), None, "যখন … তখন …: past continuous, then simple past."),
+ write("Join: [He was sleeping] + [the guests arrived].", None, cell("সে যখন ঘুমাচ্ছিল, তখন অতিথিরা এসেছিল।", "she jokhon ghumachchhilo, tokhon atithira eshechhilo."), None, "যখন … তখন …: past continuous, then simple past."),
  write("Join: [I am learning Bengali] + [I moved here two years ago].", None, cell("আমি দুই বছর আগে এখানে এসেছি, তখন থেকে বাংলা শিখছি।", "ami dui bochhor age ekhane eshechhi, tokhon theke bangla shikhchhi."), "আমি দুই বছর ধরে বাংলা শিখছি।", "তখন থেকে (since then) + present continuous."),
 ]
 

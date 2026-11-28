@@ -18,7 +18,7 @@ ENDINGS = {  # tense id -> 5 (bn, ro) endings in person order
  "pres":      [("ি","i"),("িস","is"),("ো","o"),("েন","en"),("ে","e")],
  "cont":      [("ছি","chhi"),("ছিস","chhis"),("ছ","chho"),("ছেন","chhen"),("ছে","chhe")],
  "perf":      [("েছি","echhi"),("েছিস","echhis"),("েছ","echho"),("েছেন","echhen"),("েছে","echhe")],
- "past":      [("লাম","lam"),("লি","li"),("লে","le"),("লেন","len"),("ল","lo")],
+ "past":      [("েছিলাম","echhilam"),("েছিলি","echhili"),("েছিলে","echhile"),("েছিলেন","echhilen"),("েছিল","echhilo")],  # simple past, taught as -echhilam
  "pastcont":  [("ছিলাম","chhilam"),("ছিলি","chhili"),("ছিলে","chhile"),("ছিলেন","chhilen"),("ছিল","chhilo")],
  "pastperf":  [("েছিলাম","echhilam"),("েছিলি","echhili"),("েছিলে","echhile"),("েছিলেন","echhilen"),("েছিল","echhilo")],
  "habit":     [("তাম","tam"),("তিস","tis"),("তে","te"),("তেন","ten"),("ত","to")],
@@ -34,6 +34,7 @@ TENSES = [  # id, Bengali name, roman, English
  ("habit","নিত্যবৃত্ত অতীত","nityobritto otit","Past habitual"),
  ("fut","সাধারণ ভবিষ্যৎ","sadharon bhobishyot","Simple future"),
  ("futcont","ঘটমান ভবিষ্যৎ","ghotoman bhobishyot","Future continuous"),
+ ("futperf","পুরাঘটিত ভবিষ্যৎ","puraghotito bhobishyot","Future perfect"),
 ]
 def regular(stem_bn, stem_ro, inf_bn, inf_ro):
     out = {}
@@ -100,16 +101,32 @@ VERBS = {
     "fut":[("আসব","asbo"),("আসবি","asbi"),("আসবে","asbe"),("আসবেন","asben"),("আসবে","asbe")],
    },"আসতে","aste")),
 }
+A_TO_E = {"thaka": ("থেক", "thek"), "rakha": ("রেখ", "rekh"), "hata": ("হেঁট", "het")}  # the root vowel changes before -e / -echh-: থাক → থেকে, রাখ → রেখে, হাঁট → হেঁটে
+def finalize_verbs():
+    """Simple past = the -echhilam form (same as the past perfect, which adds আগে / আগেই); future perfect = conjunctive + থাকব."""
+    for k, (sb, sr) in A_TO_E.items():
+        if k not in VERBS: continue
+        v = VERBS[k]
+        v["conj"] = (sb + "ে", sr + "e")
+        for t in ("perf", "pastperf"):
+            v["f"][t] = [c(sb + b, sr + r) for b, r in ENDINGS[t]]
+    for v in VERBS.values():
+        v["f"]["past"] = list(v["f"]["pastperf"])
+        cb, cr = v["conj"]
+        v["f"]["futperf"] = [c(cb + " থাক" + b, cr + " thak" + r) for b, r in ENDINGS["fut"]]
+finalize_verbs()
 # consistency check: the regular generator must agree with a few known forms
-assert VERBS["kora"]["f"]["cont"][0]["bn"] == "করছি" and VERBS["kora"]["f"]["past"][4]["bn"] == "করল"
-assert VERBS["bola"]["f"]["past"][0]["ro"] == "bollam" and VERBS["dekha"]["f"]["perf"][2]["bn"] == "দেখেছ"
+assert VERBS["kora"]["f"]["cont"][0]["bn"] == "করছি" and VERBS["kora"]["f"]["past"][4]["bn"] == "করেছিল"
+assert VERBS["bola"]["f"]["past"][0]["ro"] == "bolechhilam" and VERBS["dekha"]["f"]["perf"][2]["bn"] == "দেখেছ"
 assert VERBS["kora"]["f"]["habit"][1]["ro"] == "kortis" and VERBS["kora"]["f"]["pres"][2]["bn"] == "করো"
 
 def verb_table(key):
     v = VERBS[key]
     rows = []
     for tid, bn, ro, en in TENSES:
-        rows.append([c(bn, ro)] + v["f"][tid])
+        cells = v["f"][tid]
+        if tid == "pastperf": cells = [c("আগেই " + x["bn"], "agei " + x["ro"]) for x in cells]  # same form as the simple past; আগেই marks it
+        rows.append([c(bn, ro)] + cells)
     head = ["Tense"] + [{"আমি": "I · আমি", "তুই": "you (very familiar) · তুই", "তুমি": "you (familiar) · তুমি", "আপনি / তিনি": "you / he, she (respectful) · আপনি / তিনি", "সে": "he / she · সে"}.get(b, b) for b, r in PERSONS]
     return TABLE(head, rows, f"{v['bn']} ({v['ro']}), {v['en']}")
 

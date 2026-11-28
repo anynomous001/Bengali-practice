@@ -1,3 +1,6 @@
-from tk_a import TOPICS as A
-from tk_b import TOPICS as B
-TOPICS = A + B
+from tk_a import OVERVIEW
+from tk_b import TABLES
+from tk_f import PRESENT, PAST, FUTURE, OVERVIEW_EX, TABLES_EX
+OVERVIEW["exercises"] = OVERVIEW_EX
+TABLES["exercises"] = TABLES_EX
+TOPICS = [OVERVIEW, PRESENT, PAST, FUTURE, TABLES]

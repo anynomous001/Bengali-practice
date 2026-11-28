@@ -9,7 +9,7 @@ TOPICS = [finish(dict(id="nishedh", title=("নিষেধ ও প্রশ্�
    P("To make a verb negative, Bengali adds a small word after it. In most tenses the word is না. In the simple past and the present perfect it is the ending -নি, joined to the verb. The verb itself keeps its person ending, so you can still tell who is acting."),
    TABLE(["Tense", "Positive", "Negative", "Meaning"], [
      [c("simple present","pres"), c("আমি খাই।","ami khai."), c("আমি খাই না।","ami khai na."), "I do not eat."], [c("present continuous","cont"), c("আমি খাচ্ছি।","ami khachchhi."), c("আমি খাচ্ছি না।","ami khachchhi na."), "I am not eating."],
-     [c("present perfect","perf"), c("আমি খেয়েছি।","ami kheyechhi."), c("আমি খাইনি।","ami khaini."), "I have not eaten."], [c("simple past","past"), c("আমি খেলাম।","ami khelam."), c("আমি খাইনি।","ami khaini."), "I did not eat."],
+     [c("present perfect","perf"), c("আমি খেয়েছি।","ami kheyechhi."), c("আমি খাইনি।","ami khaini."), "I have not eaten."], [c("simple past","past"), c("আমি খেয়েছিলাম।","ami kheyechhilam."), c("আমি খাইনি।","ami khaini."), "I did not eat."],
      [c("past continuous","pastcont"), c("আমি খাচ্ছিলাম।","ami khachchhilam."), c("আমি খাচ্ছিলাম না।","ami khachchhilam na."), "I was not eating."], [c("past habitual","habit"), c("আমি খেতাম।","ami khetam."), c("আমি খেতাম না।","ami khetam na."), "I did not use to eat."],
      [c("simple future","fut"), c("আমি খাব।","ami khabo."), c("আমি খাব না।","ami khabo na."), "I will not eat."],
    ], "Negative in every tense"),
@@ -53,7 +53,7 @@ TOPICS = [finish(dict(id="nishedh", title=("নিষেধ ও প্রশ্�
      [c("কে","ke"), "who", c("কেউ","keu"), "nobody"], [c("কী","ki"), "what", c("কিছু","kichhu"), "nothing"], [c("কোথায়","kothay"), "where", c("কোথাও","kothao"), "nowhere"], [c("কখন","kokhon"), "when", c("কখনো","kokhono"), "never"], [c("কোন","kon"), "which", c("কোনো","kono"), "no, any"],
    ]),
    EXS([("কেউ আসেনি।","keu asheni.","Nobody came."), ("আমি কিছু খাইনি।","ami kichhu khaini.","I have not eaten anything."), ("আমি কোথাও যাব না।","ami kothao jabo na.","I will not go anywhere."), ("সে কখনো দেরি করে না।","she kokhono deri kore na.","He / she is never late."),
-        ("আমি কখনো সাপ দেখিনি।","ami kokhono shap dekhini.","I have never seen a snake."), ("আমার কোনো সমস্যা নেই।","amar kono shomoshsha nei.","I have no problem."), ("আমি কাউকে চিনি না।","ami kauke chini na.","I do not know anyone."), ("কেউ কিছু বলল না।","keu kichhu bollo na.","Nobody said anything.")], "Double negatives agree"),
+        ("আমি কখনো সাপ দেখিনি।","ami kokhono shap dekhini.","I have never seen a snake."), ("আমার কোনো সমস্যা নেই।","amar kono shomoshsha nei.","I have no problem."), ("আমি কাউকে চিনি না।","ami kauke chini na.","I do not know anyone."), ("কেউ কিছু বলেছিল না।","keu kichhu bolechhilo na.","Nobody said anything.")], "Double negatives agree"),
   ]),
 
   dict(id="yesno", title="Yes/no questions", blocks=[
@@ -108,7 +108,7 @@ TOPICS = [finish(dict(id="nishedh", title=("নিষেধ ও প্রশ্�
    P("A question can sit inside a longer sentence. The question word stays, and the main verb comes last. 'Whether' is কি না."),
    EXS([("সে কোথায় থাকে আমি জানি না।","she kothay thake ami jani na.","I do not know where he / she lives."), ("তুমি কী খাচ্ছ আমাকে বলো।","tumi ki khachchho amake bolo.","Tell me what you are eating."), ("সে আসবে কি না জানি না।","she ashbe ki na jani na.","I do not know whether he / she will come."),
         ("কখন যাব বুঝতে পারছি না।","kokhon jabo bujhte parchhi na.","I cannot understand when to go."), ("তুমি কেন কাঁদছ আমি বুঝতে পারছি না।","tumi keno kandchho ami bujhte parchhi na.","I cannot understand why you are crying."), ("এটা কত টাকা জানেন?","eta koto taka janen?","Do you know how much this is?"),
-        ("কে এসেছে দেখো তো।","ke eshechhe dekho to.","See who has come."), ("সে কী বলল আমি শুনিনি।","she ki bollo ami shunini.","I did not hear what he / she said.")], "Questions inside sentences"),
+        ("কে এসেছে দেখো তো।","ke eshechhe dekho to.","See who has come."), ("সে কী বলেছিল আমি শুনিনি।","she ki bolechhilo ami shunini.","I did not hear what he / she said.")], "Questions inside sentences"),
   ]),
  ],
  exercises=[

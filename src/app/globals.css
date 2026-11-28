@@ -246,6 +246,12 @@ a.card:hover, button.card:hover { transform:translateY(-3px); border-color:color
 .opt:disabled { cursor:default; } .opt:disabled:not(.right):not(.wrong) { opacity:.55; }
 @media (min-width:700px) { .options:not(.letters) { grid-template-columns:repeat(2, 1fr); } .options.letters { grid-template-columns:repeat(4, 1fr); } }
 .feedback { min-height:1.5em; font-weight:600; margin:4px 0 8px; }
+.fb { font-weight:400; border-radius:12px; padding:10px 14px; margin:12px 0 10px; border:1px solid var(--line, #e2d8c8); }
+.fb p { margin:4px 0; line-height:1.5; }
+.fb-ok { background:color-mix(in srgb, #2e8b57 10%, var(--surface)); border-color:color-mix(in srgb, #2e8b57 40%, transparent); }
+.fb-no { background:color-mix(in srgb, #c0392b 8%, var(--surface)); border-color:color-mix(in srgb, #c0392b 35%, transparent); }
+.fb-answer { display:flex; gap:8px; align-items:flex-start; flex-wrap:wrap; }
+.fb-cell { display:inline-flex; }
 .bar { height:8px; background:var(--surface-2); border-radius:999px; overflow:hidden; }
 .bar div { height:100%; background:linear-gradient(90deg, var(--ok), color-mix(in srgb, var(--ok) 60%, var(--read))); border-radius:999px; transition:width .3s; }
 

@@ -49,7 +49,7 @@ TOPICS = [finish(dict(id="ling", title=("লিঙ্গ", "Ling", "Gender: he, 
    ], "Gender and the rest of the sentence"),
    EXS([("সে স্কুলে যায়।","she skule jay.","He goes to school. / She goes to school."), ("তিনি আমার শিক্ষক।","tini amar shikkhok.","He is my teacher. (tini is respectful: he or she)"), ("ছেলেটি খুব ভালো।","chheleti khub bhalo.","The boy is very good."),
         ("মেয়েটি খুব ভালো।","meyeti khub bhalo.","The girl is very good."), ("মেয়েটি গান গাইছে।","meyeti gan gaichhe.","The girl is singing."), ("ছেলেটি গান গাইছে।","chheleti gan gaichhe.","The boy is singing."),
-        ("সে বাজারে গেল।","she bajare gelo.","He went to the market. / She went to the market.")], "Same word, same verb"),
+        ("সে বাজারে গিয়েছিল।","she bajare giyechhilo.","He went to the market. / She went to the market.")], "Same word, same verb"),
    MISTAKES([
      (("মেয়েটি ভালি।","meyeti bhali."), ("মেয়েটি ভালো।","meyeti bhalo."), "The adjective does not take a feminine form. ভালো is used for girls and boys alike."),
    ], title="Do not change the adjective"),

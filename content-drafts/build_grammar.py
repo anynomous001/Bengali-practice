@@ -52,7 +52,7 @@ export type Block =
   | { t: "table"; title: string | null; head: string[]; rows: Cell[][] }
   | { t: "ex"; title: string | null; items: [string, string, string][] };
 export type ExerciseKind = "pick" | "fill" | "meaning" | "spot" | "change";
-export type Exercise = { kind?: ExerciseKind; inst?: string; q: string; sentence: { bn: string; ro: string } | null; options: Cell[]; answer: number; why: string };
+export type Exercise = { kind?: ExerciseKind; inst?: string; q: string; sentence: { bn: string; ro: string } | null; options: Cell[]; answer: number; why: string; /** Per option: why that option is wrong (empty for the right one). */ wrong?: string[] };
 export type GrammarSection = { id: string; title: string; blocks: Block[] };
 export type GrammarTopic = {
   id: string;

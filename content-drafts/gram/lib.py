@@ -8,7 +8,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 import io, contextlib
 with contextlib.redirect_stdout(io.StringIO()):
     from lib_engine import *   # c, P, NOTE, TABLE, EX, Q, opts, PERSONS, ENDINGS, TENSES, regular, forms, fut_cont, VERBS, verb_table
-from lib_engine import regular, forms, VERBS, TENSES, PERSONS, c, P, NOTE, TABLE, EX, opts, verb_table, ENDINGS
+from lib_engine import regular, forms, VERBS, TENSES, PERSONS, c, P, NOTE, TABLE, EX, opts, verb_table, ENDINGS, finalize_verbs
 
 # ---------- more verbs ----------
 def _v(bn, ro, en, root, inf, conj, cond, noun, f): return dict(bn=bn, ro=ro, en=en, root=root, inf=inf, conj=conj, cond=cond, noun=noun, f=f)
@@ -64,8 +64,9 @@ for key, (bn, ro, en, stem, sro) in {
     "dhora": ("ধরা", "dhora", "to hold / catch", "ধর", "dhor"), "rakha": ("রাখা", "rakha", "to put / keep", "রাখ", "rakh"),
 }.items():
     VERBS[key] = _reg(bn, ro, en, stem, sro)
+finalize_verbs()
 # regular verbs must agree with the endings table
-assert VERBS["pora"]["f"]["pres"][2]["bn"] == "পড়ো" and VERBS["hata"]["f"]["past"][0]["ro"] == "hatlam"
+assert VERBS["pora"]["f"]["pres"][2]["bn"] == "পড়ো" and VERBS["hata"]["f"]["past"][0]["ro"] == "hetechhilam"
 
 # ---------- pronouns, nouns and words ----------
 PRON = {  # key -> (bn, roman, person index into the 5-person tables)
@@ -92,15 +93,14 @@ KHUB = ("খুব", "khub"); ASTE = ("আস্তে", "aste"); TARATARI = ("�
 BHALO = ("ভালো", "bhalo"); SHOBSHOMOY = ("সবসময়", "shobshomoy"); MAJHEMAJHE = ("মাঝে মাঝে", "majhe majhe"); KOKHONO = ("কখনো", "kokhono")
 
 _BN = re.compile(r"[ঀ-৿]")
-_RO = re.compile(r"^[a-z-][a-z .?!',;:→…-]*$")
+_RO = re.compile(r"^[a-z-][a-z .?!',;:→…+=()/-]*$")
 
 def subj(s): return PRON[s] if isinstance(s, str) else s
 def vform(verb, tense, idx):
     f = VERBS[verb]["f"][tense][idx]; return f["bn"], f["ro"]
 def nform(verb, tense, idx):
     """negative form: 'not' follows the verb; the past and perfect take -নি joined to the present form"""
-    if tense == "pastperf": raise ValueError("no automatic negative for the past perfect")
-    if tense in ("past", "perf"):
+    if tense in ("past", "pastperf", "perf"):
         b, r = vform(verb, "pres", idx); return b + "নি", r + "ni"
     b, r = vform(verb, tense, idx); return b + " না", r + " na"
 
@@ -132,22 +132,25 @@ def EXS(items, title=None):
     return {"t": "ex", "title": title, "items": [list(i[:3]) for i in items]}
 
 # ---------- exercises ----------
-def _ex(kind, inst, q, options, answer, why, sentence=None):
+def _ex(kind, inst, q, options, answer, why, sentence=None, wrong=None):
     assert 0 <= answer < len(options), (q, answer)
+    if wrong is not None: assert len(wrong) == len(options), ("wrong notes must match options", q)
     txt = [o["bn"] if isinstance(o, dict) else o for o in options]
     assert len(set(txt)) == len(txt), ("duplicate options", q, txt)
     for o in options:
         if isinstance(o, dict): check_item((o["bn"], o["ro"]), q)
-    return {"kind": kind, "inst": inst, "q": q, "sentence": sentence, "options": options, "answer": answer, "why": why}
-def PICK(q, options, answer, why, inst="Read the question and choose the correct answer.", sentence=None):
-    return _ex("pick", inst, q, options, answer, why, sentence)
-def FILL(bn, ro, options, answer, why, inst="Choose the word that completes the sentence."):
+    d = {"kind": kind, "inst": inst, "q": q, "sentence": sentence, "options": options, "answer": answer, "why": why}
+    if wrong is not None: d["wrong"] = wrong
+    return d
+def PICK(q, options, answer, why, inst="Read the question and choose the correct answer.", sentence=None, wrong=None):
+    return _ex("pick", inst, q, options, answer, why, sentence, wrong)
+def FILL(bn, ro, options, answer, why, inst="Choose the word that completes the sentence.", wrong=None):
     assert "___" in bn and "___" in ro, (bn, ro)
-    return _ex("fill", inst, "Which word fills the blank?", options, answer, why, c(bn, ro))
-def MEAN(en, options, answer, why, inst="Choose the Bengali sentence that means the same as the English sentence."):
-    return _ex("meaning", inst, en, options, answer, why)
-def SPOT(options, answer, why, inst="Only one sentence is correct. Choose it."):
-    return _ex("spot", inst, "Which sentence is correct?", options, answer, why)
+    return _ex("fill", inst, "Which word fills the blank?", options, answer, why, c(bn, ro), wrong)
+def MEAN(en, options, answer, why, inst="Choose the Bengali sentence that means the same as the English sentence.", wrong=None):
+    return _ex("meaning", inst, en, options, answer, why, None, wrong)
+def SPOT(options, answer, why, inst="Only one sentence is correct. Choose it.", wrong=None):
+    return _ex("spot", inst, "Which sentence is correct?", options, answer, why, None, wrong)
 def TURN(bn, ro, options, answer, why, inst):
     return _ex("change", inst, "Change the sentence.", options, answer, why, c(bn, ro))
 
@@ -179,17 +182,31 @@ def blank_sentence(subject, parts, q=False):
     s = subj(subject)
     end_b, end_r = ("?", "?") if q else ("।", ".")
     return (" ".join([s[0]] + [p[0] for p in parts] + ["___"]) + end_b, " ".join([s[1]] + [p[1] for p in parts] + ["___"]) + end_r)
-def TFILL(subject, parts, verb, tense, others, why, inst="Choose the verb form that fits the sentence.", q=False):
-    """A fill-the-blank exercise whose options are the same verb in different tenses; the correct one is first."""
+TMEANING = {  # tense id -> what that tense says (used to explain a wrong choice)
+ "pres": "the simple present: a habit, a routine or a fact", "cont": "the present continuous: happening right now (-ছ-)", "perf": "the present perfect: finished, with a result now (-েছি)",
+ "past": "the simple past: finished and over (-েছিলাম)", "pastcont": "the past continuous: in progress at that time (-ছিলাম)", "pastperf": "the past perfect: finished before another past moment (-েছিলাম with আগে / আগেই)",
+ "habit": "the habitual past: used to happen again and again (-তাম)", "fut": "the simple future: it will happen (-ব)", "futcont": "the future continuous: will keep happening (-তে থাকব)", "futperf": "the future perfect: will be finished by then (-এ থাকব)",
+}
+def _why_wrong(bn, ro, tid, need, neg=False):
+    what = TMEANING[tid].replace("the ", "the negative ", 1) if neg else TMEANING[tid]
+    return f"{bn} ({ro}) is {what}. This sentence needs the {TENSE_EN[need].lower()}, so it does not fit."
+def TFILL(subject, parts, verb, tense, others, why, inst="Choose the verb form that fits the sentence.", q=False, en=None):
+    """A fill-the-blank exercise whose options are the same verb in different tenses; the correct one is first.
+    Each wrong option gets a note saying which tense it is and why that tense does not fit. en = the English meaning, shown in the explanation."""
     s = subj(subject)
     ids = [tense] + [t for t in others if t != tense][:3]
     bn, ro = blank_sentence(subject, parts, q)
-    return FILL(bn, ro, [c(*vform(verb, t, s[2])) for t in ids], 0, why, inst)
+    forms_ = [c(*vform(verb, t, s[2])) for t in ids]
+    full = SENT(subject, parts, verb, tense, en or "", q=q)
+    why = (f"{full[0]} ({full[1]})" + (f" means '{en.rstrip('.?!')}'. " if en else ". ") + why)
+    wrong = [""] + [_why_wrong(f["bn"], f["ro"], t, tense) for f, t in zip(forms_[1:], ids[1:])]
+    return FILL(bn, ro, forms_, 0, why, inst, wrong)
 def TMEAN(subject, parts, verb, tense, en, wrong, why, neg=False, inst="Choose the Bengali sentence that means the same as the English sentence."):
     """meaning exercise: the correct sentence is built from the engine; wrong = list of (subject, parts, verb, tense) for distractors"""
     right = SENT(subject, parts, verb, tense, en, neg=neg)
     opts_ = [c(right[0], right[1])] + [c(*SENT(*w[:4], "x", neg=(w[4] if len(w) > 4 else False))[:2]) for w in wrong]
-    return MEAN(en, opts_, 0, why, inst)
+    notes = [""] + [_why_wrong(o["bn"], o["ro"], w[3], tense, neg=(len(w) > 4 and w[4])) for o, w in zip(opts_[1:], wrong)]
+    return MEAN(en, opts_, 0, f"{right[0]} ({right[1]}) means '{en.rstrip('.?!')}'. " + why, inst, notes)
 
 # more common words
 KIQ = ("কি", "ki"); KI = ("কী", "ki"); AMAKE = ("আমাকে", "amake"); AGEI = ("আগেই", "agei"); EKBAR = ("একবার", "ekbar"); CHHOTO = ("ছোটবেলায়", "chhotobelay")
